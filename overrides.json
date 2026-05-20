@@ -1,0 +1,35 @@
+{
+  "classes": {
+    "Part": {
+      "rename": "Part",
+      "ignore_members": ["Resize"]
+    }
+  },
+  "members": {
+    "Instance.Destroy": {
+      "rename": "destroy_instance"
+    }
+  },
+  "typed_configs": {
+    "Players.BanAsync.config": {
+      "type": "BanConfig",
+      "constructor": "ban_config",
+      "fields": [
+        { "name": "UserIds", "type": "List(Int)" },
+        { "name": "ApplyToUniverse", "type": "Bool", "optional": true },
+        { "name": "Duration", "type": "Int" },
+        { "name": "DisplayReason", "type": "String" },
+        { "name": "PrivateReason", "type": "String" },
+        { "name": "ExcludeAltAccounts", "type": "Bool", "optional": true }
+      ]
+    },
+    "Players.UnbanAsync.config": {
+      "type": "UnbanConfig",
+      "constructor": "unban_config",
+      "fields": [
+        { "name": "UserIds", "type": "List(Int)" },
+        { "name": "ApplyToUniverse", "type": "Bool", "optional": true }
+      ]
+    }
+  }
+}
