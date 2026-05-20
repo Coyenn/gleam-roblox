@@ -3,7 +3,7 @@ import roblox/body_part_description
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/types.{
   type BodyPart, type BodyPartDescription, type Color3, type Instance,
-  type OptionInt64, type SecurityCapabilities,
+  type Int64, type SecurityCapabilities,
 }
 
 @target(luau)
@@ -28,7 +28,7 @@ pub fn node(
 /// Roblox: `BodyPartDescription.AssetId`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BodyPartDescription#AssetId
-pub fn asset_id(value: OptionInt64) -> Property(BodyPartDescription) {
+pub fn asset_id(value: Int64) -> Property(BodyPartDescription) {
   Property(fn(instance) { body_part_description.set_asset_id(instance, value) })
 }
 
@@ -156,7 +156,7 @@ pub fn javascript_type_anchor(
   _: SecurityCapabilities,
   _: Color3,
   _: BodyPart,
-  _: OptionInt64,
+  _: Int64,
   _: BodyPartDescription,
 ) -> Nil {
   Nil

@@ -4,10 +4,10 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type AssetTypeVerification, type BanHistoryPages, type FriendPages,
-  type HumanoidDescription, type HumanoidRigType, type Instance, type Model,
-  type Object, type OptionDouble, type OptionInt64, type Player,
-  type PlayerExitReason, type Players, type SecurityCapabilities,
-  type ThumbnailSize, type ThumbnailType, type UniqueId,
+  type HumanoidDescription, type HumanoidRigType, type Instance, type Int64,
+  type Model, type Object, type Player, type PlayerExitReason, type Players,
+  type SecurityCapabilities, type ThumbnailSize, type ThumbnailType,
+  type UniqueId,
 }
 
 @target(luau)
@@ -157,7 +157,7 @@ pub fn set_respawn_time(instance: Players, value: Float) -> Players
 /// - `instance`: A service that contains presently connected Player objects.
 /// - `userId`: The Player.UserId of the player being specified.
 @luau.method("GetPlayerByUserId")
-pub fn get_player_by_user_id(instance: Players, user_id: OptionInt64) -> Player
+pub fn get_player_by_user_id(instance: Players, user_id: Int64) -> Player
 
 @target(luau)
 /// Returns the Player whose Player.Character matches the given instance, or nil if one cannot be found.
@@ -256,7 +256,7 @@ pub fn create_humanoid_model_from_description_async(
 @luau.method("CreateHumanoidModelFromUserIdAsync")
 pub fn create_humanoid_model_from_user_id_async(
   instance: Players,
-  user_id: OptionInt64,
+  user_id: Int64,
 ) -> Model
 
 @target(luau)
@@ -275,7 +275,7 @@ pub fn create_humanoid_model_from_user_id_async(
 @luau.method("GetBanHistoryAsync")
 pub fn get_ban_history_async(
   instance: Players,
-  user_id: OptionInt64,
+  user_id: Int64,
 ) -> BanHistoryPages
 
 @target(luau)
@@ -295,7 +295,7 @@ pub fn get_ban_history_async(
 @luau.method("GetCharacterAppearanceInfoAsync")
 pub fn get_character_appearance_info_async(
   instance: Players,
-  user_id: OptionInt64,
+  user_id: Int64,
 ) -> Dynamic
 
 @target(luau)
@@ -310,7 +310,7 @@ pub fn get_character_appearance_info_async(
 /// - `instance`: A service that contains presently connected Player objects.
 /// - `userId`: The user ID of the player being specified.
 @luau.method("GetFriendsAsync")
-pub fn get_friends_async(instance: Players, user_id: OptionInt64) -> FriendPages
+pub fn get_friends_async(instance: Players, user_id: Int64) -> FriendPages
 
 @target(luau)
 /// Returns the HumanoidDescription for a specified outfit, which will be set with the parts/colors/Animations etc of the outfit.
@@ -329,7 +329,7 @@ pub fn get_friends_async(instance: Players, user_id: OptionInt64) -> FriendPages
 @luau.method("GetHumanoidDescriptionFromOutfitIdAsync")
 pub fn get_humanoid_description_from_outfit_id_async(
   instance: Players,
-  outfit_id: OptionInt64,
+  outfit_id: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -349,7 +349,7 @@ pub fn get_humanoid_description_from_outfit_id_async(
 @luau.method("GetHumanoidDescriptionFromUserIdAsync")
 pub fn get_humanoid_description_from_user_id_async(
   instance: Players,
-  user_id: OptionInt64,
+  user_id: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -367,10 +367,7 @@ pub fn get_humanoid_description_from_user_id_async(
 /// Returns:
 /// - The name of a user with the specified Player.UserId.
 @luau.method("GetNameFromUserIdAsync")
-pub fn get_name_from_user_id_async(
-  instance: Players,
-  user_id: OptionInt64,
-) -> String
+pub fn get_name_from_user_id_async(instance: Players, user_id: Int64) -> String
 
 @target(luau)
 /// Sends a query to the Roblox website for the userId of an account with a given username.
@@ -390,7 +387,7 @@ pub fn get_name_from_user_id_async(
 pub fn get_user_id_from_name_async(
   instance: Players,
   user_name: String,
-) -> OptionInt64
+) -> Int64
 
 @target(luau)
 /// Returns the content URL of a player thumbnail given the size and type, as well as a boolean describing if the image is ready to use.
@@ -411,7 +408,7 @@ pub fn get_user_id_from_name_async(
 @luau.method("GetUserThumbnailAsync")
 pub fn get_user_thumbnail_async(
   instance: Players,
-  user_id: OptionInt64,
+  user_id: Int64,
   thumbnail_type: ThumbnailType,
   thumbnail_size: ThumbnailSize,
 ) -> Dynamic
@@ -676,7 +673,7 @@ pub fn set_sandboxed(instance: Players, value: Bool) -> Players
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Players) -> OptionInt64
+pub fn get_source_asset_id(instance: Players) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1171,7 +1168,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: Players,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1442,10 +1439,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: Player,
   _: PlayerExitReason,

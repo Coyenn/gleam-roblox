@@ -4,8 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type AccessoryDescription, type AccessoryType, type Actor, type Instance,
-  type Object, type OptionDouble, type OptionInt64, type SecurityCapabilities,
-  type UniqueId, type Vector3,
+  type Int64, type Object, type SecurityCapabilities, type UniqueId,
+  type Vector3,
 }
 
 @target(luau)
@@ -59,7 +59,7 @@ pub fn set_accessory_type(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#AssetId
 @luau.property("AssetId")
-pub fn get_asset_id(instance: AccessoryDescription) -> OptionInt64
+pub fn get_asset_id(instance: AccessoryDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `AccessoryDescription.AssetId`.
@@ -72,7 +72,7 @@ pub fn get_asset_id(instance: AccessoryDescription) -> OptionInt64
 @luau.set_property("AssetId")
 pub fn set_asset_id(
   instance: AccessoryDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> AccessoryDescription
 
 @target(luau)
@@ -411,7 +411,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: AccessoryDescription) -> OptionInt64
+pub fn get_source_asset_id(instance: AccessoryDescription) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -927,7 +927,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: AccessoryDescription,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1206,10 +1206,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: Vector3,
   _: AccessoryType,

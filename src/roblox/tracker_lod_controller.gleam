@@ -3,10 +3,9 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Object, type OptionDouble, type OptionInt64,
-  type SecurityCapabilities, type TrackerExtrapolationFlagMode,
-  type TrackerLodController, type TrackerLodFlagMode, type TrackerLodValueMode,
-  type UniqueId,
+  type Actor, type Instance, type Int64, type Object, type SecurityCapabilities,
+  type TrackerExtrapolationFlagMode, type TrackerLodController,
+  type TrackerLodFlagMode, type TrackerLodValueMode, type UniqueId,
 }
 
 @target(luau)
@@ -254,7 +253,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: TrackerLodController) -> OptionInt64
+pub fn get_source_asset_id(instance: TrackerLodController) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -770,7 +769,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: TrackerLodController,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1049,10 +1048,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: TrackerLodFlagMode,
   _: TrackerLodValueMode,

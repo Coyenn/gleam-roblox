@@ -5,7 +5,7 @@ import roblox/types.{
   type BrickColor, type CameraMode, type DevCameraOcclusionMode,
   type DevComputerCameraMovementMode, type DevComputerMovementMode,
   type DevTouchCameraMovementMode, type DevTouchMovementMode, type Instance,
-  type Model, type OptionInt64, type Player, type SecurityCapabilities,
+  type Int64, type Model, type Player, type SecurityCapabilities,
   type SpawnLocation, type Team,
 }
 
@@ -102,7 +102,7 @@ pub fn character(value: Model) -> Property(Player) {
 /// Roblox: `Player.CharacterAppearanceId`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Player#CharacterAppearanceId
-pub fn character_appearance_id(value: OptionInt64) -> Property(Player) {
+pub fn character_appearance_id(value: Int64) -> Property(Player) {
   Property(fn(instance) { player.set_character_appearance_id(instance, value) })
 }
 
@@ -309,7 +309,7 @@ pub fn team_color(value: BrickColor) -> Property(Player) {
 /// Roblox: `Player.UserId`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Player#UserId
-pub fn user_id(value: OptionInt64) -> Property(Player) {
+pub fn user_id(value: Int64) -> Property(Player) {
   Property(fn(instance) { player.set_user_id(instance, value) })
 }
 
@@ -379,7 +379,7 @@ pub fn sandboxed(value: Bool) -> Property(Player) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: OptionInt64,
+  _: Int64,
   _: BrickColor,
   _: Team,
   _: SpawnLocation,

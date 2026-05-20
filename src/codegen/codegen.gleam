@@ -201,6 +201,7 @@ pub fn generate_from_strings_with_docs(
 
   generate_support_modules(out_dir)
   generate_types(dump, out_dir)
+  generate_int64_module(out_dir)
   generate_classes(dump, docs, overrides, out_dir)
   generate_create_helpers(dump, docs, overrides, out_dir)
   generate_services(dump, docs, overrides, out_dir)
@@ -512,6 +513,37 @@ fn generate_support_modules(out_dir: String) {
         "",
         "pub type DecodeError =",
         "  decode.DecodeError",
+        "",
+      ],
+      with: "\n",
+    ),
+  )
+}
+
+fn generate_int64_module(out_dir: String) {
+  fs.write_api_text(
+    out_dir <> "/int64.gleam",
+    string.join(
+      [
+        generated_header,
+        "",
+        "import roblox/types.{type Int64}",
+        "",
+        "/// Converts a Roblox `int64` value to Gleam `Int`.",
+        "@target(luau)",
+        "@luau.global(\"(function(value) return value end)\")",
+        "pub fn to_int(value: Int64) -> Int",
+        "",
+        "/// Converts Gleam `Int` to a Roblox `int64` value.",
+        "@target(luau)",
+        "@luau.global(\"(function(value) return value end)\")",
+        "pub fn from_int(value: Int) -> Int64",
+        "",
+        "/// Keeps `Int64` conversions reachable when checking non-Luau targets.",
+        "@target(javascript)",
+        "pub fn javascript_type_anchor(_: Int64) -> Nil {",
+        "  Nil",
+        "}",
         "",
       ],
       with: "\n",
@@ -3982,11 +4014,11 @@ fn map_type(val_type: ApiType) -> #(String, List(String)) {
   case name {
     "bool" -> #("Bool", ["Bool"])
     "int" -> #("Int", ["Int"])
-    "int64" -> #("OptionInt64", ["OptionInt64"])
-    "int64?" -> #("OptionInt64", ["OptionInt64"])
+    "int64" -> #("Int64", ["Int64"])
+    "int64?" -> #("Option(Int64)", ["Option", "Int64"])
     "float" -> #("Float", ["Float"])
-    "double" -> #("OptionDouble", ["OptionDouble"])
-    "double?" -> #("OptionDouble", ["OptionDouble"])
+    "double" -> #("Float", ["Float"])
+    "double?" -> #("Option(Float)", ["Option", "Float"])
     "string" -> #("String", ["String"])
     "string?" -> #("Option(String)", ["Option", "String"])
     "void" -> #("Nil", ["Nil"])

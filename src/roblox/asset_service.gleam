@@ -5,9 +5,8 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type AssetService, type AssetType, type AudioPages,
   type AudioSearchParams, type Content, type Decal, type EditableImage,
-  type EditableMesh, type Instance, type MeshPart, type Object,
-  type OptionDouble, type OptionInt64, type Player, type SecurityCapabilities,
-  type SurfaceAppearance, type UniqueId,
+  type EditableMesh, type Instance, type Int64, type MeshPart, type Object,
+  type Player, type SecurityCapabilities, type SurfaceAppearance, type UniqueId,
 }
 
 @target(luau)
@@ -128,7 +127,7 @@ pub fn create_asset_version_async(
   instance: AssetService,
   object: Object,
   asset_type: AssetType,
-  asset_id: OptionInt64,
+  asset_id: Int64,
   request_parameters: Dynamic,
 ) -> Dynamic
 
@@ -237,9 +236,9 @@ pub fn create_mesh_part_async(
 pub fn create_place_async(
   instance: AssetService,
   place_name: String,
-  template_place_id: OptionInt64,
+  template_place_id: Int64,
   description: String,
-) -> OptionInt64
+) -> Int64
 
 @target(luau)
 /// Clones a place through the given templatePlaceID and puts it into the inventory of the given player.
@@ -256,9 +255,9 @@ pub fn create_place_in_player_inventory_async(
   instance: AssetService,
   player: Instance,
   place_name: String,
-  template_place_id: OptionInt64,
+  template_place_id: Int64,
   description: String,
-) -> OptionInt64
+) -> Int64
 
 @target(luau)
 /// Creates a new SurfaceAppearance object using the provided content maps.
@@ -296,7 +295,7 @@ pub fn create_surface_appearance_async(
 @luau.method("GetAssetIdsForPackageAsync")
 pub fn get_asset_ids_for_package_async(
   instance: AssetService,
-  package_asset_id: OptionInt64,
+  package_asset_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -336,7 +335,7 @@ pub fn get_audio_metadata_async(
 @luau.method("GetBundleDetailsAsync")
 pub fn get_bundle_details_async(
   instance: AssetService,
-  bundle_id: OptionInt64,
+  bundle_id: Int64,
 ) -> Dynamic
 
 @target(luau)
@@ -367,10 +366,7 @@ pub fn get_game_places_async(instance: AssetService) -> Instance
 /// Returns:
 /// - A Model instance containing the loaded asset.
 @luau.method("LoadAssetAsync")
-pub fn load_asset_async(
-  instance: AssetService,
-  asset_id: OptionInt64,
-) -> Instance
+pub fn load_asset_async(instance: AssetService, asset_id: Int64) -> Instance
 
 @target(luau)
 /// Allows in-experience asset creation for users by prompting a publish dialog.
@@ -581,7 +577,7 @@ pub fn set_sandboxed(instance: AssetService, value: Bool) -> AssetService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: AssetService) -> OptionInt64
+pub fn get_source_asset_id(instance: AssetService) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1085,7 +1081,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: AssetService,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1360,10 +1356,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: AudioPages,
   _: AudioSearchParams,

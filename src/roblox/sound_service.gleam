@@ -3,9 +3,9 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type ListenerLocation, type ListenerType,
-  type Object, type OptionDouble, type OptionInt64, type ReverbType,
-  type RolloutState, type SecurityCapabilities, type SoundService, type UniqueId,
+  type Actor, type Instance, type Int64, type ListenerLocation,
+  type ListenerType, type Object, type ReverbType, type RolloutState,
+  type SecurityCapabilities, type SoundService, type UniqueId,
 }
 
 @target(luau)
@@ -229,7 +229,7 @@ pub fn get_listener(instance: SoundService) -> Dynamic
 /// Returns:
 /// - The number of seconds since the audio engine began mixing. This value is stable, sample-accurate, and monotonically-increasing – intended to be used for scheduling audible changes at precise times.
 @luau.method("GetMixerTime")
-pub fn get_mixer_time(instance: SoundService) -> OptionDouble
+pub fn get_mixer_time(instance: SoundService) -> Float
 
 @target(luau)
 /// Plays a copy of a Sound locally, such that it will only be heard by the client calling this method.
@@ -410,7 +410,7 @@ pub fn set_sandboxed(instance: SoundService, value: Bool) -> SoundService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: SoundService) -> OptionInt64
+pub fn get_source_asset_id(instance: SoundService) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -914,7 +914,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: SoundService,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1189,10 +1189,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: ListenerType,
   _: ListenerLocation,

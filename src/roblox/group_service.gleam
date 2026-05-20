@@ -4,8 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type GroupMembershipStatus, type GroupService, type Instance,
-  type Object, type OptionDouble, type OptionInt64, type SecurityCapabilities,
-  type StandardPages, type UniqueId,
+  type Int64, type Object, type SecurityCapabilities, type StandardPages,
+  type UniqueId,
 }
 
 @target(luau)
@@ -32,7 +32,7 @@ pub fn as_object(instance: GroupService) -> Object
 @luau.method("GetAlliesAsync")
 pub fn get_allies_async(
   instance: GroupService,
-  group_id: OptionInt64,
+  group_id: Int64,
 ) -> StandardPages
 
 @target(luau)
@@ -49,7 +49,7 @@ pub fn get_allies_async(
 @luau.method("GetEnemiesAsync")
 pub fn get_enemies_async(
   instance: GroupService,
-  group_id: OptionInt64,
+  group_id: Int64,
 ) -> StandardPages
 
 @target(luau)
@@ -67,10 +67,7 @@ pub fn get_enemies_async(
 /// Returns:
 /// - A dictionary of information about the group.
 @luau.method("GetGroupInfoAsync")
-pub fn get_group_info_async(
-  instance: GroupService,
-  group_id: OptionInt64,
-) -> Dynamic
+pub fn get_group_info_async(instance: GroupService, group_id: Int64) -> Dynamic
 
 @target(luau)
 /// Returns a list of tables containing information on all of the groups a given player is a member of.
@@ -87,10 +84,7 @@ pub fn get_group_info_async(
 /// Returns:
 /// - An array of dictionaries containing information on the group's the Player is a member of.
 @luau.method("GetGroupsAsync")
-pub fn get_groups_async(
-  instance: GroupService,
-  user_id: OptionInt64,
-) -> List(Dynamic)
+pub fn get_groups_async(instance: GroupService, user_id: Int64) -> List(Dynamic)
 
 @target(luau)
 /// Prompts the local Player to join a specified Roblox group via a native modal.
@@ -109,7 +103,7 @@ pub fn get_groups_async(
 @luau.method("PromptJoinAsync")
 pub fn prompt_join_async(
   instance: GroupService,
-  group_id: OptionInt64,
+  group_id: Int64,
 ) -> GroupMembershipStatus
 
 @target(luau)
@@ -249,7 +243,7 @@ pub fn set_sandboxed(instance: GroupService, value: Bool) -> GroupService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: GroupService) -> OptionInt64
+pub fn get_source_asset_id(instance: GroupService) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -753,7 +747,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: GroupService,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1028,10 +1022,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: GroupMembershipStatus,
   _: StandardPages,

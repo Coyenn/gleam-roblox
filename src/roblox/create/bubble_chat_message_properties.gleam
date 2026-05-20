@@ -3,7 +3,7 @@ import roblox/bubble_chat_message_properties
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/types.{
   type BubbleChatMessageProperties, type Color3, type Font, type Instance,
-  type OptionDouble, type OptionInt64, type SecurityCapabilities,
+  type Int64, type SecurityCapabilities,
 }
 
 @target(luau)
@@ -45,7 +45,7 @@ pub fn background_color3(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BubbleChatMessageProperties#BackgroundTransparency
 pub fn background_transparency(
-  value: OptionDouble,
+  value: Float,
 ) -> Property(BubbleChatMessageProperties) {
   Property(fn(instance) {
     bubble_chat_message_properties.set_background_transparency(instance, value)
@@ -100,7 +100,7 @@ pub fn text_color3(value: Color3) -> Property(BubbleChatMessageProperties) {
 /// Roblox: `BubbleChatMessageProperties.TextSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BubbleChatMessageProperties#TextSize
-pub fn text_size(value: OptionInt64) -> Property(BubbleChatMessageProperties) {
+pub fn text_size(value: Int64) -> Property(BubbleChatMessageProperties) {
   Property(fn(instance) {
     bubble_chat_message_properties.set_text_size(instance, value)
   })
@@ -226,10 +226,9 @@ pub fn sandboxed(value: Bool) -> Property(BubbleChatMessageProperties) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: OptionInt64,
+  _: Int64,
   _: Color3,
   _: Font,
-  _: OptionDouble,
   _: BubbleChatMessageProperties,
 ) -> Nil {
   Nil

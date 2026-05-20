@@ -2,8 +2,8 @@
 import roblox/dynamic.{type Dynamic}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type CFrame, type Color3, type EditableMesh, type FacsActionUnit, type Object,
-  type OptionColor3, type OptionFloat, type OptionInt64, type OptionVector2,
+  type CFrame, type Color3, type EditableMesh, type FacsActionUnit, type Int64,
+  type Object, type OptionColor3, type OptionFloat, type OptionVector2,
   type OptionVector3, type Vector2, type Vector3,
 }
 
@@ -38,7 +38,7 @@ pub fn get_fixed_size(instance: EditableMesh) -> Bool
 /// Returns:
 /// - Stable bone ID of the new bone.
 @luau.method("AddBone")
-pub fn add_bone(instance: EditableMesh, bone_properties: Dynamic) -> OptionInt64
+pub fn add_bone(instance: EditableMesh, bone_properties: Dynamic) -> Int64
 
 @target(luau)
 /// Adds a new color to the geometry and returns a stable color ID.
@@ -55,21 +55,14 @@ pub fn add_bone(instance: EditableMesh, bone_properties: Dynamic) -> OptionInt64
 /// Returns:
 /// - Stable color ID of the new color.
 @luau.method("AddColor")
-pub fn add_color(
-  instance: EditableMesh,
-  color: Color3,
-  alpha: Float,
-) -> OptionInt64
+pub fn add_color(instance: EditableMesh, color: Color3, alpha: Float) -> Int64
 
 @target(luau)
 /// Roblox: `EditableMesh.AddFace`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/EditableMesh#AddFace
 @luau.method("AddFace")
-pub fn add_face(
-  instance: EditableMesh,
-  vertex_ids: List(Dynamic),
-) -> OptionInt64
+pub fn add_face(instance: EditableMesh, vertex_ids: List(Dynamic)) -> Int64
 
 @target(luau)
 /// Adds a new normal to the geometry and returns a stable normal ID.
@@ -85,7 +78,7 @@ pub fn add_face(
 /// Returns:
 /// - Stable normal ID of the new normal.
 @luau.method("AddNormal")
-pub fn add_normal(instance: EditableMesh, normal: OptionVector3) -> OptionInt64
+pub fn add_normal(instance: EditableMesh, normal: OptionVector3) -> Int64
 
 @target(luau)
 /// Adds a new triangle to the mesh and returns a stable face ID.
@@ -105,10 +98,10 @@ pub fn add_normal(instance: EditableMesh, normal: OptionVector3) -> OptionInt64
 @luau.method("AddTriangle")
 pub fn add_triangle(
   instance: EditableMesh,
-  vertex_id0: OptionInt64,
-  vertex_id1: OptionInt64,
-  vertex_id2: OptionInt64,
-) -> OptionInt64
+  vertex_id0: Int64,
+  vertex_id1: Int64,
+  vertex_id2: Int64,
+) -> Int64
 
 @target(luau)
 /// Adds a new UV to the geometry and returns a stable UV ID.
@@ -124,7 +117,7 @@ pub fn add_triangle(
 /// Returns:
 /// - Stable UV ID of the new UV.
 @luau.method("AddUV")
-pub fn add_uv(instance: EditableMesh, uv: Vector2) -> OptionInt64
+pub fn add_uv(instance: EditableMesh, uv: Vector2) -> Int64
 
 @target(luau)
 /// Adds a new vertex to the geometry and returns a stable vertex ID.
@@ -140,7 +133,7 @@ pub fn add_uv(instance: EditableMesh, uv: Vector2) -> OptionInt64
 /// Returns:
 /// - Stable vertex ID of the new vertex.
 @luau.method("AddVertex")
-pub fn add_vertex(instance: EditableMesh, p: Vector3) -> OptionInt64
+pub fn add_vertex(instance: EditableMesh, p: Vector3) -> Int64
 
 @target(luau)
 /// Destroys the mesh.
@@ -190,7 +183,7 @@ pub fn find_closest_point_on_surface(
 pub fn find_closest_vertex(
   instance: EditableMesh,
   to_this_point: Vector3,
-) -> OptionInt64
+) -> Int64
 
 @target(luau)
 /// Finds all vertices within a specific sphere.
@@ -228,7 +221,7 @@ pub fn find_vertices_within_sphere(
 @luau.method("GetAdjacentFaces")
 pub fn get_adjacent_faces(
   instance: EditableMesh,
-  face_id: OptionInt64,
+  face_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -247,7 +240,7 @@ pub fn get_adjacent_faces(
 @luau.method("GetAdjacentVertices")
 pub fn get_adjacent_vertices(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
+  vertex_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -264,10 +257,7 @@ pub fn get_adjacent_vertices(
 /// Returns:
 /// - Bone ID of the bone with the given name.
 @luau.method("GetBoneByName")
-pub fn get_bone_by_name(
-  instance: EditableMesh,
-  bone_name: String,
-) -> OptionInt64
+pub fn get_bone_by_name(instance: EditableMesh, bone_name: String) -> Int64
 
 @target(luau)
 /// Returns the initial CFrame of the bone in the bind pose of the mesh.
@@ -283,7 +273,7 @@ pub fn get_bone_by_name(
 /// Returns:
 /// - Initial CFrame of the bone in the bind pose of the mesh, in the mesh's local space.
 @luau.method("GetBoneCFrame")
-pub fn get_bone_cframe(instance: EditableMesh, bone_id: OptionInt64) -> CFrame
+pub fn get_bone_cframe(instance: EditableMesh, bone_id: Int64) -> CFrame
 
 @target(luau)
 /// Returns true if the bone is virtual.
@@ -299,7 +289,7 @@ pub fn get_bone_cframe(instance: EditableMesh, bone_id: OptionInt64) -> CFrame
 /// Returns:
 /// - Whether the bone with the given bone ID is virtual. Virtual bones can only be bound to a FaceControls instance.
 @luau.method("GetBoneIsVirtual")
-pub fn get_bone_is_virtual(instance: EditableMesh, bone_id: OptionInt64) -> Bool
+pub fn get_bone_is_virtual(instance: EditableMesh, bone_id: Int64) -> Bool
 
 @target(luau)
 /// Returns the bone name.
@@ -315,7 +305,7 @@ pub fn get_bone_is_virtual(instance: EditableMesh, bone_id: OptionInt64) -> Bool
 /// Returns:
 /// - Name of the bone with the given bone ID.
 @luau.method("GetBoneName")
-pub fn get_bone_name(instance: EditableMesh, bone_id: OptionInt64) -> String
+pub fn get_bone_name(instance: EditableMesh, bone_id: Int64) -> String
 
 @target(luau)
 /// Returns the parent bone ID, if any.
@@ -331,10 +321,7 @@ pub fn get_bone_name(instance: EditableMesh, bone_id: OptionInt64) -> String
 /// Returns:
 /// - Bone ID for the parent of the bone with the given bone ID. If there is no parent, returns 0.
 @luau.method("GetBoneParent")
-pub fn get_bone_parent(
-  instance: EditableMesh,
-  bone_id: OptionInt64,
-) -> OptionInt64
+pub fn get_bone_parent(instance: EditableMesh, bone_id: Int64) -> Int64
 
 @target(luau)
 /// Returns all bones of the mesh.
@@ -378,7 +365,7 @@ pub fn get_center(instance: EditableMesh) -> Vector3
 /// Returns:
 /// - Color for the requested stable color ID.
 @luau.method("GetColor")
-pub fn get_color(instance: EditableMesh, color_id: OptionInt64) -> OptionColor3
+pub fn get_color(instance: EditableMesh, color_id: Int64) -> OptionColor3
 
 @target(luau)
 /// Returns the color alpha (transparency) at the given color ID.
@@ -394,10 +381,7 @@ pub fn get_color(instance: EditableMesh, color_id: OptionInt64) -> OptionColor3
 /// Returns:
 /// - Color alpha at the request stable color ID.
 @luau.method("GetColorAlpha")
-pub fn get_color_alpha(
-  instance: EditableMesh,
-  color_id: OptionInt64,
-) -> OptionFloat
+pub fn get_color_alpha(instance: EditableMesh, color_id: Int64) -> OptionFloat
 
 @target(luau)
 /// Returns all colors of the mesh.
@@ -430,10 +414,7 @@ pub fn get_colors(instance: EditableMesh) -> List(Dynamic)
 /// Returns:
 /// - List of color IDs used for the vertices on the given face.
 @luau.method("GetFaceColors")
-pub fn get_face_colors(
-  instance: EditableMesh,
-  face_id: OptionInt64,
-) -> List(Dynamic)
+pub fn get_face_colors(instance: EditableMesh, face_id: Int64) -> List(Dynamic)
 
 @target(luau)
 /// Returns the face's normal IDs for the vertices on the face.
@@ -450,10 +431,7 @@ pub fn get_face_colors(
 /// Returns:
 /// - List of normal IDs used for the vertices on the given face.
 @luau.method("GetFaceNormals")
-pub fn get_face_normals(
-  instance: EditableMesh,
-  face_id: OptionInt64,
-) -> List(Dynamic)
+pub fn get_face_normals(instance: EditableMesh, face_id: Int64) -> List(Dynamic)
 
 @target(luau)
 /// Returns the face's UV IDs for the vertices on the face.
@@ -470,10 +448,7 @@ pub fn get_face_normals(
 /// Returns:
 /// - List of UV IDs used for the vertices on the given face.
 @luau.method("GetFaceUVs")
-pub fn get_face_u_vs(
-  instance: EditableMesh,
-  face_id: OptionInt64,
-) -> List(Dynamic)
+pub fn get_face_u_vs(instance: EditableMesh, face_id: Int64) -> List(Dynamic)
 
 @target(luau)
 /// Returns the face's vertex IDs.
@@ -491,7 +466,7 @@ pub fn get_face_u_vs(
 @luau.method("GetFaceVertices")
 pub fn get_face_vertices(
   instance: EditableMesh,
-  face_id: OptionInt64,
+  face_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -527,7 +502,7 @@ pub fn get_faces(instance: EditableMesh) -> List(Dynamic)
 @luau.method("GetFacesWithColor")
 pub fn get_faces_with_color(
   instance: EditableMesh,
-  color_id: OptionInt64,
+  color_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -547,7 +522,7 @@ pub fn get_faces_with_color(
 @luau.method("GetFacesWithNormal")
 pub fn get_faces_with_normal(
   instance: EditableMesh,
-  normal_id: OptionInt64,
+  normal_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -565,10 +540,7 @@ pub fn get_faces_with_normal(
 /// Returns:
 /// - List of face IDs that use the provided UV ID.
 @luau.method("GetFacesWithUV")
-pub fn get_faces_with_uv(
-  instance: EditableMesh,
-  uv_id: OptionInt64,
-) -> List(Dynamic)
+pub fn get_faces_with_uv(instance: EditableMesh, uv_id: Int64) -> List(Dynamic)
 
 @target(luau)
 /// Returns bone IDs and bone CFrames for all bones in a specific FACS corrective pose.
@@ -649,10 +621,7 @@ pub fn get_facs_poses(instance: EditableMesh) -> List(Dynamic)
 /// Returns:
 /// - Normal vector at the requested normal ID.
 @luau.method("GetNormal")
-pub fn get_normal(
-  instance: EditableMesh,
-  normal_id: OptionInt64,
-) -> OptionVector3
+pub fn get_normal(instance: EditableMesh, normal_id: Int64) -> OptionVector3
 
 @target(luau)
 /// Returns all normals of the mesh.
@@ -684,7 +653,7 @@ pub fn get_normals(instance: EditableMesh) -> List(Dynamic)
 /// Returns:
 /// - Position of a vertex in the mesh's local object space.
 @luau.method("GetPosition")
-pub fn get_position(instance: EditableMesh, vertex_id: OptionInt64) -> Vector3
+pub fn get_position(instance: EditableMesh, vertex_id: Int64) -> Vector3
 
 @target(luau)
 /// Roblox: `EditableMesh.GetSize`
@@ -713,7 +682,7 @@ pub fn get_size(instance: EditableMesh) -> Vector3
 /// Returns:
 /// - UV coordinates at the requested UV ID.
 @luau.method("GetUV")
-pub fn get_uv(instance: EditableMesh, uv_id: OptionInt64) -> OptionVector2
+pub fn get_uv(instance: EditableMesh, uv_id: Int64) -> OptionVector2
 
 @target(luau)
 /// Returns all UVs of the mesh.
@@ -747,7 +716,7 @@ pub fn get_u_vs(instance: EditableMesh) -> List(Dynamic)
 @luau.method("GetVertexBoneWeights")
 pub fn get_vertex_bone_weights(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
+  vertex_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -766,7 +735,7 @@ pub fn get_vertex_bone_weights(
 @luau.method("GetVertexBones")
 pub fn get_vertex_bones(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
+  vertex_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -786,7 +755,7 @@ pub fn get_vertex_bones(
 @luau.method("GetVertexColors")
 pub fn get_vertex_colors(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
+  vertex_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -806,9 +775,9 @@ pub fn get_vertex_colors(
 @luau.method("GetVertexFaceColor")
 pub fn get_vertex_face_color(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
-  face_id: OptionInt64,
-) -> OptionInt64
+  vertex_id: Int64,
+  face_id: Int64,
+) -> Int64
 
 @target(luau)
 /// Returns the normal ID of a vertex/face pair.
@@ -827,9 +796,9 @@ pub fn get_vertex_face_color(
 @luau.method("GetVertexFaceNormal")
 pub fn get_vertex_face_normal(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
-  face_id: OptionInt64,
-) -> OptionInt64
+  vertex_id: Int64,
+  face_id: Int64,
+) -> Int64
 
 @target(luau)
 /// Returns the UV ID of a vertex/face pair.
@@ -848,9 +817,9 @@ pub fn get_vertex_face_normal(
 @luau.method("GetVertexFaceUV")
 pub fn get_vertex_face_uv(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
-  face_id: OptionInt64,
-) -> OptionInt64
+  vertex_id: Int64,
+  face_id: Int64,
+) -> Int64
 
 @target(luau)
 /// Returns the face IDs of the faces attached to the given vertex.
@@ -869,7 +838,7 @@ pub fn get_vertex_face_uv(
 @luau.method("GetVertexFaces")
 pub fn get_vertex_faces(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
+  vertex_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -889,7 +858,7 @@ pub fn get_vertex_faces(
 @luau.method("GetVertexNormals")
 pub fn get_vertex_normals(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
+  vertex_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -909,7 +878,7 @@ pub fn get_vertex_normals(
 @luau.method("GetVertexUVs")
 pub fn get_vertex_u_vs(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
+  vertex_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -944,7 +913,7 @@ pub fn get_vertices(instance: EditableMesh) -> List(Dynamic)
 @luau.method("GetVerticesWithColor")
 pub fn get_vertices_with_color(
   instance: EditableMesh,
-  color_id: OptionInt64,
+  color_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -964,7 +933,7 @@ pub fn get_vertices_with_color(
 @luau.method("GetVerticesWithNormal")
 pub fn get_vertices_with_normal(
   instance: EditableMesh,
-  normal_id: OptionInt64,
+  normal_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -984,7 +953,7 @@ pub fn get_vertices_with_normal(
 @luau.method("GetVerticesWithUV")
 pub fn get_vertices_with_uv(
   instance: EditableMesh,
-  uv_id: OptionInt64,
+  uv_id: Int64,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -1001,7 +970,7 @@ pub fn get_vertices_with_uv(
 /// Returns:
 /// - String that describes the ID in human-readable format.
 @luau.method("IdDebugString")
-pub fn id_debug_string(instance: EditableMesh, id: OptionInt64) -> String
+pub fn id_debug_string(instance: EditableMesh, id: Int64) -> String
 
 @target(luau)
 /// Merges vertices that touch together.
@@ -1048,7 +1017,7 @@ pub fn raycast_local(
 /// Parameters:
 /// - `instance`: Instance which allows for the runtime creation and manipulation of meshes.
 @luau.method("RemoveBone")
-pub fn remove_bone(instance: EditableMesh, bone_id: OptionInt64) -> Nil
+pub fn remove_bone(instance: EditableMesh, bone_id: Int64) -> Nil
 
 @target(luau)
 /// Removes a face using its stable face ID.
@@ -1060,7 +1029,7 @@ pub fn remove_bone(instance: EditableMesh, bone_id: OptionInt64) -> Nil
 /// Parameters:
 /// - `instance`: Instance which allows for the runtime creation and manipulation of meshes.
 @luau.method("RemoveFace")
-pub fn remove_face(instance: EditableMesh, face_id: OptionInt64) -> Nil
+pub fn remove_face(instance: EditableMesh, face_id: Int64) -> Nil
 
 @target(luau)
 /// Removes all unused vertices, normals, UVs, and colors, and returns the removed IDs.
@@ -1088,7 +1057,7 @@ pub fn remove_unused(instance: EditableMesh) -> List(Dynamic)
 /// - `instance`: Instance which allows for the runtime creation and manipulation of meshes.
 /// - `normalId`: Stable normal ID to reset.
 @luau.method("ResetNormal")
-pub fn reset_normal(instance: EditableMesh, normal_id: OptionInt64) -> Nil
+pub fn reset_normal(instance: EditableMesh, normal_id: Int64) -> Nil
 
 @target(luau)
 /// Set the initial CFrame for a bone in the mesh's bind pose.
@@ -1104,7 +1073,7 @@ pub fn reset_normal(instance: EditableMesh, normal_id: OptionInt64) -> Nil
 @luau.method("SetBoneCFrame")
 pub fn set_bone_cframe(
   instance: EditableMesh,
-  bone_id: OptionInt64,
+  bone_id: Int64,
   cframe: CFrame,
 ) -> Nil
 
@@ -1122,7 +1091,7 @@ pub fn set_bone_cframe(
 @luau.method("SetBoneIsVirtual")
 pub fn set_bone_is_virtual(
   instance: EditableMesh,
-  bone_id: OptionInt64,
+  bone_id: Int64,
   virtual: Bool,
 ) -> Nil
 
@@ -1140,7 +1109,7 @@ pub fn set_bone_is_virtual(
 @luau.method("SetBoneName")
 pub fn set_bone_name(
   instance: EditableMesh,
-  bone_id: OptionInt64,
+  bone_id: Int64,
   name: String,
 ) -> Nil
 
@@ -1158,8 +1127,8 @@ pub fn set_bone_name(
 @luau.method("SetBoneParent")
 pub fn set_bone_parent(
   instance: EditableMesh,
-  bone_id: OptionInt64,
-  parent_bone_id: OptionInt64,
+  bone_id: Int64,
+  parent_bone_id: Int64,
 ) -> Nil
 
 @target(luau)
@@ -1174,11 +1143,7 @@ pub fn set_bone_parent(
 /// - `colorId`: Stable color ID for which to set the color.
 /// - `color`: Color to set.
 @luau.method("SetColor")
-pub fn set_color(
-  instance: EditableMesh,
-  color_id: OptionInt64,
-  color: Color3,
-) -> Nil
+pub fn set_color(instance: EditableMesh, color_id: Int64, color: Color3) -> Nil
 
 @target(luau)
 /// Sets the color alpha (transparency) for a color ID.
@@ -1194,7 +1159,7 @@ pub fn set_color(
 @luau.method("SetColorAlpha")
 pub fn set_color_alpha(
   instance: EditableMesh,
-  color_id: OptionInt64,
+  color_id: Int64,
   alpha: Float,
 ) -> Nil
 
@@ -1213,7 +1178,7 @@ pub fn set_color_alpha(
 @luau.method("SetFaceColors")
 pub fn set_face_colors(
   instance: EditableMesh,
-  face_id: OptionInt64,
+  face_id: Int64,
   ids: List(Dynamic),
 ) -> Nil
 
@@ -1232,7 +1197,7 @@ pub fn set_face_colors(
 @luau.method("SetFaceNormals")
 pub fn set_face_normals(
   instance: EditableMesh,
-  face_id: OptionInt64,
+  face_id: Int64,
   ids: List(Dynamic),
 ) -> Nil
 
@@ -1251,7 +1216,7 @@ pub fn set_face_normals(
 @luau.method("SetFaceUVs")
 pub fn set_face_u_vs(
   instance: EditableMesh,
-  face_id: OptionInt64,
+  face_id: Int64,
   ids: List(Dynamic),
 ) -> Nil
 
@@ -1270,7 +1235,7 @@ pub fn set_face_u_vs(
 @luau.method("SetFaceVertices")
 pub fn set_face_vertices(
   instance: EditableMesh,
-  face_id: OptionInt64,
+  face_id: Int64,
   ids: List(Dynamic),
 ) -> Nil
 
@@ -1290,7 +1255,7 @@ pub fn set_face_vertices(
 pub fn set_facs_bone_pose(
   instance: EditableMesh,
   action: FacsActionUnit,
-  bone_id: OptionInt64,
+  bone_id: Int64,
   cframe: CFrame,
 ) -> Nil
 
@@ -1348,7 +1313,7 @@ pub fn set_facs_pose(
 @luau.method("SetNormal")
 pub fn set_normal(
   instance: EditableMesh,
-  normal_id: OptionInt64,
+  normal_id: Int64,
   normal: Vector3,
 ) -> Nil
 
@@ -1364,11 +1329,7 @@ pub fn set_normal(
 /// - `vertexId`: Stable vertex ID of the vertex to position.
 /// - `p`: Position in the mesh's local object space.
 @luau.method("SetPosition")
-pub fn set_position(
-  instance: EditableMesh,
-  vertex_id: OptionInt64,
-  p: Vector3,
-) -> Nil
+pub fn set_position(instance: EditableMesh, vertex_id: Int64, p: Vector3) -> Nil
 
 @target(luau)
 /// Sets UV coordinates for a UV ID.
@@ -1382,7 +1343,7 @@ pub fn set_position(
 /// - `uvId`: UV ID for which to set the UV coordinates.
 /// - `uv`: UV coordinates.
 @luau.method("SetUV")
-pub fn set_uv(instance: EditableMesh, uv_id: OptionInt64, uv: Vector2) -> Nil
+pub fn set_uv(instance: EditableMesh, uv_id: Int64, uv: Vector2) -> Nil
 
 @target(luau)
 /// Sets skinning blend weights for each bone associated with the vertex.
@@ -1398,7 +1359,7 @@ pub fn set_uv(instance: EditableMesh, uv_id: OptionInt64, uv: Vector2) -> Nil
 @luau.method("SetVertexBoneWeights")
 pub fn set_vertex_bone_weights(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
+  vertex_id: Int64,
   bone_weights: List(Dynamic),
 ) -> Nil
 
@@ -1416,7 +1377,7 @@ pub fn set_vertex_bone_weights(
 @luau.method("SetVertexBones")
 pub fn set_vertex_bones(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
+  vertex_id: Int64,
   bone_i_ds: List(Dynamic),
 ) -> Nil
 
@@ -1435,9 +1396,9 @@ pub fn set_vertex_bones(
 @luau.method("SetVertexFaceColor")
 pub fn set_vertex_face_color(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
-  face_id: OptionInt64,
-  color_id: OptionInt64,
+  vertex_id: Int64,
+  face_id: Int64,
+  color_id: Int64,
 ) -> Nil
 
 @target(luau)
@@ -1455,9 +1416,9 @@ pub fn set_vertex_face_color(
 @luau.method("SetVertexFaceNormal")
 pub fn set_vertex_face_normal(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
-  face_id: OptionInt64,
-  normal_id: OptionInt64,
+  vertex_id: Int64,
+  face_id: Int64,
+  normal_id: Int64,
 ) -> Nil
 
 @target(luau)
@@ -1475,9 +1436,9 @@ pub fn set_vertex_face_normal(
 @luau.method("SetVertexFaceUV")
 pub fn set_vertex_face_uv(
   instance: EditableMesh,
-  vertex_id: OptionInt64,
-  face_id: OptionInt64,
-  uv_id: OptionInt64,
+  vertex_id: Int64,
+  face_id: Int64,
+  uv_id: Int64,
 ) -> Nil
 
 @target(luau)
@@ -1565,7 +1526,7 @@ pub fn on_changed(
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
-  _: OptionInt64,
+  _: Int64,
   _: Vector2,
   _: Vector3,
   _: FacsActionUnit,

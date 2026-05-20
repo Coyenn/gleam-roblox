@@ -5,9 +5,8 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type AdornCullingMode, type AdornShading, type CFrame, type Color3,
   type CylinderHandleAdornment, type GuiBase, type GuiBase3d,
-  type HandleAdornment, type Instance, type Object, type OptionDouble,
-  type OptionInt64, type PVAdornment, type PVInstance, type SecurityCapabilities,
-  type UniqueId, type Vector3,
+  type HandleAdornment, type Instance, type Int64, type Object, type PVAdornment,
+  type PVInstance, type SecurityCapabilities, type UniqueId, type Vector3,
 }
 
 @target(luau)
@@ -656,7 +655,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: CylinderHandleAdornment) -> OptionInt64
+pub fn get_source_asset_id(instance: CylinderHandleAdornment) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1172,7 +1171,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: CylinderHandleAdornment,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1451,10 +1450,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: Color3,
   _: PVInstance,

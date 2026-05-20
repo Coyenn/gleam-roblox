@@ -3,7 +3,7 @@ import roblox/audio_player
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/types.{
   type AudioPlayer, type Content, type ContentId, type Instance,
-  type NumberRange, type OptionDouble, type SecurityCapabilities,
+  type NumberRange, type SecurityCapabilities,
 }
 
 @target(luau)
@@ -113,7 +113,7 @@ pub fn playback_region(value: NumberRange) -> Property(AudioPlayer) {
 /// Roblox: `AudioPlayer.PlaybackSpeed`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioPlayer#PlaybackSpeed
-pub fn playback_speed(value: OptionDouble) -> Property(AudioPlayer) {
+pub fn playback_speed(value: Float) -> Property(AudioPlayer) {
   Property(fn(instance) { audio_player.set_playback_speed(instance, value) })
 }
 
@@ -125,7 +125,7 @@ pub fn playback_speed(value: OptionDouble) -> Property(AudioPlayer) {
 /// Roblox: `AudioPlayer.TimePosition`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioPlayer#TimePosition
-pub fn time_position(value: OptionDouble) -> Property(AudioPlayer) {
+pub fn time_position(value: Float) -> Property(AudioPlayer) {
   Property(fn(instance) { audio_player.set_time_position(instance, value) })
 }
 
@@ -207,7 +207,6 @@ pub fn sandboxed(value: Bool) -> Property(AudioPlayer) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: OptionDouble,
   _: NumberRange,
   _: Content,
   _: ContentId,

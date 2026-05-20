@@ -5,12 +5,11 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type AnimatorRetargetingMode, type AuthorityMode, type BasePart,
   type BulkMoveMode, type CFrame, type Camera, type ClientAnimatorThrottlingMode,
-  type Instance, type JointCreationMode, type LuauTypeCheckMode, type Model,
-  type ModelLevelOfDetail, type ModelStreamingMode, type Object,
-  type OptionDouble, type OptionInt64, type OptionRaycastResult,
-  type OverlapParams, type PVInstance, type Player, type RaycastParams,
-  type SecurityCapabilities, type Terrain, type UniqueId, type Vector3,
-  type Workspace, type WorldRoot,
+  type Instance, type Int64, type JointCreationMode, type LuauTypeCheckMode,
+  type Model, type ModelLevelOfDetail, type ModelStreamingMode, type Object,
+  type OptionRaycastResult, type OverlapParams, type PVInstance, type Player,
+  type RaycastParams, type SecurityCapabilities, type Terrain, type UniqueId,
+  type Vector3, type Workspace, type WorldRoot,
 }
 
 @target(luau)
@@ -184,7 +183,7 @@ pub fn set_current_camera(instance: Workspace, value: Camera) -> Workspace
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Workspace#DistributedGameTime
 @luau.property("DistributedGameTime")
-pub fn get_distributed_game_time(instance: Workspace) -> OptionDouble
+pub fn get_distributed_game_time(instance: Workspace) -> Float
 
 @target(luau)
 /// Sets Roblox property `Workspace.DistributedGameTime`.
@@ -196,10 +195,7 @@ pub fn get_distributed_game_time(instance: Workspace) -> OptionDouble
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Workspace#DistributedGameTime
 @luau.set_property("DistributedGameTime")
-pub fn set_distributed_game_time(
-  instance: Workspace,
-  value: OptionDouble,
-) -> Workspace
+pub fn set_distributed_game_time(instance: Workspace, value: Float) -> Workspace
 
 @target(luau)
 /// Gets Roblox property `Workspace.FallHeightEnabled`.
@@ -393,7 +389,7 @@ pub fn get_physics_throttling(instance: Workspace) -> Int
 /// Returns:
 /// - Returns the number of frames per second that physics is currently being simulated at.
 @luau.method("GetRealPhysicsFPS")
-pub fn get_real_physics_fps(instance: Workspace) -> OptionDouble
+pub fn get_real_physics_fps(instance: Workspace) -> Float
 
 @target(luau)
 /// Returns the server's Unix time in seconds.
@@ -408,7 +404,7 @@ pub fn get_real_physics_fps(instance: Workspace) -> OptionDouble
 /// Returns:
 /// - The estimated Unix timestamp on the server.
 @luau.method("GetServerTimeNow")
-pub fn get_server_time_now(instance: Workspace) -> OptionDouble
+pub fn get_server_time_now(instance: Workspace) -> Float
 
 @target(luau)
 /// Creates joints between the specified Parts and any touching parts depending on the parts' surfaces and the specified joint creation mode.
@@ -1062,7 +1058,7 @@ pub fn set_sandboxed(instance: Workspace, value: Bool) -> Workspace
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Workspace) -> OptionInt64
+pub fn get_source_asset_id(instance: Workspace) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1563,7 +1559,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: Workspace,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1836,10 +1832,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: CFrame,
   _: Vector3,

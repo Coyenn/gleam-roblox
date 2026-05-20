@@ -2,7 +2,7 @@
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/int_value
 import roblox/types.{
-  type Instance, type IntValue, type OptionInt64, type SecurityCapabilities,
+  type Instance, type Int64, type IntValue, type SecurityCapabilities,
 }
 
 @target(luau)
@@ -27,7 +27,7 @@ pub fn node(
 /// Roblox: `IntValue.Value`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/IntValue#Value
-pub fn value(value: OptionInt64) -> Property(IntValue) {
+pub fn value(value: Int64) -> Property(IntValue) {
   Property(fn(instance) { int_value.set_value(instance, value) })
 }
 
@@ -97,7 +97,7 @@ pub fn sandboxed(value: Bool) -> Property(IntValue) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: OptionInt64,
+  _: Int64,
   _: IntValue,
 ) -> Nil {
   Nil

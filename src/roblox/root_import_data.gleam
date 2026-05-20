@@ -3,10 +3,10 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type BaseImportData, type Instance, type MeshScaleUnit,
-  type NormalId, type Object, type OptionDouble, type OptionInt64,
-  type PhysicalConstraintType, type RestPose, type RigScale, type RigType,
-  type RootImportData, type SecurityCapabilities, type UniqueId, type Vector3,
+  type Actor, type BaseImportData, type Instance, type Int64, type MeshScaleUnit,
+  type NormalId, type Object, type PhysicalConstraintType, type RestPose,
+  type RigScale, type RigType, type RootImportData, type SecurityCapabilities,
+  type UniqueId, type Vector3,
 }
 
 @target(luau)
@@ -299,7 +299,7 @@ pub fn get_polygon_count(instance: RootImportData) -> Float
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RootImportData#PreferredUploadId
 @luau.property("PreferredUploadId")
-pub fn get_preferred_upload_id(instance: RootImportData) -> OptionInt64
+pub fn get_preferred_upload_id(instance: RootImportData) -> Int64
 
 @target(luau)
 /// Sets Roblox property `RootImportData.PreferredUploadId`.
@@ -310,7 +310,7 @@ pub fn get_preferred_upload_id(instance: RootImportData) -> OptionInt64
 @luau.set_property("PreferredUploadId")
 pub fn set_preferred_upload_id(
   instance: RootImportData,
-  value: OptionInt64,
+  value: Int64,
 ) -> RootImportData
 
 @target(luau)
@@ -503,7 +503,7 @@ pub fn set_validate_ugc_body(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RootImportData#VersionedAssetId
 @luau.property("VersionedAssetId")
-pub fn get_versioned_asset_id(instance: RootImportData) -> OptionInt64
+pub fn get_versioned_asset_id(instance: RootImportData) -> Int64
 
 @target(luau)
 /// Sets Roblox property `RootImportData.VersionedAssetId`.
@@ -514,7 +514,7 @@ pub fn get_versioned_asset_id(instance: RootImportData) -> OptionInt64
 @luau.set_property("VersionedAssetId")
 pub fn set_versioned_asset_id(
   instance: RootImportData,
-  value: OptionInt64,
+  value: Int64,
 ) -> RootImportData
 
 @target(luau)
@@ -787,7 +787,7 @@ pub fn set_sandboxed(instance: RootImportData, value: Bool) -> RootImportData
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: RootImportData) -> OptionInt64
+pub fn get_source_asset_id(instance: RootImportData) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1291,7 +1291,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: RootImportData,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1566,10 +1566,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: NormalId,
   _: MeshScaleUnit,

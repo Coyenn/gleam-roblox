@@ -3,9 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type BrickColor, type BrickColorValue, type Instance, type Object,
-  type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId,
-  type ValueBase,
+  type Actor, type BrickColor, type BrickColorValue, type Instance, type Int64,
+  type Object, type SecurityCapabilities, type UniqueId, type ValueBase,
 }
 
 @target(luau)
@@ -217,7 +216,7 @@ pub fn set_sandboxed(instance: BrickColorValue, value: Bool) -> BrickColorValue
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: BrickColorValue) -> OptionInt64
+pub fn get_source_asset_id(instance: BrickColorValue) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -721,7 +720,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: BrickColorValue,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -973,10 +972,9 @@ pub fn is_a(instance: BrickColorValue, class_name: String) -> Bool
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: BrickColor,
   _: BrickColorValue,

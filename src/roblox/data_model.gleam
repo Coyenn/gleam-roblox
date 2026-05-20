@@ -4,9 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type CreatorType, type DataModel, type Genre, type Instance,
-  type MatchmakingType, type Object, type OptionDouble, type OptionInt64,
-  type RunService, type SecurityCapabilities, type ServiceProvider,
-  type UniqueId, type Workspace,
+  type Int64, type MatchmakingType, type Object, type RunService,
+  type SecurityCapabilities, type ServiceProvider, type UniqueId, type Workspace,
 }
 
 @target(luau)
@@ -34,7 +33,7 @@ pub fn as_object(instance: DataModel) -> Object
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/DataModel#CreatorId
 @luau.property("CreatorId")
-pub fn get_creator_id(instance: DataModel) -> OptionInt64
+pub fn get_creator_id(instance: DataModel) -> Int64
 
 @target(luau)
 /// Gets Roblox property `DataModel.CreatorType`.
@@ -68,7 +67,7 @@ pub fn get_environment(instance: DataModel) -> String
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/DataModel#GameId
 @luau.property("GameId")
-pub fn get_game_id(instance: DataModel) -> OptionInt64
+pub fn get_game_id(instance: DataModel) -> Int64
 
 @target(luau)
 /// Gets Roblox property `DataModel.Genre`.
@@ -126,7 +125,7 @@ pub fn get_matchmaking_type(instance: DataModel) -> MatchmakingType
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/DataModel#PlaceId
 @luau.property("PlaceId")
-pub fn get_place_id(instance: DataModel) -> OptionInt64
+pub fn get_place_id(instance: DataModel) -> Int64
 
 @target(luau)
 /// Gets Roblox property `DataModel.PlaceVersion`.
@@ -162,7 +161,7 @@ pub fn get_private_server_id(instance: DataModel) -> String
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/DataModel#PrivateServerOwnerId
 @luau.property("PrivateServerOwnerId")
-pub fn get_private_server_owner_id(instance: DataModel) -> OptionInt64
+pub fn get_private_server_owner_id(instance: DataModel) -> Int64
 
 @target(luau)
 /// Gets Roblox property `DataModel.RunService`.
@@ -521,7 +520,7 @@ pub fn set_sandboxed(instance: DataModel, value: Bool) -> DataModel
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: DataModel) -> OptionInt64
+pub fn get_source_asset_id(instance: DataModel) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1022,7 +1021,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: DataModel,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1295,10 +1294,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: Workspace,
   _: RunService,

@@ -4,9 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BasePart, type CFrame, type Content, type ContentId,
-  type Instance, type Mouse, type NormalId, type Object, type OptionDouble,
-  type OptionInt64, type PlayerMouse, type Ray, type SecurityCapabilities,
-  type UniqueId,
+  type Instance, type Int64, type Mouse, type NormalId, type Object,
+  type PlayerMouse, type Ray, type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -519,7 +518,7 @@ pub fn set_sandboxed(instance: PlayerMouse, value: Bool) -> PlayerMouse
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: PlayerMouse) -> OptionInt64
+pub fn get_source_asset_id(instance: PlayerMouse) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1020,7 +1019,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: PlayerMouse,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1295,10 +1294,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: Ray,
   _: NormalId,

@@ -1316,6 +1316,8 @@ pub type InstanceFileSyncService
 
 pub type InstanceFileSyncStatus
 
+pub type Int64
+
 pub type IntConstrainedValue
 
 pub type IntValue
@@ -1640,8 +1642,6 @@ pub type OptionColor3
 
 pub type OptionCoordinateFrame
 
-pub type OptionDouble
-
 pub type OptionFloat
 
 pub type OptionFunction
@@ -1649,8 +1649,6 @@ pub type OptionFunction
 pub type OptionIXPLoadingStatus
 
 pub type OptionInt
-
-pub type OptionInt64
 
 pub type OptionRaycastResult
 

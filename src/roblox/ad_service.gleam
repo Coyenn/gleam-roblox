@@ -4,8 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type AdFormat, type AdReward, type AdService, type GuiButton,
-  type Instance, type Object, type OptionDouble, type OptionInt64, type Player,
-  type SecurityCapabilities, type ShowAdResult, type UniqueId,
+  type Instance, type Int64, type Object, type Player, type SecurityCapabilities,
+  type ShowAdResult, type UniqueId,
 }
 
 @target(luau)
@@ -31,7 +31,7 @@ pub fn as_object(instance: AdService) -> Object
 @luau.method("CreateAdRewardFromDevProductId")
 pub fn create_ad_reward_from_dev_product_id(
   instance: AdService,
-  dev_product_id: OptionInt64,
+  dev_product_id: Int64,
 ) -> AdReward
 
 @target(luau)
@@ -118,7 +118,7 @@ pub fn get_campaign_eligibility_async(
 pub fn register_ad_opportunity_async(
   instance: AdService,
   instance_: Instance,
-  placement_id: OptionInt64,
+  placement_id: Option(Int64),
 ) -> Nil
 
 @target(luau)
@@ -139,7 +139,7 @@ pub fn show_rewarded_video_ad_async(
   instance: AdService,
   player: Player,
   reward: AdReward,
-  placement_id: OptionInt64,
+  placement_id: Option(Int64),
 ) -> ShowAdResult
 
 @target(luau)
@@ -279,7 +279,7 @@ pub fn set_sandboxed(instance: AdService, value: Bool) -> AdService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: AdService) -> OptionInt64
+pub fn get_source_asset_id(instance: AdService) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -780,7 +780,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: AdService,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1053,10 +1053,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: ShowAdResult,
   _: Player,

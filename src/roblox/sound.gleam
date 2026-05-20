@@ -4,9 +4,9 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type AssetRepresentation, type Content, type ContentId,
-  type Instance, type NumberRange, type Object, type OptionDouble,
-  type OptionInt64, type RollOffMode, type SecurityCapabilities, type Sound,
-  type SoundGroup, type UniqueId, type UsageContext,
+  type Instance, type Int64, type NumberRange, type Object, type RollOffMode,
+  type SecurityCapabilities, type Sound, type SoundGroup, type UniqueId,
+  type UsageContext,
 }
 
 @target(luau)
@@ -210,7 +210,7 @@ pub fn set_play_on_remove(instance: Sound, value: Bool) -> Sound
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Sound#PlaybackLoudness
 @luau.property("PlaybackLoudness")
-pub fn get_playback_loudness(instance: Sound) -> OptionDouble
+pub fn get_playback_loudness(instance: Sound) -> Float
 
 @target(luau)
 /// Gets Roblox property `Sound.PlaybackRegion`.
@@ -434,7 +434,7 @@ pub fn set_sound_id(instance: Sound, value: ContentId) -> Sound
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Sound#TimeLength
 @luau.property("TimeLength")
-pub fn get_time_length(instance: Sound) -> OptionDouble
+pub fn get_time_length(instance: Sound) -> Float
 
 @target(luau)
 /// Gets Roblox property `Sound.TimePosition`.
@@ -446,7 +446,7 @@ pub fn get_time_length(instance: Sound) -> OptionDouble
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Sound#TimePosition
 @luau.property("TimePosition")
-pub fn get_time_position(instance: Sound) -> OptionDouble
+pub fn get_time_position(instance: Sound) -> Float
 
 @target(luau)
 /// Sets Roblox property `Sound.TimePosition`.
@@ -458,7 +458,7 @@ pub fn get_time_position(instance: Sound) -> OptionDouble
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Sound#TimePosition
 @luau.set_property("TimePosition")
-pub fn set_time_position(instance: Sound, value: OptionDouble) -> Sound
+pub fn set_time_position(instance: Sound, value: Float) -> Sound
 
 @target(luau)
 /// Gets Roblox property `Sound.UsageContextPermission`.
@@ -835,7 +835,7 @@ pub fn set_sandboxed(instance: Sound, value: Bool) -> Sound
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Sound) -> OptionInt64
+pub fn get_source_asset_id(instance: Sound) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1323,7 +1323,7 @@ pub fn set_attribute(instance: Sound, attribute: String, value: Dynamic) -> Nil
 pub fn wait_for_child(
   instance: Sound,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1590,10 +1590,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: UsageContext,
   _: ContentId,

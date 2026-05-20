@@ -1,9 +1,7 @@
 // Generated class bindings for Roblox API
 import roblox/dynamic.{type Dynamic}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
-import roblox/types.{
-  type Content, type Object, type OptionDouble, type VideoSampler,
-}
+import roblox/types.{type Content, type Object, type VideoSampler}
 
 @target(luau)
 /// Treats `VideoSampler` as its Roblox ancestor `Object`.
@@ -20,7 +18,7 @@ pub fn as_object(instance: VideoSampler) -> Object
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/VideoSampler#TimeLength
 @luau.property("TimeLength")
-pub fn get_time_length(instance: VideoSampler) -> OptionDouble
+pub fn get_time_length(instance: VideoSampler) -> Float
 
 @target(luau)
 /// Gets Roblox property `VideoSampler.VideoContent`.
@@ -128,7 +126,6 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Content,
-  _: OptionDouble,
   _: VideoSampler,
   _: Object,
   _: Dynamic,

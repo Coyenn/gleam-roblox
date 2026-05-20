@@ -3,10 +3,10 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type EnviromentalPhysicsThrottle, type Instance, type Object,
-  type OptionDouble, type OptionInt64, type PhysicsSettings,
-  type SecurityCapabilities, type SolverConvergenceMetricType,
-  type SolverConvergenceVisualizationMode, type UniqueId,
+  type Actor, type EnviromentalPhysicsThrottle, type Instance, type Int64,
+  type Object, type PhysicsSettings, type SecurityCapabilities,
+  type SolverConvergenceMetricType, type SolverConvergenceVisualizationMode,
+  type UniqueId,
 }
 
 @target(luau)
@@ -502,7 +502,7 @@ pub fn get_solver_convergence_visualization_mode(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#ThrottleAdjustTime
 @luau.property("ThrottleAdjustTime")
-pub fn get_throttle_adjust_time(instance: PhysicsSettings) -> OptionDouble
+pub fn get_throttle_adjust_time(instance: PhysicsSettings) -> Float
 
 @target(luau)
 /// Gets Roblox property `PhysicsSettings.TorqueDrawScale`.
@@ -661,7 +661,7 @@ pub fn set_sandboxed(instance: PhysicsSettings, value: Bool) -> PhysicsSettings
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: PhysicsSettings) -> OptionInt64
+pub fn get_source_asset_id(instance: PhysicsSettings) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1165,7 +1165,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: PhysicsSettings,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1440,10 +1440,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: SolverConvergenceVisualizationMode,
   _: SolverConvergenceMetricType,

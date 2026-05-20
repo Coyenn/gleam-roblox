@@ -4,8 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type CollisionFidelity, type ContentId, type InsertService,
-  type Instance, type MeshPart, type Object, type OptionDouble, type OptionInt64,
-  type RenderFidelity, type SecurityCapabilities, type UniqueId,
+  type Instance, type Int64, type MeshPart, type Object, type RenderFidelity,
+  type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -99,8 +99,8 @@ pub fn get_free_models_async(
 @luau.method("GetLatestAssetVersionAsync")
 pub fn get_latest_asset_version_async(
   instance: InsertService,
-  asset_id: OptionInt64,
-) -> OptionInt64
+  asset_id: Int64,
+) -> Int64
 
 @target(luau)
 /// Returns a Model containing the asset.
@@ -117,7 +117,7 @@ pub fn get_latest_asset_version_async(
 /// Returns:
 /// - An instance of the loaded asset.
 @luau.method("LoadAsset")
-pub fn load_asset(instance: InsertService, asset_id: OptionInt64) -> Instance
+pub fn load_asset(instance: InsertService, asset_id: Int64) -> Instance
 
 @target(luau)
 /// Returns a model inserted into InsertService containing the asset with the given assetVersionId.
@@ -132,7 +132,7 @@ pub fn load_asset(instance: InsertService, asset_id: OptionInt64) -> Instance
 @luau.method("LoadAssetVersion")
 pub fn load_asset_version(
   instance: InsertService,
-  asset_version_id: OptionInt64,
+  asset_version_id: Int64,
 ) -> Instance
 
 @target(luau)
@@ -272,7 +272,7 @@ pub fn set_sandboxed(instance: InsertService, value: Bool) -> InsertService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: InsertService) -> OptionInt64
+pub fn get_source_asset_id(instance: InsertService) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -776,7 +776,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: InsertService,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1051,10 +1051,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: MeshPart,
   _: ContentId,

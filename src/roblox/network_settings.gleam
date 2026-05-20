@@ -3,8 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type NetworkSettings, type Object,
-  type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId,
+  type Actor, type Instance, type Int64, type NetworkSettings, type Object,
+  type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -102,7 +102,7 @@ pub fn get_inbound_network_min_delay_ms(instance: NetworkSettings) -> Float
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/NetworkSettings#IncomingReplicationLag
 @luau.property("IncomingReplicationLag")
-pub fn get_incoming_replication_lag(instance: NetworkSettings) -> OptionDouble
+pub fn get_incoming_replication_lag(instance: NetworkSettings) -> Float
 
 @target(luau)
 /// Sets Roblox property `NetworkSettings.IncomingReplicationLag`.
@@ -115,7 +115,7 @@ pub fn get_incoming_replication_lag(instance: NetworkSettings) -> OptionDouble
 @luau.set_property("IncomingReplicationLag")
 pub fn set_incoming_replication_lag(
   instance: NetworkSettings,
-  value: OptionDouble,
+  value: Float,
 ) -> NetworkSettings
 
 @target(luau)
@@ -441,7 +441,7 @@ pub fn set_sandboxed(instance: NetworkSettings, value: Bool) -> NetworkSettings
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: NetworkSettings) -> OptionInt64
+pub fn get_source_asset_id(instance: NetworkSettings) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -945,7 +945,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: NetworkSettings,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1220,10 +1220,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: NetworkSettings,
   _: Object,

@@ -1,9 +1,7 @@
 // Generated declarative builders for Roblox `NumberValue` instances.
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/number_value
-import roblox/types.{
-  type Instance, type NumberValue, type OptionDouble, type SecurityCapabilities,
-}
+import roblox/types.{type Instance, type NumberValue, type SecurityCapabilities}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
@@ -27,7 +25,7 @@ pub fn node(
 /// Roblox: `NumberValue.Value`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/NumberValue#Value
-pub fn value(value: OptionDouble) -> Property(NumberValue) {
+pub fn value(value: Float) -> Property(NumberValue) {
   Property(fn(instance) { number_value.set_value(instance, value) })
 }
 
@@ -97,7 +95,6 @@ pub fn sandboxed(value: Bool) -> Property(NumberValue) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: OptionDouble,
   _: NumberValue,
 ) -> Nil {
   Nil

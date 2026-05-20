@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BodyPart, type CharacterAppearance, type CharacterMesh,
-  type Content, type Instance, type Object, type OptionDouble, type OptionInt64,
+  type Content, type Instance, type Int64, type Object,
   type SecurityCapabilities, type UniqueId,
 }
 
@@ -60,7 +60,7 @@ pub fn set_base_texture_content(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CharacterMesh#BaseTextureId
 @luau.property("BaseTextureId")
-pub fn get_base_texture_id(instance: CharacterMesh) -> OptionInt64
+pub fn get_base_texture_id(instance: CharacterMesh) -> Int64
 
 @target(luau)
 /// Sets Roblox property `CharacterMesh.BaseTextureId`.
@@ -73,7 +73,7 @@ pub fn get_base_texture_id(instance: CharacterMesh) -> OptionInt64
 @luau.set_property("BaseTextureId")
 pub fn set_base_texture_id(
   instance: CharacterMesh,
-  value: OptionInt64,
+  value: Int64,
 ) -> CharacterMesh
 
 @target(luau)
@@ -128,7 +128,7 @@ pub fn set_mesh_content(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CharacterMesh#MeshId
 @luau.property("MeshId")
-pub fn get_mesh_id(instance: CharacterMesh) -> OptionInt64
+pub fn get_mesh_id(instance: CharacterMesh) -> Int64
 
 @target(luau)
 /// Sets Roblox property `CharacterMesh.MeshId`.
@@ -139,7 +139,7 @@ pub fn get_mesh_id(instance: CharacterMesh) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CharacterMesh#MeshId
 @luau.set_property("MeshId")
-pub fn set_mesh_id(instance: CharacterMesh, value: OptionInt64) -> CharacterMesh
+pub fn set_mesh_id(instance: CharacterMesh, value: Int64) -> CharacterMesh
 
 @target(luau)
 /// Gets Roblox property `CharacterMesh.OverlayTextureContent`.
@@ -171,7 +171,7 @@ pub fn set_overlay_texture_content(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CharacterMesh#OverlayTextureId
 @luau.property("OverlayTextureId")
-pub fn get_overlay_texture_id(instance: CharacterMesh) -> OptionInt64
+pub fn get_overlay_texture_id(instance: CharacterMesh) -> Int64
 
 @target(luau)
 /// Sets Roblox property `CharacterMesh.OverlayTextureId`.
@@ -184,7 +184,7 @@ pub fn get_overlay_texture_id(instance: CharacterMesh) -> OptionInt64
 @luau.set_property("OverlayTextureId")
 pub fn set_overlay_texture_id(
   instance: CharacterMesh,
-  value: OptionInt64,
+  value: Int64,
 ) -> CharacterMesh
 
 @target(luau)
@@ -324,7 +324,7 @@ pub fn set_sandboxed(instance: CharacterMesh, value: Bool) -> CharacterMesh
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: CharacterMesh) -> OptionInt64
+pub fn get_source_asset_id(instance: CharacterMesh) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -828,7 +828,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: CharacterMesh,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1103,10 +1103,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: Content,
   _: BodyPart,

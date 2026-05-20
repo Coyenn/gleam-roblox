@@ -3,8 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Object, type OptionDouble, type OptionInt64,
-  type PredictionMode, type PredictionStatus, type RunService, type RunState,
+  type Actor, type Instance, type Int64, type Object, type PredictionMode,
+  type PredictionStatus, type RunService, type RunState,
   type SecurityCapabilities, type StepFrequency, type UniqueId,
 }
 
@@ -36,7 +36,7 @@ pub fn get_client_git_hash(instance: RunService) -> String
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/RunService#FrameNumber
 @luau.property("FrameNumber")
-pub fn get_frame_number(instance: RunService) -> OptionInt64
+pub fn get_frame_number(instance: RunService) -> Int64
 
 @target(luau)
 /// Gets Roblox property `RunService.RunState`.
@@ -217,9 +217,7 @@ pub fn unbind_from_render_step(instance: RunService, name: String) -> Nil
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RunService#Heartbeat
 @luau.event("Heartbeat")
-pub fn heartbeat(
-  instance: RunService,
-) -> RBXScriptSignal(fn(OptionDouble) -> Nil)
+pub fn heartbeat(instance: RunService) -> RBXScriptSignal(fn(Float) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `RunService.Heartbeat`.
@@ -232,7 +230,7 @@ pub fn heartbeat(
 @luau.global("(function(instance, callback) return instance.Heartbeat:Connect(callback) end)")
 pub fn on_heartbeat(
   instance: RunService,
-  callback: fn(OptionDouble) -> Nil,
+  callback: fn(Float) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -244,7 +242,7 @@ pub fn on_heartbeat(
 @luau.event("Misprediction")
 pub fn misprediction(
   instance: RunService,
-) -> RBXScriptSignal(fn(OptionDouble, List(Dynamic), Dynamic) -> Nil)
+) -> RBXScriptSignal(fn(Float, List(Dynamic), Dynamic) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `RunService.Misprediction`.
@@ -257,7 +255,7 @@ pub fn misprediction(
 @luau.global("(function(instance, callback) return instance.Misprediction:Connect(callback) end)")
 pub fn on_misprediction(
   instance: RunService,
-  callback: fn(OptionDouble, List(Dynamic), Dynamic) -> Nil,
+  callback: fn(Float, List(Dynamic), Dynamic) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -269,7 +267,7 @@ pub fn on_misprediction(
 @luau.event("PostSimulation")
 pub fn post_simulation(
   instance: RunService,
-) -> RBXScriptSignal(fn(OptionDouble) -> Nil)
+) -> RBXScriptSignal(fn(Float) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `RunService.PostSimulation`.
@@ -282,7 +280,7 @@ pub fn post_simulation(
 @luau.global("(function(instance, callback) return instance.PostSimulation:Connect(callback) end)")
 pub fn on_post_simulation(
   instance: RunService,
-  callback: fn(OptionDouble) -> Nil,
+  callback: fn(Float) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -292,9 +290,7 @@ pub fn on_post_simulation(
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RunService#PreAnimation
 @luau.event("PreAnimation")
-pub fn pre_animation(
-  instance: RunService,
-) -> RBXScriptSignal(fn(OptionDouble) -> Nil)
+pub fn pre_animation(instance: RunService) -> RBXScriptSignal(fn(Float) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `RunService.PreAnimation`.
@@ -307,7 +303,7 @@ pub fn pre_animation(
 @luau.global("(function(instance, callback) return instance.PreAnimation:Connect(callback) end)")
 pub fn on_pre_animation(
   instance: RunService,
-  callback: fn(OptionDouble) -> Nil,
+  callback: fn(Float) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -317,9 +313,7 @@ pub fn on_pre_animation(
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RunService#PreRender
 @luau.event("PreRender")
-pub fn pre_render(
-  instance: RunService,
-) -> RBXScriptSignal(fn(OptionDouble) -> Nil)
+pub fn pre_render(instance: RunService) -> RBXScriptSignal(fn(Float) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `RunService.PreRender`.
@@ -332,7 +326,7 @@ pub fn pre_render(
 @luau.global("(function(instance, callback) return instance.PreRender:Connect(callback) end)")
 pub fn on_pre_render(
   instance: RunService,
-  callback: fn(OptionDouble) -> Nil,
+  callback: fn(Float) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -342,9 +336,7 @@ pub fn on_pre_render(
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RunService#PreSimulation
 @luau.event("PreSimulation")
-pub fn pre_simulation(
-  instance: RunService,
-) -> RBXScriptSignal(fn(OptionDouble) -> Nil)
+pub fn pre_simulation(instance: RunService) -> RBXScriptSignal(fn(Float) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `RunService.PreSimulation`.
@@ -357,7 +349,7 @@ pub fn pre_simulation(
 @luau.global("(function(instance, callback) return instance.PreSimulation:Connect(callback) end)")
 pub fn on_pre_simulation(
   instance: RunService,
-  callback: fn(OptionDouble) -> Nil,
+  callback: fn(Float) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -367,9 +359,7 @@ pub fn on_pre_simulation(
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RunService#RenderStepped
 @luau.event("RenderStepped")
-pub fn render_stepped(
-  instance: RunService,
-) -> RBXScriptSignal(fn(OptionDouble) -> Nil)
+pub fn render_stepped(instance: RunService) -> RBXScriptSignal(fn(Float) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `RunService.RenderStepped`.
@@ -382,7 +372,7 @@ pub fn render_stepped(
 @luau.global("(function(instance, callback) return instance.RenderStepped:Connect(callback) end)")
 pub fn on_render_stepped(
   instance: RunService,
-  callback: fn(OptionDouble) -> Nil,
+  callback: fn(Float) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -392,9 +382,7 @@ pub fn on_render_stepped(
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RunService#Rollback
 @luau.event("Rollback")
-pub fn rollback(
-  instance: RunService,
-) -> RBXScriptSignal(fn(OptionDouble) -> Nil)
+pub fn rollback(instance: RunService) -> RBXScriptSignal(fn(Float) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `RunService.Rollback`.
@@ -407,7 +395,7 @@ pub fn rollback(
 @luau.global("(function(instance, callback) return instance.Rollback:Connect(callback) end)")
 pub fn on_rollback(
   instance: RunService,
-  callback: fn(OptionDouble) -> Nil,
+  callback: fn(Float) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -417,9 +405,7 @@ pub fn on_rollback(
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RunService#Stepped
 @luau.event("Stepped")
-pub fn stepped(
-  instance: RunService,
-) -> RBXScriptSignal(fn(OptionDouble, OptionDouble) -> Nil)
+pub fn stepped(instance: RunService) -> RBXScriptSignal(fn(Float, Float) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `RunService.Stepped`.
@@ -432,7 +418,7 @@ pub fn stepped(
 @luau.global("(function(instance, callback) return instance.Stepped:Connect(callback) end)")
 pub fn on_stepped(
   instance: RunService,
-  callback: fn(OptionDouble, OptionDouble) -> Nil,
+  callback: fn(Float, Float) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -572,7 +558,7 @@ pub fn set_sandboxed(instance: RunService, value: Bool) -> RunService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: RunService) -> OptionInt64
+pub fn get_source_asset_id(instance: RunService) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1073,7 +1059,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: RunService,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1346,10 +1332,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: PredictionMode,
   _: PredictionStatus,

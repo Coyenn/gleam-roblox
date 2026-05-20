@@ -3,8 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Color3, type HumanoidDescription, type Instance, type Object,
-  type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId,
+  type Actor, type Color3, type HumanoidDescription, type Instance, type Int64,
+  type Object, type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -85,7 +85,7 @@ pub fn set_body_type_scale(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#ClimbAnimation
 @luau.property("ClimbAnimation")
-pub fn get_climb_animation(instance: HumanoidDescription) -> OptionInt64
+pub fn get_climb_animation(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.ClimbAnimation`.
@@ -98,7 +98,7 @@ pub fn get_climb_animation(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("ClimbAnimation")
 pub fn set_climb_animation(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -135,7 +135,7 @@ pub fn set_depth_scale(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#Face
 @luau.property("Face")
-pub fn get_face(instance: HumanoidDescription) -> OptionInt64
+pub fn get_face(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.Face`.
@@ -148,7 +148,7 @@ pub fn get_face(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("Face")
 pub fn set_face(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -187,7 +187,7 @@ pub fn set_face_accessory(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#FallAnimation
 @luau.property("FallAnimation")
-pub fn get_fall_animation(instance: HumanoidDescription) -> OptionInt64
+pub fn get_fall_animation(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.FallAnimation`.
@@ -200,7 +200,7 @@ pub fn get_fall_animation(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("FallAnimation")
 pub fn set_fall_animation(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -239,7 +239,7 @@ pub fn set_front_accessory(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#GraphicTShirt
 @luau.property("GraphicTShirt")
-pub fn get_graphic_t_shirt(instance: HumanoidDescription) -> OptionInt64
+pub fn get_graphic_t_shirt(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.GraphicTShirt`.
@@ -252,7 +252,7 @@ pub fn get_graphic_t_shirt(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("GraphicTShirt")
 pub fn set_graphic_t_shirt(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -319,7 +319,7 @@ pub fn set_hat_accessory(
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#Head
 @luau.property("Head")
-pub fn get_head(instance: HumanoidDescription) -> OptionInt64
+pub fn get_head(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.Head`.
@@ -333,7 +333,7 @@ pub fn get_head(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("Head")
 pub fn set_head(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -422,7 +422,7 @@ pub fn set_height_scale(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#IdleAnimation
 @luau.property("IdleAnimation")
-pub fn get_idle_animation(instance: HumanoidDescription) -> OptionInt64
+pub fn get_idle_animation(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.IdleAnimation`.
@@ -435,7 +435,7 @@ pub fn get_idle_animation(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("IdleAnimation")
 pub fn set_idle_animation(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -447,7 +447,7 @@ pub fn set_idle_animation(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#JumpAnimation
 @luau.property("JumpAnimation")
-pub fn get_jump_animation(instance: HumanoidDescription) -> OptionInt64
+pub fn get_jump_animation(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.JumpAnimation`.
@@ -460,7 +460,7 @@ pub fn get_jump_animation(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("JumpAnimation")
 pub fn set_jump_animation(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -473,7 +473,7 @@ pub fn set_jump_animation(
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#LeftArm
 @luau.property("LeftArm")
-pub fn get_left_arm(instance: HumanoidDescription) -> OptionInt64
+pub fn get_left_arm(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.LeftArm`.
@@ -487,7 +487,7 @@ pub fn get_left_arm(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("LeftArm")
 pub fn set_left_arm(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -527,7 +527,7 @@ pub fn set_left_arm_color(
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#LeftLeg
 @luau.property("LeftLeg")
-pub fn get_left_leg(instance: HumanoidDescription) -> OptionInt64
+pub fn get_left_leg(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.LeftLeg`.
@@ -541,7 +541,7 @@ pub fn get_left_leg(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("LeftLeg")
 pub fn set_left_leg(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -578,7 +578,7 @@ pub fn set_left_leg_color(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#MoodAnimation
 @luau.property("MoodAnimation")
-pub fn get_mood_animation(instance: HumanoidDescription) -> OptionInt64
+pub fn get_mood_animation(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.MoodAnimation`.
@@ -589,7 +589,7 @@ pub fn get_mood_animation(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("MoodAnimation")
 pub fn set_mood_animation(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -638,7 +638,7 @@ pub fn get_number_emotes_loaded(instance: HumanoidDescription) -> Int
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#Pants
 @luau.property("Pants")
-pub fn get_pants(instance: HumanoidDescription) -> OptionInt64
+pub fn get_pants(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.Pants`.
@@ -651,7 +651,7 @@ pub fn get_pants(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("Pants")
 pub fn set_pants(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -699,7 +699,7 @@ pub fn get_reset_includes_body_parts(instance: HumanoidDescription) -> Bool
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#RightArm
 @luau.property("RightArm")
-pub fn get_right_arm(instance: HumanoidDescription) -> OptionInt64
+pub fn get_right_arm(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.RightArm`.
@@ -713,7 +713,7 @@ pub fn get_right_arm(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("RightArm")
 pub fn set_right_arm(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -753,7 +753,7 @@ pub fn set_right_arm_color(
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#RightLeg
 @luau.property("RightLeg")
-pub fn get_right_leg(instance: HumanoidDescription) -> OptionInt64
+pub fn get_right_leg(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.RightLeg`.
@@ -767,7 +767,7 @@ pub fn get_right_leg(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("RightLeg")
 pub fn set_right_leg(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -806,7 +806,7 @@ pub fn set_right_leg_color(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#RunAnimation
 @luau.property("RunAnimation")
-pub fn get_run_animation(instance: HumanoidDescription) -> OptionInt64
+pub fn get_run_animation(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.RunAnimation`.
@@ -819,7 +819,7 @@ pub fn get_run_animation(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("RunAnimation")
 pub fn set_run_animation(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -831,7 +831,7 @@ pub fn set_run_animation(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#Shirt
 @luau.property("Shirt")
-pub fn get_shirt(instance: HumanoidDescription) -> OptionInt64
+pub fn get_shirt(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.Shirt`.
@@ -844,7 +844,7 @@ pub fn get_shirt(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("Shirt")
 pub fn set_shirt(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -908,7 +908,7 @@ pub fn set_static_facial_animation(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#SwimAnimation
 @luau.property("SwimAnimation")
-pub fn get_swim_animation(instance: HumanoidDescription) -> OptionInt64
+pub fn get_swim_animation(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.SwimAnimation`.
@@ -921,7 +921,7 @@ pub fn get_swim_animation(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("SwimAnimation")
 pub fn set_swim_animation(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -934,7 +934,7 @@ pub fn set_swim_animation(
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#Torso
 @luau.property("Torso")
-pub fn get_torso(instance: HumanoidDescription) -> OptionInt64
+pub fn get_torso(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.Torso`.
@@ -948,7 +948,7 @@ pub fn get_torso(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("Torso")
 pub fn set_torso(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -1035,7 +1035,7 @@ pub fn set_waist_accessory(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#WalkAnimation
 @luau.property("WalkAnimation")
-pub fn get_walk_animation(instance: HumanoidDescription) -> OptionInt64
+pub fn get_walk_animation(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `HumanoidDescription.WalkAnimation`.
@@ -1048,7 +1048,7 @@ pub fn get_walk_animation(instance: HumanoidDescription) -> OptionInt64
 @luau.set_property("WalkAnimation")
 pub fn set_walk_animation(
   instance: HumanoidDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> HumanoidDescription
 
 @target(luau)
@@ -1091,7 +1091,7 @@ pub fn set_width_scale(
 pub fn add_emote(
   instance: HumanoidDescription,
   name: String,
-  asset_id: OptionInt64,
+  asset_id: Int64,
 ) -> Nil
 
 @target(luau)
@@ -1402,7 +1402,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: HumanoidDescription) -> OptionInt64
+pub fn get_source_asset_id(instance: HumanoidDescription) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1918,7 +1918,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: HumanoidDescription,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -2195,10 +2195,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: Color3,
   _: HumanoidDescription,

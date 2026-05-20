@@ -4,10 +4,9 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type ChatWindowConfiguration, type ChatWindowMessageProperties,
-  type Color3, type Font, type HorizontalAlignment, type Instance, type Object,
-  type OptionDouble, type OptionInt64, type SecurityCapabilities,
-  type TextChatConfigurations, type UniqueId, type Vector2,
-  type VerticalAlignment,
+  type Color3, type Font, type HorizontalAlignment, type Instance, type Int64,
+  type Object, type SecurityCapabilities, type TextChatConfigurations,
+  type UniqueId, type Vector2, type VerticalAlignment,
 }
 
 @target(luau)
@@ -105,9 +104,7 @@ pub fn set_background_color3(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ChatWindowConfiguration#BackgroundTransparency
 @luau.property("BackgroundTransparency")
-pub fn get_background_transparency(
-  instance: ChatWindowConfiguration,
-) -> OptionDouble
+pub fn get_background_transparency(instance: ChatWindowConfiguration) -> Float
 
 @target(luau)
 /// Sets Roblox property `ChatWindowConfiguration.BackgroundTransparency`.
@@ -120,7 +117,7 @@ pub fn get_background_transparency(
 @luau.set_property("BackgroundTransparency")
 pub fn set_background_transparency(
   instance: ChatWindowConfiguration,
-  value: OptionDouble,
+  value: Float,
 ) -> ChatWindowConfiguration
 
 @target(luau)
@@ -259,7 +256,7 @@ pub fn set_text_color3(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ChatWindowConfiguration#TextSize
 @luau.property("TextSize")
-pub fn get_text_size(instance: ChatWindowConfiguration) -> OptionInt64
+pub fn get_text_size(instance: ChatWindowConfiguration) -> Int64
 
 @target(luau)
 /// Sets Roblox property `ChatWindowConfiguration.TextSize`.
@@ -272,7 +269,7 @@ pub fn get_text_size(instance: ChatWindowConfiguration) -> OptionInt64
 @luau.set_property("TextSize")
 pub fn set_text_size(
   instance: ChatWindowConfiguration,
-  value: OptionInt64,
+  value: Int64,
 ) -> ChatWindowConfiguration
 
 @target(luau)
@@ -309,9 +306,7 @@ pub fn set_text_stroke_color3(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ChatWindowConfiguration#TextStrokeTransparency
 @luau.property("TextStrokeTransparency")
-pub fn get_text_stroke_transparency(
-  instance: ChatWindowConfiguration,
-) -> OptionDouble
+pub fn get_text_stroke_transparency(instance: ChatWindowConfiguration) -> Float
 
 @target(luau)
 /// Sets Roblox property `ChatWindowConfiguration.TextStrokeTransparency`.
@@ -324,7 +319,7 @@ pub fn get_text_stroke_transparency(
 @luau.set_property("TextStrokeTransparency")
 pub fn set_text_stroke_transparency(
   instance: ChatWindowConfiguration,
-  value: OptionDouble,
+  value: Float,
 ) -> ChatWindowConfiguration
 
 @target(luau)
@@ -544,7 +539,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: ChatWindowConfiguration) -> OptionInt64
+pub fn get_source_asset_id(instance: ChatWindowConfiguration) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1060,7 +1055,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: ChatWindowConfiguration,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1339,10 +1334,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: ChatWindowMessageProperties,
   _: VerticalAlignment,

@@ -2,8 +2,7 @@
 import roblox/audio_text_to_speech
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/types.{
-  type AudioTextToSpeech, type Instance, type OptionDouble,
-  type SecurityCapabilities,
+  type AudioTextToSpeech, type Instance, type SecurityCapabilities,
 }
 
 @target(luau)
@@ -90,7 +89,7 @@ pub fn text(value: String) -> Property(AudioTextToSpeech) {
 /// Roblox: `AudioTextToSpeech.TimePosition`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioTextToSpeech#TimePosition
-pub fn time_position(value: OptionDouble) -> Property(AudioTextToSpeech) {
+pub fn time_position(value: Float) -> Property(AudioTextToSpeech) {
   Property(fn(instance) {
     audio_text_to_speech.set_time_position(instance, value)
   })
@@ -190,7 +189,6 @@ pub fn sandboxed(value: Bool) -> Property(AudioTextToSpeech) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: OptionDouble,
   _: AudioTextToSpeech,
 ) -> Nil {
   Nil

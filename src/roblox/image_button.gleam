@@ -7,11 +7,10 @@ import roblox/types.{
   type Content, type ContentId, type EasingDirection, type EasingStyle,
   type GuiBase, type GuiBase2d, type GuiButton, type GuiObject, type GuiState,
   type HapticEffect, type ImageButton, type InputObject, type InputSink,
-  type Instance, type LocalizationTable, type Object, type OptionDouble,
-  type OptionInt64, type Rect, type ResamplerMode, type ScaleType,
-  type SecurityCapabilities, type SelectionBehavior, type SizeConstraint,
-  type SwipeDirection, type UDim2, type UniqueId, type UserInputState,
-  type Vector2,
+  type Instance, type Int64, type LocalizationTable, type Object, type Rect,
+  type ResamplerMode, type ScaleType, type SecurityCapabilities,
+  type SelectionBehavior, type SizeConstraint, type SwipeDirection, type UDim2,
+  type UniqueId, type UserInputState, type Vector2,
 }
 
 @target(luau)
@@ -2263,7 +2262,7 @@ pub fn set_sandboxed(instance: ImageButton, value: Bool) -> ImageButton
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: ImageButton) -> OptionInt64
+pub fn get_source_asset_id(instance: ImageButton) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -2764,7 +2763,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: ImageButton,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -3039,10 +3038,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: GuiObject,
   _: SelectionBehavior,

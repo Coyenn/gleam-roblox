@@ -3,9 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type DoubleConstrainedValue, type Instance, type Object,
-  type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId,
-  type ValueBase,
+  type Actor, type DoubleConstrainedValue, type Instance, type Int64,
+  type Object, type SecurityCapabilities, type UniqueId, type ValueBase,
 }
 
 @target(luau)
@@ -31,7 +30,7 @@ pub fn as_object(instance: DoubleConstrainedValue) -> Object
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/DoubleConstrainedValue#ConstrainedValue
 @luau.property("ConstrainedValue")
-pub fn get_constrained_value(instance: DoubleConstrainedValue) -> OptionDouble
+pub fn get_constrained_value(instance: DoubleConstrainedValue) -> Float
 
 @target(luau)
 /// Sets Roblox property `DoubleConstrainedValue.ConstrainedValue`.
@@ -43,7 +42,7 @@ pub fn get_constrained_value(instance: DoubleConstrainedValue) -> OptionDouble
 @luau.set_property("ConstrainedValue")
 pub fn set_constrained_value(
   instance: DoubleConstrainedValue,
-  value: OptionDouble,
+  value: Float,
 ) -> DoubleConstrainedValue
 
 @target(luau)
@@ -55,7 +54,7 @@ pub fn set_constrained_value(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/DoubleConstrainedValue#MaxValue
 @luau.property("MaxValue")
-pub fn get_max_value(instance: DoubleConstrainedValue) -> OptionDouble
+pub fn get_max_value(instance: DoubleConstrainedValue) -> Float
 
 @target(luau)
 /// Sets Roblox property `DoubleConstrainedValue.MaxValue`.
@@ -68,7 +67,7 @@ pub fn get_max_value(instance: DoubleConstrainedValue) -> OptionDouble
 @luau.set_property("MaxValue")
 pub fn set_max_value(
   instance: DoubleConstrainedValue,
-  value: OptionDouble,
+  value: Float,
 ) -> DoubleConstrainedValue
 
 @target(luau)
@@ -80,7 +79,7 @@ pub fn set_max_value(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/DoubleConstrainedValue#MinValue
 @luau.property("MinValue")
-pub fn get_min_value(instance: DoubleConstrainedValue) -> OptionDouble
+pub fn get_min_value(instance: DoubleConstrainedValue) -> Float
 
 @target(luau)
 /// Sets Roblox property `DoubleConstrainedValue.MinValue`.
@@ -93,7 +92,7 @@ pub fn get_min_value(instance: DoubleConstrainedValue) -> OptionDouble
 @luau.set_property("MinValue")
 pub fn set_min_value(
   instance: DoubleConstrainedValue,
-  value: OptionDouble,
+  value: Float,
 ) -> DoubleConstrainedValue
 
 @target(luau)
@@ -106,7 +105,7 @@ pub fn set_min_value(
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/DoubleConstrainedValue#Value
 @luau.property("Value")
-pub fn get_value(instance: DoubleConstrainedValue) -> OptionDouble
+pub fn get_value(instance: DoubleConstrainedValue) -> Float
 
 @target(luau)
 /// Sets Roblox property `DoubleConstrainedValue.Value`.
@@ -120,7 +119,7 @@ pub fn get_value(instance: DoubleConstrainedValue) -> OptionDouble
 @luau.set_property("Value")
 pub fn set_value(
   instance: DoubleConstrainedValue,
-  value: OptionDouble,
+  value: Float,
 ) -> DoubleConstrainedValue
 
 @target(luau)
@@ -132,7 +131,7 @@ pub fn set_value(
 @luau.event("Changed")
 pub fn changed(
   instance: DoubleConstrainedValue,
-) -> RBXScriptSignal(fn(OptionDouble) -> Nil)
+) -> RBXScriptSignal(fn(Float) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `DoubleConstrainedValue.Changed`.
@@ -145,7 +144,7 @@ pub fn changed(
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
 pub fn on_changed(
   instance: DoubleConstrainedValue,
-  callback: fn(OptionDouble) -> Nil,
+  callback: fn(Float) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -299,7 +298,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: DoubleConstrainedValue) -> OptionInt64
+pub fn get_source_asset_id(instance: DoubleConstrainedValue) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -815,7 +814,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: DoubleConstrainedValue,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1069,10 +1068,9 @@ pub fn is_a(instance: DoubleConstrainedValue, class_name: String) -> Bool
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: DoubleConstrainedValue,
   _: ValueBase,

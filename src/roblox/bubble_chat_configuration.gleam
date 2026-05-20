@@ -4,9 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BubbleChatConfiguration, type Color3, type Font,
-  type Instance, type Object, type OptionDouble, type OptionInt64,
-  type SecurityCapabilities, type TextChatConfigurations, type UniqueId,
-  type Vector3,
+  type Instance, type Int64, type Object, type SecurityCapabilities,
+  type TextChatConfigurations, type UniqueId, type Vector3,
 }
 
 @target(luau)
@@ -85,9 +84,7 @@ pub fn set_background_color3(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BubbleChatConfiguration#BackgroundTransparency
 @luau.property("BackgroundTransparency")
-pub fn get_background_transparency(
-  instance: BubbleChatConfiguration,
-) -> OptionDouble
+pub fn get_background_transparency(instance: BubbleChatConfiguration) -> Float
 
 @target(luau)
 /// Sets Roblox property `BubbleChatConfiguration.BackgroundTransparency`.
@@ -100,7 +97,7 @@ pub fn get_background_transparency(
 @luau.set_property("BackgroundTransparency")
 pub fn set_background_transparency(
   instance: BubbleChatConfiguration,
-  value: OptionDouble,
+  value: Float,
 ) -> BubbleChatConfiguration
 
 @target(luau)
@@ -391,7 +388,7 @@ pub fn set_text_color3(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BubbleChatConfiguration#TextSize
 @luau.property("TextSize")
-pub fn get_text_size(instance: BubbleChatConfiguration) -> OptionInt64
+pub fn get_text_size(instance: BubbleChatConfiguration) -> Int64
 
 @target(luau)
 /// Sets Roblox property `BubbleChatConfiguration.TextSize`.
@@ -404,7 +401,7 @@ pub fn get_text_size(instance: BubbleChatConfiguration) -> OptionInt64
 @luau.set_property("TextSize")
 pub fn set_text_size(
   instance: BubbleChatConfiguration,
-  value: OptionInt64,
+  value: Int64,
 ) -> BubbleChatConfiguration
 
 @target(luau)
@@ -583,7 +580,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: BubbleChatConfiguration) -> OptionInt64
+pub fn get_source_asset_id(instance: BubbleChatConfiguration) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1099,7 +1096,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: BubbleChatConfiguration,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1378,10 +1375,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: Color3,
   _: Vector3,

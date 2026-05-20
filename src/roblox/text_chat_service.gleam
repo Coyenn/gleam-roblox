@@ -3,9 +3,9 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type ChatVersion, type Instance, type Object, type OptionDouble,
-  type OptionInt64, type SecurityCapabilities, type TextChatMessage,
-  type TextChatService, type UniqueId,
+  type Actor, type ChatVersion, type Instance, type Int64, type Object,
+  type SecurityCapabilities, type TextChatMessage, type TextChatService,
+  type UniqueId,
 }
 
 @target(luau)
@@ -132,10 +132,7 @@ pub fn display_bubble(
 /// Parameters:
 /// - `instance`: A service handling in-experience text chat.
 @luau.method("CanUserChatAsync")
-pub fn can_user_chat_async(
-  instance: TextChatService,
-  user_id: OptionInt64,
-) -> Bool
+pub fn can_user_chat_async(instance: TextChatService, user_id: Int64) -> Bool
 
 @target(luau)
 /// Determines whether or not two users can receive messages from each other.
@@ -150,8 +147,8 @@ pub fn can_user_chat_async(
 @luau.method("CanUsersChatAsync")
 pub fn can_users_chat_async(
   instance: TextChatService,
-  user_id_from: OptionInt64,
-  user_id_to: OptionInt64,
+  user_id_from: Int64,
+  user_id_to: Int64,
 ) -> Bool
 
 @target(luau)
@@ -172,7 +169,7 @@ pub fn can_users_chat_async(
 @luau.method("CanUsersDirectChatAsync")
 pub fn can_users_direct_chat_async(
   instance: TextChatService,
-  requester_user_id: OptionInt64,
+  requester_user_id: Int64,
   user_ids: List(Int),
 ) -> List(Dynamic)
 
@@ -408,7 +405,7 @@ pub fn set_sandboxed(instance: TextChatService, value: Bool) -> TextChatService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: TextChatService) -> OptionInt64
+pub fn get_source_asset_id(instance: TextChatService) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -912,7 +909,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: TextChatService,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1187,10 +1184,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: TextChatMessage,
   _: ChatVersion,

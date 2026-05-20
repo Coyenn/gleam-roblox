@@ -3,9 +3,9 @@ import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/types.{
   type AutomaticSize, type BorderMode, type Color3, type Content, type ContentId,
   type GuiObject, type InputSink, type Instance, type LocalizationTable,
-  type OptionDouble, type RollOffMode, type SecurityCapabilities,
-  type SelectionBehavior, type SizeConstraint, type UDim2, type Vector2,
-  type VideoFrame, type VideoSampleSize,
+  type RollOffMode, type SecurityCapabilities, type SelectionBehavior,
+  type SizeConstraint, type UDim2, type Vector2, type VideoFrame,
+  type VideoSampleSize,
 }
 import roblox/video_frame
 
@@ -101,7 +101,7 @@ pub fn roll_off_mode(value: RollOffMode) -> Property(VideoFrame) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/VideoFrame#TimePosition
-pub fn time_position(value: OptionDouble) -> Property(VideoFrame) {
+pub fn time_position(value: Float) -> Property(VideoFrame) {
   Property(fn(instance) { video_frame.set_time_position(instance, value) })
 }
 
@@ -636,7 +636,6 @@ pub fn javascript_type_anchor(
   _: Vector2,
   _: Content,
   _: ContentId,
-  _: OptionDouble,
   _: RollOffMode,
   _: VideoSampleSize,
   _: VideoFrame,

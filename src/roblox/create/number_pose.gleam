@@ -2,8 +2,8 @@
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/number_pose
 import roblox/types.{
-  type Instance, type NumberPose, type OptionDouble, type PoseEasingDirection,
-  type PoseEasingStyle, type SecurityCapabilities,
+  type Instance, type NumberPose, type PoseEasingDirection, type PoseEasingStyle,
+  type SecurityCapabilities,
 }
 
 @target(luau)
@@ -28,7 +28,7 @@ pub fn node(
 /// Roblox: `NumberPose.Value`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/NumberPose#Value
-pub fn value(value: OptionDouble) -> Property(NumberPose) {
+pub fn value(value: Float) -> Property(NumberPose) {
   Property(fn(instance) { number_pose.set_value(instance, value) })
 }
 
@@ -134,7 +134,6 @@ pub fn javascript_type_anchor(
   _: SecurityCapabilities,
   _: PoseEasingStyle,
   _: PoseEasingDirection,
-  _: OptionDouble,
   _: NumberPose,
 ) -> Nil {
   Nil

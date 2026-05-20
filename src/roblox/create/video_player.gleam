@@ -1,8 +1,8 @@
 // Generated declarative builders for Roblox `VideoPlayer` instances.
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/types.{
-  type Content, type Instance, type OptionDouble, type SecurityCapabilities,
-  type VideoPlayer, type VideoSampleSize,
+  type Content, type Instance, type SecurityCapabilities, type VideoPlayer,
+  type VideoSampleSize,
 }
 import roblox/video_player
 
@@ -62,7 +62,7 @@ pub fn playback_speed(value: Float) -> Property(VideoPlayer) {
 /// Roblox: `VideoPlayer.TimePosition`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/VideoPlayer#TimePosition
-pub fn time_position(value: OptionDouble) -> Property(VideoPlayer) {
+pub fn time_position(value: Float) -> Property(VideoPlayer) {
   Property(fn(instance) { video_player.set_time_position(instance, value) })
 }
 
@@ -157,7 +157,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
   _: Content,
-  _: OptionDouble,
   _: VideoSampleSize,
   _: VideoPlayer,
 ) -> Nil {

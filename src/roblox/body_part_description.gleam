@@ -4,8 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BodyPart, type BodyPartDescription, type Color3,
-  type Instance, type Object, type OptionDouble, type OptionInt64,
-  type SecurityCapabilities, type UniqueId,
+  type Instance, type Int64, type Object, type SecurityCapabilities,
+  type UniqueId,
 }
 
 @target(luau)
@@ -34,7 +34,7 @@ pub fn as_object(instance: BodyPartDescription) -> Object
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BodyPartDescription#AssetId
 @luau.property("AssetId")
-pub fn get_asset_id(instance: BodyPartDescription) -> OptionInt64
+pub fn get_asset_id(instance: BodyPartDescription) -> Int64
 
 @target(luau)
 /// Sets Roblox property `BodyPartDescription.AssetId`.
@@ -47,7 +47,7 @@ pub fn get_asset_id(instance: BodyPartDescription) -> OptionInt64
 @luau.set_property("AssetId")
 pub fn set_asset_id(
   instance: BodyPartDescription,
-  value: OptionInt64,
+  value: Int64,
 ) -> BodyPartDescription
 
 @target(luau)
@@ -299,7 +299,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: BodyPartDescription) -> OptionInt64
+pub fn get_source_asset_id(instance: BodyPartDescription) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -815,7 +815,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: BodyPartDescription,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1092,10 +1092,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: Color3,
   _: BodyPart,

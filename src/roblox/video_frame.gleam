@@ -6,11 +6,10 @@ import roblox/types.{
   type Actor, type AutomaticSize, type BorderMode, type Color3, type Content,
   type ContentId, type EasingDirection, type EasingStyle, type GuiBase,
   type GuiBase2d, type GuiObject, type GuiState, type InputObject,
-  type InputSink, type Instance, type LocalizationTable, type Object,
-  type OptionDouble, type OptionInt64, type Rect, type RollOffMode,
-  type SecurityCapabilities, type SelectionBehavior, type SizeConstraint,
-  type SwipeDirection, type UDim2, type UniqueId, type UserInputState,
-  type Vector2, type VideoFrame, type VideoSampleSize,
+  type InputSink, type Instance, type Int64, type LocalizationTable, type Object,
+  type Rect, type RollOffMode, type SecurityCapabilities, type SelectionBehavior,
+  type SizeConstraint, type SwipeDirection, type UDim2, type UniqueId,
+  type UserInputState, type Vector2, type VideoFrame, type VideoSampleSize,
 }
 
 @target(luau)
@@ -206,7 +205,7 @@ pub fn set_roll_off_mode(instance: VideoFrame, value: RollOffMode) -> VideoFrame
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/VideoFrame#TimeLength
 @luau.property("TimeLength")
-pub fn get_time_length(instance: VideoFrame) -> OptionDouble
+pub fn get_time_length(instance: VideoFrame) -> Float
 
 @target(luau)
 /// Gets Roblox property `VideoFrame.TimePosition`.
@@ -218,7 +217,7 @@ pub fn get_time_length(instance: VideoFrame) -> OptionDouble
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/VideoFrame#TimePosition
 @luau.property("TimePosition")
-pub fn get_time_position(instance: VideoFrame) -> OptionDouble
+pub fn get_time_position(instance: VideoFrame) -> Float
 
 @target(luau)
 /// Sets Roblox property `VideoFrame.TimePosition`.
@@ -230,10 +229,7 @@ pub fn get_time_position(instance: VideoFrame) -> OptionDouble
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/VideoFrame#TimePosition
 @luau.set_property("TimePosition")
-pub fn set_time_position(
-  instance: VideoFrame,
-  value: OptionDouble,
-) -> VideoFrame
+pub fn set_time_position(instance: VideoFrame, value: Float) -> VideoFrame
 
 @target(luau)
 /// Gets Roblox property `VideoFrame.Video`.
@@ -1938,7 +1934,7 @@ pub fn set_sandboxed(instance: VideoFrame, value: Bool) -> VideoFrame
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: VideoFrame) -> OptionInt64
+pub fn get_source_asset_id(instance: VideoFrame) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -2439,7 +2435,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: VideoFrame,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -2712,10 +2708,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: GuiObject,
   _: SelectionBehavior,

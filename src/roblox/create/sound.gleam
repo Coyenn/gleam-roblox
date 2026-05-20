@@ -3,8 +3,7 @@ import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/sound
 import roblox/types.{
   type Content, type ContentId, type Instance, type NumberRange,
-  type OptionDouble, type RollOffMode, type SecurityCapabilities, type Sound,
-  type SoundGroup,
+  type RollOffMode, type SecurityCapabilities, type Sound, type SoundGroup,
 }
 
 @target(luau)
@@ -198,7 +197,7 @@ pub fn sound_id(value: ContentId) -> Property(Sound) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Sound#TimePosition
-pub fn time_position(value: OptionDouble) -> Property(Sound) {
+pub fn time_position(value: Float) -> Property(Sound) {
   Property(fn(instance) { sound.set_time_position(instance, value) })
 }
 
@@ -280,7 +279,6 @@ pub fn sandboxed(value: Bool) -> Property(Sound) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: OptionDouble,
   _: ContentId,
   _: SoundGroup,
   _: RollOffMode,

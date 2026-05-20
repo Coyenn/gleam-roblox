@@ -2,8 +2,7 @@
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/reflection_metadata_member
 import roblox/types.{
-  type Instance, type OptionDouble, type ReflectionMetadataMember,
-  type SecurityCapabilities,
+  type Instance, type ReflectionMetadataMember, type SecurityCapabilities,
 }
 
 @target(luau)
@@ -198,7 +197,7 @@ pub fn slider_scaling(value: String) -> Property(ReflectionMetadataMember) {
 /// Roblox: `ReflectionMetadataItem.UIMaximum`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UIMaximum
-pub fn ui_maximum(value: OptionDouble) -> Property(ReflectionMetadataMember) {
+pub fn ui_maximum(value: Float) -> Property(ReflectionMetadataMember) {
   Property(fn(instance) {
     reflection_metadata_member.set_ui_maximum(instance, value)
   })
@@ -212,7 +211,7 @@ pub fn ui_maximum(value: OptionDouble) -> Property(ReflectionMetadataMember) {
 /// Roblox: `ReflectionMetadataItem.UIMinimum`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UIMinimum
-pub fn ui_minimum(value: OptionDouble) -> Property(ReflectionMetadataMember) {
+pub fn ui_minimum(value: Float) -> Property(ReflectionMetadataMember) {
   Property(fn(instance) {
     reflection_metadata_member.set_ui_minimum(instance, value)
   })
@@ -226,7 +225,7 @@ pub fn ui_minimum(value: OptionDouble) -> Property(ReflectionMetadataMember) {
 /// Roblox: `ReflectionMetadataItem.UINumTicks`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UINumTicks
-pub fn ui_num_ticks(value: OptionDouble) -> Property(ReflectionMetadataMember) {
+pub fn ui_num_ticks(value: Float) -> Property(ReflectionMetadataMember) {
   Property(fn(instance) {
     reflection_metadata_member.set_ui_num_ticks(instance, value)
   })
@@ -308,7 +307,6 @@ pub fn sandboxed(value: Bool) -> Property(ReflectionMetadataMember) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: OptionDouble,
   _: ReflectionMetadataMember,
 ) -> Nil {
   Nil

@@ -5,12 +5,11 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type ComputerCameraMovementMode, type ComputerMovementMode,
   type ControlMode, type CustomCameraMode, type GraphicsOptimizationMode,
-  type Instance, type Object, type OptionDouble, type OptionInt64,
-  type PeoplePageLayout, type PreferredTextSize, type RotationType,
-  type SavedQualitySetting, type SecurityCapabilities,
-  type TouchCameraMovementMode, type TouchMovementMode, type UniqueId,
-  type UserGameSettings, type VRComfortSetting, type VRSafetyBubbleMode,
-  type Vector2,
+  type Instance, type Int64, type Object, type PeoplePageLayout,
+  type PreferredTextSize, type RotationType, type SavedQualitySetting,
+  type SecurityCapabilities, type TouchCameraMovementMode,
+  type TouchMovementMode, type UniqueId, type UserGameSettings,
+  type VRComfortSetting, type VRSafetyBubbleMode, type Vector2,
 }
 
 @target(luau)
@@ -1171,7 +1170,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: UserGameSettings) -> OptionInt64
+pub fn get_source_asset_id(instance: UserGameSettings) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1678,7 +1677,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: UserGameSettings,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1953,10 +1952,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: VRSafetyBubbleMode,
   _: VRComfortSetting,

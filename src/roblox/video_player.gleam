@@ -3,9 +3,9 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type AssetFetchStatus, type Content, type Instance, type Object,
-  type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId,
-  type Vector2, type VideoPlayer, type VideoSampleSize, type Wire,
+  type Actor, type AssetFetchStatus, type Content, type Instance, type Int64,
+  type Object, type SecurityCapabilities, type UniqueId, type Vector2,
+  type VideoPlayer, type VideoSampleSize, type Wire,
 }
 
 @target(luau)
@@ -136,7 +136,7 @@ pub fn get_resolution(instance: VideoPlayer) -> Vector2
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/VideoPlayer#TimeLength
 @luau.property("TimeLength")
-pub fn get_time_length(instance: VideoPlayer) -> OptionDouble
+pub fn get_time_length(instance: VideoPlayer) -> Float
 
 @target(luau)
 /// Gets Roblox property `VideoPlayer.TimePosition`.
@@ -147,7 +147,7 @@ pub fn get_time_length(instance: VideoPlayer) -> OptionDouble
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/VideoPlayer#TimePosition
 @luau.property("TimePosition")
-pub fn get_time_position(instance: VideoPlayer) -> OptionDouble
+pub fn get_time_position(instance: VideoPlayer) -> Float
 
 @target(luau)
 /// Sets Roblox property `VideoPlayer.TimePosition`.
@@ -158,10 +158,7 @@ pub fn get_time_position(instance: VideoPlayer) -> OptionDouble
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/VideoPlayer#TimePosition
 @luau.set_property("TimePosition")
-pub fn set_time_position(
-  instance: VideoPlayer,
-  value: OptionDouble,
-) -> VideoPlayer
+pub fn set_time_position(instance: VideoPlayer, value: Float) -> VideoPlayer
 
 @target(luau)
 /// Gets Roblox property `VideoPlayer.VideoContent`.
@@ -531,7 +528,7 @@ pub fn set_sandboxed(instance: VideoPlayer, value: Bool) -> VideoPlayer
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: VideoPlayer) -> OptionInt64
+pub fn get_source_asset_id(instance: VideoPlayer) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1032,7 +1029,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: VideoPlayer,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1307,10 +1304,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: Wire,
   _: AssetFetchStatus,

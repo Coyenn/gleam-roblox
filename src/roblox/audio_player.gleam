@@ -4,9 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type AssetRepresentation, type AudioPlayer, type Content,
-  type ContentId, type Instance, type NumberRange, type Object,
-  type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId,
-  type Wire,
+  type ContentId, type Instance, type Int64, type NumberRange, type Object,
+  type SecurityCapabilities, type UniqueId, type Wire,
 }
 
 @target(luau)
@@ -227,7 +226,7 @@ pub fn set_playback_region(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioPlayer#PlaybackSpeed
 @luau.property("PlaybackSpeed")
-pub fn get_playback_speed(instance: AudioPlayer) -> OptionDouble
+pub fn get_playback_speed(instance: AudioPlayer) -> Float
 
 @target(luau)
 /// Sets Roblox property `AudioPlayer.PlaybackSpeed`.
@@ -238,10 +237,7 @@ pub fn get_playback_speed(instance: AudioPlayer) -> OptionDouble
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioPlayer#PlaybackSpeed
 @luau.set_property("PlaybackSpeed")
-pub fn set_playback_speed(
-  instance: AudioPlayer,
-  value: OptionDouble,
-) -> AudioPlayer
+pub fn set_playback_speed(instance: AudioPlayer, value: Float) -> AudioPlayer
 
 @target(luau)
 /// Gets Roblox property `AudioPlayer.TimeLength`.
@@ -253,7 +249,7 @@ pub fn set_playback_speed(
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioPlayer#TimeLength
 @luau.property("TimeLength")
-pub fn get_time_length(instance: AudioPlayer) -> OptionDouble
+pub fn get_time_length(instance: AudioPlayer) -> Float
 
 @target(luau)
 /// Gets Roblox property `AudioPlayer.TimePosition`.
@@ -264,7 +260,7 @@ pub fn get_time_length(instance: AudioPlayer) -> OptionDouble
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioPlayer#TimePosition
 @luau.property("TimePosition")
-pub fn get_time_position(instance: AudioPlayer) -> OptionDouble
+pub fn get_time_position(instance: AudioPlayer) -> Float
 
 @target(luau)
 /// Sets Roblox property `AudioPlayer.TimePosition`.
@@ -275,10 +271,7 @@ pub fn get_time_position(instance: AudioPlayer) -> OptionDouble
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioPlayer#TimePosition
 @luau.set_property("TimePosition")
-pub fn set_time_position(
-  instance: AudioPlayer,
-  value: OptionDouble,
-) -> AudioPlayer
+pub fn set_time_position(instance: AudioPlayer, value: Float) -> AudioPlayer
 
 @target(luau)
 /// Gets Roblox property `AudioPlayer.Volume`.
@@ -316,7 +309,7 @@ pub fn set_volume(instance: AudioPlayer, value: Float) -> AudioPlayer
 /// Returns:
 /// - Whether the cancellation was successful. Returns false if the action has already occurred, or otherwise does not exist.
 @luau.method("Cancel")
-pub fn cancel(instance: AudioPlayer, action_id: OptionInt64) -> Bool
+pub fn cancel(instance: AudioPlayer, action_id: Option(Int64)) -> Bool
 
 @target(luau)
 /// Returns an array of Wires that are connected to the specified pin.
@@ -378,7 +371,7 @@ pub fn get_output_pins(instance: AudioPlayer) -> List(String)
 /// Returns:
 /// - If atTime was provided, a unique ID, which can be passed to Cancel().
 @luau.method("Play")
-pub fn play(instance: AudioPlayer, at_time: OptionDouble) -> OptionInt64
+pub fn play(instance: AudioPlayer, at_time: Option(Float)) -> Option(Int64)
 
 @target(luau)
 /// Stops the AudioPlayer wherever its TimePosition is.
@@ -394,7 +387,7 @@ pub fn play(instance: AudioPlayer, at_time: OptionDouble) -> OptionInt64
 /// Returns:
 /// - If atTime was provided, a unique ID, which can be passed to Cancel().
 @luau.method("Stop")
-pub fn stop(instance: AudioPlayer, at_time: OptionDouble) -> OptionInt64
+pub fn stop(instance: AudioPlayer, at_time: Option(Float)) -> Option(Int64)
 
 @target(luau)
 /// Returns a sampling of the waveform data for the loaded Asset.
@@ -626,7 +619,7 @@ pub fn set_sandboxed(instance: AudioPlayer, value: Bool) -> AudioPlayer
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: AudioPlayer) -> OptionInt64
+pub fn get_source_asset_id(instance: AudioPlayer) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1127,7 +1120,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: AudioPlayer,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1402,10 +1395,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: Wire,
   _: NumberRange,

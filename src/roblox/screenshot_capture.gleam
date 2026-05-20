@@ -1,7 +1,7 @@
 // Generated class bindings for Roblox API
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Capture, type CaptureType, type DateTime, type Object, type OptionInt64,
+  type Capture, type CaptureType, type DateTime, type Int64, type Object,
   type ScreenshotCapture,
 }
 
@@ -63,7 +63,7 @@ pub fn get_local_id(instance: ScreenshotCapture) -> String
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Capture#SourcePlaceId
 @luau.property("SourcePlaceId")
-pub fn get_source_place_id(instance: ScreenshotCapture) -> OptionInt64
+pub fn get_source_place_id(instance: ScreenshotCapture) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Capture.SourceUniverseId`.
@@ -73,7 +73,7 @@ pub fn get_source_place_id(instance: ScreenshotCapture) -> OptionInt64
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Capture#SourceUniverseId
 @luau.property("SourceUniverseId")
-pub fn get_source_universe_id(instance: ScreenshotCapture) -> OptionInt64
+pub fn get_source_universe_id(instance: ScreenshotCapture) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Object.ClassName`.
@@ -150,7 +150,7 @@ pub fn on_changed(
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
-  _: OptionInt64,
+  _: Int64,
   _: CaptureType,
   _: DateTime,
   _: ScreenshotCapture,

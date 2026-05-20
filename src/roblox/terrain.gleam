@@ -4,11 +4,10 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BasePart, type BrickColor, type CFrame,
-  type CollisionFidelity, type Color3, type Faces, type Instance, type Material,
-  type NormalId, type Object, type OptionDouble, type OptionInt,
-  type OptionInt64, type PVInstance, type PhysicalProperties, type Player,
-  type Region3, type Region3int16, type RenderFidelity,
-  type SecurityCapabilities, type SurfaceType, type Terrain,
+  type CollisionFidelity, type Color3, type Faces, type Instance, type Int64,
+  type Material, type NormalId, type Object, type OptionInt, type PVInstance,
+  type PhysicalProperties, type Player, type Region3, type Region3int16,
+  type RenderFidelity, type SecurityCapabilities, type SurfaceType, type Terrain,
   type TerrainAcquisitionMethod, type TerrainIterateOperation,
   type TerrainModifyOperation, type TerrainReadOperation, type TerrainRegion,
   type TerrainWriteOperation, type UniqueId, type Vector3, type Vector3int16,
@@ -2094,7 +2093,7 @@ pub fn set_sandboxed(instance: Terrain, value: Bool) -> Terrain
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Terrain) -> OptionInt64
+pub fn get_source_asset_id(instance: Terrain) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -2589,7 +2588,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: Terrain,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -2860,10 +2859,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: CFrame,
   _: BasePart,

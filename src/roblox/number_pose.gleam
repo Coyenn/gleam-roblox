@@ -3,9 +3,9 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type NumberPose, type Object, type OptionDouble,
-  type OptionInt64, type PoseBase, type PoseEasingDirection,
-  type PoseEasingStyle, type SecurityCapabilities, type UniqueId,
+  type Actor, type Instance, type Int64, type NumberPose, type Object,
+  type PoseBase, type PoseEasingDirection, type PoseEasingStyle,
+  type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -39,7 +39,7 @@ pub fn as_object(instance: NumberPose) -> Object
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/NumberPose#Value
 @luau.property("Value")
-pub fn get_value(instance: NumberPose) -> OptionDouble
+pub fn get_value(instance: NumberPose) -> Float
 
 @target(luau)
 /// Sets Roblox property `NumberPose.Value`.
@@ -50,7 +50,7 @@ pub fn get_value(instance: NumberPose) -> OptionDouble
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/NumberPose#Value
 @luau.set_property("Value")
-pub fn set_value(instance: NumberPose, value: OptionDouble) -> NumberPose
+pub fn set_value(instance: NumberPose, value: Float) -> NumberPose
 
 @target(luau)
 /// Gets Roblox property `PoseBase.EasingDirection`.
@@ -257,7 +257,7 @@ pub fn set_sandboxed(instance: NumberPose, value: Bool) -> NumberPose
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: NumberPose) -> OptionInt64
+pub fn get_source_asset_id(instance: NumberPose) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -758,7 +758,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: NumberPose,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1031,10 +1031,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: PoseEasingStyle,
   _: PoseEasingDirection,

@@ -4,8 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type AssetFetchStatus, type AudioTextToSpeech, type Instance,
-  type NumberRange, type Object, type OptionDouble, type OptionInt64,
-  type SecurityCapabilities, type UniqueId, type Wire,
+  type Int64, type NumberRange, type Object, type SecurityCapabilities,
+  type UniqueId, type Wire,
 }
 
 @target(luau)
@@ -174,7 +174,7 @@ pub fn set_text(instance: AudioTextToSpeech, value: String) -> AudioTextToSpeech
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioTextToSpeech#TimeLength
 @luau.property("TimeLength")
-pub fn get_time_length(instance: AudioTextToSpeech) -> OptionDouble
+pub fn get_time_length(instance: AudioTextToSpeech) -> Float
 
 @target(luau)
 /// Gets Roblox property `AudioTextToSpeech.TimePosition`.
@@ -185,7 +185,7 @@ pub fn get_time_length(instance: AudioTextToSpeech) -> OptionDouble
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioTextToSpeech#TimePosition
 @luau.property("TimePosition")
-pub fn get_time_position(instance: AudioTextToSpeech) -> OptionDouble
+pub fn get_time_position(instance: AudioTextToSpeech) -> Float
 
 @target(luau)
 /// Sets Roblox property `AudioTextToSpeech.TimePosition`.
@@ -198,7 +198,7 @@ pub fn get_time_position(instance: AudioTextToSpeech) -> OptionDouble
 @luau.set_property("TimePosition")
 pub fn set_time_position(
   instance: AudioTextToSpeech,
-  value: OptionDouble,
+  value: Float,
 ) -> AudioTextToSpeech
 
 @target(luau)
@@ -558,7 +558,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: AudioTextToSpeech) -> OptionInt64
+pub fn get_source_asset_id(instance: AudioTextToSpeech) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1065,7 +1065,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: AudioTextToSpeech,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1342,10 +1342,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: Wire,
   _: AssetFetchStatus,

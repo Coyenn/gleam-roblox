@@ -3,12 +3,13 @@ import gleeunit/should
 import roblox/create.{type Property, apply}
 import roblox/create/part as create_part
 import roblox/enum/material
+import roblox/int64
 import roblox/math
 import roblox/option.{None, Some}
 import roblox/part
 import roblox/players.{type BanConfig}
 import roblox/table
-import roblox/types.{type Part, type Players}
+import roblox/types.{type Int64, type Part, type Players}
 import roblox/vector
 import roblox/vector3
 
@@ -68,6 +69,8 @@ pub fn generated_api_signatures_test() {
   let _: fn(Part, String) -> Part = part.set_name
   let _: fn(Part, Bool) -> Part = part.set_anchored
   let _: fn(Players, BanConfig) -> Nil = players.ban_async
+  let _: fn(Int64) -> Int = int64.to_int
+  let _: fn(Int) -> Int64 = int64.from_int
   let _property_type: Property(Part) = create_part.name("x")
   Nil
 }

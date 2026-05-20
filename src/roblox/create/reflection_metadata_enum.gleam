@@ -2,8 +2,7 @@
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/reflection_metadata_enum
 import roblox/types.{
-  type Instance, type OptionDouble, type ReflectionMetadataEnum,
-  type SecurityCapabilities,
+  type Instance, type ReflectionMetadataEnum, type SecurityCapabilities,
 }
 
 @target(luau)
@@ -196,7 +195,7 @@ pub fn slider_scaling(value: String) -> Property(ReflectionMetadataEnum) {
 /// Roblox: `ReflectionMetadataItem.UIMaximum`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UIMaximum
-pub fn ui_maximum(value: OptionDouble) -> Property(ReflectionMetadataEnum) {
+pub fn ui_maximum(value: Float) -> Property(ReflectionMetadataEnum) {
   Property(fn(instance) {
     reflection_metadata_enum.set_ui_maximum(instance, value)
   })
@@ -210,7 +209,7 @@ pub fn ui_maximum(value: OptionDouble) -> Property(ReflectionMetadataEnum) {
 /// Roblox: `ReflectionMetadataItem.UIMinimum`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UIMinimum
-pub fn ui_minimum(value: OptionDouble) -> Property(ReflectionMetadataEnum) {
+pub fn ui_minimum(value: Float) -> Property(ReflectionMetadataEnum) {
   Property(fn(instance) {
     reflection_metadata_enum.set_ui_minimum(instance, value)
   })
@@ -224,7 +223,7 @@ pub fn ui_minimum(value: OptionDouble) -> Property(ReflectionMetadataEnum) {
 /// Roblox: `ReflectionMetadataItem.UINumTicks`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UINumTicks
-pub fn ui_num_ticks(value: OptionDouble) -> Property(ReflectionMetadataEnum) {
+pub fn ui_num_ticks(value: Float) -> Property(ReflectionMetadataEnum) {
   Property(fn(instance) {
     reflection_metadata_enum.set_ui_num_ticks(instance, value)
   })
@@ -304,7 +303,6 @@ pub fn sandboxed(value: Bool) -> Property(ReflectionMetadataEnum) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: OptionDouble,
   _: ReflectionMetadataEnum,
 ) -> Nil {
   Nil

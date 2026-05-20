@@ -2,8 +2,7 @@
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/reflection_metadata_enum_item
 import roblox/types.{
-  type Instance, type OptionDouble, type ReflectionMetadataEnumItem,
-  type SecurityCapabilities,
+  type Instance, type ReflectionMetadataEnumItem, type SecurityCapabilities,
 }
 
 @target(luau)
@@ -198,7 +197,7 @@ pub fn slider_scaling(value: String) -> Property(ReflectionMetadataEnumItem) {
 /// Roblox: `ReflectionMetadataItem.UIMaximum`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UIMaximum
-pub fn ui_maximum(value: OptionDouble) -> Property(ReflectionMetadataEnumItem) {
+pub fn ui_maximum(value: Float) -> Property(ReflectionMetadataEnumItem) {
   Property(fn(instance) {
     reflection_metadata_enum_item.set_ui_maximum(instance, value)
   })
@@ -212,7 +211,7 @@ pub fn ui_maximum(value: OptionDouble) -> Property(ReflectionMetadataEnumItem) {
 /// Roblox: `ReflectionMetadataItem.UIMinimum`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UIMinimum
-pub fn ui_minimum(value: OptionDouble) -> Property(ReflectionMetadataEnumItem) {
+pub fn ui_minimum(value: Float) -> Property(ReflectionMetadataEnumItem) {
   Property(fn(instance) {
     reflection_metadata_enum_item.set_ui_minimum(instance, value)
   })
@@ -226,9 +225,7 @@ pub fn ui_minimum(value: OptionDouble) -> Property(ReflectionMetadataEnumItem) {
 /// Roblox: `ReflectionMetadataItem.UINumTicks`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UINumTicks
-pub fn ui_num_ticks(
-  value: OptionDouble,
-) -> Property(ReflectionMetadataEnumItem) {
+pub fn ui_num_ticks(value: Float) -> Property(ReflectionMetadataEnumItem) {
   Property(fn(instance) {
     reflection_metadata_enum_item.set_ui_num_ticks(instance, value)
   })
@@ -312,7 +309,6 @@ pub fn sandboxed(value: Bool) -> Property(ReflectionMetadataEnumItem) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: OptionDouble,
   _: ReflectionMetadataEnumItem,
 ) -> Nil {
   Nil

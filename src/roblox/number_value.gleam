@@ -3,8 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type NumberValue, type Object, type OptionDouble,
-  type OptionInt64, type SecurityCapabilities, type UniqueId, type ValueBase,
+  type Actor, type Instance, type Int64, type NumberValue, type Object,
+  type SecurityCapabilities, type UniqueId, type ValueBase,
 }
 
 @target(luau)
@@ -38,7 +38,7 @@ pub fn as_object(instance: NumberValue) -> Object
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/NumberValue#Value
 @luau.property("Value")
-pub fn get_value(instance: NumberValue) -> OptionDouble
+pub fn get_value(instance: NumberValue) -> Float
 
 @target(luau)
 /// Sets Roblox property `NumberValue.Value`.
@@ -49,7 +49,7 @@ pub fn get_value(instance: NumberValue) -> OptionDouble
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/NumberValue#Value
 @luau.set_property("Value")
-pub fn set_value(instance: NumberValue, value: OptionDouble) -> NumberValue
+pub fn set_value(instance: NumberValue, value: Float) -> NumberValue
 
 @target(luau)
 /// Fires whenever the NumberValue.Value is changed.
@@ -58,9 +58,7 @@ pub fn set_value(instance: NumberValue, value: OptionDouble) -> NumberValue
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/NumberValue#Changed
 @luau.event("Changed")
-pub fn changed(
-  instance: NumberValue,
-) -> RBXScriptSignal(fn(OptionDouble) -> Nil)
+pub fn changed(instance: NumberValue) -> RBXScriptSignal(fn(Float) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `NumberValue.Changed`.
@@ -73,7 +71,7 @@ pub fn changed(
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
 pub fn on_changed(
   instance: NumberValue,
-  callback: fn(OptionDouble) -> Nil,
+  callback: fn(Float) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -213,7 +211,7 @@ pub fn set_sandboxed(instance: NumberValue, value: Bool) -> NumberValue
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: NumberValue) -> OptionInt64
+pub fn get_source_asset_id(instance: NumberValue) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -714,7 +712,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: NumberValue,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -966,10 +964,9 @@ pub fn is_a(instance: NumberValue, class_name: String) -> Bool
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: NumberValue,
   _: ValueBase,

@@ -3,8 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Object, type OptionDouble, type OptionInt64,
-  type SecurityCapabilities, type TestCase, type TestService, type UniqueId,
+  type Actor, type Instance, type Int64, type Object, type SecurityCapabilities,
+  type TestCase, type TestService, type UniqueId,
 }
 
 @target(luau)
@@ -176,7 +176,7 @@ pub fn set_number_of_players(instance: TestService, value: Int) -> TestService
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/TestService#SimulateSecondsLag
 @luau.property("SimulateSecondsLag")
-pub fn get_simulate_seconds_lag(instance: TestService) -> OptionDouble
+pub fn get_simulate_seconds_lag(instance: TestService) -> Float
 
 @target(luau)
 /// Sets Roblox property `TestService.SimulateSecondsLag`.
@@ -189,7 +189,7 @@ pub fn get_simulate_seconds_lag(instance: TestService) -> OptionDouble
 @luau.set_property("SimulateSecondsLag")
 pub fn set_simulate_seconds_lag(
   instance: TestService,
-  value: OptionDouble,
+  value: Float,
 ) -> TestService
 
 @target(luau)
@@ -238,7 +238,7 @@ pub fn set_throttle_physics_to_realtime(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/TestService#Timeout
 @luau.property("Timeout")
-pub fn get_timeout(instance: TestService) -> OptionDouble
+pub fn get_timeout(instance: TestService) -> Float
 
 @target(luau)
 /// Sets Roblox property `TestService.Timeout`.
@@ -249,7 +249,7 @@ pub fn get_timeout(instance: TestService) -> OptionDouble
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/TestService#Timeout
 @luau.set_property("Timeout")
-pub fn set_timeout(instance: TestService, value: OptionDouble) -> TestService
+pub fn set_timeout(instance: TestService, value: Float) -> TestService
 
 @target(luau)
 /// Gets Roblox property `TestService.WarnCount`.
@@ -676,7 +676,7 @@ pub fn set_sandboxed(instance: TestService, value: Bool) -> TestService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: TestService) -> OptionInt64
+pub fn get_source_asset_id(instance: TestService) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1177,7 +1177,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: TestService,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1452,10 +1452,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: TestCase,
   _: TestService,

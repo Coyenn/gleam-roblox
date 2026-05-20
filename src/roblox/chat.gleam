@@ -4,8 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type Chat, type ChatCallbackType, type ChatColor, type Instance,
-  type Object, type OptionDouble, type OptionInt64, type Player,
-  type SecurityCapabilities, type UniqueId,
+  type Int64, type Object, type Player, type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -154,7 +153,7 @@ pub fn set_bubble_chat_settings(instance: Chat, settings: Dynamic) -> Nil
 /// Parameters:
 /// - `instance`: Houses the Luau code responsible for running the legacy chat system.
 @luau.method("CanUserChatAsync")
-pub fn can_user_chat_async(instance: Chat, user_id: OptionInt64) -> Bool
+pub fn can_user_chat_async(instance: Chat, user_id: Int64) -> Bool
 
 @target(luau)
 /// Will return false if the two users cannot communicate because their account settings do not allow it.
@@ -169,8 +168,8 @@ pub fn can_user_chat_async(instance: Chat, user_id: OptionInt64) -> Bool
 @luau.method("CanUsersChatAsync")
 pub fn can_users_chat_async(
   instance: Chat,
-  user_id_from: OptionInt64,
-  user_id_to: OptionInt64,
+  user_id_from: Int64,
+  user_id_to: Int64,
 ) -> Bool
 
 @target(luau)
@@ -375,7 +374,7 @@ pub fn set_sandboxed(instance: Chat, value: Bool) -> Chat
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Chat) -> OptionInt64
+pub fn get_source_asset_id(instance: Chat) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -863,7 +862,7 @@ pub fn set_attribute(instance: Chat, attribute: String, value: Dynamic) -> Nil
 pub fn wait_for_child(
   instance: Chat,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1128,10 +1127,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: ChatColor,
   _: Player,

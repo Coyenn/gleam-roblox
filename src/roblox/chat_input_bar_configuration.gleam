@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type ChatInputBarConfiguration, type Color3, type Font,
-  type Instance, type KeyCode, type Object, type OptionDouble, type OptionInt64,
+  type Instance, type Int64, type KeyCode, type Object,
   type SecurityCapabilities, type TextBox, type TextChannel,
   type TextChatConfigurations, type UniqueId, type Vector2,
 }
@@ -131,9 +131,7 @@ pub fn set_background_color3(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ChatInputBarConfiguration#BackgroundTransparency
 @luau.property("BackgroundTransparency")
-pub fn get_background_transparency(
-  instance: ChatInputBarConfiguration,
-) -> OptionDouble
+pub fn get_background_transparency(instance: ChatInputBarConfiguration) -> Float
 
 @target(luau)
 /// Sets Roblox property `ChatInputBarConfiguration.BackgroundTransparency`.
@@ -146,7 +144,7 @@ pub fn get_background_transparency(
 @luau.set_property("BackgroundTransparency")
 pub fn set_background_transparency(
   instance: ChatInputBarConfiguration,
-  value: OptionDouble,
+  value: Float,
 ) -> ChatInputBarConfiguration
 
 @target(luau)
@@ -357,7 +355,7 @@ pub fn set_text_color3(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ChatInputBarConfiguration#TextSize
 @luau.property("TextSize")
-pub fn get_text_size(instance: ChatInputBarConfiguration) -> OptionInt64
+pub fn get_text_size(instance: ChatInputBarConfiguration) -> Int64
 
 @target(luau)
 /// Sets Roblox property `ChatInputBarConfiguration.TextSize`.
@@ -370,7 +368,7 @@ pub fn get_text_size(instance: ChatInputBarConfiguration) -> OptionInt64
 @luau.set_property("TextSize")
 pub fn set_text_size(
   instance: ChatInputBarConfiguration,
-  value: OptionInt64,
+  value: Int64,
 ) -> ChatInputBarConfiguration
 
 @target(luau)
@@ -409,7 +407,7 @@ pub fn set_text_stroke_color3(
 @luau.property("TextStrokeTransparency")
 pub fn get_text_stroke_transparency(
   instance: ChatInputBarConfiguration,
-) -> OptionDouble
+) -> Float
 
 @target(luau)
 /// Sets Roblox property `ChatInputBarConfiguration.TextStrokeTransparency`.
@@ -422,7 +420,7 @@ pub fn get_text_stroke_transparency(
 @luau.set_property("TextStrokeTransparency")
 pub fn set_text_stroke_transparency(
   instance: ChatInputBarConfiguration,
-  value: OptionDouble,
+  value: Float,
 ) -> ChatInputBarConfiguration
 
 @target(luau)
@@ -576,7 +574,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: ChatInputBarConfiguration) -> OptionInt64
+pub fn get_source_asset_id(instance: ChatInputBarConfiguration) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1092,7 +1090,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: ChatInputBarConfiguration,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1371,10 +1369,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: Color3,
   _: TextBox,

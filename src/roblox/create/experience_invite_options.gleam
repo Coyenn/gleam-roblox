@@ -2,7 +2,7 @@
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/experience_invite_options
 import roblox/types.{
-  type ExperienceInviteOptions, type Instance, type OptionInt64,
+  type ExperienceInviteOptions, type Instance, type Int64,
   type SecurityCapabilities,
 }
 
@@ -42,7 +42,7 @@ pub fn invite_message_id(value: String) -> Property(ExperienceInviteOptions) {
 /// Roblox: `ExperienceInviteOptions.InviteUser`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ExperienceInviteOptions#InviteUser
-pub fn invite_user(value: OptionInt64) -> Property(ExperienceInviteOptions) {
+pub fn invite_user(value: Int64) -> Property(ExperienceInviteOptions) {
   Property(fn(instance) {
     experience_invite_options.set_invite_user(instance, value)
   })
@@ -152,7 +152,7 @@ pub fn sandboxed(value: Bool) -> Property(ExperienceInviteOptions) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: OptionInt64,
+  _: Int64,
   _: ExperienceInviteOptions,
 ) -> Nil {
   Nil

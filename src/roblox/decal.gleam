@@ -4,9 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type Color3, type Content, type ContentId, type Decal,
-  type FaceInstance, type Instance, type NormalId, type Object,
-  type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId,
-  type Vector2,
+  type FaceInstance, type Instance, type Int64, type NormalId, type Object,
+  type SecurityCapabilities, type UniqueId, type Vector2,
 }
 
 @target(luau)
@@ -497,7 +496,7 @@ pub fn set_sandboxed(instance: Decal, value: Bool) -> Decal
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Decal) -> OptionInt64
+pub fn get_source_asset_id(instance: Decal) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -985,7 +984,7 @@ pub fn set_attribute(instance: Decal, attribute: String, value: Dynamic) -> Nil
 pub fn wait_for_child(
   instance: Decal,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1252,10 +1251,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: NormalId,
   _: Vector2,

@@ -108,7 +108,7 @@ pub fn generator_fixture_test() {
 
   fs.read_text(out_dir <> "/instance.gleam")
   |> string.contains(
-    "pub fn wait_for_child(instance: Instance, child_name: String, time_out: OptionDouble) -> Option(Instance)",
+    "pub fn wait_for_child(instance: Instance, child_name: String, time_out: Float) -> Option(Instance)",
   )
   |> should.equal(True)
 

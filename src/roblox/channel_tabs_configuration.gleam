@@ -4,9 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type ChannelTabsConfiguration, type Color3, type Font,
-  type Instance, type Object, type OptionDouble, type OptionInt64,
-  type SecurityCapabilities, type TextChatConfigurations, type UniqueId,
-  type Vector2,
+  type Instance, type Int64, type Object, type SecurityCapabilities,
+  type TextChatConfigurations, type UniqueId, type Vector2,
 }
 
 @target(luau)
@@ -84,9 +83,7 @@ pub fn set_background_color3(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ChannelTabsConfiguration#BackgroundTransparency
 @luau.property("BackgroundTransparency")
-pub fn get_background_transparency(
-  instance: ChannelTabsConfiguration,
-) -> OptionDouble
+pub fn get_background_transparency(instance: ChannelTabsConfiguration) -> Float
 
 @target(luau)
 /// Sets Roblox property `ChannelTabsConfiguration.BackgroundTransparency`.
@@ -99,7 +96,7 @@ pub fn get_background_transparency(
 @luau.set_property("BackgroundTransparency")
 pub fn set_background_transparency(
   instance: ChannelTabsConfiguration,
-  value: OptionDouble,
+  value: Float,
 ) -> ChannelTabsConfiguration
 
 @target(luau)
@@ -238,7 +235,7 @@ pub fn set_text_color3(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ChannelTabsConfiguration#TextSize
 @luau.property("TextSize")
-pub fn get_text_size(instance: ChannelTabsConfiguration) -> OptionInt64
+pub fn get_text_size(instance: ChannelTabsConfiguration) -> Int64
 
 @target(luau)
 /// Sets Roblox property `ChannelTabsConfiguration.TextSize`.
@@ -251,7 +248,7 @@ pub fn get_text_size(instance: ChannelTabsConfiguration) -> OptionInt64
 @luau.set_property("TextSize")
 pub fn set_text_size(
   instance: ChannelTabsConfiguration,
-  value: OptionInt64,
+  value: Int64,
 ) -> ChannelTabsConfiguration
 
 @target(luau)
@@ -288,9 +285,7 @@ pub fn set_text_stroke_color3(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ChannelTabsConfiguration#TextStrokeTransparency
 @luau.property("TextStrokeTransparency")
-pub fn get_text_stroke_transparency(
-  instance: ChannelTabsConfiguration,
-) -> OptionDouble
+pub fn get_text_stroke_transparency(instance: ChannelTabsConfiguration) -> Float
 
 @target(luau)
 /// Sets Roblox property `ChannelTabsConfiguration.TextStrokeTransparency`.
@@ -303,7 +298,7 @@ pub fn get_text_stroke_transparency(
 @luau.set_property("TextStrokeTransparency")
 pub fn set_text_stroke_transparency(
   instance: ChannelTabsConfiguration,
-  value: OptionDouble,
+  value: Float,
 ) -> ChannelTabsConfiguration
 
 @target(luau)
@@ -457,7 +452,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: ChannelTabsConfiguration) -> OptionInt64
+pub fn get_source_asset_id(instance: ChannelTabsConfiguration) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -973,7 +968,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: ChannelTabsConfiguration,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1252,10 +1247,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: Color3,
   _: Font,

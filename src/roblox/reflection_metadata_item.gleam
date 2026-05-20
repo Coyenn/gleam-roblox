@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Object, type OptionDouble, type OptionInt64,
+  type Actor, type Instance, type Int64, type Object,
   type ReflectionMetadataItem, type SecurityCapabilities, type UniqueId,
 }
 
@@ -327,7 +327,7 @@ pub fn set_slider_scaling(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UIMaximum
 @luau.property("UIMaximum")
-pub fn get_ui_maximum(instance: ReflectionMetadataItem) -> OptionDouble
+pub fn get_ui_maximum(instance: ReflectionMetadataItem) -> Float
 
 @target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.UIMaximum`.
@@ -340,7 +340,7 @@ pub fn get_ui_maximum(instance: ReflectionMetadataItem) -> OptionDouble
 @luau.set_property("UIMaximum")
 pub fn set_ui_maximum(
   instance: ReflectionMetadataItem,
-  value: OptionDouble,
+  value: Float,
 ) -> ReflectionMetadataItem
 
 @target(luau)
@@ -352,7 +352,7 @@ pub fn set_ui_maximum(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UIMinimum
 @luau.property("UIMinimum")
-pub fn get_ui_minimum(instance: ReflectionMetadataItem) -> OptionDouble
+pub fn get_ui_minimum(instance: ReflectionMetadataItem) -> Float
 
 @target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.UIMinimum`.
@@ -365,7 +365,7 @@ pub fn get_ui_minimum(instance: ReflectionMetadataItem) -> OptionDouble
 @luau.set_property("UIMinimum")
 pub fn set_ui_minimum(
   instance: ReflectionMetadataItem,
-  value: OptionDouble,
+  value: Float,
 ) -> ReflectionMetadataItem
 
 @target(luau)
@@ -377,7 +377,7 @@ pub fn set_ui_minimum(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UINumTicks
 @luau.property("UINumTicks")
-pub fn get_ui_num_ticks(instance: ReflectionMetadataItem) -> OptionDouble
+pub fn get_ui_num_ticks(instance: ReflectionMetadataItem) -> Float
 
 @target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.UINumTicks`.
@@ -390,7 +390,7 @@ pub fn get_ui_num_ticks(instance: ReflectionMetadataItem) -> OptionDouble
 @luau.set_property("UINumTicks")
 pub fn set_ui_num_ticks(
   instance: ReflectionMetadataItem,
-  value: OptionDouble,
+  value: Float,
 ) -> ReflectionMetadataItem
 
 @target(luau)
@@ -544,7 +544,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: ReflectionMetadataItem) -> OptionInt64
+pub fn get_source_asset_id(instance: ReflectionMetadataItem) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1060,7 +1060,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: ReflectionMetadataItem,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1339,10 +1339,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: ReflectionMetadataItem,
   _: Object,

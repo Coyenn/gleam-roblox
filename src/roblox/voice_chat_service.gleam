@@ -3,8 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type AudioApiRollout, type Instance, type Object,
-  type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId,
+  type Actor, type AudioApiRollout, type Instance, type Int64, type Object,
+  type SecurityCapabilities, type UniqueId,
   type VoiceChatDistanceAttenuationType, type VoiceChatService,
 }
 
@@ -154,7 +154,7 @@ pub fn get_chat_groups_async(
 @luau.method("IsVoiceEnabledForUserIdAsync")
 pub fn is_voice_enabled_for_user_id_async(
   instance: VoiceChatService,
-  user_id: OptionInt64,
+  user_id: Int64,
 ) -> Bool
 
 @target(luau)
@@ -300,7 +300,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: VoiceChatService) -> OptionInt64
+pub fn get_source_asset_id(instance: VoiceChatService) -> Int64
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -807,7 +807,7 @@ pub fn set_attribute(
 pub fn wait_for_child(
   instance: VoiceChatService,
   child_name: String,
-  time_out: OptionDouble,
+  time_out: Float,
 ) -> Option(Instance)
 
 @target(luau)
@@ -1082,10 +1082,9 @@ pub fn on_changed(
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: Instance,
-  _: OptionDouble,
   _: Actor,
   _: UniqueId,
-  _: OptionInt64,
+  _: Int64,
   _: SecurityCapabilities,
   _: AudioApiRollout,
   _: VoiceChatDistanceAttenuationType,
