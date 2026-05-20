@@ -157,7 +157,7 @@ pub fn main() {
     dump_json,
     docs_json,
     overrides_json,
-    fs.cwd() <> "/src/api",
+    fs.cwd() <> "/src/roblox",
   )
 
   io.println("Generated Roblox bindings.")
@@ -1603,7 +1603,7 @@ fn gleamdoc_lines(lines: List(String)) -> List(String) {
 
 fn class_imports(generated: GeneratedClass) -> List(String) {
   let option_import = case generated.needs_option {
-    True -> ["import api/option.{type Option}"]
+    True -> ["import roblox/option.{type Option}"]
     False -> []
   }
   let signal_types =
@@ -1612,10 +1612,10 @@ fn class_imports(generated: GeneratedClass) -> List(String) {
     |> prepend_if(generated.needs_signal, "type RBXScriptSignal")
   let signal_import = case signal_types {
     [] -> []
-    types -> ["import api/signal.{" <> string.join(types, with: ", ") <> "}"]
+    types -> ["import roblox/signal.{" <> string.join(types, with: ", ") <> "}"]
   }
   let dynamic_import = case generated.needs_dynamic {
-    True -> ["import api/dynamic.{type Dynamic}"]
+    True -> ["import roblox/dynamic.{type Dynamic}"]
     False -> []
   }
   let custom_types =
@@ -1626,7 +1626,7 @@ fn class_imports(generated: GeneratedClass) -> List(String) {
   let type_import = case custom_types {
     [] -> []
     types -> [
-      "import api/types.{"
+      "import roblox/types.{"
       <> string.join(
         types |> list.map(fn(type_) { "type " <> type_ }),
         with: ", ",
@@ -1677,7 +1677,7 @@ fn generate_create_helpers(
 fn create_root_module() -> List(String) {
   [
     "// Generated declarative Roblox instance builder primitives",
-    "import api/types.{type Instance}",
+    "import roblox/types.{type Instance}",
     "",
     "/// A typed property update for a Roblox instance.",
     "pub type Property(a) {",
@@ -1824,11 +1824,11 @@ fn builder_imports(
   builder: GeneratedBuilder,
 ) -> List(String) {
   let option_import = case builder.needs_option {
-    True -> ["import api/option.{type Option}"]
+    True -> ["import roblox/option.{type Option}"]
     False -> []
   }
   let dynamic_import = case builder.needs_dynamic {
-    True -> ["import api/dynamic.{type Dynamic}"]
+    True -> ["import roblox/dynamic.{type Dynamic}"]
     False -> []
   }
   let custom_types =
@@ -1839,7 +1839,7 @@ fn builder_imports(
   let type_import = case custom_types {
     [] -> []
     types -> [
-      "import api/types.{"
+      "import roblox/types.{"
       <> string.join(
         types |> list.map(fn(type_) { "type " <> type_ }),
         with: ", ",
@@ -1849,8 +1849,8 @@ fn builder_imports(
   }
 
   [
-    "import api/create.{type Node, type Property, Node, Property, apply}",
-    "import api/" <> module,
+    "import roblox/create.{type Node, type Property, Node, Property, apply}",
+    "import roblox/" <> module,
   ]
   |> list.append(option_import)
   |> list.append(dynamic_import)
@@ -1948,7 +1948,7 @@ fn generate_services(
 
   let lines =
     [
-      "import api/types.{" <> string.join(service_types, with: ", ") <> "}",
+      "import roblox/types.{" <> string.join(service_types, with: ", ") <> "}",
       "",
     ]
     |> list.append(service_functions)
@@ -1984,7 +1984,7 @@ fn generate_enums(dump: ApiDump, docs: DocsMap, out_dir: String) {
     [
       "// Generated enum container bindings for Roblox API",
       "pub type RobloxEnum(a)",
-      "import api/types.{" <> string.join(enum_types, with: ", ") <> "}",
+      "import roblox/types.{" <> string.join(enum_types, with: ", ") <> "}",
       "",
     ]
     |> list.append(
@@ -2021,8 +2021,8 @@ fn generate_enums(dump: ApiDump, docs: DocsMap, out_dir: String) {
     let lines =
       [
         "// Generated enum item bindings for Roblox API",
-        "import api/enum.{type RobloxEnum}",
-        "import api/types.{type " <> enum.name <> "}",
+        "import roblox/enum.{type RobloxEnum}",
+        "import roblox/types.{type " <> enum.name <> "}",
         "",
       ]
       |> list.append(doc_lines_for_key(
@@ -3299,9 +3299,9 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
       })
     let imports =
       []
-      |> prepend_if(needs_option, "import api/option.{type Option}")
-      |> prepend_if(needs_dynamic, "import api/dynamic.{type Dynamic}")
-      |> prepend_if(needs_buffer, "import api/types.{type Buffer}")
+      |> prepend_if(needs_option, "import roblox/option.{type Option}")
+      |> prepend_if(needs_dynamic, "import roblox/dynamic.{type Dynamic}")
+      |> prepend_if(needs_buffer, "import roblox/types.{type Buffer}")
     let type_lines = case module {
       "coroutine" -> ["pub type Thread", ""]
       _ -> []
