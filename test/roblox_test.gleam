@@ -8,6 +8,7 @@ pub fn main() -> Nil {
   gleeunit.main()
 }
 
+@target(javascript)
 pub fn generator_fixture_test() {
   let out_dir = "/tmp/roblox_codegen_fixture"
   codegen.generate_from_strings_with_docs(
