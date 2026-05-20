@@ -7,13 +7,17 @@ import roblox/types.{type InputContext, type Instance, type SecurityCapabilities
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: InputContext) -> Instance
 
-/// Creates a declarative Roblox `InputContext` node.
 @target(luau)
-pub fn node(properties: List(Property(InputContext)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `InputContext` node.
+pub fn node(
+  properties: List(Property(InputContext)),
+  children: List(Node),
+) -> Node {
   let instance = apply(input_context.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `InputContext.Enabled` on `InputContext` nodes.
 ///
 /// Determines if this InputContext is enabled or not.
@@ -21,11 +25,11 @@ pub fn node(properties: List(Property(InputContext)), children: List(Node)) -> N
 /// Roblox: `InputContext.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputContext#Enabled
-@target(luau)
 pub fn enabled(value: Bool) -> Property(InputContext) {
   Property(fn(instance) { input_context.set_enabled(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `InputContext.Priority` on `InputContext` nodes.
 ///
 /// The priority level at which the context should be run.
@@ -33,11 +37,11 @@ pub fn enabled(value: Bool) -> Property(InputContext) {
 /// Roblox: `InputContext.Priority`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputContext#Priority
-@target(luau)
 pub fn priority(value: Int) -> Property(InputContext) {
   Property(fn(instance) { input_context.set_priority(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `InputContext.Sink` on `InputContext` nodes.
 ///
 /// Determines whether input bindings of lower priority will be processed.
@@ -45,11 +49,11 @@ pub fn priority(value: Int) -> Property(InputContext) {
 /// Roblox: `InputContext.Sink`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputContext#Sink
-@target(luau)
 pub fn sink(value: Bool) -> Property(InputContext) {
   Property(fn(instance) { input_context.set_sink(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `InputContext` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -57,11 +61,11 @@ pub fn sink(value: Bool) -> Property(InputContext) {
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(InputContext) {
   Property(fn(instance) { input_context.set_archivable(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `InputContext` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -69,11 +73,11 @@ pub fn archivable(value: Bool) -> Property(InputContext) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 pub fn capabilities(value: SecurityCapabilities) -> Property(InputContext) {
   Property(fn(instance) { input_context.set_capabilities(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `InputContext` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -81,11 +85,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(InputContext) {
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(InputContext) {
   Property(fn(instance) { input_context.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `InputContext` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -94,11 +98,11 @@ pub fn name(value: String) -> Property(InputContext) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(InputContext) {
   Property(fn(instance) { input_context.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `InputContext` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -107,13 +111,15 @@ pub fn parent(value: Instance) -> Property(InputContext) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(InputContext) {
   Property(fn(instance) { input_context.set_sandboxed(instance, value) })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: InputContext) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: InputContext,
+) -> Nil {
   Nil
 }

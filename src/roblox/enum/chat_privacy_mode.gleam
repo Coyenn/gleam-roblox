@@ -2,31 +2,33 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type ChatPrivacyMode}
 
+@target(luau)
 /// Gets the Roblox `ChatPrivacyMode` enum object.
 ///
 /// Roblox: `Enum.ChatPrivacyMode`
 /// See: https://create.roblox.com/docs/reference/engine/enums/ChatPrivacyMode
-@target(luau)
 @luau.global("Enum.ChatPrivacyMode")
 pub fn roblox_enum() -> RobloxEnum(ChatPrivacyMode)
 
-/// Roblox enum item `ChatPrivacyMode.AllUsers`.
 @target(luau)
+/// Roblox enum item `ChatPrivacyMode.AllUsers`.
 @luau.global("Enum.ChatPrivacyMode.AllUsers")
 pub fn all_users() -> ChatPrivacyMode
 
-/// Roblox enum item `ChatPrivacyMode.NoOne`.
 @target(luau)
+/// Roblox enum item `ChatPrivacyMode.NoOne`.
 @luau.global("Enum.ChatPrivacyMode.NoOne")
 pub fn no_one() -> ChatPrivacyMode
 
-/// Roblox enum item `ChatPrivacyMode.Friends`.
 @target(luau)
+/// Roblox enum item `ChatPrivacyMode.Friends`.
 @luau.global("Enum.ChatPrivacyMode.Friends")
 pub fn friends() -> ChatPrivacyMode
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(ChatPrivacyMode), _: ChatPrivacyMode) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(ChatPrivacyMode),
+  _: ChatPrivacyMode,
+) -> Nil {
   Nil
 }

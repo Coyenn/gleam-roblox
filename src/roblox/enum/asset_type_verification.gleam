@@ -2,31 +2,33 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type AssetTypeVerification}
 
+@target(luau)
 /// Determines the asset type verification mode.
 ///
 /// Roblox: `Enum.AssetTypeVerification`
 /// See: https://create.roblox.com/docs/reference/engine/enums/AssetTypeVerification
-@target(luau)
 @luau.global("Enum.AssetTypeVerification")
 pub fn roblox_enum() -> RobloxEnum(AssetTypeVerification)
 
-/// Roblox enum item `AssetTypeVerification.Default`.
 @target(luau)
+/// Roblox enum item `AssetTypeVerification.Default`.
 @luau.global("Enum.AssetTypeVerification.Default")
 pub fn default() -> AssetTypeVerification
 
-/// Roblox enum item `AssetTypeVerification.ClientOnly`.
 @target(luau)
+/// Roblox enum item `AssetTypeVerification.ClientOnly`.
 @luau.global("Enum.AssetTypeVerification.ClientOnly")
 pub fn client_only() -> AssetTypeVerification
 
-/// Roblox enum item `AssetTypeVerification.Always`.
 @target(luau)
+/// Roblox enum item `AssetTypeVerification.Always`.
 @luau.global("Enum.AssetTypeVerification.Always")
 pub fn always() -> AssetTypeVerification
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(AssetTypeVerification), _: AssetTypeVerification) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(AssetTypeVerification),
+  _: AssetTypeVerification,
+) -> Nil {
   Nil
 }

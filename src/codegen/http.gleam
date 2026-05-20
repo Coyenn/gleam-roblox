@@ -1,6 +1,6 @@
 import gleam/fetch
 import gleam/http/request
-import gleam/javascript/promise.{type Promise, try_await, map}
+import gleam/javascript/promise.{type Promise, map, try_await}
 
 @target(javascript)
 pub fn fetch_text(url: String) -> Promise(String) {

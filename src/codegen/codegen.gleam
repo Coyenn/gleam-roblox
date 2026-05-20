@@ -2050,21 +2050,17 @@ fn generate_enums(dump: ApiDump, docs: DocsMap, out_dir: String) {
           ]
         }),
       )
-    write_generated_api(
-      enum_dir <> "/" <> module <> ".gleam",
-      lines,
-      [
-        "",
-        "/// Keeps Roblox imports reachable when checking non-Luau targets.",
-        "pub fn javascript_type_anchor(_: RobloxEnum("
-          <> enum.name
-          <> "), _: "
-          <> enum.name
-          <> ") -> Nil {",
-        "  Nil",
-        "}",
-      ],
-    )
+    write_generated_api(enum_dir <> "/" <> module <> ".gleam", lines, [
+      "",
+      "/// Keeps Roblox imports reachable when checking non-Luau targets.",
+      "pub fn javascript_type_anchor(_: RobloxEnum("
+        <> enum.name
+        <> "), _: "
+        <> enum.name
+        <> ") -> Nil {",
+      "  Nil",
+      "}",
+    ])
   })
 }
 
@@ -3361,7 +3357,13 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "Dynamic",
         "@luau/global/newproxy",
       ),
-      global_fn("next", "next", "table: Dynamic", "Dynamic", "@luau/global/next"),
+      global_fn(
+        "next",
+        "next",
+        "table: Dynamic",
+        "Dynamic",
+        "@luau/global/next",
+      ),
       global_fn(
         "next_from",
         "next",
@@ -3369,7 +3371,13 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "Dynamic",
         "@luau/global/next",
       ),
-      global_fn("pairs", "pairs", "table: Dynamic", "Dynamic", "@luau/global/pairs"),
+      global_fn(
+        "pairs",
+        "pairs",
+        "table: Dynamic",
+        "Dynamic",
+        "@luau/global/pairs",
+      ),
       global_fn(
         "pcall",
         "pcall",
@@ -3392,7 +3400,13 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "Dynamic",
         "@luau/global/rawget",
       ),
-      global_fn("rawlen", "rawlen", "value: Dynamic", "Int", "@luau/global/rawlen"),
+      global_fn(
+        "rawlen",
+        "rawlen",
+        "value: Dynamic",
+        "Int",
+        "@luau/global/rawlen",
+      ),
       global_fn(
         "rawset",
         "rawset",
@@ -3864,13 +3878,7 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
       "Thread",
       "@roblox/global/task.delay",
     ),
-    global_fn(
-      "wait",
-      "task.wait",
-      "",
-      "Float",
-      "@roblox/global/task.wait",
-    ),
+    global_fn("wait", "task.wait", "", "Float", "@roblox/global/task.wait"),
     global_fn(
       "wait_for",
       "task.wait",

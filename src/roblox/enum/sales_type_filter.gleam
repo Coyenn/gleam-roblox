@@ -2,36 +2,38 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type SalesTypeFilter}
 
+@target(luau)
 /// Gets the Roblox `SalesTypeFilter` enum object.
 ///
 /// Roblox: `Enum.SalesTypeFilter`
 /// See: https://create.roblox.com/docs/reference/engine/enums/SalesTypeFilter
-@target(luau)
 @luau.global("Enum.SalesTypeFilter")
 pub fn roblox_enum() -> RobloxEnum(SalesTypeFilter)
 
-/// Roblox enum item `SalesTypeFilter.All`.
 @target(luau)
+/// Roblox enum item `SalesTypeFilter.All`.
 @luau.global("Enum.SalesTypeFilter.All")
 pub fn all() -> SalesTypeFilter
 
-/// Roblox enum item `SalesTypeFilter.Collectibles`.
 @target(luau)
+/// Roblox enum item `SalesTypeFilter.Collectibles`.
 @luau.global("Enum.SalesTypeFilter.Collectibles")
 pub fn collectibles() -> SalesTypeFilter
 
-/// Roblox enum item `SalesTypeFilter.Premium`.
 @target(luau)
+/// Roblox enum item `SalesTypeFilter.Premium`.
 @luau.global("Enum.SalesTypeFilter.Premium")
 pub fn premium() -> SalesTypeFilter
 
-/// Roblox enum item `SalesTypeFilter.TimedOptions`.
 @target(luau)
+/// Roblox enum item `SalesTypeFilter.TimedOptions`.
 @luau.global("Enum.SalesTypeFilter.TimedOptions")
 pub fn timed_options() -> SalesTypeFilter
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(SalesTypeFilter), _: SalesTypeFilter) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(SalesTypeFilter),
+  _: SalesTypeFilter,
+) -> Nil {
   Nil
 }

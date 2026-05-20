@@ -2,116 +2,118 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type AccessoryType}
 
+@target(luau)
 /// A subset of AssetTypes which are relevant to only accessories.
 ///
 /// Roblox: `Enum.AccessoryType`
 /// See: https://create.roblox.com/docs/reference/engine/enums/AccessoryType
-@target(luau)
 @luau.global("Enum.AccessoryType")
 pub fn roblox_enum() -> RobloxEnum(AccessoryType)
 
-/// Roblox enum item `AccessoryType.Unknown`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Unknown`.
 @luau.global("Enum.AccessoryType.Unknown")
 pub fn unknown() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Hat`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Hat`.
 @luau.global("Enum.AccessoryType.Hat")
 pub fn hat() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Hair`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Hair`.
 @luau.global("Enum.AccessoryType.Hair")
 pub fn hair() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Face`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Face`.
 @luau.global("Enum.AccessoryType.Face")
 pub fn face() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Neck`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Neck`.
 @luau.global("Enum.AccessoryType.Neck")
 pub fn neck() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Shoulder`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Shoulder`.
 @luau.global("Enum.AccessoryType.Shoulder")
 pub fn shoulder() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Front`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Front`.
 @luau.global("Enum.AccessoryType.Front")
 pub fn front() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Back`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Back`.
 @luau.global("Enum.AccessoryType.Back")
 pub fn back() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Waist`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Waist`.
 @luau.global("Enum.AccessoryType.Waist")
 pub fn waist() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.TShirt`.
 @target(luau)
+/// Roblox enum item `AccessoryType.TShirt`.
 @luau.global("Enum.AccessoryType.TShirt")
 pub fn t_shirt() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Shirt`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Shirt`.
 @luau.global("Enum.AccessoryType.Shirt")
 pub fn shirt() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Pants`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Pants`.
 @luau.global("Enum.AccessoryType.Pants")
 pub fn pants() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Jacket`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Jacket`.
 @luau.global("Enum.AccessoryType.Jacket")
 pub fn jacket() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Sweater`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Sweater`.
 @luau.global("Enum.AccessoryType.Sweater")
 pub fn sweater() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Shorts`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Shorts`.
 @luau.global("Enum.AccessoryType.Shorts")
 pub fn shorts() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.LeftShoe`.
 @target(luau)
+/// Roblox enum item `AccessoryType.LeftShoe`.
 @luau.global("Enum.AccessoryType.LeftShoe")
 pub fn left_shoe() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.RightShoe`.
 @target(luau)
+/// Roblox enum item `AccessoryType.RightShoe`.
 @luau.global("Enum.AccessoryType.RightShoe")
 pub fn right_shoe() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.DressSkirt`.
 @target(luau)
+/// Roblox enum item `AccessoryType.DressSkirt`.
 @luau.global("Enum.AccessoryType.DressSkirt")
 pub fn dress_skirt() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Eyebrow`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Eyebrow`.
 @luau.global("Enum.AccessoryType.Eyebrow")
 pub fn eyebrow() -> AccessoryType
 
-/// Roblox enum item `AccessoryType.Eyelash`.
 @target(luau)
+/// Roblox enum item `AccessoryType.Eyelash`.
 @luau.global("Enum.AccessoryType.Eyelash")
 pub fn eyelash() -> AccessoryType
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(AccessoryType), _: AccessoryType) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(AccessoryType),
+  _: AccessoryType,
+) -> Nil {
   Nil
 }

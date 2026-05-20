@@ -2,31 +2,33 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type LocationType}
 
+@target(luau)
 /// Gets the Roblox `LocationType` enum object.
 ///
 /// Roblox: `Enum.LocationType`
 /// See: https://create.roblox.com/docs/reference/engine/enums/LocationType
-@target(luau)
 @luau.global("Enum.LocationType")
 pub fn roblox_enum() -> RobloxEnum(LocationType)
 
-/// Roblox enum item `LocationType.Character`.
 @target(luau)
+/// Roblox enum item `LocationType.Character`.
 @luau.global("Enum.LocationType.Character")
 pub fn character() -> LocationType
 
-/// Roblox enum item `LocationType.Camera`.
 @target(luau)
+/// Roblox enum item `LocationType.Camera`.
 @luau.global("Enum.LocationType.Camera")
 pub fn camera() -> LocationType
 
-/// Roblox enum item `LocationType.ObjectPosition`.
 @target(luau)
+/// Roblox enum item `LocationType.ObjectPosition`.
 @luau.global("Enum.LocationType.ObjectPosition")
 pub fn object_position() -> LocationType
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(LocationType), _: LocationType) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(LocationType),
+  _: LocationType,
+) -> Nil {
   Nil
 }

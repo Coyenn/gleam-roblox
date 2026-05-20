@@ -1,26 +1,31 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type AccessoryDescription, type AccessoryType, type Actor, type Instance, type Object, type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId, type Vector3}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type AccessoryDescription, type AccessoryType, type Actor, type Instance,
+  type Object, type OptionDouble, type OptionInt64, type SecurityCapabilities,
+  type UniqueId, type Vector3,
+}
 
+@target(luau)
 /// Creates a new Roblox `AccessoryDescription` instance.
 ///
 /// Roblox: `Instance.new("AccessoryDescription")`
-@target(luau)
 @luau.global("Instance.new(\"AccessoryDescription\")")
 pub fn new() -> AccessoryDescription
 
-/// Treats `AccessoryDescription` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `AccessoryDescription` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AccessoryDescription) -> Instance
 
-/// Treats `AccessoryDescription` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `AccessoryDescription` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: AccessoryDescription) -> Object
 
+@target(luau)
 /// Gets Roblox property `AccessoryDescription.AccessoryType`.
 ///
 /// The AccessoryType of the Accessory referred to by this description.
@@ -28,10 +33,10 @@ pub fn as_object(instance: AccessoryDescription) -> Object
 /// Roblox: `AccessoryDescription.AccessoryType`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#AccessoryType
-@target(luau)
 @luau.property("AccessoryType")
 pub fn get_accessory_type(instance: AccessoryDescription) -> AccessoryType
 
+@target(luau)
 /// Sets Roblox property `AccessoryDescription.AccessoryType`.
 ///
 /// The AccessoryType of the Accessory referred to by this description.
@@ -39,10 +44,13 @@ pub fn get_accessory_type(instance: AccessoryDescription) -> AccessoryType
 /// Roblox: `AccessoryDescription.AccessoryType`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#AccessoryType
-@target(luau)
 @luau.set_property("AccessoryType")
-pub fn set_accessory_type(instance: AccessoryDescription, value: AccessoryType) -> AccessoryDescription
+pub fn set_accessory_type(
+  instance: AccessoryDescription,
+  value: AccessoryType,
+) -> AccessoryDescription
 
+@target(luau)
 /// Gets Roblox property `AccessoryDescription.AssetId`.
 ///
 /// The asset ID that should be applied when applying this AccessoryDescription.
@@ -50,10 +58,10 @@ pub fn set_accessory_type(instance: AccessoryDescription, value: AccessoryType) 
 /// Roblox: `AccessoryDescription.AssetId`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#AssetId
-@target(luau)
 @luau.property("AssetId")
 pub fn get_asset_id(instance: AccessoryDescription) -> OptionInt64
 
+@target(luau)
 /// Sets Roblox property `AccessoryDescription.AssetId`.
 ///
 /// The asset ID that should be applied when applying this AccessoryDescription.
@@ -61,10 +69,13 @@ pub fn get_asset_id(instance: AccessoryDescription) -> OptionInt64
 /// Roblox: `AccessoryDescription.AssetId`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#AssetId
-@target(luau)
 @luau.set_property("AssetId")
-pub fn set_asset_id(instance: AccessoryDescription, value: OptionInt64) -> AccessoryDescription
+pub fn set_asset_id(
+  instance: AccessoryDescription,
+  value: OptionInt64,
+) -> AccessoryDescription
 
+@target(luau)
 /// Gets Roblox property `AccessoryDescription.Instance`.
 ///
 /// A reference to the Instance that should be applied when applying this AccessoryDescription.
@@ -72,10 +83,10 @@ pub fn set_asset_id(instance: AccessoryDescription, value: OptionInt64) -> Acces
 /// Roblox: `AccessoryDescription.Instance`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#Instance
-@target(luau)
 @luau.property("Instance")
 pub fn get_instance(instance: AccessoryDescription) -> Instance
 
+@target(luau)
 /// Sets Roblox property `AccessoryDescription.Instance`.
 ///
 /// A reference to the Instance that should be applied when applying this AccessoryDescription.
@@ -83,10 +94,13 @@ pub fn get_instance(instance: AccessoryDescription) -> Instance
 /// Roblox: `AccessoryDescription.Instance`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#Instance
-@target(luau)
 @luau.set_property("Instance")
-pub fn set_instance(instance: AccessoryDescription, value: Instance) -> AccessoryDescription
+pub fn set_instance(
+  instance: AccessoryDescription,
+  value: Instance,
+) -> AccessoryDescription
 
+@target(luau)
 /// Gets Roblox property `AccessoryDescription.IsLayered`.
 ///
 /// Whether the Accessory is layered or rigid.
@@ -94,10 +108,10 @@ pub fn set_instance(instance: AccessoryDescription, value: Instance) -> Accessor
 /// Roblox: `AccessoryDescription.IsLayered`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#IsLayered
-@target(luau)
 @luau.property("IsLayered")
 pub fn get_is_layered(instance: AccessoryDescription) -> Bool
 
+@target(luau)
 /// Sets Roblox property `AccessoryDescription.IsLayered`.
 ///
 /// Whether the Accessory is layered or rigid.
@@ -105,10 +119,13 @@ pub fn get_is_layered(instance: AccessoryDescription) -> Bool
 /// Roblox: `AccessoryDescription.IsLayered`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#IsLayered
-@target(luau)
 @luau.set_property("IsLayered")
-pub fn set_is_layered(instance: AccessoryDescription, value: Bool) -> AccessoryDescription
+pub fn set_is_layered(
+  instance: AccessoryDescription,
+  value: Bool,
+) -> AccessoryDescription
 
+@target(luau)
 /// Gets Roblox property `AccessoryDescription.Order`.
 ///
 /// The layered clothing sort order, if the Accessory is layered.
@@ -116,10 +133,10 @@ pub fn set_is_layered(instance: AccessoryDescription, value: Bool) -> AccessoryD
 /// Roblox: `AccessoryDescription.Order`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#Order
-@target(luau)
 @luau.property("Order")
 pub fn get_order(instance: AccessoryDescription) -> Int
 
+@target(luau)
 /// Sets Roblox property `AccessoryDescription.Order`.
 ///
 /// The layered clothing sort order, if the Accessory is layered.
@@ -127,10 +144,13 @@ pub fn get_order(instance: AccessoryDescription) -> Int
 /// Roblox: `AccessoryDescription.Order`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#Order
-@target(luau)
 @luau.set_property("Order")
-pub fn set_order(instance: AccessoryDescription, value: Int) -> AccessoryDescription
+pub fn set_order(
+  instance: AccessoryDescription,
+  value: Int,
+) -> AccessoryDescription
 
+@target(luau)
 /// Gets Roblox property `AccessoryDescription.Position`.
 ///
 /// The accessory adjustment position offset, if the Accessory is rigid.
@@ -138,10 +158,10 @@ pub fn set_order(instance: AccessoryDescription, value: Int) -> AccessoryDescrip
 /// Roblox: `AccessoryDescription.Position`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#Position
-@target(luau)
 @luau.property("Position")
 pub fn get_position(instance: AccessoryDescription) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `AccessoryDescription.Position`.
 ///
 /// The accessory adjustment position offset, if the Accessory is rigid.
@@ -149,10 +169,13 @@ pub fn get_position(instance: AccessoryDescription) -> Vector3
 /// Roblox: `AccessoryDescription.Position`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#Position
-@target(luau)
 @luau.set_property("Position")
-pub fn set_position(instance: AccessoryDescription, value: Vector3) -> AccessoryDescription
+pub fn set_position(
+  instance: AccessoryDescription,
+  value: Vector3,
+) -> AccessoryDescription
 
+@target(luau)
 /// Gets Roblox property `AccessoryDescription.Puffiness`.
 ///
 /// The layered clothing puffiness, if the Accessory is layered.
@@ -160,10 +183,10 @@ pub fn set_position(instance: AccessoryDescription, value: Vector3) -> Accessory
 /// Roblox: `AccessoryDescription.Puffiness`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#Puffiness
-@target(luau)
 @luau.property("Puffiness")
 pub fn get_puffiness(instance: AccessoryDescription) -> Float
 
+@target(luau)
 /// Sets Roblox property `AccessoryDescription.Puffiness`.
 ///
 /// The layered clothing puffiness, if the Accessory is layered.
@@ -171,10 +194,13 @@ pub fn get_puffiness(instance: AccessoryDescription) -> Float
 /// Roblox: `AccessoryDescription.Puffiness`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#Puffiness
-@target(luau)
 @luau.set_property("Puffiness")
-pub fn set_puffiness(instance: AccessoryDescription, value: Float) -> AccessoryDescription
+pub fn set_puffiness(
+  instance: AccessoryDescription,
+  value: Float,
+) -> AccessoryDescription
 
+@target(luau)
 /// Gets Roblox property `AccessoryDescription.Rotation`.
 ///
 /// The accessory adjustment rotation offset, if the Accessory is rigid.
@@ -182,10 +208,10 @@ pub fn set_puffiness(instance: AccessoryDescription, value: Float) -> AccessoryD
 /// Roblox: `AccessoryDescription.Rotation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#Rotation
-@target(luau)
 @luau.property("Rotation")
 pub fn get_rotation(instance: AccessoryDescription) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `AccessoryDescription.Rotation`.
 ///
 /// The accessory adjustment rotation offset, if the Accessory is rigid.
@@ -193,10 +219,13 @@ pub fn get_rotation(instance: AccessoryDescription) -> Vector3
 /// Roblox: `AccessoryDescription.Rotation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#Rotation
-@target(luau)
 @luau.set_property("Rotation")
-pub fn set_rotation(instance: AccessoryDescription, value: Vector3) -> AccessoryDescription
+pub fn set_rotation(
+  instance: AccessoryDescription,
+  value: Vector3,
+) -> AccessoryDescription
 
+@target(luau)
 /// Gets Roblox property `AccessoryDescription.Scale`.
 ///
 /// The accessory adjustment scale, if the Accessory is rigid.
@@ -204,10 +233,10 @@ pub fn set_rotation(instance: AccessoryDescription, value: Vector3) -> Accessory
 /// Roblox: `AccessoryDescription.Scale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#Scale
-@target(luau)
 @luau.property("Scale")
 pub fn get_scale(instance: AccessoryDescription) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `AccessoryDescription.Scale`.
 ///
 /// The accessory adjustment scale, if the Accessory is rigid.
@@ -215,10 +244,13 @@ pub fn get_scale(instance: AccessoryDescription) -> Vector3
 /// Roblox: `AccessoryDescription.Scale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#Scale
-@target(luau)
 @luau.set_property("Scale")
-pub fn set_scale(instance: AccessoryDescription, value: Vector3) -> AccessoryDescription
+pub fn set_scale(
+  instance: AccessoryDescription,
+  value: Vector3,
+) -> AccessoryDescription
 
+@target(luau)
 /// Returns the applied Accessory.
 ///
 /// Roblox: `AccessoryDescription.GetAppliedInstance`
@@ -227,10 +259,10 @@ pub fn set_scale(instance: AccessoryDescription, value: Vector3) -> AccessoryDes
 ///
 /// Parameters:
 /// - `instance`: Describes the appearance of an Accessory for the HumanoidDescription.
-@target(luau)
 @luau.method("GetAppliedInstance")
 pub fn get_applied_instance(instance: AccessoryDescription) -> Instance
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -238,10 +270,10 @@ pub fn get_applied_instance(instance: AccessoryDescription) -> Instance
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: AccessoryDescription) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -249,10 +281,13 @@ pub fn get_archivable(instance: AccessoryDescription) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
-pub fn set_archivable(instance: AccessoryDescription, value: Bool) -> AccessoryDescription
+pub fn set_archivable(
+  instance: AccessoryDescription,
+  value: Bool,
+) -> AccessoryDescription
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -260,10 +295,10 @@ pub fn set_archivable(instance: AccessoryDescription, value: Bool) -> AccessoryD
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: AccessoryDescription) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -271,10 +306,13 @@ pub fn get_capabilities(instance: AccessoryDescription) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: AccessoryDescription, value: SecurityCapabilities) -> AccessoryDescription
+pub fn set_capabilities(
+  instance: AccessoryDescription,
+  value: SecurityCapabilities,
+) -> AccessoryDescription
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -282,10 +320,10 @@ pub fn set_capabilities(instance: AccessoryDescription, value: SecurityCapabilit
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: AccessoryDescription) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -293,10 +331,13 @@ pub fn get_name(instance: AccessoryDescription) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
-pub fn set_name(instance: AccessoryDescription, value: String) -> AccessoryDescription
+pub fn set_name(
+  instance: AccessoryDescription,
+  value: String,
+) -> AccessoryDescription
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -305,10 +346,10 @@ pub fn set_name(instance: AccessoryDescription, value: String) -> AccessoryDescr
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: AccessoryDescription) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -317,10 +358,13 @@ pub fn get_parent(instance: AccessoryDescription) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
-pub fn set_parent(instance: AccessoryDescription, value: parent) -> AccessoryDescription
+pub fn set_parent(
+  instance: AccessoryDescription,
+  value: parent,
+) -> AccessoryDescription
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -329,10 +373,10 @@ pub fn set_parent(instance: AccessoryDescription, value: parent) -> AccessoryDes
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: AccessoryDescription) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -341,10 +385,10 @@ pub fn get_roblox_locked(instance: AccessoryDescription) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: AccessoryDescription) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -353,20 +397,23 @@ pub fn get_sandboxed(instance: AccessoryDescription) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
-pub fn set_sandboxed(instance: AccessoryDescription, value: Bool) -> AccessoryDescription
+pub fn set_sandboxed(
+  instance: AccessoryDescription,
+  value: Bool,
+) -> AccessoryDescription
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: AccessoryDescription) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -375,10 +422,10 @@ pub fn get_source_asset_id(instance: AccessoryDescription) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: AccessoryDescription) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -387,10 +434,10 @@ pub fn get_unique_id(instance: AccessoryDescription) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: AccessoryDescription, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -399,10 +446,10 @@ pub fn add_tag(instance: AccessoryDescription, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: AccessoryDescription) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -411,10 +458,10 @@ pub fn clear_all_children(instance: AccessoryDescription) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: AccessoryDescription) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -423,10 +470,10 @@ pub fn clone(instance: AccessoryDescription) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: AccessoryDescription) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -439,10 +486,13 @@ pub fn destroy_instance(instance: AccessoryDescription) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: AccessoryDescription, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: AccessoryDescription,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -455,10 +505,13 @@ pub fn find_first_ancestor(instance: AccessoryDescription, name: String) -> Opti
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: AccessoryDescription, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: AccessoryDescription,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -471,10 +524,13 @@ pub fn find_first_ancestor_of_class(instance: AccessoryDescription, class_name: 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: AccessoryDescription, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: AccessoryDescription,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -488,10 +544,14 @@ pub fn find_first_ancestor_which_is_a(instance: AccessoryDescription, class_name
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: AccessoryDescription, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: AccessoryDescription,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -504,10 +564,13 @@ pub fn find_first_child(instance: AccessoryDescription, name: String, recursive:
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: AccessoryDescription, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: AccessoryDescription,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -521,10 +584,14 @@ pub fn find_first_child_of_class(instance: AccessoryDescription, class_name: Str
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: AccessoryDescription, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: AccessoryDescription,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -537,10 +604,13 @@ pub fn find_first_child_which_is_a(instance: AccessoryDescription, class_name: S
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: AccessoryDescription, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: AccessoryDescription,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -552,10 +622,10 @@ pub fn find_first_descendant(instance: AccessoryDescription, name: String) -> Op
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: AccessoryDescription) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -568,10 +638,13 @@ pub fn get_actor(instance: AccessoryDescription) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
-pub fn get_attribute(instance: AccessoryDescription, attribute: String) -> Dynamic
+pub fn get_attribute(
+  instance: AccessoryDescription,
+  attribute: String,
+) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -584,10 +657,13 @@ pub fn get_attribute(instance: AccessoryDescription, attribute: String) -> Dynam
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: AccessoryDescription, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: AccessoryDescription,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -600,10 +676,10 @@ pub fn get_attribute_changed_signal(instance: AccessoryDescription, attribute: S
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: AccessoryDescription) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -615,10 +691,10 @@ pub fn get_attributes(instance: AccessoryDescription) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: AccessoryDescription) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -631,10 +707,10 @@ pub fn get_children(instance: AccessoryDescription) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: AccessoryDescription) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -646,10 +722,10 @@ pub fn get_descendants(instance: AccessoryDescription) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: AccessoryDescription) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -663,10 +739,14 @@ pub fn get_full_name(instance: AccessoryDescription) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: AccessoryDescription, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: AccessoryDescription,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -677,10 +757,13 @@ pub fn get_styled(instance: AccessoryDescription, name: String, selector: Option
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: AccessoryDescription, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: AccessoryDescription,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -689,10 +772,10 @@ pub fn get_styled_property_changed_signal(instance: AccessoryDescription, proper
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: AccessoryDescription) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -701,10 +784,10 @@ pub fn get_tags(instance: AccessoryDescription) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: AccessoryDescription, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -717,10 +800,13 @@ pub fn has_tag(instance: AccessoryDescription, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
-pub fn is_ancestor_of(instance: AccessoryDescription, descendant: Instance) -> Bool
+pub fn is_ancestor_of(
+  instance: AccessoryDescription,
+  descendant: Instance,
+) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -733,10 +819,13 @@ pub fn is_ancestor_of(instance: AccessoryDescription, descendant: Instance) -> B
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
-pub fn is_descendant_of(instance: AccessoryDescription, ancestor: Instance) -> Bool
+pub fn is_descendant_of(
+  instance: AccessoryDescription,
+  ancestor: Instance,
+) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -749,10 +838,13 @@ pub fn is_descendant_of(instance: AccessoryDescription, ancestor: Instance) -> B
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
-pub fn is_property_modified(instance: AccessoryDescription, property: String) -> Bool
+pub fn is_property_modified(
+  instance: AccessoryDescription,
+  property: String,
+) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -764,10 +856,13 @@ pub fn is_property_modified(instance: AccessoryDescription, property: String) ->
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: AccessoryDescription, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: AccessoryDescription,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -776,10 +871,10 @@ pub fn query_descendants(instance: AccessoryDescription, selector: String) -> Li
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: AccessoryDescription, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -789,10 +884,13 @@ pub fn remove_tag(instance: AccessoryDescription, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: AccessoryDescription, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: AccessoryDescription,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -803,10 +901,14 @@ pub fn reset_property_to_default(instance: AccessoryDescription, property: Strin
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: AccessoryDescription, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: AccessoryDescription,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -821,19 +923,25 @@ pub fn set_attribute(instance: AccessoryDescription, attribute: String, value: D
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: AccessoryDescription, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: AccessoryDescription,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: AccessoryDescription) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: AccessoryDescription,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -841,19 +949,24 @@ pub fn ancestry_changed(instance: AccessoryDescription) -> RBXScriptSignal(fn(In
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: AccessoryDescription, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: AccessoryDescription,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: AccessoryDescription) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: AccessoryDescription,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -861,19 +974,24 @@ pub fn attribute_changed(instance: AccessoryDescription) -> RBXScriptSignal(fn(S
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: AccessoryDescription, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: AccessoryDescription,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: AccessoryDescription) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: AccessoryDescription,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -881,19 +999,24 @@ pub fn child_added(instance: AccessoryDescription) -> RBXScriptSignal(fn(Instanc
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: AccessoryDescription, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: AccessoryDescription,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: AccessoryDescription) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: AccessoryDescription,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -901,19 +1024,24 @@ pub fn child_removed(instance: AccessoryDescription) -> RBXScriptSignal(fn(Insta
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: AccessoryDescription, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: AccessoryDescription,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: AccessoryDescription) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: AccessoryDescription,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -921,19 +1049,24 @@ pub fn descendant_added(instance: AccessoryDescription) -> RBXScriptSignal(fn(In
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: AccessoryDescription, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: AccessoryDescription,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: AccessoryDescription) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: AccessoryDescription,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -941,19 +1074,24 @@ pub fn descendant_removing(instance: AccessoryDescription) -> RBXScriptSignal(fn
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: AccessoryDescription, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: AccessoryDescription,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
-pub fn destroying(instance: AccessoryDescription) -> RBXScriptSignal(fn() -> Nil)
+pub fn destroying(
+  instance: AccessoryDescription,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -961,19 +1099,24 @@ pub fn destroying(instance: AccessoryDescription) -> RBXScriptSignal(fn() -> Nil
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: AccessoryDescription, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: AccessoryDescription,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: AccessoryDescription) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: AccessoryDescription,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -981,10 +1124,13 @@ pub fn styled_properties_changed(instance: AccessoryDescription) -> RBXScriptSig
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: AccessoryDescription, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: AccessoryDescription,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -993,10 +1139,10 @@ pub fn on_styled_properties_changed(instance: AccessoryDescription, callback: fn
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: AccessoryDescription) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1009,10 +1155,13 @@ pub fn get_class_name(instance: AccessoryDescription) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: AccessoryDescription, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: AccessoryDescription,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1026,19 +1175,21 @@ pub fn get_property_changed_signal(instance: AccessoryDescription, property: Str
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: AccessoryDescription, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
-pub fn changed(instance: AccessoryDescription) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn changed(
+  instance: AccessoryDescription,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1046,12 +1197,28 @@ pub fn changed(instance: AccessoryDescription) -> RBXScriptSignal(fn(String) -> 
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: AccessoryDescription, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: AccessoryDescription,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: Vector3, _: AccessoryType, _: AccessoryDescription, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: Vector3,
+  _: AccessoryType,
+  _: AccessoryDescription,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

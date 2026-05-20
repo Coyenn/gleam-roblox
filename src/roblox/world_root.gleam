@@ -1,39 +1,46 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type BasePart, type BulkMoveMode, type CFrame, type Instance, type Model, type ModelLevelOfDetail, type ModelStreamingMode, type Object, type OptionDouble, type OptionInt64, type OptionRaycastResult, type OverlapParams, type PVInstance, type Player, type RaycastParams, type SecurityCapabilities, type UniqueId, type Vector3, type WorldRoot}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type BasePart, type BulkMoveMode, type CFrame, type Instance,
+  type Model, type ModelLevelOfDetail, type ModelStreamingMode, type Object,
+  type OptionDouble, type OptionInt64, type OptionRaycastResult,
+  type OverlapParams, type PVInstance, type Player, type RaycastParams,
+  type SecurityCapabilities, type UniqueId, type Vector3, type WorldRoot,
+}
 
-/// Treats `WorldRoot` as its Roblox ancestor `Model`.
 @target(luau)
+/// Treats `WorldRoot` as its Roblox ancestor `Model`.
 @luau.global("(function(x) return x end)")
 pub fn as_model(instance: WorldRoot) -> Model
 
-/// Treats `WorldRoot` as its Roblox ancestor `PVInstance`.
 @target(luau)
+/// Treats `WorldRoot` as its Roblox ancestor `PVInstance`.
 @luau.global("(function(x) return x end)")
 pub fn as_pv_instance(instance: WorldRoot) -> PVInstance
 
-/// Treats `WorldRoot` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `WorldRoot` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: WorldRoot) -> Instance
 
-/// Treats `WorldRoot` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `WorldRoot` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: WorldRoot) -> Object
 
+@target(luau)
 /// Gets Roblox property `WorldRoot.PhysicsStepTime`.
 ///
 /// Roblox: `WorldRoot.PhysicsStepTime`
 /// ThreadSafety: Safe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/WorldRoot#PhysicsStepTime
-@target(luau)
 @luau.property("PhysicsStepTime")
 pub fn get_physics_step_time(instance: WorldRoot) -> Float
 
+@target(luau)
 /// Returns true if any of the given BasePart are touching any other parts.
 ///
 /// Roblox: `WorldRoot.ArePartsTouchingOthers`
@@ -47,10 +54,14 @@ pub fn get_physics_step_time(instance: WorldRoot) -> Float
 ///
 /// Returns:
 /// - True if and only if any of the parts in partList are touching any other parts (parts not in the partList). False if no parts are passed.
-@target(luau)
 @luau.method("ArePartsTouchingOthers")
-pub fn are_parts_touching_others(instance: WorldRoot, part_list: List(Instance), overlap_ignored: Float) -> Bool
+pub fn are_parts_touching_others(
+  instance: WorldRoot,
+  part_list: List(Instance),
+  overlap_ignored: Float,
+) -> Bool
 
+@target(luau)
 /// Casts a block shape in a given direction and returns a RaycastResult if the shape hits a BasePart or Terrain cell.
 ///
 /// Roblox: `WorldRoot.Blockcast`
@@ -65,10 +76,16 @@ pub fn are_parts_touching_others(instance: WorldRoot, part_list: List(Instance),
 ///
 /// Returns:
 /// - Contains the result of the shapecast operation, or nil if no eligible BasePart or Terrain cell was hit.
-@target(luau)
 @luau.method("Blockcast")
-pub fn blockcast(instance: WorldRoot, cframe: CFrame, size: Vector3, direction: Vector3, params: RaycastParams) -> OptionRaycastResult
+pub fn blockcast(
+  instance: WorldRoot,
+  cframe: CFrame,
+  size: Vector3,
+  direction: Vector3,
+  params: RaycastParams,
+) -> OptionRaycastResult
 
+@target(luau)
 /// Moves a table of BaseParts to a table of CFrames.
 ///
 /// Roblox: `WorldRoot.BulkMoveTo`
@@ -77,10 +94,15 @@ pub fn blockcast(instance: WorldRoot, cframe: CFrame, size: Vector3, direction: 
 ///
 /// Parameters:
 /// - `instance`: Base class for handling physics simulation and 3D spatial queries.
-@target(luau)
 @luau.method("BulkMoveTo")
-pub fn bulk_move_to(instance: WorldRoot, part_list: List(Instance), cframe_list: List(CFrame), event_mode: BulkMoveMode) -> Nil
+pub fn bulk_move_to(
+  instance: WorldRoot,
+  part_list: List(Instance),
+  cframe_list: List(CFrame),
+  event_mode: BulkMoveMode,
+) -> Nil
 
+@target(luau)
 /// Returns an array of parts whose bounding boxes overlap a given box.
 ///
 /// Roblox: `WorldRoot.GetPartBoundsInBox`
@@ -96,10 +118,15 @@ pub fn bulk_move_to(instance: WorldRoot, part_list: List(Instance), cframe_list:
 ///
 /// Returns:
 /// - An array of BaseParts which matched the spatial query.
-@target(luau)
 @luau.method("GetPartBoundsInBox")
-pub fn get_part_bounds_in_box(instance: WorldRoot, cframe: CFrame, size: Vector3, overlap_params: OverlapParams) -> List(Instance)
+pub fn get_part_bounds_in_box(
+  instance: WorldRoot,
+  cframe: CFrame,
+  size: Vector3,
+  overlap_params: OverlapParams,
+) -> List(Instance)
 
+@target(luau)
 /// Returns an array of parts whose bounding boxes overlap a given sphere.
 ///
 /// Roblox: `WorldRoot.GetPartBoundsInRadius`
@@ -115,10 +142,15 @@ pub fn get_part_bounds_in_box(instance: WorldRoot, cframe: CFrame, size: Vector3
 ///
 /// Returns:
 /// - An array of BaseParts which matched the spatial query.
-@target(luau)
 @luau.method("GetPartBoundsInRadius")
-pub fn get_part_bounds_in_radius(instance: WorldRoot, position: Vector3, radius: Float, overlap_params: OverlapParams) -> List(Instance)
+pub fn get_part_bounds_in_radius(
+  instance: WorldRoot,
+  position: Vector3,
+  radius: Float,
+  overlap_params: OverlapParams,
+) -> List(Instance)
 
+@target(luau)
 /// Returns an array of parts whose occupied space is shared with the given part.
 ///
 /// Roblox: `WorldRoot.GetPartsInPart`
@@ -133,10 +165,14 @@ pub fn get_part_bounds_in_radius(instance: WorldRoot, position: Vector3, radius:
 ///
 /// Returns:
 /// - An array of BaseParts which matched the spatial query.
-@target(luau)
 @luau.method("GetPartsInPart")
-pub fn get_parts_in_part(instance: WorldRoot, part: BasePart, overlap_params: OverlapParams) -> List(Instance)
+pub fn get_parts_in_part(
+  instance: WorldRoot,
+  part: BasePart,
+  overlap_params: OverlapParams,
+) -> List(Instance)
 
+@target(luau)
 /// Casts a ray using an origin, direction, and optional RaycastParams, then returns a RaycastResult if an eligible object or terrain intersects the ray.
 ///
 /// Roblox: `WorldRoot.Raycast`
@@ -151,20 +187,30 @@ pub fn get_parts_in_part(instance: WorldRoot, part: BasePart, overlap_params: Ov
 ///
 /// Returns:
 /// - Contains the results of a raycast operation, or nil if no eligible BasePart or Terrain cell was hit.
-@target(luau)
 @luau.method("Raycast")
-pub fn raycast(instance: WorldRoot, origin: Vector3, direction: Vector3, raycast_params: RaycastParams) -> OptionRaycastResult
+pub fn raycast(
+  instance: WorldRoot,
+  origin: Vector3,
+  direction: Vector3,
+  raycast_params: RaycastParams,
+) -> OptionRaycastResult
 
+@target(luau)
 /// Roblox: `WorldRoot.Shapecast`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WorldRoot#Shapecast
 ///
 /// Parameters:
 /// - `instance`: Base class for handling physics simulation and 3D spatial queries.
-@target(luau)
 @luau.method("Shapecast")
-pub fn shapecast(instance: WorldRoot, part: BasePart, direction: Vector3, params: RaycastParams) -> OptionRaycastResult
+pub fn shapecast(
+  instance: WorldRoot,
+  part: BasePart,
+  direction: Vector3,
+  params: RaycastParams,
+) -> OptionRaycastResult
 
+@target(luau)
 /// Casts a spherical shape in a given direction and returns a RaycastResult if the shape hits a BasePart or Terrain cell.
 ///
 /// Roblox: `WorldRoot.Spherecast`
@@ -179,10 +225,16 @@ pub fn shapecast(instance: WorldRoot, part: BasePart, direction: Vector3, params
 ///
 /// Returns:
 /// - Contains the result of the shapecast operation, or nil if no eligible BasePart or Terrain cell was hit.
-@target(luau)
 @luau.method("Spherecast")
-pub fn spherecast(instance: WorldRoot, position: Vector3, radius: Float, direction: Vector3, params: RaycastParams) -> OptionRaycastResult
+pub fn spherecast(
+  instance: WorldRoot,
+  position: Vector3,
+  radius: Float,
+  direction: Vector3,
+  params: RaycastParams,
+) -> OptionRaycastResult
 
+@target(luau)
 /// Gets Roblox property `Model.LevelOfDetail`.
 ///
 /// Sets the level of detail on the model for experiences with instance streaming enabled.
@@ -190,10 +242,10 @@ pub fn spherecast(instance: WorldRoot, position: Vector3, radius: Float, directi
 /// Roblox: `Model.LevelOfDetail`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Model#LevelOfDetail
-@target(luau)
 @luau.property("LevelOfDetail")
 pub fn get_level_of_detail(instance: WorldRoot) -> ModelLevelOfDetail
 
+@target(luau)
 /// Gets Roblox property `Model.ModelStreamingMode`.
 ///
 /// Controls the model streaming behavior on Models when instance streaming is enabled.
@@ -201,10 +253,10 @@ pub fn get_level_of_detail(instance: WorldRoot) -> ModelLevelOfDetail
 /// Roblox: `Model.ModelStreamingMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Model#ModelStreamingMode
-@target(luau)
 @luau.property("ModelStreamingMode")
 pub fn get_model_streaming_mode(instance: WorldRoot) -> ModelStreamingMode
 
+@target(luau)
 /// Sets Roblox property `Model.ModelStreamingMode`.
 ///
 /// Controls the model streaming behavior on Models when instance streaming is enabled.
@@ -212,10 +264,13 @@ pub fn get_model_streaming_mode(instance: WorldRoot) -> ModelStreamingMode
 /// Roblox: `Model.ModelStreamingMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Model#ModelStreamingMode
-@target(luau)
 @luau.set_property("ModelStreamingMode")
-pub fn set_model_streaming_mode(instance: WorldRoot, value: ModelStreamingMode) -> WorldRoot
+pub fn set_model_streaming_mode(
+  instance: WorldRoot,
+  value: ModelStreamingMode,
+) -> WorldRoot
 
+@target(luau)
 /// Gets Roblox property `Model.PrimaryPart`.
 ///
 /// The primary part of the Model, or nil if not explicitly set.
@@ -223,10 +278,10 @@ pub fn set_model_streaming_mode(instance: WorldRoot, value: ModelStreamingMode) 
 /// Roblox: `Model.PrimaryPart`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Model#PrimaryPart
-@target(luau)
 @luau.property("PrimaryPart")
 pub fn get_primary_part(instance: WorldRoot) -> BasePart
 
+@target(luau)
 /// Sets Roblox property `Model.PrimaryPart`.
 ///
 /// The primary part of the Model, or nil if not explicitly set.
@@ -234,10 +289,10 @@ pub fn get_primary_part(instance: WorldRoot) -> BasePart
 /// Roblox: `Model.PrimaryPart`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Model#PrimaryPart
-@target(luau)
 @luau.set_property("PrimaryPart")
 pub fn set_primary_part(instance: WorldRoot, value: BasePart) -> WorldRoot
 
+@target(luau)
 /// Gets Roblox property `Model.WorldPivot`.
 ///
 /// Determines where the pivot of a Model which does not have a set Model.PrimaryPart is located.
@@ -246,10 +301,10 @@ pub fn set_primary_part(instance: WorldRoot, value: BasePart) -> WorldRoot
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Model#WorldPivot
-@target(luau)
 @luau.property("WorldPivot")
 pub fn get_world_pivot(instance: WorldRoot) -> CFrame
 
+@target(luau)
 /// Sets Roblox property `Model.WorldPivot`.
 ///
 /// Determines where the pivot of a Model which does not have a set Model.PrimaryPart is located.
@@ -258,10 +313,10 @@ pub fn get_world_pivot(instance: WorldRoot) -> CFrame
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Model#WorldPivot
-@target(luau)
 @luau.set_property("WorldPivot")
 pub fn set_world_pivot(instance: WorldRoot, value: CFrame) -> WorldRoot
 
+@target(luau)
 /// Sets this model to be persistent for the specified player. ModelStreamingMode must be set to PersistentPerPlayer for behavior to be changed as a result of addition.
 ///
 /// Roblox: `Model.AddPersistentPlayer`
@@ -271,10 +326,13 @@ pub fn set_world_pivot(instance: WorldRoot, value: CFrame) -> WorldRoot
 /// Parameters:
 /// - `instance`: Models are container objects, meaning they group objects together. They are best used to hold collections of BaseParts and have a number of functions that extend their functionality.
 /// - `playerInstance`: The Player to make this model persistent for.
-@target(luau)
 @luau.method("AddPersistentPlayer")
-pub fn add_persistent_player(instance: WorldRoot, player_instance: Player) -> Nil
+pub fn add_persistent_player(
+  instance: WorldRoot,
+  player_instance: Player,
+) -> Nil
 
+@target(luau)
 /// Returns a description of a volume that contains all parts of a Model.
 ///
 /// Roblox: `Model.GetBoundingBox`
@@ -286,10 +344,10 @@ pub fn add_persistent_player(instance: WorldRoot, player_instance: Player) -> Ni
 ///
 /// Returns:
 /// - A CFrame representing the orientation of the volume followed by a Vector3 representing the size of the volume.
-@target(luau)
 @luau.method("GetBoundingBox")
 pub fn get_bounding_box(instance: WorldRoot) -> Dynamic
 
+@target(luau)
 /// Returns the size of the smallest bounding box that contains all of the BaseParts in the Model, aligned with the Model.PrimaryPart if it is set.
 ///
 /// Roblox: `Model.GetExtentsSize`
@@ -301,10 +359,10 @@ pub fn get_bounding_box(instance: WorldRoot) -> Dynamic
 ///
 /// Returns:
 /// - The Vector3 extents size of the Model.
-@target(luau)
 @luau.method("GetExtentsSize")
 pub fn get_extents_size(instance: WorldRoot) -> Vector3
 
+@target(luau)
 /// Returns all the Player objects that this model object is persistent for. Behavior varies based on whether this method is called from a Script or a LocalScript.
 ///
 /// Roblox: `Model.GetPersistentPlayers`
@@ -316,10 +374,10 @@ pub fn get_extents_size(instance: WorldRoot) -> Vector3
 ///
 /// Returns:
 /// - A table with all the Player objects that this model object is persistent for.
-@target(luau)
 @luau.method("GetPersistentPlayers")
 pub fn get_persistent_players(instance: WorldRoot) -> List(Instance)
 
+@target(luau)
 /// Returns the canonical scale of the model, which defaults to 1 for newly created models and will change as it is scaled via Model:ScaleTo().
 ///
 /// Roblox: `Model.GetScale`
@@ -331,10 +389,10 @@ pub fn get_persistent_players(instance: WorldRoot) -> List(Instance)
 ///
 /// Returns:
 /// - The current canonical scale factor of the model.
-@target(luau)
 @luau.method("GetScale")
 pub fn get_scale(instance: WorldRoot) -> Float
 
+@target(luau)
 /// Moves the PrimaryPart to the given position. If a primary part has not been specified, the root part of the model will be used.
 ///
 /// Roblox: `Model.MoveTo`
@@ -344,10 +402,10 @@ pub fn get_scale(instance: WorldRoot) -> Float
 /// Parameters:
 /// - `instance`: Models are container objects, meaning they group objects together. They are best used to hold collections of BaseParts and have a number of functions that extend their functionality.
 /// - `position`: The Vector3 the Model is moved to.
-@target(luau)
 @luau.method("MoveTo")
 pub fn move_to(instance: WorldRoot, position: Vector3) -> Nil
 
+@target(luau)
 /// Makes this model no longer persistent for the specified player. ModelStreamingMode must be set to PersistentPerPlayer for behavior to be changed as a result of removal.
 ///
 /// Roblox: `Model.RemovePersistentPlayer`
@@ -357,10 +415,13 @@ pub fn move_to(instance: WorldRoot, position: Vector3) -> Nil
 /// Parameters:
 /// - `instance`: Models are container objects, meaning they group objects together. They are best used to hold collections of BaseParts and have a number of functions that extend their functionality.
 /// - `playerInstance`: The Player to make this model no longer persistent for.
-@target(luau)
 @luau.method("RemovePersistentPlayer")
-pub fn remove_persistent_player(instance: WorldRoot, player_instance: Player) -> Nil
+pub fn remove_persistent_player(
+  instance: WorldRoot,
+  player_instance: Player,
+) -> Nil
 
+@target(luau)
 /// Sets the scale factor of the model, adjusting the sizing and location of all descendant Instances such that they have that scale factor relative to their initial sizes and locations when scale factor was 1.
 ///
 /// Roblox: `Model.ScaleTo`
@@ -369,10 +430,10 @@ pub fn remove_persistent_player(instance: WorldRoot, player_instance: Player) ->
 ///
 /// Parameters:
 /// - `instance`: Models are container objects, meaning they group objects together. They are best used to hold collections of BaseParts and have a number of functions that extend their functionality.
-@target(luau)
 @luau.method("ScaleTo")
 pub fn scale_to(instance: WorldRoot, new_scale_factor: Float) -> Nil
 
+@target(luau)
 /// Shifts a Model by the given Vector3 offset, preserving the model's orientation. If another BasePart or Terrain already exists at the new position then the Model will overlap said object.
 ///
 /// Roblox: `Model.TranslateBy`
@@ -382,10 +443,10 @@ pub fn scale_to(instance: WorldRoot, new_scale_factor: Float) -> Nil
 /// Parameters:
 /// - `instance`: Models are container objects, meaning they group objects together. They are best used to hold collections of BaseParts and have a number of functions that extend their functionality.
 /// - `delta`: The Vector3 to translate the Model by.
-@target(luau)
 @luau.method("TranslateBy")
 pub fn translate_by(instance: WorldRoot, delta: Vector3) -> Nil
 
+@target(luau)
 /// Gets the pivot of a PVInstance.
 ///
 /// Roblox: `PVInstance.GetPivot`
@@ -394,10 +455,10 @@ pub fn translate_by(instance: WorldRoot, delta: Vector3) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Abstract class for all objects that have a physical location in the world.
-@target(luau)
 @luau.method("GetPivot")
 pub fn get_pivot(instance: WorldRoot) -> CFrame
 
+@target(luau)
 /// Transforms the PVInstance along with all of its descendant PVInstances such that the pivot is now located at the specified CFrame.
 ///
 /// Roblox: `PVInstance.PivotTo`
@@ -407,10 +468,10 @@ pub fn get_pivot(instance: WorldRoot) -> CFrame
 /// Parameters:
 /// - `instance`: Abstract class for all objects that have a physical location in the world.
 /// - `targetCFrame`: The CFrame that the PVInstance pivot should equal after moving it.
-@target(luau)
 @luau.method("PivotTo")
 pub fn pivot_to(instance: WorldRoot, target_cframe: CFrame) -> Nil
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -418,10 +479,10 @@ pub fn pivot_to(instance: WorldRoot, target_cframe: CFrame) -> Nil
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: WorldRoot) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -429,10 +490,10 @@ pub fn get_archivable(instance: WorldRoot) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: WorldRoot, value: Bool) -> WorldRoot
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -440,10 +501,10 @@ pub fn set_archivable(instance: WorldRoot, value: Bool) -> WorldRoot
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: WorldRoot) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -451,10 +512,13 @@ pub fn get_capabilities(instance: WorldRoot) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: WorldRoot, value: SecurityCapabilities) -> WorldRoot
+pub fn set_capabilities(
+  instance: WorldRoot,
+  value: SecurityCapabilities,
+) -> WorldRoot
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -462,10 +526,10 @@ pub fn set_capabilities(instance: WorldRoot, value: SecurityCapabilities) -> Wor
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: WorldRoot) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -473,10 +537,10 @@ pub fn get_name(instance: WorldRoot) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: WorldRoot, value: String) -> WorldRoot
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -485,10 +549,10 @@ pub fn set_name(instance: WorldRoot, value: String) -> WorldRoot
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: WorldRoot) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -497,10 +561,10 @@ pub fn get_parent(instance: WorldRoot) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: WorldRoot, value: parent) -> WorldRoot
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -509,10 +573,10 @@ pub fn set_parent(instance: WorldRoot, value: parent) -> WorldRoot
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: WorldRoot) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -521,10 +585,10 @@ pub fn get_roblox_locked(instance: WorldRoot) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: WorldRoot) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -533,20 +597,20 @@ pub fn get_sandboxed(instance: WorldRoot) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: WorldRoot, value: Bool) -> WorldRoot
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: WorldRoot) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -555,10 +619,10 @@ pub fn get_source_asset_id(instance: WorldRoot) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: WorldRoot) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -567,10 +631,10 @@ pub fn get_unique_id(instance: WorldRoot) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: WorldRoot, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -579,10 +643,10 @@ pub fn add_tag(instance: WorldRoot, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: WorldRoot) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -591,10 +655,10 @@ pub fn clear_all_children(instance: WorldRoot) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: WorldRoot) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -603,10 +667,10 @@ pub fn clone(instance: WorldRoot) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: WorldRoot) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -619,10 +683,13 @@ pub fn destroy_instance(instance: WorldRoot) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: WorldRoot, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: WorldRoot,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -635,10 +702,13 @@ pub fn find_first_ancestor(instance: WorldRoot, name: String) -> Option(Instance
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: WorldRoot, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: WorldRoot,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -651,10 +721,13 @@ pub fn find_first_ancestor_of_class(instance: WorldRoot, class_name: String) -> 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: WorldRoot, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: WorldRoot,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -668,10 +741,14 @@ pub fn find_first_ancestor_which_is_a(instance: WorldRoot, class_name: String) -
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: WorldRoot, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: WorldRoot,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -684,10 +761,13 @@ pub fn find_first_child(instance: WorldRoot, name: String, recursive: Bool) -> O
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: WorldRoot, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: WorldRoot,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -701,10 +781,14 @@ pub fn find_first_child_of_class(instance: WorldRoot, class_name: String) -> Opt
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: WorldRoot, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: WorldRoot,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -717,10 +801,13 @@ pub fn find_first_child_which_is_a(instance: WorldRoot, class_name: String, recu
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: WorldRoot, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: WorldRoot,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -732,10 +819,10 @@ pub fn find_first_descendant(instance: WorldRoot, name: String) -> Option(Instan
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: WorldRoot) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -748,10 +835,10 @@ pub fn get_actor(instance: WorldRoot) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: WorldRoot, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -764,10 +851,13 @@ pub fn get_attribute(instance: WorldRoot, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: WorldRoot, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: WorldRoot,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -780,10 +870,10 @@ pub fn get_attribute_changed_signal(instance: WorldRoot, attribute: String) -> R
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: WorldRoot) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -795,10 +885,10 @@ pub fn get_attributes(instance: WorldRoot) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: WorldRoot) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -811,10 +901,10 @@ pub fn get_children(instance: WorldRoot) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: WorldRoot) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -826,10 +916,10 @@ pub fn get_descendants(instance: WorldRoot) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: WorldRoot) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -843,10 +933,14 @@ pub fn get_full_name(instance: WorldRoot) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: WorldRoot, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: WorldRoot,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -857,10 +951,13 @@ pub fn get_styled(instance: WorldRoot, name: String, selector: Option(String)) -
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: WorldRoot, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: WorldRoot,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -869,10 +966,10 @@ pub fn get_styled_property_changed_signal(instance: WorldRoot, property: String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: WorldRoot) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -881,10 +978,10 @@ pub fn get_tags(instance: WorldRoot) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: WorldRoot, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -897,10 +994,10 @@ pub fn has_tag(instance: WorldRoot, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: WorldRoot, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -913,10 +1010,10 @@ pub fn is_ancestor_of(instance: WorldRoot, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: WorldRoot, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -929,10 +1026,10 @@ pub fn is_descendant_of(instance: WorldRoot, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: WorldRoot, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -944,10 +1041,13 @@ pub fn is_property_modified(instance: WorldRoot, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: WorldRoot, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: WorldRoot,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -956,10 +1056,10 @@ pub fn query_descendants(instance: WorldRoot, selector: String) -> List(Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: WorldRoot, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -969,10 +1069,10 @@ pub fn remove_tag(instance: WorldRoot, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
 pub fn reset_property_to_default(instance: WorldRoot, property: String) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -983,10 +1083,14 @@ pub fn reset_property_to_default(instance: WorldRoot, property: String) -> Nil
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: WorldRoot, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: WorldRoot,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -1001,19 +1105,25 @@ pub fn set_attribute(instance: WorldRoot, attribute: String, value: Dynamic) -> 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: WorldRoot, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: WorldRoot,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: WorldRoot) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: WorldRoot,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -1021,19 +1131,24 @@ pub fn ancestry_changed(instance: WorldRoot) -> RBXScriptSignal(fn(Instance, Ins
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: WorldRoot, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: WorldRoot,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: WorldRoot) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: WorldRoot,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -1041,19 +1156,22 @@ pub fn attribute_changed(instance: WorldRoot) -> RBXScriptSignal(fn(String) -> N
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: WorldRoot, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: WorldRoot,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
 pub fn child_added(instance: WorldRoot) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -1061,19 +1179,24 @@ pub fn child_added(instance: WorldRoot) -> RBXScriptSignal(fn(Instance) -> Nil)
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: WorldRoot, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: WorldRoot,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: WorldRoot) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: WorldRoot,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -1081,19 +1204,24 @@ pub fn child_removed(instance: WorldRoot) -> RBXScriptSignal(fn(Instance) -> Nil
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: WorldRoot, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: WorldRoot,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: WorldRoot) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: WorldRoot,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -1101,19 +1229,24 @@ pub fn descendant_added(instance: WorldRoot) -> RBXScriptSignal(fn(Instance) -> 
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: WorldRoot, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: WorldRoot,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: WorldRoot) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: WorldRoot,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -1121,19 +1254,22 @@ pub fn descendant_removing(instance: WorldRoot) -> RBXScriptSignal(fn(Instance) 
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: WorldRoot, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: WorldRoot,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: WorldRoot) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1141,19 +1277,24 @@ pub fn destroying(instance: WorldRoot) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: WorldRoot, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: WorldRoot,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: WorldRoot) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: WorldRoot,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1161,10 +1302,13 @@ pub fn styled_properties_changed(instance: WorldRoot) -> RBXScriptSignal(fn() ->
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: WorldRoot, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: WorldRoot,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1173,10 +1317,10 @@ pub fn on_styled_properties_changed(instance: WorldRoot, callback: fn() -> Nil) 
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: WorldRoot) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1189,10 +1333,13 @@ pub fn get_class_name(instance: WorldRoot) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: WorldRoot, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: WorldRoot,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1206,19 +1353,19 @@ pub fn get_property_changed_signal(instance: WorldRoot, property: String) -> RBX
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: WorldRoot, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: WorldRoot) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1226,12 +1373,38 @@ pub fn changed(instance: WorldRoot) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: WorldRoot, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: WorldRoot,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: CFrame, _: Vector3, _: Player, _: BasePart, _: ModelStreamingMode, _: ModelLevelOfDetail, _: OptionRaycastResult, _: RaycastParams, _: OverlapParams, _: BulkMoveMode, _: WorldRoot, _: Model, _: PVInstance, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: CFrame,
+  _: Vector3,
+  _: Player,
+  _: BasePart,
+  _: ModelStreamingMode,
+  _: ModelLevelOfDetail,
+  _: OptionRaycastResult,
+  _: RaycastParams,
+  _: OverlapParams,
+  _: BulkMoveMode,
+  _: WorldRoot,
+  _: Model,
+  _: PVInstance,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

@@ -2,44 +2,43 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type SpecialKey}
 
+@target(luau)
 /// Gets the Roblox `SpecialKey` enum object.
 ///
 /// Roblox: `Enum.SpecialKey`
 /// See: https://create.roblox.com/docs/reference/engine/enums/SpecialKey
-@target(luau)
 @luau.global("Enum.SpecialKey")
 pub fn roblox_enum() -> RobloxEnum(SpecialKey)
 
-/// Roblox enum item `SpecialKey.Insert`.
 @target(luau)
+/// Roblox enum item `SpecialKey.Insert`.
 @luau.global("Enum.SpecialKey.Insert")
 pub fn insert() -> SpecialKey
 
-/// Roblox enum item `SpecialKey.Home`.
 @target(luau)
+/// Roblox enum item `SpecialKey.Home`.
 @luau.global("Enum.SpecialKey.Home")
 pub fn home() -> SpecialKey
 
-/// Roblox enum item `SpecialKey.End`.
 @target(luau)
+/// Roblox enum item `SpecialKey.End`.
 @luau.global("Enum.SpecialKey.End")
 pub fn end() -> SpecialKey
 
-/// Roblox enum item `SpecialKey.PageUp`.
 @target(luau)
+/// Roblox enum item `SpecialKey.PageUp`.
 @luau.global("Enum.SpecialKey.PageUp")
 pub fn page_up() -> SpecialKey
 
-/// Roblox enum item `SpecialKey.PageDown`.
 @target(luau)
+/// Roblox enum item `SpecialKey.PageDown`.
 @luau.global("Enum.SpecialKey.PageDown")
 pub fn page_down() -> SpecialKey
 
-/// Roblox enum item `SpecialKey.ChatHotkey`.
 @target(luau)
+/// Roblox enum item `SpecialKey.ChatHotkey`.
 @luau.global("Enum.SpecialKey.ChatHotkey")
 pub fn chat_hotkey() -> SpecialKey
-
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(_: RobloxEnum(SpecialKey), _: SpecialKey) -> Nil {

@@ -1,29 +1,33 @@
 // Generated declarative builders for Roblox `Animator` instances.
-import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/animator
+import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/types.{type Animator, type Instance, type SecurityCapabilities}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: Animator) -> Instance
 
-/// Creates a declarative Roblox `Animator` node.
 @target(luau)
-pub fn node(properties: List(Property(Animator)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `Animator` node.
+pub fn node(
+  properties: List(Property(Animator)),
+  children: List(Node),
+) -> Node {
   let instance = apply(animator.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Animator.PreferLodEnabled` on `Animator` nodes.
 ///
 /// Roblox: `Animator.PreferLodEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Animator#PreferLodEnabled
-@target(luau)
 pub fn prefer_lod_enabled(value: Bool) -> Property(Animator) {
   Property(fn(instance) { animator.set_prefer_lod_enabled(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `Animator` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -31,11 +35,11 @@ pub fn prefer_lod_enabled(value: Bool) -> Property(Animator) {
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(Animator) {
   Property(fn(instance) { animator.set_archivable(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `Animator` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -43,11 +47,11 @@ pub fn archivable(value: Bool) -> Property(Animator) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 pub fn capabilities(value: SecurityCapabilities) -> Property(Animator) {
   Property(fn(instance) { animator.set_capabilities(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `Animator` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -55,11 +59,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(Animator) {
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(Animator) {
   Property(fn(instance) { animator.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `Animator` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -68,11 +72,11 @@ pub fn name(value: String) -> Property(Animator) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(Animator) {
   Property(fn(instance) { animator.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `Animator` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -81,13 +85,15 @@ pub fn parent(value: Instance) -> Property(Animator) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(Animator) {
   Property(fn(instance) { animator.set_sandboxed(instance, value) })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: Animator) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: Animator,
+) -> Nil {
   Nil
 }

@@ -2,26 +2,28 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type SandboxedInstanceMode}
 
+@target(luau)
 /// Controls whether sandboxed instance mode (script capabilities) is enabled.
 ///
 /// Roblox: `Enum.SandboxedInstanceMode`
 /// See: https://create.roblox.com/docs/reference/engine/enums/SandboxedInstanceMode
-@target(luau)
 @luau.global("Enum.SandboxedInstanceMode")
 pub fn roblox_enum() -> RobloxEnum(SandboxedInstanceMode)
 
-/// Roblox enum item `SandboxedInstanceMode.Default`.
 @target(luau)
+/// Roblox enum item `SandboxedInstanceMode.Default`.
 @luau.global("Enum.SandboxedInstanceMode.Default")
 pub fn default() -> SandboxedInstanceMode
 
-/// Roblox enum item `SandboxedInstanceMode.Experimental`.
 @target(luau)
+/// Roblox enum item `SandboxedInstanceMode.Experimental`.
 @luau.global("Enum.SandboxedInstanceMode.Experimental")
 pub fn experimental() -> SandboxedInstanceMode
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(SandboxedInstanceMode), _: SandboxedInstanceMode) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(SandboxedInstanceMode),
+  _: SandboxedInstanceMode,
+) -> Nil {
   Nil
 }

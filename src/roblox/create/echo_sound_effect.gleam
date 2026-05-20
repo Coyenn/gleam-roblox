@@ -1,19 +1,25 @@
 // Generated declarative builders for Roblox `EchoSoundEffect` instances.
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/echo_sound_effect
-import roblox/types.{type EchoSoundEffect, type Instance, type SecurityCapabilities}
+import roblox/types.{
+  type EchoSoundEffect, type Instance, type SecurityCapabilities,
+}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: EchoSoundEffect) -> Instance
 
-/// Creates a declarative Roblox `EchoSoundEffect` node.
 @target(luau)
-pub fn node(properties: List(Property(EchoSoundEffect)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `EchoSoundEffect` node.
+pub fn node(
+  properties: List(Property(EchoSoundEffect)),
+  children: List(Node),
+) -> Node {
   let instance = apply(echo_sound_effect.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `EchoSoundEffect.Delay` on `EchoSoundEffect` nodes.
 ///
 /// The amount of time between echoes.
@@ -21,11 +27,11 @@ pub fn node(properties: List(Property(EchoSoundEffect)), children: List(Node)) -
 /// Roblox: `EchoSoundEffect.Delay`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/EchoSoundEffect#Delay
-@target(luau)
 pub fn delay(value: Float) -> Property(EchoSoundEffect) {
   Property(fn(instance) { echo_sound_effect.set_delay(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `EchoSoundEffect.DryLevel` on `EchoSoundEffect` nodes.
 ///
 /// The output volume of the original sound.
@@ -33,11 +39,11 @@ pub fn delay(value: Float) -> Property(EchoSoundEffect) {
 /// Roblox: `EchoSoundEffect.DryLevel`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/EchoSoundEffect#DryLevel
-@target(luau)
 pub fn dry_level(value: Float) -> Property(EchoSoundEffect) {
   Property(fn(instance) { echo_sound_effect.set_dry_level(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `EchoSoundEffect.Feedback` on `EchoSoundEffect` nodes.
 ///
 /// The echo decay every time the echo plays.
@@ -45,11 +51,11 @@ pub fn dry_level(value: Float) -> Property(EchoSoundEffect) {
 /// Roblox: `EchoSoundEffect.Feedback`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/EchoSoundEffect#Feedback
-@target(luau)
 pub fn feedback(value: Float) -> Property(EchoSoundEffect) {
   Property(fn(instance) { echo_sound_effect.set_feedback(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `EchoSoundEffect.WetLevel` on `EchoSoundEffect` nodes.
 ///
 /// The output volume of the echoed effect.
@@ -57,11 +63,11 @@ pub fn feedback(value: Float) -> Property(EchoSoundEffect) {
 /// Roblox: `EchoSoundEffect.WetLevel`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/EchoSoundEffect#WetLevel
-@target(luau)
 pub fn wet_level(value: Float) -> Property(EchoSoundEffect) {
   Property(fn(instance) { echo_sound_effect.set_wet_level(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `SoundEffect.Enabled` on `EchoSoundEffect` nodes.
 ///
 /// Toggles the effect on and off.
@@ -69,11 +75,11 @@ pub fn wet_level(value: Float) -> Property(EchoSoundEffect) {
 /// Roblox: `SoundEffect.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundEffect#Enabled
-@target(luau)
 pub fn enabled(value: Bool) -> Property(EchoSoundEffect) {
   Property(fn(instance) { echo_sound_effect.set_enabled(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `SoundEffect.Priority` on `EchoSoundEffect` nodes.
 ///
 /// Determines the order the effect will be applied in relation to other effects.
@@ -81,11 +87,11 @@ pub fn enabled(value: Bool) -> Property(EchoSoundEffect) {
 /// Roblox: `SoundEffect.Priority`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundEffect#Priority
-@target(luau)
 pub fn priority(value: Int) -> Property(EchoSoundEffect) {
   Property(fn(instance) { echo_sound_effect.set_priority(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `EchoSoundEffect` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -93,11 +99,11 @@ pub fn priority(value: Int) -> Property(EchoSoundEffect) {
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(EchoSoundEffect) {
   Property(fn(instance) { echo_sound_effect.set_archivable(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `EchoSoundEffect` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -105,11 +111,11 @@ pub fn archivable(value: Bool) -> Property(EchoSoundEffect) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 pub fn capabilities(value: SecurityCapabilities) -> Property(EchoSoundEffect) {
   Property(fn(instance) { echo_sound_effect.set_capabilities(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `EchoSoundEffect` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -117,11 +123,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(EchoSoundEffect) {
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(EchoSoundEffect) {
   Property(fn(instance) { echo_sound_effect.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `EchoSoundEffect` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -130,11 +136,11 @@ pub fn name(value: String) -> Property(EchoSoundEffect) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(EchoSoundEffect) {
   Property(fn(instance) { echo_sound_effect.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `EchoSoundEffect` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -143,13 +149,15 @@ pub fn parent(value: Instance) -> Property(EchoSoundEffect) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(EchoSoundEffect) {
   Property(fn(instance) { echo_sound_effect.set_sandboxed(instance, value) })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: EchoSoundEffect) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: EchoSoundEffect,
+) -> Nil {
   Nil
 }

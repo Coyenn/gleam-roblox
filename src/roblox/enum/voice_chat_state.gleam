@@ -2,51 +2,53 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type VoiceChatState}
 
+@target(luau)
 /// Gets the Roblox `VoiceChatState` enum object.
 ///
 /// Roblox: `Enum.VoiceChatState`
 /// See: https://create.roblox.com/docs/reference/engine/enums/VoiceChatState
-@target(luau)
 @luau.global("Enum.VoiceChatState")
 pub fn roblox_enum() -> RobloxEnum(VoiceChatState)
 
-/// Roblox enum item `VoiceChatState.Idle`.
 @target(luau)
+/// Roblox enum item `VoiceChatState.Idle`.
 @luau.global("Enum.VoiceChatState.Idle")
 pub fn idle() -> VoiceChatState
 
-/// Roblox enum item `VoiceChatState.Joining`.
 @target(luau)
+/// Roblox enum item `VoiceChatState.Joining`.
 @luau.global("Enum.VoiceChatState.Joining")
 pub fn joining() -> VoiceChatState
 
-/// Roblox enum item `VoiceChatState.JoiningRetry`.
 @target(luau)
+/// Roblox enum item `VoiceChatState.JoiningRetry`.
 @luau.global("Enum.VoiceChatState.JoiningRetry")
 pub fn joining_retry() -> VoiceChatState
 
-/// Roblox enum item `VoiceChatState.Joined`.
 @target(luau)
+/// Roblox enum item `VoiceChatState.Joined`.
 @luau.global("Enum.VoiceChatState.Joined")
 pub fn joined() -> VoiceChatState
 
-/// Roblox enum item `VoiceChatState.Leaving`.
 @target(luau)
+/// Roblox enum item `VoiceChatState.Leaving`.
 @luau.global("Enum.VoiceChatState.Leaving")
 pub fn leaving() -> VoiceChatState
 
-/// Roblox enum item `VoiceChatState.Ended`.
 @target(luau)
+/// Roblox enum item `VoiceChatState.Ended`.
 @luau.global("Enum.VoiceChatState.Ended")
 pub fn ended() -> VoiceChatState
 
-/// Roblox enum item `VoiceChatState.Failed`.
 @target(luau)
+/// Roblox enum item `VoiceChatState.Failed`.
 @luau.global("Enum.VoiceChatState.Failed")
 pub fn failed() -> VoiceChatState
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(VoiceChatState), _: VoiceChatState) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(VoiceChatState),
+  _: VoiceChatState,
+) -> Nil {
   Nil
 }

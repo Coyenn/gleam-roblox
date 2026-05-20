@@ -2,46 +2,48 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type ShowAdResult}
 
+@target(luau)
 /// Gets the Roblox `ShowAdResult` enum object.
 ///
 /// Roblox: `Enum.ShowAdResult`
 /// See: https://create.roblox.com/docs/reference/engine/enums/ShowAdResult
-@target(luau)
 @luau.global("Enum.ShowAdResult")
 pub fn roblox_enum() -> RobloxEnum(ShowAdResult)
 
-/// Roblox enum item `ShowAdResult.ShowCompleted`.
 @target(luau)
+/// Roblox enum item `ShowAdResult.ShowCompleted`.
 @luau.global("Enum.ShowAdResult.ShowCompleted")
 pub fn show_completed() -> ShowAdResult
 
-/// Roblox enum item `ShowAdResult.AdNotReady`.
 @target(luau)
+/// Roblox enum item `ShowAdResult.AdNotReady`.
 @luau.global("Enum.ShowAdResult.AdNotReady")
 pub fn ad_not_ready() -> ShowAdResult
 
-/// Roblox enum item `ShowAdResult.AdAlreadyShowing`.
 @target(luau)
+/// Roblox enum item `ShowAdResult.AdAlreadyShowing`.
 @luau.global("Enum.ShowAdResult.AdAlreadyShowing")
 pub fn ad_already_showing() -> ShowAdResult
 
-/// Roblox enum item `ShowAdResult.InternalError`.
 @target(luau)
+/// Roblox enum item `ShowAdResult.InternalError`.
 @luau.global("Enum.ShowAdResult.InternalError")
 pub fn internal_error() -> ShowAdResult
 
-/// Roblox enum item `ShowAdResult.ShowInterrupted`.
 @target(luau)
+/// Roblox enum item `ShowAdResult.ShowInterrupted`.
 @luau.global("Enum.ShowAdResult.ShowInterrupted")
 pub fn show_interrupted() -> ShowAdResult
 
-/// Roblox enum item `ShowAdResult.InsufficientMemory`.
 @target(luau)
+/// Roblox enum item `ShowAdResult.InsufficientMemory`.
 @luau.global("Enum.ShowAdResult.InsufficientMemory")
 pub fn insufficient_memory() -> ShowAdResult
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(ShowAdResult), _: ShowAdResult) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(ShowAdResult),
+  _: ShowAdResult,
+) -> Nil {
   Nil
 }

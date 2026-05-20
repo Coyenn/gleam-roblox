@@ -1,19 +1,26 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type AssetTypeVerification, type BanHistoryPages, type FriendPages, type HumanoidDescription, type HumanoidRigType, type Instance, type Model, type Object, type OptionDouble, type OptionInt64, type Player, type PlayerExitReason, type Players, type SecurityCapabilities, type ThumbnailSize, type ThumbnailType, type UniqueId}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type AssetTypeVerification, type BanHistoryPages, type FriendPages,
+  type HumanoidDescription, type HumanoidRigType, type Instance, type Model,
+  type Object, type OptionDouble, type OptionInt64, type Player,
+  type PlayerExitReason, type Players, type SecurityCapabilities,
+  type ThumbnailSize, type ThumbnailType, type UniqueId,
+}
 
-/// Treats `Players` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `Players` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Players) -> Instance
 
-/// Treats `Players` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `Players` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: Players) -> Object
 
+@target(luau)
 /// Gets Roblox property `Players.BubbleChat`.
 ///
 /// Indicates whether or not bubble chat is enabled. It is set with the Players:SetChatStyle() method.
@@ -22,10 +29,10 @@ pub fn as_object(instance: Players) -> Object
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#BubbleChat
-@target(luau)
 @luau.property("BubbleChat")
 pub fn get_bubble_chat(instance: Players) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Players.CharacterAutoLoads`.
 ///
 /// Indicates whether characters will respawn automatically.
@@ -34,10 +41,10 @@ pub fn get_bubble_chat(instance: Players) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#CharacterAutoLoads
-@target(luau)
 @luau.property("CharacterAutoLoads")
 pub fn get_character_auto_loads(instance: Players) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Players.CharacterAutoLoads`.
 ///
 /// Indicates whether characters will respawn automatically.
@@ -46,10 +53,10 @@ pub fn get_character_auto_loads(instance: Players) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#CharacterAutoLoads
-@target(luau)
 @luau.set_property("CharacterAutoLoads")
 pub fn set_character_auto_loads(instance: Players, value: Bool) -> Players
 
+@target(luau)
 /// Gets Roblox property `Players.ClassicChat`.
 ///
 /// Indicates whether or not classic chat is enabled; set by the Players:SetChatStyle() method.
@@ -58,10 +65,10 @@ pub fn set_character_auto_loads(instance: Players, value: Bool) -> Players
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#ClassicChat
-@target(luau)
 @luau.property("ClassicChat")
 pub fn get_classic_chat(instance: Players) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Players.LocalPlayer`.
 ///
 /// The Player that the LocalScript is running for.
@@ -70,10 +77,10 @@ pub fn get_classic_chat(instance: Players) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#LocalPlayer
-@target(luau)
 @luau.property("LocalPlayer")
 pub fn get_local_player(instance: Players) -> Player
 
+@target(luau)
 /// Gets Roblox property `Players.MaxPlayers`.
 ///
 /// The maximum number of players that can be in a server.
@@ -82,20 +89,20 @@ pub fn get_local_player(instance: Players) -> Player
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#MaxPlayers
-@target(luau)
 @luau.property("MaxPlayers")
 pub fn get_max_players(instance: Players) -> Int
 
+@target(luau)
 /// Gets Roblox property `Players.MaxPlayersInternal`.
 ///
 /// Roblox: `Players.MaxPlayersInternal`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#MaxPlayersInternal
-@target(luau)
 @luau.property("MaxPlayersInternal")
 pub fn get_max_players_internal(instance: Players) -> Int
 
+@target(luau)
 /// Gets Roblox property `Players.PreferredPlayers`.
 ///
 /// The preferred number of players for a server.
@@ -104,20 +111,20 @@ pub fn get_max_players_internal(instance: Players) -> Int
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#PreferredPlayers
-@target(luau)
 @luau.property("PreferredPlayers")
 pub fn get_preferred_players(instance: Players) -> Int
 
+@target(luau)
 /// Gets Roblox property `Players.PreferredPlayersInternal`.
 ///
 /// Roblox: `Players.PreferredPlayersInternal`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#PreferredPlayersInternal
-@target(luau)
 @luau.property("PreferredPlayersInternal")
 pub fn get_preferred_players_internal(instance: Players) -> Int
 
+@target(luau)
 /// Gets Roblox property `Players.RespawnTime`.
 ///
 /// Controls the amount of time taken for a players character to respawn.
@@ -125,10 +132,10 @@ pub fn get_preferred_players_internal(instance: Players) -> Int
 /// Roblox: `Players.RespawnTime`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#RespawnTime
-@target(luau)
 @luau.property("RespawnTime")
 pub fn get_respawn_time(instance: Players) -> Float
 
+@target(luau)
 /// Sets Roblox property `Players.RespawnTime`.
 ///
 /// Controls the amount of time taken for a players character to respawn.
@@ -136,10 +143,10 @@ pub fn get_respawn_time(instance: Players) -> Float
 /// Roblox: `Players.RespawnTime`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#RespawnTime
-@target(luau)
 @luau.set_property("RespawnTime")
 pub fn set_respawn_time(instance: Players, value: Float) -> Players
 
+@target(luau)
 /// Returns the Player with the given UserId if they are in-experience.
 ///
 /// Roblox: `Players.GetPlayerByUserId`
@@ -149,10 +156,10 @@ pub fn set_respawn_time(instance: Players, value: Float) -> Players
 /// Parameters:
 /// - `instance`: A service that contains presently connected Player objects.
 /// - `userId`: The Player.UserId of the player being specified.
-@target(luau)
 @luau.method("GetPlayerByUserId")
 pub fn get_player_by_user_id(instance: Players, user_id: OptionInt64) -> Player
 
+@target(luau)
 /// Returns the Player whose Player.Character matches the given instance, or nil if one cannot be found.
 ///
 /// Roblox: `Players.GetPlayerFromCharacter`
@@ -162,10 +169,10 @@ pub fn get_player_by_user_id(instance: Players, user_id: OptionInt64) -> Player
 /// Parameters:
 /// - `instance`: A service that contains presently connected Player objects.
 /// - `character`: A character instance that you want to get the player from.
-@target(luau)
 @luau.method("GetPlayerFromCharacter")
 pub fn get_player_from_character(instance: Players, character: Model) -> Player
 
+@target(luau)
 /// Returns a table of all presently connected Player objects.
 ///
 /// Roblox: `Players.GetPlayers`
@@ -177,17 +184,24 @@ pub fn get_player_from_character(instance: Players, character: Model) -> Player
 ///
 /// Returns:
 /// - A table containing all the players in the server.
-@target(luau)
 @luau.method("GetPlayers")
 pub fn get_players(instance: Players) -> List(Instance)
 
 pub type BanConfig
 
-/// Creates a Roblox `BanConfig` config table.
 @target(luau)
+/// Creates a Roblox `BanConfig` config table.
 @luau.global("(function(user_ids, apply_to_universe, duration, display_reason, private_reason, exclude_alt_accounts) local config = { UserIds = user_ids, Duration = duration, DisplayReason = display_reason, PrivateReason = private_reason }; if apply_to_universe.tag == \"Some\" then config.ApplyToUniverse = apply_to_universe.arg_0 end; if exclude_alt_accounts.tag == \"Some\" then config.ExcludeAltAccounts = exclude_alt_accounts.arg_0 end; return config end)")
-pub fn ban_config(user_ids: List(Int), apply_to_universe: Option(Bool), duration: Int, display_reason: String, private_reason: String, exclude_alt_accounts: Option(Bool)) -> BanConfig
+pub fn ban_config(
+  user_ids: List(Int),
+  apply_to_universe: Option(Bool),
+  duration: Int,
+  display_reason: String,
+  private_reason: String,
+  exclude_alt_accounts: Option(Bool),
+) -> BanConfig
 
+@target(luau)
 /// Bans users from your experience, with options to specify duration, reason, whether the ban applies to the entire universe or just the current place, and more. This method is enabled and disabled by the Players.BanningEnabled property, which you can toggle in Studio.
 ///
 /// Roblox: `Players.BanAsync`
@@ -198,10 +212,10 @@ pub fn ban_config(user_ids: List(Int), apply_to_universe: Option(Bool), duration
 /// Parameters:
 /// - `instance`: A service that contains presently connected Player objects.
 /// - `config`: UserIds (required; array) — Array of UserIds of players to be banned. Max size is 50. ApplyToUniverse (optional; boolean) — Whether ban propagates to all places within the experience universe. Default is true. Duration (required; integer) — Duration of the ban, in seconds. Permanent bans should have a value of -1. 0 and all other negative values are invalid. DisplayReason (required; string) — The message that will be displayed to users when they attempt to and fail to join an experience. Maximum string length is 400. PrivateReason (required; string) — Internal messaging that will be returned when querying the user's ban history. Maximum string length is 1000. ExcludeAltAccounts (optional; boolean) — When true, Roblox does not attempt to ban alt accounts. Default is false.
-@target(luau)
 @luau.method("BanAsync")
 pub fn ban_async(instance: Players, config: BanConfig) -> Nil
 
+@target(luau)
 /// Returns a character Model equipped with everything specified in the passed in HumanoidDescription. If UseAvatarSettings is set to true, Avatar Settings in the experience will be applied to the returned model.
 ///
 /// Roblox: `Players.CreateHumanoidModelFromDescriptionAsync`
@@ -217,10 +231,15 @@ pub fn ban_async(instance: Players, config: BanConfig) -> Nil
 ///
 /// Returns:
 /// - A Humanoid character Model.
-@target(luau)
 @luau.method("CreateHumanoidModelFromDescriptionAsync")
-pub fn create_humanoid_model_from_description_async(instance: Players, description: HumanoidDescription, rig_type: HumanoidRigType, asset_type_verification: AssetTypeVerification) -> Model
+pub fn create_humanoid_model_from_description_async(
+  instance: Players,
+  description: HumanoidDescription,
+  rig_type: HumanoidRigType,
+  asset_type_verification: AssetTypeVerification,
+) -> Model
 
+@target(luau)
 /// Returns a character Model set-up with everything equipped to match the avatar of the user specified by the passed in userId.
 ///
 /// Roblox: `Players.CreateHumanoidModelFromUserIdAsync`
@@ -234,10 +253,13 @@ pub fn create_humanoid_model_from_description_async(instance: Players, descripti
 ///
 /// Returns:
 /// - A Humanoid character Model.
-@target(luau)
 @luau.method("CreateHumanoidModelFromUserIdAsync")
-pub fn create_humanoid_model_from_user_id_async(instance: Players, user_id: OptionInt64) -> Model
+pub fn create_humanoid_model_from_user_id_async(
+  instance: Players,
+  user_id: OptionInt64,
+) -> Model
 
+@target(luau)
 /// Retrieves the ban and unban history of any user within the experience's universe. This method is enabled and disabled by the Players.BanningEnabled property, which you can toggle in Studio.
 ///
 /// Roblox: `Players.GetBanHistoryAsync`
@@ -250,10 +272,13 @@ pub fn create_humanoid_model_from_user_id_async(instance: Players, user_id: Opti
 ///
 /// Returns:
 /// - See BanHistoryPages for return reference.
-@target(luau)
 @luau.method("GetBanHistoryAsync")
-pub fn get_ban_history_async(instance: Players, user_id: OptionInt64) -> BanHistoryPages
+pub fn get_ban_history_async(
+  instance: Players,
+  user_id: OptionInt64,
+) -> BanHistoryPages
 
+@target(luau)
 /// Returns information about the character appearance of a given user.
 ///
 /// Roblox: `Players.GetCharacterAppearanceInfoAsync`
@@ -267,10 +292,13 @@ pub fn get_ban_history_async(instance: Players, user_id: OptionInt64) -> BanHist
 ///
 /// Returns:
 /// - A dictionary containing information about the character appearance of a given user.
-@target(luau)
 @luau.method("GetCharacterAppearanceInfoAsync")
-pub fn get_character_appearance_info_async(instance: Players, user_id: OptionInt64) -> Dynamic
+pub fn get_character_appearance_info_async(
+  instance: Players,
+  user_id: OptionInt64,
+) -> Dynamic
 
+@target(luau)
 /// Returns a FriendPages object which contains information for all of the given player's friends.
 ///
 /// Roblox: `Players.GetFriendsAsync`
@@ -281,10 +309,10 @@ pub fn get_character_appearance_info_async(instance: Players, user_id: OptionInt
 /// Parameters:
 /// - `instance`: A service that contains presently connected Player objects.
 /// - `userId`: The user ID of the player being specified.
-@target(luau)
 @luau.method("GetFriendsAsync")
 pub fn get_friends_async(instance: Players, user_id: OptionInt64) -> FriendPages
 
+@target(luau)
 /// Returns the HumanoidDescription for a specified outfit, which will be set with the parts/colors/Animations etc of the outfit.
 ///
 /// Roblox: `Players.GetHumanoidDescriptionFromOutfitIdAsync`
@@ -298,10 +326,13 @@ pub fn get_friends_async(instance: Players, user_id: OptionInt64) -> FriendPages
 ///
 /// Returns:
 /// - HumanoidDescription initialized with the specification for the passed in outfitId.
-@target(luau)
 @luau.method("GetHumanoidDescriptionFromOutfitIdAsync")
-pub fn get_humanoid_description_from_outfit_id_async(instance: Players, outfit_id: OptionInt64) -> HumanoidDescription
+pub fn get_humanoid_description_from_outfit_id_async(
+  instance: Players,
+  outfit_id: OptionInt64,
+) -> HumanoidDescription
 
+@target(luau)
 /// Returns a HumanoidDescription which specifies everything equipped for the avatar of the user specified by the passed in userId.
 ///
 /// Roblox: `Players.GetHumanoidDescriptionFromUserIdAsync`
@@ -315,10 +346,13 @@ pub fn get_humanoid_description_from_outfit_id_async(instance: Players, outfit_i
 ///
 /// Returns:
 /// - HumanoidDescription initialized with the passed in user's avatar specification.
-@target(luau)
 @luau.method("GetHumanoidDescriptionFromUserIdAsync")
-pub fn get_humanoid_description_from_user_id_async(instance: Players, user_id: OptionInt64) -> HumanoidDescription
+pub fn get_humanoid_description_from_user_id_async(
+  instance: Players,
+  user_id: OptionInt64,
+) -> HumanoidDescription
 
+@target(luau)
 /// Sends a query to the Roblox website for the username of an account with a given UserId.
 ///
 /// Roblox: `Players.GetNameFromUserIdAsync`
@@ -332,10 +366,13 @@ pub fn get_humanoid_description_from_user_id_async(instance: Players, user_id: O
 ///
 /// Returns:
 /// - The name of a user with the specified Player.UserId.
-@target(luau)
 @luau.method("GetNameFromUserIdAsync")
-pub fn get_name_from_user_id_async(instance: Players, user_id: OptionInt64) -> String
+pub fn get_name_from_user_id_async(
+  instance: Players,
+  user_id: OptionInt64,
+) -> String
 
+@target(luau)
 /// Sends a query to the Roblox website for the userId of an account with a given username.
 ///
 /// Roblox: `Players.GetUserIdFromNameAsync`
@@ -349,10 +386,13 @@ pub fn get_name_from_user_id_async(instance: Players, user_id: OptionInt64) -> S
 ///
 /// Returns:
 /// - The Player.UserId of a user whose name is specified.
-@target(luau)
 @luau.method("GetUserIdFromNameAsync")
-pub fn get_user_id_from_name_async(instance: Players, user_name: String) -> OptionInt64
+pub fn get_user_id_from_name_async(
+  instance: Players,
+  user_name: String,
+) -> OptionInt64
 
+@target(luau)
 /// Returns the content URL of a player thumbnail given the size and type, as well as a boolean describing if the image is ready to use.
 ///
 /// Roblox: `Players.GetUserThumbnailAsync`
@@ -368,17 +408,25 @@ pub fn get_user_id_from_name_async(instance: Players, user_name: String) -> Opti
 ///
 /// Returns:
 /// - A tuple containing the content URL of a user thumbnail based on the specified parameters, and a bool describing if the image is ready to be used or not.
-@target(luau)
 @luau.method("GetUserThumbnailAsync")
-pub fn get_user_thumbnail_async(instance: Players, user_id: OptionInt64, thumbnail_type: ThumbnailType, thumbnail_size: ThumbnailSize) -> Dynamic
+pub fn get_user_thumbnail_async(
+  instance: Players,
+  user_id: OptionInt64,
+  thumbnail_type: ThumbnailType,
+  thumbnail_size: ThumbnailSize,
+) -> Dynamic
 
 pub type UnbanConfig
 
-/// Creates a Roblox `UnbanConfig` config table.
 @target(luau)
+/// Creates a Roblox `UnbanConfig` config table.
 @luau.global("(function(user_ids, apply_to_universe) local config = { UserIds = user_ids }; if apply_to_universe.tag == \"Some\" then config.ApplyToUniverse = apply_to_universe.arg_0 end; return config end)")
-pub fn unban_config(user_ids: List(Int), apply_to_universe: Option(Bool)) -> UnbanConfig
+pub fn unban_config(
+  user_ids: List(Int),
+  apply_to_universe: Option(Bool),
+) -> UnbanConfig
 
+@target(luau)
 /// Unbans players banned from Players:BanAsync() or the User Restrictions Open Cloud API. This method is enabled and disabled by the Players.BanningEnabled property, which you can toggle in Studio.
 ///
 /// Roblox: `Players.UnbanAsync`
@@ -390,19 +438,19 @@ pub fn unban_config(user_ids: List(Int), apply_to_universe: Option(Bool)) -> Unb
 /// - `instance`: A service that contains presently connected Player objects.
 /// - `config`: Name Type Description UserIds array UserIDs to be force allowed into the experience(s).
 /// Max size is 50. ApplyToUniverse boolean Propagates the unban to all places within this universe.
-@target(luau)
 @luau.method("UnbanAsync")
 pub fn unban_async(instance: Players, config: UnbanConfig) -> Nil
 
+@target(luau)
 /// Fires when a player enters the experience.
 ///
 /// Roblox: `Players.PlayerAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#PlayerAdded
-@target(luau)
 @luau.event("PlayerAdded")
 pub fn player_added(instance: Players) -> RBXScriptSignal(fn(Player) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Players.PlayerAdded`.
 ///
 /// Fires when a player enters the experience.
@@ -410,19 +458,24 @@ pub fn player_added(instance: Players) -> RBXScriptSignal(fn(Player) -> Nil)
 /// Roblox: `Players.PlayerAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#PlayerAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.PlayerAdded:Connect(callback) end)")
-pub fn on_player_added(instance: Players, callback: fn(Player) -> Nil) -> RBXScriptConnection
+pub fn on_player_added(
+  instance: Players,
+  callback: fn(Player) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the experience server recognizes that a player's membership has changed.
 ///
 /// Roblox: `Players.PlayerMembershipChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#PlayerMembershipChanged
-@target(luau)
 @luau.event("PlayerMembershipChanged")
-pub fn player_membership_changed(instance: Players) -> RBXScriptSignal(fn(Player) -> Nil)
+pub fn player_membership_changed(
+  instance: Players,
+) -> RBXScriptSignal(fn(Player) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Players.PlayerMembershipChanged`.
 ///
 /// Fires when the experience server recognizes that a player's membership has changed.
@@ -430,19 +483,24 @@ pub fn player_membership_changed(instance: Players) -> RBXScriptSignal(fn(Player
 /// Roblox: `Players.PlayerMembershipChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#PlayerMembershipChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.PlayerMembershipChanged:Connect(callback) end)")
-pub fn on_player_membership_changed(instance: Players, callback: fn(Player) -> Nil) -> RBXScriptConnection
+pub fn on_player_membership_changed(
+  instance: Players,
+  callback: fn(Player) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a player is about to leave the experience.
 ///
 /// Roblox: `Players.PlayerRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#PlayerRemoving
-@target(luau)
 @luau.event("PlayerRemoving")
-pub fn player_removing(instance: Players) -> RBXScriptSignal(fn(Player, PlayerExitReason) -> Nil)
+pub fn player_removing(
+  instance: Players,
+) -> RBXScriptSignal(fn(Player, PlayerExitReason) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Players.PlayerRemoving`.
 ///
 /// Fires when a player is about to leave the experience.
@@ -450,19 +508,24 @@ pub fn player_removing(instance: Players) -> RBXScriptSignal(fn(Player, PlayerEx
 /// Roblox: `Players.PlayerRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#PlayerRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.PlayerRemoving:Connect(callback) end)")
-pub fn on_player_removing(instance: Players, callback: fn(Player, PlayerExitReason) -> Nil) -> RBXScriptConnection
+pub fn on_player_removing(
+  instance: Players,
+  callback: fn(Player, PlayerExitReason) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the experience server recognizes that the user's status for a certain subscription has changed.
 ///
 /// Roblox: `Players.UserSubscriptionStatusChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#UserSubscriptionStatusChanged
-@target(luau)
 @luau.event("UserSubscriptionStatusChanged")
-pub fn user_subscription_status_changed(instance: Players) -> RBXScriptSignal(fn(Player, String) -> Nil)
+pub fn user_subscription_status_changed(
+  instance: Players,
+) -> RBXScriptSignal(fn(Player, String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Players.UserSubscriptionStatusChanged`.
 ///
 /// Fires when the experience server recognizes that the user's status for a certain subscription has changed.
@@ -470,10 +533,13 @@ pub fn user_subscription_status_changed(instance: Players) -> RBXScriptSignal(fn
 /// Roblox: `Players.UserSubscriptionStatusChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Players#UserSubscriptionStatusChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.UserSubscriptionStatusChanged:Connect(callback) end)")
-pub fn on_user_subscription_status_changed(instance: Players, callback: fn(Player, String) -> Nil) -> RBXScriptConnection
+pub fn on_user_subscription_status_changed(
+  instance: Players,
+  callback: fn(Player, String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -481,10 +547,10 @@ pub fn on_user_subscription_status_changed(instance: Players, callback: fn(Playe
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: Players) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -492,10 +558,10 @@ pub fn get_archivable(instance: Players) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: Players, value: Bool) -> Players
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -503,10 +569,10 @@ pub fn set_archivable(instance: Players, value: Bool) -> Players
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: Players) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -514,10 +580,13 @@ pub fn get_capabilities(instance: Players) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: Players, value: SecurityCapabilities) -> Players
+pub fn set_capabilities(
+  instance: Players,
+  value: SecurityCapabilities,
+) -> Players
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -525,10 +594,10 @@ pub fn set_capabilities(instance: Players, value: SecurityCapabilities) -> Playe
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: Players) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -536,10 +605,10 @@ pub fn get_name(instance: Players) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: Players, value: String) -> Players
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -548,10 +617,10 @@ pub fn set_name(instance: Players, value: String) -> Players
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: Players) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -560,10 +629,10 @@ pub fn get_parent(instance: Players) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: Players, value: parent) -> Players
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -572,10 +641,10 @@ pub fn set_parent(instance: Players, value: parent) -> Players
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: Players) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -584,10 +653,10 @@ pub fn get_roblox_locked(instance: Players) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: Players) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -596,20 +665,20 @@ pub fn get_sandboxed(instance: Players) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: Players, value: Bool) -> Players
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: Players) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -618,10 +687,10 @@ pub fn get_source_asset_id(instance: Players) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: Players) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -630,10 +699,10 @@ pub fn get_unique_id(instance: Players) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: Players, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -642,10 +711,10 @@ pub fn add_tag(instance: Players, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: Players) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -654,10 +723,10 @@ pub fn clear_all_children(instance: Players) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: Players) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -666,10 +735,10 @@ pub fn clone(instance: Players) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: Players) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -682,10 +751,10 @@ pub fn destroy_instance(instance: Players) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
 pub fn find_first_ancestor(instance: Players, name: String) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -698,10 +767,13 @@ pub fn find_first_ancestor(instance: Players, name: String) -> Option(Instance)
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: Players, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: Players,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -714,10 +786,13 @@ pub fn find_first_ancestor_of_class(instance: Players, class_name: String) -> Op
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: Players, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: Players,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -731,10 +806,14 @@ pub fn find_first_ancestor_which_is_a(instance: Players, class_name: String) -> 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: Players, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: Players,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -747,10 +826,13 @@ pub fn find_first_child(instance: Players, name: String, recursive: Bool) -> Opt
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: Players, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: Players,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -764,10 +846,14 @@ pub fn find_first_child_of_class(instance: Players, class_name: String) -> Optio
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: Players, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: Players,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -780,10 +866,13 @@ pub fn find_first_child_which_is_a(instance: Players, class_name: String, recurs
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: Players, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: Players,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -795,10 +884,10 @@ pub fn find_first_descendant(instance: Players, name: String) -> Option(Instance
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: Players) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -811,10 +900,10 @@ pub fn get_actor(instance: Players) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: Players, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -827,10 +916,13 @@ pub fn get_attribute(instance: Players, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: Players, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: Players,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -843,10 +935,10 @@ pub fn get_attribute_changed_signal(instance: Players, attribute: String) -> RBX
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: Players) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -858,10 +950,10 @@ pub fn get_attributes(instance: Players) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: Players) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -874,10 +966,10 @@ pub fn get_children(instance: Players) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: Players) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -889,10 +981,10 @@ pub fn get_descendants(instance: Players) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: Players) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -906,10 +998,14 @@ pub fn get_full_name(instance: Players) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: Players, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: Players,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -920,10 +1016,13 @@ pub fn get_styled(instance: Players, name: String, selector: Option(String)) -> 
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: Players, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: Players,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -932,10 +1031,10 @@ pub fn get_styled_property_changed_signal(instance: Players, property: String) -
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: Players) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -944,10 +1043,10 @@ pub fn get_tags(instance: Players) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: Players, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -960,10 +1059,10 @@ pub fn has_tag(instance: Players, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: Players, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -976,10 +1075,10 @@ pub fn is_ancestor_of(instance: Players, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: Players, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -992,10 +1091,10 @@ pub fn is_descendant_of(instance: Players, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: Players, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -1007,10 +1106,10 @@ pub fn is_property_modified(instance: Players, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
 pub fn query_descendants(instance: Players, selector: String) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -1019,10 +1118,10 @@ pub fn query_descendants(instance: Players, selector: String) -> List(Instance)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: Players, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -1032,10 +1131,10 @@ pub fn remove_tag(instance: Players, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
 pub fn reset_property_to_default(instance: Players, property: String) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -1046,10 +1145,14 @@ pub fn reset_property_to_default(instance: Players, property: String) -> Nil
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: Players, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: Players,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -1064,19 +1167,25 @@ pub fn set_attribute(instance: Players, attribute: String, value: Dynamic) -> Ni
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: Players, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: Players,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: Players) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: Players,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -1084,19 +1193,24 @@ pub fn ancestry_changed(instance: Players) -> RBXScriptSignal(fn(Instance, Insta
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: Players, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: Players,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: Players) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: Players,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -1104,19 +1218,22 @@ pub fn attribute_changed(instance: Players) -> RBXScriptSignal(fn(String) -> Nil
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: Players, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: Players,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
 pub fn child_added(instance: Players) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -1124,19 +1241,22 @@ pub fn child_added(instance: Players) -> RBXScriptSignal(fn(Instance) -> Nil)
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: Players, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: Players,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
 pub fn child_removed(instance: Players) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -1144,19 +1264,24 @@ pub fn child_removed(instance: Players) -> RBXScriptSignal(fn(Instance) -> Nil)
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: Players, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: Players,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: Players) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: Players,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -1164,19 +1289,24 @@ pub fn descendant_added(instance: Players) -> RBXScriptSignal(fn(Instance) -> Ni
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: Players, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: Players,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: Players) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: Players,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -1184,19 +1314,22 @@ pub fn descendant_removing(instance: Players) -> RBXScriptSignal(fn(Instance) ->
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: Players, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: Players,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: Players) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1204,19 +1337,24 @@ pub fn destroying(instance: Players) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: Players, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: Players,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: Players) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: Players,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1224,10 +1362,13 @@ pub fn styled_properties_changed(instance: Players) -> RBXScriptSignal(fn() -> N
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: Players, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: Players,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1236,10 +1377,10 @@ pub fn on_styled_properties_changed(instance: Players, callback: fn() -> Nil) ->
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: Players) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1252,10 +1393,13 @@ pub fn get_class_name(instance: Players) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: Players, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: Players,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1269,19 +1413,19 @@ pub fn get_property_changed_signal(instance: Players, property: String) -> RBXSc
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: Players, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: Players) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1289,12 +1433,36 @@ pub fn changed(instance: Players) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: Players, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: Players,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: Player, _: PlayerExitReason, _: ThumbnailType, _: ThumbnailSize, _: HumanoidDescription, _: FriendPages, _: BanHistoryPages, _: Model, _: HumanoidRigType, _: AssetTypeVerification, _: Players, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: Player,
+  _: PlayerExitReason,
+  _: ThumbnailType,
+  _: ThumbnailSize,
+  _: HumanoidDescription,
+  _: FriendPages,
+  _: BanHistoryPages,
+  _: Model,
+  _: HumanoidRigType,
+  _: AssetTypeVerification,
+  _: Players,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

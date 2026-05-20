@@ -2,31 +2,33 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type JointCreationMode}
 
+@target(luau)
 /// The way joints are created between two surfaces.
 ///
 /// Roblox: `Enum.JointCreationMode`
 /// See: https://create.roblox.com/docs/reference/engine/enums/JointCreationMode
-@target(luau)
 @luau.global("Enum.JointCreationMode")
 pub fn roblox_enum() -> RobloxEnum(JointCreationMode)
 
-/// Roblox enum item `JointCreationMode.All`.
 @target(luau)
+/// Roblox enum item `JointCreationMode.All`.
 @luau.global("Enum.JointCreationMode.All")
 pub fn all() -> JointCreationMode
 
-/// Roblox enum item `JointCreationMode.Surface`.
 @target(luau)
+/// Roblox enum item `JointCreationMode.Surface`.
 @luau.global("Enum.JointCreationMode.Surface")
 pub fn surface() -> JointCreationMode
 
-/// Roblox enum item `JointCreationMode.None`.
 @target(luau)
+/// Roblox enum item `JointCreationMode.None`.
 @luau.global("Enum.JointCreationMode.None")
 pub fn none() -> JointCreationMode
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(JointCreationMode), _: JointCreationMode) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(JointCreationMode),
+  _: JointCreationMode,
+) -> Nil {
   Nil
 }

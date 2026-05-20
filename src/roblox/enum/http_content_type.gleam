@@ -2,41 +2,43 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type HttpContentType}
 
+@target(luau)
 /// Specifies the value of the HTTP Content-Type header which describes the HTTP request data type.
 ///
 /// Roblox: `Enum.HttpContentType`
 /// See: https://create.roblox.com/docs/reference/engine/enums/HttpContentType
-@target(luau)
 @luau.global("Enum.HttpContentType")
 pub fn roblox_enum() -> RobloxEnum(HttpContentType)
 
-/// Roblox enum item `HttpContentType.ApplicationJson`.
 @target(luau)
+/// Roblox enum item `HttpContentType.ApplicationJson`.
 @luau.global("Enum.HttpContentType.ApplicationJson")
 pub fn application_json() -> HttpContentType
 
-/// Roblox enum item `HttpContentType.ApplicationXml`.
 @target(luau)
+/// Roblox enum item `HttpContentType.ApplicationXml`.
 @luau.global("Enum.HttpContentType.ApplicationXml")
 pub fn application_xml() -> HttpContentType
 
-/// Roblox enum item `HttpContentType.ApplicationUrlEncoded`.
 @target(luau)
+/// Roblox enum item `HttpContentType.ApplicationUrlEncoded`.
 @luau.global("Enum.HttpContentType.ApplicationUrlEncoded")
 pub fn application_url_encoded() -> HttpContentType
 
-/// Roblox enum item `HttpContentType.TextPlain`.
 @target(luau)
+/// Roblox enum item `HttpContentType.TextPlain`.
 @luau.global("Enum.HttpContentType.TextPlain")
 pub fn text_plain() -> HttpContentType
 
-/// Roblox enum item `HttpContentType.TextXml`.
 @target(luau)
+/// Roblox enum item `HttpContentType.TextXml`.
 @luau.global("Enum.HttpContentType.TextXml")
 pub fn text_xml() -> HttpContentType
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(HttpContentType), _: HttpContentType) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(HttpContentType),
+  _: HttpContentType,
+) -> Nil {
   Nil
 }

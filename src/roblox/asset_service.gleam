@@ -1,19 +1,26 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type AssetService, type AssetType, type AudioPages, type AudioSearchParams, type Content, type Decal, type EditableImage, type EditableMesh, type Instance, type MeshPart, type Object, type OptionDouble, type OptionInt64, type Player, type SecurityCapabilities, type SurfaceAppearance, type UniqueId}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type AssetService, type AssetType, type AudioPages,
+  type AudioSearchParams, type Content, type Decal, type EditableImage,
+  type EditableMesh, type Instance, type MeshPart, type Object,
+  type OptionDouble, type OptionInt64, type Player, type SecurityCapabilities,
+  type SurfaceAppearance, type UniqueId,
+}
 
-/// Treats `AssetService` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `AssetService` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AssetService) -> Instance
 
-/// Treats `AssetService` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `AssetService` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: AssetService) -> Object
 
+@target(luau)
 /// Gets Roblox property `AssetService.AllowInsertFreeAssets`.
 ///
 /// Controls whether AssetService:LoadAssetAsync() can load assets that are not owned by the experience creator.
@@ -21,10 +28,10 @@ pub fn as_object(instance: AssetService) -> Object
 /// Roblox: `AssetService.AllowInsertFreeAssets`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AssetService#AllowInsertFreeAssets
-@target(luau)
 @luau.property("AllowInsertFreeAssets")
 pub fn get_allow_insert_free_assets(instance: AssetService) -> Bool
 
+@target(luau)
 /// Creates a new EditableImage.
 ///
 /// Roblox: `AssetService.CreateEditableImage`
@@ -34,10 +41,13 @@ pub fn get_allow_insert_free_assets(instance: AssetService) -> Bool
 /// Parameters:
 /// - `instance`: A non-replicated service that handles asset-related queries to the Roblox web API.
 /// - `editableImageOptions`: Options table containing controls for the method: Size – A Vector2 that specifies the image's desired width and height.
-@target(luau)
 @luau.method("CreateEditableImage")
-pub fn create_editable_image(instance: AssetService, editable_image_options: Dynamic) -> EditableImage
+pub fn create_editable_image(
+  instance: AssetService,
+  editable_image_options: Dynamic,
+) -> EditableImage
 
+@target(luau)
 /// Creates a new, empty EditableMesh.
 ///
 /// Roblox: `AssetService.CreateEditableMesh`
@@ -47,10 +57,13 @@ pub fn create_editable_image(instance: AssetService, editable_image_options: Dyn
 /// Parameters:
 /// - `instance`: A non-replicated service that handles asset-related queries to the Roblox web API.
 /// - `editableMeshOptions`: Table containing options for the created EditableMesh. Currently no options are available since FixedSize will always be false for empty editable meshes.
-@target(luau)
 @luau.method("CreateEditableMesh")
-pub fn create_editable_mesh(instance: AssetService, editable_mesh_options: Dynamic) -> EditableMesh
+pub fn create_editable_mesh(
+  instance: AssetService,
+  editable_mesh_options: Dynamic,
+) -> EditableMesh
 
+@target(luau)
 /// Modifies an existing Decal to contain a composite PBR textures created by layering the provided textures in the order they are provided in the layers array. Textures layer based on the alpha value of the color map.
 ///
 /// Roblox: `AssetService.ComposeDecalAsync`
@@ -62,10 +75,14 @@ pub fn create_editable_mesh(instance: AssetService, editable_mesh_options: Dynam
 /// - `instance`: A non-replicated service that handles asset-related queries to the Roblox web API.
 /// - `decal`: A Decal instance that will be modified to contain a representation of the layers. Any existing maps on this instance will be cleared.
 /// - `layers`: An array of dictionary tables that maps PBR names to Content IDs.
-@target(luau)
 @luau.method("ComposeDecalAsync")
-pub fn compose_decal_async(instance: AssetService, decal: Decal, layers: List(Dynamic)) -> Nil
+pub fn compose_decal_async(
+  instance: AssetService,
+  decal: Decal,
+  layers: List(Dynamic),
+) -> Nil
 
+@target(luau)
 /// Uploads a new asset to Roblox from the given object.
 ///
 /// Roblox: `AssetService.CreateAssetAsync`
@@ -81,10 +98,15 @@ pub fn compose_decal_async(instance: AssetService, decal: Decal, layers: List(Dy
 ///
 /// Returns:
 /// - The CreateAssetResult and asset ID pair if successful.
-@target(luau)
 @luau.method("CreateAssetAsync")
-pub fn create_asset_async(instance: AssetService, object: Object, asset_type: AssetType, request_parameters: Dynamic) -> Dynamic
+pub fn create_asset_async(
+  instance: AssetService,
+  object: Object,
+  asset_type: AssetType,
+  request_parameters: Dynamic,
+) -> Dynamic
 
+@target(luau)
 /// Uploads a new version for an existing asset from the given object.
 ///
 /// Roblox: `AssetService.CreateAssetVersionAsync`
@@ -101,10 +123,16 @@ pub fn create_asset_async(instance: AssetService, object: Object, asset_type: As
 ///
 /// Returns:
 /// - The CreateAssetResult and asset version number pair if successful.
-@target(luau)
 @luau.method("CreateAssetVersionAsync")
-pub fn create_asset_version_async(instance: AssetService, object: Object, asset_type: AssetType, asset_id: OptionInt64, request_parameters: Dynamic) -> Dynamic
+pub fn create_asset_version_async(
+  instance: AssetService,
+  object: Object,
+  asset_type: AssetType,
+  asset_id: OptionInt64,
+  request_parameters: Dynamic,
+) -> Dynamic
 
+@target(luau)
 /// Creates ephemeral, DataModel-scoped content from the provided content input.
 ///
 /// Roblox: `AssetService.CreateDataModelContentAsync`
@@ -119,10 +147,14 @@ pub fn create_asset_version_async(instance: AssetService, object: Object, asset_
 ///
 /// Returns:
 /// - A tuple containing an CreateContentResult indicating the success or failure of the request, and the resulting DataModel-scoped Opaque Content.
-@target(luau)
 @luau.method("CreateDataModelContentAsync")
-pub fn create_data_model_content_async(instance: AssetService, content: Content, options: Dynamic) -> Dynamic
+pub fn create_data_model_content_async(
+  instance: AssetService,
+  content: Content,
+  options: Dynamic,
+) -> Dynamic
 
+@target(luau)
 /// Creates a new EditableImage object populated with the given image.
 ///
 /// Roblox: `AssetService.CreateEditableImageAsync`
@@ -137,10 +169,14 @@ pub fn create_data_model_content_async(instance: AssetService, content: Content,
 ///
 /// Returns:
 /// - A new EditableImage containing the provided image.
-@target(luau)
 @luau.method("CreateEditableImageAsync")
-pub fn create_editable_image_async(instance: AssetService, content: Content, editable_image_options: Dynamic) -> EditableImage
+pub fn create_editable_image_async(
+  instance: AssetService,
+  content: Content,
+  editable_image_options: Dynamic,
+) -> EditableImage
 
+@target(luau)
 /// Returns a new EditableMesh object created from an existing mesh content ID.
 ///
 /// Roblox: `AssetService.CreateEditableMeshAsync`
@@ -155,10 +191,14 @@ pub fn create_editable_image_async(instance: AssetService, content: Content, edi
 ///
 /// Returns:
 /// - The new EditableMesh instance.
-@target(luau)
 @luau.method("CreateEditableMeshAsync")
-pub fn create_editable_mesh_async(instance: AssetService, content: Content, editable_mesh_options: Dynamic) -> EditableMesh
+pub fn create_editable_mesh_async(
+  instance: AssetService,
+  content: Content,
+  editable_mesh_options: Dynamic,
+) -> EditableMesh
 
+@target(luau)
 /// Creates a new MeshPart with a specified mesh ID and an optional table of fidelity values.
 ///
 /// Roblox: `AssetService.CreateMeshPartAsync`
@@ -170,10 +210,14 @@ pub fn create_editable_mesh_async(instance: AssetService, content: Content, edit
 /// - `instance`: A non-replicated service that handles asset-related queries to the Roblox web API.
 /// - `meshContent`: Reference to asset content stored externally or as an object within the place, wrapping a single value of one of the supported ContentSourceType values.
 /// - `options`: Options table containing one or more controls for the method: CollisionFidelity – The value of CollisionFidelity in the resulting part. Defaults to CollisionFidelity.Default if the option is absent or the options table is nil. RenderFidelity – The value of RenderFidelity in the resulting part. Defaults to RenderFidelity.Automatic if the option is absent or the options table is nil. FluidFidelity – The value of FluidFidelity in the resulting part. Defaults to FluidFidelity.Automatic if the option is absent or the options table is nil.
-@target(luau)
 @luau.method("CreateMeshPartAsync")
-pub fn create_mesh_part_async(instance: AssetService, mesh_content: Content, options: Dynamic) -> MeshPart
+pub fn create_mesh_part_async(
+  instance: AssetService,
+  mesh_content: Content,
+  options: Dynamic,
+) -> MeshPart
 
+@target(luau)
 /// Clones a place through the given templatePlaceID.
 ///
 /// Roblox: `AssetService.CreatePlaceAsync`
@@ -189,10 +233,15 @@ pub fn create_mesh_part_async(instance: AssetService, mesh_content: Content, opt
 ///
 /// Returns:
 /// - PlaceId of the new place.
-@target(luau)
 @luau.method("CreatePlaceAsync")
-pub fn create_place_async(instance: AssetService, place_name: String, template_place_id: OptionInt64, description: String) -> OptionInt64
+pub fn create_place_async(
+  instance: AssetService,
+  place_name: String,
+  template_place_id: OptionInt64,
+  description: String,
+) -> OptionInt64
 
+@target(luau)
 /// Clones a place through the given templatePlaceID and puts it into the inventory of the given player.
 ///
 /// Roblox: `AssetService.CreatePlaceInPlayerInventoryAsync`
@@ -202,10 +251,16 @@ pub fn create_place_async(instance: AssetService, place_name: String, template_p
 ///
 /// Parameters:
 /// - `instance`: A non-replicated service that handles asset-related queries to the Roblox web API.
-@target(luau)
 @luau.method("CreatePlaceInPlayerInventoryAsync")
-pub fn create_place_in_player_inventory_async(instance: AssetService, player: Instance, place_name: String, template_place_id: OptionInt64, description: String) -> OptionInt64
+pub fn create_place_in_player_inventory_async(
+  instance: AssetService,
+  player: Instance,
+  place_name: String,
+  template_place_id: OptionInt64,
+  description: String,
+) -> OptionInt64
 
+@target(luau)
 /// Creates a new SurfaceAppearance object using the provided content maps.
 ///
 /// Roblox: `AssetService.CreateSurfaceAppearanceAsync`
@@ -219,10 +274,13 @@ pub fn create_place_in_player_inventory_async(instance: AssetService, player: In
 ///
 /// Returns:
 /// - A new SurfaceAppearance instance with the given maps from the content parameter.
-@target(luau)
 @luau.method("CreateSurfaceAppearanceAsync")
-pub fn create_surface_appearance_async(instance: AssetService, content: Dynamic) -> SurfaceAppearance
+pub fn create_surface_appearance_async(
+  instance: AssetService,
+  content: Dynamic,
+) -> SurfaceAppearance
 
+@target(luau)
 /// Returns an array of asset IDs that are contained in a specified package.
 ///
 /// Roblox: `AssetService.GetAssetIdsForPackageAsync`
@@ -235,10 +293,13 @@ pub fn create_surface_appearance_async(instance: AssetService, content: Dynamic)
 ///
 /// Returns:
 /// - Asset IDs that are contained in a specified package.
-@target(luau)
 @luau.method("GetAssetIdsForPackageAsync")
-pub fn get_asset_ids_for_package_async(instance: AssetService, package_asset_id: OptionInt64) -> List(Dynamic)
+pub fn get_asset_ids_for_package_async(
+  instance: AssetService,
+  package_asset_id: OptionInt64,
+) -> List(Dynamic)
 
+@target(luau)
 /// Provides relevant metadata about a specific audio source.
 ///
 /// Roblox: `AssetService.GetAudioMetadataAsync`
@@ -252,10 +313,13 @@ pub fn get_asset_ids_for_package_async(instance: AssetService, package_asset_id:
 ///
 /// Returns:
 /// - Array of dictionary tables in the same order as the request, where each dictionary contains the following metadata for its asset/content: AssetId (string) Title (string) Artist (string) Duration (number) in seconds AudioType (AudioSubType) Note that if an error occurs on fetching metadata for any of the requested assets, for example the asset ID doesn't exist, its dictionary table is still included in the returned array but it only contains the AssetId field for reference purposes. Additionally, if the AudioType cannot be determined for a given asset (perhaps because it's private audio), the resulting dictionary will not contain an AudioType entry.
-@target(luau)
 @luau.method("GetAudioMetadataAsync")
-pub fn get_audio_metadata_async(instance: AssetService, id_list: List(Dynamic)) -> List(Dynamic)
+pub fn get_audio_metadata_async(
+  instance: AssetService,
+  id_list: List(Dynamic),
+) -> List(Dynamic)
 
+@target(luau)
 /// Returns details of the contents of specified bundle.
 ///
 /// Roblox: `AssetService.GetBundleDetailsAsync`
@@ -269,10 +333,13 @@ pub fn get_audio_metadata_async(instance: AssetService, id_list: List(Dynamic)) 
 ///
 /// Returns:
 /// - Dictionary with the following key-value pairs containing details about the specified bundle: Id — Bundle ID (same as passed bundleId argument) Name — Bundle name Description — Bundle description BundleType — String representing the BundleType, for example "BodyParts" or "DynamicHead" Items — Array of items in the bundle, each with details represented through the following keys: Id — Item ID Name — Item name Type — Item type such as "Asset" AssetType — String representing the AvatarAssetType SupportsHeadShapes — Whether the asset supports head shape swapping. Only present if AssetType is "DynamicHead".
-@target(luau)
 @luau.method("GetBundleDetailsAsync")
-pub fn get_bundle_details_async(instance: AssetService, bundle_id: OptionInt64) -> Dynamic
+pub fn get_bundle_details_async(
+  instance: AssetService,
+  bundle_id: OptionInt64,
+) -> Dynamic
 
+@target(luau)
 /// Returns a StandardPages object which contains the name and PlaceId of places within the current experience.
 ///
 /// Roblox: `AssetService.GetGamePlacesAsync`
@@ -282,10 +349,10 @@ pub fn get_bundle_details_async(instance: AssetService, bundle_id: OptionInt64) 
 ///
 /// Parameters:
 /// - `instance`: A non-replicated service that handles asset-related queries to the Roblox web API.
-@target(luau)
 @luau.method("GetGamePlacesAsync")
 pub fn get_game_places_async(instance: AssetService) -> Instance
 
+@target(luau)
 /// Loads a Model instance given its asset ID. This is the modern replacement for InsertService:LoadAsset() and supports loading third-party assets.
 ///
 /// Roblox: `AssetService.LoadAssetAsync`
@@ -299,10 +366,13 @@ pub fn get_game_places_async(instance: AssetService) -> Instance
 ///
 /// Returns:
 /// - A Model instance containing the loaded asset.
-@target(luau)
 @luau.method("LoadAssetAsync")
-pub fn load_asset_async(instance: AssetService, asset_id: OptionInt64) -> Instance
+pub fn load_asset_async(
+  instance: AssetService,
+  asset_id: OptionInt64,
+) -> Instance
 
+@target(luau)
 /// Allows in-experience asset creation for users by prompting a publish dialog.
 ///
 /// Roblox: `AssetService.PromptCreateAssetAsync`
@@ -318,10 +388,15 @@ pub fn load_asset_async(instance: AssetService, asset_id: OptionInt64) -> Instan
 ///
 /// Returns:
 /// - The PromptCreateAssetResult and asset ID pair if successful.
-@target(luau)
 @luau.method("PromptCreateAssetAsync")
-pub fn prompt_create_asset_async(instance: AssetService, player: Player, instance_: Instance, asset_type: AssetType) -> Dynamic
+pub fn prompt_create_asset_async(
+  instance: AssetService,
+  player: Player,
+  instance_: Instance,
+  asset_type: AssetType,
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `AssetService.PromptImportAnimationClipFromVideoAsync`
 /// ThreadSafety: Unsafe
 /// Tags: Yields
@@ -329,10 +404,14 @@ pub fn prompt_create_asset_async(instance: AssetService, player: Player, instanc
 ///
 /// Parameters:
 /// - `instance`: A non-replicated service that handles asset-related queries to the Roblox web API.
-@target(luau)
 @luau.method("PromptImportAnimationClipFromVideoAsync")
-pub fn prompt_import_animation_clip_from_video_async(instance: AssetService, player: Player, progress_callback: Dynamic) -> Dynamic
+pub fn prompt_import_animation_clip_from_video_async(
+  instance: AssetService,
+  player: Player,
+  progress_callback: Dynamic,
+) -> Dynamic
 
+@target(luau)
 /// Saves the state of the current place.
 ///
 /// Roblox: `AssetService.SavePlaceAsync`
@@ -343,10 +422,13 @@ pub fn prompt_import_animation_clip_from_video_async(instance: AssetService, pla
 /// Parameters:
 /// - `instance`: A non-replicated service that handles asset-related queries to the Roblox web API.
 /// - `requestParameters`: Optional dictionary that includes SaveWithoutPublish, a boolean indicating whether to save with publish or without publish, and PlaceId, the destination place ID to save over. An example usage would be: AssetService:SavePlaceAsync({PlaceId = 1, SaveWithoutPublish = true}). If PlaceId is not provided, the default behavior will save over the current original place which is calling SavePlaceAsync. If SaveWithoutPublish is not provided, the default behavior is SaveWithoutPublish=false.
-@target(luau)
 @luau.method("SavePlaceAsync")
-pub fn save_place_async(instance: AssetService, request_parameters: Dynamic) -> Nil
+pub fn save_place_async(
+  instance: AssetService,
+  request_parameters: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Finds audio assets matching a variety of search criteria.
 ///
 /// Roblox: `AssetService.SearchAudioAsync`
@@ -356,10 +438,13 @@ pub fn save_place_async(instance: AssetService, request_parameters: Dynamic) -> 
 ///
 /// Parameters:
 /// - `instance`: A non-replicated service that handles asset-related queries to the Roblox web API.
-@target(luau)
 @luau.method("SearchAudioAsync")
-pub fn search_audio_async(instance: AssetService, search_parameters: AudioSearchParams) -> AudioPages
+pub fn search_audio_async(
+  instance: AssetService,
+  search_parameters: AudioSearchParams,
+) -> AudioPages
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -367,10 +452,10 @@ pub fn search_audio_async(instance: AssetService, search_parameters: AudioSearch
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: AssetService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -378,10 +463,10 @@ pub fn get_archivable(instance: AssetService) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: AssetService, value: Bool) -> AssetService
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -389,10 +474,10 @@ pub fn set_archivable(instance: AssetService, value: Bool) -> AssetService
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: AssetService) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -400,10 +485,13 @@ pub fn get_capabilities(instance: AssetService) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: AssetService, value: SecurityCapabilities) -> AssetService
+pub fn set_capabilities(
+  instance: AssetService,
+  value: SecurityCapabilities,
+) -> AssetService
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -411,10 +499,10 @@ pub fn set_capabilities(instance: AssetService, value: SecurityCapabilities) -> 
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: AssetService) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -422,10 +510,10 @@ pub fn get_name(instance: AssetService) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: AssetService, value: String) -> AssetService
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -434,10 +522,10 @@ pub fn set_name(instance: AssetService, value: String) -> AssetService
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: AssetService) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -446,10 +534,10 @@ pub fn get_parent(instance: AssetService) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: AssetService, value: parent) -> AssetService
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -458,10 +546,10 @@ pub fn set_parent(instance: AssetService, value: parent) -> AssetService
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: AssetService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -470,10 +558,10 @@ pub fn get_roblox_locked(instance: AssetService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: AssetService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -482,20 +570,20 @@ pub fn get_sandboxed(instance: AssetService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: AssetService, value: Bool) -> AssetService
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: AssetService) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -504,10 +592,10 @@ pub fn get_source_asset_id(instance: AssetService) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: AssetService) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -516,10 +604,10 @@ pub fn get_unique_id(instance: AssetService) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: AssetService, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -528,10 +616,10 @@ pub fn add_tag(instance: AssetService, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: AssetService) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -540,10 +628,10 @@ pub fn clear_all_children(instance: AssetService) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: AssetService) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -552,10 +640,10 @@ pub fn clone(instance: AssetService) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: AssetService) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -568,10 +656,13 @@ pub fn destroy_instance(instance: AssetService) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: AssetService, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: AssetService,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -584,10 +675,13 @@ pub fn find_first_ancestor(instance: AssetService, name: String) -> Option(Insta
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: AssetService, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: AssetService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -600,10 +694,13 @@ pub fn find_first_ancestor_of_class(instance: AssetService, class_name: String) 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: AssetService, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: AssetService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -617,10 +714,14 @@ pub fn find_first_ancestor_which_is_a(instance: AssetService, class_name: String
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: AssetService, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: AssetService,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -633,10 +734,13 @@ pub fn find_first_child(instance: AssetService, name: String, recursive: Bool) -
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: AssetService, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: AssetService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -650,10 +754,14 @@ pub fn find_first_child_of_class(instance: AssetService, class_name: String) -> 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: AssetService, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: AssetService,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -666,10 +774,13 @@ pub fn find_first_child_which_is_a(instance: AssetService, class_name: String, r
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: AssetService, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: AssetService,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -681,10 +792,10 @@ pub fn find_first_descendant(instance: AssetService, name: String) -> Option(Ins
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: AssetService) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -697,10 +808,10 @@ pub fn get_actor(instance: AssetService) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: AssetService, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -713,10 +824,13 @@ pub fn get_attribute(instance: AssetService, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: AssetService, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: AssetService,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -729,10 +843,10 @@ pub fn get_attribute_changed_signal(instance: AssetService, attribute: String) -
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: AssetService) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -744,10 +858,10 @@ pub fn get_attributes(instance: AssetService) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: AssetService) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -760,10 +874,10 @@ pub fn get_children(instance: AssetService) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: AssetService) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -775,10 +889,10 @@ pub fn get_descendants(instance: AssetService) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: AssetService) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -792,10 +906,14 @@ pub fn get_full_name(instance: AssetService) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: AssetService, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: AssetService,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -806,10 +924,13 @@ pub fn get_styled(instance: AssetService, name: String, selector: Option(String)
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: AssetService, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: AssetService,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -818,10 +939,10 @@ pub fn get_styled_property_changed_signal(instance: AssetService, property: Stri
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: AssetService) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -830,10 +951,10 @@ pub fn get_tags(instance: AssetService) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: AssetService, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -846,10 +967,10 @@ pub fn has_tag(instance: AssetService, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: AssetService, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -862,10 +983,10 @@ pub fn is_ancestor_of(instance: AssetService, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: AssetService, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -878,10 +999,10 @@ pub fn is_descendant_of(instance: AssetService, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: AssetService, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -893,10 +1014,13 @@ pub fn is_property_modified(instance: AssetService, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: AssetService, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: AssetService,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -905,10 +1029,10 @@ pub fn query_descendants(instance: AssetService, selector: String) -> List(Insta
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: AssetService, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -918,10 +1042,13 @@ pub fn remove_tag(instance: AssetService, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: AssetService, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: AssetService,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -932,10 +1059,14 @@ pub fn reset_property_to_default(instance: AssetService, property: String) -> Ni
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: AssetService, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: AssetService,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -950,19 +1081,25 @@ pub fn set_attribute(instance: AssetService, attribute: String, value: Dynamic) 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: AssetService, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: AssetService,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: AssetService) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: AssetService,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -970,19 +1107,24 @@ pub fn ancestry_changed(instance: AssetService) -> RBXScriptSignal(fn(Instance, 
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: AssetService, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: AssetService,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: AssetService) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: AssetService,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -990,19 +1132,24 @@ pub fn attribute_changed(instance: AssetService) -> RBXScriptSignal(fn(String) -
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: AssetService, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: AssetService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: AssetService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: AssetService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -1010,19 +1157,24 @@ pub fn child_added(instance: AssetService) -> RBXScriptSignal(fn(Instance) -> Ni
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: AssetService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: AssetService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: AssetService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: AssetService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -1030,19 +1182,24 @@ pub fn child_removed(instance: AssetService) -> RBXScriptSignal(fn(Instance) -> 
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: AssetService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: AssetService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: AssetService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: AssetService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -1050,19 +1207,24 @@ pub fn descendant_added(instance: AssetService) -> RBXScriptSignal(fn(Instance) 
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: AssetService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: AssetService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: AssetService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: AssetService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -1070,19 +1232,22 @@ pub fn descendant_removing(instance: AssetService) -> RBXScriptSignal(fn(Instanc
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: AssetService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: AssetService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: AssetService) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1090,19 +1255,24 @@ pub fn destroying(instance: AssetService) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: AssetService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: AssetService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: AssetService) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: AssetService,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1110,10 +1280,13 @@ pub fn styled_properties_changed(instance: AssetService) -> RBXScriptSignal(fn()
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: AssetService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: AssetService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1122,10 +1295,10 @@ pub fn on_styled_properties_changed(instance: AssetService, callback: fn() -> Ni
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: AssetService) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1138,10 +1311,13 @@ pub fn get_class_name(instance: AssetService) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: AssetService, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: AssetService,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1155,19 +1331,19 @@ pub fn get_property_changed_signal(instance: AssetService, property: String) -> 
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: AssetService, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: AssetService) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1175,12 +1351,36 @@ pub fn changed(instance: AssetService) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: AssetService, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: AssetService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: AudioPages, _: AudioSearchParams, _: Player, _: AssetType, _: SurfaceAppearance, _: MeshPart, _: Content, _: EditableMesh, _: EditableImage, _: Object, _: Decal, _: AssetService, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: AudioPages,
+  _: AudioSearchParams,
+  _: Player,
+  _: AssetType,
+  _: SurfaceAppearance,
+  _: MeshPart,
+  _: Content,
+  _: EditableMesh,
+  _: EditableImage,
+  _: Object,
+  _: Decal,
+  _: AssetService,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

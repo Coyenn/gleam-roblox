@@ -1,19 +1,29 @@
 // Generated declarative builders for Roblox `ImageButton` instances.
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/image_button
-import roblox/types.{type AutomaticSize, type BorderMode, type ButtonStyle, type Color3, type Content, type ContentId, type GuiObject, type HapticEffect, type ImageButton, type InputSink, type Instance, type LocalizationTable, type Rect, type ResamplerMode, type ScaleType, type SecurityCapabilities, type SelectionBehavior, type SizeConstraint, type UDim2, type Vector2}
+import roblox/types.{
+  type AutomaticSize, type BorderMode, type ButtonStyle, type Color3,
+  type Content, type ContentId, type GuiObject, type HapticEffect,
+  type ImageButton, type InputSink, type Instance, type LocalizationTable,
+  type Rect, type ResamplerMode, type ScaleType, type SecurityCapabilities,
+  type SelectionBehavior, type SizeConstraint, type UDim2, type Vector2,
+}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: ImageButton) -> Instance
 
-/// Creates a declarative Roblox `ImageButton` node.
 @target(luau)
-pub fn node(properties: List(Property(ImageButton)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `ImageButton` node.
+pub fn node(
+  properties: List(Property(ImageButton)),
+  children: List(Node),
+) -> Node {
   let instance = apply(image_button.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.HoverImage` on `ImageButton` nodes.
 ///
 /// A texture ID that will be used when the ImageButton is being hovered.
@@ -21,11 +31,11 @@ pub fn node(properties: List(Property(ImageButton)), children: List(Node)) -> No
 /// Roblox: `ImageButton.HoverImage`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#HoverImage
-@target(luau)
 pub fn hover_image(value: ContentId) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_hover_image(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.HoverImageContent` on `ImageButton` nodes.
 ///
 /// The image content that will be used when the ImageButton is being hovered. Only supports asset URIs.
@@ -33,11 +43,13 @@ pub fn hover_image(value: ContentId) -> Property(ImageButton) {
 /// Roblox: `ImageButton.HoverImageContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#HoverImageContent
-@target(luau)
 pub fn hover_image_content(value: Content) -> Property(ImageButton) {
-  Property(fn(instance) { image_button.set_hover_image_content(instance, value) })
+  Property(fn(instance) {
+    image_button.set_hover_image_content(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.Image` on `ImageButton` nodes.
 ///
 /// The image content displayed by the ImageButton element. Reads and writes to ImageContent.
@@ -45,11 +57,11 @@ pub fn hover_image_content(value: Content) -> Property(ImageButton) {
 /// Roblox: `ImageButton.Image`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#Image
-@target(luau)
 pub fn image(value: ContentId) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_image(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.ImageColor3` on `ImageButton` nodes.
 ///
 /// Determines how a rendered image will be colorized.
@@ -57,11 +69,11 @@ pub fn image(value: ContentId) -> Property(ImageButton) {
 /// Roblox: `ImageButton.ImageColor3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageColor3
-@target(luau)
 pub fn image_color3(value: Color3) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_image_color3(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.ImageContent` on `ImageButton` nodes.
 ///
 /// The image content displayed by the UI element. Supports asset URIs and EditableImage objects.
@@ -69,11 +81,11 @@ pub fn image_color3(value: Color3) -> Property(ImageButton) {
 /// Roblox: `ImageButton.ImageContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageContent
-@target(luau)
 pub fn image_content(value: Content) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_image_content(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.ImageRectOffset` on `ImageButton` nodes.
 ///
 /// The offset in pixels of the sub-area of an image to be displayed.
@@ -81,11 +93,11 @@ pub fn image_content(value: Content) -> Property(ImageButton) {
 /// Roblox: `ImageButton.ImageRectOffset`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageRectOffset
-@target(luau)
 pub fn image_rect_offset(value: Vector2) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_image_rect_offset(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.ImageRectSize` on `ImageButton` nodes.
 ///
 /// Determines the size in pixels of the sub-area of an image to be displayed.
@@ -93,11 +105,11 @@ pub fn image_rect_offset(value: Vector2) -> Property(ImageButton) {
 /// Roblox: `ImageButton.ImageRectSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageRectSize
-@target(luau)
 pub fn image_rect_size(value: Vector2) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_image_rect_size(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.ImageTransparency` on `ImageButton` nodes.
 ///
 /// Determines the transparency of the rendered image.
@@ -105,11 +117,11 @@ pub fn image_rect_size(value: Vector2) -> Property(ImageButton) {
 /// Roblox: `ImageButton.ImageTransparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageTransparency
-@target(luau)
 pub fn image_transparency(value: Float) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_image_transparency(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.PressedImage` on `ImageButton` nodes.
 ///
 /// A texture ID that will be used when an ImageButton is being pressed.
@@ -117,11 +129,11 @@ pub fn image_transparency(value: Float) -> Property(ImageButton) {
 /// Roblox: `ImageButton.PressedImage`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#PressedImage
-@target(luau)
 pub fn pressed_image(value: ContentId) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_pressed_image(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.PressedImageContent` on `ImageButton` nodes.
 ///
 /// The image content that will be used when an ImageButton is being pressed. Only supports asset URIs.
@@ -129,11 +141,13 @@ pub fn pressed_image(value: ContentId) -> Property(ImageButton) {
 /// Roblox: `ImageButton.PressedImageContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#PressedImageContent
-@target(luau)
 pub fn pressed_image_content(value: Content) -> Property(ImageButton) {
-  Property(fn(instance) { image_button.set_pressed_image_content(instance, value) })
+  Property(fn(instance) {
+    image_button.set_pressed_image_content(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.ResampleMode` on `ImageButton` nodes.
 ///
 /// Selects the image resampling mode for the button.
@@ -141,11 +155,11 @@ pub fn pressed_image_content(value: Content) -> Property(ImageButton) {
 /// Roblox: `ImageButton.ResampleMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ResampleMode
-@target(luau)
 pub fn resample_mode(value: ResamplerMode) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_resample_mode(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.ScaleType` on `ImageButton` nodes.
 ///
 /// Determines how an image will scale if displayed in a UI element whose size differs from the source image.
@@ -153,11 +167,11 @@ pub fn resample_mode(value: ResamplerMode) -> Property(ImageButton) {
 /// Roblox: `ImageButton.ScaleType`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ScaleType
-@target(luau)
 pub fn scale_type(value: ScaleType) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_scale_type(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.SliceCenter` on `ImageButton` nodes.
 ///
 /// Sets the slice boundaries of a 9-sliced image.
@@ -165,11 +179,11 @@ pub fn scale_type(value: ScaleType) -> Property(ImageButton) {
 /// Roblox: `ImageButton.SliceCenter`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#SliceCenter
-@target(luau)
 pub fn slice_center(value: Rect) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_slice_center(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.SliceScale` on `ImageButton` nodes.
 ///
 /// Scales the 9-slice edges by the specified ratio.
@@ -177,11 +191,11 @@ pub fn slice_center(value: Rect) -> Property(ImageButton) {
 /// Roblox: `ImageButton.SliceScale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#SliceScale
-@target(luau)
 pub fn slice_scale(value: Float) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_slice_scale(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ImageButton.TileSize` on `ImageButton` nodes.
 ///
 /// Sets the tiling scale of the ImageButton.
@@ -189,11 +203,11 @@ pub fn slice_scale(value: Float) -> Property(ImageButton) {
 /// Roblox: `ImageButton.TileSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#TileSize
-@target(luau)
 pub fn tile_size(value: UDim2) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_tile_size(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiButton.AutoButtonColor` on `ImageButton` nodes.
 ///
 /// Determines whether the button automatically changes color when the mouse hovers over or clicks on it.
@@ -201,11 +215,11 @@ pub fn tile_size(value: UDim2) -> Property(ImageButton) {
 /// Roblox: `GuiButton.AutoButtonColor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#AutoButtonColor
-@target(luau)
 pub fn auto_button_color(value: Bool) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_auto_button_color(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiButton.HoverHapticEffect` on `ImageButton` nodes.
 ///
 /// A HapticEffect instance that will play when the GuiButton is being hovered.
@@ -213,11 +227,13 @@ pub fn auto_button_color(value: Bool) -> Property(ImageButton) {
 /// Roblox: `GuiButton.HoverHapticEffect`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#HoverHapticEffect
-@target(luau)
 pub fn hover_haptic_effect(value: HapticEffect) -> Property(ImageButton) {
-  Property(fn(instance) { image_button.set_hover_haptic_effect(instance, value) })
+  Property(fn(instance) {
+    image_button.set_hover_haptic_effect(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiButton.Modal` on `ImageButton` nodes.
 ///
 /// If true while the GUI element is visible, the mouse will not be locked unless the right mouse button is down.
@@ -225,11 +241,11 @@ pub fn hover_haptic_effect(value: HapticEffect) -> Property(ImageButton) {
 /// Roblox: `GuiButton.Modal`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#Modal
-@target(luau)
 pub fn modal(value: Bool) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_modal(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiButton.PressHapticEffect` on `ImageButton` nodes.
 ///
 /// A HapticEffect instance that will play when the GuiButton is being pressed.
@@ -237,11 +253,13 @@ pub fn modal(value: Bool) -> Property(ImageButton) {
 /// Roblox: `GuiButton.PressHapticEffect`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#PressHapticEffect
-@target(luau)
 pub fn press_haptic_effect(value: HapticEffect) -> Property(ImageButton) {
-  Property(fn(instance) { image_button.set_press_haptic_effect(instance, value) })
+  Property(fn(instance) {
+    image_button.set_press_haptic_effect(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiButton.Selected` on `ImageButton` nodes.
 ///
 /// A boolean property which indicates whether the object has been selected.
@@ -249,11 +267,11 @@ pub fn press_haptic_effect(value: HapticEffect) -> Property(ImageButton) {
 /// Roblox: `GuiButton.Selected`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#Selected
-@target(luau)
 pub fn selected(value: Bool) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_selected(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiButton.Style` on `ImageButton` nodes.
 ///
 /// Sets the style of the GuiButton based on a list of pre-determined styles.
@@ -261,11 +279,11 @@ pub fn selected(value: Bool) -> Property(ImageButton) {
 /// Roblox: `GuiButton.Style`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#Style
-@target(luau)
 pub fn style(value: ButtonStyle) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_style(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.Active` on `ImageButton` nodes.
 ///
 /// Determines whether this UI element sinks input.
@@ -273,11 +291,11 @@ pub fn style(value: ButtonStyle) -> Property(ImageButton) {
 /// Roblox: `GuiObject.Active`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Active
-@target(luau)
 pub fn active(value: Bool) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_active(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.AnchorPoint` on `ImageButton` nodes.
 ///
 /// Determines the origin point of a GuiObject, relative to its absolute size.
@@ -285,11 +303,11 @@ pub fn active(value: Bool) -> Property(ImageButton) {
 /// Roblox: `GuiObject.AnchorPoint`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#AnchorPoint
-@target(luau)
 pub fn anchor_point(value: Vector2) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_anchor_point(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.AutomaticSize` on `ImageButton` nodes.
 ///
 /// Determines whether resizing occurs based on child content.
@@ -297,11 +315,11 @@ pub fn anchor_point(value: Vector2) -> Property(ImageButton) {
 /// Roblox: `GuiObject.AutomaticSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#AutomaticSize
-@target(luau)
 pub fn automatic_size(value: AutomaticSize) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_automatic_size(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.BackgroundColor3` on `ImageButton` nodes.
 ///
 /// Determines the GuiObject background color.
@@ -309,11 +327,11 @@ pub fn automatic_size(value: AutomaticSize) -> Property(ImageButton) {
 /// Roblox: `GuiObject.BackgroundColor3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BackgroundColor3
-@target(luau)
 pub fn background_color3(value: Color3) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_background_color3(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.BackgroundTransparency` on `ImageButton` nodes.
 ///
 /// Determines the transparency of the GuiObject background and border.
@@ -321,11 +339,13 @@ pub fn background_color3(value: Color3) -> Property(ImageButton) {
 /// Roblox: `GuiObject.BackgroundTransparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BackgroundTransparency
-@target(luau)
 pub fn background_transparency(value: Float) -> Property(ImageButton) {
-  Property(fn(instance) { image_button.set_background_transparency(instance, value) })
+  Property(fn(instance) {
+    image_button.set_background_transparency(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.BorderColor3` on `ImageButton` nodes.
 ///
 /// Determines the color of the GuiObject border.
@@ -333,11 +353,11 @@ pub fn background_transparency(value: Float) -> Property(ImageButton) {
 /// Roblox: `GuiObject.BorderColor3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderColor3
-@target(luau)
 pub fn border_color3(value: Color3) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_border_color3(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.BorderMode` on `ImageButton` nodes.
 ///
 /// Determines in what manner the GuiObject border is laid out relative to its dimensions.
@@ -345,11 +365,11 @@ pub fn border_color3(value: Color3) -> Property(ImageButton) {
 /// Roblox: `GuiObject.BorderMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderMode
-@target(luau)
 pub fn border_mode(value: BorderMode) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_border_mode(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.BorderSizePixel` on `ImageButton` nodes.
 ///
 /// Determines the pixel width of the GuiObject border.
@@ -357,11 +377,11 @@ pub fn border_mode(value: BorderMode) -> Property(ImageButton) {
 /// Roblox: `GuiObject.BorderSizePixel`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderSizePixel
-@target(luau)
 pub fn border_size_pixel(value: Int) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_border_size_pixel(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.ClipsDescendants` on `ImageButton` nodes.
 ///
 /// Determines if descendant GuiObjects outside of the bounds of a parent GUI element should render.
@@ -369,21 +389,21 @@ pub fn border_size_pixel(value: Int) -> Property(ImageButton) {
 /// Roblox: `GuiObject.ClipsDescendants`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#ClipsDescendants
-@target(luau)
 pub fn clips_descendants(value: Bool) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_clips_descendants(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.InputSink` on `ImageButton` nodes.
 ///
 /// Roblox: `GuiObject.InputSink`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputSink
-@target(luau)
 pub fn input_sink(value: InputSink) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_input_sink(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.Interactable` on `ImageButton` nodes.
 ///
 /// Determines whether the GuiButton can be interacted with or not, or if the GuiState of the GuiObject is changing or not.
@@ -391,11 +411,11 @@ pub fn input_sink(value: InputSink) -> Property(ImageButton) {
 /// Roblox: `GuiObject.Interactable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Interactable
-@target(luau)
 pub fn interactable(value: Bool) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_interactable(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.LayoutOrder` on `ImageButton` nodes.
 ///
 /// Controls the sort order of the GuiObject when used with a UIGridStyleLayout.
@@ -403,11 +423,11 @@ pub fn interactable(value: Bool) -> Property(ImageButton) {
 /// Roblox: `GuiObject.LayoutOrder`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#LayoutOrder
-@target(luau)
 pub fn layout_order(value: Int) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_layout_order(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.NextSelectionDown` on `ImageButton` nodes.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved downward.
@@ -415,11 +435,13 @@ pub fn layout_order(value: Int) -> Property(ImageButton) {
 /// Roblox: `GuiObject.NextSelectionDown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionDown
-@target(luau)
 pub fn next_selection_down(value: GuiObject) -> Property(ImageButton) {
-  Property(fn(instance) { image_button.set_next_selection_down(instance, value) })
+  Property(fn(instance) {
+    image_button.set_next_selection_down(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.NextSelectionLeft` on `ImageButton` nodes.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved to the left.
@@ -427,11 +449,13 @@ pub fn next_selection_down(value: GuiObject) -> Property(ImageButton) {
 /// Roblox: `GuiObject.NextSelectionLeft`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionLeft
-@target(luau)
 pub fn next_selection_left(value: GuiObject) -> Property(ImageButton) {
-  Property(fn(instance) { image_button.set_next_selection_left(instance, value) })
+  Property(fn(instance) {
+    image_button.set_next_selection_left(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.NextSelectionRight` on `ImageButton` nodes.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved to the right.
@@ -439,11 +463,13 @@ pub fn next_selection_left(value: GuiObject) -> Property(ImageButton) {
 /// Roblox: `GuiObject.NextSelectionRight`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionRight
-@target(luau)
 pub fn next_selection_right(value: GuiObject) -> Property(ImageButton) {
-  Property(fn(instance) { image_button.set_next_selection_right(instance, value) })
+  Property(fn(instance) {
+    image_button.set_next_selection_right(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.NextSelectionUp` on `ImageButton` nodes.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved upward.
@@ -451,11 +477,11 @@ pub fn next_selection_right(value: GuiObject) -> Property(ImageButton) {
 /// Roblox: `GuiObject.NextSelectionUp`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionUp
-@target(luau)
 pub fn next_selection_up(value: GuiObject) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_next_selection_up(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.Position` on `ImageButton` nodes.
 ///
 /// Determines the pixel and scalar position of the GuiObject.
@@ -463,11 +489,11 @@ pub fn next_selection_up(value: GuiObject) -> Property(ImageButton) {
 /// Roblox: `GuiObject.Position`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Position
-@target(luau)
 pub fn position(value: UDim2) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_position(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.Rotation` on `ImageButton` nodes.
 ///
 /// Determines the number of degrees by which the GuiObject is rotated.
@@ -475,11 +501,11 @@ pub fn position(value: UDim2) -> Property(ImageButton) {
 /// Roblox: `GuiObject.Rotation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Rotation
-@target(luau)
 pub fn rotation(value: Float) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_rotation(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.Selectable` on `ImageButton` nodes.
 ///
 /// Determine whether the GuiObject can be selected by a gamepad.
@@ -487,11 +513,11 @@ pub fn rotation(value: Float) -> Property(ImageButton) {
 /// Roblox: `GuiObject.Selectable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Selectable
-@target(luau)
 pub fn selectable(value: Bool) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_selectable(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.SelectionImageObject` on `ImageButton` nodes.
 ///
 /// Overrides the default selection adornment used for gamepads.
@@ -499,11 +525,13 @@ pub fn selectable(value: Bool) -> Property(ImageButton) {
 /// Roblox: `GuiObject.SelectionImageObject`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionImageObject
-@target(luau)
 pub fn selection_image_object(value: GuiObject) -> Property(ImageButton) {
-  Property(fn(instance) { image_button.set_selection_image_object(instance, value) })
+  Property(fn(instance) {
+    image_button.set_selection_image_object(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.SelectionOrder` on `ImageButton` nodes.
 ///
 /// The order of GuiObjects selected by the gamepad UI selection.
@@ -511,11 +539,11 @@ pub fn selection_image_object(value: GuiObject) -> Property(ImageButton) {
 /// Roblox: `GuiObject.SelectionOrder`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionOrder
-@target(luau)
 pub fn selection_order(value: Int) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_selection_order(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.Size` on `ImageButton` nodes.
 ///
 /// Determines the pixel and scalar size of the GuiObject.
@@ -523,11 +551,11 @@ pub fn selection_order(value: Int) -> Property(ImageButton) {
 /// Roblox: `GuiObject.Size`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Size
-@target(luau)
 pub fn size(value: UDim2) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_size(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.SizeConstraint` on `ImageButton` nodes.
 ///
 /// Sets the Size axes that the GuiObject will be based on, relative to the size of its parent.
@@ -535,11 +563,11 @@ pub fn size(value: UDim2) -> Property(ImageButton) {
 /// Roblox: `GuiObject.SizeConstraint`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SizeConstraint
-@target(luau)
 pub fn size_constraint(value: SizeConstraint) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_size_constraint(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.Transparency` on `ImageButton` nodes.
 ///
 /// A mixed property of BackgroundTransparency and TextTransparency.
@@ -548,11 +576,11 @@ pub fn size_constraint(value: SizeConstraint) -> Property(ImageButton) {
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Transparency
-@target(luau)
 pub fn transparency(value: Float) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_transparency(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.Visible` on `ImageButton` nodes.
 ///
 /// Determines whether the GuiObject and its descendants will be rendered.
@@ -560,11 +588,11 @@ pub fn transparency(value: Float) -> Property(ImageButton) {
 /// Roblox: `GuiObject.Visible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Visible
-@target(luau)
 pub fn visible(value: Bool) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_visible(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiObject.ZIndex` on `ImageButton` nodes.
 ///
 /// Determines the order in which a GuiObject renders relative to others.
@@ -572,11 +600,11 @@ pub fn visible(value: Bool) -> Property(ImageButton) {
 /// Roblox: `GuiObject.ZIndex`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#ZIndex
-@target(luau)
 pub fn z_index(value: Int) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_z_index(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiBase2d.AutoLocalize` on `ImageButton` nodes.
 ///
 /// When set to true, localization will be applied to this GuiBase2d and its descendants.
@@ -584,11 +612,11 @@ pub fn z_index(value: Int) -> Property(ImageButton) {
 /// Roblox: `GuiBase2d.AutoLocalize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#AutoLocalize
-@target(luau)
 pub fn auto_localize(value: Bool) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_auto_localize(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiBase2d.RootLocalizationTable` on `ImageButton` nodes.
 ///
 /// A reference to a LocalizationTable to be used to apply automated localization to this GuiBase2d and its descendants.
@@ -596,11 +624,15 @@ pub fn auto_localize(value: Bool) -> Property(ImageButton) {
 /// Roblox: `GuiBase2d.RootLocalizationTable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#RootLocalizationTable
-@target(luau)
-pub fn root_localization_table(value: LocalizationTable) -> Property(ImageButton) {
-  Property(fn(instance) { image_button.set_root_localization_table(instance, value) })
+pub fn root_localization_table(
+  value: LocalizationTable,
+) -> Property(ImageButton) {
+  Property(fn(instance) {
+    image_button.set_root_localization_table(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiBase2d.SelectionBehaviorDown` on `ImageButton` nodes.
 ///
 /// Customizes gamepad selection behavior in the down direction.
@@ -608,11 +640,15 @@ pub fn root_localization_table(value: LocalizationTable) -> Property(ImageButton
 /// Roblox: `GuiBase2d.SelectionBehaviorDown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorDown
-@target(luau)
-pub fn selection_behavior_down(value: SelectionBehavior) -> Property(ImageButton) {
-  Property(fn(instance) { image_button.set_selection_behavior_down(instance, value) })
+pub fn selection_behavior_down(
+  value: SelectionBehavior,
+) -> Property(ImageButton) {
+  Property(fn(instance) {
+    image_button.set_selection_behavior_down(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiBase2d.SelectionBehaviorLeft` on `ImageButton` nodes.
 ///
 /// Customizes gamepad selection behavior in the left direction.
@@ -620,11 +656,15 @@ pub fn selection_behavior_down(value: SelectionBehavior) -> Property(ImageButton
 /// Roblox: `GuiBase2d.SelectionBehaviorLeft`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorLeft
-@target(luau)
-pub fn selection_behavior_left(value: SelectionBehavior) -> Property(ImageButton) {
-  Property(fn(instance) { image_button.set_selection_behavior_left(instance, value) })
+pub fn selection_behavior_left(
+  value: SelectionBehavior,
+) -> Property(ImageButton) {
+  Property(fn(instance) {
+    image_button.set_selection_behavior_left(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiBase2d.SelectionBehaviorRight` on `ImageButton` nodes.
 ///
 /// Customizes gamepad selection behavior in the right direction.
@@ -632,11 +672,15 @@ pub fn selection_behavior_left(value: SelectionBehavior) -> Property(ImageButton
 /// Roblox: `GuiBase2d.SelectionBehaviorRight`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorRight
-@target(luau)
-pub fn selection_behavior_right(value: SelectionBehavior) -> Property(ImageButton) {
-  Property(fn(instance) { image_button.set_selection_behavior_right(instance, value) })
+pub fn selection_behavior_right(
+  value: SelectionBehavior,
+) -> Property(ImageButton) {
+  Property(fn(instance) {
+    image_button.set_selection_behavior_right(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiBase2d.SelectionBehaviorUp` on `ImageButton` nodes.
 ///
 /// Customizes gamepad selection behavior in the up direction.
@@ -644,11 +688,15 @@ pub fn selection_behavior_right(value: SelectionBehavior) -> Property(ImageButto
 /// Roblox: `GuiBase2d.SelectionBehaviorUp`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorUp
-@target(luau)
-pub fn selection_behavior_up(value: SelectionBehavior) -> Property(ImageButton) {
-  Property(fn(instance) { image_button.set_selection_behavior_up(instance, value) })
+pub fn selection_behavior_up(
+  value: SelectionBehavior,
+) -> Property(ImageButton) {
+  Property(fn(instance) {
+    image_button.set_selection_behavior_up(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiBase2d.SelectionGroup` on `ImageButton` nodes.
 ///
 /// Allows customization of gamepad selection movement.
@@ -656,11 +704,11 @@ pub fn selection_behavior_up(value: SelectionBehavior) -> Property(ImageButton) 
 /// Roblox: `GuiBase2d.SelectionGroup`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionGroup
-@target(luau)
 pub fn selection_group(value: Bool) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_selection_group(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `ImageButton` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -668,11 +716,11 @@ pub fn selection_group(value: Bool) -> Property(ImageButton) {
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_archivable(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `ImageButton` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -680,11 +728,11 @@ pub fn archivable(value: Bool) -> Property(ImageButton) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 pub fn capabilities(value: SecurityCapabilities) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_capabilities(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `ImageButton` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -692,11 +740,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(ImageButton) {
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `ImageButton` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -705,11 +753,11 @@ pub fn name(value: String) -> Property(ImageButton) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `ImageButton` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -718,13 +766,32 @@ pub fn parent(value: Instance) -> Property(ImageButton) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(ImageButton) {
   Property(fn(instance) { image_button.set_sandboxed(instance, value) })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: SelectionBehavior, _: LocalizationTable, _: SizeConstraint, _: UDim2, _: GuiObject, _: InputSink, _: BorderMode, _: Color3, _: AutomaticSize, _: Vector2, _: ButtonStyle, _: HapticEffect, _: Rect, _: ScaleType, _: ResamplerMode, _: Content, _: ContentId, _: ImageButton) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: SelectionBehavior,
+  _: LocalizationTable,
+  _: SizeConstraint,
+  _: UDim2,
+  _: GuiObject,
+  _: InputSink,
+  _: BorderMode,
+  _: Color3,
+  _: AutomaticSize,
+  _: Vector2,
+  _: ButtonStyle,
+  _: HapticEffect,
+  _: Rect,
+  _: ScaleType,
+  _: ResamplerMode,
+  _: Content,
+  _: ContentId,
+  _: ImageButton,
+) -> Nil {
   Nil
 }

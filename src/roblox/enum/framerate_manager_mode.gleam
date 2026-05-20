@@ -2,31 +2,33 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type FramerateManagerMode}
 
+@target(luau)
 /// Gets the Roblox `FramerateManagerMode` enum object.
 ///
 /// Roblox: `Enum.FramerateManagerMode`
 /// See: https://create.roblox.com/docs/reference/engine/enums/FramerateManagerMode
-@target(luau)
 @luau.global("Enum.FramerateManagerMode")
 pub fn roblox_enum() -> RobloxEnum(FramerateManagerMode)
 
-/// Roblox enum item `FramerateManagerMode.Automatic`.
 @target(luau)
+/// Roblox enum item `FramerateManagerMode.Automatic`.
 @luau.global("Enum.FramerateManagerMode.Automatic")
 pub fn automatic() -> FramerateManagerMode
 
-/// Roblox enum item `FramerateManagerMode.On`.
 @target(luau)
+/// Roblox enum item `FramerateManagerMode.On`.
 @luau.global("Enum.FramerateManagerMode.On")
 pub fn on() -> FramerateManagerMode
 
-/// Roblox enum item `FramerateManagerMode.Off`.
 @target(luau)
+/// Roblox enum item `FramerateManagerMode.Off`.
 @luau.global("Enum.FramerateManagerMode.Off")
 pub fn off() -> FramerateManagerMode
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(FramerateManagerMode), _: FramerateManagerMode) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(FramerateManagerMode),
+  _: FramerateManagerMode,
+) -> Nil {
   Nil
 }

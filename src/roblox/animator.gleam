@@ -1,74 +1,79 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type Animation, type AnimationTrack, type Animator, type CFrame, type ContentId, type Instance, type Object, type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type Animation, type AnimationTrack, type Animator, type CFrame,
+  type ContentId, type Instance, type Object, type OptionDouble,
+  type OptionInt64, type SecurityCapabilities, type UniqueId,
+}
 
+@target(luau)
 /// Creates a new Roblox `Animator` instance.
 ///
 /// Roblox: `Instance.new("Animator")`
-@target(luau)
 @luau.global("Instance.new(\"Animator\")")
 pub fn new() -> Animator
 
-/// Treats `Animator` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `Animator` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Animator) -> Instance
 
-/// Treats `Animator` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `Animator` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: Animator) -> Object
 
+@target(luau)
 /// Gets Roblox property `Animator.EvaluationThrottled`.
 ///
 /// Roblox: `Animator.EvaluationThrottled`
 /// ThreadSafety: Safe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Animator#EvaluationThrottled
-@target(luau)
 @luau.property("EvaluationThrottled")
 pub fn get_evaluation_throttled(instance: Animator) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Animator.PreferLodEnabled`.
 ///
 /// Roblox: `Animator.PreferLodEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Animator#PreferLodEnabled
-@target(luau)
 @luau.property("PreferLodEnabled")
 pub fn get_prefer_lod_enabled(instance: Animator) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Animator.PreferLodEnabled`.
 ///
 /// Roblox: `Animator.PreferLodEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Animator#PreferLodEnabled
-@target(luau)
 @luau.set_property("PreferLodEnabled")
 pub fn set_prefer_lod_enabled(instance: Animator, value: Bool) -> Animator
 
+@target(luau)
 /// Gets Roblox property `Animator.RootMotion`.
 ///
 /// Roblox: `Animator.RootMotion`
 /// ThreadSafety: Safe
 /// Tags: ReadOnly, NotReplicated, NotBrowsable
 /// See: https://create.roblox.com/docs/reference/engine/classes/Animator#RootMotion
-@target(luau)
 @luau.property("RootMotion")
 pub fn get_root_motion(instance: Animator) -> CFrame
 
+@target(luau)
 /// Gets Roblox property `Animator.RootMotionWeight`.
 ///
 /// Roblox: `Animator.RootMotionWeight`
 /// ThreadSafety: Safe
 /// Tags: ReadOnly, NotReplicated, NotBrowsable
 /// See: https://create.roblox.com/docs/reference/engine/classes/Animator#RootMotionWeight
-@target(luau)
 @luau.property("RootMotionWeight")
 pub fn get_root_motion_weight(instance: Animator) -> Float
 
+@target(luau)
 /// Computes relative velocities between parts and applies them to Motor6D.Part1.
 ///
 /// Roblox: `Animator.ApplyJointVelocities`
@@ -77,10 +82,10 @@ pub fn get_root_motion_weight(instance: Animator) -> Float
 ///
 /// Parameters:
 /// - `instance`: Responsible for the playback and replication of Animations.
-@target(luau)
 @luau.method("ApplyJointVelocities")
 pub fn apply_joint_velocities(instance: Animator, motors: Dynamic) -> Nil
 
+@target(luau)
 /// Returns the list of currently active AnimationTracks.
 ///
 /// Roblox: `Animator.GetPlayingAnimationTracks`
@@ -89,10 +94,10 @@ pub fn apply_joint_velocities(instance: Animator, motors: Dynamic) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Responsible for the playback and replication of Animations.
-@target(luau)
 @luau.method("GetPlayingAnimationTracks")
 pub fn get_playing_animation_tracks(instance: Animator) -> List(AnimationTrack)
 
+@target(luau)
 /// Returns an existing AnimationTrack on this Animator that was loaded from an Animation with the given animation ID. Unlike LoadAnimation(), this method does not create a new AnimationTrack instance.
 ///
 /// Roblox: `Animator.GetTrackByAnimationId`
@@ -105,10 +110,13 @@ pub fn get_playing_animation_tracks(instance: Animator) -> List(AnimationTrack)
 ///
 /// Returns:
 /// - The first AnimationTrack on this Animator that was loaded from the given animation ID, or nil if none has been loaded.
-@target(luau)
 @luau.method("GetTrackByAnimationId")
-pub fn get_track_by_animation_id(instance: Animator, animation_id: ContentId) -> AnimationTrack
+pub fn get_track_by_animation_id(
+  instance: Animator,
+  animation_id: ContentId,
+) -> AnimationTrack
 
+@target(luau)
 /// Loads an Animation onto an Animator, returning an AnimationTrack.
 ///
 /// Roblox: `Animator.LoadAnimation`
@@ -118,29 +126,37 @@ pub fn get_track_by_animation_id(instance: Animator, animation_id: ContentId) ->
 /// Parameters:
 /// - `instance`: Responsible for the playback and replication of Animations.
 /// - `animation`: The Animation to be used.
-@target(luau)
 @luau.method("LoadAnimation")
-pub fn load_animation(instance: Animator, animation: Animation) -> AnimationTrack
+pub fn load_animation(
+  instance: Animator,
+  animation: Animation,
+) -> AnimationTrack
 
+@target(luau)
 /// Roblox: `Animator.RegisterEvaluationParallelCallback`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Animator#RegisterEvaluationParallelCallback
 ///
 /// Parameters:
 /// - `instance`: Responsible for the playback and replication of Animations.
-@target(luau)
 @luau.method("RegisterEvaluationParallelCallback")
-pub fn register_evaluation_parallel_callback(instance: Animator, callback: Dynamic) -> Nil
+pub fn register_evaluation_parallel_callback(
+  instance: Animator,
+  callback: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Fires when the Animator starts playing an AnimationTrack.
 ///
 /// Roblox: `Animator.AnimationPlayed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Animator#AnimationPlayed
-@target(luau)
 @luau.event("AnimationPlayed")
-pub fn animation_played(instance: Animator) -> RBXScriptSignal(fn(AnimationTrack) -> Nil)
+pub fn animation_played(
+  instance: Animator,
+) -> RBXScriptSignal(fn(AnimationTrack) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Animator.AnimationPlayed`.
 ///
 /// Fires when the Animator starts playing an AnimationTrack.
@@ -148,10 +164,13 @@ pub fn animation_played(instance: Animator) -> RBXScriptSignal(fn(AnimationTrack
 /// Roblox: `Animator.AnimationPlayed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Animator#AnimationPlayed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AnimationPlayed:Connect(callback) end)")
-pub fn on_animation_played(instance: Animator, callback: fn(AnimationTrack) -> Nil) -> RBXScriptConnection
+pub fn on_animation_played(
+  instance: Animator,
+  callback: fn(AnimationTrack) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -159,10 +178,10 @@ pub fn on_animation_played(instance: Animator, callback: fn(AnimationTrack) -> N
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: Animator) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -170,10 +189,10 @@ pub fn get_archivable(instance: Animator) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: Animator, value: Bool) -> Animator
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -181,10 +200,10 @@ pub fn set_archivable(instance: Animator, value: Bool) -> Animator
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: Animator) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -192,10 +211,13 @@ pub fn get_capabilities(instance: Animator) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: Animator, value: SecurityCapabilities) -> Animator
+pub fn set_capabilities(
+  instance: Animator,
+  value: SecurityCapabilities,
+) -> Animator
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -203,10 +225,10 @@ pub fn set_capabilities(instance: Animator, value: SecurityCapabilities) -> Anim
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: Animator) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -214,10 +236,10 @@ pub fn get_name(instance: Animator) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: Animator, value: String) -> Animator
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -226,10 +248,10 @@ pub fn set_name(instance: Animator, value: String) -> Animator
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: Animator) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -238,10 +260,10 @@ pub fn get_parent(instance: Animator) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: Animator, value: parent) -> Animator
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -250,10 +272,10 @@ pub fn set_parent(instance: Animator, value: parent) -> Animator
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: Animator) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -262,10 +284,10 @@ pub fn get_roblox_locked(instance: Animator) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: Animator) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -274,20 +296,20 @@ pub fn get_sandboxed(instance: Animator) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: Animator, value: Bool) -> Animator
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: Animator) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -296,10 +318,10 @@ pub fn get_source_asset_id(instance: Animator) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: Animator) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -308,10 +330,10 @@ pub fn get_unique_id(instance: Animator) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: Animator, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -320,10 +342,10 @@ pub fn add_tag(instance: Animator, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: Animator) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -332,10 +354,10 @@ pub fn clear_all_children(instance: Animator) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: Animator) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -344,10 +366,10 @@ pub fn clone(instance: Animator) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: Animator) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -360,10 +382,10 @@ pub fn destroy_instance(instance: Animator) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
 pub fn find_first_ancestor(instance: Animator, name: String) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -376,10 +398,13 @@ pub fn find_first_ancestor(instance: Animator, name: String) -> Option(Instance)
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: Animator, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: Animator,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -392,10 +417,13 @@ pub fn find_first_ancestor_of_class(instance: Animator, class_name: String) -> O
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: Animator, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: Animator,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -409,10 +437,14 @@ pub fn find_first_ancestor_which_is_a(instance: Animator, class_name: String) ->
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: Animator, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: Animator,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -425,10 +457,13 @@ pub fn find_first_child(instance: Animator, name: String, recursive: Bool) -> Op
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: Animator, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: Animator,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -442,10 +477,14 @@ pub fn find_first_child_of_class(instance: Animator, class_name: String) -> Opti
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: Animator, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: Animator,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -458,10 +497,13 @@ pub fn find_first_child_which_is_a(instance: Animator, class_name: String, recur
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: Animator, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: Animator,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -473,10 +515,10 @@ pub fn find_first_descendant(instance: Animator, name: String) -> Option(Instanc
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: Animator) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -489,10 +531,10 @@ pub fn get_actor(instance: Animator) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: Animator, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -505,10 +547,13 @@ pub fn get_attribute(instance: Animator, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: Animator, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: Animator,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -521,10 +566,10 @@ pub fn get_attribute_changed_signal(instance: Animator, attribute: String) -> RB
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: Animator) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -536,10 +581,10 @@ pub fn get_attributes(instance: Animator) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: Animator) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -552,10 +597,10 @@ pub fn get_children(instance: Animator) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: Animator) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -567,10 +612,10 @@ pub fn get_descendants(instance: Animator) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: Animator) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -584,10 +629,14 @@ pub fn get_full_name(instance: Animator) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: Animator, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: Animator,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -598,10 +647,13 @@ pub fn get_styled(instance: Animator, name: String, selector: Option(String)) ->
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: Animator, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: Animator,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -610,10 +662,10 @@ pub fn get_styled_property_changed_signal(instance: Animator, property: String) 
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: Animator) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -622,10 +674,10 @@ pub fn get_tags(instance: Animator) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: Animator, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -638,10 +690,10 @@ pub fn has_tag(instance: Animator, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: Animator, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -654,10 +706,10 @@ pub fn is_ancestor_of(instance: Animator, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: Animator, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -670,10 +722,10 @@ pub fn is_descendant_of(instance: Animator, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: Animator, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -685,10 +737,10 @@ pub fn is_property_modified(instance: Animator, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
 pub fn query_descendants(instance: Animator, selector: String) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -697,10 +749,10 @@ pub fn query_descendants(instance: Animator, selector: String) -> List(Instance)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: Animator, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -710,10 +762,10 @@ pub fn remove_tag(instance: Animator, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
 pub fn reset_property_to_default(instance: Animator, property: String) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -724,10 +776,14 @@ pub fn reset_property_to_default(instance: Animator, property: String) -> Nil
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: Animator, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: Animator,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -742,19 +798,25 @@ pub fn set_attribute(instance: Animator, attribute: String, value: Dynamic) -> N
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: Animator, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: Animator,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: Animator) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: Animator,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -762,19 +824,24 @@ pub fn ancestry_changed(instance: Animator) -> RBXScriptSignal(fn(Instance, Inst
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: Animator, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: Animator,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: Animator) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: Animator,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -782,19 +849,22 @@ pub fn attribute_changed(instance: Animator) -> RBXScriptSignal(fn(String) -> Ni
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: Animator, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: Animator,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
 pub fn child_added(instance: Animator) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -802,19 +872,22 @@ pub fn child_added(instance: Animator) -> RBXScriptSignal(fn(Instance) -> Nil)
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: Animator, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: Animator,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
 pub fn child_removed(instance: Animator) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -822,19 +895,24 @@ pub fn child_removed(instance: Animator) -> RBXScriptSignal(fn(Instance) -> Nil)
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: Animator, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: Animator,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: Animator) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: Animator,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -842,19 +920,24 @@ pub fn descendant_added(instance: Animator) -> RBXScriptSignal(fn(Instance) -> N
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: Animator, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: Animator,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: Animator) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: Animator,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -862,19 +945,22 @@ pub fn descendant_removing(instance: Animator) -> RBXScriptSignal(fn(Instance) -
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: Animator, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: Animator,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: Animator) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -882,19 +968,24 @@ pub fn destroying(instance: Animator) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: Animator, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: Animator,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: Animator) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: Animator,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -902,10 +993,13 @@ pub fn styled_properties_changed(instance: Animator) -> RBXScriptSignal(fn() -> 
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: Animator, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: Animator,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -914,10 +1008,10 @@ pub fn on_styled_properties_changed(instance: Animator, callback: fn() -> Nil) -
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: Animator) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -930,10 +1024,13 @@ pub fn get_class_name(instance: Animator) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: Animator, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: Animator,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -947,19 +1044,19 @@ pub fn get_property_changed_signal(instance: Animator, property: String) -> RBXS
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: Animator, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: Animator) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -967,12 +1064,30 @@ pub fn changed(instance: Animator) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: Animator, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: Animator,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: AnimationTrack, _: Animation, _: ContentId, _: CFrame, _: Animator, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: AnimationTrack,
+  _: Animation,
+  _: ContentId,
+  _: CFrame,
+  _: Animator,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

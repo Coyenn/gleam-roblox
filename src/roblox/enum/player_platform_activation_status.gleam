@@ -2,40 +2,42 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type PlayerPlatformActivationStatus}
 
+@target(luau)
 /// Gets the Roblox `PlayerPlatformActivationStatus` enum object.
 ///
 /// Roblox: `Enum.PlayerPlatformActivationStatus`
-@target(luau)
 @luau.global("Enum.PlayerPlatformActivationStatus")
 pub fn roblox_enum() -> RobloxEnum(PlayerPlatformActivationStatus)
 
-/// Roblox enum item `PlayerPlatformActivationStatus.Unknown`.
 @target(luau)
+/// Roblox enum item `PlayerPlatformActivationStatus.Unknown`.
 @luau.global("Enum.PlayerPlatformActivationStatus.Unknown")
 pub fn unknown() -> PlayerPlatformActivationStatus
 
-/// Roblox enum item `PlayerPlatformActivationStatus.New`.
 @target(luau)
+/// Roblox enum item `PlayerPlatformActivationStatus.New`.
 @luau.global("Enum.PlayerPlatformActivationStatus.New")
 pub fn new() -> PlayerPlatformActivationStatus
 
-/// Roblox enum item `PlayerPlatformActivationStatus.Active`.
 @target(luau)
+/// Roblox enum item `PlayerPlatformActivationStatus.Active`.
 @luau.global("Enum.PlayerPlatformActivationStatus.Active")
 pub fn active() -> PlayerPlatformActivationStatus
 
-/// Roblox enum item `PlayerPlatformActivationStatus.Lapsed`.
 @target(luau)
+/// Roblox enum item `PlayerPlatformActivationStatus.Lapsed`.
 @luau.global("Enum.PlayerPlatformActivationStatus.Lapsed")
 pub fn lapsed() -> PlayerPlatformActivationStatus
 
-/// Roblox enum item `PlayerPlatformActivationStatus.Reactivated`.
 @target(luau)
+/// Roblox enum item `PlayerPlatformActivationStatus.Reactivated`.
 @luau.global("Enum.PlayerPlatformActivationStatus.Reactivated")
 pub fn reactivated() -> PlayerPlatformActivationStatus
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(PlayerPlatformActivationStatus), _: PlayerPlatformActivationStatus) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(PlayerPlatformActivationStatus),
+  _: PlayerPlatformActivationStatus,
+) -> Nil {
   Nil
 }

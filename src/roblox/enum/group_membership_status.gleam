@@ -2,36 +2,38 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type GroupMembershipStatus}
 
+@target(luau)
 /// Defines the possible outcomes of the GroupService:PromptJoinAsync() method.
 ///
 /// Roblox: `Enum.GroupMembershipStatus`
 /// See: https://create.roblox.com/docs/reference/engine/enums/GroupMembershipStatus
-@target(luau)
 @luau.global("Enum.GroupMembershipStatus")
 pub fn roblox_enum() -> RobloxEnum(GroupMembershipStatus)
 
-/// Roblox enum item `GroupMembershipStatus.None`.
 @target(luau)
+/// Roblox enum item `GroupMembershipStatus.None`.
 @luau.global("Enum.GroupMembershipStatus.None")
 pub fn none() -> GroupMembershipStatus
 
-/// Roblox enum item `GroupMembershipStatus.Joined`.
 @target(luau)
+/// Roblox enum item `GroupMembershipStatus.Joined`.
 @luau.global("Enum.GroupMembershipStatus.Joined")
 pub fn joined() -> GroupMembershipStatus
 
-/// Roblox enum item `GroupMembershipStatus.JoinRequestPending`.
 @target(luau)
+/// Roblox enum item `GroupMembershipStatus.JoinRequestPending`.
 @luau.global("Enum.GroupMembershipStatus.JoinRequestPending")
 pub fn join_request_pending() -> GroupMembershipStatus
 
-/// Roblox enum item `GroupMembershipStatus.AlreadyMember`.
 @target(luau)
+/// Roblox enum item `GroupMembershipStatus.AlreadyMember`.
 @luau.global("Enum.GroupMembershipStatus.AlreadyMember")
 pub fn already_member() -> GroupMembershipStatus
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(GroupMembershipStatus), _: GroupMembershipStatus) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(GroupMembershipStatus),
+  _: GroupMembershipStatus,
+) -> Nil {
   Nil
 }

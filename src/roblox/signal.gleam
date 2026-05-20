@@ -13,9 +13,9 @@ pub fn connect(
 @luau.method("Disconnect")
 pub fn disconnect(connection: RBXScriptConnection) -> Nil
 
+@target(luau)
 /// Connects a signal for the duration of `body`, disconnecting afterwards even
 /// if `body` panics.
-@target(luau)
 @luau.global("(function(signal, callback, body) local connection = signal:Connect(callback) local ok, result = pcall(body, connection) connection:Disconnect() if ok then return result end error(result) end)")
 pub fn with_connection(
   signal: RBXScriptSignal(callback),

@@ -1,19 +1,26 @@
 // Generated declarative builders for Roblox `AudioDeviceInput` instances.
-import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/audio_device_input
-import roblox/types.{type AccessModifierType, type AudioDeviceInput, type Instance, type Player, type SecurityCapabilities}
+import roblox/create.{type Node, type Property, Node, Property, apply}
+import roblox/types.{
+  type AccessModifierType, type AudioDeviceInput, type Instance, type Player,
+  type SecurityCapabilities,
+}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: AudioDeviceInput) -> Instance
 
-/// Creates a declarative Roblox `AudioDeviceInput` node.
 @target(luau)
-pub fn node(properties: List(Property(AudioDeviceInput)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `AudioDeviceInput` node.
+pub fn node(
+  properties: List(Property(AudioDeviceInput)),
+  children: List(Node),
+) -> Node {
   let instance = apply(audio_device_input.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AudioDeviceInput.AccessType` on `AudioDeviceInput` nodes.
 ///
 /// Determines whether the list of user IDs provided to SetUserIdAccessList is treated as an allow-list or deny-list.
@@ -21,11 +28,11 @@ pub fn node(properties: List(Property(AudioDeviceInput)), children: List(Node)) 
 /// Roblox: `AudioDeviceInput.AccessType`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioDeviceInput#AccessType
-@target(luau)
 pub fn access_type(value: AccessModifierType) -> Property(AudioDeviceInput) {
   Property(fn(instance) { audio_device_input.set_access_type(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AudioDeviceInput.Muted` on `AudioDeviceInput` nodes.
 ///
 /// Controls whether this AudioDeviceInput is muted.
@@ -33,11 +40,11 @@ pub fn access_type(value: AccessModifierType) -> Property(AudioDeviceInput) {
 /// Roblox: `AudioDeviceInput.Muted`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioDeviceInput#Muted
-@target(luau)
 pub fn muted(value: Bool) -> Property(AudioDeviceInput) {
   Property(fn(instance) { audio_device_input.set_muted(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AudioDeviceInput.Player` on `AudioDeviceInput` nodes.
 ///
 /// Determines whose device is producing sound.
@@ -45,11 +52,11 @@ pub fn muted(value: Bool) -> Property(AudioDeviceInput) {
 /// Roblox: `AudioDeviceInput.Player`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioDeviceInput#Player
-@target(luau)
 pub fn player(value: Player) -> Property(AudioDeviceInput) {
   Property(fn(instance) { audio_device_input.set_player(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AudioDeviceInput.Volume` on `AudioDeviceInput` nodes.
 ///
 /// Volume level which is multiplied onto the output audio stream.
@@ -57,11 +64,11 @@ pub fn player(value: Player) -> Property(AudioDeviceInput) {
 /// Roblox: `AudioDeviceInput.Volume`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioDeviceInput#Volume
-@target(luau)
 pub fn volume(value: Float) -> Property(AudioDeviceInput) {
   Property(fn(instance) { audio_device_input.set_volume(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `AudioDeviceInput` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -69,11 +76,11 @@ pub fn volume(value: Float) -> Property(AudioDeviceInput) {
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(AudioDeviceInput) {
   Property(fn(instance) { audio_device_input.set_archivable(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `AudioDeviceInput` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -81,11 +88,11 @@ pub fn archivable(value: Bool) -> Property(AudioDeviceInput) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 pub fn capabilities(value: SecurityCapabilities) -> Property(AudioDeviceInput) {
   Property(fn(instance) { audio_device_input.set_capabilities(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `AudioDeviceInput` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -93,11 +100,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(AudioDeviceInput) {
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(AudioDeviceInput) {
   Property(fn(instance) { audio_device_input.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `AudioDeviceInput` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -106,11 +113,11 @@ pub fn name(value: String) -> Property(AudioDeviceInput) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(AudioDeviceInput) {
   Property(fn(instance) { audio_device_input.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `AudioDeviceInput` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -119,13 +126,17 @@ pub fn parent(value: Instance) -> Property(AudioDeviceInput) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(AudioDeviceInput) {
   Property(fn(instance) { audio_device_input.set_sandboxed(instance, value) })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: Player, _: AccessModifierType, _: AudioDeviceInput) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: Player,
+  _: AccessModifierType,
+  _: AudioDeviceInput,
+) -> Nil {
   Nil
 }

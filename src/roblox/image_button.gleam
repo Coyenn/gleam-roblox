@@ -1,56 +1,67 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type AutomaticSize, type BorderMode, type ButtonStyle, type Color3, type Content, type ContentId, type EasingDirection, type EasingStyle, type GuiBase, type GuiBase2d, type GuiButton, type GuiObject, type GuiState, type HapticEffect, type ImageButton, type InputObject, type InputSink, type Instance, type LocalizationTable, type Object, type OptionDouble, type OptionInt64, type Rect, type ResamplerMode, type ScaleType, type SecurityCapabilities, type SelectionBehavior, type SizeConstraint, type SwipeDirection, type UDim2, type UniqueId, type UserInputState, type Vector2}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type AutomaticSize, type BorderMode, type ButtonStyle, type Color3,
+  type Content, type ContentId, type EasingDirection, type EasingStyle,
+  type GuiBase, type GuiBase2d, type GuiButton, type GuiObject, type GuiState,
+  type HapticEffect, type ImageButton, type InputObject, type InputSink,
+  type Instance, type LocalizationTable, type Object, type OptionDouble,
+  type OptionInt64, type Rect, type ResamplerMode, type ScaleType,
+  type SecurityCapabilities, type SelectionBehavior, type SizeConstraint,
+  type SwipeDirection, type UDim2, type UniqueId, type UserInputState,
+  type Vector2,
+}
 
+@target(luau)
 /// Creates a new Roblox `ImageButton` instance.
 ///
 /// Roblox: `Instance.new("ImageButton")`
-@target(luau)
 @luau.global("Instance.new(\"ImageButton\")")
 pub fn new() -> ImageButton
 
-/// Treats `ImageButton` as its Roblox ancestor `GuiButton`.
 @target(luau)
+/// Treats `ImageButton` as its Roblox ancestor `GuiButton`.
 @luau.global("(function(x) return x end)")
 pub fn as_gui_button(instance: ImageButton) -> GuiButton
 
-/// Treats `ImageButton` as its Roblox ancestor `GuiObject`.
 @target(luau)
+/// Treats `ImageButton` as its Roblox ancestor `GuiObject`.
 @luau.global("(function(x) return x end)")
 pub fn as_gui_object(instance: ImageButton) -> GuiObject
 
-/// Treats `ImageButton` as its Roblox ancestor `GuiBase2d`.
 @target(luau)
+/// Treats `ImageButton` as its Roblox ancestor `GuiBase2d`.
 @luau.global("(function(x) return x end)")
 pub fn as_gui_base2d(instance: ImageButton) -> GuiBase2d
 
-/// Treats `ImageButton` as its Roblox ancestor `GuiBase`.
 @target(luau)
+/// Treats `ImageButton` as its Roblox ancestor `GuiBase`.
 @luau.global("(function(x) return x end)")
 pub fn as_gui_base(instance: ImageButton) -> GuiBase
 
-/// Treats `ImageButton` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `ImageButton` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ImageButton) -> Instance
 
-/// Treats `ImageButton` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `ImageButton` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: ImageButton) -> Object
 
+@target(luau)
 /// Gets Roblox property `ImageButton.ContentImageSize`.
 ///
 /// Roblox: `ImageButton.ContentImageSize`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ContentImageSize
-@target(luau)
 @luau.property("ContentImageSize")
 pub fn get_content_image_size(instance: ImageButton) -> Vector2
 
+@target(luau)
 /// Gets Roblox property `ImageButton.HoverImage`.
 ///
 /// A texture ID that will be used when the ImageButton is being hovered.
@@ -58,10 +69,10 @@ pub fn get_content_image_size(instance: ImageButton) -> Vector2
 /// Roblox: `ImageButton.HoverImage`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#HoverImage
-@target(luau)
 @luau.property("HoverImage")
 pub fn get_hover_image(instance: ImageButton) -> ContentId
 
+@target(luau)
 /// Sets Roblox property `ImageButton.HoverImage`.
 ///
 /// A texture ID that will be used when the ImageButton is being hovered.
@@ -69,10 +80,10 @@ pub fn get_hover_image(instance: ImageButton) -> ContentId
 /// Roblox: `ImageButton.HoverImage`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#HoverImage
-@target(luau)
 @luau.set_property("HoverImage")
 pub fn set_hover_image(instance: ImageButton, value: ContentId) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `ImageButton.HoverImageContent`.
 ///
 /// The image content that will be used when the ImageButton is being hovered. Only supports asset URIs.
@@ -80,10 +91,10 @@ pub fn set_hover_image(instance: ImageButton, value: ContentId) -> ImageButton
 /// Roblox: `ImageButton.HoverImageContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#HoverImageContent
-@target(luau)
 @luau.property("HoverImageContent")
 pub fn get_hover_image_content(instance: ImageButton) -> Content
 
+@target(luau)
 /// Sets Roblox property `ImageButton.HoverImageContent`.
 ///
 /// The image content that will be used when the ImageButton is being hovered. Only supports asset URIs.
@@ -91,10 +102,13 @@ pub fn get_hover_image_content(instance: ImageButton) -> Content
 /// Roblox: `ImageButton.HoverImageContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#HoverImageContent
-@target(luau)
 @luau.set_property("HoverImageContent")
-pub fn set_hover_image_content(instance: ImageButton, value: Content) -> ImageButton
+pub fn set_hover_image_content(
+  instance: ImageButton,
+  value: Content,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `ImageButton.Image`.
 ///
 /// The image content displayed by the ImageButton element. Reads and writes to ImageContent.
@@ -102,10 +116,10 @@ pub fn set_hover_image_content(instance: ImageButton, value: Content) -> ImageBu
 /// Roblox: `ImageButton.Image`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#Image
-@target(luau)
 @luau.property("Image")
 pub fn get_image(instance: ImageButton) -> ContentId
 
+@target(luau)
 /// Sets Roblox property `ImageButton.Image`.
 ///
 /// The image content displayed by the ImageButton element. Reads and writes to ImageContent.
@@ -113,10 +127,10 @@ pub fn get_image(instance: ImageButton) -> ContentId
 /// Roblox: `ImageButton.Image`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#Image
-@target(luau)
 @luau.set_property("Image")
 pub fn set_image(instance: ImageButton, value: ContentId) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `ImageButton.ImageColor3`.
 ///
 /// Determines how a rendered image will be colorized.
@@ -124,10 +138,10 @@ pub fn set_image(instance: ImageButton, value: ContentId) -> ImageButton
 /// Roblox: `ImageButton.ImageColor3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageColor3
-@target(luau)
 @luau.property("ImageColor3")
 pub fn get_image_color3(instance: ImageButton) -> Color3
 
+@target(luau)
 /// Sets Roblox property `ImageButton.ImageColor3`.
 ///
 /// Determines how a rendered image will be colorized.
@@ -135,10 +149,10 @@ pub fn get_image_color3(instance: ImageButton) -> Color3
 /// Roblox: `ImageButton.ImageColor3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageColor3
-@target(luau)
 @luau.set_property("ImageColor3")
 pub fn set_image_color3(instance: ImageButton, value: Color3) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `ImageButton.ImageContent`.
 ///
 /// The image content displayed by the UI element. Supports asset URIs and EditableImage objects.
@@ -146,10 +160,10 @@ pub fn set_image_color3(instance: ImageButton, value: Color3) -> ImageButton
 /// Roblox: `ImageButton.ImageContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageContent
-@target(luau)
 @luau.property("ImageContent")
 pub fn get_image_content(instance: ImageButton) -> Content
 
+@target(luau)
 /// Sets Roblox property `ImageButton.ImageContent`.
 ///
 /// The image content displayed by the UI element. Supports asset URIs and EditableImage objects.
@@ -157,10 +171,10 @@ pub fn get_image_content(instance: ImageButton) -> Content
 /// Roblox: `ImageButton.ImageContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageContent
-@target(luau)
 @luau.set_property("ImageContent")
 pub fn set_image_content(instance: ImageButton, value: Content) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `ImageButton.ImageRectOffset`.
 ///
 /// The offset in pixels of the sub-area of an image to be displayed.
@@ -168,10 +182,10 @@ pub fn set_image_content(instance: ImageButton, value: Content) -> ImageButton
 /// Roblox: `ImageButton.ImageRectOffset`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageRectOffset
-@target(luau)
 @luau.property("ImageRectOffset")
 pub fn get_image_rect_offset(instance: ImageButton) -> Vector2
 
+@target(luau)
 /// Sets Roblox property `ImageButton.ImageRectOffset`.
 ///
 /// The offset in pixels of the sub-area of an image to be displayed.
@@ -179,10 +193,13 @@ pub fn get_image_rect_offset(instance: ImageButton) -> Vector2
 /// Roblox: `ImageButton.ImageRectOffset`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageRectOffset
-@target(luau)
 @luau.set_property("ImageRectOffset")
-pub fn set_image_rect_offset(instance: ImageButton, value: Vector2) -> ImageButton
+pub fn set_image_rect_offset(
+  instance: ImageButton,
+  value: Vector2,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `ImageButton.ImageRectSize`.
 ///
 /// Determines the size in pixels of the sub-area of an image to be displayed.
@@ -190,10 +207,10 @@ pub fn set_image_rect_offset(instance: ImageButton, value: Vector2) -> ImageButt
 /// Roblox: `ImageButton.ImageRectSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageRectSize
-@target(luau)
 @luau.property("ImageRectSize")
 pub fn get_image_rect_size(instance: ImageButton) -> Vector2
 
+@target(luau)
 /// Sets Roblox property `ImageButton.ImageRectSize`.
 ///
 /// Determines the size in pixels of the sub-area of an image to be displayed.
@@ -201,10 +218,10 @@ pub fn get_image_rect_size(instance: ImageButton) -> Vector2
 /// Roblox: `ImageButton.ImageRectSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageRectSize
-@target(luau)
 @luau.set_property("ImageRectSize")
 pub fn set_image_rect_size(instance: ImageButton, value: Vector2) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `ImageButton.ImageTransparency`.
 ///
 /// Determines the transparency of the rendered image.
@@ -212,10 +229,10 @@ pub fn set_image_rect_size(instance: ImageButton, value: Vector2) -> ImageButton
 /// Roblox: `ImageButton.ImageTransparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageTransparency
-@target(luau)
 @luau.property("ImageTransparency")
 pub fn get_image_transparency(instance: ImageButton) -> Float
 
+@target(luau)
 /// Sets Roblox property `ImageButton.ImageTransparency`.
 ///
 /// Determines the transparency of the rendered image.
@@ -223,10 +240,13 @@ pub fn get_image_transparency(instance: ImageButton) -> Float
 /// Roblox: `ImageButton.ImageTransparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ImageTransparency
-@target(luau)
 @luau.set_property("ImageTransparency")
-pub fn set_image_transparency(instance: ImageButton, value: Float) -> ImageButton
+pub fn set_image_transparency(
+  instance: ImageButton,
+  value: Float,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `ImageButton.IsLoaded`.
 ///
 /// Indicates whether the Image has finished loading from the Roblox website.
@@ -235,10 +255,10 @@ pub fn set_image_transparency(instance: ImageButton, value: Float) -> ImageButto
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#IsLoaded
-@target(luau)
 @luau.property("IsLoaded")
 pub fn get_is_loaded(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Gets Roblox property `ImageButton.PressedImage`.
 ///
 /// A texture ID that will be used when an ImageButton is being pressed.
@@ -246,10 +266,10 @@ pub fn get_is_loaded(instance: ImageButton) -> Bool
 /// Roblox: `ImageButton.PressedImage`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#PressedImage
-@target(luau)
 @luau.property("PressedImage")
 pub fn get_pressed_image(instance: ImageButton) -> ContentId
 
+@target(luau)
 /// Sets Roblox property `ImageButton.PressedImage`.
 ///
 /// A texture ID that will be used when an ImageButton is being pressed.
@@ -257,10 +277,10 @@ pub fn get_pressed_image(instance: ImageButton) -> ContentId
 /// Roblox: `ImageButton.PressedImage`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#PressedImage
-@target(luau)
 @luau.set_property("PressedImage")
 pub fn set_pressed_image(instance: ImageButton, value: ContentId) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `ImageButton.PressedImageContent`.
 ///
 /// The image content that will be used when an ImageButton is being pressed. Only supports asset URIs.
@@ -268,10 +288,10 @@ pub fn set_pressed_image(instance: ImageButton, value: ContentId) -> ImageButton
 /// Roblox: `ImageButton.PressedImageContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#PressedImageContent
-@target(luau)
 @luau.property("PressedImageContent")
 pub fn get_pressed_image_content(instance: ImageButton) -> Content
 
+@target(luau)
 /// Sets Roblox property `ImageButton.PressedImageContent`.
 ///
 /// The image content that will be used when an ImageButton is being pressed. Only supports asset URIs.
@@ -279,10 +299,13 @@ pub fn get_pressed_image_content(instance: ImageButton) -> Content
 /// Roblox: `ImageButton.PressedImageContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#PressedImageContent
-@target(luau)
 @luau.set_property("PressedImageContent")
-pub fn set_pressed_image_content(instance: ImageButton, value: Content) -> ImageButton
+pub fn set_pressed_image_content(
+  instance: ImageButton,
+  value: Content,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `ImageButton.ResampleMode`.
 ///
 /// Selects the image resampling mode for the button.
@@ -290,10 +313,10 @@ pub fn set_pressed_image_content(instance: ImageButton, value: Content) -> Image
 /// Roblox: `ImageButton.ResampleMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ResampleMode
-@target(luau)
 @luau.property("ResampleMode")
 pub fn get_resample_mode(instance: ImageButton) -> ResamplerMode
 
+@target(luau)
 /// Sets Roblox property `ImageButton.ResampleMode`.
 ///
 /// Selects the image resampling mode for the button.
@@ -301,10 +324,13 @@ pub fn get_resample_mode(instance: ImageButton) -> ResamplerMode
 /// Roblox: `ImageButton.ResampleMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ResampleMode
-@target(luau)
 @luau.set_property("ResampleMode")
-pub fn set_resample_mode(instance: ImageButton, value: ResamplerMode) -> ImageButton
+pub fn set_resample_mode(
+  instance: ImageButton,
+  value: ResamplerMode,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `ImageButton.ScaleType`.
 ///
 /// Determines how an image will scale if displayed in a UI element whose size differs from the source image.
@@ -312,10 +338,10 @@ pub fn set_resample_mode(instance: ImageButton, value: ResamplerMode) -> ImageBu
 /// Roblox: `ImageButton.ScaleType`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ScaleType
-@target(luau)
 @luau.property("ScaleType")
 pub fn get_scale_type(instance: ImageButton) -> ScaleType
 
+@target(luau)
 /// Sets Roblox property `ImageButton.ScaleType`.
 ///
 /// Determines how an image will scale if displayed in a UI element whose size differs from the source image.
@@ -323,10 +349,10 @@ pub fn get_scale_type(instance: ImageButton) -> ScaleType
 /// Roblox: `ImageButton.ScaleType`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#ScaleType
-@target(luau)
 @luau.set_property("ScaleType")
 pub fn set_scale_type(instance: ImageButton, value: ScaleType) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `ImageButton.SliceCenter`.
 ///
 /// Sets the slice boundaries of a 9-sliced image.
@@ -334,10 +360,10 @@ pub fn set_scale_type(instance: ImageButton, value: ScaleType) -> ImageButton
 /// Roblox: `ImageButton.SliceCenter`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#SliceCenter
-@target(luau)
 @luau.property("SliceCenter")
 pub fn get_slice_center(instance: ImageButton) -> Rect
 
+@target(luau)
 /// Sets Roblox property `ImageButton.SliceCenter`.
 ///
 /// Sets the slice boundaries of a 9-sliced image.
@@ -345,10 +371,10 @@ pub fn get_slice_center(instance: ImageButton) -> Rect
 /// Roblox: `ImageButton.SliceCenter`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#SliceCenter
-@target(luau)
 @luau.set_property("SliceCenter")
 pub fn set_slice_center(instance: ImageButton, value: Rect) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `ImageButton.SliceScale`.
 ///
 /// Scales the 9-slice edges by the specified ratio.
@@ -356,10 +382,10 @@ pub fn set_slice_center(instance: ImageButton, value: Rect) -> ImageButton
 /// Roblox: `ImageButton.SliceScale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#SliceScale
-@target(luau)
 @luau.property("SliceScale")
 pub fn get_slice_scale(instance: ImageButton) -> Float
 
+@target(luau)
 /// Sets Roblox property `ImageButton.SliceScale`.
 ///
 /// Scales the 9-slice edges by the specified ratio.
@@ -367,10 +393,10 @@ pub fn get_slice_scale(instance: ImageButton) -> Float
 /// Roblox: `ImageButton.SliceScale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#SliceScale
-@target(luau)
 @luau.set_property("SliceScale")
 pub fn set_slice_scale(instance: ImageButton, value: Float) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `ImageButton.TileSize`.
 ///
 /// Sets the tiling scale of the ImageButton.
@@ -378,10 +404,10 @@ pub fn set_slice_scale(instance: ImageButton, value: Float) -> ImageButton
 /// Roblox: `ImageButton.TileSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#TileSize
-@target(luau)
 @luau.property("TileSize")
 pub fn get_tile_size(instance: ImageButton) -> UDim2
 
+@target(luau)
 /// Sets Roblox property `ImageButton.TileSize`.
 ///
 /// Sets the tiling scale of the ImageButton.
@@ -389,10 +415,10 @@ pub fn get_tile_size(instance: ImageButton) -> UDim2
 /// Roblox: `ImageButton.TileSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImageButton#TileSize
-@target(luau)
 @luau.set_property("TileSize")
 pub fn set_tile_size(instance: ImageButton, value: UDim2) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiButton.AutoButtonColor`.
 ///
 /// Determines whether the button automatically changes color when the mouse hovers over or clicks on it.
@@ -400,10 +426,10 @@ pub fn set_tile_size(instance: ImageButton, value: UDim2) -> ImageButton
 /// Roblox: `GuiButton.AutoButtonColor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#AutoButtonColor
-@target(luau)
 @luau.property("AutoButtonColor")
 pub fn get_auto_button_color(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiButton.AutoButtonColor`.
 ///
 /// Determines whether the button automatically changes color when the mouse hovers over or clicks on it.
@@ -411,10 +437,10 @@ pub fn get_auto_button_color(instance: ImageButton) -> Bool
 /// Roblox: `GuiButton.AutoButtonColor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#AutoButtonColor
-@target(luau)
 @luau.set_property("AutoButtonColor")
 pub fn set_auto_button_color(instance: ImageButton, value: Bool) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiButton.HoverHapticEffect`.
 ///
 /// A HapticEffect instance that will play when the GuiButton is being hovered.
@@ -422,10 +448,10 @@ pub fn set_auto_button_color(instance: ImageButton, value: Bool) -> ImageButton
 /// Roblox: `GuiButton.HoverHapticEffect`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#HoverHapticEffect
-@target(luau)
 @luau.property("HoverHapticEffect")
 pub fn get_hover_haptic_effect(instance: ImageButton) -> HapticEffect
 
+@target(luau)
 /// Sets Roblox property `GuiButton.HoverHapticEffect`.
 ///
 /// A HapticEffect instance that will play when the GuiButton is being hovered.
@@ -433,10 +459,13 @@ pub fn get_hover_haptic_effect(instance: ImageButton) -> HapticEffect
 /// Roblox: `GuiButton.HoverHapticEffect`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#HoverHapticEffect
-@target(luau)
 @luau.set_property("HoverHapticEffect")
-pub fn set_hover_haptic_effect(instance: ImageButton, value: HapticEffect) -> ImageButton
+pub fn set_hover_haptic_effect(
+  instance: ImageButton,
+  value: HapticEffect,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiButton.Modal`.
 ///
 /// If true while the GUI element is visible, the mouse will not be locked unless the right mouse button is down.
@@ -444,10 +473,10 @@ pub fn set_hover_haptic_effect(instance: ImageButton, value: HapticEffect) -> Im
 /// Roblox: `GuiButton.Modal`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#Modal
-@target(luau)
 @luau.property("Modal")
 pub fn get_modal(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiButton.Modal`.
 ///
 /// If true while the GUI element is visible, the mouse will not be locked unless the right mouse button is down.
@@ -455,10 +484,10 @@ pub fn get_modal(instance: ImageButton) -> Bool
 /// Roblox: `GuiButton.Modal`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#Modal
-@target(luau)
 @luau.set_property("Modal")
 pub fn set_modal(instance: ImageButton, value: Bool) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiButton.PressHapticEffect`.
 ///
 /// A HapticEffect instance that will play when the GuiButton is being pressed.
@@ -466,10 +495,10 @@ pub fn set_modal(instance: ImageButton, value: Bool) -> ImageButton
 /// Roblox: `GuiButton.PressHapticEffect`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#PressHapticEffect
-@target(luau)
 @luau.property("PressHapticEffect")
 pub fn get_press_haptic_effect(instance: ImageButton) -> HapticEffect
 
+@target(luau)
 /// Sets Roblox property `GuiButton.PressHapticEffect`.
 ///
 /// A HapticEffect instance that will play when the GuiButton is being pressed.
@@ -477,10 +506,13 @@ pub fn get_press_haptic_effect(instance: ImageButton) -> HapticEffect
 /// Roblox: `GuiButton.PressHapticEffect`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#PressHapticEffect
-@target(luau)
 @luau.set_property("PressHapticEffect")
-pub fn set_press_haptic_effect(instance: ImageButton, value: HapticEffect) -> ImageButton
+pub fn set_press_haptic_effect(
+  instance: ImageButton,
+  value: HapticEffect,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiButton.Selected`.
 ///
 /// A boolean property which indicates whether the object has been selected.
@@ -488,10 +520,10 @@ pub fn set_press_haptic_effect(instance: ImageButton, value: HapticEffect) -> Im
 /// Roblox: `GuiButton.Selected`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#Selected
-@target(luau)
 @luau.property("Selected")
 pub fn get_selected(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiButton.Selected`.
 ///
 /// A boolean property which indicates whether the object has been selected.
@@ -499,10 +531,10 @@ pub fn get_selected(instance: ImageButton) -> Bool
 /// Roblox: `GuiButton.Selected`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#Selected
-@target(luau)
 @luau.set_property("Selected")
 pub fn set_selected(instance: ImageButton, value: Bool) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiButton.Style`.
 ///
 /// Sets the style of the GuiButton based on a list of pre-determined styles.
@@ -510,10 +542,10 @@ pub fn set_selected(instance: ImageButton, value: Bool) -> ImageButton
 /// Roblox: `GuiButton.Style`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#Style
-@target(luau)
 @luau.property("Style")
 pub fn get_style(instance: ImageButton) -> ButtonStyle
 
+@target(luau)
 /// Sets Roblox property `GuiButton.Style`.
 ///
 /// Sets the style of the GuiButton based on a list of pre-determined styles.
@@ -521,19 +553,21 @@ pub fn get_style(instance: ImageButton) -> ButtonStyle
 /// Roblox: `GuiButton.Style`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#Style
-@target(luau)
 @luau.set_property("Style")
 pub fn set_style(instance: ImageButton, value: ButtonStyle) -> ImageButton
 
+@target(luau)
 /// Fires when the button is activated.
 ///
 /// Roblox: `GuiButton.Activated`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#Activated
-@target(luau)
 @luau.event("Activated")
-pub fn activated(instance: ImageButton) -> RBXScriptSignal(fn(InputObject, Int) -> Nil)
+pub fn activated(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(InputObject, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiButton.Activated`.
 ///
 /// Fires when the button is activated.
@@ -541,19 +575,24 @@ pub fn activated(instance: ImageButton) -> RBXScriptSignal(fn(InputObject, Int) 
 /// Roblox: `GuiButton.Activated`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#Activated
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Activated:Connect(callback) end)")
-pub fn on_activated(instance: ImageButton, callback: fn(InputObject, Int) -> Nil) -> RBXScriptConnection
+pub fn on_activated(
+  instance: ImageButton,
+  callback: fn(InputObject, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the user's mouse fully left clicks the GuiButton.
 ///
 /// Roblox: `GuiButton.MouseButton1Click`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#MouseButton1Click
-@target(luau)
 @luau.event("MouseButton1Click")
-pub fn mouse_button1_click(instance: ImageButton) -> RBXScriptSignal(fn() -> Nil)
+pub fn mouse_button1_click(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiButton.MouseButton1Click`.
 ///
 /// Fires when the user's mouse fully left clicks the GuiButton.
@@ -561,19 +600,24 @@ pub fn mouse_button1_click(instance: ImageButton) -> RBXScriptSignal(fn() -> Nil
 /// Roblox: `GuiButton.MouseButton1Click`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#MouseButton1Click
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseButton1Click:Connect(callback) end)")
-pub fn on_mouse_button1_click(instance: ImageButton, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_mouse_button1_click(
+  instance: ImageButton,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the user presses their left mouse button down on the GuiButton.
 ///
 /// Roblox: `GuiButton.MouseButton1Down`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#MouseButton1Down
-@target(luau)
 @luau.event("MouseButton1Down")
-pub fn mouse_button1_down(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int) -> Nil)
+pub fn mouse_button1_down(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiButton.MouseButton1Down`.
 ///
 /// Fires when the user presses their left mouse button down on the GuiButton.
@@ -581,19 +625,24 @@ pub fn mouse_button1_down(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int)
 /// Roblox: `GuiButton.MouseButton1Down`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#MouseButton1Down
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseButton1Down:Connect(callback) end)")
-pub fn on_mouse_button1_down(instance: ImageButton, callback: fn(Int, Int) -> Nil) -> RBXScriptConnection
+pub fn on_mouse_button1_down(
+  instance: ImageButton,
+  callback: fn(Int, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the user releases their left mouse button off of the GuiButton.
 ///
 /// Roblox: `GuiButton.MouseButton1Up`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#MouseButton1Up
-@target(luau)
 @luau.event("MouseButton1Up")
-pub fn mouse_button1_up(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int) -> Nil)
+pub fn mouse_button1_up(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiButton.MouseButton1Up`.
 ///
 /// Fires when the user releases their left mouse button off of the GuiButton.
@@ -601,19 +650,24 @@ pub fn mouse_button1_up(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int) -
 /// Roblox: `GuiButton.MouseButton1Up`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#MouseButton1Up
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseButton1Up:Connect(callback) end)")
-pub fn on_mouse_button1_up(instance: ImageButton, callback: fn(Int, Int) -> Nil) -> RBXScriptConnection
+pub fn on_mouse_button1_up(
+  instance: ImageButton,
+  callback: fn(Int, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the user's mouse fully right clicks the GuiButton.
 ///
 /// Roblox: `GuiButton.MouseButton2Click`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#MouseButton2Click
-@target(luau)
 @luau.event("MouseButton2Click")
-pub fn mouse_button2_click(instance: ImageButton) -> RBXScriptSignal(fn() -> Nil)
+pub fn mouse_button2_click(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiButton.MouseButton2Click`.
 ///
 /// Fires when the user's mouse fully right clicks the GuiButton.
@@ -621,19 +675,24 @@ pub fn mouse_button2_click(instance: ImageButton) -> RBXScriptSignal(fn() -> Nil
 /// Roblox: `GuiButton.MouseButton2Click`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#MouseButton2Click
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseButton2Click:Connect(callback) end)")
-pub fn on_mouse_button2_click(instance: ImageButton, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_mouse_button2_click(
+  instance: ImageButton,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the user presses their right mouse button down on the GuiButton.
 ///
 /// Roblox: `GuiButton.MouseButton2Down`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#MouseButton2Down
-@target(luau)
 @luau.event("MouseButton2Down")
-pub fn mouse_button2_down(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int) -> Nil)
+pub fn mouse_button2_down(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiButton.MouseButton2Down`.
 ///
 /// Fires when the user presses their right mouse button down on the GuiButton.
@@ -641,19 +700,24 @@ pub fn mouse_button2_down(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int)
 /// Roblox: `GuiButton.MouseButton2Down`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#MouseButton2Down
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseButton2Down:Connect(callback) end)")
-pub fn on_mouse_button2_down(instance: ImageButton, callback: fn(Int, Int) -> Nil) -> RBXScriptConnection
+pub fn on_mouse_button2_down(
+  instance: ImageButton,
+  callback: fn(Int, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the user releases their right mouse button off of the GuiButton.
 ///
 /// Roblox: `GuiButton.MouseButton2Up`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#MouseButton2Up
-@target(luau)
 @luau.event("MouseButton2Up")
-pub fn mouse_button2_up(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int) -> Nil)
+pub fn mouse_button2_up(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiButton.MouseButton2Up`.
 ///
 /// Fires when the user releases their right mouse button off of the GuiButton.
@@ -661,26 +725,34 @@ pub fn mouse_button2_up(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int) -
 /// Roblox: `GuiButton.MouseButton2Up`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#MouseButton2Up
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseButton2Up:Connect(callback) end)")
-pub fn on_mouse_button2_up(instance: ImageButton, callback: fn(Int, Int) -> Nil) -> RBXScriptConnection
+pub fn on_mouse_button2_up(
+  instance: ImageButton,
+  callback: fn(Int, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Roblox: `GuiButton.SecondaryActivated`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#SecondaryActivated
-@target(luau)
 @luau.event("SecondaryActivated")
-pub fn secondary_activated(instance: ImageButton) -> RBXScriptSignal(fn(InputObject) -> Nil)
+pub fn secondary_activated(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(InputObject) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiButton.SecondaryActivated`.
 ///
 /// Roblox: `GuiButton.SecondaryActivated`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiButton#SecondaryActivated
-@target(luau)
 @luau.global("(function(instance, callback) return instance.SecondaryActivated:Connect(callback) end)")
-pub fn on_secondary_activated(instance: ImageButton, callback: fn(InputObject) -> Nil) -> RBXScriptConnection
+pub fn on_secondary_activated(
+  instance: ImageButton,
+  callback: fn(InputObject) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Active`.
 ///
 /// Determines whether this UI element sinks input.
@@ -688,10 +760,10 @@ pub fn on_secondary_activated(instance: ImageButton, callback: fn(InputObject) -
 /// Roblox: `GuiObject.Active`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Active
-@target(luau)
 @luau.property("Active")
 pub fn get_active(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Active`.
 ///
 /// Determines whether this UI element sinks input.
@@ -699,10 +771,10 @@ pub fn get_active(instance: ImageButton) -> Bool
 /// Roblox: `GuiObject.Active`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Active
-@target(luau)
 @luau.set_property("Active")
 pub fn set_active(instance: ImageButton, value: Bool) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.AnchorPoint`.
 ///
 /// Determines the origin point of a GuiObject, relative to its absolute size.
@@ -710,10 +782,10 @@ pub fn set_active(instance: ImageButton, value: Bool) -> ImageButton
 /// Roblox: `GuiObject.AnchorPoint`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#AnchorPoint
-@target(luau)
 @luau.property("AnchorPoint")
 pub fn get_anchor_point(instance: ImageButton) -> Vector2
 
+@target(luau)
 /// Sets Roblox property `GuiObject.AnchorPoint`.
 ///
 /// Determines the origin point of a GuiObject, relative to its absolute size.
@@ -721,10 +793,10 @@ pub fn get_anchor_point(instance: ImageButton) -> Vector2
 /// Roblox: `GuiObject.AnchorPoint`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#AnchorPoint
-@target(luau)
 @luau.set_property("AnchorPoint")
 pub fn set_anchor_point(instance: ImageButton, value: Vector2) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.AutomaticSize`.
 ///
 /// Determines whether resizing occurs based on child content.
@@ -732,10 +804,10 @@ pub fn set_anchor_point(instance: ImageButton, value: Vector2) -> ImageButton
 /// Roblox: `GuiObject.AutomaticSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#AutomaticSize
-@target(luau)
 @luau.property("AutomaticSize")
 pub fn get_automatic_size(instance: ImageButton) -> AutomaticSize
 
+@target(luau)
 /// Sets Roblox property `GuiObject.AutomaticSize`.
 ///
 /// Determines whether resizing occurs based on child content.
@@ -743,10 +815,13 @@ pub fn get_automatic_size(instance: ImageButton) -> AutomaticSize
 /// Roblox: `GuiObject.AutomaticSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#AutomaticSize
-@target(luau)
 @luau.set_property("AutomaticSize")
-pub fn set_automatic_size(instance: ImageButton, value: AutomaticSize) -> ImageButton
+pub fn set_automatic_size(
+  instance: ImageButton,
+  value: AutomaticSize,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.BackgroundColor3`.
 ///
 /// Determines the GuiObject background color.
@@ -754,10 +829,10 @@ pub fn set_automatic_size(instance: ImageButton, value: AutomaticSize) -> ImageB
 /// Roblox: `GuiObject.BackgroundColor3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BackgroundColor3
-@target(luau)
 @luau.property("BackgroundColor3")
 pub fn get_background_color3(instance: ImageButton) -> Color3
 
+@target(luau)
 /// Sets Roblox property `GuiObject.BackgroundColor3`.
 ///
 /// Determines the GuiObject background color.
@@ -765,10 +840,13 @@ pub fn get_background_color3(instance: ImageButton) -> Color3
 /// Roblox: `GuiObject.BackgroundColor3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BackgroundColor3
-@target(luau)
 @luau.set_property("BackgroundColor3")
-pub fn set_background_color3(instance: ImageButton, value: Color3) -> ImageButton
+pub fn set_background_color3(
+  instance: ImageButton,
+  value: Color3,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.BackgroundTransparency`.
 ///
 /// Determines the transparency of the GuiObject background and border.
@@ -776,10 +854,10 @@ pub fn set_background_color3(instance: ImageButton, value: Color3) -> ImageButto
 /// Roblox: `GuiObject.BackgroundTransparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BackgroundTransparency
-@target(luau)
 @luau.property("BackgroundTransparency")
 pub fn get_background_transparency(instance: ImageButton) -> Float
 
+@target(luau)
 /// Sets Roblox property `GuiObject.BackgroundTransparency`.
 ///
 /// Determines the transparency of the GuiObject background and border.
@@ -787,10 +865,13 @@ pub fn get_background_transparency(instance: ImageButton) -> Float
 /// Roblox: `GuiObject.BackgroundTransparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BackgroundTransparency
-@target(luau)
 @luau.set_property("BackgroundTransparency")
-pub fn set_background_transparency(instance: ImageButton, value: Float) -> ImageButton
+pub fn set_background_transparency(
+  instance: ImageButton,
+  value: Float,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.BorderColor3`.
 ///
 /// Determines the color of the GuiObject border.
@@ -798,10 +879,10 @@ pub fn set_background_transparency(instance: ImageButton, value: Float) -> Image
 /// Roblox: `GuiObject.BorderColor3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderColor3
-@target(luau)
 @luau.property("BorderColor3")
 pub fn get_border_color3(instance: ImageButton) -> Color3
 
+@target(luau)
 /// Sets Roblox property `GuiObject.BorderColor3`.
 ///
 /// Determines the color of the GuiObject border.
@@ -809,10 +890,10 @@ pub fn get_border_color3(instance: ImageButton) -> Color3
 /// Roblox: `GuiObject.BorderColor3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderColor3
-@target(luau)
 @luau.set_property("BorderColor3")
 pub fn set_border_color3(instance: ImageButton, value: Color3) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.BorderMode`.
 ///
 /// Determines in what manner the GuiObject border is laid out relative to its dimensions.
@@ -820,10 +901,10 @@ pub fn set_border_color3(instance: ImageButton, value: Color3) -> ImageButton
 /// Roblox: `GuiObject.BorderMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderMode
-@target(luau)
 @luau.property("BorderMode")
 pub fn get_border_mode(instance: ImageButton) -> BorderMode
 
+@target(luau)
 /// Sets Roblox property `GuiObject.BorderMode`.
 ///
 /// Determines in what manner the GuiObject border is laid out relative to its dimensions.
@@ -831,10 +912,10 @@ pub fn get_border_mode(instance: ImageButton) -> BorderMode
 /// Roblox: `GuiObject.BorderMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderMode
-@target(luau)
 @luau.set_property("BorderMode")
 pub fn set_border_mode(instance: ImageButton, value: BorderMode) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.BorderSizePixel`.
 ///
 /// Determines the pixel width of the GuiObject border.
@@ -842,10 +923,10 @@ pub fn set_border_mode(instance: ImageButton, value: BorderMode) -> ImageButton
 /// Roblox: `GuiObject.BorderSizePixel`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderSizePixel
-@target(luau)
 @luau.property("BorderSizePixel")
 pub fn get_border_size_pixel(instance: ImageButton) -> Int
 
+@target(luau)
 /// Sets Roblox property `GuiObject.BorderSizePixel`.
 ///
 /// Determines the pixel width of the GuiObject border.
@@ -853,10 +934,10 @@ pub fn get_border_size_pixel(instance: ImageButton) -> Int
 /// Roblox: `GuiObject.BorderSizePixel`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderSizePixel
-@target(luau)
 @luau.set_property("BorderSizePixel")
 pub fn set_border_size_pixel(instance: ImageButton, value: Int) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.ClipsDescendants`.
 ///
 /// Determines if descendant GuiObjects outside of the bounds of a parent GUI element should render.
@@ -864,10 +945,10 @@ pub fn set_border_size_pixel(instance: ImageButton, value: Int) -> ImageButton
 /// Roblox: `GuiObject.ClipsDescendants`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#ClipsDescendants
-@target(luau)
 @luau.property("ClipsDescendants")
 pub fn get_clips_descendants(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiObject.ClipsDescendants`.
 ///
 /// Determines if descendant GuiObjects outside of the bounds of a parent GUI element should render.
@@ -875,10 +956,10 @@ pub fn get_clips_descendants(instance: ImageButton) -> Bool
 /// Roblox: `GuiObject.ClipsDescendants`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#ClipsDescendants
-@target(luau)
 @luau.set_property("ClipsDescendants")
 pub fn set_clips_descendants(instance: ImageButton, value: Bool) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.GuiState`.
 ///
 /// Determines whether the player's mouse is being actively pressed on the GuiObject or not.
@@ -887,28 +968,28 @@ pub fn set_clips_descendants(instance: ImageButton, value: Bool) -> ImageButton
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#GuiState
-@target(luau)
 @luau.property("GuiState")
 pub fn get_gui_state(instance: ImageButton) -> GuiState
 
+@target(luau)
 /// Gets Roblox property `GuiObject.InputSink`.
 ///
 /// Roblox: `GuiObject.InputSink`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputSink
-@target(luau)
 @luau.property("InputSink")
 pub fn get_input_sink(instance: ImageButton) -> InputSink
 
+@target(luau)
 /// Sets Roblox property `GuiObject.InputSink`.
 ///
 /// Roblox: `GuiObject.InputSink`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputSink
-@target(luau)
 @luau.set_property("InputSink")
 pub fn set_input_sink(instance: ImageButton, value: InputSink) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Interactable`.
 ///
 /// Determines whether the GuiButton can be interacted with or not, or if the GuiState of the GuiObject is changing or not.
@@ -916,10 +997,10 @@ pub fn set_input_sink(instance: ImageButton, value: InputSink) -> ImageButton
 /// Roblox: `GuiObject.Interactable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Interactable
-@target(luau)
 @luau.property("Interactable")
 pub fn get_interactable(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Interactable`.
 ///
 /// Determines whether the GuiButton can be interacted with or not, or if the GuiState of the GuiObject is changing or not.
@@ -927,10 +1008,10 @@ pub fn get_interactable(instance: ImageButton) -> Bool
 /// Roblox: `GuiObject.Interactable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Interactable
-@target(luau)
 @luau.set_property("Interactable")
 pub fn set_interactable(instance: ImageButton, value: Bool) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.LayoutOrder`.
 ///
 /// Controls the sort order of the GuiObject when used with a UIGridStyleLayout.
@@ -938,10 +1019,10 @@ pub fn set_interactable(instance: ImageButton, value: Bool) -> ImageButton
 /// Roblox: `GuiObject.LayoutOrder`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#LayoutOrder
-@target(luau)
 @luau.property("LayoutOrder")
 pub fn get_layout_order(instance: ImageButton) -> Int
 
+@target(luau)
 /// Sets Roblox property `GuiObject.LayoutOrder`.
 ///
 /// Controls the sort order of the GuiObject when used with a UIGridStyleLayout.
@@ -949,10 +1030,10 @@ pub fn get_layout_order(instance: ImageButton) -> Int
 /// Roblox: `GuiObject.LayoutOrder`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#LayoutOrder
-@target(luau)
 @luau.set_property("LayoutOrder")
 pub fn set_layout_order(instance: ImageButton, value: Int) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.NextSelectionDown`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved downward.
@@ -960,10 +1041,10 @@ pub fn set_layout_order(instance: ImageButton, value: Int) -> ImageButton
 /// Roblox: `GuiObject.NextSelectionDown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionDown
-@target(luau)
 @luau.property("NextSelectionDown")
 pub fn get_next_selection_down(instance: ImageButton) -> GuiObject
 
+@target(luau)
 /// Sets Roblox property `GuiObject.NextSelectionDown`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved downward.
@@ -971,10 +1052,13 @@ pub fn get_next_selection_down(instance: ImageButton) -> GuiObject
 /// Roblox: `GuiObject.NextSelectionDown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionDown
-@target(luau)
 @luau.set_property("NextSelectionDown")
-pub fn set_next_selection_down(instance: ImageButton, value: GuiObject) -> ImageButton
+pub fn set_next_selection_down(
+  instance: ImageButton,
+  value: GuiObject,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.NextSelectionLeft`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved to the left.
@@ -982,10 +1066,10 @@ pub fn set_next_selection_down(instance: ImageButton, value: GuiObject) -> Image
 /// Roblox: `GuiObject.NextSelectionLeft`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionLeft
-@target(luau)
 @luau.property("NextSelectionLeft")
 pub fn get_next_selection_left(instance: ImageButton) -> GuiObject
 
+@target(luau)
 /// Sets Roblox property `GuiObject.NextSelectionLeft`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved to the left.
@@ -993,10 +1077,13 @@ pub fn get_next_selection_left(instance: ImageButton) -> GuiObject
 /// Roblox: `GuiObject.NextSelectionLeft`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionLeft
-@target(luau)
 @luau.set_property("NextSelectionLeft")
-pub fn set_next_selection_left(instance: ImageButton, value: GuiObject) -> ImageButton
+pub fn set_next_selection_left(
+  instance: ImageButton,
+  value: GuiObject,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.NextSelectionRight`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved to the right.
@@ -1004,10 +1091,10 @@ pub fn set_next_selection_left(instance: ImageButton, value: GuiObject) -> Image
 /// Roblox: `GuiObject.NextSelectionRight`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionRight
-@target(luau)
 @luau.property("NextSelectionRight")
 pub fn get_next_selection_right(instance: ImageButton) -> GuiObject
 
+@target(luau)
 /// Sets Roblox property `GuiObject.NextSelectionRight`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved to the right.
@@ -1015,10 +1102,13 @@ pub fn get_next_selection_right(instance: ImageButton) -> GuiObject
 /// Roblox: `GuiObject.NextSelectionRight`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionRight
-@target(luau)
 @luau.set_property("NextSelectionRight")
-pub fn set_next_selection_right(instance: ImageButton, value: GuiObject) -> ImageButton
+pub fn set_next_selection_right(
+  instance: ImageButton,
+  value: GuiObject,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.NextSelectionUp`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved upward.
@@ -1026,10 +1116,10 @@ pub fn set_next_selection_right(instance: ImageButton, value: GuiObject) -> Imag
 /// Roblox: `GuiObject.NextSelectionUp`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionUp
-@target(luau)
 @luau.property("NextSelectionUp")
 pub fn get_next_selection_up(instance: ImageButton) -> GuiObject
 
+@target(luau)
 /// Sets Roblox property `GuiObject.NextSelectionUp`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved upward.
@@ -1037,10 +1127,13 @@ pub fn get_next_selection_up(instance: ImageButton) -> GuiObject
 /// Roblox: `GuiObject.NextSelectionUp`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionUp
-@target(luau)
 @luau.set_property("NextSelectionUp")
-pub fn set_next_selection_up(instance: ImageButton, value: GuiObject) -> ImageButton
+pub fn set_next_selection_up(
+  instance: ImageButton,
+  value: GuiObject,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Position`.
 ///
 /// Determines the pixel and scalar position of the GuiObject.
@@ -1048,10 +1141,10 @@ pub fn set_next_selection_up(instance: ImageButton, value: GuiObject) -> ImageBu
 /// Roblox: `GuiObject.Position`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Position
-@target(luau)
 @luau.property("Position")
 pub fn get_position(instance: ImageButton) -> UDim2
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Position`.
 ///
 /// Determines the pixel and scalar position of the GuiObject.
@@ -1059,10 +1152,10 @@ pub fn get_position(instance: ImageButton) -> UDim2
 /// Roblox: `GuiObject.Position`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Position
-@target(luau)
 @luau.set_property("Position")
 pub fn set_position(instance: ImageButton, value: UDim2) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Rotation`.
 ///
 /// Determines the number of degrees by which the GuiObject is rotated.
@@ -1070,10 +1163,10 @@ pub fn set_position(instance: ImageButton, value: UDim2) -> ImageButton
 /// Roblox: `GuiObject.Rotation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Rotation
-@target(luau)
 @luau.property("Rotation")
 pub fn get_rotation(instance: ImageButton) -> Float
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Rotation`.
 ///
 /// Determines the number of degrees by which the GuiObject is rotated.
@@ -1081,10 +1174,10 @@ pub fn get_rotation(instance: ImageButton) -> Float
 /// Roblox: `GuiObject.Rotation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Rotation
-@target(luau)
 @luau.set_property("Rotation")
 pub fn set_rotation(instance: ImageButton, value: Float) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Selectable`.
 ///
 /// Determine whether the GuiObject can be selected by a gamepad.
@@ -1092,10 +1185,10 @@ pub fn set_rotation(instance: ImageButton, value: Float) -> ImageButton
 /// Roblox: `GuiObject.Selectable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Selectable
-@target(luau)
 @luau.property("Selectable")
 pub fn get_selectable(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Selectable`.
 ///
 /// Determine whether the GuiObject can be selected by a gamepad.
@@ -1103,10 +1196,10 @@ pub fn get_selectable(instance: ImageButton) -> Bool
 /// Roblox: `GuiObject.Selectable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Selectable
-@target(luau)
 @luau.set_property("Selectable")
 pub fn set_selectable(instance: ImageButton, value: Bool) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.SelectionImageObject`.
 ///
 /// Overrides the default selection adornment used for gamepads.
@@ -1114,10 +1207,10 @@ pub fn set_selectable(instance: ImageButton, value: Bool) -> ImageButton
 /// Roblox: `GuiObject.SelectionImageObject`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionImageObject
-@target(luau)
 @luau.property("SelectionImageObject")
 pub fn get_selection_image_object(instance: ImageButton) -> GuiObject
 
+@target(luau)
 /// Sets Roblox property `GuiObject.SelectionImageObject`.
 ///
 /// Overrides the default selection adornment used for gamepads.
@@ -1125,10 +1218,13 @@ pub fn get_selection_image_object(instance: ImageButton) -> GuiObject
 /// Roblox: `GuiObject.SelectionImageObject`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionImageObject
-@target(luau)
 @luau.set_property("SelectionImageObject")
-pub fn set_selection_image_object(instance: ImageButton, value: GuiObject) -> ImageButton
+pub fn set_selection_image_object(
+  instance: ImageButton,
+  value: GuiObject,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.SelectionOrder`.
 ///
 /// The order of GuiObjects selected by the gamepad UI selection.
@@ -1136,10 +1232,10 @@ pub fn set_selection_image_object(instance: ImageButton, value: GuiObject) -> Im
 /// Roblox: `GuiObject.SelectionOrder`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionOrder
-@target(luau)
 @luau.property("SelectionOrder")
 pub fn get_selection_order(instance: ImageButton) -> Int
 
+@target(luau)
 /// Sets Roblox property `GuiObject.SelectionOrder`.
 ///
 /// The order of GuiObjects selected by the gamepad UI selection.
@@ -1147,20 +1243,20 @@ pub fn get_selection_order(instance: ImageButton) -> Int
 /// Roblox: `GuiObject.SelectionOrder`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionOrder
-@target(luau)
 @luau.set_property("SelectionOrder")
 pub fn set_selection_order(instance: ImageButton, value: Int) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.SelectionRect2D`.
 ///
 /// Roblox: `GuiObject.SelectionRect2D`
 /// ThreadSafety: Unsafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionRect2D
-@target(luau)
 @luau.property("SelectionRect2D")
 pub fn get_selection_rect2_d(instance: ImageButton) -> Rect
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Size`.
 ///
 /// Determines the pixel and scalar size of the GuiObject.
@@ -1168,10 +1264,10 @@ pub fn get_selection_rect2_d(instance: ImageButton) -> Rect
 /// Roblox: `GuiObject.Size`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Size
-@target(luau)
 @luau.property("Size")
 pub fn get_size(instance: ImageButton) -> UDim2
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Size`.
 ///
 /// Determines the pixel and scalar size of the GuiObject.
@@ -1179,10 +1275,10 @@ pub fn get_size(instance: ImageButton) -> UDim2
 /// Roblox: `GuiObject.Size`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Size
-@target(luau)
 @luau.set_property("Size")
 pub fn set_size(instance: ImageButton, value: UDim2) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.SizeConstraint`.
 ///
 /// Sets the Size axes that the GuiObject will be based on, relative to the size of its parent.
@@ -1190,10 +1286,10 @@ pub fn set_size(instance: ImageButton, value: UDim2) -> ImageButton
 /// Roblox: `GuiObject.SizeConstraint`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SizeConstraint
-@target(luau)
 @luau.property("SizeConstraint")
 pub fn get_size_constraint(instance: ImageButton) -> SizeConstraint
 
+@target(luau)
 /// Sets Roblox property `GuiObject.SizeConstraint`.
 ///
 /// Sets the Size axes that the GuiObject will be based on, relative to the size of its parent.
@@ -1201,10 +1297,13 @@ pub fn get_size_constraint(instance: ImageButton) -> SizeConstraint
 /// Roblox: `GuiObject.SizeConstraint`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SizeConstraint
-@target(luau)
 @luau.set_property("SizeConstraint")
-pub fn set_size_constraint(instance: ImageButton, value: SizeConstraint) -> ImageButton
+pub fn set_size_constraint(
+  instance: ImageButton,
+  value: SizeConstraint,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Transparency`.
 ///
 /// A mixed property of BackgroundTransparency and TextTransparency.
@@ -1213,10 +1312,10 @@ pub fn set_size_constraint(instance: ImageButton, value: SizeConstraint) -> Imag
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Transparency
-@target(luau)
 @luau.property("Transparency")
 pub fn get_transparency(instance: ImageButton) -> Float
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Transparency`.
 ///
 /// A mixed property of BackgroundTransparency and TextTransparency.
@@ -1225,10 +1324,10 @@ pub fn get_transparency(instance: ImageButton) -> Float
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Transparency
-@target(luau)
 @luau.set_property("Transparency")
 pub fn set_transparency(instance: ImageButton, value: Float) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Visible`.
 ///
 /// Determines whether the GuiObject and its descendants will be rendered.
@@ -1236,10 +1335,10 @@ pub fn set_transparency(instance: ImageButton, value: Float) -> ImageButton
 /// Roblox: `GuiObject.Visible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Visible
-@target(luau)
 @luau.property("Visible")
 pub fn get_visible(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Visible`.
 ///
 /// Determines whether the GuiObject and its descendants will be rendered.
@@ -1247,10 +1346,10 @@ pub fn get_visible(instance: ImageButton) -> Bool
 /// Roblox: `GuiObject.Visible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Visible
-@target(luau)
 @luau.set_property("Visible")
 pub fn set_visible(instance: ImageButton, value: Bool) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiObject.ZIndex`.
 ///
 /// Determines the order in which a GuiObject renders relative to others.
@@ -1258,10 +1357,10 @@ pub fn set_visible(instance: ImageButton, value: Bool) -> ImageButton
 /// Roblox: `GuiObject.ZIndex`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#ZIndex
-@target(luau)
 @luau.property("ZIndex")
 pub fn get_z_index(instance: ImageButton) -> Int
 
+@target(luau)
 /// Sets Roblox property `GuiObject.ZIndex`.
 ///
 /// Determines the order in which a GuiObject renders relative to others.
@@ -1269,10 +1368,10 @@ pub fn get_z_index(instance: ImageButton) -> Int
 /// Roblox: `GuiObject.ZIndex`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#ZIndex
-@target(luau)
 @luau.set_property("ZIndex")
 pub fn set_z_index(instance: ImageButton, value: Int) -> ImageButton
 
+@target(luau)
 /// Smoothly moves a GUI to a new UDim2.
 ///
 /// Roblox: `GuiObject.TweenPosition`
@@ -1290,10 +1389,18 @@ pub fn set_z_index(instance: ImageButton, value: Int) -> ImageButton
 ///
 /// Returns:
 /// - Whether the tween will play.
-@target(luau)
 @luau.method("TweenPosition")
-pub fn tween_position(instance: ImageButton, end_position: UDim2, easing_direction: EasingDirection, easing_style: EasingStyle, time: Float, override: Bool, callback: fn() -> Nil) -> Bool
+pub fn tween_position(
+  instance: ImageButton,
+  end_position: UDim2,
+  easing_direction: EasingDirection,
+  easing_style: EasingStyle,
+  time: Float,
+  override: Bool,
+  callback: fn() -> Nil,
+) -> Bool
 
+@target(luau)
 /// Smoothly resizes a GuiObject to a new UDim2.
 ///
 /// Roblox: `GuiObject.TweenSize`
@@ -1311,10 +1418,18 @@ pub fn tween_position(instance: ImageButton, end_position: UDim2, easing_directi
 ///
 /// Returns:
 /// - Whether the tween will play.
-@target(luau)
 @luau.method("TweenSize")
-pub fn tween_size(instance: ImageButton, end_size: UDim2, easing_direction: EasingDirection, easing_style: EasingStyle, time: Float, override: Bool, callback: fn() -> Nil) -> Bool
+pub fn tween_size(
+  instance: ImageButton,
+  end_size: UDim2,
+  easing_direction: EasingDirection,
+  easing_style: EasingStyle,
+  time: Float,
+  override: Bool,
+  callback: fn() -> Nil,
+) -> Bool
 
+@target(luau)
 /// Smoothly moves a GUI to a new size and position.
 ///
 /// Roblox: `GuiObject.TweenSizeAndPosition`
@@ -1333,19 +1448,30 @@ pub fn tween_size(instance: ImageButton, end_size: UDim2, easing_direction: Easi
 ///
 /// Returns:
 /// - Whether the tween will play.
-@target(luau)
 @luau.method("TweenSizeAndPosition")
-pub fn tween_size_and_position(instance: ImageButton, end_size: UDim2, end_position: UDim2, easing_direction: EasingDirection, easing_style: EasingStyle, time: Float, override: Bool, callback: fn() -> Nil) -> Bool
+pub fn tween_size_and_position(
+  instance: ImageButton,
+  end_size: UDim2,
+  end_position: UDim2,
+  easing_direction: EasingDirection,
+  easing_style: EasingStyle,
+  time: Float,
+  override: Bool,
+  callback: fn() -> Nil,
+) -> Bool
 
+@target(luau)
 /// Fired when a user begins interacting via a Human-Computer Interface device (Mouse button down, touch begin, keyboard button down, etc).
 ///
 /// Roblox: `GuiObject.InputBegan`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputBegan
-@target(luau)
 @luau.event("InputBegan")
-pub fn input_began(instance: ImageButton) -> RBXScriptSignal(fn(InputObject) -> Nil)
+pub fn input_began(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(InputObject) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.InputBegan`.
 ///
 /// Fired when a user begins interacting via a Human-Computer Interface device (Mouse button down, touch begin, keyboard button down, etc).
@@ -1353,19 +1479,24 @@ pub fn input_began(instance: ImageButton) -> RBXScriptSignal(fn(InputObject) -> 
 /// Roblox: `GuiObject.InputBegan`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputBegan
-@target(luau)
 @luau.global("(function(instance, callback) return instance.InputBegan:Connect(callback) end)")
-pub fn on_input_began(instance: ImageButton, callback: fn(InputObject) -> Nil) -> RBXScriptConnection
+pub fn on_input_began(
+  instance: ImageButton,
+  callback: fn(InputObject) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fired when a user changes how they're interacting via a Human-Computer Interface device (Mouse button down, touch begin, keyboard button down, etc).
 ///
 /// Roblox: `GuiObject.InputChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputChanged
-@target(luau)
 @luau.event("InputChanged")
-pub fn input_changed(instance: ImageButton) -> RBXScriptSignal(fn(InputObject) -> Nil)
+pub fn input_changed(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(InputObject) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.InputChanged`.
 ///
 /// Fired when a user changes how they're interacting via a Human-Computer Interface device (Mouse button down, touch begin, keyboard button down, etc).
@@ -1373,19 +1504,24 @@ pub fn input_changed(instance: ImageButton) -> RBXScriptSignal(fn(InputObject) -
 /// Roblox: `GuiObject.InputChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.InputChanged:Connect(callback) end)")
-pub fn on_input_changed(instance: ImageButton, callback: fn(InputObject) -> Nil) -> RBXScriptConnection
+pub fn on_input_changed(
+  instance: ImageButton,
+  callback: fn(InputObject) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fired when a user stops interacting via a Human-Computer Interface device (Mouse button down, touch begin, keyboard button down, etc).
 ///
 /// Roblox: `GuiObject.InputEnded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputEnded
-@target(luau)
 @luau.event("InputEnded")
-pub fn input_ended(instance: ImageButton) -> RBXScriptSignal(fn(InputObject) -> Nil)
+pub fn input_ended(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(InputObject) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.InputEnded`.
 ///
 /// Fired when a user stops interacting via a Human-Computer Interface device (Mouse button down, touch begin, keyboard button down, etc).
@@ -1393,19 +1529,24 @@ pub fn input_ended(instance: ImageButton) -> RBXScriptSignal(fn(InputObject) -> 
 /// Roblox: `GuiObject.InputEnded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputEnded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.InputEnded:Connect(callback) end)")
-pub fn on_input_ended(instance: ImageButton, callback: fn(InputObject) -> Nil) -> RBXScriptConnection
+pub fn on_input_ended(
+  instance: ImageButton,
+  callback: fn(InputObject) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user moves their mouse into a GUI element.
 ///
 /// Roblox: `GuiObject.MouseEnter`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseEnter
-@target(luau)
 @luau.event("MouseEnter")
-pub fn mouse_enter(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int) -> Nil)
+pub fn mouse_enter(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.MouseEnter`.
 ///
 /// Fires when a user moves their mouse into a GUI element.
@@ -1413,19 +1554,24 @@ pub fn mouse_enter(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int) -> Nil
 /// Roblox: `GuiObject.MouseEnter`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseEnter
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseEnter:Connect(callback) end)")
-pub fn on_mouse_enter(instance: ImageButton, callback: fn(Int, Int) -> Nil) -> RBXScriptConnection
+pub fn on_mouse_enter(
+  instance: ImageButton,
+  callback: fn(Int, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user moves their mouse out of a GUI element.
 ///
 /// Roblox: `GuiObject.MouseLeave`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseLeave
-@target(luau)
 @luau.event("MouseLeave")
-pub fn mouse_leave(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int) -> Nil)
+pub fn mouse_leave(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.MouseLeave`.
 ///
 /// Fires when a user moves their mouse out of a GUI element.
@@ -1433,19 +1579,24 @@ pub fn mouse_leave(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int) -> Nil
 /// Roblox: `GuiObject.MouseLeave`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseLeave
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseLeave:Connect(callback) end)")
-pub fn on_mouse_leave(instance: ImageButton, callback: fn(Int, Int) -> Nil) -> RBXScriptConnection
+pub fn on_mouse_leave(
+  instance: ImageButton,
+  callback: fn(Int, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever a user moves their mouse while it is inside a GUI element.
 ///
 /// Roblox: `GuiObject.MouseMoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseMoved
-@target(luau)
 @luau.event("MouseMoved")
-pub fn mouse_moved(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int) -> Nil)
+pub fn mouse_moved(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.MouseMoved`.
 ///
 /// Fires whenever a user moves their mouse while it is inside a GUI element.
@@ -1453,19 +1604,24 @@ pub fn mouse_moved(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int) -> Nil
 /// Roblox: `GuiObject.MouseMoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseMoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseMoved:Connect(callback) end)")
-pub fn on_mouse_moved(instance: ImageButton, callback: fn(Int, Int) -> Nil) -> RBXScriptConnection
+pub fn on_mouse_moved(
+  instance: ImageButton,
+  callback: fn(Int, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user scrolls their mouse wheel back when the mouse is over a GUI element.
 ///
 /// Roblox: `GuiObject.MouseWheelBackward`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseWheelBackward
-@target(luau)
 @luau.event("MouseWheelBackward")
-pub fn mouse_wheel_backward(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int) -> Nil)
+pub fn mouse_wheel_backward(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.MouseWheelBackward`.
 ///
 /// Fires when a user scrolls their mouse wheel back when the mouse is over a GUI element.
@@ -1473,19 +1629,24 @@ pub fn mouse_wheel_backward(instance: ImageButton) -> RBXScriptSignal(fn(Int, In
 /// Roblox: `GuiObject.MouseWheelBackward`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseWheelBackward
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseWheelBackward:Connect(callback) end)")
-pub fn on_mouse_wheel_backward(instance: ImageButton, callback: fn(Int, Int) -> Nil) -> RBXScriptConnection
+pub fn on_mouse_wheel_backward(
+  instance: ImageButton,
+  callback: fn(Int, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user scrolls their mouse wheel forward when the mouse is over a GUI element.
 ///
 /// Roblox: `GuiObject.MouseWheelForward`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseWheelForward
-@target(luau)
 @luau.event("MouseWheelForward")
-pub fn mouse_wheel_forward(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int) -> Nil)
+pub fn mouse_wheel_forward(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.MouseWheelForward`.
 ///
 /// Fires when a user scrolls their mouse wheel forward when the mouse is over a GUI element.
@@ -1493,19 +1654,22 @@ pub fn mouse_wheel_forward(instance: ImageButton) -> RBXScriptSignal(fn(Int, Int
 /// Roblox: `GuiObject.MouseWheelForward`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseWheelForward
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseWheelForward:Connect(callback) end)")
-pub fn on_mouse_wheel_forward(instance: ImageButton, callback: fn(Int, Int) -> Nil) -> RBXScriptConnection
+pub fn on_mouse_wheel_forward(
+  instance: ImageButton,
+  callback: fn(Int, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fired when the GuiObject is being focused on with the Gamepad selector.
 ///
 /// Roblox: `GuiObject.SelectionGained`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionGained
-@target(luau)
 @luau.event("SelectionGained")
 pub fn selection_gained(instance: ImageButton) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.SelectionGained`.
 ///
 /// Fired when the GuiObject is being focused on with the Gamepad selector.
@@ -1513,19 +1677,22 @@ pub fn selection_gained(instance: ImageButton) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `GuiObject.SelectionGained`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionGained
-@target(luau)
 @luau.global("(function(instance, callback) return instance.SelectionGained:Connect(callback) end)")
-pub fn on_selection_gained(instance: ImageButton, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_selection_gained(
+  instance: ImageButton,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fired when the Gamepad selector stops focusing on the GuiObject.
 ///
 /// Roblox: `GuiObject.SelectionLost`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionLost
-@target(luau)
 @luau.event("SelectionLost")
 pub fn selection_lost(instance: ImageButton) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.SelectionLost`.
 ///
 /// Fired when the Gamepad selector stops focusing on the GuiObject.
@@ -1533,19 +1700,24 @@ pub fn selection_lost(instance: ImageButton) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `GuiObject.SelectionLost`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionLost
-@target(luau)
 @luau.global("(function(instance, callback) return instance.SelectionLost:Connect(callback) end)")
-pub fn on_selection_lost(instance: ImageButton, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_selection_lost(
+  instance: ImageButton,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the player starts, continues and stops long-pressing the UI element.
 ///
 /// Roblox: `GuiObject.TouchLongPress`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchLongPress
-@target(luau)
 @luau.event("TouchLongPress")
-pub fn touch_long_press(instance: ImageButton) -> RBXScriptSignal(fn(List(Vector2), UserInputState) -> Nil)
+pub fn touch_long_press(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(List(Vector2), UserInputState) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.TouchLongPress`.
 ///
 /// Fires when the player starts, continues and stops long-pressing the UI element.
@@ -1553,19 +1725,24 @@ pub fn touch_long_press(instance: ImageButton) -> RBXScriptSignal(fn(List(Vector
 /// Roblox: `GuiObject.TouchLongPress`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchLongPress
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchLongPress:Connect(callback) end)")
-pub fn on_touch_long_press(instance: ImageButton, callback: fn(List(Vector2), UserInputState) -> Nil) -> RBXScriptConnection
+pub fn on_touch_long_press(
+  instance: ImageButton,
+  callback: fn(List(Vector2), UserInputState) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the player moves their finger on the UI element.
 ///
 /// Roblox: `GuiObject.TouchPan`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchPan
-@target(luau)
 @luau.event("TouchPan")
-pub fn touch_pan(instance: ImageButton) -> RBXScriptSignal(fn(List(Vector2), Vector2, Vector2, UserInputState) -> Nil)
+pub fn touch_pan(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(List(Vector2), Vector2, Vector2, UserInputState) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.TouchPan`.
 ///
 /// Fires when the player moves their finger on the UI element.
@@ -1573,19 +1750,24 @@ pub fn touch_pan(instance: ImageButton) -> RBXScriptSignal(fn(List(Vector2), Vec
 /// Roblox: `GuiObject.TouchPan`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchPan
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchPan:Connect(callback) end)")
-pub fn on_touch_pan(instance: ImageButton, callback: fn(List(Vector2), Vector2, Vector2, UserInputState) -> Nil) -> RBXScriptConnection
+pub fn on_touch_pan(
+  instance: ImageButton,
+  callback: fn(List(Vector2), Vector2, Vector2, UserInputState) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the player performs a pinch or pull gesture using two fingers on the UI element.
 ///
 /// Roblox: `GuiObject.TouchPinch`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchPinch
-@target(luau)
 @luau.event("TouchPinch")
-pub fn touch_pinch(instance: ImageButton) -> RBXScriptSignal(fn(List(Vector2), Float, Float, UserInputState) -> Nil)
+pub fn touch_pinch(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(List(Vector2), Float, Float, UserInputState) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.TouchPinch`.
 ///
 /// Fires when the player performs a pinch or pull gesture using two fingers on the UI element.
@@ -1593,19 +1775,24 @@ pub fn touch_pinch(instance: ImageButton) -> RBXScriptSignal(fn(List(Vector2), F
 /// Roblox: `GuiObject.TouchPinch`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchPinch
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchPinch:Connect(callback) end)")
-pub fn on_touch_pinch(instance: ImageButton, callback: fn(List(Vector2), Float, Float, UserInputState) -> Nil) -> RBXScriptConnection
+pub fn on_touch_pinch(
+  instance: ImageButton,
+  callback: fn(List(Vector2), Float, Float, UserInputState) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the player performs a rotation gesture using two fingers on the UI element.
 ///
 /// Roblox: `GuiObject.TouchRotate`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchRotate
-@target(luau)
 @luau.event("TouchRotate")
-pub fn touch_rotate(instance: ImageButton) -> RBXScriptSignal(fn(List(Vector2), Float, Float, UserInputState) -> Nil)
+pub fn touch_rotate(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(List(Vector2), Float, Float, UserInputState) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.TouchRotate`.
 ///
 /// Fires when the player performs a rotation gesture using two fingers on the UI element.
@@ -1613,19 +1800,24 @@ pub fn touch_rotate(instance: ImageButton) -> RBXScriptSignal(fn(List(Vector2), 
 /// Roblox: `GuiObject.TouchRotate`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchRotate
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchRotate:Connect(callback) end)")
-pub fn on_touch_rotate(instance: ImageButton, callback: fn(List(Vector2), Float, Float, UserInputState) -> Nil) -> RBXScriptConnection
+pub fn on_touch_rotate(
+  instance: ImageButton,
+  callback: fn(List(Vector2), Float, Float, UserInputState) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the player performs a swipe gesture on the UI element.
 ///
 /// Roblox: `GuiObject.TouchSwipe`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchSwipe
-@target(luau)
 @luau.event("TouchSwipe")
-pub fn touch_swipe(instance: ImageButton) -> RBXScriptSignal(fn(SwipeDirection, Int) -> Nil)
+pub fn touch_swipe(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(SwipeDirection, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.TouchSwipe`.
 ///
 /// Fires when the player performs a swipe gesture on the UI element.
@@ -1633,19 +1825,24 @@ pub fn touch_swipe(instance: ImageButton) -> RBXScriptSignal(fn(SwipeDirection, 
 /// Roblox: `GuiObject.TouchSwipe`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchSwipe
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchSwipe:Connect(callback) end)")
-pub fn on_touch_swipe(instance: ImageButton, callback: fn(SwipeDirection, Int) -> Nil) -> RBXScriptConnection
+pub fn on_touch_swipe(
+  instance: ImageButton,
+  callback: fn(SwipeDirection, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the player performs a tap gesture on the UI element.
 ///
 /// Roblox: `GuiObject.TouchTap`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchTap
-@target(luau)
 @luau.event("TouchTap")
-pub fn touch_tap(instance: ImageButton) -> RBXScriptSignal(fn(List(Vector2)) -> Nil)
+pub fn touch_tap(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(List(Vector2)) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.TouchTap`.
 ///
 /// Fires when the player performs a tap gesture on the UI element.
@@ -1653,10 +1850,13 @@ pub fn touch_tap(instance: ImageButton) -> RBXScriptSignal(fn(List(Vector2)) -> 
 /// Roblox: `GuiObject.TouchTap`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchTap
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchTap:Connect(callback) end)")
-pub fn on_touch_tap(instance: ImageButton, callback: fn(List(Vector2)) -> Nil) -> RBXScriptConnection
+pub fn on_touch_tap(
+  instance: ImageButton,
+  callback: fn(List(Vector2)) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.AbsolutePosition`.
 ///
 /// Describes the actual screen position of a GuiBase2d element, in pixels.
@@ -1665,10 +1865,10 @@ pub fn on_touch_tap(instance: ImageButton, callback: fn(List(Vector2)) -> Nil) -
 /// ThreadSafety: Unsafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#AbsolutePosition
-@target(luau)
 @luau.property("AbsolutePosition")
 pub fn get_absolute_position(instance: ImageButton) -> Vector2
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.AbsoluteRotation`.
 ///
 /// Describes the actual screen rotation of a GuiBase2d element, in degrees.
@@ -1677,10 +1877,10 @@ pub fn get_absolute_position(instance: ImageButton) -> Vector2
 /// ThreadSafety: Unsafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#AbsoluteRotation
-@target(luau)
 @luau.property("AbsoluteRotation")
 pub fn get_absolute_rotation(instance: ImageButton) -> Float
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.AbsoluteSize`.
 ///
 /// Describes the actual screen size of a GuiBase2d element, in pixels.
@@ -1689,10 +1889,10 @@ pub fn get_absolute_rotation(instance: ImageButton) -> Float
 /// ThreadSafety: Unsafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#AbsoluteSize
-@target(luau)
 @luau.property("AbsoluteSize")
 pub fn get_absolute_size(instance: ImageButton) -> Vector2
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.AutoLocalize`.
 ///
 /// When set to true, localization will be applied to this GuiBase2d and its descendants.
@@ -1700,10 +1900,10 @@ pub fn get_absolute_size(instance: ImageButton) -> Vector2
 /// Roblox: `GuiBase2d.AutoLocalize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#AutoLocalize
-@target(luau)
 @luau.property("AutoLocalize")
 pub fn get_auto_localize(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiBase2d.AutoLocalize`.
 ///
 /// When set to true, localization will be applied to this GuiBase2d and its descendants.
@@ -1711,40 +1911,40 @@ pub fn get_auto_localize(instance: ImageButton) -> Bool
 /// Roblox: `GuiBase2d.AutoLocalize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#AutoLocalize
-@target(luau)
 @luau.set_property("AutoLocalize")
 pub fn set_auto_localize(instance: ImageButton, value: Bool) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.ClippedRect`.
 ///
 /// Roblox: `GuiBase2d.ClippedRect`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#ClippedRect
-@target(luau)
 @luau.property("ClippedRect")
 pub fn get_clipped_rect(instance: ImageButton) -> Rect
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.IsNotOccluded`.
 ///
 /// Roblox: `GuiBase2d.IsNotOccluded`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#IsNotOccluded
-@target(luau)
 @luau.property("IsNotOccluded")
 pub fn get_is_not_occluded(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.RawRect2D`.
 ///
 /// Roblox: `GuiBase2d.RawRect2D`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#RawRect2D
-@target(luau)
 @luau.property("RawRect2D")
 pub fn get_raw_rect2_d(instance: ImageButton) -> Rect
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.RootLocalizationTable`.
 ///
 /// A reference to a LocalizationTable to be used to apply automated localization to this GuiBase2d and its descendants.
@@ -1752,10 +1952,10 @@ pub fn get_raw_rect2_d(instance: ImageButton) -> Rect
 /// Roblox: `GuiBase2d.RootLocalizationTable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#RootLocalizationTable
-@target(luau)
 @luau.property("RootLocalizationTable")
 pub fn get_root_localization_table(instance: ImageButton) -> LocalizationTable
 
+@target(luau)
 /// Sets Roblox property `GuiBase2d.RootLocalizationTable`.
 ///
 /// A reference to a LocalizationTable to be used to apply automated localization to this GuiBase2d and its descendants.
@@ -1763,10 +1963,13 @@ pub fn get_root_localization_table(instance: ImageButton) -> LocalizationTable
 /// Roblox: `GuiBase2d.RootLocalizationTable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#RootLocalizationTable
-@target(luau)
 @luau.set_property("RootLocalizationTable")
-pub fn set_root_localization_table(instance: ImageButton, value: LocalizationTable) -> ImageButton
+pub fn set_root_localization_table(
+  instance: ImageButton,
+  value: LocalizationTable,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.SelectionBehaviorDown`.
 ///
 /// Customizes gamepad selection behavior in the down direction.
@@ -1774,10 +1977,10 @@ pub fn set_root_localization_table(instance: ImageButton, value: LocalizationTab
 /// Roblox: `GuiBase2d.SelectionBehaviorDown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorDown
-@target(luau)
 @luau.property("SelectionBehaviorDown")
 pub fn get_selection_behavior_down(instance: ImageButton) -> SelectionBehavior
 
+@target(luau)
 /// Sets Roblox property `GuiBase2d.SelectionBehaviorDown`.
 ///
 /// Customizes gamepad selection behavior in the down direction.
@@ -1785,10 +1988,13 @@ pub fn get_selection_behavior_down(instance: ImageButton) -> SelectionBehavior
 /// Roblox: `GuiBase2d.SelectionBehaviorDown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorDown
-@target(luau)
 @luau.set_property("SelectionBehaviorDown")
-pub fn set_selection_behavior_down(instance: ImageButton, value: SelectionBehavior) -> ImageButton
+pub fn set_selection_behavior_down(
+  instance: ImageButton,
+  value: SelectionBehavior,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.SelectionBehaviorLeft`.
 ///
 /// Customizes gamepad selection behavior in the left direction.
@@ -1796,10 +2002,10 @@ pub fn set_selection_behavior_down(instance: ImageButton, value: SelectionBehavi
 /// Roblox: `GuiBase2d.SelectionBehaviorLeft`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorLeft
-@target(luau)
 @luau.property("SelectionBehaviorLeft")
 pub fn get_selection_behavior_left(instance: ImageButton) -> SelectionBehavior
 
+@target(luau)
 /// Sets Roblox property `GuiBase2d.SelectionBehaviorLeft`.
 ///
 /// Customizes gamepad selection behavior in the left direction.
@@ -1807,10 +2013,13 @@ pub fn get_selection_behavior_left(instance: ImageButton) -> SelectionBehavior
 /// Roblox: `GuiBase2d.SelectionBehaviorLeft`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorLeft
-@target(luau)
 @luau.set_property("SelectionBehaviorLeft")
-pub fn set_selection_behavior_left(instance: ImageButton, value: SelectionBehavior) -> ImageButton
+pub fn set_selection_behavior_left(
+  instance: ImageButton,
+  value: SelectionBehavior,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.SelectionBehaviorRight`.
 ///
 /// Customizes gamepad selection behavior in the right direction.
@@ -1818,10 +2027,10 @@ pub fn set_selection_behavior_left(instance: ImageButton, value: SelectionBehavi
 /// Roblox: `GuiBase2d.SelectionBehaviorRight`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorRight
-@target(luau)
 @luau.property("SelectionBehaviorRight")
 pub fn get_selection_behavior_right(instance: ImageButton) -> SelectionBehavior
 
+@target(luau)
 /// Sets Roblox property `GuiBase2d.SelectionBehaviorRight`.
 ///
 /// Customizes gamepad selection behavior in the right direction.
@@ -1829,10 +2038,13 @@ pub fn get_selection_behavior_right(instance: ImageButton) -> SelectionBehavior
 /// Roblox: `GuiBase2d.SelectionBehaviorRight`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorRight
-@target(luau)
 @luau.set_property("SelectionBehaviorRight")
-pub fn set_selection_behavior_right(instance: ImageButton, value: SelectionBehavior) -> ImageButton
+pub fn set_selection_behavior_right(
+  instance: ImageButton,
+  value: SelectionBehavior,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.SelectionBehaviorUp`.
 ///
 /// Customizes gamepad selection behavior in the up direction.
@@ -1840,10 +2052,10 @@ pub fn set_selection_behavior_right(instance: ImageButton, value: SelectionBehav
 /// Roblox: `GuiBase2d.SelectionBehaviorUp`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorUp
-@target(luau)
 @luau.property("SelectionBehaviorUp")
 pub fn get_selection_behavior_up(instance: ImageButton) -> SelectionBehavior
 
+@target(luau)
 /// Sets Roblox property `GuiBase2d.SelectionBehaviorUp`.
 ///
 /// Customizes gamepad selection behavior in the up direction.
@@ -1851,10 +2063,13 @@ pub fn get_selection_behavior_up(instance: ImageButton) -> SelectionBehavior
 /// Roblox: `GuiBase2d.SelectionBehaviorUp`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorUp
-@target(luau)
 @luau.set_property("SelectionBehaviorUp")
-pub fn set_selection_behavior_up(instance: ImageButton, value: SelectionBehavior) -> ImageButton
+pub fn set_selection_behavior_up(
+  instance: ImageButton,
+  value: SelectionBehavior,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.SelectionGroup`.
 ///
 /// Allows customization of gamepad selection movement.
@@ -1862,10 +2077,10 @@ pub fn set_selection_behavior_up(instance: ImageButton, value: SelectionBehavior
 /// Roblox: `GuiBase2d.SelectionGroup`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionGroup
-@target(luau)
 @luau.property("SelectionGroup")
 pub fn get_selection_group(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiBase2d.SelectionGroup`.
 ///
 /// Allows customization of gamepad selection movement.
@@ -1873,29 +2088,31 @@ pub fn get_selection_group(instance: ImageButton) -> Bool
 /// Roblox: `GuiBase2d.SelectionGroup`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionGroup
-@target(luau)
 @luau.set_property("SelectionGroup")
 pub fn set_selection_group(instance: ImageButton, value: Bool) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.TotalGroupScale`.
 ///
 /// Roblox: `GuiBase2d.TotalGroupScale`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#TotalGroupScale
-@target(luau)
 @luau.property("TotalGroupScale")
 pub fn get_total_group_scale(instance: ImageButton) -> Float
 
+@target(luau)
 /// Fires when the gamepad selection moves to, leaves, or changes within the connected GuiBase2d or any descendant GuiObjects.
 ///
 /// Roblox: `GuiBase2d.SelectionChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionChanged
-@target(luau)
 @luau.event("SelectionChanged")
-pub fn selection_changed(instance: ImageButton) -> RBXScriptSignal(fn(Bool, GuiObject, GuiObject) -> Nil)
+pub fn selection_changed(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Bool, GuiObject, GuiObject) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiBase2d.SelectionChanged`.
 ///
 /// Fires when the gamepad selection moves to, leaves, or changes within the connected GuiBase2d or any descendant GuiObjects.
@@ -1903,10 +2120,13 @@ pub fn selection_changed(instance: ImageButton) -> RBXScriptSignal(fn(Bool, GuiO
 /// Roblox: `GuiBase2d.SelectionChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.SelectionChanged:Connect(callback) end)")
-pub fn on_selection_changed(instance: ImageButton, callback: fn(Bool, GuiObject, GuiObject) -> Nil) -> RBXScriptConnection
+pub fn on_selection_changed(
+  instance: ImageButton,
+  callback: fn(Bool, GuiObject, GuiObject) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -1914,10 +2134,10 @@ pub fn on_selection_changed(instance: ImageButton, callback: fn(Bool, GuiObject,
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -1925,10 +2145,10 @@ pub fn get_archivable(instance: ImageButton) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: ImageButton, value: Bool) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -1936,10 +2156,10 @@ pub fn set_archivable(instance: ImageButton, value: Bool) -> ImageButton
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: ImageButton) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -1947,10 +2167,13 @@ pub fn get_capabilities(instance: ImageButton) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: ImageButton, value: SecurityCapabilities) -> ImageButton
+pub fn set_capabilities(
+  instance: ImageButton,
+  value: SecurityCapabilities,
+) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -1958,10 +2181,10 @@ pub fn set_capabilities(instance: ImageButton, value: SecurityCapabilities) -> I
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: ImageButton) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -1969,10 +2192,10 @@ pub fn get_name(instance: ImageButton) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: ImageButton, value: String) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -1981,10 +2204,10 @@ pub fn set_name(instance: ImageButton, value: String) -> ImageButton
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: ImageButton) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -1993,10 +2216,10 @@ pub fn get_parent(instance: ImageButton) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: ImageButton, value: parent) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -2005,10 +2228,10 @@ pub fn set_parent(instance: ImageButton, value: parent) -> ImageButton
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -2017,10 +2240,10 @@ pub fn get_roblox_locked(instance: ImageButton) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: ImageButton) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -2029,20 +2252,20 @@ pub fn get_sandboxed(instance: ImageButton) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: ImageButton, value: Bool) -> ImageButton
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: ImageButton) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -2051,10 +2274,10 @@ pub fn get_source_asset_id(instance: ImageButton) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: ImageButton) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -2063,10 +2286,10 @@ pub fn get_unique_id(instance: ImageButton) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: ImageButton, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -2075,10 +2298,10 @@ pub fn add_tag(instance: ImageButton, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: ImageButton) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -2087,10 +2310,10 @@ pub fn clear_all_children(instance: ImageButton) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: ImageButton) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -2099,10 +2322,10 @@ pub fn clone(instance: ImageButton) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: ImageButton) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -2115,10 +2338,13 @@ pub fn destroy_instance(instance: ImageButton) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: ImageButton, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: ImageButton,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -2131,10 +2357,13 @@ pub fn find_first_ancestor(instance: ImageButton, name: String) -> Option(Instan
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: ImageButton, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: ImageButton,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -2147,10 +2376,13 @@ pub fn find_first_ancestor_of_class(instance: ImageButton, class_name: String) -
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: ImageButton, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: ImageButton,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -2164,10 +2396,14 @@ pub fn find_first_ancestor_which_is_a(instance: ImageButton, class_name: String)
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: ImageButton, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: ImageButton,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -2180,10 +2416,13 @@ pub fn find_first_child(instance: ImageButton, name: String, recursive: Bool) ->
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: ImageButton, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: ImageButton,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -2197,10 +2436,14 @@ pub fn find_first_child_of_class(instance: ImageButton, class_name: String) -> O
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: ImageButton, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: ImageButton,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -2213,10 +2456,13 @@ pub fn find_first_child_which_is_a(instance: ImageButton, class_name: String, re
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: ImageButton, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: ImageButton,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -2228,10 +2474,10 @@ pub fn find_first_descendant(instance: ImageButton, name: String) -> Option(Inst
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: ImageButton) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -2244,10 +2490,10 @@ pub fn get_actor(instance: ImageButton) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: ImageButton, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -2260,10 +2506,13 @@ pub fn get_attribute(instance: ImageButton, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: ImageButton, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: ImageButton,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -2276,10 +2525,10 @@ pub fn get_attribute_changed_signal(instance: ImageButton, attribute: String) ->
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: ImageButton) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -2291,10 +2540,10 @@ pub fn get_attributes(instance: ImageButton) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: ImageButton) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -2307,10 +2556,10 @@ pub fn get_children(instance: ImageButton) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: ImageButton) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -2322,10 +2571,10 @@ pub fn get_descendants(instance: ImageButton) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: ImageButton) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -2339,10 +2588,14 @@ pub fn get_full_name(instance: ImageButton) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: ImageButton, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: ImageButton,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -2353,10 +2606,13 @@ pub fn get_styled(instance: ImageButton, name: String, selector: Option(String))
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: ImageButton, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: ImageButton,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -2365,10 +2621,10 @@ pub fn get_styled_property_changed_signal(instance: ImageButton, property: Strin
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: ImageButton) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -2377,10 +2633,10 @@ pub fn get_tags(instance: ImageButton) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: ImageButton, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -2393,10 +2649,10 @@ pub fn has_tag(instance: ImageButton, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: ImageButton, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -2409,10 +2665,10 @@ pub fn is_ancestor_of(instance: ImageButton, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: ImageButton, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -2425,10 +2681,10 @@ pub fn is_descendant_of(instance: ImageButton, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: ImageButton, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -2440,10 +2696,13 @@ pub fn is_property_modified(instance: ImageButton, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: ImageButton, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: ImageButton,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -2452,10 +2711,10 @@ pub fn query_descendants(instance: ImageButton, selector: String) -> List(Instan
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: ImageButton, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -2465,10 +2724,10 @@ pub fn remove_tag(instance: ImageButton, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
 pub fn reset_property_to_default(instance: ImageButton, property: String) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -2479,10 +2738,14 @@ pub fn reset_property_to_default(instance: ImageButton, property: String) -> Nil
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: ImageButton, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: ImageButton,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -2497,19 +2760,25 @@ pub fn set_attribute(instance: ImageButton, attribute: String, value: Dynamic) -
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: ImageButton, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: ImageButton,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: ImageButton) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -2517,19 +2786,24 @@ pub fn ancestry_changed(instance: ImageButton) -> RBXScriptSignal(fn(Instance, I
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: ImageButton, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: ImageButton,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: ImageButton) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -2537,19 +2811,24 @@ pub fn attribute_changed(instance: ImageButton) -> RBXScriptSignal(fn(String) ->
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: ImageButton, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: ImageButton,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: ImageButton) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -2557,19 +2836,24 @@ pub fn child_added(instance: ImageButton) -> RBXScriptSignal(fn(Instance) -> Nil
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: ImageButton, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: ImageButton,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: ImageButton) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -2577,19 +2861,24 @@ pub fn child_removed(instance: ImageButton) -> RBXScriptSignal(fn(Instance) -> N
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: ImageButton, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: ImageButton,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: ImageButton) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -2597,19 +2886,24 @@ pub fn descendant_added(instance: ImageButton) -> RBXScriptSignal(fn(Instance) -
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: ImageButton, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: ImageButton,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: ImageButton) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -2617,19 +2911,22 @@ pub fn descendant_removing(instance: ImageButton) -> RBXScriptSignal(fn(Instance
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: ImageButton, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: ImageButton,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: ImageButton) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -2637,19 +2934,24 @@ pub fn destroying(instance: ImageButton) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: ImageButton, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: ImageButton,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: ImageButton) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: ImageButton,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -2657,10 +2959,13 @@ pub fn styled_properties_changed(instance: ImageButton) -> RBXScriptSignal(fn() 
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: ImageButton, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: ImageButton,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -2669,10 +2974,10 @@ pub fn on_styled_properties_changed(instance: ImageButton, callback: fn() -> Nil
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: ImageButton) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -2685,10 +2990,13 @@ pub fn get_class_name(instance: ImageButton) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: ImageButton, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: ImageButton,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -2702,19 +3010,19 @@ pub fn get_property_changed_signal(instance: ImageButton, property: String) -> R
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: ImageButton, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: ImageButton) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -2722,12 +3030,52 @@ pub fn changed(instance: ImageButton) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: ImageButton, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: ImageButton,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: GuiObject, _: SelectionBehavior, _: LocalizationTable, _: Rect, _: Vector2, _: SwipeDirection, _: UserInputState, _: InputObject, _: UDim2, _: EasingDirection, _: EasingStyle, _: SizeConstraint, _: InputSink, _: GuiState, _: BorderMode, _: Color3, _: AutomaticSize, _: ButtonStyle, _: HapticEffect, _: ScaleType, _: ResamplerMode, _: Content, _: ContentId, _: ImageButton, _: GuiButton, _: GuiBase2d, _: GuiBase, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: GuiObject,
+  _: SelectionBehavior,
+  _: LocalizationTable,
+  _: Rect,
+  _: Vector2,
+  _: SwipeDirection,
+  _: UserInputState,
+  _: InputObject,
+  _: UDim2,
+  _: EasingDirection,
+  _: EasingStyle,
+  _: SizeConstraint,
+  _: InputSink,
+  _: GuiState,
+  _: BorderMode,
+  _: Color3,
+  _: AutomaticSize,
+  _: ButtonStyle,
+  _: HapticEffect,
+  _: ScaleType,
+  _: ResamplerMode,
+  _: Content,
+  _: ContentId,
+  _: ImageButton,
+  _: GuiButton,
+  _: GuiBase2d,
+  _: GuiBase,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

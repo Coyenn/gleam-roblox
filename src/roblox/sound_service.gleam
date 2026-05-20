@@ -1,19 +1,24 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type Instance, type ListenerLocation, type ListenerType, type Object, type OptionDouble, type OptionInt64, type ReverbType, type RolloutState, type SecurityCapabilities, type SoundService, type UniqueId}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type Instance, type ListenerLocation, type ListenerType,
+  type Object, type OptionDouble, type OptionInt64, type ReverbType,
+  type RolloutState, type SecurityCapabilities, type SoundService, type UniqueId,
+}
 
-/// Treats `SoundService` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `SoundService` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SoundService) -> Instance
 
-/// Treats `SoundService` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `SoundService` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: SoundService) -> Object
 
+@target(luau)
 /// Gets Roblox property `SoundService.AcousticSimulationEnabled`.
 ///
 /// Determines whether acoustic simulation is enabled globally in the advanced audio system.
@@ -21,10 +26,10 @@ pub fn as_object(instance: SoundService) -> Object
 /// Roblox: `SoundService.AcousticSimulationEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#AcousticSimulationEnabled
-@target(luau)
 @luau.property("AcousticSimulationEnabled")
 pub fn get_acoustic_simulation_enabled(instance: SoundService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `SoundService.AcousticSimulationEnabled`.
 ///
 /// Determines whether acoustic simulation is enabled globally in the advanced audio system.
@@ -32,10 +37,13 @@ pub fn get_acoustic_simulation_enabled(instance: SoundService) -> Bool
 /// Roblox: `SoundService.AcousticSimulationEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#AcousticSimulationEnabled
-@target(luau)
 @luau.set_property("AcousticSimulationEnabled")
-pub fn set_acoustic_simulation_enabled(instance: SoundService, value: Bool) -> SoundService
+pub fn set_acoustic_simulation_enabled(
+  instance: SoundService,
+  value: Bool,
+) -> SoundService
 
+@target(luau)
 /// Gets Roblox property `SoundService.AmbientReverb`.
 ///
 /// The ambient sound environment preset applied to all Sounds.
@@ -43,10 +51,10 @@ pub fn set_acoustic_simulation_enabled(instance: SoundService, value: Bool) -> S
 /// Roblox: `SoundService.AmbientReverb`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#AmbientReverb
-@target(luau)
 @luau.property("AmbientReverb")
 pub fn get_ambient_reverb(instance: SoundService) -> ReverbType
 
+@target(luau)
 /// Sets Roblox property `SoundService.AmbientReverb`.
 ///
 /// The ambient sound environment preset applied to all Sounds.
@@ -54,20 +62,23 @@ pub fn get_ambient_reverb(instance: SoundService) -> ReverbType
 /// Roblox: `SoundService.AmbientReverb`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#AmbientReverb
-@target(luau)
 @luau.set_property("AmbientReverb")
-pub fn set_ambient_reverb(instance: SoundService, value: ReverbType) -> SoundService
+pub fn set_ambient_reverb(
+  instance: SoundService,
+  value: ReverbType,
+) -> SoundService
 
+@target(luau)
 /// Gets Roblox property `SoundService.AudioApiByDefault`.
 ///
 /// Roblox: `SoundService.AudioApiByDefault`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#AudioApiByDefault
-@target(luau)
 @luau.property("AudioApiByDefault")
 pub fn get_audio_api_by_default(instance: SoundService) -> RolloutState
 
+@target(luau)
 /// Gets Roblox property `SoundService.CharacterSoundsUseNewApi`.
 ///
 /// Determines whether the default character sounds will use instances in the advanced audio system vs. Sounds.
@@ -75,10 +86,10 @@ pub fn get_audio_api_by_default(instance: SoundService) -> RolloutState
 /// Roblox: `SoundService.CharacterSoundsUseNewApi`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#CharacterSoundsUseNewApi
-@target(luau)
 @luau.property("CharacterSoundsUseNewApi")
 pub fn get_character_sounds_use_new_api(instance: SoundService) -> RolloutState
 
+@target(luau)
 /// Gets Roblox property `SoundService.DefaultListenerLocation`.
 ///
 /// Determines where (if anywhere) to place an AudioListener by default.
@@ -86,10 +97,10 @@ pub fn get_character_sounds_use_new_api(instance: SoundService) -> RolloutState
 /// Roblox: `SoundService.DefaultListenerLocation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#DefaultListenerLocation
-@target(luau)
 @luau.property("DefaultListenerLocation")
 pub fn get_default_listener_location(instance: SoundService) -> ListenerLocation
 
+@target(luau)
 /// Gets Roblox property `SoundService.DistanceFactor`.
 ///
 /// The number of studs to be considered a meter by SoundService when simulating the Doppler effect for Sounds.
@@ -97,10 +108,10 @@ pub fn get_default_listener_location(instance: SoundService) -> ListenerLocation
 /// Roblox: `SoundService.DistanceFactor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#DistanceFactor
-@target(luau)
 @luau.property("DistanceFactor")
 pub fn get_distance_factor(instance: SoundService) -> Float
 
+@target(luau)
 /// Sets Roblox property `SoundService.DistanceFactor`.
 ///
 /// The number of studs to be considered a meter by SoundService when simulating the Doppler effect for Sounds.
@@ -108,10 +119,10 @@ pub fn get_distance_factor(instance: SoundService) -> Float
 /// Roblox: `SoundService.DistanceFactor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#DistanceFactor
-@target(luau)
 @luau.set_property("DistanceFactor")
 pub fn set_distance_factor(instance: SoundService, value: Float) -> SoundService
 
+@target(luau)
 /// Gets Roblox property `SoundService.DopplerScale`.
 ///
 /// Degree to which the pitch of a Sound varies due to the Doppler effect.
@@ -119,10 +130,10 @@ pub fn set_distance_factor(instance: SoundService, value: Float) -> SoundService
 /// Roblox: `SoundService.DopplerScale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#DopplerScale
-@target(luau)
 @luau.property("DopplerScale")
 pub fn get_doppler_scale(instance: SoundService) -> Float
 
+@target(luau)
 /// Sets Roblox property `SoundService.DopplerScale`.
 ///
 /// Degree to which the pitch of a Sound varies due to the Doppler effect.
@@ -130,20 +141,20 @@ pub fn get_doppler_scale(instance: SoundService) -> Float
 /// Roblox: `SoundService.DopplerScale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#DopplerScale
-@target(luau)
 @luau.set_property("DopplerScale")
 pub fn set_doppler_scale(instance: SoundService, value: Float) -> SoundService
 
+@target(luau)
 /// Gets Roblox property `SoundService.IsNewExpForAudioApiByDefault`.
 ///
 /// Roblox: `SoundService.IsNewExpForAudioApiByDefault`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#IsNewExpForAudioApiByDefault
-@target(luau)
 @luau.property("IsNewExpForAudioApiByDefault")
 pub fn get_is_new_exp_for_audio_api_by_default(instance: SoundService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `SoundService.RespectFilteringEnabled`.
 ///
 /// Sets whether Sound playback from a client will replicate to the server.
@@ -151,10 +162,10 @@ pub fn get_is_new_exp_for_audio_api_by_default(instance: SoundService) -> Bool
 /// Roblox: `SoundService.RespectFilteringEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#RespectFilteringEnabled
-@target(luau)
 @luau.property("RespectFilteringEnabled")
 pub fn get_respect_filtering_enabled(instance: SoundService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `SoundService.RespectFilteringEnabled`.
 ///
 /// Sets whether Sound playback from a client will replicate to the server.
@@ -162,10 +173,13 @@ pub fn get_respect_filtering_enabled(instance: SoundService) -> Bool
 /// Roblox: `SoundService.RespectFilteringEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#RespectFilteringEnabled
-@target(luau)
 @luau.set_property("RespectFilteringEnabled")
-pub fn set_respect_filtering_enabled(instance: SoundService, value: Bool) -> SoundService
+pub fn set_respect_filtering_enabled(
+  instance: SoundService,
+  value: Bool,
+) -> SoundService
 
+@target(luau)
 /// Gets Roblox property `SoundService.RolloffScale`.
 ///
 /// Determines how fast the volume of a Sound attenuates beyond its Sound.RollOffMinDistance.
@@ -173,10 +187,10 @@ pub fn set_respect_filtering_enabled(instance: SoundService, value: Bool) -> Sou
 /// Roblox: `SoundService.RolloffScale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#RolloffScale
-@target(luau)
 @luau.property("RolloffScale")
 pub fn get_rolloff_scale(instance: SoundService) -> Float
 
+@target(luau)
 /// Sets Roblox property `SoundService.RolloffScale`.
 ///
 /// Determines how fast the volume of a Sound attenuates beyond its Sound.RollOffMinDistance.
@@ -184,10 +198,10 @@ pub fn get_rolloff_scale(instance: SoundService) -> Float
 /// Roblox: `SoundService.RolloffScale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#RolloffScale
-@target(luau)
 @luau.set_property("RolloffScale")
 pub fn set_rolloff_scale(instance: SoundService, value: Float) -> SoundService
 
+@target(luau)
 /// Returns the current listener type used by Sounds, as well as what that listener is currently set to.
 ///
 /// Roblox: `SoundService.GetListener`
@@ -199,10 +213,10 @@ pub fn set_rolloff_scale(instance: SoundService, value: Float) -> SoundService
 ///
 /// Returns:
 /// - A table containing two results. The first result is the listener's ListenerType and the second result is dependent on that type: Listener Type Description Enum.ListenerType.Camera Does not return a listener object as Class.Workspace.CurrentCamera|CurrentCamera is always used. Enum.ListenerType.CFrame Returns the Datatype.CFrame used in Class.SoundService:SetListener()|SetListener(). Enum.ListenerType.ObjectPosition Returns the Class.BasePart used in Class.SoundService:SetListener()|SetListener(). Enum.ListenerType.ObjectCFrame Returns the Class.BasePart used in Class.SoundService:SetListener()|SetListener().
-@target(luau)
 @luau.method("GetListener")
 pub fn get_listener(instance: SoundService) -> Dynamic
 
+@target(luau)
 /// Returns the number of seconds since the audio engine began mixing.
 ///
 /// Roblox: `SoundService.GetMixerTime`
@@ -214,10 +228,10 @@ pub fn get_listener(instance: SoundService) -> Dynamic
 ///
 /// Returns:
 /// - The number of seconds since the audio engine began mixing. This value is stable, sample-accurate, and monotonically-increasing – intended to be used for scheduling audible changes at precise times.
-@target(luau)
 @luau.method("GetMixerTime")
 pub fn get_mixer_time(instance: SoundService) -> OptionDouble
 
+@target(luau)
 /// Plays a copy of a Sound locally, such that it will only be heard by the client calling this method.
 ///
 /// Roblox: `SoundService.PlayLocalSound`
@@ -227,17 +241,21 @@ pub fn get_mixer_time(instance: SoundService) -> OptionDouble
 /// Parameters:
 /// - `instance`: A service that determines various aspects of how the audio engine works. Most of its properties affect how Sounds play in the experience.
 /// - `sound`: The Sound to be played.
-@target(luau)
 @luau.method("PlayLocalSound")
 pub fn play_local_sound(instance: SoundService, sound: Instance) -> Nil
 
+@target(luau)
 /// Roblox: `SoundService.SetInputDevice`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundService#SetInputDevice
-@target(luau)
 @luau.method("SetInputDevice")
-pub fn set_input_device(instance: SoundService, name_or_instance: Dynamic, guid_or_pin: String) -> Nil
+pub fn set_input_device(
+  instance: SoundService,
+  name_or_instance: Dynamic,
+  guid_or_pin: String,
+) -> Nil
 
+@target(luau)
 /// Sets the listener used by Sounds.
 ///
 /// Roblox: `SoundService.SetListener`
@@ -248,10 +266,14 @@ pub fn set_input_device(instance: SoundService, name_or_instance: Dynamic, guid_
 /// - `instance`: A service that determines various aspects of how the audio engine works. Most of its properties affect how Sounds play in the experience.
 /// - `listenerType`: The ListenerType of the listener.
 /// - `listener`: Dependent on the ListenerType. Use a BasePart for ListenerType.ObjectPosition or ListenerType.ObjectCFrame, a CFrame for ListenerType.CFrame, or nil for ListenerType.Camera.
-@target(luau)
 @luau.method("SetListener")
-pub fn set_listener(instance: SoundService, listener_type: ListenerType, listener: Dynamic) -> Nil
+pub fn set_listener(
+  instance: SoundService,
+  listener_type: ListenerType,
+  listener: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -259,10 +281,10 @@ pub fn set_listener(instance: SoundService, listener_type: ListenerType, listene
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: SoundService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -270,10 +292,10 @@ pub fn get_archivable(instance: SoundService) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: SoundService, value: Bool) -> SoundService
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -281,10 +303,10 @@ pub fn set_archivable(instance: SoundService, value: Bool) -> SoundService
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: SoundService) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -292,10 +314,13 @@ pub fn get_capabilities(instance: SoundService) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: SoundService, value: SecurityCapabilities) -> SoundService
+pub fn set_capabilities(
+  instance: SoundService,
+  value: SecurityCapabilities,
+) -> SoundService
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -303,10 +328,10 @@ pub fn set_capabilities(instance: SoundService, value: SecurityCapabilities) -> 
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: SoundService) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -314,10 +339,10 @@ pub fn get_name(instance: SoundService) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: SoundService, value: String) -> SoundService
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -326,10 +351,10 @@ pub fn set_name(instance: SoundService, value: String) -> SoundService
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: SoundService) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -338,10 +363,10 @@ pub fn get_parent(instance: SoundService) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: SoundService, value: parent) -> SoundService
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -350,10 +375,10 @@ pub fn set_parent(instance: SoundService, value: parent) -> SoundService
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: SoundService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -362,10 +387,10 @@ pub fn get_roblox_locked(instance: SoundService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: SoundService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -374,20 +399,20 @@ pub fn get_sandboxed(instance: SoundService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: SoundService, value: Bool) -> SoundService
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: SoundService) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -396,10 +421,10 @@ pub fn get_source_asset_id(instance: SoundService) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: SoundService) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -408,10 +433,10 @@ pub fn get_unique_id(instance: SoundService) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: SoundService, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -420,10 +445,10 @@ pub fn add_tag(instance: SoundService, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: SoundService) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -432,10 +457,10 @@ pub fn clear_all_children(instance: SoundService) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: SoundService) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -444,10 +469,10 @@ pub fn clone(instance: SoundService) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: SoundService) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -460,10 +485,13 @@ pub fn destroy_instance(instance: SoundService) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: SoundService, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: SoundService,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -476,10 +504,13 @@ pub fn find_first_ancestor(instance: SoundService, name: String) -> Option(Insta
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: SoundService, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: SoundService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -492,10 +523,13 @@ pub fn find_first_ancestor_of_class(instance: SoundService, class_name: String) 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: SoundService, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: SoundService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -509,10 +543,14 @@ pub fn find_first_ancestor_which_is_a(instance: SoundService, class_name: String
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: SoundService, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: SoundService,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -525,10 +563,13 @@ pub fn find_first_child(instance: SoundService, name: String, recursive: Bool) -
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: SoundService, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: SoundService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -542,10 +583,14 @@ pub fn find_first_child_of_class(instance: SoundService, class_name: String) -> 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: SoundService, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: SoundService,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -558,10 +603,13 @@ pub fn find_first_child_which_is_a(instance: SoundService, class_name: String, r
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: SoundService, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: SoundService,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -573,10 +621,10 @@ pub fn find_first_descendant(instance: SoundService, name: String) -> Option(Ins
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: SoundService) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -589,10 +637,10 @@ pub fn get_actor(instance: SoundService) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: SoundService, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -605,10 +653,13 @@ pub fn get_attribute(instance: SoundService, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: SoundService, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: SoundService,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -621,10 +672,10 @@ pub fn get_attribute_changed_signal(instance: SoundService, attribute: String) -
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: SoundService) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -636,10 +687,10 @@ pub fn get_attributes(instance: SoundService) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: SoundService) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -652,10 +703,10 @@ pub fn get_children(instance: SoundService) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: SoundService) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -667,10 +718,10 @@ pub fn get_descendants(instance: SoundService) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: SoundService) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -684,10 +735,14 @@ pub fn get_full_name(instance: SoundService) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: SoundService, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: SoundService,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -698,10 +753,13 @@ pub fn get_styled(instance: SoundService, name: String, selector: Option(String)
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: SoundService, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: SoundService,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -710,10 +768,10 @@ pub fn get_styled_property_changed_signal(instance: SoundService, property: Stri
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: SoundService) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -722,10 +780,10 @@ pub fn get_tags(instance: SoundService) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: SoundService, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -738,10 +796,10 @@ pub fn has_tag(instance: SoundService, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: SoundService, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -754,10 +812,10 @@ pub fn is_ancestor_of(instance: SoundService, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: SoundService, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -770,10 +828,10 @@ pub fn is_descendant_of(instance: SoundService, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: SoundService, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -785,10 +843,13 @@ pub fn is_property_modified(instance: SoundService, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: SoundService, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: SoundService,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -797,10 +858,10 @@ pub fn query_descendants(instance: SoundService, selector: String) -> List(Insta
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: SoundService, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -810,10 +871,13 @@ pub fn remove_tag(instance: SoundService, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: SoundService, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: SoundService,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -824,10 +888,14 @@ pub fn reset_property_to_default(instance: SoundService, property: String) -> Ni
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: SoundService, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: SoundService,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -842,19 +910,25 @@ pub fn set_attribute(instance: SoundService, attribute: String, value: Dynamic) 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: SoundService, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: SoundService,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: SoundService) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: SoundService,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -862,19 +936,24 @@ pub fn ancestry_changed(instance: SoundService) -> RBXScriptSignal(fn(Instance, 
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: SoundService, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: SoundService,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: SoundService) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: SoundService,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -882,19 +961,24 @@ pub fn attribute_changed(instance: SoundService) -> RBXScriptSignal(fn(String) -
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: SoundService, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: SoundService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: SoundService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: SoundService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -902,19 +986,24 @@ pub fn child_added(instance: SoundService) -> RBXScriptSignal(fn(Instance) -> Ni
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: SoundService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: SoundService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: SoundService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: SoundService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -922,19 +1011,24 @@ pub fn child_removed(instance: SoundService) -> RBXScriptSignal(fn(Instance) -> 
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: SoundService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: SoundService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: SoundService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: SoundService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -942,19 +1036,24 @@ pub fn descendant_added(instance: SoundService) -> RBXScriptSignal(fn(Instance) 
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: SoundService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: SoundService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: SoundService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: SoundService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -962,19 +1061,22 @@ pub fn descendant_removing(instance: SoundService) -> RBXScriptSignal(fn(Instanc
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: SoundService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: SoundService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: SoundService) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -982,19 +1084,24 @@ pub fn destroying(instance: SoundService) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: SoundService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: SoundService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: SoundService) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: SoundService,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1002,10 +1109,13 @@ pub fn styled_properties_changed(instance: SoundService) -> RBXScriptSignal(fn()
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: SoundService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: SoundService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1014,10 +1124,10 @@ pub fn on_styled_properties_changed(instance: SoundService, callback: fn() -> Ni
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: SoundService) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1030,10 +1140,13 @@ pub fn get_class_name(instance: SoundService) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: SoundService, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: SoundService,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1047,19 +1160,19 @@ pub fn get_property_changed_signal(instance: SoundService, property: String) -> 
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: SoundService, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: SoundService) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1067,12 +1180,30 @@ pub fn changed(instance: SoundService) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: SoundService, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: SoundService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: ListenerType, _: ListenerLocation, _: RolloutState, _: ReverbType, _: SoundService, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: ListenerType,
+  _: ListenerLocation,
+  _: RolloutState,
+  _: ReverbType,
+  _: SoundService,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

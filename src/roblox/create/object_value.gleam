@@ -7,13 +7,17 @@ import roblox/types.{type Instance, type ObjectValue, type SecurityCapabilities}
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: ObjectValue) -> Instance
 
-/// Creates a declarative Roblox `ObjectValue` node.
 @target(luau)
-pub fn node(properties: List(Property(ObjectValue)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `ObjectValue` node.
+pub fn node(
+  properties: List(Property(ObjectValue)),
+  children: List(Node),
+) -> Node {
   let instance = apply(object_value.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ObjectValue.Value` on `ObjectValue` nodes.
 ///
 /// Holds a reference to an instance.
@@ -21,11 +25,11 @@ pub fn node(properties: List(Property(ObjectValue)), children: List(Node)) -> No
 /// Roblox: `ObjectValue.Value`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ObjectValue#Value
-@target(luau)
 pub fn value(value: Instance) -> Property(ObjectValue) {
   Property(fn(instance) { object_value.set_value(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `ObjectValue` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -33,11 +37,11 @@ pub fn value(value: Instance) -> Property(ObjectValue) {
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(ObjectValue) {
   Property(fn(instance) { object_value.set_archivable(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `ObjectValue` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -45,11 +49,11 @@ pub fn archivable(value: Bool) -> Property(ObjectValue) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 pub fn capabilities(value: SecurityCapabilities) -> Property(ObjectValue) {
   Property(fn(instance) { object_value.set_capabilities(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `ObjectValue` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -57,11 +61,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(ObjectValue) {
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(ObjectValue) {
   Property(fn(instance) { object_value.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `ObjectValue` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -70,11 +74,11 @@ pub fn name(value: String) -> Property(ObjectValue) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(ObjectValue) {
   Property(fn(instance) { object_value.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `ObjectValue` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -83,13 +87,15 @@ pub fn parent(value: Instance) -> Property(ObjectValue) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(ObjectValue) {
   Property(fn(instance) { object_value.set_sandboxed(instance, value) })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: ObjectValue) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: ObjectValue,
+) -> Nil {
   Nil
 }

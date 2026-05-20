@@ -1,29 +1,40 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type AccessoryType, type Actor, type AvatarAssetType, type AvatarEditorService, type AvatarItemType, type AvatarPromptResult, type CatalogPages, type CatalogSearchParams, type HumanoidDescription, type HumanoidRigType, type Instance, type InventoryPages, type Object, type OptionDouble, type OptionInt64, type OutfitPages, type OutfitSource, type OutfitType, type SecurityCapabilities, type UniqueId}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type AccessoryType, type Actor, type AvatarAssetType, type AvatarEditorService,
+  type AvatarItemType, type AvatarPromptResult, type CatalogPages,
+  type CatalogSearchParams, type HumanoidDescription, type HumanoidRigType,
+  type Instance, type InventoryPages, type Object, type OptionDouble,
+  type OptionInt64, type OutfitPages, type OutfitSource, type OutfitType,
+  type SecurityCapabilities, type UniqueId,
+}
 
-/// Treats `AvatarEditorService` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `AvatarEditorService` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AvatarEditorService) -> Instance
 
-/// Treats `AvatarEditorService` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `AvatarEditorService` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: AvatarEditorService) -> Object
 
+@target(luau)
 /// Roblox: `AvatarEditorService.GetAccessoryType`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#GetAccessoryType
 ///
 /// Parameters:
 /// - `instance`: A service to support developer Avatar Editors.
-@target(luau)
 @luau.method("GetAccessoryType")
-pub fn get_accessory_type(instance: AvatarEditorService, avatar_asset_type: AvatarAssetType) -> AccessoryType
+pub fn get_accessory_type(
+  instance: AvatarEditorService,
+  avatar_asset_type: AvatarAssetType,
+) -> AccessoryType
 
+@target(luau)
 /// Prompts the Players.LocalPlayer to allow the developer to read what items the user has in their inventory and other avatar editor related information.
 ///
 /// Roblox: `AvatarEditorService.PromptAllowInventoryReadAccess`
@@ -32,10 +43,10 @@ pub fn get_accessory_type(instance: AvatarEditorService, avatar_asset_type: Avat
 ///
 /// Parameters:
 /// - `instance`: A service to support developer Avatar Editors.
-@target(luau)
 @luau.method("PromptAllowInventoryReadAccess")
 pub fn prompt_allow_inventory_read_access(instance: AvatarEditorService) -> Nil
 
+@target(luau)
 /// Prompts the Players.LocalPlayer to save the given HumanoidDescription as an outfit.
 ///
 /// Roblox: `AvatarEditorService.PromptCreateOutfit`
@@ -46,10 +57,14 @@ pub fn prompt_allow_inventory_read_access(instance: AvatarEditorService) -> Nil
 /// - `instance`: A service to support developer Avatar Editors.
 /// - `outfit`: The Outfit that the player will be prompted to created.
 /// - `rigType`: The RigType that the outfit will be created for if the player confirms the prompt.
-@target(luau)
 @luau.method("PromptCreateOutfit")
-pub fn prompt_create_outfit(instance: AvatarEditorService, outfit: HumanoidDescription, rig_type: HumanoidRigType) -> Nil
+pub fn prompt_create_outfit(
+  instance: AvatarEditorService,
+  outfit: HumanoidDescription,
+  rig_type: HumanoidRigType,
+) -> Nil
 
+@target(luau)
 /// Prompts the Players.LocalPlayer to delete the given outfit.
 ///
 /// Roblox: `AvatarEditorService.PromptDeleteOutfit`
@@ -59,10 +74,13 @@ pub fn prompt_create_outfit(instance: AvatarEditorService, outfit: HumanoidDescr
 /// Parameters:
 /// - `instance`: A service to support developer Avatar Editors.
 /// - `outfitId`: The outfitId of the outfit to delete.
-@target(luau)
 @luau.method("PromptDeleteOutfit")
-pub fn prompt_delete_outfit(instance: AvatarEditorService, outfit_id: OptionInt64) -> Nil
+pub fn prompt_delete_outfit(
+  instance: AvatarEditorService,
+  outfit_id: OptionInt64,
+) -> Nil
 
+@target(luau)
 /// Prompts the Players.LocalPlayer to rename the given outfit.
 ///
 /// Roblox: `AvatarEditorService.PromptRenameOutfit`
@@ -72,10 +90,13 @@ pub fn prompt_delete_outfit(instance: AvatarEditorService, outfit_id: OptionInt6
 /// Parameters:
 /// - `instance`: A service to support developer Avatar Editors.
 /// - `outfitId`: The outfitId of the outfit to rename.
-@target(luau)
 @luau.method("PromptRenameOutfit")
-pub fn prompt_rename_outfit(instance: AvatarEditorService, outfit_id: OptionInt64) -> Nil
+pub fn prompt_rename_outfit(
+  instance: AvatarEditorService,
+  outfit_id: OptionInt64,
+) -> Nil
 
+@target(luau)
 /// Prompts the Players.LocalPlayer to update their avatar based on the given HumanoidDescription and RigType of R6 or R15.
 ///
 /// Roblox: `AvatarEditorService.PromptSaveAvatar`
@@ -86,10 +107,14 @@ pub fn prompt_rename_outfit(instance: AvatarEditorService, outfit_id: OptionInt6
 /// - `instance`: A service to support developer Avatar Editors.
 /// - `humanoidDescription`: The given HumanoidDescription being prompted to save.
 /// - `rigType`: The RigType that the avatar will be saved for if the player confirms the prompt.
-@target(luau)
 @luau.method("PromptSaveAvatar")
-pub fn prompt_save_avatar(instance: AvatarEditorService, humanoid_description: HumanoidDescription, rig_type: HumanoidRigType) -> Nil
+pub fn prompt_save_avatar(
+  instance: AvatarEditorService,
+  humanoid_description: HumanoidDescription,
+  rig_type: HumanoidRigType,
+) -> Nil
 
+@target(luau)
 /// Prompts the Players.LocalPlayer to favorite or unfavorite the given asset or bundle.
 ///
 /// Roblox: `AvatarEditorService.PromptSetFavorite`
@@ -100,10 +125,15 @@ pub fn prompt_save_avatar(instance: AvatarEditorService, humanoid_description: H
 /// - `instance`: A service to support developer Avatar Editors.
 /// - `itemId`: The ItemId of the item being prompted to favorite.
 /// - `itemType`: The type of item being prompted to favorite.
-@target(luau)
 @luau.method("PromptSetFavorite")
-pub fn prompt_set_favorite(instance: AvatarEditorService, item_id: OptionInt64, item_type: AvatarItemType, should_favorite: Bool) -> Nil
+pub fn prompt_set_favorite(
+  instance: AvatarEditorService,
+  item_id: OptionInt64,
+  item_type: AvatarItemType,
+  should_favorite: Bool,
+) -> Nil
 
+@target(luau)
 /// Prompts the Players.LocalPlayer to update the given outfit.
 ///
 /// Roblox: `AvatarEditorService.PromptUpdateOutfit`
@@ -115,10 +145,15 @@ pub fn prompt_set_favorite(instance: AvatarEditorService, item_id: OptionInt64, 
 /// - `outfitId`: The outfitId of the outfit to update.
 /// - `updatedOutfit`: A HumanoidDescription that represents the new outfit data.
 /// - `rigType`: The HumanoidRigType to update the outfit to.
-@target(luau)
 @luau.method("PromptUpdateOutfit")
-pub fn prompt_update_outfit(instance: AvatarEditorService, outfit_id: OptionInt64, updated_outfit: HumanoidDescription, rig_type: HumanoidRigType) -> Nil
+pub fn prompt_update_outfit(
+  instance: AvatarEditorService,
+  outfit_id: OptionInt64,
+  updated_outfit: HumanoidDescription,
+  rig_type: HumanoidRigType,
+) -> Nil
 
+@target(luau)
 /// Used to apply default clothing to the HumanoidDescription if necessary.
 ///
 /// Roblox: `AvatarEditorService.CheckApplyDefaultClothingAsync`
@@ -132,10 +167,13 @@ pub fn prompt_update_outfit(instance: AvatarEditorService, outfit_id: OptionInt6
 ///
 /// Returns:
 /// - Returns a HumanoidDescription if default clothing was necessary. Otherwise returns nil.
-@target(luau)
 @luau.method("CheckApplyDefaultClothingAsync")
-pub fn check_apply_default_clothing_async(instance: AvatarEditorService, humanoid_description: HumanoidDescription) -> HumanoidDescription
+pub fn check_apply_default_clothing_async(
+  instance: AvatarEditorService,
+  humanoid_description: HumanoidDescription,
+) -> HumanoidDescription
 
+@target(luau)
 /// Returns a copy of the given HumanoidDescription that conforms to the platform Avatar rules.
 ///
 /// Roblox: `AvatarEditorService.ConformToAvatarRulesAsync`
@@ -149,10 +187,13 @@ pub fn check_apply_default_clothing_async(instance: AvatarEditorService, humanoi
 ///
 /// Returns:
 /// - A new HumanoidDescription that conforms to the platform Avatar rules.
-@target(luau)
 @luau.method("ConformToAvatarRulesAsync")
-pub fn conform_to_avatar_rules_async(instance: AvatarEditorService, humanoid_description: HumanoidDescription) -> HumanoidDescription
+pub fn conform_to_avatar_rules_async(
+  instance: AvatarEditorService,
+  humanoid_description: HumanoidDescription,
+) -> HumanoidDescription
 
+@target(luau)
 /// Returns the platform Avatar rules for things such as scaling, default shirts and pants, number of wearable assets.
 ///
 /// Roblox: `AvatarEditorService.GetAvatarRulesAsync`
@@ -165,10 +206,10 @@ pub fn conform_to_avatar_rules_async(instance: AvatarEditorService, humanoid_des
 ///
 /// Returns:
 /// - A dictionary containing the platform Avatar rules for things like scaling, default shirts and pants, number of wearable assets, ect. See the example return in the main description above.
-@target(luau)
 @luau.method("GetAvatarRulesAsync")
 pub fn get_avatar_rules_async(instance: AvatarEditorService) -> Dynamic
 
+@target(luau)
 /// Gets the item details for a list of items at once.
 ///
 /// Roblox: `AvatarEditorService.GetBatchItemDetailsAsync`
@@ -183,18 +224,26 @@ pub fn get_avatar_rules_async(instance: AvatarEditorService) -> Dynamic
 ///
 /// Returns:
 /// - Returns an array of item details.
-@target(luau)
 @luau.method("GetBatchItemDetailsAsync")
-pub fn get_batch_item_details_async(instance: AvatarEditorService, item_ids: List(Dynamic), item_type: AvatarItemType) -> List(Dynamic)
+pub fn get_batch_item_details_async(
+  instance: AvatarEditorService,
+  item_ids: List(Dynamic),
+  item_type: AvatarItemType,
+) -> List(Dynamic)
 
+@target(luau)
 /// Roblox: `AvatarEditorService.GetBundlesByAssetIdAsync`
 /// ThreadSafety: Unsafe
 /// Tags: Yields
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#GetBundlesByAssetIdAsync
-@target(luau)
 @luau.method("GetBundlesByAssetIdAsync")
-pub fn get_bundles_by_asset_id_async(instance: AvatarEditorService, asset_id: OptionInt64, limit: OptionInt64) -> CatalogPages
+pub fn get_bundles_by_asset_id_async(
+  instance: AvatarEditorService,
+  asset_id: OptionInt64,
+  limit: OptionInt64,
+) -> CatalogPages
 
+@target(luau)
 /// Returns if the Players.LocalPlayer has favorited the given bundle or asset.
 ///
 /// Roblox: `AvatarEditorService.GetFavoriteAsync`
@@ -209,10 +258,14 @@ pub fn get_bundles_by_asset_id_async(instance: AvatarEditorService, asset_id: Op
 ///
 /// Returns:
 /// - Whether the LocalPlayer has favorited the given bundle or asset.
-@target(luau)
 @luau.method("GetFavoriteAsync")
-pub fn get_favorite_async(instance: AvatarEditorService, item_id: OptionInt64, item_type: AvatarItemType) -> Bool
+pub fn get_favorite_async(
+  instance: AvatarEditorService,
+  item_id: OptionInt64,
+  item_type: AvatarItemType,
+) -> Bool
 
+@target(luau)
 /// Returns an array of head shape names that the Players.LocalPlayer owns.
 ///
 /// Roblox: `AvatarEditorService.GetHeadShapesAsync`
@@ -225,10 +278,10 @@ pub fn get_favorite_async(instance: AvatarEditorService, item_id: OptionInt64, i
 ///
 /// Returns:
 /// - An array of strings, each identifying a head shape owned by Players.LocalPlayer. Possible values include: "RobloxClassic", "Blockhead", "Cheeks", "Chiseled", "CoolThing", "EraserHead", "FatHead", "FlatTop", "GoldenKorbloxGeneral", "GoldenMrRobot", "KnightOfChivalry", "KnightOfCourage", "ManHead", "MercilessNinja", "Narrow", "Paragon", "Peabrain", "Perfection", "Roll", "Roundy", "RoxBox", "TheEngineer", "Trim", "WomanHead".
-@target(luau)
 @luau.method("GetHeadShapesAsync")
 pub fn get_head_shapes_async(instance: AvatarEditorService) -> List(Dynamic)
 
+@target(luau)
 /// Returns an InventoryPages object with information about owned items in the users inventory with the given AvatarAssetTypes.
 ///
 /// Roblox: `AvatarEditorService.GetInventoryAsync`
@@ -239,10 +292,13 @@ pub fn get_head_shapes_async(instance: AvatarEditorService) -> List(Dynamic)
 /// Parameters:
 /// - `instance`: A service to support developer Avatar Editors.
 /// - `assetTypes`: The AvatarAssetType that can will be checked for in the player's inventory.
-@target(luau)
 @luau.method("GetInventoryAsync")
-pub fn get_inventory_async(instance: AvatarEditorService, asset_types: List(Dynamic)) -> InventoryPages
+pub fn get_inventory_async(
+  instance: AvatarEditorService,
+  asset_types: List(Dynamic),
+) -> InventoryPages
 
+@target(luau)
 /// Returns the item details for the given item.
 ///
 /// Roblox: `AvatarEditorService.GetItemDetailsAsync`
@@ -257,10 +313,14 @@ pub fn get_inventory_async(instance: AvatarEditorService, asset_types: List(Dyna
 ///
 /// Returns:
 /// - A table containing the item info for the retrieved item.
-@target(luau)
 @luau.method("GetItemDetailsAsync")
-pub fn get_item_details_async(instance: AvatarEditorService, item_id: OptionInt64, item_type: AvatarItemType) -> Dynamic
+pub fn get_item_details_async(
+  instance: AvatarEditorService,
+  item_id: OptionInt64,
+  item_type: AvatarItemType,
+) -> Dynamic
 
+@target(luau)
 /// Returns the outfit details for the given outfit.
 ///
 /// Roblox: `AvatarEditorService.GetOutfitDetailsAsync`
@@ -274,10 +334,13 @@ pub fn get_item_details_async(instance: AvatarEditorService, item_id: OptionInt6
 ///
 /// Returns:
 /// - A table containing the outfit info for the retrieved outfit. See above for a sample table.
-@target(luau)
 @luau.method("GetOutfitDetailsAsync")
-pub fn get_outfit_details_async(instance: AvatarEditorService, outfit_id: OptionInt64) -> Dynamic
+pub fn get_outfit_details_async(
+  instance: AvatarEditorService,
+  outfit_id: OptionInt64,
+) -> Dynamic
 
+@target(luau)
 /// Returns outfit data for the Players.LocalPlayer.
 ///
 /// Roblox: `AvatarEditorService.GetOutfitsAsync`
@@ -287,10 +350,14 @@ pub fn get_outfit_details_async(instance: AvatarEditorService, outfit_id: Option
 ///
 /// Parameters:
 /// - `instance`: A service to support developer Avatar Editors.
-@target(luau)
 @luau.method("GetOutfitsAsync")
-pub fn get_outfits_async(instance: AvatarEditorService, outfit_source: OutfitSource, outfit_type: OutfitType) -> OutfitPages
+pub fn get_outfits_async(
+  instance: AvatarEditorService,
+  outfit_source: OutfitSource,
+  outfit_type: OutfitType,
+) -> OutfitPages
 
+@target(luau)
 /// Returns a list of recommended assets based on a given AssetType and asset ID.
 ///
 /// Roblox: `AvatarEditorService.GetRecommendedAssetsAsync`
@@ -305,10 +372,14 @@ pub fn get_outfits_async(instance: AvatarEditorService, outfit_source: OutfitSou
 ///
 /// Returns:
 /// - A list of recommendations based on the given AssetType.
-@target(luau)
 @luau.method("GetRecommendedAssetsAsync")
-pub fn get_recommended_assets_async(instance: AvatarEditorService, asset_type: AvatarAssetType, context_asset_id: OptionInt64) -> List(Dynamic)
+pub fn get_recommended_assets_async(
+  instance: AvatarEditorService,
+  asset_type: AvatarAssetType,
+  context_asset_id: OptionInt64,
+) -> List(Dynamic)
 
+@target(luau)
 /// Returns a list of recommended bundles for a given bundle id.
 ///
 /// Roblox: `AvatarEditorService.GetRecommendedBundlesAsync`
@@ -322,10 +393,13 @@ pub fn get_recommended_assets_async(instance: AvatarEditorService, asset_type: A
 ///
 /// Returns:
 /// - The bundle ID that the recommended bundles will be returned for.
-@target(luau)
 @luau.method("GetRecommendedBundlesAsync")
-pub fn get_recommended_bundles_async(instance: AvatarEditorService, bundle_id: OptionInt64) -> List(Dynamic)
+pub fn get_recommended_bundles_async(
+  instance: AvatarEditorService,
+  bundle_id: OptionInt64,
+) -> List(Dynamic)
 
+@target(luau)
 /// Returns a CatalogPages object containing the result of the given search.
 ///
 /// Roblox: `AvatarEditorService.SearchCatalogAsync`
@@ -339,19 +413,24 @@ pub fn get_recommended_bundles_async(instance: AvatarEditorService, bundle_id: O
 ///
 /// Returns:
 /// - A CatalogPages object containing the search results.
-@target(luau)
 @luau.method("SearchCatalogAsync")
-pub fn search_catalog_async(instance: AvatarEditorService, search_parameters: CatalogSearchParams) -> CatalogPages
+pub fn search_catalog_async(
+  instance: AvatarEditorService,
+  search_parameters: CatalogSearchParams,
+) -> CatalogPages
 
+@target(luau)
 /// Fires when the AvatarEditorService:PromptAllowInventoryReadAccess() prompt is responded to by the user.
 ///
 /// Roblox: `AvatarEditorService.PromptAllowInventoryReadAccessCompleted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#PromptAllowInventoryReadAccessCompleted
-@target(luau)
 @luau.event("PromptAllowInventoryReadAccessCompleted")
-pub fn prompt_allow_inventory_read_access_completed(instance: AvatarEditorService) -> RBXScriptSignal(fn(AvatarPromptResult) -> Nil)
+pub fn prompt_allow_inventory_read_access_completed(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn(AvatarPromptResult) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `AvatarEditorService.PromptAllowInventoryReadAccessCompleted`.
 ///
 /// Fires when the AvatarEditorService:PromptAllowInventoryReadAccess() prompt is responded to by the user.
@@ -359,19 +438,24 @@ pub fn prompt_allow_inventory_read_access_completed(instance: AvatarEditorServic
 /// Roblox: `AvatarEditorService.PromptAllowInventoryReadAccessCompleted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#PromptAllowInventoryReadAccessCompleted
-@target(luau)
 @luau.global("(function(instance, callback) return instance.PromptAllowInventoryReadAccessCompleted:Connect(callback) end)")
-pub fn on_prompt_allow_inventory_read_access_completed(instance: AvatarEditorService, callback: fn(AvatarPromptResult) -> Nil) -> RBXScriptConnection
+pub fn on_prompt_allow_inventory_read_access_completed(
+  instance: AvatarEditorService,
+  callback: fn(AvatarPromptResult) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the PromptSaveOutfit operation is completed.
 ///
 /// Roblox: `AvatarEditorService.PromptCreateOutfitCompleted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#PromptCreateOutfitCompleted
-@target(luau)
 @luau.event("PromptCreateOutfitCompleted")
-pub fn prompt_create_outfit_completed(instance: AvatarEditorService) -> RBXScriptSignal(fn(AvatarPromptResult, Dynamic) -> Nil)
+pub fn prompt_create_outfit_completed(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn(AvatarPromptResult, Dynamic) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `AvatarEditorService.PromptCreateOutfitCompleted`.
 ///
 /// Fires when the PromptSaveOutfit operation is completed.
@@ -379,19 +463,24 @@ pub fn prompt_create_outfit_completed(instance: AvatarEditorService) -> RBXScrip
 /// Roblox: `AvatarEditorService.PromptCreateOutfitCompleted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#PromptCreateOutfitCompleted
-@target(luau)
 @luau.global("(function(instance, callback) return instance.PromptCreateOutfitCompleted:Connect(callback) end)")
-pub fn on_prompt_create_outfit_completed(instance: AvatarEditorService, callback: fn(AvatarPromptResult, Dynamic) -> Nil) -> RBXScriptConnection
+pub fn on_prompt_create_outfit_completed(
+  instance: AvatarEditorService,
+  callback: fn(AvatarPromptResult, Dynamic) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the PromptDeleteOutfit operation is completed.
 ///
 /// Roblox: `AvatarEditorService.PromptDeleteOutfitCompleted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#PromptDeleteOutfitCompleted
-@target(luau)
 @luau.event("PromptDeleteOutfitCompleted")
-pub fn prompt_delete_outfit_completed(instance: AvatarEditorService) -> RBXScriptSignal(fn(AvatarPromptResult) -> Nil)
+pub fn prompt_delete_outfit_completed(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn(AvatarPromptResult) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `AvatarEditorService.PromptDeleteOutfitCompleted`.
 ///
 /// Fires when the PromptDeleteOutfit operation is completed.
@@ -399,19 +488,24 @@ pub fn prompt_delete_outfit_completed(instance: AvatarEditorService) -> RBXScrip
 /// Roblox: `AvatarEditorService.PromptDeleteOutfitCompleted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#PromptDeleteOutfitCompleted
-@target(luau)
 @luau.global("(function(instance, callback) return instance.PromptDeleteOutfitCompleted:Connect(callback) end)")
-pub fn on_prompt_delete_outfit_completed(instance: AvatarEditorService, callback: fn(AvatarPromptResult) -> Nil) -> RBXScriptConnection
+pub fn on_prompt_delete_outfit_completed(
+  instance: AvatarEditorService,
+  callback: fn(AvatarPromptResult) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the PromptRenameOutfit operation is completed.
 ///
 /// Roblox: `AvatarEditorService.PromptRenameOutfitCompleted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#PromptRenameOutfitCompleted
-@target(luau)
 @luau.event("PromptRenameOutfitCompleted")
-pub fn prompt_rename_outfit_completed(instance: AvatarEditorService) -> RBXScriptSignal(fn(AvatarPromptResult) -> Nil)
+pub fn prompt_rename_outfit_completed(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn(AvatarPromptResult) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `AvatarEditorService.PromptRenameOutfitCompleted`.
 ///
 /// Fires when the PromptRenameOutfit operation is completed.
@@ -419,19 +513,24 @@ pub fn prompt_rename_outfit_completed(instance: AvatarEditorService) -> RBXScrip
 /// Roblox: `AvatarEditorService.PromptRenameOutfitCompleted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#PromptRenameOutfitCompleted
-@target(luau)
 @luau.global("(function(instance, callback) return instance.PromptRenameOutfitCompleted:Connect(callback) end)")
-pub fn on_prompt_rename_outfit_completed(instance: AvatarEditorService, callback: fn(AvatarPromptResult) -> Nil) -> RBXScriptConnection
+pub fn on_prompt_rename_outfit_completed(
+  instance: AvatarEditorService,
+  callback: fn(AvatarPromptResult) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the AvatarEditorService:PromptSaveAvatar() operation is completed.
 ///
 /// Roblox: `AvatarEditorService.PromptSaveAvatarCompleted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#PromptSaveAvatarCompleted
-@target(luau)
 @luau.event("PromptSaveAvatarCompleted")
-pub fn prompt_save_avatar_completed(instance: AvatarEditorService) -> RBXScriptSignal(fn(AvatarPromptResult, HumanoidDescription) -> Nil)
+pub fn prompt_save_avatar_completed(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn(AvatarPromptResult, HumanoidDescription) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `AvatarEditorService.PromptSaveAvatarCompleted`.
 ///
 /// Fires when the AvatarEditorService:PromptSaveAvatar() operation is completed.
@@ -439,19 +538,24 @@ pub fn prompt_save_avatar_completed(instance: AvatarEditorService) -> RBXScriptS
 /// Roblox: `AvatarEditorService.PromptSaveAvatarCompleted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#PromptSaveAvatarCompleted
-@target(luau)
 @luau.global("(function(instance, callback) return instance.PromptSaveAvatarCompleted:Connect(callback) end)")
-pub fn on_prompt_save_avatar_completed(instance: AvatarEditorService, callback: fn(AvatarPromptResult, HumanoidDescription) -> Nil) -> RBXScriptConnection
+pub fn on_prompt_save_avatar_completed(
+  instance: AvatarEditorService,
+  callback: fn(AvatarPromptResult, HumanoidDescription) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the AvatarEditorService:PromptSetFavorite() operation is completed.
 ///
 /// Roblox: `AvatarEditorService.PromptSetFavoriteCompleted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#PromptSetFavoriteCompleted
-@target(luau)
 @luau.event("PromptSetFavoriteCompleted")
-pub fn prompt_set_favorite_completed(instance: AvatarEditorService) -> RBXScriptSignal(fn(AvatarPromptResult) -> Nil)
+pub fn prompt_set_favorite_completed(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn(AvatarPromptResult) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `AvatarEditorService.PromptSetFavoriteCompleted`.
 ///
 /// Fires when the AvatarEditorService:PromptSetFavorite() operation is completed.
@@ -459,19 +563,24 @@ pub fn prompt_set_favorite_completed(instance: AvatarEditorService) -> RBXScript
 /// Roblox: `AvatarEditorService.PromptSetFavoriteCompleted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#PromptSetFavoriteCompleted
-@target(luau)
 @luau.global("(function(instance, callback) return instance.PromptSetFavoriteCompleted:Connect(callback) end)")
-pub fn on_prompt_set_favorite_completed(instance: AvatarEditorService, callback: fn(AvatarPromptResult) -> Nil) -> RBXScriptConnection
+pub fn on_prompt_set_favorite_completed(
+  instance: AvatarEditorService,
+  callback: fn(AvatarPromptResult) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the AvatarEditorService:PromptUpdateOutfit() operation is completed.
 ///
 /// Roblox: `AvatarEditorService.PromptUpdateOutfitCompleted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#PromptUpdateOutfitCompleted
-@target(luau)
 @luau.event("PromptUpdateOutfitCompleted")
-pub fn prompt_update_outfit_completed(instance: AvatarEditorService) -> RBXScriptSignal(fn(AvatarPromptResult) -> Nil)
+pub fn prompt_update_outfit_completed(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn(AvatarPromptResult) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `AvatarEditorService.PromptUpdateOutfitCompleted`.
 ///
 /// Fires when the AvatarEditorService:PromptUpdateOutfit() operation is completed.
@@ -479,10 +588,13 @@ pub fn prompt_update_outfit_completed(instance: AvatarEditorService) -> RBXScrip
 /// Roblox: `AvatarEditorService.PromptUpdateOutfitCompleted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#PromptUpdateOutfitCompleted
-@target(luau)
 @luau.global("(function(instance, callback) return instance.PromptUpdateOutfitCompleted:Connect(callback) end)")
-pub fn on_prompt_update_outfit_completed(instance: AvatarEditorService, callback: fn(AvatarPromptResult) -> Nil) -> RBXScriptConnection
+pub fn on_prompt_update_outfit_completed(
+  instance: AvatarEditorService,
+  callback: fn(AvatarPromptResult) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -490,10 +602,10 @@ pub fn on_prompt_update_outfit_completed(instance: AvatarEditorService, callback
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: AvatarEditorService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -501,10 +613,13 @@ pub fn get_archivable(instance: AvatarEditorService) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
-pub fn set_archivable(instance: AvatarEditorService, value: Bool) -> AvatarEditorService
+pub fn set_archivable(
+  instance: AvatarEditorService,
+  value: Bool,
+) -> AvatarEditorService
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -512,10 +627,10 @@ pub fn set_archivable(instance: AvatarEditorService, value: Bool) -> AvatarEdito
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: AvatarEditorService) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -523,10 +638,13 @@ pub fn get_capabilities(instance: AvatarEditorService) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: AvatarEditorService, value: SecurityCapabilities) -> AvatarEditorService
+pub fn set_capabilities(
+  instance: AvatarEditorService,
+  value: SecurityCapabilities,
+) -> AvatarEditorService
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -534,10 +652,10 @@ pub fn set_capabilities(instance: AvatarEditorService, value: SecurityCapabiliti
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: AvatarEditorService) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -545,10 +663,13 @@ pub fn get_name(instance: AvatarEditorService) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
-pub fn set_name(instance: AvatarEditorService, value: String) -> AvatarEditorService
+pub fn set_name(
+  instance: AvatarEditorService,
+  value: String,
+) -> AvatarEditorService
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -557,10 +678,10 @@ pub fn set_name(instance: AvatarEditorService, value: String) -> AvatarEditorSer
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: AvatarEditorService) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -569,10 +690,13 @@ pub fn get_parent(instance: AvatarEditorService) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
-pub fn set_parent(instance: AvatarEditorService, value: parent) -> AvatarEditorService
+pub fn set_parent(
+  instance: AvatarEditorService,
+  value: parent,
+) -> AvatarEditorService
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -581,10 +705,10 @@ pub fn set_parent(instance: AvatarEditorService, value: parent) -> AvatarEditorS
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: AvatarEditorService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -593,10 +717,10 @@ pub fn get_roblox_locked(instance: AvatarEditorService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: AvatarEditorService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -605,20 +729,23 @@ pub fn get_sandboxed(instance: AvatarEditorService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
-pub fn set_sandboxed(instance: AvatarEditorService, value: Bool) -> AvatarEditorService
+pub fn set_sandboxed(
+  instance: AvatarEditorService,
+  value: Bool,
+) -> AvatarEditorService
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: AvatarEditorService) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -627,10 +754,10 @@ pub fn get_source_asset_id(instance: AvatarEditorService) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: AvatarEditorService) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -639,10 +766,10 @@ pub fn get_unique_id(instance: AvatarEditorService) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: AvatarEditorService, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -651,10 +778,10 @@ pub fn add_tag(instance: AvatarEditorService, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: AvatarEditorService) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -663,10 +790,10 @@ pub fn clear_all_children(instance: AvatarEditorService) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: AvatarEditorService) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -675,10 +802,10 @@ pub fn clone(instance: AvatarEditorService) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: AvatarEditorService) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -691,10 +818,13 @@ pub fn destroy_instance(instance: AvatarEditorService) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: AvatarEditorService, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: AvatarEditorService,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -707,10 +837,13 @@ pub fn find_first_ancestor(instance: AvatarEditorService, name: String) -> Optio
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: AvatarEditorService, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: AvatarEditorService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -723,10 +856,13 @@ pub fn find_first_ancestor_of_class(instance: AvatarEditorService, class_name: S
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: AvatarEditorService, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: AvatarEditorService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -740,10 +876,14 @@ pub fn find_first_ancestor_which_is_a(instance: AvatarEditorService, class_name:
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: AvatarEditorService, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: AvatarEditorService,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -756,10 +896,13 @@ pub fn find_first_child(instance: AvatarEditorService, name: String, recursive: 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: AvatarEditorService, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: AvatarEditorService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -773,10 +916,14 @@ pub fn find_first_child_of_class(instance: AvatarEditorService, class_name: Stri
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: AvatarEditorService, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: AvatarEditorService,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -789,10 +936,13 @@ pub fn find_first_child_which_is_a(instance: AvatarEditorService, class_name: St
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: AvatarEditorService, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: AvatarEditorService,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -804,10 +954,10 @@ pub fn find_first_descendant(instance: AvatarEditorService, name: String) -> Opt
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: AvatarEditorService) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -820,10 +970,13 @@ pub fn get_actor(instance: AvatarEditorService) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
-pub fn get_attribute(instance: AvatarEditorService, attribute: String) -> Dynamic
+pub fn get_attribute(
+  instance: AvatarEditorService,
+  attribute: String,
+) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -836,10 +989,13 @@ pub fn get_attribute(instance: AvatarEditorService, attribute: String) -> Dynami
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: AvatarEditorService, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: AvatarEditorService,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -852,10 +1008,10 @@ pub fn get_attribute_changed_signal(instance: AvatarEditorService, attribute: St
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: AvatarEditorService) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -867,10 +1023,10 @@ pub fn get_attributes(instance: AvatarEditorService) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: AvatarEditorService) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -883,10 +1039,10 @@ pub fn get_children(instance: AvatarEditorService) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: AvatarEditorService) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -898,10 +1054,10 @@ pub fn get_descendants(instance: AvatarEditorService) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: AvatarEditorService) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -915,10 +1071,14 @@ pub fn get_full_name(instance: AvatarEditorService) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: AvatarEditorService, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: AvatarEditorService,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -929,10 +1089,13 @@ pub fn get_styled(instance: AvatarEditorService, name: String, selector: Option(
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: AvatarEditorService, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: AvatarEditorService,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -941,10 +1104,10 @@ pub fn get_styled_property_changed_signal(instance: AvatarEditorService, propert
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: AvatarEditorService) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -953,10 +1116,10 @@ pub fn get_tags(instance: AvatarEditorService) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: AvatarEditorService, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -969,10 +1132,13 @@ pub fn has_tag(instance: AvatarEditorService, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
-pub fn is_ancestor_of(instance: AvatarEditorService, descendant: Instance) -> Bool
+pub fn is_ancestor_of(
+  instance: AvatarEditorService,
+  descendant: Instance,
+) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -985,10 +1151,13 @@ pub fn is_ancestor_of(instance: AvatarEditorService, descendant: Instance) -> Bo
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
-pub fn is_descendant_of(instance: AvatarEditorService, ancestor: Instance) -> Bool
+pub fn is_descendant_of(
+  instance: AvatarEditorService,
+  ancestor: Instance,
+) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -1001,10 +1170,13 @@ pub fn is_descendant_of(instance: AvatarEditorService, ancestor: Instance) -> Bo
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
-pub fn is_property_modified(instance: AvatarEditorService, property: String) -> Bool
+pub fn is_property_modified(
+  instance: AvatarEditorService,
+  property: String,
+) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -1016,10 +1188,13 @@ pub fn is_property_modified(instance: AvatarEditorService, property: String) -> 
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: AvatarEditorService, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: AvatarEditorService,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -1028,10 +1203,10 @@ pub fn query_descendants(instance: AvatarEditorService, selector: String) -> Lis
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: AvatarEditorService, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -1041,10 +1216,13 @@ pub fn remove_tag(instance: AvatarEditorService, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: AvatarEditorService, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: AvatarEditorService,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -1055,10 +1233,14 @@ pub fn reset_property_to_default(instance: AvatarEditorService, property: String
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: AvatarEditorService, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: AvatarEditorService,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -1073,19 +1255,25 @@ pub fn set_attribute(instance: AvatarEditorService, attribute: String, value: Dy
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: AvatarEditorService, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: AvatarEditorService,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: AvatarEditorService) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -1093,19 +1281,24 @@ pub fn ancestry_changed(instance: AvatarEditorService) -> RBXScriptSignal(fn(Ins
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: AvatarEditorService, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: AvatarEditorService,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: AvatarEditorService) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -1113,19 +1306,24 @@ pub fn attribute_changed(instance: AvatarEditorService) -> RBXScriptSignal(fn(St
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: AvatarEditorService, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: AvatarEditorService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: AvatarEditorService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -1133,19 +1331,24 @@ pub fn child_added(instance: AvatarEditorService) -> RBXScriptSignal(fn(Instance
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: AvatarEditorService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: AvatarEditorService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: AvatarEditorService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -1153,19 +1356,24 @@ pub fn child_removed(instance: AvatarEditorService) -> RBXScriptSignal(fn(Instan
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: AvatarEditorService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: AvatarEditorService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: AvatarEditorService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -1173,19 +1381,24 @@ pub fn descendant_added(instance: AvatarEditorService) -> RBXScriptSignal(fn(Ins
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: AvatarEditorService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: AvatarEditorService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: AvatarEditorService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -1193,19 +1406,22 @@ pub fn descendant_removing(instance: AvatarEditorService) -> RBXScriptSignal(fn(
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: AvatarEditorService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: AvatarEditorService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: AvatarEditorService) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1213,19 +1429,24 @@ pub fn destroying(instance: AvatarEditorService) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: AvatarEditorService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: AvatarEditorService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: AvatarEditorService) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1233,10 +1454,13 @@ pub fn styled_properties_changed(instance: AvatarEditorService) -> RBXScriptSign
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: AvatarEditorService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: AvatarEditorService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1245,10 +1469,10 @@ pub fn on_styled_properties_changed(instance: AvatarEditorService, callback: fn(
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: AvatarEditorService) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1261,10 +1485,13 @@ pub fn get_class_name(instance: AvatarEditorService) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: AvatarEditorService, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: AvatarEditorService,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1278,19 +1505,21 @@ pub fn get_property_changed_signal(instance: AvatarEditorService, property: Stri
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: AvatarEditorService, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
-pub fn changed(instance: AvatarEditorService) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn changed(
+  instance: AvatarEditorService,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1298,12 +1527,38 @@ pub fn changed(instance: AvatarEditorService) -> RBXScriptSignal(fn(String) -> N
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: AvatarEditorService, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: AvatarEditorService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: AvatarPromptResult, _: HumanoidDescription, _: CatalogPages, _: CatalogSearchParams, _: AvatarAssetType, _: OutfitPages, _: OutfitSource, _: OutfitType, _: AvatarItemType, _: InventoryPages, _: HumanoidRigType, _: AccessoryType, _: AvatarEditorService, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: AvatarPromptResult,
+  _: HumanoidDescription,
+  _: CatalogPages,
+  _: CatalogSearchParams,
+  _: AvatarAssetType,
+  _: OutfitPages,
+  _: OutfitSource,
+  _: OutfitType,
+  _: AvatarItemType,
+  _: InventoryPages,
+  _: HumanoidRigType,
+  _: AccessoryType,
+  _: AvatarEditorService,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

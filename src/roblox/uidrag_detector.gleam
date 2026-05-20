@@ -1,36 +1,45 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type Content, type ContentId, type GuiBase2d, type GuiObject, type Instance, type Object, type OptionDouble, type OptionInt64, type SecurityCapabilities, type UDim2, type UIBase, type UIComponent, type UIDragDetector, type UIDragDetectorBoundingBehavior, type UIDragDetectorDragRelativity, type UIDragDetectorDragSpace, type UIDragDetectorDragStyle, type UIDragDetectorResponseStyle, type UIDragSpeedAxisMapping, type UniqueId, type Vector2}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type Content, type ContentId, type GuiBase2d, type GuiObject,
+  type Instance, type Object, type OptionDouble, type OptionInt64,
+  type SecurityCapabilities, type UDim2, type UIBase, type UIComponent,
+  type UIDragDetector, type UIDragDetectorBoundingBehavior,
+  type UIDragDetectorDragRelativity, type UIDragDetectorDragSpace,
+  type UIDragDetectorDragStyle, type UIDragDetectorResponseStyle,
+  type UIDragSpeedAxisMapping, type UniqueId, type Vector2,
+}
 
+@target(luau)
 /// Creates a new Roblox `UIDragDetector` instance.
 ///
 /// Roblox: `Instance.new("UIDragDetector")`
-@target(luau)
 @luau.global("Instance.new(\"UIDragDetector\")")
 pub fn new() -> UIDragDetector
 
-/// Treats `UIDragDetector` as its Roblox ancestor `UIComponent`.
 @target(luau)
+/// Treats `UIDragDetector` as its Roblox ancestor `UIComponent`.
 @luau.global("(function(x) return x end)")
 pub fn as_ui_component(instance: UIDragDetector) -> UIComponent
 
-/// Treats `UIDragDetector` as its Roblox ancestor `UIBase`.
 @target(luau)
+/// Treats `UIDragDetector` as its Roblox ancestor `UIBase`.
 @luau.global("(function(x) return x end)")
 pub fn as_ui_base(instance: UIDragDetector) -> UIBase
 
-/// Treats `UIDragDetector` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `UIDragDetector` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UIDragDetector) -> Instance
 
-/// Treats `UIDragDetector` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `UIDragDetector` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: UIDragDetector) -> Object
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.ActivatedCursorIcon`.
 ///
 /// Sets the cursor icon to display when the mouse is activated over the parent of this UIDragDetector.
@@ -38,10 +47,10 @@ pub fn as_object(instance: UIDragDetector) -> Object
 /// Roblox: `UIDragDetector.ActivatedCursorIcon`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#ActivatedCursorIcon
-@target(luau)
 @luau.property("ActivatedCursorIcon")
 pub fn get_activated_cursor_icon(instance: UIDragDetector) -> ContentId
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.ActivatedCursorIcon`.
 ///
 /// Sets the cursor icon to display when the mouse is activated over the parent of this UIDragDetector.
@@ -49,10 +58,13 @@ pub fn get_activated_cursor_icon(instance: UIDragDetector) -> ContentId
 /// Roblox: `UIDragDetector.ActivatedCursorIcon`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#ActivatedCursorIcon
-@target(luau)
 @luau.set_property("ActivatedCursorIcon")
-pub fn set_activated_cursor_icon(instance: UIDragDetector, value: ContentId) -> UIDragDetector
+pub fn set_activated_cursor_icon(
+  instance: UIDragDetector,
+  value: ContentId,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.ActivatedCursorIconContent`.
 ///
 /// Sets the cursor icon to display when the mouse is activated over the parent of this UIDragDetector. Only supports asset URIs
@@ -60,10 +72,10 @@ pub fn set_activated_cursor_icon(instance: UIDragDetector, value: ContentId) -> 
 /// Roblox: `UIDragDetector.ActivatedCursorIconContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#ActivatedCursorIconContent
-@target(luau)
 @luau.property("ActivatedCursorIconContent")
 pub fn get_activated_cursor_icon_content(instance: UIDragDetector) -> Content
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.ActivatedCursorIconContent`.
 ///
 /// Sets the cursor icon to display when the mouse is activated over the parent of this UIDragDetector. Only supports asset URIs
@@ -71,10 +83,13 @@ pub fn get_activated_cursor_icon_content(instance: UIDragDetector) -> Content
 /// Roblox: `UIDragDetector.ActivatedCursorIconContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#ActivatedCursorIconContent
-@target(luau)
 @luau.set_property("ActivatedCursorIconContent")
-pub fn set_activated_cursor_icon_content(instance: UIDragDetector, value: Content) -> UIDragDetector
+pub fn set_activated_cursor_icon_content(
+  instance: UIDragDetector,
+  value: Content,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.BoundingBehavior`.
 ///
 /// Determines bounding behavior of the dragged UI object when the detector's BoundingUI is set.
@@ -82,10 +97,12 @@ pub fn set_activated_cursor_icon_content(instance: UIDragDetector, value: Conten
 /// Roblox: `UIDragDetector.BoundingBehavior`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#BoundingBehavior
-@target(luau)
 @luau.property("BoundingBehavior")
-pub fn get_bounding_behavior(instance: UIDragDetector) -> UIDragDetectorBoundingBehavior
+pub fn get_bounding_behavior(
+  instance: UIDragDetector,
+) -> UIDragDetectorBoundingBehavior
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.BoundingBehavior`.
 ///
 /// Determines bounding behavior of the dragged UI object when the detector's BoundingUI is set.
@@ -93,10 +110,13 @@ pub fn get_bounding_behavior(instance: UIDragDetector) -> UIDragDetectorBounding
 /// Roblox: `UIDragDetector.BoundingBehavior`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#BoundingBehavior
-@target(luau)
 @luau.set_property("BoundingBehavior")
-pub fn set_bounding_behavior(instance: UIDragDetector, value: UIDragDetectorBoundingBehavior) -> UIDragDetector
+pub fn set_bounding_behavior(
+  instance: UIDragDetector,
+  value: UIDragDetectorBoundingBehavior,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.BoundingUI`.
 ///
 /// Instance whose bounding area defines the drag boundaries for the parent GuiObject.
@@ -104,10 +124,10 @@ pub fn set_bounding_behavior(instance: UIDragDetector, value: UIDragDetectorBoun
 /// Roblox: `UIDragDetector.BoundingUI`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#BoundingUI
-@target(luau)
 @luau.property("BoundingUI")
 pub fn get_bounding_ui(instance: UIDragDetector) -> GuiBase2d
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.BoundingUI`.
 ///
 /// Instance whose bounding area defines the drag boundaries for the parent GuiObject.
@@ -115,10 +135,13 @@ pub fn get_bounding_ui(instance: UIDragDetector) -> GuiBase2d
 /// Roblox: `UIDragDetector.BoundingUI`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#BoundingUI
-@target(luau)
 @luau.set_property("BoundingUI")
-pub fn set_bounding_ui(instance: UIDragDetector, value: GuiBase2d) -> UIDragDetector
+pub fn set_bounding_ui(
+  instance: UIDragDetector,
+  value: GuiBase2d,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.CursorIcon`.
 ///
 /// Sets the cursor icon to display when the mouse is hovered over the parent of this UIDragDetector.
@@ -126,10 +149,10 @@ pub fn set_bounding_ui(instance: UIDragDetector, value: GuiBase2d) -> UIDragDete
 /// Roblox: `UIDragDetector.CursorIcon`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#CursorIcon
-@target(luau)
 @luau.property("CursorIcon")
 pub fn get_cursor_icon(instance: UIDragDetector) -> ContentId
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.CursorIcon`.
 ///
 /// Sets the cursor icon to display when the mouse is hovered over the parent of this UIDragDetector.
@@ -137,10 +160,13 @@ pub fn get_cursor_icon(instance: UIDragDetector) -> ContentId
 /// Roblox: `UIDragDetector.CursorIcon`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#CursorIcon
-@target(luau)
 @luau.set_property("CursorIcon")
-pub fn set_cursor_icon(instance: UIDragDetector, value: ContentId) -> UIDragDetector
+pub fn set_cursor_icon(
+  instance: UIDragDetector,
+  value: ContentId,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.CursorIconContent`.
 ///
 /// Sets the cursor icon to display when the mouse is hovered over the parent of this UIDragDetector. Only asset URIs are supported.
@@ -148,10 +174,10 @@ pub fn set_cursor_icon(instance: UIDragDetector, value: ContentId) -> UIDragDete
 /// Roblox: `UIDragDetector.CursorIconContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#CursorIconContent
-@target(luau)
 @luau.property("CursorIconContent")
 pub fn get_cursor_icon_content(instance: UIDragDetector) -> Content
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.CursorIconContent`.
 ///
 /// Sets the cursor icon to display when the mouse is hovered over the parent of this UIDragDetector. Only asset URIs are supported.
@@ -159,10 +185,13 @@ pub fn get_cursor_icon_content(instance: UIDragDetector) -> Content
 /// Roblox: `UIDragDetector.CursorIconContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#CursorIconContent
-@target(luau)
 @luau.set_property("CursorIconContent")
-pub fn set_cursor_icon_content(instance: UIDragDetector, value: Content) -> UIDragDetector
+pub fn set_cursor_icon_content(
+  instance: UIDragDetector,
+  value: Content,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.DragAxis`.
 ///
 /// The drag axis for the UIDragDetector instance when DragStyle is set to UIDragDetectorDragStyle.TranslateLine.
@@ -170,10 +199,10 @@ pub fn set_cursor_icon_content(instance: UIDragDetector, value: Content) -> UIDr
 /// Roblox: `UIDragDetector.DragAxis`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragAxis
-@target(luau)
 @luau.property("DragAxis")
 pub fn get_drag_axis(instance: UIDragDetector) -> Vector2
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.DragAxis`.
 ///
 /// The drag axis for the UIDragDetector instance when DragStyle is set to UIDragDetectorDragStyle.TranslateLine.
@@ -181,10 +210,10 @@ pub fn get_drag_axis(instance: UIDragDetector) -> Vector2
 /// Roblox: `UIDragDetector.DragAxis`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragAxis
-@target(luau)
 @luau.set_property("DragAxis")
 pub fn set_drag_axis(instance: UIDragDetector, value: Vector2) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.DragRelativity`.
 ///
 /// Sets the paradigm which defines the relativity of inputs/outputs from a custom drag function.
@@ -192,10 +221,12 @@ pub fn set_drag_axis(instance: UIDragDetector, value: Vector2) -> UIDragDetector
 /// Roblox: `UIDragDetector.DragRelativity`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragRelativity
-@target(luau)
 @luau.property("DragRelativity")
-pub fn get_drag_relativity(instance: UIDragDetector) -> UIDragDetectorDragRelativity
+pub fn get_drag_relativity(
+  instance: UIDragDetector,
+) -> UIDragDetectorDragRelativity
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.DragRelativity`.
 ///
 /// Sets the paradigm which defines the relativity of inputs/outputs from a custom drag function.
@@ -203,10 +234,13 @@ pub fn get_drag_relativity(instance: UIDragDetector) -> UIDragDetectorDragRelati
 /// Roblox: `UIDragDetector.DragRelativity`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragRelativity
-@target(luau)
 @luau.set_property("DragRelativity")
-pub fn set_drag_relativity(instance: UIDragDetector, value: UIDragDetectorDragRelativity) -> UIDragDetector
+pub fn set_drag_relativity(
+  instance: UIDragDetector,
+  value: UIDragDetectorDragRelativity,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.DragRotation`.
 ///
 /// The rotation performed by the current drag.
@@ -214,10 +248,10 @@ pub fn set_drag_relativity(instance: UIDragDetector, value: UIDragDetectorDragRe
 /// Roblox: `UIDragDetector.DragRotation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragRotation
-@target(luau)
 @luau.property("DragRotation")
 pub fn get_drag_rotation(instance: UIDragDetector) -> Float
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.DragRotation`.
 ///
 /// The rotation performed by the current drag.
@@ -225,10 +259,13 @@ pub fn get_drag_rotation(instance: UIDragDetector) -> Float
 /// Roblox: `UIDragDetector.DragRotation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragRotation
-@target(luau)
 @luau.set_property("DragRotation")
-pub fn set_drag_rotation(instance: UIDragDetector, value: Float) -> UIDragDetector
+pub fn set_drag_rotation(
+  instance: UIDragDetector,
+  value: Float,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.DragSpace`.
 ///
 /// Sets the paradigm which defines the space of inputs/outputs from a custom drag function.
@@ -236,10 +273,10 @@ pub fn set_drag_rotation(instance: UIDragDetector, value: Float) -> UIDragDetect
 /// Roblox: `UIDragDetector.DragSpace`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragSpace
-@target(luau)
 @luau.property("DragSpace")
 pub fn get_drag_space(instance: UIDragDetector) -> UIDragDetectorDragSpace
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.DragSpace`.
 ///
 /// Sets the paradigm which defines the space of inputs/outputs from a custom drag function.
@@ -247,10 +284,13 @@ pub fn get_drag_space(instance: UIDragDetector) -> UIDragDetectorDragSpace
 /// Roblox: `UIDragDetector.DragSpace`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragSpace
-@target(luau)
 @luau.set_property("DragSpace")
-pub fn set_drag_space(instance: UIDragDetector, value: UIDragDetectorDragSpace) -> UIDragDetector
+pub fn set_drag_space(
+  instance: UIDragDetector,
+  value: UIDragDetectorDragSpace,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.DragStyle`.
 ///
 /// The paradigm used to generate proposed motion.
@@ -258,10 +298,10 @@ pub fn set_drag_space(instance: UIDragDetector, value: UIDragDetectorDragSpace) 
 /// Roblox: `UIDragDetector.DragStyle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragStyle
-@target(luau)
 @luau.property("DragStyle")
 pub fn get_drag_style(instance: UIDragDetector) -> UIDragDetectorDragStyle
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.DragStyle`.
 ///
 /// The paradigm used to generate proposed motion.
@@ -269,10 +309,13 @@ pub fn get_drag_style(instance: UIDragDetector) -> UIDragDetectorDragStyle
 /// Roblox: `UIDragDetector.DragStyle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragStyle
-@target(luau)
 @luau.set_property("DragStyle")
-pub fn set_drag_style(instance: UIDragDetector, value: UIDragDetectorDragStyle) -> UIDragDetector
+pub fn set_drag_style(
+  instance: UIDragDetector,
+  value: UIDragDetectorDragStyle,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.DragUDim2`.
 ///
 /// The translation performed by the current drag expressed in a UDim2 value.
@@ -280,10 +323,10 @@ pub fn set_drag_style(instance: UIDragDetector, value: UIDragDetectorDragStyle) 
 /// Roblox: `UIDragDetector.DragUDim2`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragUDim2
-@target(luau)
 @luau.property("DragUDim2")
 pub fn get_drag_udim2(instance: UIDragDetector) -> UDim2
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.DragUDim2`.
 ///
 /// The translation performed by the current drag expressed in a UDim2 value.
@@ -291,10 +334,10 @@ pub fn get_drag_udim2(instance: UIDragDetector) -> UDim2
 /// Roblox: `UIDragDetector.DragUDim2`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragUDim2
-@target(luau)
 @luau.set_property("DragUDim2")
 pub fn set_drag_udim2(instance: UIDragDetector, value: UDim2) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.Enabled`.
 ///
 /// Whether the UIDragDetector responds to user input.
@@ -302,10 +345,10 @@ pub fn set_drag_udim2(instance: UIDragDetector, value: UDim2) -> UIDragDetector
 /// Roblox: `UIDragDetector.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#Enabled
-@target(luau)
 @luau.property("Enabled")
 pub fn get_enabled(instance: UIDragDetector) -> Bool
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.Enabled`.
 ///
 /// Whether the UIDragDetector responds to user input.
@@ -313,10 +356,10 @@ pub fn get_enabled(instance: UIDragDetector) -> Bool
 /// Roblox: `UIDragDetector.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#Enabled
-@target(luau)
 @luau.set_property("Enabled")
 pub fn set_enabled(instance: UIDragDetector, value: Bool) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.MaxDragAngle`.
 ///
 /// Along with MinDragAngle, impedes the detector's attempts to generate rotational motion.
@@ -324,10 +367,10 @@ pub fn set_enabled(instance: UIDragDetector, value: Bool) -> UIDragDetector
 /// Roblox: `UIDragDetector.MaxDragAngle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#MaxDragAngle
-@target(luau)
 @luau.property("MaxDragAngle")
 pub fn get_max_drag_angle(instance: UIDragDetector) -> Float
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.MaxDragAngle`.
 ///
 /// Along with MinDragAngle, impedes the detector's attempts to generate rotational motion.
@@ -335,10 +378,13 @@ pub fn get_max_drag_angle(instance: UIDragDetector) -> Float
 /// Roblox: `UIDragDetector.MaxDragAngle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#MaxDragAngle
-@target(luau)
 @luau.set_property("MaxDragAngle")
-pub fn set_max_drag_angle(instance: UIDragDetector, value: Float) -> UIDragDetector
+pub fn set_max_drag_angle(
+  instance: UIDragDetector,
+  value: Float,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.MaxDragTranslation`.
 ///
 /// Along with MinDragTranslation, impedes the detector's attempts to generate linear/planar motion.
@@ -346,10 +392,10 @@ pub fn set_max_drag_angle(instance: UIDragDetector, value: Float) -> UIDragDetec
 /// Roblox: `UIDragDetector.MaxDragTranslation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#MaxDragTranslation
-@target(luau)
 @luau.property("MaxDragTranslation")
 pub fn get_max_drag_translation(instance: UIDragDetector) -> UDim2
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.MaxDragTranslation`.
 ///
 /// Along with MinDragTranslation, impedes the detector's attempts to generate linear/planar motion.
@@ -357,10 +403,13 @@ pub fn get_max_drag_translation(instance: UIDragDetector) -> UDim2
 /// Roblox: `UIDragDetector.MaxDragTranslation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#MaxDragTranslation
-@target(luau)
 @luau.set_property("MaxDragTranslation")
-pub fn set_max_drag_translation(instance: UIDragDetector, value: UDim2) -> UIDragDetector
+pub fn set_max_drag_translation(
+  instance: UIDragDetector,
+  value: UDim2,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.MinDragAngle`.
 ///
 /// Along with MaxDragAngle, impedes the detector's attempts to generate rotational motion.
@@ -368,10 +417,10 @@ pub fn set_max_drag_translation(instance: UIDragDetector, value: UDim2) -> UIDra
 /// Roblox: `UIDragDetector.MinDragAngle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#MinDragAngle
-@target(luau)
 @luau.property("MinDragAngle")
 pub fn get_min_drag_angle(instance: UIDragDetector) -> Float
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.MinDragAngle`.
 ///
 /// Along with MaxDragAngle, impedes the detector's attempts to generate rotational motion.
@@ -379,10 +428,13 @@ pub fn get_min_drag_angle(instance: UIDragDetector) -> Float
 /// Roblox: `UIDragDetector.MinDragAngle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#MinDragAngle
-@target(luau)
 @luau.set_property("MinDragAngle")
-pub fn set_min_drag_angle(instance: UIDragDetector, value: Float) -> UIDragDetector
+pub fn set_min_drag_angle(
+  instance: UIDragDetector,
+  value: Float,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.MinDragTranslation`.
 ///
 /// Along with MaxDragTranslation, impedes the detector's attempts to generate linear/planar motion.
@@ -390,10 +442,10 @@ pub fn set_min_drag_angle(instance: UIDragDetector, value: Float) -> UIDragDetec
 /// Roblox: `UIDragDetector.MinDragTranslation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#MinDragTranslation
-@target(luau)
 @luau.property("MinDragTranslation")
 pub fn get_min_drag_translation(instance: UIDragDetector) -> UDim2
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.MinDragTranslation`.
 ///
 /// Along with MaxDragTranslation, impedes the detector's attempts to generate linear/planar motion.
@@ -401,10 +453,13 @@ pub fn get_min_drag_translation(instance: UIDragDetector) -> UDim2
 /// Roblox: `UIDragDetector.MinDragTranslation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#MinDragTranslation
-@target(luau)
 @luau.set_property("MinDragTranslation")
-pub fn set_min_drag_translation(instance: UIDragDetector, value: UDim2) -> UIDragDetector
+pub fn set_min_drag_translation(
+  instance: UIDragDetector,
+  value: UDim2,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.ReferenceUIInstance`.
 ///
 /// A GuiObject instance whose local space and absolute center position is the reference space and origin for the detector.
@@ -412,10 +467,10 @@ pub fn set_min_drag_translation(instance: UIDragDetector, value: UDim2) -> UIDra
 /// Roblox: `UIDragDetector.ReferenceUIInstance`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#ReferenceUIInstance
-@target(luau)
 @luau.property("ReferenceUIInstance")
 pub fn get_reference_ui_instance(instance: UIDragDetector) -> GuiObject
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.ReferenceUIInstance`.
 ///
 /// A GuiObject instance whose local space and absolute center position is the reference space and origin for the detector.
@@ -423,10 +478,13 @@ pub fn get_reference_ui_instance(instance: UIDragDetector) -> GuiObject
 /// Roblox: `UIDragDetector.ReferenceUIInstance`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#ReferenceUIInstance
-@target(luau)
 @luau.set_property("ReferenceUIInstance")
-pub fn set_reference_ui_instance(instance: UIDragDetector, value: GuiObject) -> UIDragDetector
+pub fn set_reference_ui_instance(
+  instance: UIDragDetector,
+  value: GuiObject,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.ResponseStyle`.
 ///
 /// The paradigm used to define the response to proposed motion.
@@ -434,10 +492,12 @@ pub fn set_reference_ui_instance(instance: UIDragDetector, value: GuiObject) -> 
 /// Roblox: `UIDragDetector.ResponseStyle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#ResponseStyle
-@target(luau)
 @luau.property("ResponseStyle")
-pub fn get_response_style(instance: UIDragDetector) -> UIDragDetectorResponseStyle
+pub fn get_response_style(
+  instance: UIDragDetector,
+) -> UIDragDetectorResponseStyle
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.ResponseStyle`.
 ///
 /// The paradigm used to define the response to proposed motion.
@@ -445,10 +505,13 @@ pub fn get_response_style(instance: UIDragDetector) -> UIDragDetectorResponseSty
 /// Roblox: `UIDragDetector.ResponseStyle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#ResponseStyle
-@target(luau)
 @luau.set_property("ResponseStyle")
-pub fn set_response_style(instance: UIDragDetector, value: UIDragDetectorResponseStyle) -> UIDragDetector
+pub fn set_response_style(
+  instance: UIDragDetector,
+  value: UIDragDetectorResponseStyle,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.SelectionModeDragSpeed`.
 ///
 /// Maximum drag speed for translation.
@@ -456,10 +519,10 @@ pub fn set_response_style(instance: UIDragDetector, value: UIDragDetectorRespons
 /// Roblox: `UIDragDetector.SelectionModeDragSpeed`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#SelectionModeDragSpeed
-@target(luau)
 @luau.property("SelectionModeDragSpeed")
 pub fn get_selection_mode_drag_speed(instance: UIDragDetector) -> UDim2
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.SelectionModeDragSpeed`.
 ///
 /// Maximum drag speed for translation.
@@ -467,10 +530,13 @@ pub fn get_selection_mode_drag_speed(instance: UIDragDetector) -> UDim2
 /// Roblox: `UIDragDetector.SelectionModeDragSpeed`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#SelectionModeDragSpeed
-@target(luau)
 @luau.set_property("SelectionModeDragSpeed")
-pub fn set_selection_mode_drag_speed(instance: UIDragDetector, value: UDim2) -> UIDragDetector
+pub fn set_selection_mode_drag_speed(
+  instance: UIDragDetector,
+  value: UDim2,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.SelectionModeRotateSpeed`.
 ///
 /// Maximum angle per second the UIDragDetector can rotate at.
@@ -478,10 +544,10 @@ pub fn set_selection_mode_drag_speed(instance: UIDragDetector, value: UDim2) -> 
 /// Roblox: `UIDragDetector.SelectionModeRotateSpeed`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#SelectionModeRotateSpeed
-@target(luau)
 @luau.property("SelectionModeRotateSpeed")
 pub fn get_selection_mode_rotate_speed(instance: UIDragDetector) -> Float
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.SelectionModeRotateSpeed`.
 ///
 /// Maximum angle per second the UIDragDetector can rotate at.
@@ -489,10 +555,13 @@ pub fn get_selection_mode_rotate_speed(instance: UIDragDetector) -> Float
 /// Roblox: `UIDragDetector.SelectionModeRotateSpeed`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#SelectionModeRotateSpeed
-@target(luau)
 @luau.set_property("SelectionModeRotateSpeed")
-pub fn set_selection_mode_rotate_speed(instance: UIDragDetector, value: Float) -> UIDragDetector
+pub fn set_selection_mode_rotate_speed(
+  instance: UIDragDetector,
+  value: Float,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `UIDragDetector.UIDragSpeedAxisMapping`.
 ///
 /// UIDragSpeedAxisMapping value that determines the X/Y dimension dragging speeds.
@@ -500,10 +569,12 @@ pub fn set_selection_mode_rotate_speed(instance: UIDragDetector, value: Float) -
 /// Roblox: `UIDragDetector.UIDragSpeedAxisMapping`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#UIDragSpeedAxisMapping
-@target(luau)
 @luau.property("UIDragSpeedAxisMapping")
-pub fn get_uidrag_speed_axis_mapping(instance: UIDragDetector) -> UIDragSpeedAxisMapping
+pub fn get_uidrag_speed_axis_mapping(
+  instance: UIDragDetector,
+) -> UIDragSpeedAxisMapping
 
+@target(luau)
 /// Sets Roblox property `UIDragDetector.UIDragSpeedAxisMapping`.
 ///
 /// UIDragSpeedAxisMapping value that determines the X/Y dimension dragging speeds.
@@ -511,10 +582,13 @@ pub fn get_uidrag_speed_axis_mapping(instance: UIDragDetector) -> UIDragSpeedAxi
 /// Roblox: `UIDragDetector.UIDragSpeedAxisMapping`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#UIDragSpeedAxisMapping
-@target(luau)
 @luau.set_property("UIDragSpeedAxisMapping")
-pub fn set_uidrag_speed_axis_mapping(instance: UIDragDetector, value: UIDragSpeedAxisMapping) -> UIDragDetector
+pub fn set_uidrag_speed_axis_mapping(
+  instance: UIDragDetector,
+  value: UIDragSpeedAxisMapping,
+) -> UIDragDetector
 
+@target(luau)
 /// Adds a function to modify or constrain proposed motion.
 ///
 /// Roblox: `UIDragDetector.AddConstraintFunction`
@@ -528,10 +602,14 @@ pub fn set_uidrag_speed_axis_mapping(instance: UIDragDetector, value: UIDragSpee
 ///
 /// Returns:
 /// - Use this connection object to remove the constraint function.
-@target(luau)
 @luau.method("AddConstraintFunction")
-pub fn add_constraint_function(instance: UIDragDetector, priority: Int, function: Dynamic) -> RBXScriptConnection
+pub fn add_constraint_function(
+  instance: UIDragDetector,
+  priority: Int,
+  function: Dynamic,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Returns the reference UDim2 position of the current drag's reference origin.
 ///
 /// Roblox: `UIDragDetector.GetReferencePosition`
@@ -543,10 +621,10 @@ pub fn add_constraint_function(instance: UIDragDetector, priority: Int, function
 ///
 /// Returns:
 /// - UDim2 position of the current drag's reference element.
-@target(luau)
 @luau.method("GetReferencePosition")
 pub fn get_reference_position(instance: UIDragDetector) -> UDim2
 
+@target(luau)
 /// Returns the reference rotation of the current drag's reference element.
 ///
 /// Roblox: `UIDragDetector.GetReferenceRotation`
@@ -558,10 +636,10 @@ pub fn get_reference_position(instance: UIDragDetector) -> UDim2
 ///
 /// Returns:
 /// - Rotation of the current drag's reference element.
-@target(luau)
 @luau.method("GetReferenceRotation")
 pub fn get_reference_rotation(instance: UIDragDetector) -> Float
 
+@target(luau)
 /// Passes a function to be used if and only if DragStyle is set to UIDragDetectorDragStyle.Scriptable.
 ///
 /// Roblox: `UIDragDetector.SetDragStyleFunction`
@@ -571,19 +649,24 @@ pub fn get_reference_rotation(instance: UIDragDetector) -> Float
 /// Parameters:
 /// - `instance`: Instance which facilitates and encourages interaction with UI elements in an experience.
 /// - `function`: Function for monitoring DragContinue signals. This function receives the signal's screen space input position and returns a UDim2 and float containing the desired motion of the drag in the desired space and relativity. If this function returns nil, the object will not be moved.
-@target(luau)
 @luau.method("SetDragStyleFunction")
-pub fn set_drag_style_function(instance: UIDragDetector, function: Dynamic) -> Nil
+pub fn set_drag_style_function(
+  instance: UIDragDetector,
+  function: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Fires when a user continues dragging the UI element after DragStart has been initiated.
 ///
 /// Roblox: `UIDragDetector.DragContinue`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragContinue
-@target(luau)
 @luau.event("DragContinue")
-pub fn drag_continue(instance: UIDragDetector) -> RBXScriptSignal(fn(Vector2) -> Nil)
+pub fn drag_continue(
+  instance: UIDragDetector,
+) -> RBXScriptSignal(fn(Vector2) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UIDragDetector.DragContinue`.
 ///
 /// Fires when a user continues dragging the UI element after DragStart has been initiated.
@@ -591,19 +674,22 @@ pub fn drag_continue(instance: UIDragDetector) -> RBXScriptSignal(fn(Vector2) ->
 /// Roblox: `UIDragDetector.DragContinue`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragContinue
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DragContinue:Connect(callback) end)")
-pub fn on_drag_continue(instance: UIDragDetector, callback: fn(Vector2) -> Nil) -> RBXScriptConnection
+pub fn on_drag_continue(
+  instance: UIDragDetector,
+  callback: fn(Vector2) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user stops dragging the UI element.
 ///
 /// Roblox: `UIDragDetector.DragEnd`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragEnd
-@target(luau)
 @luau.event("DragEnd")
 pub fn drag_end(instance: UIDragDetector) -> RBXScriptSignal(fn(Vector2) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UIDragDetector.DragEnd`.
 ///
 /// Fires when a user stops dragging the UI element.
@@ -611,19 +697,24 @@ pub fn drag_end(instance: UIDragDetector) -> RBXScriptSignal(fn(Vector2) -> Nil)
 /// Roblox: `UIDragDetector.DragEnd`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragEnd
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DragEnd:Connect(callback) end)")
-pub fn on_drag_end(instance: UIDragDetector, callback: fn(Vector2) -> Nil) -> RBXScriptConnection
+pub fn on_drag_end(
+  instance: UIDragDetector,
+  callback: fn(Vector2) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user starts dragging the UI element.
 ///
 /// Roblox: `UIDragDetector.DragStart`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragStart
-@target(luau)
 @luau.event("DragStart")
-pub fn drag_start(instance: UIDragDetector) -> RBXScriptSignal(fn(Vector2) -> Nil)
+pub fn drag_start(
+  instance: UIDragDetector,
+) -> RBXScriptSignal(fn(Vector2) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UIDragDetector.DragStart`.
 ///
 /// Fires when a user starts dragging the UI element.
@@ -631,10 +722,13 @@ pub fn drag_start(instance: UIDragDetector) -> RBXScriptSignal(fn(Vector2) -> Ni
 /// Roblox: `UIDragDetector.DragStart`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UIDragDetector#DragStart
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DragStart:Connect(callback) end)")
-pub fn on_drag_start(instance: UIDragDetector, callback: fn(Vector2) -> Nil) -> RBXScriptConnection
+pub fn on_drag_start(
+  instance: UIDragDetector,
+  callback: fn(Vector2) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -642,10 +736,10 @@ pub fn on_drag_start(instance: UIDragDetector, callback: fn(Vector2) -> Nil) -> 
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: UIDragDetector) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -653,10 +747,10 @@ pub fn get_archivable(instance: UIDragDetector) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: UIDragDetector, value: Bool) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -664,10 +758,10 @@ pub fn set_archivable(instance: UIDragDetector, value: Bool) -> UIDragDetector
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: UIDragDetector) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -675,10 +769,13 @@ pub fn get_capabilities(instance: UIDragDetector) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: UIDragDetector, value: SecurityCapabilities) -> UIDragDetector
+pub fn set_capabilities(
+  instance: UIDragDetector,
+  value: SecurityCapabilities,
+) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -686,10 +783,10 @@ pub fn set_capabilities(instance: UIDragDetector, value: SecurityCapabilities) -
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: UIDragDetector) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -697,10 +794,10 @@ pub fn get_name(instance: UIDragDetector) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: UIDragDetector, value: String) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -709,10 +806,10 @@ pub fn set_name(instance: UIDragDetector, value: String) -> UIDragDetector
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: UIDragDetector) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -721,10 +818,10 @@ pub fn get_parent(instance: UIDragDetector) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: UIDragDetector, value: parent) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -733,10 +830,10 @@ pub fn set_parent(instance: UIDragDetector, value: parent) -> UIDragDetector
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: UIDragDetector) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -745,10 +842,10 @@ pub fn get_roblox_locked(instance: UIDragDetector) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: UIDragDetector) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -757,20 +854,20 @@ pub fn get_sandboxed(instance: UIDragDetector) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: UIDragDetector, value: Bool) -> UIDragDetector
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: UIDragDetector) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -779,10 +876,10 @@ pub fn get_source_asset_id(instance: UIDragDetector) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: UIDragDetector) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -791,10 +888,10 @@ pub fn get_unique_id(instance: UIDragDetector) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: UIDragDetector, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -803,10 +900,10 @@ pub fn add_tag(instance: UIDragDetector, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: UIDragDetector) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -815,10 +912,10 @@ pub fn clear_all_children(instance: UIDragDetector) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: UIDragDetector) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -827,10 +924,10 @@ pub fn clone(instance: UIDragDetector) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: UIDragDetector) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -843,10 +940,13 @@ pub fn destroy_instance(instance: UIDragDetector) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: UIDragDetector, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: UIDragDetector,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -859,10 +959,13 @@ pub fn find_first_ancestor(instance: UIDragDetector, name: String) -> Option(Ins
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: UIDragDetector, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: UIDragDetector,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -875,10 +978,13 @@ pub fn find_first_ancestor_of_class(instance: UIDragDetector, class_name: String
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: UIDragDetector, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: UIDragDetector,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -892,10 +998,14 @@ pub fn find_first_ancestor_which_is_a(instance: UIDragDetector, class_name: Stri
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: UIDragDetector, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: UIDragDetector,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -908,10 +1018,13 @@ pub fn find_first_child(instance: UIDragDetector, name: String, recursive: Bool)
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: UIDragDetector, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: UIDragDetector,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -925,10 +1038,14 @@ pub fn find_first_child_of_class(instance: UIDragDetector, class_name: String) -
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: UIDragDetector, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: UIDragDetector,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -941,10 +1058,13 @@ pub fn find_first_child_which_is_a(instance: UIDragDetector, class_name: String,
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: UIDragDetector, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: UIDragDetector,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -956,10 +1076,10 @@ pub fn find_first_descendant(instance: UIDragDetector, name: String) -> Option(I
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: UIDragDetector) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -972,10 +1092,10 @@ pub fn get_actor(instance: UIDragDetector) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: UIDragDetector, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -988,10 +1108,13 @@ pub fn get_attribute(instance: UIDragDetector, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: UIDragDetector, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: UIDragDetector,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -1004,10 +1127,10 @@ pub fn get_attribute_changed_signal(instance: UIDragDetector, attribute: String)
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: UIDragDetector) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -1019,10 +1142,10 @@ pub fn get_attributes(instance: UIDragDetector) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: UIDragDetector) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -1035,10 +1158,10 @@ pub fn get_children(instance: UIDragDetector) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: UIDragDetector) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -1050,10 +1173,10 @@ pub fn get_descendants(instance: UIDragDetector) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: UIDragDetector) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -1067,10 +1190,14 @@ pub fn get_full_name(instance: UIDragDetector) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: UIDragDetector, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: UIDragDetector,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -1081,10 +1208,13 @@ pub fn get_styled(instance: UIDragDetector, name: String, selector: Option(Strin
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: UIDragDetector, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: UIDragDetector,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -1093,10 +1223,10 @@ pub fn get_styled_property_changed_signal(instance: UIDragDetector, property: St
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: UIDragDetector) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -1105,10 +1235,10 @@ pub fn get_tags(instance: UIDragDetector) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: UIDragDetector, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -1121,10 +1251,10 @@ pub fn has_tag(instance: UIDragDetector, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: UIDragDetector, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -1137,10 +1267,10 @@ pub fn is_ancestor_of(instance: UIDragDetector, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: UIDragDetector, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -1153,10 +1283,10 @@ pub fn is_descendant_of(instance: UIDragDetector, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: UIDragDetector, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -1168,10 +1298,13 @@ pub fn is_property_modified(instance: UIDragDetector, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: UIDragDetector, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: UIDragDetector,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -1180,10 +1313,10 @@ pub fn query_descendants(instance: UIDragDetector, selector: String) -> List(Ins
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: UIDragDetector, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -1193,10 +1326,13 @@ pub fn remove_tag(instance: UIDragDetector, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: UIDragDetector, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: UIDragDetector,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -1207,10 +1343,14 @@ pub fn reset_property_to_default(instance: UIDragDetector, property: String) -> 
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: UIDragDetector, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: UIDragDetector,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -1225,19 +1365,25 @@ pub fn set_attribute(instance: UIDragDetector, attribute: String, value: Dynamic
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: UIDragDetector, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: UIDragDetector,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: UIDragDetector) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: UIDragDetector,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -1245,19 +1391,24 @@ pub fn ancestry_changed(instance: UIDragDetector) -> RBXScriptSignal(fn(Instance
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: UIDragDetector, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: UIDragDetector,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: UIDragDetector) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: UIDragDetector,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -1265,19 +1416,24 @@ pub fn attribute_changed(instance: UIDragDetector) -> RBXScriptSignal(fn(String)
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: UIDragDetector, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: UIDragDetector,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: UIDragDetector) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: UIDragDetector,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -1285,19 +1441,24 @@ pub fn child_added(instance: UIDragDetector) -> RBXScriptSignal(fn(Instance) -> 
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: UIDragDetector, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: UIDragDetector,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: UIDragDetector) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: UIDragDetector,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -1305,19 +1466,24 @@ pub fn child_removed(instance: UIDragDetector) -> RBXScriptSignal(fn(Instance) -
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: UIDragDetector, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: UIDragDetector,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: UIDragDetector) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: UIDragDetector,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -1325,19 +1491,24 @@ pub fn descendant_added(instance: UIDragDetector) -> RBXScriptSignal(fn(Instance
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: UIDragDetector, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: UIDragDetector,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: UIDragDetector) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: UIDragDetector,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -1345,19 +1516,22 @@ pub fn descendant_removing(instance: UIDragDetector) -> RBXScriptSignal(fn(Insta
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: UIDragDetector, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: UIDragDetector,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: UIDragDetector) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1365,19 +1539,24 @@ pub fn destroying(instance: UIDragDetector) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: UIDragDetector, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: UIDragDetector,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: UIDragDetector) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: UIDragDetector,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1385,10 +1564,13 @@ pub fn styled_properties_changed(instance: UIDragDetector) -> RBXScriptSignal(fn
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: UIDragDetector, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: UIDragDetector,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1397,10 +1579,10 @@ pub fn on_styled_properties_changed(instance: UIDragDetector, callback: fn() -> 
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: UIDragDetector) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1413,10 +1595,13 @@ pub fn get_class_name(instance: UIDragDetector) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: UIDragDetector, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: UIDragDetector,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1430,19 +1615,19 @@ pub fn get_property_changed_signal(instance: UIDragDetector, property: String) -
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: UIDragDetector, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: UIDragDetector) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1450,12 +1635,40 @@ pub fn changed(instance: UIDragDetector) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: UIDragDetector, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: UIDragDetector,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: Vector2, _: UDim2, _: UIDragSpeedAxisMapping, _: UIDragDetectorResponseStyle, _: GuiObject, _: UIDragDetectorDragStyle, _: UIDragDetectorDragSpace, _: UIDragDetectorDragRelativity, _: Content, _: ContentId, _: GuiBase2d, _: UIDragDetectorBoundingBehavior, _: UIDragDetector, _: UIComponent, _: UIBase, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: Vector2,
+  _: UDim2,
+  _: UIDragSpeedAxisMapping,
+  _: UIDragDetectorResponseStyle,
+  _: GuiObject,
+  _: UIDragDetectorDragStyle,
+  _: UIDragDetectorDragSpace,
+  _: UIDragDetectorDragRelativity,
+  _: Content,
+  _: ContentId,
+  _: GuiBase2d,
+  _: UIDragDetectorBoundingBehavior,
+  _: UIDragDetector,
+  _: UIComponent,
+  _: UIBase,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

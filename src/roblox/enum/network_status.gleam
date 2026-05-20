@@ -2,31 +2,33 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type NetworkStatus}
 
+@target(luau)
 /// Gets the Roblox `NetworkStatus` enum object.
 ///
 /// Roblox: `Enum.NetworkStatus`
 /// See: https://create.roblox.com/docs/reference/engine/enums/NetworkStatus
-@target(luau)
 @luau.global("Enum.NetworkStatus")
 pub fn roblox_enum() -> RobloxEnum(NetworkStatus)
 
-/// Roblox enum item `NetworkStatus.Unknown`.
 @target(luau)
+/// Roblox enum item `NetworkStatus.Unknown`.
 @luau.global("Enum.NetworkStatus.Unknown")
 pub fn unknown() -> NetworkStatus
 
-/// Roblox enum item `NetworkStatus.Connected`.
 @target(luau)
+/// Roblox enum item `NetworkStatus.Connected`.
 @luau.global("Enum.NetworkStatus.Connected")
 pub fn connected() -> NetworkStatus
 
-/// Roblox enum item `NetworkStatus.Disconnected`.
 @target(luau)
+/// Roblox enum item `NetworkStatus.Disconnected`.
 @luau.global("Enum.NetworkStatus.Disconnected")
 pub fn disconnected() -> NetworkStatus
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(NetworkStatus), _: NetworkStatus) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(NetworkStatus),
+  _: NetworkStatus,
+) -> Nil {
   Nil
 }

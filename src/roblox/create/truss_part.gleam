@@ -1,19 +1,27 @@
 // Generated declarative builders for Roblox `TrussPart` instances.
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/truss_part
-import roblox/types.{type BrickColor, type CFrame, type Color3, type Instance, type Material, type PhysicalProperties, type SecurityCapabilities, type Style, type SurfaceType, type TrussPart, type Vector3}
+import roblox/types.{
+  type BrickColor, type CFrame, type Color3, type Instance, type Material,
+  type PhysicalProperties, type SecurityCapabilities, type Style,
+  type SurfaceType, type TrussPart, type Vector3,
+}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: TrussPart) -> Instance
 
-/// Creates a declarative Roblox `TrussPart` node.
 @target(luau)
-pub fn node(properties: List(Property(TrussPart)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `TrussPart` node.
+pub fn node(
+  properties: List(Property(TrussPart)),
+  children: List(Node),
+) -> Node {
   let instance = apply(truss_part.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `TrussPart.Style` on `TrussPart` nodes.
 ///
 /// Sets what the truss looks like.
@@ -22,11 +30,11 @@ pub fn node(properties: List(Property(TrussPart)), children: List(Node)) -> Node
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/TrussPart#Style
-@target(luau)
 pub fn style(value: Style) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_style(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.Anchored` on `TrussPart` nodes.
 ///
 /// Determines whether a part is immovable by physics.
@@ -34,11 +42,11 @@ pub fn style(value: Style) -> Property(TrussPart) {
 /// Roblox: `BasePart.Anchored`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Anchored
-@target(luau)
 pub fn anchored(value: Bool) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_anchored(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.AssemblyAngularVelocity` on `TrussPart` nodes.
 ///
 /// The angular velocity of the part's assembly.
@@ -47,11 +55,13 @@ pub fn anchored(value: Bool) -> Property(TrussPart) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#AssemblyAngularVelocity
-@target(luau)
 pub fn assembly_angular_velocity(value: Vector3) -> Property(TrussPart) {
-  Property(fn(instance) { truss_part.set_assembly_angular_velocity(instance, value) })
+  Property(fn(instance) {
+    truss_part.set_assembly_angular_velocity(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.AssemblyLinearVelocity` on `TrussPart` nodes.
 ///
 /// The linear velocity of the part's assembly.
@@ -60,11 +70,13 @@ pub fn assembly_angular_velocity(value: Vector3) -> Property(TrussPart) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#AssemblyLinearVelocity
-@target(luau)
 pub fn assembly_linear_velocity(value: Vector3) -> Property(TrussPart) {
-  Property(fn(instance) { truss_part.set_assembly_linear_velocity(instance, value) })
+  Property(fn(instance) {
+    truss_part.set_assembly_linear_velocity(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.AudioCanCollide` on `TrussPart` nodes.
 ///
 /// Determines whether the part will physically interact with audio simulation, similar to CastShadow for lighting.
@@ -72,11 +84,11 @@ pub fn assembly_linear_velocity(value: Vector3) -> Property(TrussPart) {
 /// Roblox: `BasePart.AudioCanCollide`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#AudioCanCollide
-@target(luau)
 pub fn audio_can_collide(value: Bool) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_audio_can_collide(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.BackSurface` on `TrussPart` nodes.
 ///
 /// Determines the type of surface for the back face of a part.
@@ -84,11 +96,11 @@ pub fn audio_can_collide(value: Bool) -> Property(TrussPart) {
 /// Roblox: `BasePart.BackSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#BackSurface
-@target(luau)
 pub fn back_surface(value: SurfaceType) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_back_surface(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.BottomSurface` on `TrussPart` nodes.
 ///
 /// Determines the type of surface for the bottom face of a part.
@@ -96,11 +108,11 @@ pub fn back_surface(value: SurfaceType) -> Property(TrussPart) {
 /// Roblox: `BasePart.BottomSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#BottomSurface
-@target(luau)
 pub fn bottom_surface(value: SurfaceType) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_bottom_surface(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.BrickColor` on `TrussPart` nodes.
 ///
 /// Determines the color of a part.
@@ -109,11 +121,11 @@ pub fn bottom_surface(value: SurfaceType) -> Property(TrussPart) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#BrickColor
-@target(luau)
 pub fn brick_color(value: BrickColor) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_brick_color(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.CFrame` on `TrussPart` nodes.
 ///
 /// Determines the position and orientation of the BasePart in the world.
@@ -121,11 +133,11 @@ pub fn brick_color(value: BrickColor) -> Property(TrussPart) {
 /// Roblox: `BasePart.CFrame`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CFrame
-@target(luau)
 pub fn cframe(value: CFrame) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_cframe(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.CanCollide` on `TrussPart` nodes.
 ///
 /// Determines whether a part may collide with other parts.
@@ -133,11 +145,11 @@ pub fn cframe(value: CFrame) -> Property(TrussPart) {
 /// Roblox: `BasePart.CanCollide`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CanCollide
-@target(luau)
 pub fn can_collide(value: Bool) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_can_collide(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.CanQuery` on `TrussPart` nodes.
 ///
 /// Determines whether the part is considered during spatial query operations.
@@ -145,11 +157,11 @@ pub fn can_collide(value: Bool) -> Property(TrussPart) {
 /// Roblox: `BasePart.CanQuery`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CanQuery
-@target(luau)
 pub fn can_query(value: Bool) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_can_query(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.CanTouch` on `TrussPart` nodes.
 ///
 /// Determines if Touched and TouchEnded events fire on the part.
@@ -157,11 +169,11 @@ pub fn can_query(value: Bool) -> Property(TrussPart) {
 /// Roblox: `BasePart.CanTouch`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CanTouch
-@target(luau)
 pub fn can_touch(value: Bool) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_can_touch(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.CastShadow` on `TrussPart` nodes.
 ///
 /// Determines whether or not a part casts a shadow.
@@ -169,11 +181,11 @@ pub fn can_touch(value: Bool) -> Property(TrussPart) {
 /// Roblox: `BasePart.CastShadow`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CastShadow
-@target(luau)
 pub fn cast_shadow(value: Bool) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_cast_shadow(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.CollisionGroup` on `TrussPart` nodes.
 ///
 /// Describes the name of a part's collision group.
@@ -182,11 +194,11 @@ pub fn cast_shadow(value: Bool) -> Property(TrussPart) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CollisionGroup
-@target(luau)
 pub fn collision_group(value: String) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_collision_group(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.Color` on `TrussPart` nodes.
 ///
 /// Determines the color of a part.
@@ -195,11 +207,11 @@ pub fn collision_group(value: String) -> Property(TrussPart) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Color
-@target(luau)
 pub fn color(value: Color3) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_color(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.CustomPhysicalProperties` on `TrussPart` nodes.
 ///
 /// Determines several physical properties of a part.
@@ -207,11 +219,15 @@ pub fn color(value: Color3) -> Property(TrussPart) {
 /// Roblox: `BasePart.CustomPhysicalProperties`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CustomPhysicalProperties
-@target(luau)
-pub fn custom_physical_properties(value: PhysicalProperties) -> Property(TrussPart) {
-  Property(fn(instance) { truss_part.set_custom_physical_properties(instance, value) })
+pub fn custom_physical_properties(
+  value: PhysicalProperties,
+) -> Property(TrussPart) {
+  Property(fn(instance) {
+    truss_part.set_custom_physical_properties(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.EnableFluidForces` on `TrussPart` nodes.
 ///
 /// Used to enable or disable aerodynamic forces on parts and assemblies.
@@ -219,11 +235,11 @@ pub fn custom_physical_properties(value: PhysicalProperties) -> Property(TrussPa
 /// Roblox: `BasePart.EnableFluidForces`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#EnableFluidForces
-@target(luau)
 pub fn enable_fluid_forces(value: Bool) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_enable_fluid_forces(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.FrontSurface` on `TrussPart` nodes.
 ///
 /// Determines the type of surface for the front face of a part.
@@ -231,11 +247,11 @@ pub fn enable_fluid_forces(value: Bool) -> Property(TrussPart) {
 /// Roblox: `BasePart.FrontSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#FrontSurface
-@target(luau)
 pub fn front_surface(value: SurfaceType) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_front_surface(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.LeftSurface` on `TrussPart` nodes.
 ///
 /// Determines the type of surface for the left face of a part.
@@ -243,11 +259,11 @@ pub fn front_surface(value: SurfaceType) -> Property(TrussPart) {
 /// Roblox: `BasePart.LeftSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#LeftSurface
-@target(luau)
 pub fn left_surface(value: SurfaceType) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_left_surface(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.LocalTransparencyModifier` on `TrussPart` nodes.
 ///
 /// Determines a multiplier for BasePart.Transparency that is only visible to the local client.
@@ -256,11 +272,13 @@ pub fn left_surface(value: SurfaceType) -> Property(TrussPart) {
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#LocalTransparencyModifier
-@target(luau)
 pub fn local_transparency_modifier(value: Float) -> Property(TrussPart) {
-  Property(fn(instance) { truss_part.set_local_transparency_modifier(instance, value) })
+  Property(fn(instance) {
+    truss_part.set_local_transparency_modifier(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.Locked` on `TrussPart` nodes.
 ///
 /// Determines whether a part is selectable in Studio.
@@ -268,11 +286,11 @@ pub fn local_transparency_modifier(value: Float) -> Property(TrussPart) {
 /// Roblox: `BasePart.Locked`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Locked
-@target(luau)
 pub fn locked(value: Bool) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_locked(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.Massless` on `TrussPart` nodes.
 ///
 /// Determines whether the part contributes to the total mass or inertia of its rigid body.
@@ -280,11 +298,11 @@ pub fn locked(value: Bool) -> Property(TrussPart) {
 /// Roblox: `BasePart.Massless`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Massless
-@target(luau)
 pub fn massless(value: Bool) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_massless(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.Material` on `TrussPart` nodes.
 ///
 /// Determines the texture and default physical properties of a part.
@@ -292,11 +310,11 @@ pub fn massless(value: Bool) -> Property(TrussPart) {
 /// Roblox: `BasePart.Material`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Material
-@target(luau)
 pub fn material(value: Material) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_material(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.MaterialVariant` on `TrussPart` nodes.
 ///
 /// The name of MaterialVariant.
@@ -305,11 +323,11 @@ pub fn material(value: Material) -> Property(TrussPart) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#MaterialVariant
-@target(luau)
 pub fn material_variant(value: String) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_material_variant(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.Orientation` on `TrussPart` nodes.
 ///
 /// Describes the rotation of the part in the world.
@@ -318,11 +336,11 @@ pub fn material_variant(value: String) -> Property(TrussPart) {
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Orientation
-@target(luau)
 pub fn orientation(value: Vector3) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_orientation(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.PivotOffset` on `TrussPart` nodes.
 ///
 /// Specifies the offset of the part's pivot from its CFrame.
@@ -330,11 +348,11 @@ pub fn orientation(value: Vector3) -> Property(TrussPart) {
 /// Roblox: `BasePart.PivotOffset`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#PivotOffset
-@target(luau)
 pub fn pivot_offset(value: CFrame) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_pivot_offset(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.Position` on `TrussPart` nodes.
 ///
 /// Describes the position of the part in the world.
@@ -343,11 +361,11 @@ pub fn pivot_offset(value: CFrame) -> Property(TrussPart) {
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Position
-@target(luau)
 pub fn position(value: Vector3) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_position(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.Reflectance` on `TrussPart` nodes.
 ///
 /// Determines how much a part reflects the skybox.
@@ -355,11 +373,11 @@ pub fn position(value: Vector3) -> Property(TrussPart) {
 /// Roblox: `BasePart.Reflectance`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Reflectance
-@target(luau)
 pub fn reflectance(value: Float) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_reflectance(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.RightSurface` on `TrussPart` nodes.
 ///
 /// Determines the type of surface for the right face of a part.
@@ -367,11 +385,11 @@ pub fn reflectance(value: Float) -> Property(TrussPart) {
 /// Roblox: `BasePart.RightSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#RightSurface
-@target(luau)
 pub fn right_surface(value: SurfaceType) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_right_surface(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.RootPriority` on `TrussPart` nodes.
 ///
 /// The main rule in determining the root part of an assembly.
@@ -379,11 +397,11 @@ pub fn right_surface(value: SurfaceType) -> Property(TrussPart) {
 /// Roblox: `BasePart.RootPriority`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#RootPriority
-@target(luau)
 pub fn root_priority(value: Int) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_root_priority(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.Rotation` on `TrussPart` nodes.
 ///
 /// The rotation of the part in degrees for the three axes.
@@ -392,11 +410,11 @@ pub fn root_priority(value: Int) -> Property(TrussPart) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Rotation
-@target(luau)
 pub fn rotation(value: Vector3) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_rotation(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.Size` on `TrussPart` nodes.
 ///
 /// Determines the dimensions of a part (length, width, height).
@@ -405,11 +423,11 @@ pub fn rotation(value: Vector3) -> Property(TrussPart) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Size
-@target(luau)
 pub fn size(value: Vector3) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_size(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.TopSurface` on `TrussPart` nodes.
 ///
 /// Determines the type of surface for the top face of a part.
@@ -417,11 +435,11 @@ pub fn size(value: Vector3) -> Property(TrussPart) {
 /// Roblox: `BasePart.TopSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#TopSurface
-@target(luau)
 pub fn top_surface(value: SurfaceType) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_top_surface(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `BasePart.Transparency` on `TrussPart` nodes.
 ///
 /// Determines how much a part can be seen through (the inverse of part opacity).
@@ -429,11 +447,11 @@ pub fn top_surface(value: SurfaceType) -> Property(TrussPart) {
 /// Roblox: `BasePart.Transparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Transparency
-@target(luau)
 pub fn transparency(value: Float) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_transparency(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `TrussPart` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -441,11 +459,11 @@ pub fn transparency(value: Float) -> Property(TrussPart) {
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_archivable(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `TrussPart` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -453,11 +471,11 @@ pub fn archivable(value: Bool) -> Property(TrussPart) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 pub fn capabilities(value: SecurityCapabilities) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_capabilities(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `TrussPart` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -465,11 +483,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(TrussPart) {
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `TrussPart` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -478,11 +496,11 @@ pub fn name(value: String) -> Property(TrussPart) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `TrussPart` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -491,13 +509,23 @@ pub fn parent(value: Instance) -> Property(TrussPart) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(TrussPart) {
   Property(fn(instance) { truss_part.set_sandboxed(instance, value) })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: SurfaceType, _: Vector3, _: CFrame, _: Material, _: PhysicalProperties, _: Color3, _: BrickColor, _: Style, _: TrussPart) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: SurfaceType,
+  _: Vector3,
+  _: CFrame,
+  _: Material,
+  _: PhysicalProperties,
+  _: Color3,
+  _: BrickColor,
+  _: Style,
+  _: TrussPart,
+) -> Nil {
   Nil
 }

@@ -1,26 +1,31 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type GuiButton, type InputBinding, type Instance, type KeyCode, type Object, type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId, type Vector2, type Vector3}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type GuiButton, type InputBinding, type Instance, type KeyCode,
+  type Object, type OptionDouble, type OptionInt64, type SecurityCapabilities,
+  type UniqueId, type Vector2, type Vector3,
+}
 
+@target(luau)
 /// Creates a new Roblox `InputBinding` instance.
 ///
 /// Roblox: `Instance.new("InputBinding")`
-@target(luau)
 @luau.global("Instance.new(\"InputBinding\")")
 pub fn new() -> InputBinding
 
-/// Treats `InputBinding` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `InputBinding` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: InputBinding) -> Instance
 
-/// Treats `InputBinding` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `InputBinding` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: InputBinding) -> Object
 
+@target(luau)
 /// Gets Roblox property `InputBinding.Backward`.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "backward" inputs to the parent InputAction.
@@ -28,10 +33,10 @@ pub fn as_object(instance: InputBinding) -> Object
 /// Roblox: `InputBinding.Backward`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Backward
-@target(luau)
 @luau.property("Backward")
 pub fn get_backward(instance: InputBinding) -> KeyCode
 
+@target(luau)
 /// Sets Roblox property `InputBinding.Backward`.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "backward" inputs to the parent InputAction.
@@ -39,28 +44,31 @@ pub fn get_backward(instance: InputBinding) -> KeyCode
 /// Roblox: `InputBinding.Backward`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Backward
-@target(luau)
 @luau.set_property("Backward")
 pub fn set_backward(instance: InputBinding, value: KeyCode) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.ClampMagnitudeToOne`.
 ///
 /// Roblox: `InputBinding.ClampMagnitudeToOne`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#ClampMagnitudeToOne
-@target(luau)
 @luau.property("ClampMagnitudeToOne")
 pub fn get_clamp_magnitude_to_one(instance: InputBinding) -> Bool
 
+@target(luau)
 /// Sets Roblox property `InputBinding.ClampMagnitudeToOne`.
 ///
 /// Roblox: `InputBinding.ClampMagnitudeToOne`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#ClampMagnitudeToOne
-@target(luau)
 @luau.set_property("ClampMagnitudeToOne")
-pub fn set_clamp_magnitude_to_one(instance: InputBinding, value: Bool) -> InputBinding
+pub fn set_clamp_magnitude_to_one(
+  instance: InputBinding,
+  value: Bool,
+) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.Down`.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "down" inputs to the parent InputAction.
@@ -68,10 +76,10 @@ pub fn set_clamp_magnitude_to_one(instance: InputBinding, value: Bool) -> InputB
 /// Roblox: `InputBinding.Down`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Down
-@target(luau)
 @luau.property("Down")
 pub fn get_down(instance: InputBinding) -> KeyCode
 
+@target(luau)
 /// Sets Roblox property `InputBinding.Down`.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "down" inputs to the parent InputAction.
@@ -79,10 +87,10 @@ pub fn get_down(instance: InputBinding) -> KeyCode
 /// Roblox: `InputBinding.Down`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Down
-@target(luau)
 @luau.set_property("Down")
 pub fn set_down(instance: InputBinding, value: KeyCode) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.Forward`.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "forward" inputs to the parent InputAction.
@@ -90,10 +98,10 @@ pub fn set_down(instance: InputBinding, value: KeyCode) -> InputBinding
 /// Roblox: `InputBinding.Forward`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Forward
-@target(luau)
 @luau.property("Forward")
 pub fn get_forward(instance: InputBinding) -> KeyCode
 
+@target(luau)
 /// Sets Roblox property `InputBinding.Forward`.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "forward" inputs to the parent InputAction.
@@ -101,10 +109,10 @@ pub fn get_forward(instance: InputBinding) -> KeyCode
 /// Roblox: `InputBinding.Forward`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Forward
-@target(luau)
 @luau.set_property("Forward")
 pub fn set_forward(instance: InputBinding, value: KeyCode) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.KeyCode`.
 ///
 /// Specifies the KeyCode which triggers the parent InputAction.
@@ -112,10 +120,10 @@ pub fn set_forward(instance: InputBinding, value: KeyCode) -> InputBinding
 /// Roblox: `InputBinding.KeyCode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#KeyCode
-@target(luau)
 @luau.property("KeyCode")
 pub fn get_key_code(instance: InputBinding) -> KeyCode
 
+@target(luau)
 /// Sets Roblox property `InputBinding.KeyCode`.
 ///
 /// Specifies the KeyCode which triggers the parent InputAction.
@@ -123,10 +131,10 @@ pub fn get_key_code(instance: InputBinding) -> KeyCode
 /// Roblox: `InputBinding.KeyCode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#KeyCode
-@target(luau)
 @luau.set_property("KeyCode")
 pub fn set_key_code(instance: InputBinding, value: KeyCode) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.Left`.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "left" inputs to the parent InputAction.
@@ -134,10 +142,10 @@ pub fn set_key_code(instance: InputBinding, value: KeyCode) -> InputBinding
 /// Roblox: `InputBinding.Left`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Left
-@target(luau)
 @luau.property("Left")
 pub fn get_left(instance: InputBinding) -> KeyCode
 
+@target(luau)
 /// Sets Roblox property `InputBinding.Left`.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "left" inputs to the parent InputAction.
@@ -145,28 +153,28 @@ pub fn get_left(instance: InputBinding) -> KeyCode
 /// Roblox: `InputBinding.Left`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Left
-@target(luau)
 @luau.set_property("Left")
 pub fn set_left(instance: InputBinding, value: KeyCode) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.PointerIndex`.
 ///
 /// Roblox: `InputBinding.PointerIndex`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#PointerIndex
-@target(luau)
 @luau.property("PointerIndex")
 pub fn get_pointer_index(instance: InputBinding) -> Int
 
+@target(luau)
 /// Sets Roblox property `InputBinding.PointerIndex`.
 ///
 /// Roblox: `InputBinding.PointerIndex`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#PointerIndex
-@target(luau)
 @luau.set_property("PointerIndex")
 pub fn set_pointer_index(instance: InputBinding, value: Int) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.PressedThreshold`.
 ///
 /// Numerical value above which to fire an InputAction with a Type of Bool.
@@ -174,10 +182,10 @@ pub fn set_pointer_index(instance: InputBinding, value: Int) -> InputBinding
 /// Roblox: `InputBinding.PressedThreshold`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#PressedThreshold
-@target(luau)
 @luau.property("PressedThreshold")
 pub fn get_pressed_threshold(instance: InputBinding) -> Float
 
+@target(luau)
 /// Sets Roblox property `InputBinding.PressedThreshold`.
 ///
 /// Numerical value above which to fire an InputAction with a Type of Bool.
@@ -185,10 +193,13 @@ pub fn get_pressed_threshold(instance: InputBinding) -> Float
 /// Roblox: `InputBinding.PressedThreshold`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#PressedThreshold
-@target(luau)
 @luau.set_property("PressedThreshold")
-pub fn set_pressed_threshold(instance: InputBinding, value: Float) -> InputBinding
+pub fn set_pressed_threshold(
+  instance: InputBinding,
+  value: Float,
+) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.PrimaryModifier`.
 ///
 /// Specifies a primary KeyCode that must be pressed for the binding to activate.
@@ -196,10 +207,10 @@ pub fn set_pressed_threshold(instance: InputBinding, value: Float) -> InputBindi
 /// Roblox: `InputBinding.PrimaryModifier`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#PrimaryModifier
-@target(luau)
 @luau.property("PrimaryModifier")
 pub fn get_primary_modifier(instance: InputBinding) -> KeyCode
 
+@target(luau)
 /// Sets Roblox property `InputBinding.PrimaryModifier`.
 ///
 /// Specifies a primary KeyCode that must be pressed for the binding to activate.
@@ -207,10 +218,13 @@ pub fn get_primary_modifier(instance: InputBinding) -> KeyCode
 /// Roblox: `InputBinding.PrimaryModifier`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#PrimaryModifier
-@target(luau)
 @luau.set_property("PrimaryModifier")
-pub fn set_primary_modifier(instance: InputBinding, value: KeyCode) -> InputBinding
+pub fn set_primary_modifier(
+  instance: InputBinding,
+  value: KeyCode,
+) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.ReleasedThreshold`.
 ///
 /// Numerical value below which to fire an InputAction with a Type of Bool.
@@ -218,10 +232,10 @@ pub fn set_primary_modifier(instance: InputBinding, value: KeyCode) -> InputBind
 /// Roblox: `InputBinding.ReleasedThreshold`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#ReleasedThreshold
-@target(luau)
 @luau.property("ReleasedThreshold")
 pub fn get_released_threshold(instance: InputBinding) -> Float
 
+@target(luau)
 /// Sets Roblox property `InputBinding.ReleasedThreshold`.
 ///
 /// Numerical value below which to fire an InputAction with a Type of Bool.
@@ -229,10 +243,13 @@ pub fn get_released_threshold(instance: InputBinding) -> Float
 /// Roblox: `InputBinding.ReleasedThreshold`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#ReleasedThreshold
-@target(luau)
 @luau.set_property("ReleasedThreshold")
-pub fn set_released_threshold(instance: InputBinding, value: Float) -> InputBinding
+pub fn set_released_threshold(
+  instance: InputBinding,
+  value: Float,
+) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.ResponseCurve`.
 ///
 /// Numerical value to configure scaling for more precise thumbstick aiming.
@@ -240,10 +257,10 @@ pub fn set_released_threshold(instance: InputBinding, value: Float) -> InputBind
 /// Roblox: `InputBinding.ResponseCurve`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#ResponseCurve
-@target(luau)
 @luau.property("ResponseCurve")
 pub fn get_response_curve(instance: InputBinding) -> Float
 
+@target(luau)
 /// Sets Roblox property `InputBinding.ResponseCurve`.
 ///
 /// Numerical value to configure scaling for more precise thumbstick aiming.
@@ -251,10 +268,10 @@ pub fn get_response_curve(instance: InputBinding) -> Float
 /// Roblox: `InputBinding.ResponseCurve`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#ResponseCurve
-@target(luau)
 @luau.set_property("ResponseCurve")
 pub fn set_response_curve(instance: InputBinding, value: Float) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.Right`.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "right" inputs to the parent InputAction.
@@ -262,10 +279,10 @@ pub fn set_response_curve(instance: InputBinding, value: Float) -> InputBinding
 /// Roblox: `InputBinding.Right`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Right
-@target(luau)
 @luau.property("Right")
 pub fn get_right(instance: InputBinding) -> KeyCode
 
+@target(luau)
 /// Sets Roblox property `InputBinding.Right`.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "right" inputs to the parent InputAction.
@@ -273,10 +290,10 @@ pub fn get_right(instance: InputBinding) -> KeyCode
 /// Roblox: `InputBinding.Right`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Right
-@target(luau)
 @luau.set_property("Right")
 pub fn set_right(instance: InputBinding, value: KeyCode) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.Scale`.
 ///
 /// Amount by which to linearly scale the values of a directional InputAction.
@@ -284,10 +301,10 @@ pub fn set_right(instance: InputBinding, value: KeyCode) -> InputBinding
 /// Roblox: `InputBinding.Scale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Scale
-@target(luau)
 @luau.property("Scale")
 pub fn get_scale(instance: InputBinding) -> Float
 
+@target(luau)
 /// Sets Roblox property `InputBinding.Scale`.
 ///
 /// Amount by which to linearly scale the values of a directional InputAction.
@@ -295,10 +312,10 @@ pub fn get_scale(instance: InputBinding) -> Float
 /// Roblox: `InputBinding.Scale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Scale
-@target(luau)
 @luau.set_property("Scale")
 pub fn set_scale(instance: InputBinding, value: Float) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.SecondaryModifier`.
 ///
 /// Specifies a secondary KeyCode that must be pressed for the binding to activate.
@@ -306,10 +323,10 @@ pub fn set_scale(instance: InputBinding, value: Float) -> InputBinding
 /// Roblox: `InputBinding.SecondaryModifier`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#SecondaryModifier
-@target(luau)
 @luau.property("SecondaryModifier")
 pub fn get_secondary_modifier(instance: InputBinding) -> KeyCode
 
+@target(luau)
 /// Sets Roblox property `InputBinding.SecondaryModifier`.
 ///
 /// Specifies a secondary KeyCode that must be pressed for the binding to activate.
@@ -317,10 +334,13 @@ pub fn get_secondary_modifier(instance: InputBinding) -> KeyCode
 /// Roblox: `InputBinding.SecondaryModifier`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#SecondaryModifier
-@target(luau)
 @luau.set_property("SecondaryModifier")
-pub fn set_secondary_modifier(instance: InputBinding, value: KeyCode) -> InputBinding
+pub fn set_secondary_modifier(
+  instance: InputBinding,
+  value: KeyCode,
+) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.UIButton`.
 ///
 /// Connects a GuiButton to a boolean action.
@@ -328,10 +348,10 @@ pub fn set_secondary_modifier(instance: InputBinding, value: KeyCode) -> InputBi
 /// Roblox: `InputBinding.UIButton`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#UIButton
-@target(luau)
 @luau.property("UIButton")
 pub fn get_ui_button(instance: InputBinding) -> GuiButton
 
+@target(luau)
 /// Sets Roblox property `InputBinding.UIButton`.
 ///
 /// Connects a GuiButton to a boolean action.
@@ -339,28 +359,28 @@ pub fn get_ui_button(instance: InputBinding) -> GuiButton
 /// Roblox: `InputBinding.UIButton`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#UIButton
-@target(luau)
 @luau.set_property("UIButton")
 pub fn set_ui_button(instance: InputBinding, value: GuiButton) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.UIModifier`.
 ///
 /// Roblox: `InputBinding.UIModifier`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#UIModifier
-@target(luau)
 @luau.property("UIModifier")
 pub fn get_ui_modifier(instance: InputBinding) -> GuiButton
 
+@target(luau)
 /// Sets Roblox property `InputBinding.UIModifier`.
 ///
 /// Roblox: `InputBinding.UIModifier`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#UIModifier
-@target(luau)
 @luau.set_property("UIModifier")
 pub fn set_ui_modifier(instance: InputBinding, value: GuiButton) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.Up`.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "up" inputs to the parent InputAction.
@@ -368,10 +388,10 @@ pub fn set_ui_modifier(instance: InputBinding, value: GuiButton) -> InputBinding
 /// Roblox: `InputBinding.Up`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Up
-@target(luau)
 @luau.property("Up")
 pub fn get_up(instance: InputBinding) -> KeyCode
 
+@target(luau)
 /// Sets Roblox property `InputBinding.Up`.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "up" inputs to the parent InputAction.
@@ -379,10 +399,10 @@ pub fn get_up(instance: InputBinding) -> KeyCode
 /// Roblox: `InputBinding.Up`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Up
-@target(luau)
 @luau.set_property("Up")
 pub fn set_up(instance: InputBinding, value: KeyCode) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.Vector2Scale`.
 ///
 /// Amount by which to linearly scale the values of a two-directional InputAction.
@@ -390,10 +410,10 @@ pub fn set_up(instance: InputBinding, value: KeyCode) -> InputBinding
 /// Roblox: `InputBinding.Vector2Scale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Vector2Scale
-@target(luau)
 @luau.property("Vector2Scale")
 pub fn get_vector2_scale(instance: InputBinding) -> Vector2
 
+@target(luau)
 /// Sets Roblox property `InputBinding.Vector2Scale`.
 ///
 /// Amount by which to linearly scale the values of a two-directional InputAction.
@@ -401,28 +421,28 @@ pub fn get_vector2_scale(instance: InputBinding) -> Vector2
 /// Roblox: `InputBinding.Vector2Scale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Vector2Scale
-@target(luau)
 @luau.set_property("Vector2Scale")
 pub fn set_vector2_scale(instance: InputBinding, value: Vector2) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `InputBinding.Vector3Scale`.
 ///
 /// Roblox: `InputBinding.Vector3Scale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Vector3Scale
-@target(luau)
 @luau.property("Vector3Scale")
 pub fn get_vector3_scale(instance: InputBinding) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `InputBinding.Vector3Scale`.
 ///
 /// Roblox: `InputBinding.Vector3Scale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#Vector3Scale
-@target(luau)
 @luau.set_property("Vector3Scale")
 pub fn set_vector3_scale(instance: InputBinding, value: Vector3) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -430,10 +450,10 @@ pub fn set_vector3_scale(instance: InputBinding, value: Vector3) -> InputBinding
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: InputBinding) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -441,10 +461,10 @@ pub fn get_archivable(instance: InputBinding) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: InputBinding, value: Bool) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -452,10 +472,10 @@ pub fn set_archivable(instance: InputBinding, value: Bool) -> InputBinding
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: InputBinding) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -463,10 +483,13 @@ pub fn get_capabilities(instance: InputBinding) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: InputBinding, value: SecurityCapabilities) -> InputBinding
+pub fn set_capabilities(
+  instance: InputBinding,
+  value: SecurityCapabilities,
+) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -474,10 +497,10 @@ pub fn set_capabilities(instance: InputBinding, value: SecurityCapabilities) -> 
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: InputBinding) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -485,10 +508,10 @@ pub fn get_name(instance: InputBinding) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: InputBinding, value: String) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -497,10 +520,10 @@ pub fn set_name(instance: InputBinding, value: String) -> InputBinding
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: InputBinding) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -509,10 +532,10 @@ pub fn get_parent(instance: InputBinding) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: InputBinding, value: parent) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -521,10 +544,10 @@ pub fn set_parent(instance: InputBinding, value: parent) -> InputBinding
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: InputBinding) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -533,10 +556,10 @@ pub fn get_roblox_locked(instance: InputBinding) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: InputBinding) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -545,20 +568,20 @@ pub fn get_sandboxed(instance: InputBinding) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: InputBinding, value: Bool) -> InputBinding
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: InputBinding) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -567,10 +590,10 @@ pub fn get_source_asset_id(instance: InputBinding) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: InputBinding) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -579,10 +602,10 @@ pub fn get_unique_id(instance: InputBinding) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: InputBinding, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -591,10 +614,10 @@ pub fn add_tag(instance: InputBinding, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: InputBinding) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -603,10 +626,10 @@ pub fn clear_all_children(instance: InputBinding) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: InputBinding) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -615,10 +638,10 @@ pub fn clone(instance: InputBinding) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: InputBinding) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -631,10 +654,13 @@ pub fn destroy_instance(instance: InputBinding) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: InputBinding, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: InputBinding,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -647,10 +673,13 @@ pub fn find_first_ancestor(instance: InputBinding, name: String) -> Option(Insta
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: InputBinding, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: InputBinding,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -663,10 +692,13 @@ pub fn find_first_ancestor_of_class(instance: InputBinding, class_name: String) 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: InputBinding, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: InputBinding,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -680,10 +712,14 @@ pub fn find_first_ancestor_which_is_a(instance: InputBinding, class_name: String
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: InputBinding, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: InputBinding,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -696,10 +732,13 @@ pub fn find_first_child(instance: InputBinding, name: String, recursive: Bool) -
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: InputBinding, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: InputBinding,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -713,10 +752,14 @@ pub fn find_first_child_of_class(instance: InputBinding, class_name: String) -> 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: InputBinding, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: InputBinding,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -729,10 +772,13 @@ pub fn find_first_child_which_is_a(instance: InputBinding, class_name: String, r
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: InputBinding, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: InputBinding,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -744,10 +790,10 @@ pub fn find_first_descendant(instance: InputBinding, name: String) -> Option(Ins
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: InputBinding) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -760,10 +806,10 @@ pub fn get_actor(instance: InputBinding) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: InputBinding, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -776,10 +822,13 @@ pub fn get_attribute(instance: InputBinding, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: InputBinding, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: InputBinding,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -792,10 +841,10 @@ pub fn get_attribute_changed_signal(instance: InputBinding, attribute: String) -
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: InputBinding) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -807,10 +856,10 @@ pub fn get_attributes(instance: InputBinding) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: InputBinding) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -823,10 +872,10 @@ pub fn get_children(instance: InputBinding) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: InputBinding) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -838,10 +887,10 @@ pub fn get_descendants(instance: InputBinding) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: InputBinding) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -855,10 +904,14 @@ pub fn get_full_name(instance: InputBinding) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: InputBinding, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: InputBinding,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -869,10 +922,13 @@ pub fn get_styled(instance: InputBinding, name: String, selector: Option(String)
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: InputBinding, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: InputBinding,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -881,10 +937,10 @@ pub fn get_styled_property_changed_signal(instance: InputBinding, property: Stri
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: InputBinding) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -893,10 +949,10 @@ pub fn get_tags(instance: InputBinding) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: InputBinding, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -909,10 +965,10 @@ pub fn has_tag(instance: InputBinding, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: InputBinding, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -925,10 +981,10 @@ pub fn is_ancestor_of(instance: InputBinding, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: InputBinding, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -941,10 +997,10 @@ pub fn is_descendant_of(instance: InputBinding, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: InputBinding, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -956,10 +1012,13 @@ pub fn is_property_modified(instance: InputBinding, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: InputBinding, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: InputBinding,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -968,10 +1027,10 @@ pub fn query_descendants(instance: InputBinding, selector: String) -> List(Insta
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: InputBinding, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -981,10 +1040,13 @@ pub fn remove_tag(instance: InputBinding, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: InputBinding, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: InputBinding,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -995,10 +1057,14 @@ pub fn reset_property_to_default(instance: InputBinding, property: String) -> Ni
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: InputBinding, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: InputBinding,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -1013,19 +1079,25 @@ pub fn set_attribute(instance: InputBinding, attribute: String, value: Dynamic) 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: InputBinding, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: InputBinding,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: InputBinding) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: InputBinding,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -1033,19 +1105,24 @@ pub fn ancestry_changed(instance: InputBinding) -> RBXScriptSignal(fn(Instance, 
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: InputBinding, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: InputBinding,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: InputBinding) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: InputBinding,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -1053,19 +1130,24 @@ pub fn attribute_changed(instance: InputBinding) -> RBXScriptSignal(fn(String) -
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: InputBinding, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: InputBinding,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: InputBinding) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: InputBinding,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -1073,19 +1155,24 @@ pub fn child_added(instance: InputBinding) -> RBXScriptSignal(fn(Instance) -> Ni
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: InputBinding, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: InputBinding,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: InputBinding) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: InputBinding,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -1093,19 +1180,24 @@ pub fn child_removed(instance: InputBinding) -> RBXScriptSignal(fn(Instance) -> 
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: InputBinding, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: InputBinding,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: InputBinding) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: InputBinding,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -1113,19 +1205,24 @@ pub fn descendant_added(instance: InputBinding) -> RBXScriptSignal(fn(Instance) 
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: InputBinding, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: InputBinding,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: InputBinding) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: InputBinding,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -1133,19 +1230,22 @@ pub fn descendant_removing(instance: InputBinding) -> RBXScriptSignal(fn(Instanc
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: InputBinding, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: InputBinding,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: InputBinding) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1153,19 +1253,24 @@ pub fn destroying(instance: InputBinding) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: InputBinding, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: InputBinding,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: InputBinding) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: InputBinding,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1173,10 +1278,13 @@ pub fn styled_properties_changed(instance: InputBinding) -> RBXScriptSignal(fn()
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: InputBinding, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: InputBinding,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1185,10 +1293,10 @@ pub fn on_styled_properties_changed(instance: InputBinding, callback: fn() -> Ni
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: InputBinding) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1201,10 +1309,13 @@ pub fn get_class_name(instance: InputBinding) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: InputBinding, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: InputBinding,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1218,19 +1329,19 @@ pub fn get_property_changed_signal(instance: InputBinding, property: String) -> 
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: InputBinding, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: InputBinding) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1238,12 +1349,30 @@ pub fn changed(instance: InputBinding) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: InputBinding, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: InputBinding,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: Vector3, _: Vector2, _: KeyCode, _: GuiButton, _: InputBinding, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: Vector3,
+  _: Vector2,
+  _: KeyCode,
+  _: GuiButton,
+  _: InputBinding,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

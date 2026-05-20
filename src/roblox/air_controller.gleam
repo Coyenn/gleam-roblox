@@ -1,31 +1,36 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type AirController, type ControllerBase, type Instance, type Object, type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId, type Vector3}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type AirController, type ControllerBase, type Instance,
+  type Object, type OptionDouble, type OptionInt64, type SecurityCapabilities,
+  type UniqueId, type Vector3,
+}
 
+@target(luau)
 /// Creates a new Roblox `AirController` instance.
 ///
 /// Roblox: `Instance.new("AirController")`
-@target(luau)
 @luau.global("Instance.new(\"AirController\")")
 pub fn new() -> AirController
 
-/// Treats `AirController` as its Roblox ancestor `ControllerBase`.
 @target(luau)
+/// Treats `AirController` as its Roblox ancestor `ControllerBase`.
 @luau.global("(function(x) return x end)")
 pub fn as_controller_base(instance: AirController) -> ControllerBase
 
-/// Treats `AirController` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `AirController` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AirController) -> Instance
 
-/// Treats `AirController` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `AirController` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: AirController) -> Object
 
+@target(luau)
 /// Gets Roblox property `AirController.BalanceMaxTorque`.
 ///
 /// The maximum torque the character can use to remain balanced upright.
@@ -33,10 +38,10 @@ pub fn as_object(instance: AirController) -> Object
 /// Roblox: `AirController.BalanceMaxTorque`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#BalanceMaxTorque
-@target(luau)
 @luau.property("BalanceMaxTorque")
 pub fn get_balance_max_torque(instance: AirController) -> Float
 
+@target(luau)
 /// Sets Roblox property `AirController.BalanceMaxTorque`.
 ///
 /// The maximum torque the character can use to remain balanced upright.
@@ -44,10 +49,13 @@ pub fn get_balance_max_torque(instance: AirController) -> Float
 /// Roblox: `AirController.BalanceMaxTorque`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#BalanceMaxTorque
-@target(luau)
 @luau.set_property("BalanceMaxTorque")
-pub fn set_balance_max_torque(instance: AirController, value: Float) -> AirController
+pub fn set_balance_max_torque(
+  instance: AirController,
+  value: Float,
+) -> AirController
 
+@target(luau)
 /// Gets Roblox property `AirController.BalanceSpeed`.
 ///
 /// The maximum angular speed used to align the character upright.
@@ -55,10 +63,10 @@ pub fn set_balance_max_torque(instance: AirController, value: Float) -> AirContr
 /// Roblox: `AirController.BalanceSpeed`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#BalanceSpeed
-@target(luau)
 @luau.property("BalanceSpeed")
 pub fn get_balance_speed(instance: AirController) -> Float
 
+@target(luau)
 /// Sets Roblox property `AirController.BalanceSpeed`.
 ///
 /// The maximum angular speed used to align the character upright.
@@ -66,30 +74,33 @@ pub fn get_balance_speed(instance: AirController) -> Float
 /// Roblox: `AirController.BalanceSpeed`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#BalanceSpeed
-@target(luau)
 @luau.set_property("BalanceSpeed")
 pub fn set_balance_speed(instance: AirController, value: Float) -> AirController
 
+@target(luau)
 /// Gets Roblox property `AirController.LinearImpulse`.
 ///
 /// Roblox: `AirController.LinearImpulse`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#LinearImpulse
-@target(luau)
 @luau.property("LinearImpulse")
 pub fn get_linear_impulse(instance: AirController) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `AirController.LinearImpulse`.
 ///
 /// Roblox: `AirController.LinearImpulse`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#LinearImpulse
-@target(luau)
 @luau.set_property("LinearImpulse")
-pub fn set_linear_impulse(instance: AirController, value: Vector3) -> AirController
+pub fn set_linear_impulse(
+  instance: AirController,
+  value: Vector3,
+) -> AirController
 
+@target(luau)
 /// Gets Roblox property `AirController.MaintainAngularMomentum`.
 ///
 /// Determines whether angular momentum is preserved when input has stopped.
@@ -97,10 +108,10 @@ pub fn set_linear_impulse(instance: AirController, value: Vector3) -> AirControl
 /// Roblox: `AirController.MaintainAngularMomentum`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#MaintainAngularMomentum
-@target(luau)
 @luau.property("MaintainAngularMomentum")
 pub fn get_maintain_angular_momentum(instance: AirController) -> Bool
 
+@target(luau)
 /// Sets Roblox property `AirController.MaintainAngularMomentum`.
 ///
 /// Determines whether angular momentum is preserved when input has stopped.
@@ -108,10 +119,13 @@ pub fn get_maintain_angular_momentum(instance: AirController) -> Bool
 /// Roblox: `AirController.MaintainAngularMomentum`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#MaintainAngularMomentum
-@target(luau)
 @luau.set_property("MaintainAngularMomentum")
-pub fn set_maintain_angular_momentum(instance: AirController, value: Bool) -> AirController
+pub fn set_maintain_angular_momentum(
+  instance: AirController,
+  value: Bool,
+) -> AirController
 
+@target(luau)
 /// Gets Roblox property `AirController.MaintainLinearMomentum`.
 ///
 /// Determines whether linear momentum is preserved when input has stopped.
@@ -119,10 +133,10 @@ pub fn set_maintain_angular_momentum(instance: AirController, value: Bool) -> Ai
 /// Roblox: `AirController.MaintainLinearMomentum`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#MaintainLinearMomentum
-@target(luau)
 @luau.property("MaintainLinearMomentum")
 pub fn get_maintain_linear_momentum(instance: AirController) -> Bool
 
+@target(luau)
 /// Sets Roblox property `AirController.MaintainLinearMomentum`.
 ///
 /// Determines whether linear momentum is preserved when input has stopped.
@@ -130,10 +144,13 @@ pub fn get_maintain_linear_momentum(instance: AirController) -> Bool
 /// Roblox: `AirController.MaintainLinearMomentum`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#MaintainLinearMomentum
-@target(luau)
 @luau.set_property("MaintainLinearMomentum")
-pub fn set_maintain_linear_momentum(instance: AirController, value: Bool) -> AirController
+pub fn set_maintain_linear_momentum(
+  instance: AirController,
+  value: Bool,
+) -> AirController
 
+@target(luau)
 /// Gets Roblox property `AirController.MoveMaxForce`.
 ///
 /// The maximum force that can be applied on the ControllerManager.RootPart for moving in the ControllerManager.MovingDirection.
@@ -141,10 +158,10 @@ pub fn set_maintain_linear_momentum(instance: AirController, value: Bool) -> Air
 /// Roblox: `AirController.MoveMaxForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#MoveMaxForce
-@target(luau)
 @luau.property("MoveMaxForce")
 pub fn get_move_max_force(instance: AirController) -> Float
 
+@target(luau)
 /// Sets Roblox property `AirController.MoveMaxForce`.
 ///
 /// The maximum force that can be applied on the ControllerManager.RootPart for moving in the ControllerManager.MovingDirection.
@@ -152,10 +169,13 @@ pub fn get_move_max_force(instance: AirController) -> Float
 /// Roblox: `AirController.MoveMaxForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#MoveMaxForce
-@target(luau)
 @luau.set_property("MoveMaxForce")
-pub fn set_move_max_force(instance: AirController, value: Float) -> AirController
+pub fn set_move_max_force(
+  instance: AirController,
+  value: Float,
+) -> AirController
 
+@target(luau)
 /// Gets Roblox property `AirController.TurnMaxTorque`.
 ///
 /// The maximum torque that can be applied on the ControllerManager.RootPart for turning towards the ControllerManager.FacingDirection.
@@ -163,10 +183,10 @@ pub fn set_move_max_force(instance: AirController, value: Float) -> AirControlle
 /// Roblox: `AirController.TurnMaxTorque`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#TurnMaxTorque
-@target(luau)
 @luau.property("TurnMaxTorque")
 pub fn get_turn_max_torque(instance: AirController) -> Float
 
+@target(luau)
 /// Sets Roblox property `AirController.TurnMaxTorque`.
 ///
 /// The maximum torque that can be applied on the ControllerManager.RootPart for turning towards the ControllerManager.FacingDirection.
@@ -174,10 +194,13 @@ pub fn get_turn_max_torque(instance: AirController) -> Float
 /// Roblox: `AirController.TurnMaxTorque`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#TurnMaxTorque
-@target(luau)
 @luau.set_property("TurnMaxTorque")
-pub fn set_turn_max_torque(instance: AirController, value: Float) -> AirController
+pub fn set_turn_max_torque(
+  instance: AirController,
+  value: Float,
+) -> AirController
 
+@target(luau)
 /// Gets Roblox property `AirController.TurnSpeedFactor`.
 ///
 /// The value multiplied by the ControllerManager.BaseTurnSpeed.
@@ -185,10 +208,10 @@ pub fn set_turn_max_torque(instance: AirController, value: Float) -> AirControll
 /// Roblox: `AirController.TurnSpeedFactor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#TurnSpeedFactor
-@target(luau)
 @luau.property("TurnSpeedFactor")
 pub fn get_turn_speed_factor(instance: AirController) -> Float
 
+@target(luau)
 /// Sets Roblox property `AirController.TurnSpeedFactor`.
 ///
 /// The value multiplied by the ControllerManager.BaseTurnSpeed.
@@ -196,38 +219,44 @@ pub fn get_turn_speed_factor(instance: AirController) -> Float
 /// Roblox: `AirController.TurnSpeedFactor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AirController#TurnSpeedFactor
-@target(luau)
 @luau.set_property("TurnSpeedFactor")
-pub fn set_turn_speed_factor(instance: AirController, value: Float) -> AirController
+pub fn set_turn_speed_factor(
+  instance: AirController,
+  value: Float,
+) -> AirController
 
+@target(luau)
 /// Gets Roblox property `ControllerBase.Active`.
 ///
 /// Roblox: `ControllerBase.Active`
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/ControllerBase#Active
-@target(luau)
 @luau.property("Active")
 pub fn get_active(instance: AirController) -> Bool
 
+@target(luau)
 /// Gets Roblox property `ControllerBase.BalanceRigidityEnabled`.
 ///
 /// Roblox: `ControllerBase.BalanceRigidityEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ControllerBase#BalanceRigidityEnabled
-@target(luau)
 @luau.property("BalanceRigidityEnabled")
 pub fn get_balance_rigidity_enabled(instance: AirController) -> Bool
 
+@target(luau)
 /// Sets Roblox property `ControllerBase.BalanceRigidityEnabled`.
 ///
 /// Roblox: `ControllerBase.BalanceRigidityEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ControllerBase#BalanceRigidityEnabled
-@target(luau)
 @luau.set_property("BalanceRigidityEnabled")
-pub fn set_balance_rigidity_enabled(instance: AirController, value: Bool) -> AirController
+pub fn set_balance_rigidity_enabled(
+  instance: AirController,
+  value: Bool,
+) -> AirController
 
+@target(luau)
 /// Gets Roblox property `ControllerBase.MoveSpeedFactor`.
 ///
 /// The value multiplied by the ControllerManager.BaseMoveSpeed.
@@ -235,10 +264,10 @@ pub fn set_balance_rigidity_enabled(instance: AirController, value: Bool) -> Air
 /// Roblox: `ControllerBase.MoveSpeedFactor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ControllerBase#MoveSpeedFactor
-@target(luau)
 @luau.property("MoveSpeedFactor")
 pub fn get_move_speed_factor(instance: AirController) -> Float
 
+@target(luau)
 /// Sets Roblox property `ControllerBase.MoveSpeedFactor`.
 ///
 /// The value multiplied by the ControllerManager.BaseMoveSpeed.
@@ -246,10 +275,13 @@ pub fn get_move_speed_factor(instance: AirController) -> Float
 /// Roblox: `ControllerBase.MoveSpeedFactor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ControllerBase#MoveSpeedFactor
-@target(luau)
 @luau.set_property("MoveSpeedFactor")
-pub fn set_move_speed_factor(instance: AirController, value: Float) -> AirController
+pub fn set_move_speed_factor(
+  instance: AirController,
+  value: Float,
+) -> AirController
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -257,10 +289,10 @@ pub fn set_move_speed_factor(instance: AirController, value: Float) -> AirContro
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: AirController) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -268,10 +300,10 @@ pub fn get_archivable(instance: AirController) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: AirController, value: Bool) -> AirController
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -279,10 +311,10 @@ pub fn set_archivable(instance: AirController, value: Bool) -> AirController
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: AirController) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -290,10 +322,13 @@ pub fn get_capabilities(instance: AirController) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: AirController, value: SecurityCapabilities) -> AirController
+pub fn set_capabilities(
+  instance: AirController,
+  value: SecurityCapabilities,
+) -> AirController
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -301,10 +336,10 @@ pub fn set_capabilities(instance: AirController, value: SecurityCapabilities) ->
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: AirController) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -312,10 +347,10 @@ pub fn get_name(instance: AirController) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: AirController, value: String) -> AirController
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -324,10 +359,10 @@ pub fn set_name(instance: AirController, value: String) -> AirController
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: AirController) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -336,10 +371,10 @@ pub fn get_parent(instance: AirController) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: AirController, value: parent) -> AirController
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -348,10 +383,10 @@ pub fn set_parent(instance: AirController, value: parent) -> AirController
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: AirController) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -360,10 +395,10 @@ pub fn get_roblox_locked(instance: AirController) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: AirController) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -372,20 +407,20 @@ pub fn get_sandboxed(instance: AirController) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: AirController, value: Bool) -> AirController
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: AirController) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -394,10 +429,10 @@ pub fn get_source_asset_id(instance: AirController) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: AirController) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -406,10 +441,10 @@ pub fn get_unique_id(instance: AirController) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: AirController, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -418,10 +453,10 @@ pub fn add_tag(instance: AirController, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: AirController) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -430,10 +465,10 @@ pub fn clear_all_children(instance: AirController) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: AirController) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -442,10 +477,10 @@ pub fn clone(instance: AirController) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: AirController) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -458,10 +493,13 @@ pub fn destroy_instance(instance: AirController) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: AirController, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: AirController,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -474,10 +512,13 @@ pub fn find_first_ancestor(instance: AirController, name: String) -> Option(Inst
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: AirController, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: AirController,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -490,10 +531,13 @@ pub fn find_first_ancestor_of_class(instance: AirController, class_name: String)
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: AirController, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: AirController,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -507,10 +551,14 @@ pub fn find_first_ancestor_which_is_a(instance: AirController, class_name: Strin
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: AirController, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: AirController,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -523,10 +571,13 @@ pub fn find_first_child(instance: AirController, name: String, recursive: Bool) 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: AirController, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: AirController,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -540,10 +591,14 @@ pub fn find_first_child_of_class(instance: AirController, class_name: String) ->
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: AirController, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: AirController,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -556,10 +611,13 @@ pub fn find_first_child_which_is_a(instance: AirController, class_name: String, 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: AirController, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: AirController,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -571,10 +629,10 @@ pub fn find_first_descendant(instance: AirController, name: String) -> Option(In
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: AirController) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -587,10 +645,10 @@ pub fn get_actor(instance: AirController) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: AirController, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -603,10 +661,13 @@ pub fn get_attribute(instance: AirController, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: AirController, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: AirController,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -619,10 +680,10 @@ pub fn get_attribute_changed_signal(instance: AirController, attribute: String) 
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: AirController) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -634,10 +695,10 @@ pub fn get_attributes(instance: AirController) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: AirController) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -650,10 +711,10 @@ pub fn get_children(instance: AirController) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: AirController) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -665,10 +726,10 @@ pub fn get_descendants(instance: AirController) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: AirController) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -682,10 +743,14 @@ pub fn get_full_name(instance: AirController) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: AirController, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: AirController,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -696,10 +761,13 @@ pub fn get_styled(instance: AirController, name: String, selector: Option(String
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: AirController, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: AirController,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -708,10 +776,10 @@ pub fn get_styled_property_changed_signal(instance: AirController, property: Str
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: AirController) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -720,10 +788,10 @@ pub fn get_tags(instance: AirController) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: AirController, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -736,10 +804,10 @@ pub fn has_tag(instance: AirController, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: AirController, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -752,10 +820,10 @@ pub fn is_ancestor_of(instance: AirController, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: AirController, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -768,10 +836,10 @@ pub fn is_descendant_of(instance: AirController, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: AirController, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -783,10 +851,13 @@ pub fn is_property_modified(instance: AirController, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: AirController, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: AirController,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -795,10 +866,10 @@ pub fn query_descendants(instance: AirController, selector: String) -> List(Inst
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: AirController, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -808,10 +879,13 @@ pub fn remove_tag(instance: AirController, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: AirController, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: AirController,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -822,10 +896,14 @@ pub fn reset_property_to_default(instance: AirController, property: String) -> N
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: AirController, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: AirController,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -840,19 +918,25 @@ pub fn set_attribute(instance: AirController, attribute: String, value: Dynamic)
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: AirController, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: AirController,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: AirController) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: AirController,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -860,19 +944,24 @@ pub fn ancestry_changed(instance: AirController) -> RBXScriptSignal(fn(Instance,
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: AirController, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: AirController,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: AirController) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: AirController,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -880,19 +969,24 @@ pub fn attribute_changed(instance: AirController) -> RBXScriptSignal(fn(String) 
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: AirController, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: AirController,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: AirController) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: AirController,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -900,19 +994,24 @@ pub fn child_added(instance: AirController) -> RBXScriptSignal(fn(Instance) -> N
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: AirController, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: AirController,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: AirController) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: AirController,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -920,19 +1019,24 @@ pub fn child_removed(instance: AirController) -> RBXScriptSignal(fn(Instance) ->
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: AirController, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: AirController,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: AirController) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: AirController,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -940,19 +1044,24 @@ pub fn descendant_added(instance: AirController) -> RBXScriptSignal(fn(Instance)
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: AirController, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: AirController,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: AirController) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: AirController,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -960,19 +1069,22 @@ pub fn descendant_removing(instance: AirController) -> RBXScriptSignal(fn(Instan
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: AirController, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: AirController,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: AirController) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -980,19 +1092,24 @@ pub fn destroying(instance: AirController) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: AirController, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: AirController,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: AirController) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: AirController,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1000,10 +1117,13 @@ pub fn styled_properties_changed(instance: AirController) -> RBXScriptSignal(fn(
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: AirController, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: AirController,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1012,10 +1132,10 @@ pub fn on_styled_properties_changed(instance: AirController, callback: fn() -> N
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: AirController) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1028,10 +1148,13 @@ pub fn get_class_name(instance: AirController) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: AirController, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: AirController,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1045,19 +1168,19 @@ pub fn get_property_changed_signal(instance: AirController, property: String) ->
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: AirController, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: AirController) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1065,12 +1188,28 @@ pub fn changed(instance: AirController) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: AirController, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: AirController,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: Vector3, _: AirController, _: ControllerBase, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: Vector3,
+  _: AirController,
+  _: ControllerBase,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

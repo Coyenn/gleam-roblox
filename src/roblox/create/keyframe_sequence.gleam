@@ -1,19 +1,26 @@
 // Generated declarative builders for Roblox `KeyframeSequence` instances.
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/keyframe_sequence
-import roblox/types.{type AnimationPriority, type Instance, type KeyframeSequence, type SecurityCapabilities}
+import roblox/types.{
+  type AnimationPriority, type Instance, type KeyframeSequence,
+  type SecurityCapabilities,
+}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: KeyframeSequence) -> Instance
 
-/// Creates a declarative Roblox `KeyframeSequence` node.
 @target(luau)
-pub fn node(properties: List(Property(KeyframeSequence)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `KeyframeSequence` node.
+pub fn node(
+  properties: List(Property(KeyframeSequence)),
+  children: List(Node),
+) -> Node {
   let instance = apply(keyframe_sequence.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AnimationClip.Loop` on `KeyframeSequence` nodes.
 ///
 /// Determines whether the animation stored in this AnimationClip is intended to loop.
@@ -21,11 +28,11 @@ pub fn node(properties: List(Property(KeyframeSequence)), children: List(Node)) 
 /// Roblox: `AnimationClip.Loop`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AnimationClip#Loop
-@target(luau)
 pub fn loop(value: Bool) -> Property(KeyframeSequence) {
   Property(fn(instance) { keyframe_sequence.set_loop(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AnimationClip.Priority` on `KeyframeSequence` nodes.
 ///
 /// Determines which clip takes priority when multiple animations are playing simultaneously.
@@ -33,11 +40,11 @@ pub fn loop(value: Bool) -> Property(KeyframeSequence) {
 /// Roblox: `AnimationClip.Priority`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AnimationClip#Priority
-@target(luau)
 pub fn priority(value: AnimationPriority) -> Property(KeyframeSequence) {
   Property(fn(instance) { keyframe_sequence.set_priority(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `KeyframeSequence` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -45,11 +52,11 @@ pub fn priority(value: AnimationPriority) -> Property(KeyframeSequence) {
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(KeyframeSequence) {
   Property(fn(instance) { keyframe_sequence.set_archivable(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `KeyframeSequence` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -57,11 +64,11 @@ pub fn archivable(value: Bool) -> Property(KeyframeSequence) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 pub fn capabilities(value: SecurityCapabilities) -> Property(KeyframeSequence) {
   Property(fn(instance) { keyframe_sequence.set_capabilities(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `KeyframeSequence` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -69,11 +76,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(KeyframeSequence) {
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(KeyframeSequence) {
   Property(fn(instance) { keyframe_sequence.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `KeyframeSequence` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -82,11 +89,11 @@ pub fn name(value: String) -> Property(KeyframeSequence) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(KeyframeSequence) {
   Property(fn(instance) { keyframe_sequence.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `KeyframeSequence` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -95,13 +102,16 @@ pub fn parent(value: Instance) -> Property(KeyframeSequence) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(KeyframeSequence) {
   Property(fn(instance) { keyframe_sequence.set_sandboxed(instance, value) })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: AnimationPriority, _: KeyframeSequence) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: AnimationPriority,
+  _: KeyframeSequence,
+) -> Nil {
   Nil
 }

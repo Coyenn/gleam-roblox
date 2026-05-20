@@ -2,30 +2,32 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type AnimationNodeTransitionType}
 
+@target(luau)
 /// Gets the Roblox `AnimationNodeTransitionType` enum object.
 ///
 /// Roblox: `Enum.AnimationNodeTransitionType`
-@target(luau)
 @luau.global("Enum.AnimationNodeTransitionType")
 pub fn roblox_enum() -> RobloxEnum(AnimationNodeTransitionType)
 
-/// Roblox enum item `AnimationNodeTransitionType.CrossFade`.
 @target(luau)
+/// Roblox enum item `AnimationNodeTransitionType.CrossFade`.
 @luau.global("Enum.AnimationNodeTransitionType.CrossFade")
 pub fn cross_fade() -> AnimationNodeTransitionType
 
-/// Roblox enum item `AnimationNodeTransitionType.InertialBlend`.
 @target(luau)
+/// Roblox enum item `AnimationNodeTransitionType.InertialBlend`.
 @luau.global("Enum.AnimationNodeTransitionType.InertialBlend")
 pub fn inertial_blend() -> AnimationNodeTransitionType
 
-/// Roblox enum item `AnimationNodeTransitionType.DeadBlend`.
 @target(luau)
+/// Roblox enum item `AnimationNodeTransitionType.DeadBlend`.
 @luau.global("Enum.AnimationNodeTransitionType.DeadBlend")
 pub fn dead_blend() -> AnimationNodeTransitionType
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(AnimationNodeTransitionType), _: AnimationNodeTransitionType) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(AnimationNodeTransitionType),
+  _: AnimationNodeTransitionType,
+) -> Nil {
   Nil
 }

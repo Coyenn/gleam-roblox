@@ -2,46 +2,48 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type AnalyticsEconomyTransactionType}
 
+@target(luau)
 /// Gets the Roblox `AnalyticsEconomyTransactionType` enum object.
 ///
 /// Roblox: `Enum.AnalyticsEconomyTransactionType`
 /// See: https://create.roblox.com/docs/reference/engine/enums/AnalyticsEconomyTransactionType
-@target(luau)
 @luau.global("Enum.AnalyticsEconomyTransactionType")
 pub fn roblox_enum() -> RobloxEnum(AnalyticsEconomyTransactionType)
 
-/// Roblox enum item `AnalyticsEconomyTransactionType.IAP`.
 @target(luau)
+/// Roblox enum item `AnalyticsEconomyTransactionType.IAP`.
 @luau.global("Enum.AnalyticsEconomyTransactionType.IAP")
 pub fn iap() -> AnalyticsEconomyTransactionType
 
-/// Roblox enum item `AnalyticsEconomyTransactionType.Shop`.
 @target(luau)
+/// Roblox enum item `AnalyticsEconomyTransactionType.Shop`.
 @luau.global("Enum.AnalyticsEconomyTransactionType.Shop")
 pub fn shop() -> AnalyticsEconomyTransactionType
 
-/// Roblox enum item `AnalyticsEconomyTransactionType.Gameplay`.
 @target(luau)
+/// Roblox enum item `AnalyticsEconomyTransactionType.Gameplay`.
 @luau.global("Enum.AnalyticsEconomyTransactionType.Gameplay")
 pub fn gameplay() -> AnalyticsEconomyTransactionType
 
-/// Roblox enum item `AnalyticsEconomyTransactionType.ContextualPurchase`.
 @target(luau)
+/// Roblox enum item `AnalyticsEconomyTransactionType.ContextualPurchase`.
 @luau.global("Enum.AnalyticsEconomyTransactionType.ContextualPurchase")
 pub fn contextual_purchase() -> AnalyticsEconomyTransactionType
 
-/// Roblox enum item `AnalyticsEconomyTransactionType.TimedReward`.
 @target(luau)
+/// Roblox enum item `AnalyticsEconomyTransactionType.TimedReward`.
 @luau.global("Enum.AnalyticsEconomyTransactionType.TimedReward")
 pub fn timed_reward() -> AnalyticsEconomyTransactionType
 
-/// Roblox enum item `AnalyticsEconomyTransactionType.Onboarding`.
 @target(luau)
+/// Roblox enum item `AnalyticsEconomyTransactionType.Onboarding`.
 @luau.global("Enum.AnalyticsEconomyTransactionType.Onboarding")
 pub fn onboarding() -> AnalyticsEconomyTransactionType
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(AnalyticsEconomyTransactionType), _: AnalyticsEconomyTransactionType) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(AnalyticsEconomyTransactionType),
+  _: AnalyticsEconomyTransactionType,
+) -> Nil {
   Nil
 }

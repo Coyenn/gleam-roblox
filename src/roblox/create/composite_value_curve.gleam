@@ -1,19 +1,26 @@
 // Generated declarative builders for Roblox `CompositeValueCurve` instances.
-import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/composite_value_curve
-import roblox/types.{type CompositeValueCurve, type CompositeValueCurveType, type Instance, type SecurityCapabilities}
+import roblox/create.{type Node, type Property, Node, Property, apply}
+import roblox/types.{
+  type CompositeValueCurve, type CompositeValueCurveType, type Instance,
+  type SecurityCapabilities,
+}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: CompositeValueCurve) -> Instance
 
-/// Creates a declarative Roblox `CompositeValueCurve` node.
 @target(luau)
-pub fn node(properties: List(Property(CompositeValueCurve)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `CompositeValueCurve` node.
+pub fn node(
+  properties: List(Property(CompositeValueCurve)),
+  children: List(Node),
+) -> Node {
   let instance = apply(composite_value_curve.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `CompositeValueCurve.CurveType` on `CompositeValueCurve` nodes.
 ///
 /// The type of value animated by this CompositeValueCurve.
@@ -21,11 +28,15 @@ pub fn node(properties: List(Property(CompositeValueCurve)), children: List(Node
 /// Roblox: `CompositeValueCurve.CurveType`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CompositeValueCurve#CurveType
-@target(luau)
-pub fn curve_type(value: CompositeValueCurveType) -> Property(CompositeValueCurve) {
-  Property(fn(instance) { composite_value_curve.set_curve_type(instance, value) })
+pub fn curve_type(
+  value: CompositeValueCurveType,
+) -> Property(CompositeValueCurve) {
+  Property(fn(instance) {
+    composite_value_curve.set_curve_type(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `CompositeValueCurve` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -33,11 +44,13 @@ pub fn curve_type(value: CompositeValueCurveType) -> Property(CompositeValueCurv
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(CompositeValueCurve) {
-  Property(fn(instance) { composite_value_curve.set_archivable(instance, value) })
+  Property(fn(instance) {
+    composite_value_curve.set_archivable(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `CompositeValueCurve` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -45,11 +58,15 @@ pub fn archivable(value: Bool) -> Property(CompositeValueCurve) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
-pub fn capabilities(value: SecurityCapabilities) -> Property(CompositeValueCurve) {
-  Property(fn(instance) { composite_value_curve.set_capabilities(instance, value) })
+pub fn capabilities(
+  value: SecurityCapabilities,
+) -> Property(CompositeValueCurve) {
+  Property(fn(instance) {
+    composite_value_curve.set_capabilities(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `CompositeValueCurve` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -57,11 +74,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(CompositeValueCurve
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(CompositeValueCurve) {
   Property(fn(instance) { composite_value_curve.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `CompositeValueCurve` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -70,11 +87,11 @@ pub fn name(value: String) -> Property(CompositeValueCurve) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(CompositeValueCurve) {
   Property(fn(instance) { composite_value_curve.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `CompositeValueCurve` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -83,13 +100,16 @@ pub fn parent(value: Instance) -> Property(CompositeValueCurve) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(CompositeValueCurve) {
   Property(fn(instance) { composite_value_curve.set_sandboxed(instance, value) })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: CompositeValueCurveType, _: CompositeValueCurve) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: CompositeValueCurveType,
+  _: CompositeValueCurve,
+) -> Nil {
   Nil
 }

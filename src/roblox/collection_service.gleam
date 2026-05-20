@@ -1,19 +1,23 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type CollectionService, type Instance, type Object, type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type CollectionService, type Instance, type Object,
+  type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId,
+}
 
-/// Treats `CollectionService` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `CollectionService` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: CollectionService) -> Instance
 
-/// Treats `CollectionService` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `CollectionService` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: CollectionService) -> Object
 
+@target(luau)
 /// Applies a tag to an Instance.
 ///
 /// Roblox: `CollectionService.AddTag`
@@ -23,10 +27,14 @@ pub fn as_object(instance: CollectionService) -> Object
 ///
 /// Parameters:
 /// - `instance`: A service which manages instance collections using assigned tags.
-@target(luau)
 @luau.method("AddTag")
-pub fn add_tag(instance: CollectionService, instance_: Instance, tag: String) -> Nil
+pub fn add_tag(
+  instance: CollectionService,
+  instance_: Instance,
+  tag: String,
+) -> Nil
 
+@target(luau)
 /// Returns an array of all tags in the experience.
 ///
 /// Roblox: `CollectionService.GetAllTags`
@@ -35,10 +43,10 @@ pub fn add_tag(instance: CollectionService, instance_: Instance, tag: String) ->
 ///
 /// Parameters:
 /// - `instance`: A service which manages instance collections using assigned tags.
-@target(luau)
 @luau.method("GetAllTags")
 pub fn get_all_tags(instance: CollectionService) -> List(String)
 
+@target(luau)
 /// Returns a signal that fires when a given tag is added to an instance.
 ///
 /// Roblox: `CollectionService.GetInstanceAddedSignal`
@@ -51,10 +59,13 @@ pub fn get_all_tags(instance: CollectionService) -> List(String)
 ///
 /// Returns:
 /// - An event that fires when you add the tag to an instance.
-@target(luau)
 @luau.method("GetInstanceAddedSignal")
-pub fn get_instance_added_signal(instance: CollectionService, tag: String) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn get_instance_added_signal(
+  instance: CollectionService,
+  tag: String,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Returns a signal that fires when a given tag is removed from an instance.
 ///
 /// Roblox: `CollectionService.GetInstanceRemovedSignal`
@@ -67,10 +78,13 @@ pub fn get_instance_added_signal(instance: CollectionService, tag: String) -> RB
 ///
 /// Returns:
 /// - An event that fires when you remove the tag from an instance.
-@target(luau)
 @luau.method("GetInstanceRemovedSignal")
-pub fn get_instance_removed_signal(instance: CollectionService, tag: String) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn get_instance_removed_signal(
+  instance: CollectionService,
+  tag: String,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Returns an array of instances in the game with a given tag.
 ///
 /// Roblox: `CollectionService.GetTagged`
@@ -83,10 +97,10 @@ pub fn get_instance_removed_signal(instance: CollectionService, tag: String) -> 
 ///
 /// Returns:
 /// - An array of all instances with the tag.
-@target(luau)
 @luau.method("GetTagged")
 pub fn get_tagged(instance: CollectionService, tag: String) -> List(Instance)
 
+@target(luau)
 /// Gets an array of all tags applied to a given instance.
 ///
 /// Roblox: `CollectionService.GetTags`
@@ -100,10 +114,13 @@ pub fn get_tagged(instance: CollectionService, tag: String) -> List(Instance)
 ///
 /// Returns:
 /// - An array of strings which are the tags applied to the given instance.
-@target(luau)
 @luau.method("GetTags")
-pub fn get_tags(instance: CollectionService, instance_: Instance) -> List(String)
+pub fn get_tags(
+  instance: CollectionService,
+  instance_: Instance,
+) -> List(String)
 
+@target(luau)
 /// Check whether an instance has a given tag.
 ///
 /// Roblox: `CollectionService.HasTag`
@@ -118,10 +135,14 @@ pub fn get_tags(instance: CollectionService, instance_: Instance) -> List(String
 ///
 /// Returns:
 /// - Whether the instance has the tag.
-@target(luau)
 @luau.method("HasTag")
-pub fn has_tag(instance: CollectionService, instance_: Instance, tag: String) -> Bool
+pub fn has_tag(
+  instance: CollectionService,
+  instance_: Instance,
+  tag: String,
+) -> Bool
 
+@target(luau)
 /// Removes a tag from an instance.
 ///
 /// Roblox: `CollectionService.RemoveTag`
@@ -133,19 +154,25 @@ pub fn has_tag(instance: CollectionService, instance_: Instance, tag: String) ->
 /// - `instance`: A service which manages instance collections using assigned tags.
 /// - `instance`: The instance to remove the tag from.
 /// - `tag`: The tag to remove from the instance.
-@target(luau)
 @luau.method("RemoveTag")
-pub fn remove_tag(instance: CollectionService, instance_: Instance, tag: String) -> Nil
+pub fn remove_tag(
+  instance: CollectionService,
+  instance_: Instance,
+  tag: String,
+) -> Nil
 
+@target(luau)
 /// Fires when a tag is added to an instance and the added tag is the only occurrence of that tag in the place.
 ///
 /// Roblox: `CollectionService.TagAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CollectionService#TagAdded
-@target(luau)
 @luau.event("TagAdded")
-pub fn tag_added(instance: CollectionService) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn tag_added(
+  instance: CollectionService,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `CollectionService.TagAdded`.
 ///
 /// Fires when a tag is added to an instance and the added tag is the only occurrence of that tag in the place.
@@ -153,19 +180,24 @@ pub fn tag_added(instance: CollectionService) -> RBXScriptSignal(fn(String) -> N
 /// Roblox: `CollectionService.TagAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CollectionService#TagAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TagAdded:Connect(callback) end)")
-pub fn on_tag_added(instance: CollectionService, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_tag_added(
+  instance: CollectionService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a tag is removed from an instance and the removed tag is no longer used anywhere in the place.
 ///
 /// Roblox: `CollectionService.TagRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CollectionService#TagRemoved
-@target(luau)
 @luau.event("TagRemoved")
-pub fn tag_removed(instance: CollectionService) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn tag_removed(
+  instance: CollectionService,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `CollectionService.TagRemoved`.
 ///
 /// Fires when a tag is removed from an instance and the removed tag is no longer used anywhere in the place.
@@ -173,10 +205,13 @@ pub fn tag_removed(instance: CollectionService) -> RBXScriptSignal(fn(String) ->
 /// Roblox: `CollectionService.TagRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CollectionService#TagRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TagRemoved:Connect(callback) end)")
-pub fn on_tag_removed(instance: CollectionService, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_tag_removed(
+  instance: CollectionService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -184,10 +219,10 @@ pub fn on_tag_removed(instance: CollectionService, callback: fn(String) -> Nil) 
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: CollectionService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -195,10 +230,13 @@ pub fn get_archivable(instance: CollectionService) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
-pub fn set_archivable(instance: CollectionService, value: Bool) -> CollectionService
+pub fn set_archivable(
+  instance: CollectionService,
+  value: Bool,
+) -> CollectionService
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -206,10 +244,10 @@ pub fn set_archivable(instance: CollectionService, value: Bool) -> CollectionSer
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: CollectionService) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -217,10 +255,13 @@ pub fn get_capabilities(instance: CollectionService) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: CollectionService, value: SecurityCapabilities) -> CollectionService
+pub fn set_capabilities(
+  instance: CollectionService,
+  value: SecurityCapabilities,
+) -> CollectionService
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -228,10 +269,10 @@ pub fn set_capabilities(instance: CollectionService, value: SecurityCapabilities
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: CollectionService) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -239,10 +280,10 @@ pub fn get_name(instance: CollectionService) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: CollectionService, value: String) -> CollectionService
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -251,10 +292,10 @@ pub fn set_name(instance: CollectionService, value: String) -> CollectionService
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: CollectionService) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -263,10 +304,13 @@ pub fn get_parent(instance: CollectionService) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
-pub fn set_parent(instance: CollectionService, value: parent) -> CollectionService
+pub fn set_parent(
+  instance: CollectionService,
+  value: parent,
+) -> CollectionService
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -275,10 +319,10 @@ pub fn set_parent(instance: CollectionService, value: parent) -> CollectionServi
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: CollectionService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -287,10 +331,10 @@ pub fn get_roblox_locked(instance: CollectionService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: CollectionService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -299,20 +343,23 @@ pub fn get_sandboxed(instance: CollectionService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
-pub fn set_sandboxed(instance: CollectionService, value: Bool) -> CollectionService
+pub fn set_sandboxed(
+  instance: CollectionService,
+  value: Bool,
+) -> CollectionService
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: CollectionService) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -321,10 +368,10 @@ pub fn get_source_asset_id(instance: CollectionService) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: CollectionService) -> UniqueId
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -333,10 +380,10 @@ pub fn get_unique_id(instance: CollectionService) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: CollectionService) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -345,10 +392,10 @@ pub fn clear_all_children(instance: CollectionService) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: CollectionService) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -357,10 +404,10 @@ pub fn clone(instance: CollectionService) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: CollectionService) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -373,10 +420,13 @@ pub fn destroy_instance(instance: CollectionService) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: CollectionService, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: CollectionService,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -389,10 +439,13 @@ pub fn find_first_ancestor(instance: CollectionService, name: String) -> Option(
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: CollectionService, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: CollectionService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -405,10 +458,13 @@ pub fn find_first_ancestor_of_class(instance: CollectionService, class_name: Str
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: CollectionService, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: CollectionService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -422,10 +478,14 @@ pub fn find_first_ancestor_which_is_a(instance: CollectionService, class_name: S
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: CollectionService, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: CollectionService,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -438,10 +498,13 @@ pub fn find_first_child(instance: CollectionService, name: String, recursive: Bo
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: CollectionService, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: CollectionService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -455,10 +518,14 @@ pub fn find_first_child_of_class(instance: CollectionService, class_name: String
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: CollectionService, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: CollectionService,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -471,10 +538,13 @@ pub fn find_first_child_which_is_a(instance: CollectionService, class_name: Stri
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: CollectionService, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: CollectionService,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -486,10 +556,10 @@ pub fn find_first_descendant(instance: CollectionService, name: String) -> Optio
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: CollectionService) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -502,10 +572,10 @@ pub fn get_actor(instance: CollectionService) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: CollectionService, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -518,10 +588,13 @@ pub fn get_attribute(instance: CollectionService, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: CollectionService, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: CollectionService,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -534,10 +607,10 @@ pub fn get_attribute_changed_signal(instance: CollectionService, attribute: Stri
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: CollectionService) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -549,10 +622,10 @@ pub fn get_attributes(instance: CollectionService) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: CollectionService) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -565,10 +638,10 @@ pub fn get_children(instance: CollectionService) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: CollectionService) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -580,10 +653,10 @@ pub fn get_descendants(instance: CollectionService) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: CollectionService) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -597,10 +670,14 @@ pub fn get_full_name(instance: CollectionService) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: CollectionService, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: CollectionService,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -611,10 +688,13 @@ pub fn get_styled(instance: CollectionService, name: String, selector: Option(St
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: CollectionService, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: CollectionService,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -627,10 +707,10 @@ pub fn get_styled_property_changed_signal(instance: CollectionService, property:
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: CollectionService, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -643,10 +723,10 @@ pub fn is_ancestor_of(instance: CollectionService, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: CollectionService, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -659,10 +739,13 @@ pub fn is_descendant_of(instance: CollectionService, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
-pub fn is_property_modified(instance: CollectionService, property: String) -> Bool
+pub fn is_property_modified(
+  instance: CollectionService,
+  property: String,
+) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -674,10 +757,13 @@ pub fn is_property_modified(instance: CollectionService, property: String) -> Bo
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: CollectionService, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: CollectionService,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -687,10 +773,13 @@ pub fn query_descendants(instance: CollectionService, selector: String) -> List(
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: CollectionService, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: CollectionService,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -701,10 +790,14 @@ pub fn reset_property_to_default(instance: CollectionService, property: String) 
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: CollectionService, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: CollectionService,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -719,19 +812,25 @@ pub fn set_attribute(instance: CollectionService, attribute: String, value: Dyna
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: CollectionService, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: CollectionService,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: CollectionService) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: CollectionService,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -739,19 +838,24 @@ pub fn ancestry_changed(instance: CollectionService) -> RBXScriptSignal(fn(Insta
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: CollectionService, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: CollectionService,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: CollectionService) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: CollectionService,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -759,19 +863,24 @@ pub fn attribute_changed(instance: CollectionService) -> RBXScriptSignal(fn(Stri
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: CollectionService, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: CollectionService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: CollectionService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: CollectionService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -779,19 +888,24 @@ pub fn child_added(instance: CollectionService) -> RBXScriptSignal(fn(Instance) 
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: CollectionService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: CollectionService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: CollectionService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: CollectionService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -799,19 +913,24 @@ pub fn child_removed(instance: CollectionService) -> RBXScriptSignal(fn(Instance
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: CollectionService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: CollectionService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: CollectionService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: CollectionService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -819,19 +938,24 @@ pub fn descendant_added(instance: CollectionService) -> RBXScriptSignal(fn(Insta
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: CollectionService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: CollectionService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: CollectionService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: CollectionService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -839,19 +963,22 @@ pub fn descendant_removing(instance: CollectionService) -> RBXScriptSignal(fn(In
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: CollectionService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: CollectionService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: CollectionService) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -859,19 +986,24 @@ pub fn destroying(instance: CollectionService) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: CollectionService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: CollectionService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: CollectionService) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: CollectionService,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -879,10 +1011,13 @@ pub fn styled_properties_changed(instance: CollectionService) -> RBXScriptSignal
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: CollectionService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: CollectionService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -891,10 +1026,10 @@ pub fn on_styled_properties_changed(instance: CollectionService, callback: fn() 
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: CollectionService) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -907,10 +1042,13 @@ pub fn get_class_name(instance: CollectionService) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: CollectionService, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: CollectionService,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -924,19 +1062,21 @@ pub fn get_property_changed_signal(instance: CollectionService, property: String
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: CollectionService, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
-pub fn changed(instance: CollectionService) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn changed(
+  instance: CollectionService,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -944,12 +1084,26 @@ pub fn changed(instance: CollectionService) -> RBXScriptSignal(fn(String) -> Nil
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: CollectionService, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: CollectionService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: CollectionService, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: CollectionService,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

@@ -2,36 +2,38 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type ModifierKey}
 
+@target(luau)
 /// Gets the Roblox `ModifierKey` enum object.
 ///
 /// Roblox: `Enum.ModifierKey`
 /// See: https://create.roblox.com/docs/reference/engine/enums/ModifierKey
-@target(luau)
 @luau.global("Enum.ModifierKey")
 pub fn roblox_enum() -> RobloxEnum(ModifierKey)
 
-/// Roblox enum item `ModifierKey.Shift`.
 @target(luau)
+/// Roblox enum item `ModifierKey.Shift`.
 @luau.global("Enum.ModifierKey.Shift")
 pub fn shift() -> ModifierKey
 
-/// Roblox enum item `ModifierKey.Ctrl`.
 @target(luau)
+/// Roblox enum item `ModifierKey.Ctrl`.
 @luau.global("Enum.ModifierKey.Ctrl")
 pub fn ctrl() -> ModifierKey
 
-/// Roblox enum item `ModifierKey.Alt`.
 @target(luau)
+/// Roblox enum item `ModifierKey.Alt`.
 @luau.global("Enum.ModifierKey.Alt")
 pub fn alt() -> ModifierKey
 
-/// Roblox enum item `ModifierKey.Meta`.
 @target(luau)
+/// Roblox enum item `ModifierKey.Meta`.
 @luau.global("Enum.ModifierKey.Meta")
 pub fn meta() -> ModifierKey
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(ModifierKey), _: ModifierKey) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(ModifierKey),
+  _: ModifierKey,
+) -> Nil {
   Nil
 }

@@ -1,19 +1,27 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type CFrame, type Content, type ContentId, type InputObject, type Instance, type KeyCode, type MouseBehavior, type Object, type OptionDouble, type OptionInt64, type OverrideMouseIconBehavior, type PreferredInput, type SecurityCapabilities, type SwipeDirection, type TextBox, type UniqueId, type UserInputService, type UserInputState, type UserInputType, type Vector2}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type CFrame, type Content, type ContentId, type InputObject,
+  type Instance, type KeyCode, type MouseBehavior, type Object,
+  type OptionDouble, type OptionInt64, type OverrideMouseIconBehavior,
+  type PreferredInput, type SecurityCapabilities, type SwipeDirection,
+  type TextBox, type UniqueId, type UserInputService, type UserInputState,
+  type UserInputType, type Vector2,
+}
 
-/// Treats `UserInputService` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `UserInputService` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UserInputService) -> Instance
 
-/// Treats `UserInputService` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `UserInputService` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: UserInputService) -> Object
 
+@target(luau)
 /// Gets Roblox property `UserInputService.AccelerometerEnabled`.
 ///
 /// Describes whether the user's device has an accelerometer.
@@ -22,20 +30,20 @@ pub fn as_object(instance: UserInputService) -> Object
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#AccelerometerEnabled
-@target(luau)
 @luau.property("AccelerometerEnabled")
 pub fn get_accelerometer_enabled(instance: UserInputService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `UserInputService.BottomBarSize`.
 ///
 /// Roblox: `UserInputService.BottomBarSize`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#BottomBarSize
-@target(luau)
 @luau.property("BottomBarSize")
 pub fn get_bottom_bar_size(instance: UserInputService) -> Vector2
 
+@target(luau)
 /// Gets Roblox property `UserInputService.GamepadEnabled`.
 ///
 /// Describes whether the user's device has an available gamepad.
@@ -44,10 +52,10 @@ pub fn get_bottom_bar_size(instance: UserInputService) -> Vector2
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#GamepadEnabled
-@target(luau)
 @luau.property("GamepadEnabled")
 pub fn get_gamepad_enabled(instance: UserInputService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `UserInputService.GyroscopeEnabled`.
 ///
 /// Describes whether the user's device has a gyroscope.
@@ -56,10 +64,10 @@ pub fn get_gamepad_enabled(instance: UserInputService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#GyroscopeEnabled
-@target(luau)
 @luau.property("GyroscopeEnabled")
 pub fn get_gyroscope_enabled(instance: UserInputService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `UserInputService.KeyboardEnabled`.
 ///
 /// Describes whether the user's device has a keyboard available.
@@ -68,10 +76,10 @@ pub fn get_gyroscope_enabled(instance: UserInputService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#KeyboardEnabled
-@target(luau)
 @luau.property("KeyboardEnabled")
 pub fn get_keyboard_enabled(instance: UserInputService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `UserInputService.MouseBehavior`.
 ///
 /// Determines whether the user's mouse can be moved freely or is locked.
@@ -79,10 +87,10 @@ pub fn get_keyboard_enabled(instance: UserInputService) -> Bool
 /// Roblox: `UserInputService.MouseBehavior`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#MouseBehavior
-@target(luau)
 @luau.property("MouseBehavior")
 pub fn get_mouse_behavior(instance: UserInputService) -> MouseBehavior
 
+@target(luau)
 /// Sets Roblox property `UserInputService.MouseBehavior`.
 ///
 /// Determines whether the user's mouse can be moved freely or is locked.
@@ -90,10 +98,13 @@ pub fn get_mouse_behavior(instance: UserInputService) -> MouseBehavior
 /// Roblox: `UserInputService.MouseBehavior`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#MouseBehavior
-@target(luau)
 @luau.set_property("MouseBehavior")
-pub fn set_mouse_behavior(instance: UserInputService, value: MouseBehavior) -> UserInputService
+pub fn set_mouse_behavior(
+  instance: UserInputService,
+  value: MouseBehavior,
+) -> UserInputService
 
+@target(luau)
 /// Gets Roblox property `UserInputService.MouseDeltaSensitivity`.
 ///
 /// Scales the delta (change) output of the user's Mouse.
@@ -102,10 +113,10 @@ pub fn set_mouse_behavior(instance: UserInputService, value: MouseBehavior) -> U
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#MouseDeltaSensitivity
-@target(luau)
 @luau.property("MouseDeltaSensitivity")
 pub fn get_mouse_delta_sensitivity(instance: UserInputService) -> Float
 
+@target(luau)
 /// Sets Roblox property `UserInputService.MouseDeltaSensitivity`.
 ///
 /// Scales the delta (change) output of the user's Mouse.
@@ -114,10 +125,13 @@ pub fn get_mouse_delta_sensitivity(instance: UserInputService) -> Float
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#MouseDeltaSensitivity
-@target(luau)
 @luau.set_property("MouseDeltaSensitivity")
-pub fn set_mouse_delta_sensitivity(instance: UserInputService, value: Float) -> UserInputService
+pub fn set_mouse_delta_sensitivity(
+  instance: UserInputService,
+  value: Float,
+) -> UserInputService
 
+@target(luau)
 /// Gets Roblox property `UserInputService.MouseEnabled`.
 ///
 /// Describes whether the user's device has a mouse available.
@@ -126,10 +140,10 @@ pub fn set_mouse_delta_sensitivity(instance: UserInputService, value: Float) -> 
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#MouseEnabled
-@target(luau)
 @luau.property("MouseEnabled")
 pub fn get_mouse_enabled(instance: UserInputService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `UserInputService.MouseIcon`.
 ///
 /// The content ID of the image for the user's mouse icon.
@@ -137,10 +151,10 @@ pub fn get_mouse_enabled(instance: UserInputService) -> Bool
 /// Roblox: `UserInputService.MouseIcon`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#MouseIcon
-@target(luau)
 @luau.property("MouseIcon")
 pub fn get_mouse_icon(instance: UserInputService) -> ContentId
 
+@target(luau)
 /// Sets Roblox property `UserInputService.MouseIcon`.
 ///
 /// The content ID of the image for the user's mouse icon.
@@ -148,10 +162,13 @@ pub fn get_mouse_icon(instance: UserInputService) -> ContentId
 /// Roblox: `UserInputService.MouseIcon`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#MouseIcon
-@target(luau)
 @luau.set_property("MouseIcon")
-pub fn set_mouse_icon(instance: UserInputService, value: ContentId) -> UserInputService
+pub fn set_mouse_icon(
+  instance: UserInputService,
+  value: ContentId,
+) -> UserInputService
 
+@target(luau)
 /// Gets Roblox property `UserInputService.MouseIconContent`.
 ///
 /// The content ID of the image for the user's mouse icon. Only supports asset URIs.
@@ -159,10 +176,10 @@ pub fn set_mouse_icon(instance: UserInputService, value: ContentId) -> UserInput
 /// Roblox: `UserInputService.MouseIconContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#MouseIconContent
-@target(luau)
 @luau.property("MouseIconContent")
 pub fn get_mouse_icon_content(instance: UserInputService) -> Content
 
+@target(luau)
 /// Sets Roblox property `UserInputService.MouseIconContent`.
 ///
 /// The content ID of the image for the user's mouse icon. Only supports asset URIs.
@@ -170,10 +187,13 @@ pub fn get_mouse_icon_content(instance: UserInputService) -> Content
 /// Roblox: `UserInputService.MouseIconContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#MouseIconContent
-@target(luau)
 @luau.set_property("MouseIconContent")
-pub fn set_mouse_icon_content(instance: UserInputService, value: Content) -> UserInputService
+pub fn set_mouse_icon_content(
+  instance: UserInputService,
+  value: Content,
+) -> UserInputService
 
+@target(luau)
 /// Gets Roblox property `UserInputService.MouseIconEnabled`.
 ///
 /// Determines whether the mouse icon is visible.
@@ -181,10 +201,10 @@ pub fn set_mouse_icon_content(instance: UserInputService, value: Content) -> Use
 /// Roblox: `UserInputService.MouseIconEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#MouseIconEnabled
-@target(luau)
 @luau.property("MouseIconEnabled")
 pub fn get_mouse_icon_enabled(instance: UserInputService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `UserInputService.MouseIconEnabled`.
 ///
 /// Determines whether the mouse icon is visible.
@@ -192,30 +212,35 @@ pub fn get_mouse_icon_enabled(instance: UserInputService) -> Bool
 /// Roblox: `UserInputService.MouseIconEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#MouseIconEnabled
-@target(luau)
 @luau.set_property("MouseIconEnabled")
-pub fn set_mouse_icon_enabled(instance: UserInputService, value: Bool) -> UserInputService
+pub fn set_mouse_icon_enabled(
+  instance: UserInputService,
+  value: Bool,
+) -> UserInputService
 
+@target(luau)
 /// Gets Roblox property `UserInputService.NavBarSize`.
 ///
 /// Roblox: `UserInputService.NavBarSize`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#NavBarSize
-@target(luau)
 @luau.property("NavBarSize")
 pub fn get_nav_bar_size(instance: UserInputService) -> Vector2
 
+@target(luau)
 /// Gets Roblox property `UserInputService.OnScreenKeyboardAnimationDuration`.
 ///
 /// Roblox: `UserInputService.OnScreenKeyboardAnimationDuration`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#OnScreenKeyboardAnimationDuration
-@target(luau)
 @luau.property("OnScreenKeyboardAnimationDuration")
-pub fn get_on_screen_keyboard_animation_duration(instance: UserInputService) -> OptionDouble
+pub fn get_on_screen_keyboard_animation_duration(
+  instance: UserInputService,
+) -> OptionDouble
 
+@target(luau)
 /// Gets Roblox property `UserInputService.OnScreenKeyboardPosition`.
 ///
 /// Determines the position of the on-screen keyboard.
@@ -224,10 +249,10 @@ pub fn get_on_screen_keyboard_animation_duration(instance: UserInputService) -> 
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#OnScreenKeyboardPosition
-@target(luau)
 @luau.property("OnScreenKeyboardPosition")
 pub fn get_on_screen_keyboard_position(instance: UserInputService) -> Vector2
 
+@target(luau)
 /// Gets Roblox property `UserInputService.OnScreenKeyboardSize`.
 ///
 /// Determines the size of the on-screen keyboard.
@@ -236,10 +261,10 @@ pub fn get_on_screen_keyboard_position(instance: UserInputService) -> Vector2
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#OnScreenKeyboardSize
-@target(luau)
 @luau.property("OnScreenKeyboardSize")
 pub fn get_on_screen_keyboard_size(instance: UserInputService) -> Vector2
 
+@target(luau)
 /// Gets Roblox property `UserInputService.OnScreenKeyboardVisible`.
 ///
 /// Describes whether an on-screen keyboard is currently visible on the user's screen.
@@ -248,20 +273,22 @@ pub fn get_on_screen_keyboard_size(instance: UserInputService) -> Vector2
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#OnScreenKeyboardVisible
-@target(luau)
 @luau.property("OnScreenKeyboardVisible")
 pub fn get_on_screen_keyboard_visible(instance: UserInputService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `UserInputService.OverrideMouseIconBehavior`.
 ///
 /// Roblox: `UserInputService.OverrideMouseIconBehavior`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#OverrideMouseIconBehavior
-@target(luau)
 @luau.property("OverrideMouseIconBehavior")
-pub fn get_override_mouse_icon_behavior(instance: UserInputService) -> OverrideMouseIconBehavior
+pub fn get_override_mouse_icon_behavior(
+  instance: UserInputService,
+) -> OverrideMouseIconBehavior
 
+@target(luau)
 /// Gets Roblox property `UserInputService.PreferredInput`.
 ///
 /// Queries the primary input type a player is using, based on anticipated user behavior.
@@ -270,30 +297,30 @@ pub fn get_override_mouse_icon_behavior(instance: UserInputService) -> OverrideM
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#PreferredInput
-@target(luau)
 @luau.property("PreferredInput")
 pub fn get_preferred_input(instance: UserInputService) -> PreferredInput
 
+@target(luau)
 /// Gets Roblox property `UserInputService.RightBarSize`.
 ///
 /// Roblox: `UserInputService.RightBarSize`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#RightBarSize
-@target(luau)
 @luau.property("RightBarSize")
 pub fn get_right_bar_size(instance: UserInputService) -> Vector2
 
+@target(luau)
 /// Gets Roblox property `UserInputService.StatusBarSize`.
 ///
 /// Roblox: `UserInputService.StatusBarSize`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#StatusBarSize
-@target(luau)
 @luau.property("StatusBarSize")
 pub fn get_status_bar_size(instance: UserInputService) -> Vector2
 
+@target(luau)
 /// Gets Roblox property `UserInputService.TouchEnabled`.
 ///
 /// Describes whether the user's device has a touch screen available.
@@ -302,20 +329,20 @@ pub fn get_status_bar_size(instance: UserInputService) -> Vector2
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchEnabled
-@target(luau)
 @luau.property("TouchEnabled")
 pub fn get_touch_enabled(instance: UserInputService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `UserInputService.TouchScreenEnabled`.
 ///
 /// Roblox: `UserInputService.TouchScreenEnabled`
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchScreenEnabled
-@target(luau)
 @luau.property("TouchScreenEnabled")
 pub fn get_touch_screen_enabled(instance: UserInputService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `UserInputService.VREnabled`.
 ///
 /// Indicates whether the user is using a virtual reality headset.
@@ -324,10 +351,10 @@ pub fn get_touch_screen_enabled(instance: UserInputService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#VREnabled
-@target(luau)
 @luau.property("VREnabled")
 pub fn get_vr_enabled(instance: UserInputService) -> Bool
 
+@target(luau)
 /// Creates a VirtualInput object that a Studio plugin can use to simulate mouse, keyboard, and pointer input.
 ///
 /// Roblox: `UserInputService.CreateVirtualInput`
@@ -339,10 +366,10 @@ pub fn get_vr_enabled(instance: UserInputService) -> Bool
 ///
 /// Returns:
 /// - A new VirtualInput object, or nil if the feature is not available.
-@target(luau)
 @luau.method("CreateVirtualInput")
 pub fn create_virtual_input(instance: UserInputService) -> Object
 
+@target(luau)
 /// Returns whether the given UserInputType gamepad supports a button corresponding with the given KeyCode.
 ///
 /// Roblox: `UserInputService.GamepadSupports`
@@ -356,10 +383,14 @@ pub fn create_virtual_input(instance: UserInputService) -> Object
 ///
 /// Returns:
 /// - Whether the given gamepad supports a button corresponding with the given KeyCode.
-@target(luau)
 @luau.method("GamepadSupports")
-pub fn gamepad_supports(instance: UserInputService, gamepad_num: UserInputType, gamepad_key_code: KeyCode) -> Bool
+pub fn gamepad_supports(
+  instance: UserInputService,
+  gamepad_num: UserInputType,
+  gamepad_key_code: KeyCode,
+) -> Bool
 
+@target(luau)
 /// Returns an array of UserInputType gamepads currently connected.
 ///
 /// Roblox: `UserInputService.GetConnectedGamepads`
@@ -371,10 +402,10 @@ pub fn gamepad_supports(instance: UserInputService, gamepad_num: UserInputType, 
 ///
 /// Returns:
 /// - An array of UserInputTypes corresponding with the gamepads connected to the user's device.
-@target(luau)
 @luau.method("GetConnectedGamepads")
 pub fn get_connected_gamepads(instance: UserInputService) -> List(Dynamic)
 
+@target(luau)
 /// Returns an InputObject that describes the device's current acceleration.
 ///
 /// Roblox: `UserInputService.GetDeviceAcceleration`
@@ -383,10 +414,10 @@ pub fn get_connected_gamepads(instance: UserInputService) -> List(Dynamic)
 ///
 /// Parameters:
 /// - `instance`: UserInputService is primarily used to detect the input types available on a user's device, as well as detect input events.
-@target(luau)
 @luau.method("GetDeviceAcceleration")
 pub fn get_device_acceleration(instance: UserInputService) -> InputObject
 
+@target(luau)
 /// Returns an InputObject describing the device's current gravity vector.
 ///
 /// Roblox: `UserInputService.GetDeviceGravity`
@@ -395,10 +426,10 @@ pub fn get_device_acceleration(instance: UserInputService) -> InputObject
 ///
 /// Parameters:
 /// - `instance`: UserInputService is primarily used to detect the input types available on a user's device, as well as detect input events.
-@target(luau)
 @luau.method("GetDeviceGravity")
 pub fn get_device_gravity(instance: UserInputService) -> InputObject
 
+@target(luau)
 /// Returns an InputObject and a CFrame describing the device's current rotation vector.
 ///
 /// Roblox: `UserInputService.GetDeviceRotation`
@@ -410,10 +441,10 @@ pub fn get_device_gravity(instance: UserInputService) -> InputObject
 ///
 /// Returns:
 /// - A tuple containing two properties: The delta describing the amount of rotation that last happened, and the CFrame of the device's current rotation relative to its default reference frame.
-@target(luau)
 @luau.method("GetDeviceRotation")
 pub fn get_device_rotation(instance: UserInputService) -> Dynamic
 
+@target(luau)
 /// Returns the TextBox the client is currently focused on.
 ///
 /// Roblox: `UserInputService.GetFocusedTextBox`
@@ -422,10 +453,10 @@ pub fn get_device_rotation(instance: UserInputService) -> Dynamic
 ///
 /// Parameters:
 /// - `instance`: UserInputService is primarily used to detect the input types available on a user's device, as well as detect input events.
-@target(luau)
 @luau.method("GetFocusedTextBox")
 pub fn get_focused_text_box(instance: UserInputService) -> TextBox
 
+@target(luau)
 /// Returns whether a gamepad with the given UserInputType is connected.
 ///
 /// Roblox: `UserInputService.GetGamepadConnected`
@@ -438,10 +469,13 @@ pub fn get_focused_text_box(instance: UserInputService) -> TextBox
 ///
 /// Returns:
 /// - Whether a gamepad associated with UserInputType is connected.
-@target(luau)
 @luau.method("GetGamepadConnected")
-pub fn get_gamepad_connected(instance: UserInputService, gamepad_num: UserInputType) -> Bool
+pub fn get_gamepad_connected(
+  instance: UserInputService,
+  gamepad_num: UserInputType,
+) -> Bool
 
+@target(luau)
 /// Returns an array of InputObjects for all available inputs on the given gamepad, representing each input's last input state.
 ///
 /// Roblox: `UserInputService.GetGamepadState`
@@ -454,10 +488,13 @@ pub fn get_gamepad_connected(instance: UserInputService, gamepad_num: UserInputT
 ///
 /// Returns:
 /// - An array of InputObjects representing the current state of all available inputs for the given gamepad.
-@target(luau)
 @luau.method("GetGamepadState")
-pub fn get_gamepad_state(instance: UserInputService, gamepad_num: UserInputType) -> List(Instance)
+pub fn get_gamepad_state(
+  instance: UserInputService,
+  gamepad_num: UserInputType,
+) -> List(Instance)
 
+@target(luau)
 /// Returns an image for the requested KeyCode.
 ///
 /// Roblox: `UserInputService.GetImageForKeyCode`
@@ -470,10 +507,13 @@ pub fn get_gamepad_state(instance: UserInputService, gamepad_num: UserInputType)
 ///
 /// Returns:
 /// - The returned image asset ID.
-@target(luau)
 @luau.method("GetImageForKeyCode")
-pub fn get_image_for_key_code(instance: UserInputService, key_code: KeyCode) -> ContentId
+pub fn get_image_for_key_code(
+  instance: UserInputService,
+  key_code: KeyCode,
+) -> ContentId
 
+@target(luau)
 /// Returns an array of InputObjects associated with the keys currently being pressed down.
 ///
 /// Roblox: `UserInputService.GetKeysPressed`
@@ -485,10 +525,10 @@ pub fn get_image_for_key_code(instance: UserInputService, key_code: KeyCode) -> 
 ///
 /// Returns:
 /// - An array of InputObjects associated with the keys currently being pressed.
-@target(luau)
 @luau.method("GetKeysPressed")
 pub fn get_keys_pressed(instance: UserInputService) -> List(Instance)
 
+@target(luau)
 /// Returns the UserInputType associated with the user's most recent input.
 ///
 /// Roblox: `UserInputService.GetLastInputType`
@@ -500,10 +540,10 @@ pub fn get_keys_pressed(instance: UserInputService) -> List(Instance)
 ///
 /// Returns:
 /// - The UserInputType associated with the user's most recent input.
-@target(luau)
 @luau.method("GetLastInputType")
 pub fn get_last_input_type(instance: UserInputService) -> UserInputType
 
+@target(luau)
 /// Returns an array of InputObjects associated with the mouse buttons currently being held down.
 ///
 /// Roblox: `UserInputService.GetMouseButtonsPressed`
@@ -515,10 +555,10 @@ pub fn get_last_input_type(instance: UserInputService) -> UserInputType
 ///
 /// Returns:
 /// - An array of InputObjects corresponding to the mouse buttons currently being currently held down.
-@target(luau)
 @luau.method("GetMouseButtonsPressed")
 pub fn get_mouse_buttons_pressed(instance: UserInputService) -> List(Instance)
 
+@target(luau)
 /// Returns the change, in pixels, of the position of the player's Mouse in the last rendered frame. Only works if the mouse is locked.
 ///
 /// Roblox: `UserInputService.GetMouseDelta`
@@ -530,10 +570,10 @@ pub fn get_mouse_buttons_pressed(instance: UserInputService) -> List(Instance)
 ///
 /// Returns:
 /// - Change in movement of the mouse.
-@target(luau)
 @luau.method("GetMouseDelta")
 pub fn get_mouse_delta(instance: UserInputService) -> Vector2
 
+@target(luau)
 /// Returns the current screen location of the player's Mouse relative to the top-left corner of the screen.
 ///
 /// Roblox: `UserInputService.GetMouseLocation`
@@ -545,10 +585,10 @@ pub fn get_mouse_delta(instance: UserInputService) -> Vector2
 ///
 /// Returns:
 /// - A Vector2 representing the current screen location of the mouse, in pixels.
-@target(luau)
 @luau.method("GetMouseLocation")
 pub fn get_mouse_location(instance: UserInputService) -> Vector2
 
+@target(luau)
 /// Returns an array of gamepads connected and enabled for GuiObject navigation in descending order of priority.
 ///
 /// Roblox: `UserInputService.GetNavigationGamepads`
@@ -560,10 +600,10 @@ pub fn get_mouse_location(instance: UserInputService) -> Vector2
 ///
 /// Returns:
 /// - An array of UserInputTypes that can be used for navigation, in descending order of priority.
-@target(luau)
 @luau.method("GetNavigationGamepads")
 pub fn get_navigation_gamepads(instance: UserInputService) -> List(Dynamic)
 
+@target(luau)
 /// Returns a string representing a key the user should press in order to input a given KeyCode.
 ///
 /// Roblox: `UserInputService.GetStringForKeyCode`
@@ -572,10 +612,13 @@ pub fn get_navigation_gamepads(instance: UserInputService) -> List(Dynamic)
 ///
 /// Parameters:
 /// - `instance`: UserInputService is primarily used to detect the input types available on a user's device, as well as detect input events.
-@target(luau)
 @luau.method("GetStringForKeyCode")
-pub fn get_string_for_key_code(instance: UserInputService, key_code: KeyCode) -> String
+pub fn get_string_for_key_code(
+  instance: UserInputService,
+  key_code: KeyCode,
+) -> String
 
+@target(luau)
 /// Returns an array of KeyCodes that the gamepad associated with the given UserInputType supports.
 ///
 /// Roblox: `UserInputService.GetSupportedGamepadKeyCodes`
@@ -588,10 +631,13 @@ pub fn get_string_for_key_code(instance: UserInputService, key_code: KeyCode) ->
 ///
 /// Returns:
 /// - An array of KeyCodes supported by the given gamepad.
-@target(luau)
 @luau.method("GetSupportedGamepadKeyCodes")
-pub fn get_supported_gamepad_key_codes(instance: UserInputService, gamepad_num: UserInputType) -> List(Dynamic)
+pub fn get_supported_gamepad_key_codes(
+  instance: UserInputService,
+  gamepad_num: UserInputType,
+) -> List(Dynamic)
 
+@target(luau)
 /// Determines whether a particular button is pressed on a gamepad.
 ///
 /// Roblox: `UserInputService.IsGamepadButtonDown`
@@ -605,10 +651,14 @@ pub fn get_supported_gamepad_key_codes(instance: UserInputService, gamepad_num: 
 ///
 /// Returns:
 /// - Whether the specified button on the given gamepad is pressed is pressed.
-@target(luau)
 @luau.method("IsGamepadButtonDown")
-pub fn is_gamepad_button_down(instance: UserInputService, gamepad_num: UserInputType, gamepad_key_code: KeyCode) -> Bool
+pub fn is_gamepad_button_down(
+  instance: UserInputService,
+  gamepad_num: UserInputType,
+  gamepad_key_code: KeyCode,
+) -> Bool
 
+@target(luau)
 /// Returns whether the given key is currently held down.
 ///
 /// Roblox: `UserInputService.IsKeyDown`
@@ -621,10 +671,10 @@ pub fn is_gamepad_button_down(instance: UserInputService, gamepad_num: UserInput
 ///
 /// Returns:
 /// - Whether the specified key is being held down.
-@target(luau)
 @luau.method("IsKeyDown")
 pub fn is_key_down(instance: UserInputService, key_code: KeyCode) -> Bool
 
+@target(luau)
 /// Returns whether the given mouse button is currently held down.
 ///
 /// Roblox: `UserInputService.IsMouseButtonPressed`
@@ -637,10 +687,13 @@ pub fn is_key_down(instance: UserInputService, key_code: KeyCode) -> Bool
 ///
 /// Returns:
 /// - Whether the given mouse button is currently held down.
-@target(luau)
 @luau.method("IsMouseButtonPressed")
-pub fn is_mouse_button_pressed(instance: UserInputService, mouse_button: UserInputType) -> Bool
+pub fn is_mouse_button_pressed(
+  instance: UserInputService,
+  mouse_button: UserInputType,
+) -> Bool
 
+@target(luau)
 /// Returns true if the specified gamepad is allowed to control navigation and selection GuiObjects.
 ///
 /// Roblox: `UserInputService.IsNavigationGamepad`
@@ -653,10 +706,13 @@ pub fn is_mouse_button_pressed(instance: UserInputService, mouse_button: UserInp
 ///
 /// Returns:
 /// - Whether the specified gamepad is a navigation gamepad.
-@target(luau)
 @luau.method("IsNavigationGamepad")
-pub fn is_navigation_gamepad(instance: UserInputService, gamepad_enum: UserInputType) -> Bool
+pub fn is_navigation_gamepad(
+  instance: UserInputService,
+  gamepad_enum: UserInputType,
+) -> Bool
 
+@target(luau)
 /// Recenters the CFrame of the VR headset to the current orientation of the headset worn by the user.
 ///
 /// Roblox: `UserInputService.RecenterUserHeadCFrame`
@@ -665,10 +721,10 @@ pub fn is_navigation_gamepad(instance: UserInputService, gamepad_enum: UserInput
 ///
 /// Parameters:
 /// - `instance`: UserInputService is primarily used to detect the input types available on a user's device, as well as detect input events.
-@target(luau)
 @luau.method("RecenterUserHeadCFrame")
 pub fn recenter_user_head_cframe(instance: UserInputService) -> Nil
 
+@target(luau)
 /// Sets whether or not the specified gamepad can move the GuiObject navigator.
 ///
 /// Roblox: `UserInputService.SetNavigationGamepad`
@@ -679,19 +735,25 @@ pub fn recenter_user_head_cframe(instance: UserInputService) -> Nil
 /// - `instance`: UserInputService is primarily used to detect the input types available on a user's device, as well as detect input events.
 /// - `gamepadEnum`: The UserInputType of the specified gamepad.
 /// - `enabled`: Whether the specified gamepad can move the GUI navigator.
-@target(luau)
 @luau.method("SetNavigationGamepad")
-pub fn set_navigation_gamepad(instance: UserInputService, gamepad_enum: UserInputType, enabled: Bool) -> Nil
+pub fn set_navigation_gamepad(
+  instance: UserInputService,
+  gamepad_enum: UserInputType,
+  enabled: Bool,
+) -> Nil
 
+@target(luau)
 /// Fires when a user moves a device that has an accelerometer.
 ///
 /// Roblox: `UserInputService.DeviceAccelerationChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#DeviceAccelerationChanged
-@target(luau)
 @luau.event("DeviceAccelerationChanged")
-pub fn device_acceleration_changed(instance: UserInputService) -> RBXScriptSignal(fn(InputObject) -> Nil)
+pub fn device_acceleration_changed(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(InputObject) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.DeviceAccelerationChanged`.
 ///
 /// Fires when a user moves a device that has an accelerometer.
@@ -699,19 +761,24 @@ pub fn device_acceleration_changed(instance: UserInputService) -> RBXScriptSigna
 /// Roblox: `UserInputService.DeviceAccelerationChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#DeviceAccelerationChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DeviceAccelerationChanged:Connect(callback) end)")
-pub fn on_device_acceleration_changed(instance: UserInputService, callback: fn(InputObject) -> Nil) -> RBXScriptConnection
+pub fn on_device_acceleration_changed(
+  instance: UserInputService,
+  callback: fn(InputObject) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the force of gravity changes on a device that has an enabled accelerometer.
 ///
 /// Roblox: `UserInputService.DeviceGravityChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#DeviceGravityChanged
-@target(luau)
 @luau.event("DeviceGravityChanged")
-pub fn device_gravity_changed(instance: UserInputService) -> RBXScriptSignal(fn(InputObject) -> Nil)
+pub fn device_gravity_changed(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(InputObject) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.DeviceGravityChanged`.
 ///
 /// Fires when the force of gravity changes on a device that has an enabled accelerometer.
@@ -719,19 +786,24 @@ pub fn device_gravity_changed(instance: UserInputService) -> RBXScriptSignal(fn(
 /// Roblox: `UserInputService.DeviceGravityChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#DeviceGravityChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DeviceGravityChanged:Connect(callback) end)")
-pub fn on_device_gravity_changed(instance: UserInputService, callback: fn(InputObject) -> Nil) -> RBXScriptConnection
+pub fn on_device_gravity_changed(
+  instance: UserInputService,
+  callback: fn(InputObject) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user rotates a device that has a gyroscope.
 ///
 /// Roblox: `UserInputService.DeviceRotationChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#DeviceRotationChanged
-@target(luau)
 @luau.event("DeviceRotationChanged")
-pub fn device_rotation_changed(instance: UserInputService) -> RBXScriptSignal(fn(InputObject, CFrame) -> Nil)
+pub fn device_rotation_changed(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(InputObject, CFrame) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.DeviceRotationChanged`.
 ///
 /// Fires when a user rotates a device that has a gyroscope.
@@ -739,19 +811,24 @@ pub fn device_rotation_changed(instance: UserInputService) -> RBXScriptSignal(fn
 /// Roblox: `UserInputService.DeviceRotationChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#DeviceRotationChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DeviceRotationChanged:Connect(callback) end)")
-pub fn on_device_rotation_changed(instance: UserInputService, callback: fn(InputObject, CFrame) -> Nil) -> RBXScriptConnection
+pub fn on_device_rotation_changed(
+  instance: UserInputService,
+  callback: fn(InputObject, CFrame) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a gamepad is connected to the client.
 ///
 /// Roblox: `UserInputService.GamepadConnected`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#GamepadConnected
-@target(luau)
 @luau.event("GamepadConnected")
-pub fn gamepad_connected(instance: UserInputService) -> RBXScriptSignal(fn(UserInputType) -> Nil)
+pub fn gamepad_connected(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(UserInputType) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.GamepadConnected`.
 ///
 /// Fires when a gamepad is connected to the client.
@@ -759,19 +836,24 @@ pub fn gamepad_connected(instance: UserInputService) -> RBXScriptSignal(fn(UserI
 /// Roblox: `UserInputService.GamepadConnected`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#GamepadConnected
-@target(luau)
 @luau.global("(function(instance, callback) return instance.GamepadConnected:Connect(callback) end)")
-pub fn on_gamepad_connected(instance: UserInputService, callback: fn(UserInputType) -> Nil) -> RBXScriptConnection
+pub fn on_gamepad_connected(
+  instance: UserInputService,
+  callback: fn(UserInputType) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a gamepad is disconnected from the client.
 ///
 /// Roblox: `UserInputService.GamepadDisconnected`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#GamepadDisconnected
-@target(luau)
 @luau.event("GamepadDisconnected")
-pub fn gamepad_disconnected(instance: UserInputService) -> RBXScriptSignal(fn(UserInputType) -> Nil)
+pub fn gamepad_disconnected(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(UserInputType) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.GamepadDisconnected`.
 ///
 /// Fires when a gamepad is disconnected from the client.
@@ -779,19 +861,24 @@ pub fn gamepad_disconnected(instance: UserInputService) -> RBXScriptSignal(fn(Us
 /// Roblox: `UserInputService.GamepadDisconnected`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#GamepadDisconnected
-@target(luau)
 @luau.global("(function(instance, callback) return instance.GamepadDisconnected:Connect(callback) end)")
-pub fn on_gamepad_disconnected(instance: UserInputService, callback: fn(UserInputType) -> Nil) -> RBXScriptConnection
+pub fn on_gamepad_disconnected(
+  instance: UserInputService,
+  callback: fn(UserInputType) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user begins interacting with an input device such as a mouse or gamepad.
 ///
 /// Roblox: `UserInputService.InputBegan`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#InputBegan
-@target(luau)
 @luau.event("InputBegan")
-pub fn input_began(instance: UserInputService) -> RBXScriptSignal(fn(InputObject, Bool) -> Nil)
+pub fn input_began(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(InputObject, Bool) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.InputBegan`.
 ///
 /// Fires when a user begins interacting with an input device such as a mouse or gamepad.
@@ -799,19 +886,24 @@ pub fn input_began(instance: UserInputService) -> RBXScriptSignal(fn(InputObject
 /// Roblox: `UserInputService.InputBegan`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#InputBegan
-@target(luau)
 @luau.global("(function(instance, callback) return instance.InputBegan:Connect(callback) end)")
-pub fn on_input_began(instance: UserInputService, callback: fn(InputObject, Bool) -> Nil) -> RBXScriptConnection
+pub fn on_input_began(
+  instance: UserInputService,
+  callback: fn(InputObject, Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user changes how they're interacting with an input device such as a mouse or gamepad.
 ///
 /// Roblox: `UserInputService.InputChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#InputChanged
-@target(luau)
 @luau.event("InputChanged")
-pub fn input_changed(instance: UserInputService) -> RBXScriptSignal(fn(InputObject, Bool) -> Nil)
+pub fn input_changed(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(InputObject, Bool) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.InputChanged`.
 ///
 /// Fires when a user changes how they're interacting with an input device such as a mouse or gamepad.
@@ -819,19 +911,24 @@ pub fn input_changed(instance: UserInputService) -> RBXScriptSignal(fn(InputObje
 /// Roblox: `UserInputService.InputChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#InputChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.InputChanged:Connect(callback) end)")
-pub fn on_input_changed(instance: UserInputService, callback: fn(InputObject, Bool) -> Nil) -> RBXScriptConnection
+pub fn on_input_changed(
+  instance: UserInputService,
+  callback: fn(InputObject, Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user stops interacting with an input device such as a mouse or gamepad.
 ///
 /// Roblox: `UserInputService.InputEnded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#InputEnded
-@target(luau)
 @luau.event("InputEnded")
-pub fn input_ended(instance: UserInputService) -> RBXScriptSignal(fn(InputObject, Bool) -> Nil)
+pub fn input_ended(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(InputObject, Bool) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.InputEnded`.
 ///
 /// Fires when a user stops interacting with an input device such as a mouse or gamepad.
@@ -839,19 +936,22 @@ pub fn input_ended(instance: UserInputService) -> RBXScriptSignal(fn(InputObject
 /// Roblox: `UserInputService.InputEnded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#InputEnded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.InputEnded:Connect(callback) end)")
-pub fn on_input_ended(instance: UserInputService, callback: fn(InputObject, Bool) -> Nil) -> RBXScriptConnection
+pub fn on_input_ended(
+  instance: UserInputService,
+  callback: fn(InputObject, Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever the client makes a request for their character to jump.
 ///
 /// Roblox: `UserInputService.JumpRequest`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#JumpRequest
-@target(luau)
 @luau.event("JumpRequest")
 pub fn jump_request(instance: UserInputService) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.JumpRequest`.
 ///
 /// Fires whenever the client makes a request for their character to jump.
@@ -859,19 +959,24 @@ pub fn jump_request(instance: UserInputService) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `UserInputService.JumpRequest`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#JumpRequest
-@target(luau)
 @luau.global("(function(instance, callback) return instance.JumpRequest:Connect(callback) end)")
-pub fn on_jump_request(instance: UserInputService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_jump_request(
+  instance: UserInputService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever the client's UserInputType is changed.
 ///
 /// Roblox: `UserInputService.LastInputTypeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#LastInputTypeChanged
-@target(luau)
 @luau.event("LastInputTypeChanged")
-pub fn last_input_type_changed(instance: UserInputService) -> RBXScriptSignal(fn(UserInputType) -> Nil)
+pub fn last_input_type_changed(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(UserInputType) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.LastInputTypeChanged`.
 ///
 /// Fires whenever the client's UserInputType is changed.
@@ -879,19 +984,24 @@ pub fn last_input_type_changed(instance: UserInputService) -> RBXScriptSignal(fn
 /// Roblox: `UserInputService.LastInputTypeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#LastInputTypeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.LastInputTypeChanged:Connect(callback) end)")
-pub fn on_last_input_type_changed(instance: UserInputService, callback: fn(UserInputType) -> Nil) -> RBXScriptConnection
+pub fn on_last_input_type_changed(
+  instance: UserInputService,
+  callback: fn(UserInputType) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the user performs a specific pointer action.
 ///
 /// Roblox: `UserInputService.PointerAction`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#PointerAction
-@target(luau)
 @luau.event("PointerAction")
-pub fn pointer_action(instance: UserInputService) -> RBXScriptSignal(fn(Float, Vector2, Float, Bool) -> Nil)
+pub fn pointer_action(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(Float, Vector2, Float, Bool) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.PointerAction`.
 ///
 /// Fires when the user performs a specific pointer action.
@@ -899,19 +1009,24 @@ pub fn pointer_action(instance: UserInputService) -> RBXScriptSignal(fn(Float, V
 /// Roblox: `UserInputService.PointerAction`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#PointerAction
-@target(luau)
 @luau.global("(function(instance, callback) return instance.PointerAction:Connect(callback) end)")
-pub fn on_pointer_action(instance: UserInputService, callback: fn(Float, Vector2, Float, Bool) -> Nil) -> RBXScriptConnection
+pub fn on_pointer_action(
+  instance: UserInputService,
+  callback: fn(Float, Vector2, Float, Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the client loses focus on a TextBox.
 ///
 /// Roblox: `UserInputService.TextBoxFocusReleased`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TextBoxFocusReleased
-@target(luau)
 @luau.event("TextBoxFocusReleased")
-pub fn text_box_focus_released(instance: UserInputService) -> RBXScriptSignal(fn(TextBox) -> Nil)
+pub fn text_box_focus_released(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(TextBox) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.TextBoxFocusReleased`.
 ///
 /// Fires when the client loses focus on a TextBox.
@@ -919,19 +1034,24 @@ pub fn text_box_focus_released(instance: UserInputService) -> RBXScriptSignal(fn
 /// Roblox: `UserInputService.TextBoxFocusReleased`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TextBoxFocusReleased
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TextBoxFocusReleased:Connect(callback) end)")
-pub fn on_text_box_focus_released(instance: UserInputService, callback: fn(TextBox) -> Nil) -> RBXScriptConnection
+pub fn on_text_box_focus_released(
+  instance: UserInputService,
+  callback: fn(TextBox) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the client focuses on a TextBox.
 ///
 /// Roblox: `UserInputService.TextBoxFocused`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TextBoxFocused
-@target(luau)
 @luau.event("TextBoxFocused")
-pub fn text_box_focused(instance: UserInputService) -> RBXScriptSignal(fn(TextBox) -> Nil)
+pub fn text_box_focused(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(TextBox) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.TextBoxFocused`.
 ///
 /// Fires when the client focuses on a TextBox.
@@ -939,19 +1059,24 @@ pub fn text_box_focused(instance: UserInputService) -> RBXScriptSignal(fn(TextBo
 /// Roblox: `UserInputService.TextBoxFocused`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TextBoxFocused
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TextBoxFocused:Connect(callback) end)")
-pub fn on_text_box_focused(instance: UserInputService, callback: fn(TextBox) -> Nil) -> RBXScriptConnection
+pub fn on_text_box_focused(
+  instance: UserInputService,
+  callback: fn(TextBox) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the user drags on the screen of a TouchEnabled device.
 ///
 /// Roblox: `UserInputService.TouchDrag`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchDrag
-@target(luau)
 @luau.event("TouchDrag")
-pub fn touch_drag(instance: UserInputService) -> RBXScriptSignal(fn(SwipeDirection, Int, Bool) -> Nil)
+pub fn touch_drag(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(SwipeDirection, Int, Bool) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.TouchDrag`.
 ///
 /// Fires when the user drags on the screen of a TouchEnabled device.
@@ -959,19 +1084,24 @@ pub fn touch_drag(instance: UserInputService) -> RBXScriptSignal(fn(SwipeDirecti
 /// Roblox: `UserInputService.TouchDrag`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchDrag
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchDrag:Connect(callback) end)")
-pub fn on_touch_drag(instance: UserInputService, callback: fn(SwipeDirection, Int, Bool) -> Nil) -> RBXScriptConnection
+pub fn on_touch_drag(
+  instance: UserInputService,
+  callback: fn(SwipeDirection, Int, Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user releases their finger from the screen of a TouchEnabled device.
 ///
 /// Roblox: `UserInputService.TouchEnded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchEnded
-@target(luau)
 @luau.event("TouchEnded")
-pub fn touch_ended(instance: UserInputService) -> RBXScriptSignal(fn(InputObject, Bool) -> Nil)
+pub fn touch_ended(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(InputObject, Bool) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.TouchEnded`.
 ///
 /// Fires when a user releases their finger from the screen of a TouchEnabled device.
@@ -979,19 +1109,24 @@ pub fn touch_ended(instance: UserInputService) -> RBXScriptSignal(fn(InputObject
 /// Roblox: `UserInputService.TouchEnded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchEnded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchEnded:Connect(callback) end)")
-pub fn on_touch_ended(instance: UserInputService, callback: fn(InputObject, Bool) -> Nil) -> RBXScriptConnection
+pub fn on_touch_ended(
+  instance: UserInputService,
+  callback: fn(InputObject, Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user holds at least one finger for a short amount of time on the screen of a TouchEnabled device.
 ///
 /// Roblox: `UserInputService.TouchLongPress`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchLongPress
-@target(luau)
 @luau.event("TouchLongPress")
-pub fn touch_long_press(instance: UserInputService) -> RBXScriptSignal(fn(List(Vector2), UserInputState, Bool) -> Nil)
+pub fn touch_long_press(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(List(Vector2), UserInputState, Bool) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.TouchLongPress`.
 ///
 /// Fires when a user holds at least one finger for a short amount of time on the screen of a TouchEnabled device.
@@ -999,19 +1134,24 @@ pub fn touch_long_press(instance: UserInputService) -> RBXScriptSignal(fn(List(V
 /// Roblox: `UserInputService.TouchLongPress`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchLongPress
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchLongPress:Connect(callback) end)")
-pub fn on_touch_long_press(instance: UserInputService, callback: fn(List(Vector2), UserInputState, Bool) -> Nil) -> RBXScriptConnection
+pub fn on_touch_long_press(
+  instance: UserInputService,
+  callback: fn(List(Vector2), UserInputState, Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user moves their finger on the screen of a TouchEnabled device.
 ///
 /// Roblox: `UserInputService.TouchMoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchMoved
-@target(luau)
 @luau.event("TouchMoved")
-pub fn touch_moved(instance: UserInputService) -> RBXScriptSignal(fn(InputObject, Bool) -> Nil)
+pub fn touch_moved(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(InputObject, Bool) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.TouchMoved`.
 ///
 /// Fires when a user moves their finger on the screen of a TouchEnabled device.
@@ -1019,19 +1159,26 @@ pub fn touch_moved(instance: UserInputService) -> RBXScriptSignal(fn(InputObject
 /// Roblox: `UserInputService.TouchMoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchMoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchMoved:Connect(callback) end)")
-pub fn on_touch_moved(instance: UserInputService, callback: fn(InputObject, Bool) -> Nil) -> RBXScriptConnection
+pub fn on_touch_moved(
+  instance: UserInputService,
+  callback: fn(InputObject, Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the user drags at least one finger on the screen of a TouchEnabled device.
 ///
 /// Roblox: `UserInputService.TouchPan`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchPan
-@target(luau)
 @luau.event("TouchPan")
-pub fn touch_pan(instance: UserInputService) -> RBXScriptSignal(fn(List(Vector2), Vector2, Vector2, UserInputState, Bool) -> Nil)
+pub fn touch_pan(
+  instance: UserInputService,
+) -> RBXScriptSignal(
+  fn(List(Vector2), Vector2, Vector2, UserInputState, Bool) -> Nil,
+)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.TouchPan`.
 ///
 /// Fires when the user drags at least one finger on the screen of a TouchEnabled device.
@@ -1039,19 +1186,26 @@ pub fn touch_pan(instance: UserInputService) -> RBXScriptSignal(fn(List(Vector2)
 /// Roblox: `UserInputService.TouchPan`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchPan
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchPan:Connect(callback) end)")
-pub fn on_touch_pan(instance: UserInputService, callback: fn(List(Vector2), Vector2, Vector2, UserInputState, Bool) -> Nil) -> RBXScriptConnection
+pub fn on_touch_pan(
+  instance: UserInputService,
+  callback: fn(List(Vector2), Vector2, Vector2, UserInputState, Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user performs a pinch gesture on the screen of a TouchEnabled device.
 ///
 /// Roblox: `UserInputService.TouchPinch`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchPinch
-@target(luau)
 @luau.event("TouchPinch")
-pub fn touch_pinch(instance: UserInputService) -> RBXScriptSignal(fn(List(Vector2), Float, Float, UserInputState, Bool) -> Nil)
+pub fn touch_pinch(
+  instance: UserInputService,
+) -> RBXScriptSignal(
+  fn(List(Vector2), Float, Float, UserInputState, Bool) -> Nil,
+)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.TouchPinch`.
 ///
 /// Fires when a user performs a pinch gesture on the screen of a TouchEnabled device.
@@ -1059,19 +1213,26 @@ pub fn touch_pinch(instance: UserInputService) -> RBXScriptSignal(fn(List(Vector
 /// Roblox: `UserInputService.TouchPinch`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchPinch
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchPinch:Connect(callback) end)")
-pub fn on_touch_pinch(instance: UserInputService, callback: fn(List(Vector2), Float, Float, UserInputState, Bool) -> Nil) -> RBXScriptConnection
+pub fn on_touch_pinch(
+  instance: UserInputService,
+  callback: fn(List(Vector2), Float, Float, UserInputState, Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user rotates two fingers on the screen of a TouchEnabled device.
 ///
 /// Roblox: `UserInputService.TouchRotate`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchRotate
-@target(luau)
 @luau.event("TouchRotate")
-pub fn touch_rotate(instance: UserInputService) -> RBXScriptSignal(fn(List(Vector2), Float, Float, UserInputState, Bool) -> Nil)
+pub fn touch_rotate(
+  instance: UserInputService,
+) -> RBXScriptSignal(
+  fn(List(Vector2), Float, Float, UserInputState, Bool) -> Nil,
+)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.TouchRotate`.
 ///
 /// Fires when a user rotates two fingers on the screen of a TouchEnabled device.
@@ -1079,19 +1240,24 @@ pub fn touch_rotate(instance: UserInputService) -> RBXScriptSignal(fn(List(Vecto
 /// Roblox: `UserInputService.TouchRotate`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchRotate
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchRotate:Connect(callback) end)")
-pub fn on_touch_rotate(instance: UserInputService, callback: fn(List(Vector2), Float, Float, UserInputState, Bool) -> Nil) -> RBXScriptConnection
+pub fn on_touch_rotate(
+  instance: UserInputService,
+  callback: fn(List(Vector2), Float, Float, UserInputState, Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user places their finger on the screen of a TouchEnabled device.
 ///
 /// Roblox: `UserInputService.TouchStarted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchStarted
-@target(luau)
 @luau.event("TouchStarted")
-pub fn touch_started(instance: UserInputService) -> RBXScriptSignal(fn(InputObject, Bool) -> Nil)
+pub fn touch_started(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(InputObject, Bool) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.TouchStarted`.
 ///
 /// Fires when a user places their finger on the screen of a TouchEnabled device.
@@ -1099,19 +1265,24 @@ pub fn touch_started(instance: UserInputService) -> RBXScriptSignal(fn(InputObje
 /// Roblox: `UserInputService.TouchStarted`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchStarted
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchStarted:Connect(callback) end)")
-pub fn on_touch_started(instance: UserInputService, callback: fn(InputObject, Bool) -> Nil) -> RBXScriptConnection
+pub fn on_touch_started(
+  instance: UserInputService,
+  callback: fn(InputObject, Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires on a TouchEnabled device when a user places their finger(s) down on the screen, pans across the screen, and lifts their finger(s) off with a certain speed of movement.
 ///
 /// Roblox: `UserInputService.TouchSwipe`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchSwipe
-@target(luau)
 @luau.event("TouchSwipe")
-pub fn touch_swipe(instance: UserInputService) -> RBXScriptSignal(fn(SwipeDirection, Int, Bool) -> Nil)
+pub fn touch_swipe(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(SwipeDirection, Int, Bool) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.TouchSwipe`.
 ///
 /// Fires on a TouchEnabled device when a user places their finger(s) down on the screen, pans across the screen, and lifts their finger(s) off with a certain speed of movement.
@@ -1119,19 +1290,24 @@ pub fn touch_swipe(instance: UserInputService) -> RBXScriptSignal(fn(SwipeDirect
 /// Roblox: `UserInputService.TouchSwipe`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchSwipe
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchSwipe:Connect(callback) end)")
-pub fn on_touch_swipe(instance: UserInputService, callback: fn(SwipeDirection, Int, Bool) -> Nil) -> RBXScriptConnection
+pub fn on_touch_swipe(
+  instance: UserInputService,
+  callback: fn(SwipeDirection, Int, Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user taps their finger on the screen of a TouchEnabled device.
 ///
 /// Roblox: `UserInputService.TouchTap`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchTap
-@target(luau)
 @luau.event("TouchTap")
-pub fn touch_tap(instance: UserInputService) -> RBXScriptSignal(fn(List(Vector2), Bool) -> Nil)
+pub fn touch_tap(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(List(Vector2), Bool) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.TouchTap`.
 ///
 /// Fires when a user taps their finger on the screen of a TouchEnabled device.
@@ -1139,19 +1315,24 @@ pub fn touch_tap(instance: UserInputService) -> RBXScriptSignal(fn(List(Vector2)
 /// Roblox: `UserInputService.TouchTap`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchTap
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchTap:Connect(callback) end)")
-pub fn on_touch_tap(instance: UserInputService, callback: fn(List(Vector2), Bool) -> Nil) -> RBXScriptConnection
+pub fn on_touch_tap(
+  instance: UserInputService,
+  callback: fn(List(Vector2), Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user taps their finger on the screen of a TouchEnabled device and the tap location is in the 3D world.
 ///
 /// Roblox: `UserInputService.TouchTapInWorld`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchTapInWorld
-@target(luau)
 @luau.event("TouchTapInWorld")
-pub fn touch_tap_in_world(instance: UserInputService) -> RBXScriptSignal(fn(Vector2, Bool) -> Nil)
+pub fn touch_tap_in_world(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(Vector2, Bool) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.TouchTapInWorld`.
 ///
 /// Fires when a user taps their finger on the screen of a TouchEnabled device and the tap location is in the 3D world.
@@ -1159,19 +1340,24 @@ pub fn touch_tap_in_world(instance: UserInputService) -> RBXScriptSignal(fn(Vect
 /// Roblox: `UserInputService.TouchTapInWorld`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchTapInWorld
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchTapInWorld:Connect(callback) end)")
-pub fn on_touch_tap_in_world(instance: UserInputService, callback: fn(Vector2, Bool) -> Nil) -> RBXScriptConnection
+pub fn on_touch_tap_in_world(
+  instance: UserInputService,
+  callback: fn(Vector2, Bool) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the window of the Roblox client loses focus on the user's screen.
 ///
 /// Roblox: `UserInputService.WindowFocusReleased`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#WindowFocusReleased
-@target(luau)
 @luau.event("WindowFocusReleased")
-pub fn window_focus_released(instance: UserInputService) -> RBXScriptSignal(fn() -> Nil)
+pub fn window_focus_released(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.WindowFocusReleased`.
 ///
 /// Fires when the window of the Roblox client loses focus on the user's screen.
@@ -1179,19 +1365,24 @@ pub fn window_focus_released(instance: UserInputService) -> RBXScriptSignal(fn()
 /// Roblox: `UserInputService.WindowFocusReleased`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#WindowFocusReleased
-@target(luau)
 @luau.global("(function(instance, callback) return instance.WindowFocusReleased:Connect(callback) end)")
-pub fn on_window_focus_released(instance: UserInputService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_window_focus_released(
+  instance: UserInputService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the window of the Roblox client gains focus on the user's screen.
 ///
 /// Roblox: `UserInputService.WindowFocused`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#WindowFocused
-@target(luau)
 @luau.event("WindowFocused")
-pub fn window_focused(instance: UserInputService) -> RBXScriptSignal(fn() -> Nil)
+pub fn window_focused(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `UserInputService.WindowFocused`.
 ///
 /// Fires when the window of the Roblox client gains focus on the user's screen.
@@ -1199,10 +1390,13 @@ pub fn window_focused(instance: UserInputService) -> RBXScriptSignal(fn() -> Nil
 /// Roblox: `UserInputService.WindowFocused`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserInputService#WindowFocused
-@target(luau)
 @luau.global("(function(instance, callback) return instance.WindowFocused:Connect(callback) end)")
-pub fn on_window_focused(instance: UserInputService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_window_focused(
+  instance: UserInputService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -1210,10 +1404,10 @@ pub fn on_window_focused(instance: UserInputService, callback: fn() -> Nil) -> R
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: UserInputService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -1221,10 +1415,13 @@ pub fn get_archivable(instance: UserInputService) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
-pub fn set_archivable(instance: UserInputService, value: Bool) -> UserInputService
+pub fn set_archivable(
+  instance: UserInputService,
+  value: Bool,
+) -> UserInputService
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -1232,10 +1429,10 @@ pub fn set_archivable(instance: UserInputService, value: Bool) -> UserInputServi
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: UserInputService) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -1243,10 +1440,13 @@ pub fn get_capabilities(instance: UserInputService) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: UserInputService, value: SecurityCapabilities) -> UserInputService
+pub fn set_capabilities(
+  instance: UserInputService,
+  value: SecurityCapabilities,
+) -> UserInputService
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -1254,10 +1454,10 @@ pub fn set_capabilities(instance: UserInputService, value: SecurityCapabilities)
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: UserInputService) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -1265,10 +1465,10 @@ pub fn get_name(instance: UserInputService) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: UserInputService, value: String) -> UserInputService
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -1277,10 +1477,10 @@ pub fn set_name(instance: UserInputService, value: String) -> UserInputService
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: UserInputService) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -1289,10 +1489,10 @@ pub fn get_parent(instance: UserInputService) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: UserInputService, value: parent) -> UserInputService
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -1301,10 +1501,10 @@ pub fn set_parent(instance: UserInputService, value: parent) -> UserInputService
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: UserInputService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -1313,10 +1513,10 @@ pub fn get_roblox_locked(instance: UserInputService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: UserInputService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -1325,20 +1525,23 @@ pub fn get_sandboxed(instance: UserInputService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
-pub fn set_sandboxed(instance: UserInputService, value: Bool) -> UserInputService
+pub fn set_sandboxed(
+  instance: UserInputService,
+  value: Bool,
+) -> UserInputService
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: UserInputService) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -1347,10 +1550,10 @@ pub fn get_source_asset_id(instance: UserInputService) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: UserInputService) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -1359,10 +1562,10 @@ pub fn get_unique_id(instance: UserInputService) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: UserInputService, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -1371,10 +1574,10 @@ pub fn add_tag(instance: UserInputService, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: UserInputService) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -1383,10 +1586,10 @@ pub fn clear_all_children(instance: UserInputService) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: UserInputService) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -1395,10 +1598,10 @@ pub fn clone(instance: UserInputService) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: UserInputService) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -1411,10 +1614,13 @@ pub fn destroy_instance(instance: UserInputService) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: UserInputService, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: UserInputService,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -1427,10 +1633,13 @@ pub fn find_first_ancestor(instance: UserInputService, name: String) -> Option(I
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: UserInputService, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: UserInputService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -1443,10 +1652,13 @@ pub fn find_first_ancestor_of_class(instance: UserInputService, class_name: Stri
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: UserInputService, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: UserInputService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -1460,10 +1672,14 @@ pub fn find_first_ancestor_which_is_a(instance: UserInputService, class_name: St
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: UserInputService, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: UserInputService,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -1476,10 +1692,13 @@ pub fn find_first_child(instance: UserInputService, name: String, recursive: Boo
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: UserInputService, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: UserInputService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -1493,10 +1712,14 @@ pub fn find_first_child_of_class(instance: UserInputService, class_name: String)
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: UserInputService, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: UserInputService,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -1509,10 +1732,13 @@ pub fn find_first_child_which_is_a(instance: UserInputService, class_name: Strin
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: UserInputService, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: UserInputService,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -1524,10 +1750,10 @@ pub fn find_first_descendant(instance: UserInputService, name: String) -> Option
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: UserInputService) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -1540,10 +1766,10 @@ pub fn get_actor(instance: UserInputService) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: UserInputService, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -1556,10 +1782,13 @@ pub fn get_attribute(instance: UserInputService, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: UserInputService, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: UserInputService,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -1572,10 +1801,10 @@ pub fn get_attribute_changed_signal(instance: UserInputService, attribute: Strin
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: UserInputService) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -1587,10 +1816,10 @@ pub fn get_attributes(instance: UserInputService) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: UserInputService) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -1603,10 +1832,10 @@ pub fn get_children(instance: UserInputService) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: UserInputService) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -1618,10 +1847,10 @@ pub fn get_descendants(instance: UserInputService) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: UserInputService) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -1635,10 +1864,14 @@ pub fn get_full_name(instance: UserInputService) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: UserInputService, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: UserInputService,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -1649,10 +1882,13 @@ pub fn get_styled(instance: UserInputService, name: String, selector: Option(Str
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: UserInputService, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: UserInputService,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -1661,10 +1897,10 @@ pub fn get_styled_property_changed_signal(instance: UserInputService, property: 
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: UserInputService) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -1673,10 +1909,10 @@ pub fn get_tags(instance: UserInputService) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: UserInputService, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -1689,10 +1925,10 @@ pub fn has_tag(instance: UserInputService, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: UserInputService, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -1705,10 +1941,10 @@ pub fn is_ancestor_of(instance: UserInputService, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: UserInputService, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -1721,10 +1957,13 @@ pub fn is_descendant_of(instance: UserInputService, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
-pub fn is_property_modified(instance: UserInputService, property: String) -> Bool
+pub fn is_property_modified(
+  instance: UserInputService,
+  property: String,
+) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -1736,10 +1975,13 @@ pub fn is_property_modified(instance: UserInputService, property: String) -> Boo
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: UserInputService, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: UserInputService,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -1748,10 +1990,10 @@ pub fn query_descendants(instance: UserInputService, selector: String) -> List(I
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: UserInputService, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -1761,10 +2003,13 @@ pub fn remove_tag(instance: UserInputService, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: UserInputService, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: UserInputService,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -1775,10 +2020,14 @@ pub fn reset_property_to_default(instance: UserInputService, property: String) -
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: UserInputService, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: UserInputService,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -1793,19 +2042,25 @@ pub fn set_attribute(instance: UserInputService, attribute: String, value: Dynam
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: UserInputService, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: UserInputService,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: UserInputService) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -1813,19 +2068,24 @@ pub fn ancestry_changed(instance: UserInputService) -> RBXScriptSignal(fn(Instan
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: UserInputService, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: UserInputService,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: UserInputService) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -1833,19 +2093,24 @@ pub fn attribute_changed(instance: UserInputService) -> RBXScriptSignal(fn(Strin
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: UserInputService, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: UserInputService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: UserInputService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -1853,19 +2118,24 @@ pub fn child_added(instance: UserInputService) -> RBXScriptSignal(fn(Instance) -
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: UserInputService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: UserInputService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: UserInputService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -1873,19 +2143,24 @@ pub fn child_removed(instance: UserInputService) -> RBXScriptSignal(fn(Instance)
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: UserInputService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: UserInputService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: UserInputService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -1893,19 +2168,24 @@ pub fn descendant_added(instance: UserInputService) -> RBXScriptSignal(fn(Instan
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: UserInputService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: UserInputService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: UserInputService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -1913,19 +2193,22 @@ pub fn descendant_removing(instance: UserInputService) -> RBXScriptSignal(fn(Ins
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: UserInputService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: UserInputService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: UserInputService) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1933,19 +2216,24 @@ pub fn destroying(instance: UserInputService) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: UserInputService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: UserInputService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: UserInputService) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: UserInputService,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1953,10 +2241,13 @@ pub fn styled_properties_changed(instance: UserInputService) -> RBXScriptSignal(
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: UserInputService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: UserInputService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1965,10 +2256,10 @@ pub fn on_styled_properties_changed(instance: UserInputService, callback: fn() -
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: UserInputService) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1981,10 +2272,13 @@ pub fn get_class_name(instance: UserInputService) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: UserInputService, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: UserInputService,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1998,19 +2292,19 @@ pub fn get_property_changed_signal(instance: UserInputService, property: String)
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: UserInputService, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: UserInputService) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -2018,12 +2312,39 @@ pub fn changed(instance: UserInputService) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: UserInputService, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: UserInputService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: Vector2, _: SwipeDirection, _: InputObject, _: UserInputState, _: TextBox, _: UserInputType, _: CFrame, _: KeyCode, _: ContentId, _: Object, _: PreferredInput, _: OverrideMouseIconBehavior, _: Content, _: MouseBehavior, _: UserInputService, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: Vector2,
+  _: SwipeDirection,
+  _: InputObject,
+  _: UserInputState,
+  _: TextBox,
+  _: UserInputType,
+  _: CFrame,
+  _: KeyCode,
+  _: ContentId,
+  _: Object,
+  _: PreferredInput,
+  _: OverrideMouseIconBehavior,
+  _: Content,
+  _: MouseBehavior,
+  _: UserInputService,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

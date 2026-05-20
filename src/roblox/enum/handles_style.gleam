@@ -2,26 +2,28 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type HandlesStyle}
 
+@target(luau)
 /// Gets the Roblox `HandlesStyle` enum object.
 ///
 /// Roblox: `Enum.HandlesStyle`
 /// See: https://create.roblox.com/docs/reference/engine/enums/HandlesStyle
-@target(luau)
 @luau.global("Enum.HandlesStyle")
 pub fn roblox_enum() -> RobloxEnum(HandlesStyle)
 
-/// Roblox enum item `HandlesStyle.Resize`.
 @target(luau)
+/// Roblox enum item `HandlesStyle.Resize`.
 @luau.global("Enum.HandlesStyle.Resize")
 pub fn resize() -> HandlesStyle
 
-/// Roblox enum item `HandlesStyle.Movement`.
 @target(luau)
+/// Roblox enum item `HandlesStyle.Movement`.
 @luau.global("Enum.HandlesStyle.Movement")
 pub fn movement() -> HandlesStyle
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(HandlesStyle), _: HandlesStyle) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(HandlesStyle),
+  _: HandlesStyle,
+) -> Nil {
   Nil
 }

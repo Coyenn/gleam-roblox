@@ -1,19 +1,24 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type Instance, type Object, type OptionDouble, type OptionInt64, type Player, type PromptExperienceDetailsResult, type SecurityCapabilities, type TeleportResult, type TeleportService, type UniqueId}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type Instance, type Object, type OptionDouble, type OptionInt64,
+  type Player, type PromptExperienceDetailsResult, type SecurityCapabilities,
+  type TeleportResult, type TeleportService, type UniqueId,
+}
 
-/// Treats `TeleportService` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `TeleportService` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: TeleportService) -> Instance
 
-/// Treats `TeleportService` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `TeleportService` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: TeleportService) -> Object
 
+@target(luau)
 /// Returns the customLoadingScreen the LocalPlayer arrived into the place with.
 ///
 /// Roblox: `TeleportService.GetArrivingTeleportGui`
@@ -25,10 +30,10 @@ pub fn as_object(instance: TeleportService) -> Object
 ///
 /// Returns:
 /// - The customLoadingScreen the LocalPlayer arrived into the place with.
-@target(luau)
 @luau.method("GetArrivingTeleportGui")
 pub fn get_arriving_teleport_gui(instance: TeleportService) -> Instance
 
+@target(luau)
 /// Returns the teleportData the Players.LocalPlayer arrived into the place with.
 ///
 /// Roblox: `TeleportService.GetLocalPlayerTeleportData`
@@ -40,10 +45,10 @@ pub fn get_arriving_teleport_gui(instance: TeleportService) -> Instance
 ///
 /// Returns:
 /// - The teleport data the Players.LocalPlayer arrived into the place with.
-@target(luau)
 @luau.method("GetLocalPlayerTeleportData")
 pub fn get_local_player_teleport_data(instance: TeleportService) -> Dynamic
 
+@target(luau)
 /// Retrieves a teleport setting saved using TeleportService:SetTeleportSetting() using the given key.
 ///
 /// Roblox: `TeleportService.GetTeleportSetting`
@@ -56,10 +61,13 @@ pub fn get_local_player_teleport_data(instance: TeleportService) -> Dynamic
 ///
 /// Returns:
 /// - The value stored under the given key.
-@target(luau)
 @luau.method("GetTeleportSetting")
-pub fn get_teleport_setting(instance: TeleportService, setting: String) -> Dynamic
+pub fn get_teleport_setting(
+  instance: TeleportService,
+  setting: String,
+) -> Dynamic
 
+@target(luau)
 /// Sets the custom teleport GUI that will be shown to the local user during teleportation, prior to the teleport being invoked.
 ///
 /// Roblox: `TeleportService.SetTeleportGui`
@@ -69,10 +77,10 @@ pub fn get_teleport_setting(instance: TeleportService, setting: String) -> Dynam
 /// Parameters:
 /// - `instance`: Enables transporting Players between places and servers. For more information on how to teleport players between servers, see Teleport between places.
 /// - `gui`: The loading ScreenGui that is to be displayed during teleportation.
-@target(luau)
 @luau.method("SetTeleportGui")
 pub fn set_teleport_gui(instance: TeleportService, gui: Instance) -> Nil
 
+@target(luau)
 /// Stores a value under a given key that persists across all teleportations in the same game.
 ///
 /// Roblox: `TeleportService.SetTeleportSetting`
@@ -83,10 +91,14 @@ pub fn set_teleport_gui(instance: TeleportService, gui: Instance) -> Nil
 /// - `instance`: Enables transporting Players between places and servers. For more information on how to teleport players between servers, see Teleport between places.
 /// - `setting`: The key to store the value under. This key can be used to retrieve the value using TeleportService:GetTeleportSetting().
 /// - `value`: The value to store.
-@target(luau)
 @luau.method("SetTeleportSetting")
-pub fn set_teleport_setting(instance: TeleportService, setting: String, value: Dynamic) -> Nil
+pub fn set_teleport_setting(
+  instance: TeleportService,
+  setting: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Teleports a Player to the place associated with the given placeId.
 ///
 /// Roblox: `TeleportService.Teleport`
@@ -99,10 +111,16 @@ pub fn set_teleport_setting(instance: TeleportService, setting: String, value: D
 /// - `player`: The Player to teleport, if this function is being called from the client this defaults to the Players.LocalPlayer.
 /// - `teleportData`: Optional data to be passed to the destination place. Can be retrieved using TeleportService:GetLocalPlayerTeleportData().
 /// - `customLoadingScreen`: Optional custom loading screen to be placed in the CoreGui at the destination place. Can be retrieved using TeleportService:GetArrivingTeleportGui().
-@target(luau)
 @luau.method("Teleport")
-pub fn teleport(instance: TeleportService, place_id: OptionInt64, player: Instance, teleport_data: Dynamic, custom_loading_screen: Instance) -> Nil
+pub fn teleport(
+  instance: TeleportService,
+  place_id: OptionInt64,
+  player: Instance,
+  teleport_data: Dynamic,
+  custom_loading_screen: Instance,
+) -> Nil
 
+@target(luau)
 /// Teleports a Player to the server instance associated with the given placeId and instanceId.
 ///
 /// Roblox: `TeleportService.TeleportToPlaceInstance`
@@ -117,10 +135,18 @@ pub fn teleport(instance: TeleportService, place_id: OptionInt64, player: Instan
 /// - `spawnName`: Optional name of the SpawnLocation to spawn at.
 /// - `teleportData`: Optional data to be passed to the destination place. Can be retrieved using TeleportService:GetLocalPlayerTeleportData().
 /// - `customLoadingScreen`: Optional custom loading screen to be placed in the CoreGui at the destination place. Can be retrieved using TeleportService:GetArrivingTeleportGui().
-@target(luau)
 @luau.method("TeleportToPlaceInstance")
-pub fn teleport_to_place_instance(instance: TeleportService, place_id: OptionInt64, instance_id: String, player: Instance, spawn_name: String, teleport_data: Dynamic, custom_loading_screen: Instance) -> Nil
+pub fn teleport_to_place_instance(
+  instance: TeleportService,
+  place_id: OptionInt64,
+  instance_id: String,
+  player: Instance,
+  spawn_name: String,
+  teleport_data: Dynamic,
+  custom_loading_screen: Instance,
+) -> Nil
 
+@target(luau)
 /// Teleport a group of Players to a reserved server created using TeleportService:ReserveServerAsync().
 ///
 /// Roblox: `TeleportService.TeleportToPrivateServer`
@@ -135,10 +161,18 @@ pub fn teleport_to_place_instance(instance: TeleportService, place_id: OptionInt
 /// - `spawnName`: Optional name of the SpawnLocation to spawn at.
 /// - `teleportData`: Optional data to be passed to the destination place. Can be retrieved using TeleportService:GetLocalPlayerTeleportData().
 /// - `customLoadingScreen`: Optional custom loading screen to be placed in the CoreGui at the destination place. Can be retrieved using TeleportService:GetArrivingTeleportGui().
-@target(luau)
 @luau.method("TeleportToPrivateServer")
-pub fn teleport_to_private_server(instance: TeleportService, place_id: OptionInt64, reserved_server_access_code: String, players: List(Instance), spawn_name: String, teleport_data: Dynamic, custom_loading_screen: Instance) -> Nil
+pub fn teleport_to_private_server(
+  instance: TeleportService,
+  place_id: OptionInt64,
+  reserved_server_access_code: String,
+  players: List(Instance),
+  spawn_name: String,
+  teleport_data: Dynamic,
+  custom_loading_screen: Instance,
+) -> Nil
 
+@target(luau)
 /// A variant of TeleportService:Teleport() that causes the Player to spawn at a SpawnLocation of the given name at the destination place.
 ///
 /// Roblox: `TeleportService.TeleportToSpawnByName`
@@ -152,10 +186,17 @@ pub fn teleport_to_private_server(instance: TeleportService, place_id: OptionInt
 /// - `player`: The Player to teleport, if this function is being called from the client this defaults to the Players.LocalPlayer.
 /// - `teleportData`: Optional data to be passed to the destination place. Can be retrieved using TeleportService:GetLocalPlayerTeleportData().
 /// - `customLoadingScreen`: Optional custom loading screen to be placed in the CoreGui at the destination place. Can be retrieved using TeleportService:GetArrivingTeleportGui().
-@target(luau)
 @luau.method("TeleportToSpawnByName")
-pub fn teleport_to_spawn_by_name(instance: TeleportService, place_id: OptionInt64, spawn_name: String, player: Instance, teleport_data: Dynamic, custom_loading_screen: Instance) -> Nil
+pub fn teleport_to_spawn_by_name(
+  instance: TeleportService,
+  place_id: OptionInt64,
+  spawn_name: String,
+  player: Instance,
+  teleport_data: Dynamic,
+  custom_loading_screen: Instance,
+) -> Nil
 
+@target(luau)
 /// Returns the PlaceId and JobId of the server the user with the given UserId is in provided it is in the same game as the current place.
 ///
 /// Roblox: `TeleportService.GetPlayerPlaceInstanceAsync`
@@ -169,10 +210,13 @@ pub fn teleport_to_spawn_by_name(instance: TeleportService, place_id: OptionInt6
 ///
 /// Returns:
 /// - See the table above.
-@target(luau)
 @luau.method("GetPlayerPlaceInstanceAsync")
-pub fn get_player_place_instance_async(instance: TeleportService, user_id: OptionInt64) -> Dynamic
+pub fn get_player_place_instance_async(
+  instance: TeleportService,
+  user_id: OptionInt64,
+) -> Dynamic
 
+@target(luau)
 /// Prompts a Player with information about the specified experience. The player can choose to teleport to the target experience through the prompt.
 ///
 /// Roblox: `TeleportService.PromptExperienceDetailsAsync`
@@ -187,10 +231,14 @@ pub fn get_player_place_instance_async(instance: TeleportService, user_id: Optio
 ///
 /// Returns:
 /// - PromptExperienceDetailsResult
-@target(luau)
 @luau.method("PromptExperienceDetailsAsync")
-pub fn prompt_experience_details_async(instance: TeleportService, player: Player, universe_id: OptionInt64) -> PromptExperienceDetailsResult
+pub fn prompt_experience_details_async(
+  instance: TeleportService,
+  player: Player,
+  universe_id: OptionInt64,
+) -> PromptExperienceDetailsResult
 
+@target(luau)
 /// Returns an access code that can be used to teleport players to a reserved server, along with the DataModel.PrivateServerId for it.
 ///
 /// Roblox: `TeleportService.ReserveServerAsync`
@@ -204,10 +252,13 @@ pub fn prompt_experience_details_async(instance: TeleportService, player: Player
 ///
 /// Returns:
 /// - The server access code required by TeleportService:TeleportToPrivateServer() and the DataModel.PrivateServerId for the reserved server.
-@target(luau)
 @luau.method("ReserveServerAsync")
-pub fn reserve_server_async(instance: TeleportService, place_id: OptionInt64) -> Dynamic
+pub fn reserve_server_async(
+  instance: TeleportService,
+  place_id: OptionInt64,
+) -> Dynamic
 
+@target(luau)
 /// The all-encompassing method to teleport a player or group of players from one server to another.
 ///
 /// Roblox: `TeleportService.TeleportAsync`
@@ -223,10 +274,15 @@ pub fn reserve_server_async(instance: TeleportService, place_id: OptionInt64) ->
 ///
 /// Returns:
 /// - If a TeleportOptions parameter is passed, this will be a TeleportAsyncResult object that provides information about the final teleport destination.
-@target(luau)
 @luau.method("TeleportAsync")
-pub fn teleport_async(instance: TeleportService, place_id: OptionInt64, players: List(Instance), teleport_options: Instance) -> Instance
+pub fn teleport_async(
+  instance: TeleportService,
+  place_id: OptionInt64,
+  players: List(Instance),
+  teleport_options: Instance,
+) -> Instance
 
+@target(luau)
 /// Teleports a group of Players to the same server of the place with the given PlaceId, returning the JobId of the server instance they were teleported to.
 ///
 /// Roblox: `TeleportService.TeleportPartyAsync`
@@ -243,19 +299,27 @@ pub fn teleport_async(instance: TeleportService, place_id: OptionInt64, players:
 ///
 /// Returns:
 /// - The DataModel.JobId of the server instance the Players were teleported to.
-@target(luau)
 @luau.method("TeleportPartyAsync")
-pub fn teleport_party_async(instance: TeleportService, place_id: OptionInt64, players: List(Instance), teleport_data: Dynamic, custom_loading_screen: Instance) -> String
+pub fn teleport_party_async(
+  instance: TeleportService,
+  place_id: OptionInt64,
+  players: List(Instance),
+  teleport_data: Dynamic,
+  custom_loading_screen: Instance,
+) -> String
 
+@target(luau)
 /// Fires when the LocalPlayer enters the place following a teleport.
 ///
 /// Roblox: `TeleportService.LocalPlayerArrivedFromTeleport`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/TeleportService#LocalPlayerArrivedFromTeleport
-@target(luau)
 @luau.event("LocalPlayerArrivedFromTeleport")
-pub fn local_player_arrived_from_teleport(instance: TeleportService) -> RBXScriptSignal(fn(Instance, Dynamic) -> Nil)
+pub fn local_player_arrived_from_teleport(
+  instance: TeleportService,
+) -> RBXScriptSignal(fn(Instance, Dynamic) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `TeleportService.LocalPlayerArrivedFromTeleport`.
 ///
 /// Fires when the LocalPlayer enters the place following a teleport.
@@ -263,19 +327,26 @@ pub fn local_player_arrived_from_teleport(instance: TeleportService) -> RBXScrip
 /// Roblox: `TeleportService.LocalPlayerArrivedFromTeleport`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/TeleportService#LocalPlayerArrivedFromTeleport
-@target(luau)
 @luau.global("(function(instance, callback) return instance.LocalPlayerArrivedFromTeleport:Connect(callback) end)")
-pub fn on_local_player_arrived_from_teleport(instance: TeleportService, callback: fn(Instance, Dynamic) -> Nil) -> RBXScriptConnection
+pub fn on_local_player_arrived_from_teleport(
+  instance: TeleportService,
+  callback: fn(Instance, Dynamic) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a teleport fails to start, leaving the player in their current server.
 ///
 /// Roblox: `TeleportService.TeleportInitFailed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/TeleportService#TeleportInitFailed
-@target(luau)
 @luau.event("TeleportInitFailed")
-pub fn teleport_init_failed(instance: TeleportService) -> RBXScriptSignal(fn(Instance, TeleportResult, String, OptionInt64, Instance) -> Nil)
+pub fn teleport_init_failed(
+  instance: TeleportService,
+) -> RBXScriptSignal(
+  fn(Instance, TeleportResult, String, OptionInt64, Instance) -> Nil,
+)
 
+@target(luau)
 /// Connects to Roblox event `TeleportService.TeleportInitFailed`.
 ///
 /// Fires when a teleport fails to start, leaving the player in their current server.
@@ -283,10 +354,13 @@ pub fn teleport_init_failed(instance: TeleportService) -> RBXScriptSignal(fn(Ins
 /// Roblox: `TeleportService.TeleportInitFailed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/TeleportService#TeleportInitFailed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TeleportInitFailed:Connect(callback) end)")
-pub fn on_teleport_init_failed(instance: TeleportService, callback: fn(Instance, TeleportResult, String, OptionInt64, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_teleport_init_failed(
+  instance: TeleportService,
+  callback: fn(Instance, TeleportResult, String, OptionInt64, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -294,10 +368,10 @@ pub fn on_teleport_init_failed(instance: TeleportService, callback: fn(Instance,
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: TeleportService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -305,10 +379,10 @@ pub fn get_archivable(instance: TeleportService) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: TeleportService, value: Bool) -> TeleportService
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -316,10 +390,10 @@ pub fn set_archivable(instance: TeleportService, value: Bool) -> TeleportService
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: TeleportService) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -327,10 +401,13 @@ pub fn get_capabilities(instance: TeleportService) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: TeleportService, value: SecurityCapabilities) -> TeleportService
+pub fn set_capabilities(
+  instance: TeleportService,
+  value: SecurityCapabilities,
+) -> TeleportService
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -338,10 +415,10 @@ pub fn set_capabilities(instance: TeleportService, value: SecurityCapabilities) 
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: TeleportService) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -349,10 +426,10 @@ pub fn get_name(instance: TeleportService) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: TeleportService, value: String) -> TeleportService
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -361,10 +438,10 @@ pub fn set_name(instance: TeleportService, value: String) -> TeleportService
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: TeleportService) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -373,10 +450,10 @@ pub fn get_parent(instance: TeleportService) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: TeleportService, value: parent) -> TeleportService
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -385,10 +462,10 @@ pub fn set_parent(instance: TeleportService, value: parent) -> TeleportService
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: TeleportService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -397,10 +474,10 @@ pub fn get_roblox_locked(instance: TeleportService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: TeleportService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -409,20 +486,20 @@ pub fn get_sandboxed(instance: TeleportService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: TeleportService, value: Bool) -> TeleportService
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: TeleportService) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -431,10 +508,10 @@ pub fn get_source_asset_id(instance: TeleportService) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: TeleportService) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -443,10 +520,10 @@ pub fn get_unique_id(instance: TeleportService) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: TeleportService, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -455,10 +532,10 @@ pub fn add_tag(instance: TeleportService, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: TeleportService) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -467,10 +544,10 @@ pub fn clear_all_children(instance: TeleportService) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: TeleportService) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -479,10 +556,10 @@ pub fn clone(instance: TeleportService) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: TeleportService) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -495,10 +572,13 @@ pub fn destroy_instance(instance: TeleportService) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: TeleportService, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: TeleportService,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -511,10 +591,13 @@ pub fn find_first_ancestor(instance: TeleportService, name: String) -> Option(In
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: TeleportService, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: TeleportService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -527,10 +610,13 @@ pub fn find_first_ancestor_of_class(instance: TeleportService, class_name: Strin
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: TeleportService, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: TeleportService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -544,10 +630,14 @@ pub fn find_first_ancestor_which_is_a(instance: TeleportService, class_name: Str
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: TeleportService, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: TeleportService,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -560,10 +650,13 @@ pub fn find_first_child(instance: TeleportService, name: String, recursive: Bool
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: TeleportService, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: TeleportService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -577,10 +670,14 @@ pub fn find_first_child_of_class(instance: TeleportService, class_name: String) 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: TeleportService, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: TeleportService,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -593,10 +690,13 @@ pub fn find_first_child_which_is_a(instance: TeleportService, class_name: String
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: TeleportService, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: TeleportService,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -608,10 +708,10 @@ pub fn find_first_descendant(instance: TeleportService, name: String) -> Option(
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: TeleportService) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -624,10 +724,10 @@ pub fn get_actor(instance: TeleportService) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: TeleportService, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -640,10 +740,13 @@ pub fn get_attribute(instance: TeleportService, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: TeleportService, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: TeleportService,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -656,10 +759,10 @@ pub fn get_attribute_changed_signal(instance: TeleportService, attribute: String
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: TeleportService) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -671,10 +774,10 @@ pub fn get_attributes(instance: TeleportService) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: TeleportService) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -687,10 +790,10 @@ pub fn get_children(instance: TeleportService) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: TeleportService) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -702,10 +805,10 @@ pub fn get_descendants(instance: TeleportService) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: TeleportService) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -719,10 +822,14 @@ pub fn get_full_name(instance: TeleportService) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: TeleportService, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: TeleportService,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -733,10 +840,13 @@ pub fn get_styled(instance: TeleportService, name: String, selector: Option(Stri
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: TeleportService, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: TeleportService,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -745,10 +855,10 @@ pub fn get_styled_property_changed_signal(instance: TeleportService, property: S
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: TeleportService) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -757,10 +867,10 @@ pub fn get_tags(instance: TeleportService) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: TeleportService, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -773,10 +883,10 @@ pub fn has_tag(instance: TeleportService, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: TeleportService, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -789,10 +899,10 @@ pub fn is_ancestor_of(instance: TeleportService, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: TeleportService, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -805,10 +915,10 @@ pub fn is_descendant_of(instance: TeleportService, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: TeleportService, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -820,10 +930,13 @@ pub fn is_property_modified(instance: TeleportService, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: TeleportService, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: TeleportService,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -832,10 +945,10 @@ pub fn query_descendants(instance: TeleportService, selector: String) -> List(In
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: TeleportService, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -845,10 +958,13 @@ pub fn remove_tag(instance: TeleportService, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: TeleportService, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: TeleportService,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -859,10 +975,14 @@ pub fn reset_property_to_default(instance: TeleportService, property: String) ->
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: TeleportService, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: TeleportService,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -877,19 +997,25 @@ pub fn set_attribute(instance: TeleportService, attribute: String, value: Dynami
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: TeleportService, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: TeleportService,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: TeleportService) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: TeleportService,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -897,19 +1023,24 @@ pub fn ancestry_changed(instance: TeleportService) -> RBXScriptSignal(fn(Instanc
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: TeleportService, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: TeleportService,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: TeleportService) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: TeleportService,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -917,19 +1048,24 @@ pub fn attribute_changed(instance: TeleportService) -> RBXScriptSignal(fn(String
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: TeleportService, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: TeleportService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: TeleportService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: TeleportService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -937,19 +1073,24 @@ pub fn child_added(instance: TeleportService) -> RBXScriptSignal(fn(Instance) ->
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: TeleportService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: TeleportService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: TeleportService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: TeleportService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -957,19 +1098,24 @@ pub fn child_removed(instance: TeleportService) -> RBXScriptSignal(fn(Instance) 
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: TeleportService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: TeleportService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: TeleportService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: TeleportService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -977,19 +1123,24 @@ pub fn descendant_added(instance: TeleportService) -> RBXScriptSignal(fn(Instanc
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: TeleportService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: TeleportService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: TeleportService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: TeleportService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -997,19 +1148,22 @@ pub fn descendant_removing(instance: TeleportService) -> RBXScriptSignal(fn(Inst
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: TeleportService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: TeleportService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: TeleportService) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1017,19 +1171,24 @@ pub fn destroying(instance: TeleportService) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: TeleportService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: TeleportService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: TeleportService) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: TeleportService,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1037,10 +1196,13 @@ pub fn styled_properties_changed(instance: TeleportService) -> RBXScriptSignal(f
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: TeleportService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: TeleportService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1049,10 +1211,10 @@ pub fn on_styled_properties_changed(instance: TeleportService, callback: fn() ->
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: TeleportService) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1065,10 +1227,13 @@ pub fn get_class_name(instance: TeleportService) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: TeleportService, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: TeleportService,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1082,19 +1247,19 @@ pub fn get_property_changed_signal(instance: TeleportService, property: String) 
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: TeleportService, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: TeleportService) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1102,12 +1267,29 @@ pub fn changed(instance: TeleportService) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: TeleportService, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: TeleportService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: TeleportResult, _: PromptExperienceDetailsResult, _: Player, _: TeleportService, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: TeleportResult,
+  _: PromptExperienceDetailsResult,
+  _: Player,
+  _: TeleportService,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

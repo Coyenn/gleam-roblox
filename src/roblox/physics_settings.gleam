@@ -1,19 +1,25 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type EnviromentalPhysicsThrottle, type Instance, type Object, type OptionDouble, type OptionInt64, type PhysicsSettings, type SecurityCapabilities, type SolverConvergenceMetricType, type SolverConvergenceVisualizationMode, type UniqueId}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type EnviromentalPhysicsThrottle, type Instance, type Object,
+  type OptionDouble, type OptionInt64, type PhysicsSettings,
+  type SecurityCapabilities, type SolverConvergenceMetricType,
+  type SolverConvergenceVisualizationMode, type UniqueId,
+}
 
-/// Treats `PhysicsSettings` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `PhysicsSettings` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: PhysicsSettings) -> Instance
 
-/// Treats `PhysicsSettings` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `PhysicsSettings` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: PhysicsSettings) -> Object
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AllowSleep`.
 ///
 /// When set to true, physically simulated objects will stop being simulated if they have little to no motion for a set period of time.
@@ -21,10 +27,10 @@ pub fn as_object(instance: PhysicsSettings) -> Object
 /// Roblox: `PhysicsSettings.AllowSleep`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AllowSleep
-@target(luau)
 @luau.property("AllowSleep")
 pub fn get_allow_sleep(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreAnchorsShown`.
 ///
 /// When set to true, parts that are BasePart.Anchored will show a gray surface outline on the surface of the part's bounding box that is currently facing the ground.
@@ -32,10 +38,10 @@ pub fn get_allow_sleep(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.AreAnchorsShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreAnchorsShown
-@target(luau)
 @luau.property("AreAnchorsShown")
 pub fn get_are_anchors_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreAssembliesShown`.
 ///
 /// When set to true, each physics assembly is assigned a unique color and the Part associated with the assembly are outlined with the color. Parts that are attached together by JointInstance will share the same color.
@@ -43,19 +49,19 @@ pub fn get_are_anchors_shown(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.AreAssembliesShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreAssembliesShown
-@target(luau)
 @luau.property("AreAssembliesShown")
 pub fn get_are_assemblies_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreAssemblyCentersOfMassShown`.
 ///
 /// Roblox: `PhysicsSettings.AreAssemblyCentersOfMassShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreAssemblyCentersOfMassShown
-@target(luau)
 @luau.property("AreAssemblyCentersOfMassShown")
 pub fn get_are_assembly_centers_of_mass_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreAwakePartsHighlighted`.
 ///
 /// When set to true, parts that are actively being physically simulated will have a red outline.
@@ -63,10 +69,10 @@ pub fn get_are_assembly_centers_of_mass_shown(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.AreAwakePartsHighlighted`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreAwakePartsHighlighted
-@target(luau)
 @luau.property("AreAwakePartsHighlighted")
 pub fn get_are_awake_parts_highlighted(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreBodyTypesShown`.
 ///
 /// When set to true, Part will be outlined with a specific color, depending on the state of its root simulation body.
@@ -74,46 +80,52 @@ pub fn get_are_awake_parts_highlighted(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.AreBodyTypesShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreBodyTypesShown
-@target(luau)
 @luau.property("AreBodyTypesShown")
 pub fn get_are_body_types_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreCollisionCostsShown`.
 ///
 /// Roblox: `PhysicsSettings.AreCollisionCostsShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreCollisionCostsShown
-@target(luau)
 @luau.property("AreCollisionCostsShown")
 pub fn get_are_collision_costs_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreConstraintForcesShownForSelectedOrHoveredInstances`.
 ///
 /// Roblox: `PhysicsSettings.AreConstraintForcesShownForSelectedOrHoveredInstances`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreConstraintForcesShownForSelectedOrHoveredInstances
-@target(luau)
 @luau.property("AreConstraintForcesShownForSelectedOrHoveredInstances")
-pub fn get_are_constraint_forces_shown_for_selected_or_hovered_instances(instance: PhysicsSettings) -> Bool
+pub fn get_are_constraint_forces_shown_for_selected_or_hovered_instances(
+  instance: PhysicsSettings,
+) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreConstraintTorquesShownForSelectedOrHoveredInstances`.
 ///
 /// Roblox: `PhysicsSettings.AreConstraintTorquesShownForSelectedOrHoveredInstances`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreConstraintTorquesShownForSelectedOrHoveredInstances
-@target(luau)
 @luau.property("AreConstraintTorquesShownForSelectedOrHoveredInstances")
-pub fn get_are_constraint_torques_shown_for_selected_or_hovered_instances(instance: PhysicsSettings) -> Bool
+pub fn get_are_constraint_torques_shown_for_selected_or_hovered_instances(
+  instance: PhysicsSettings,
+) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreContactForcesShownForSelectedOrHoveredAssemblies`.
 ///
 /// Roblox: `PhysicsSettings.AreContactForcesShownForSelectedOrHoveredAssemblies`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreContactForcesShownForSelectedOrHoveredAssemblies
-@target(luau)
 @luau.property("AreContactForcesShownForSelectedOrHoveredAssemblies")
-pub fn get_are_contact_forces_shown_for_selected_or_hovered_assemblies(instance: PhysicsSettings) -> Bool
+pub fn get_are_contact_forces_shown_for_selected_or_hovered_assemblies(
+  instance: PhysicsSettings,
+) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreContactIslandsShown`.
 ///
 /// When set to true, each contact island will render SelectionBox adorns on the parts in contact islands, where each contact island is assigned a random color.
@@ -121,10 +133,10 @@ pub fn get_are_contact_forces_shown_for_selected_or_hovered_assemblies(instance:
 /// Roblox: `PhysicsSettings.AreContactIslandsShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreContactIslandsShown
-@target(luau)
 @luau.property("AreContactIslandsShown")
 pub fn get_are_contact_islands_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreContactPointsShown`.
 ///
 /// When set to true, sphere adorns will be drawn at the contact points of each part where physics interactions are occurring.
@@ -132,19 +144,21 @@ pub fn get_are_contact_islands_shown(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.AreContactPointsShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreContactPointsShown
-@target(luau)
 @luau.property("AreContactPointsShown")
 pub fn get_are_contact_points_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreGravityForcesShownForSelectedOrHoveredAssemblies`.
 ///
 /// Roblox: `PhysicsSettings.AreGravityForcesShownForSelectedOrHoveredAssemblies`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreGravityForcesShownForSelectedOrHoveredAssemblies
-@target(luau)
 @luau.property("AreGravityForcesShownForSelectedOrHoveredAssemblies")
-pub fn get_are_gravity_forces_shown_for_selected_or_hovered_assemblies(instance: PhysicsSettings) -> Bool
+pub fn get_are_gravity_forces_shown_for_selected_or_hovered_assemblies(
+  instance: PhysicsSettings,
+) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreJointCoordinatesShown`.
 ///
 /// When set to true, XYZ axes are rendered at the BasePart.CFrame of every part.
@@ -152,19 +166,21 @@ pub fn get_are_gravity_forces_shown_for_selected_or_hovered_assemblies(instance:
 /// Roblox: `PhysicsSettings.AreJointCoordinatesShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreJointCoordinatesShown
-@target(luau)
 @luau.property("AreJointCoordinatesShown")
 pub fn get_are_joint_coordinates_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreMagnitudesShownForDrawnForcesAndTorques`.
 ///
 /// Roblox: `PhysicsSettings.AreMagnitudesShownForDrawnForcesAndTorques`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreMagnitudesShownForDrawnForcesAndTorques
-@target(luau)
 @luau.property("AreMagnitudesShownForDrawnForcesAndTorques")
-pub fn get_are_magnitudes_shown_for_drawn_forces_and_torques(instance: PhysicsSettings) -> Bool
+pub fn get_are_magnitudes_shown_for_drawn_forces_and_torques(
+  instance: PhysicsSettings,
+) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreMechanismsShown`.
 ///
 /// When set to true, every individual mechanism of parts is given a unique color.
@@ -172,10 +188,10 @@ pub fn get_are_magnitudes_shown_for_drawn_forces_and_torques(instance: PhysicsSe
 /// Roblox: `PhysicsSettings.AreMechanismsShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreMechanismsShown
-@target(luau)
 @luau.property("AreMechanismsShown")
 pub fn get_are_mechanisms_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreModelCoordsShown`.
 ///
 /// An ancient property that hasn't work correctly since late 2007. It's supposed to render an XYZ axis on the root part of a Model, but the axis rendering component doesn't work correctly.
@@ -183,19 +199,19 @@ pub fn get_are_mechanisms_shown(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.AreModelCoordsShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreModelCoordsShown
-@target(luau)
 @luau.property("AreModelCoordsShown")
 pub fn get_are_model_coords_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreNonAnchorsShown`.
 ///
 /// Roblox: `PhysicsSettings.AreNonAnchorsShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreNonAnchorsShown
-@target(luau)
 @luau.property("AreNonAnchorsShown")
 pub fn get_are_non_anchors_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreOwnersShown`.
 ///
 /// When set to true, each player's character is outlined with a unique color, and each part that the player has network ownership over is outlined with the same color.
@@ -203,10 +219,10 @@ pub fn get_are_non_anchors_shown(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.AreOwnersShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreOwnersShown
-@target(luau)
 @luau.property("AreOwnersShown")
 pub fn get_are_owners_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.ArePartCoordsShown`.
 ///
 /// An ancient property that hasn't worked correctly since late 2007. It's supposed to render a large XYZ axis in the center of each BasePart, but the axis rendering component doesn't work correctly.
@@ -214,10 +230,10 @@ pub fn get_are_owners_shown(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.ArePartCoordsShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#ArePartCoordsShown
-@target(luau)
 @luau.property("ArePartCoordsShown")
 pub fn get_are_part_coords_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreRegionsShown`.
 ///
 /// When set to true, a cylinder is drawn around each player's character, representing their Player.SimulationRadius.
@@ -225,37 +241,39 @@ pub fn get_are_part_coords_shown(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.AreRegionsShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreRegionsShown
-@target(luau)
 @luau.property("AreRegionsShown")
 pub fn get_are_regions_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreSolverIslandsShown`.
 ///
 /// Roblox: `PhysicsSettings.AreSolverIslandsShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreSolverIslandsShown
-@target(luau)
 @luau.property("AreSolverIslandsShown")
 pub fn get_are_solver_islands_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreTerrainReplicationRegionsShown`.
 ///
 /// Roblox: `PhysicsSettings.AreTerrainReplicationRegionsShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreTerrainReplicationRegionsShown
-@target(luau)
 @luau.property("AreTerrainReplicationRegionsShown")
-pub fn get_are_terrain_replication_regions_shown(instance: PhysicsSettings) -> Bool
+pub fn get_are_terrain_replication_regions_shown(
+  instance: PhysicsSettings,
+) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreTimestepsShown`.
 ///
 /// Roblox: `PhysicsSettings.AreTimestepsShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreTimestepsShown
-@target(luau)
 @luau.property("AreTimestepsShown")
 pub fn get_are_timesteps_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreUnalignedPartsShown`.
 ///
 /// When set to true, parts that aren't aligned on the 1x1x1 grid will be outlined yellow.
@@ -263,10 +281,10 @@ pub fn get_are_timesteps_shown(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.AreUnalignedPartsShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreUnalignedPartsShown
-@target(luau)
 @luau.property("AreUnalignedPartsShown")
 pub fn get_are_unaligned_parts_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.AreWorldCoordsShown`.
 ///
 /// An ancient property that hasn't worked correctly since late 2007. It's supposed to render a large XYZ axis in the center of the world, but the axis rendering component doesn't work correctly.
@@ -274,10 +292,10 @@ pub fn get_are_unaligned_parts_shown(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.AreWorldCoordsShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#AreWorldCoordsShown
-@target(luau)
 @luau.property("AreWorldCoordsShown")
 pub fn get_are_world_coords_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.DisableCSGv2`.
 ///
 /// When set to true, Roblox will fall back to using its legacy CSG solver when performing solid model operations.
@@ -285,55 +303,57 @@ pub fn get_are_world_coords_shown(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.DisableCSGv2`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#DisableCSGv2
-@target(luau)
 @luau.property("DisableCSGv2")
 pub fn get_disable_cs_gv2(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.DisableCSGv3ForPlugins`.
 ///
 /// Roblox: `PhysicsSettings.DisableCSGv3ForPlugins`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#DisableCSGv3ForPlugins
-@target(luau)
 @luau.property("DisableCSGv3ForPlugins")
 pub fn get_disable_cs_gv3_for_plugins(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.DrawConstraintsNetForce`.
 ///
 /// Roblox: `PhysicsSettings.DrawConstraintsNetForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#DrawConstraintsNetForce
-@target(luau)
 @luau.property("DrawConstraintsNetForce")
 pub fn get_draw_constraints_net_force(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.DrawContactsNetForce`.
 ///
 /// Roblox: `PhysicsSettings.DrawContactsNetForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#DrawContactsNetForce
-@target(luau)
 @luau.property("DrawContactsNetForce")
 pub fn get_draw_contacts_net_force(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.DrawTotalNetForce`.
 ///
 /// Roblox: `PhysicsSettings.DrawTotalNetForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#DrawTotalNetForce
-@target(luau)
 @luau.property("DrawTotalNetForce")
 pub fn get_draw_total_net_force(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.EnableForceVisualizationSmoothing`.
 ///
 /// Roblox: `PhysicsSettings.EnableForceVisualizationSmoothing`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#EnableForceVisualizationSmoothing
-@target(luau)
 @luau.property("EnableForceVisualizationSmoothing")
-pub fn get_enable_force_visualization_smoothing(instance: PhysicsSettings) -> Bool
+pub fn get_enable_force_visualization_smoothing(
+  instance: PhysicsSettings,
+) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.FluidForceDrawScale`.
 ///
 /// Sets the scale of arrows drawn for aerodynamic force visualization.
@@ -341,47 +361,47 @@ pub fn get_enable_force_visualization_smoothing(instance: PhysicsSettings) -> Bo
 /// Roblox: `PhysicsSettings.FluidForceDrawScale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#FluidForceDrawScale
-@target(luau)
 @luau.property("FluidForceDrawScale")
 pub fn get_fluid_force_draw_scale(instance: PhysicsSettings) -> Float
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.ForceCSGv2`.
 ///
 /// Roblox: `PhysicsSettings.ForceCSGv2`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#ForceCSGv2
-@target(luau)
 @luau.property("ForceCSGv2")
 pub fn get_force_cs_gv2(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.ForceDrawScale`.
 ///
 /// Roblox: `PhysicsSettings.ForceDrawScale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#ForceDrawScale
-@target(luau)
 @luau.property("ForceDrawScale")
 pub fn get_force_draw_scale(instance: PhysicsSettings) -> Float
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.ForceVisualizationSmoothingSteps`.
 ///
 /// Roblox: `PhysicsSettings.ForceVisualizationSmoothingSteps`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#ForceVisualizationSmoothingSteps
-@target(luau)
 @luau.property("ForceVisualizationSmoothingSteps")
 pub fn get_force_visualization_smoothing_steps(instance: PhysicsSettings) -> Int
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.IsInterpolationThrottleShown`.
 ///
 /// Roblox: `PhysicsSettings.IsInterpolationThrottleShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#IsInterpolationThrottleShown
-@target(luau)
 @luau.property("IsInterpolationThrottleShown")
 pub fn get_is_interpolation_throttle_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.IsReceiveAgeShown`.
 ///
 /// This property is supposed to show the BasePart.ReceiveAge of a part, but it does not work correctly.
@@ -389,10 +409,10 @@ pub fn get_is_interpolation_throttle_shown(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.IsReceiveAgeShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#IsReceiveAgeShown
-@target(luau)
 @luau.property("IsReceiveAgeShown")
 pub fn get_is_receive_age_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.IsTreeShown`.
 ///
 /// When set to true, the joint connections of each part, and the states of their underlying primitive components are visualized as a spanning tree.
@@ -400,10 +420,10 @@ pub fn get_is_receive_age_shown(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.IsTreeShown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#IsTreeShown
-@target(luau)
 @luau.property("IsTreeShown")
 pub fn get_is_tree_shown(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.PhysicsEnvironmentalThrottle`.
 ///
 /// Controls the throttle rate of Roblox's physics engine.
@@ -411,10 +431,12 @@ pub fn get_is_tree_shown(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.PhysicsEnvironmentalThrottle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#PhysicsEnvironmentalThrottle
-@target(luau)
 @luau.property("PhysicsEnvironmentalThrottle")
-pub fn get_physics_environmental_throttle(instance: PhysicsSettings) -> EnviromentalPhysicsThrottle
+pub fn get_physics_environmental_throttle(
+  instance: PhysicsSettings,
+) -> EnviromentalPhysicsThrottle
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.ShowDecompositionGeometry`.
 ///
 /// When set to true, the underlying collision geometry for PartOperation and MeshPart is rendered.
@@ -422,10 +444,10 @@ pub fn get_physics_environmental_throttle(instance: PhysicsSettings) -> Envirome
 /// Roblox: `PhysicsSettings.ShowDecompositionGeometry`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#ShowDecompositionGeometry
-@target(luau)
 @luau.property("ShowDecompositionGeometry")
 pub fn get_show_decomposition_geometry(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.ShowFluidForcesForSelectedOrHoveredMechanisms`.
 ///
 /// When set to true, enables aerodynamic visualization for selected or hovered mechanisms in Studio's play and run modes.
@@ -433,37 +455,45 @@ pub fn get_show_decomposition_geometry(instance: PhysicsSettings) -> Bool
 /// Roblox: `PhysicsSettings.ShowFluidForcesForSelectedOrHoveredMechanisms`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#ShowFluidForcesForSelectedOrHoveredMechanisms
-@target(luau)
 @luau.property("ShowFluidForcesForSelectedOrHoveredMechanisms")
-pub fn get_show_fluid_forces_for_selected_or_hovered_mechanisms(instance: PhysicsSettings) -> Bool
+pub fn get_show_fluid_forces_for_selected_or_hovered_mechanisms(
+  instance: PhysicsSettings,
+) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.ShowInstanceNamesForDrawnForcesAndTorques`.
 ///
 /// Roblox: `PhysicsSettings.ShowInstanceNamesForDrawnForcesAndTorques`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#ShowInstanceNamesForDrawnForcesAndTorques
-@target(luau)
 @luau.property("ShowInstanceNamesForDrawnForcesAndTorques")
-pub fn get_show_instance_names_for_drawn_forces_and_torques(instance: PhysicsSettings) -> Bool
+pub fn get_show_instance_names_for_drawn_forces_and_torques(
+  instance: PhysicsSettings,
+) -> Bool
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.SolverConvergenceMetricType`.
 ///
 /// Roblox: `PhysicsSettings.SolverConvergenceMetricType`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#SolverConvergenceMetricType
-@target(luau)
 @luau.property("SolverConvergenceMetricType")
-pub fn get_solver_convergence_metric_type(instance: PhysicsSettings) -> SolverConvergenceMetricType
+pub fn get_solver_convergence_metric_type(
+  instance: PhysicsSettings,
+) -> SolverConvergenceMetricType
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.SolverConvergenceVisualizationMode`.
 ///
 /// Roblox: `PhysicsSettings.SolverConvergenceVisualizationMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#SolverConvergenceVisualizationMode
-@target(luau)
 @luau.property("SolverConvergenceVisualizationMode")
-pub fn get_solver_convergence_visualization_mode(instance: PhysicsSettings) -> SolverConvergenceVisualizationMode
+pub fn get_solver_convergence_visualization_mode(
+  instance: PhysicsSettings,
+) -> SolverConvergenceVisualizationMode
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.ThrottleAdjustTime`.
 ///
 /// If the PhysicsSettings.PhysicsEnvironmentalThrottle is set to DefaultAuto, this specifies the maximum time that the physics environmental throttle has to wait before it is allowed to automatically change.
@@ -471,19 +501,19 @@ pub fn get_solver_convergence_visualization_mode(instance: PhysicsSettings) -> S
 /// Roblox: `PhysicsSettings.ThrottleAdjustTime`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#ThrottleAdjustTime
-@target(luau)
 @luau.property("ThrottleAdjustTime")
 pub fn get_throttle_adjust_time(instance: PhysicsSettings) -> OptionDouble
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.TorqueDrawScale`.
 ///
 /// Roblox: `PhysicsSettings.TorqueDrawScale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#TorqueDrawScale
-@target(luau)
 @luau.property("TorqueDrawScale")
 pub fn get_torque_draw_scale(instance: PhysicsSettings) -> Float
 
+@target(luau)
 /// Gets Roblox property `PhysicsSettings.UseCSGv2`.
 ///
 /// If set to true, version 2 of Roblox's CSG solver will be used instead of version 1.
@@ -491,10 +521,10 @@ pub fn get_torque_draw_scale(instance: PhysicsSettings) -> Float
 /// Roblox: `PhysicsSettings.UseCSGv2`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PhysicsSettings#UseCSGv2
-@target(luau)
 @luau.property("UseCSGv2")
 pub fn get_use_cs_gv2(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -502,10 +532,10 @@ pub fn get_use_cs_gv2(instance: PhysicsSettings) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -513,10 +543,10 @@ pub fn get_archivable(instance: PhysicsSettings) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: PhysicsSettings, value: Bool) -> PhysicsSettings
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -524,10 +554,10 @@ pub fn set_archivable(instance: PhysicsSettings, value: Bool) -> PhysicsSettings
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: PhysicsSettings) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -535,10 +565,13 @@ pub fn get_capabilities(instance: PhysicsSettings) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: PhysicsSettings, value: SecurityCapabilities) -> PhysicsSettings
+pub fn set_capabilities(
+  instance: PhysicsSettings,
+  value: SecurityCapabilities,
+) -> PhysicsSettings
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -546,10 +579,10 @@ pub fn set_capabilities(instance: PhysicsSettings, value: SecurityCapabilities) 
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: PhysicsSettings) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -557,10 +590,10 @@ pub fn get_name(instance: PhysicsSettings) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: PhysicsSettings, value: String) -> PhysicsSettings
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -569,10 +602,10 @@ pub fn set_name(instance: PhysicsSettings, value: String) -> PhysicsSettings
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: PhysicsSettings) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -581,10 +614,10 @@ pub fn get_parent(instance: PhysicsSettings) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: PhysicsSettings, value: parent) -> PhysicsSettings
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -593,10 +626,10 @@ pub fn set_parent(instance: PhysicsSettings, value: parent) -> PhysicsSettings
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -605,10 +638,10 @@ pub fn get_roblox_locked(instance: PhysicsSettings) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: PhysicsSettings) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -617,20 +650,20 @@ pub fn get_sandboxed(instance: PhysicsSettings) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: PhysicsSettings, value: Bool) -> PhysicsSettings
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: PhysicsSettings) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -639,10 +672,10 @@ pub fn get_source_asset_id(instance: PhysicsSettings) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: PhysicsSettings) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -651,10 +684,10 @@ pub fn get_unique_id(instance: PhysicsSettings) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: PhysicsSettings, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -663,10 +696,10 @@ pub fn add_tag(instance: PhysicsSettings, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: PhysicsSettings) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -675,10 +708,10 @@ pub fn clear_all_children(instance: PhysicsSettings) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: PhysicsSettings) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -687,10 +720,10 @@ pub fn clone(instance: PhysicsSettings) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: PhysicsSettings) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -703,10 +736,13 @@ pub fn destroy_instance(instance: PhysicsSettings) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: PhysicsSettings, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: PhysicsSettings,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -719,10 +755,13 @@ pub fn find_first_ancestor(instance: PhysicsSettings, name: String) -> Option(In
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: PhysicsSettings, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: PhysicsSettings,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -735,10 +774,13 @@ pub fn find_first_ancestor_of_class(instance: PhysicsSettings, class_name: Strin
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: PhysicsSettings, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: PhysicsSettings,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -752,10 +794,14 @@ pub fn find_first_ancestor_which_is_a(instance: PhysicsSettings, class_name: Str
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: PhysicsSettings, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: PhysicsSettings,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -768,10 +814,13 @@ pub fn find_first_child(instance: PhysicsSettings, name: String, recursive: Bool
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: PhysicsSettings, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: PhysicsSettings,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -785,10 +834,14 @@ pub fn find_first_child_of_class(instance: PhysicsSettings, class_name: String) 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: PhysicsSettings, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: PhysicsSettings,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -801,10 +854,13 @@ pub fn find_first_child_which_is_a(instance: PhysicsSettings, class_name: String
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: PhysicsSettings, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: PhysicsSettings,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -816,10 +872,10 @@ pub fn find_first_descendant(instance: PhysicsSettings, name: String) -> Option(
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: PhysicsSettings) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -832,10 +888,10 @@ pub fn get_actor(instance: PhysicsSettings) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: PhysicsSettings, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -848,10 +904,13 @@ pub fn get_attribute(instance: PhysicsSettings, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: PhysicsSettings, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: PhysicsSettings,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -864,10 +923,10 @@ pub fn get_attribute_changed_signal(instance: PhysicsSettings, attribute: String
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: PhysicsSettings) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -879,10 +938,10 @@ pub fn get_attributes(instance: PhysicsSettings) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: PhysicsSettings) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -895,10 +954,10 @@ pub fn get_children(instance: PhysicsSettings) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: PhysicsSettings) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -910,10 +969,10 @@ pub fn get_descendants(instance: PhysicsSettings) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: PhysicsSettings) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -927,10 +986,14 @@ pub fn get_full_name(instance: PhysicsSettings) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: PhysicsSettings, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: PhysicsSettings,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -941,10 +1004,13 @@ pub fn get_styled(instance: PhysicsSettings, name: String, selector: Option(Stri
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: PhysicsSettings, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: PhysicsSettings,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -953,10 +1019,10 @@ pub fn get_styled_property_changed_signal(instance: PhysicsSettings, property: S
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: PhysicsSettings) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -965,10 +1031,10 @@ pub fn get_tags(instance: PhysicsSettings) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: PhysicsSettings, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -981,10 +1047,10 @@ pub fn has_tag(instance: PhysicsSettings, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: PhysicsSettings, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -997,10 +1063,10 @@ pub fn is_ancestor_of(instance: PhysicsSettings, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: PhysicsSettings, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -1013,10 +1079,10 @@ pub fn is_descendant_of(instance: PhysicsSettings, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: PhysicsSettings, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -1028,10 +1094,13 @@ pub fn is_property_modified(instance: PhysicsSettings, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: PhysicsSettings, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: PhysicsSettings,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -1040,10 +1109,10 @@ pub fn query_descendants(instance: PhysicsSettings, selector: String) -> List(In
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: PhysicsSettings, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -1053,10 +1122,13 @@ pub fn remove_tag(instance: PhysicsSettings, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: PhysicsSettings, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: PhysicsSettings,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -1067,10 +1139,14 @@ pub fn reset_property_to_default(instance: PhysicsSettings, property: String) ->
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: PhysicsSettings, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: PhysicsSettings,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -1085,19 +1161,25 @@ pub fn set_attribute(instance: PhysicsSettings, attribute: String, value: Dynami
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: PhysicsSettings, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: PhysicsSettings,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: PhysicsSettings) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: PhysicsSettings,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -1105,19 +1187,24 @@ pub fn ancestry_changed(instance: PhysicsSettings) -> RBXScriptSignal(fn(Instanc
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: PhysicsSettings, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: PhysicsSettings,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: PhysicsSettings) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: PhysicsSettings,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -1125,19 +1212,24 @@ pub fn attribute_changed(instance: PhysicsSettings) -> RBXScriptSignal(fn(String
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: PhysicsSettings, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: PhysicsSettings,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: PhysicsSettings) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: PhysicsSettings,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -1145,19 +1237,24 @@ pub fn child_added(instance: PhysicsSettings) -> RBXScriptSignal(fn(Instance) ->
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: PhysicsSettings, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: PhysicsSettings,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: PhysicsSettings) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: PhysicsSettings,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -1165,19 +1262,24 @@ pub fn child_removed(instance: PhysicsSettings) -> RBXScriptSignal(fn(Instance) 
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: PhysicsSettings, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: PhysicsSettings,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: PhysicsSettings) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: PhysicsSettings,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -1185,19 +1287,24 @@ pub fn descendant_added(instance: PhysicsSettings) -> RBXScriptSignal(fn(Instanc
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: PhysicsSettings, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: PhysicsSettings,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: PhysicsSettings) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: PhysicsSettings,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -1205,19 +1312,22 @@ pub fn descendant_removing(instance: PhysicsSettings) -> RBXScriptSignal(fn(Inst
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: PhysicsSettings, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: PhysicsSettings,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: PhysicsSettings) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1225,19 +1335,24 @@ pub fn destroying(instance: PhysicsSettings) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: PhysicsSettings, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: PhysicsSettings,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: PhysicsSettings) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: PhysicsSettings,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1245,10 +1360,13 @@ pub fn styled_properties_changed(instance: PhysicsSettings) -> RBXScriptSignal(f
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: PhysicsSettings, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: PhysicsSettings,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1257,10 +1375,10 @@ pub fn on_styled_properties_changed(instance: PhysicsSettings, callback: fn() ->
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: PhysicsSettings) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1273,10 +1391,13 @@ pub fn get_class_name(instance: PhysicsSettings) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: PhysicsSettings, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: PhysicsSettings,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1290,19 +1411,19 @@ pub fn get_property_changed_signal(instance: PhysicsSettings, property: String) 
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: PhysicsSettings, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: PhysicsSettings) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1310,12 +1431,29 @@ pub fn changed(instance: PhysicsSettings) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: PhysicsSettings, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: PhysicsSettings,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: SolverConvergenceVisualizationMode, _: SolverConvergenceMetricType, _: EnviromentalPhysicsThrottle, _: PhysicsSettings, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: SolverConvergenceVisualizationMode,
+  _: SolverConvergenceMetricType,
+  _: EnviromentalPhysicsThrottle,
+  _: PhysicsSettings,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

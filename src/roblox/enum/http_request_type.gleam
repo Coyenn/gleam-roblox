@@ -2,51 +2,53 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type HttpRequestType}
 
+@target(luau)
 /// Gets the Roblox `HttpRequestType` enum object.
 ///
 /// Roblox: `Enum.HttpRequestType`
 /// See: https://create.roblox.com/docs/reference/engine/enums/HttpRequestType
-@target(luau)
 @luau.global("Enum.HttpRequestType")
 pub fn roblox_enum() -> RobloxEnum(HttpRequestType)
 
-/// Roblox enum item `HttpRequestType.Default`.
 @target(luau)
+/// Roblox enum item `HttpRequestType.Default`.
 @luau.global("Enum.HttpRequestType.Default")
 pub fn default() -> HttpRequestType
 
-/// Roblox enum item `HttpRequestType.MarketplaceService`.
 @target(luau)
+/// Roblox enum item `HttpRequestType.MarketplaceService`.
 @luau.global("Enum.HttpRequestType.MarketplaceService")
 pub fn marketplace_service() -> HttpRequestType
 
-/// Roblox enum item `HttpRequestType.Players`.
 @target(luau)
+/// Roblox enum item `HttpRequestType.Players`.
 @luau.global("Enum.HttpRequestType.Players")
 pub fn players() -> HttpRequestType
 
-/// Roblox enum item `HttpRequestType.Chat`.
 @target(luau)
+/// Roblox enum item `HttpRequestType.Chat`.
 @luau.global("Enum.HttpRequestType.Chat")
 pub fn chat() -> HttpRequestType
 
-/// Roblox enum item `HttpRequestType.Avatar`.
 @target(luau)
+/// Roblox enum item `HttpRequestType.Avatar`.
 @luau.global("Enum.HttpRequestType.Avatar")
 pub fn avatar() -> HttpRequestType
 
-/// Roblox enum item `HttpRequestType.Analytics`.
 @target(luau)
+/// Roblox enum item `HttpRequestType.Analytics`.
 @luau.global("Enum.HttpRequestType.Analytics")
 pub fn analytics() -> HttpRequestType
 
-/// Roblox enum item `HttpRequestType.Localization`.
 @target(luau)
+/// Roblox enum item `HttpRequestType.Localization`.
 @luau.global("Enum.HttpRequestType.Localization")
 pub fn localization() -> HttpRequestType
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(HttpRequestType), _: HttpRequestType) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(HttpRequestType),
+  _: HttpRequestType,
+) -> Nil {
   Nil
 }

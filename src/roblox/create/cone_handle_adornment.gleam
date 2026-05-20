@@ -1,19 +1,27 @@
 // Generated declarative builders for Roblox `ConeHandleAdornment` instances.
-import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/cone_handle_adornment
-import roblox/types.{type AdornCullingMode, type AdornShading, type CFrame, type Color3, type ConeHandleAdornment, type Instance, type PVInstance, type SecurityCapabilities, type Vector3}
+import roblox/create.{type Node, type Property, Node, Property, apply}
+import roblox/types.{
+  type AdornCullingMode, type AdornShading, type CFrame, type Color3,
+  type ConeHandleAdornment, type Instance, type PVInstance,
+  type SecurityCapabilities, type Vector3,
+}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: ConeHandleAdornment) -> Instance
 
-/// Creates a declarative Roblox `ConeHandleAdornment` node.
 @target(luau)
-pub fn node(properties: List(Property(ConeHandleAdornment)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `ConeHandleAdornment` node.
+pub fn node(
+  properties: List(Property(ConeHandleAdornment)),
+  children: List(Node),
+) -> Node {
   let instance = apply(cone_handle_adornment.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ConeHandleAdornment.Height` on `ConeHandleAdornment` nodes.
 ///
 /// Height of the cone adornment.
@@ -21,21 +29,21 @@ pub fn node(properties: List(Property(ConeHandleAdornment)), children: List(Node
 /// Roblox: `ConeHandleAdornment.Height`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ConeHandleAdornment#Height
-@target(luau)
 pub fn height(value: Float) -> Property(ConeHandleAdornment) {
   Property(fn(instance) { cone_handle_adornment.set_height(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ConeHandleAdornment.Hollow` on `ConeHandleAdornment` nodes.
 ///
 /// Roblox: `ConeHandleAdornment.Hollow`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ConeHandleAdornment#Hollow
-@target(luau)
 pub fn hollow(value: Bool) -> Property(ConeHandleAdornment) {
   Property(fn(instance) { cone_handle_adornment.set_hollow(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ConeHandleAdornment.Radius` on `ConeHandleAdornment` nodes.
 ///
 /// Radius of the cone adornment.
@@ -43,21 +51,21 @@ pub fn hollow(value: Bool) -> Property(ConeHandleAdornment) {
 /// Roblox: `ConeHandleAdornment.Radius`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ConeHandleAdornment#Radius
-@target(luau)
 pub fn radius(value: Float) -> Property(ConeHandleAdornment) {
   Property(fn(instance) { cone_handle_adornment.set_radius(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `ConeHandleAdornment.Shading` on `ConeHandleAdornment` nodes.
 ///
 /// Roblox: `ConeHandleAdornment.Shading`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ConeHandleAdornment#Shading
-@target(luau)
 pub fn shading(value: AdornShading) -> Property(ConeHandleAdornment) {
   Property(fn(instance) { cone_handle_adornment.set_shading(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `HandleAdornment.AdornCullingMode` on `ConeHandleAdornment` nodes.
 ///
 /// Determines whether to automatically cull the adornment.
@@ -65,11 +73,15 @@ pub fn shading(value: AdornShading) -> Property(ConeHandleAdornment) {
 /// Roblox: `HandleAdornment.AdornCullingMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HandleAdornment#AdornCullingMode
-@target(luau)
-pub fn adorn_culling_mode(value: AdornCullingMode) -> Property(ConeHandleAdornment) {
-  Property(fn(instance) { cone_handle_adornment.set_adorn_culling_mode(instance, value) })
+pub fn adorn_culling_mode(
+  value: AdornCullingMode,
+) -> Property(ConeHandleAdornment) {
+  Property(fn(instance) {
+    cone_handle_adornment.set_adorn_culling_mode(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `HandleAdornment.AlwaysOnTop` on `ConeHandleAdornment` nodes.
 ///
 /// Forces this adornment to render on top of all 3D objects in the workspace.
@@ -77,11 +89,13 @@ pub fn adorn_culling_mode(value: AdornCullingMode) -> Property(ConeHandleAdornme
 /// Roblox: `HandleAdornment.AlwaysOnTop`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HandleAdornment#AlwaysOnTop
-@target(luau)
 pub fn always_on_top(value: Bool) -> Property(ConeHandleAdornment) {
-  Property(fn(instance) { cone_handle_adornment.set_always_on_top(instance, value) })
+  Property(fn(instance) {
+    cone_handle_adornment.set_always_on_top(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `HandleAdornment.CFrame` on `ConeHandleAdornment` nodes.
 ///
 /// The position and rotation of the object relative to its PVAdornment.Adornee.
@@ -89,11 +103,11 @@ pub fn always_on_top(value: Bool) -> Property(ConeHandleAdornment) {
 /// Roblox: `HandleAdornment.CFrame`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HandleAdornment#CFrame
-@target(luau)
 pub fn cframe(value: CFrame) -> Property(ConeHandleAdornment) {
   Property(fn(instance) { cone_handle_adornment.set_cframe(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `HandleAdornment.SizeRelativeOffset` on `ConeHandleAdornment` nodes.
 ///
 /// The positional offset of the adornment based on the adornee's BasePart.Size.
@@ -101,11 +115,13 @@ pub fn cframe(value: CFrame) -> Property(ConeHandleAdornment) {
 /// Roblox: `HandleAdornment.SizeRelativeOffset`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HandleAdornment#SizeRelativeOffset
-@target(luau)
 pub fn size_relative_offset(value: Vector3) -> Property(ConeHandleAdornment) {
-  Property(fn(instance) { cone_handle_adornment.set_size_relative_offset(instance, value) })
+  Property(fn(instance) {
+    cone_handle_adornment.set_size_relative_offset(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `HandleAdornment.ZIndex` on `ConeHandleAdornment` nodes.
 ///
 /// Determines the draw order of this HandleAdornment when AlwaysOnTop is true.
@@ -113,11 +129,11 @@ pub fn size_relative_offset(value: Vector3) -> Property(ConeHandleAdornment) {
 /// Roblox: `HandleAdornment.ZIndex`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HandleAdornment#ZIndex
-@target(luau)
 pub fn z_index(value: Int) -> Property(ConeHandleAdornment) {
   Property(fn(instance) { cone_handle_adornment.set_z_index(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `PVAdornment.Adornee` on `ConeHandleAdornment` nodes.
 ///
 /// The PVInstance which this PVAdornment is attached to.
@@ -125,11 +141,11 @@ pub fn z_index(value: Int) -> Property(ConeHandleAdornment) {
 /// Roblox: `PVAdornment.Adornee`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PVAdornment#Adornee
-@target(luau)
 pub fn adornee(value: PVInstance) -> Property(ConeHandleAdornment) {
   Property(fn(instance) { cone_handle_adornment.set_adornee(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiBase3d.Color3` on `ConeHandleAdornment` nodes.
 ///
 /// Sets the color of this GuiBase3d object.
@@ -137,11 +153,11 @@ pub fn adornee(value: PVInstance) -> Property(ConeHandleAdornment) {
 /// Roblox: `GuiBase3d.Color3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase3d#Color3
-@target(luau)
 pub fn color3(value: Color3) -> Property(ConeHandleAdornment) {
   Property(fn(instance) { cone_handle_adornment.set_color3(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiBase3d.Transparency` on `ConeHandleAdornment` nodes.
 ///
 /// Sets the transparency of this GuiBase3d object.
@@ -149,11 +165,13 @@ pub fn color3(value: Color3) -> Property(ConeHandleAdornment) {
 /// Roblox: `GuiBase3d.Transparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase3d#Transparency
-@target(luau)
 pub fn transparency(value: Float) -> Property(ConeHandleAdornment) {
-  Property(fn(instance) { cone_handle_adornment.set_transparency(instance, value) })
+  Property(fn(instance) {
+    cone_handle_adornment.set_transparency(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiBase3d.Visible` on `ConeHandleAdornment` nodes.
 ///
 /// Determines whether this GuiBase3d object and its descendants will be displayed.
@@ -161,11 +179,11 @@ pub fn transparency(value: Float) -> Property(ConeHandleAdornment) {
 /// Roblox: `GuiBase3d.Visible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase3d#Visible
-@target(luau)
 pub fn visible(value: Bool) -> Property(ConeHandleAdornment) {
   Property(fn(instance) { cone_handle_adornment.set_visible(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `ConeHandleAdornment` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -173,11 +191,13 @@ pub fn visible(value: Bool) -> Property(ConeHandleAdornment) {
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(ConeHandleAdornment) {
-  Property(fn(instance) { cone_handle_adornment.set_archivable(instance, value) })
+  Property(fn(instance) {
+    cone_handle_adornment.set_archivable(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `ConeHandleAdornment` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -185,11 +205,15 @@ pub fn archivable(value: Bool) -> Property(ConeHandleAdornment) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
-pub fn capabilities(value: SecurityCapabilities) -> Property(ConeHandleAdornment) {
-  Property(fn(instance) { cone_handle_adornment.set_capabilities(instance, value) })
+pub fn capabilities(
+  value: SecurityCapabilities,
+) -> Property(ConeHandleAdornment) {
+  Property(fn(instance) {
+    cone_handle_adornment.set_capabilities(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `ConeHandleAdornment` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -197,11 +221,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(ConeHandleAdornment
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(ConeHandleAdornment) {
   Property(fn(instance) { cone_handle_adornment.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `ConeHandleAdornment` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -210,11 +234,11 @@ pub fn name(value: String) -> Property(ConeHandleAdornment) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(ConeHandleAdornment) {
   Property(fn(instance) { cone_handle_adornment.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `ConeHandleAdornment` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -223,13 +247,21 @@ pub fn parent(value: Instance) -> Property(ConeHandleAdornment) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(ConeHandleAdornment) {
   Property(fn(instance) { cone_handle_adornment.set_sandboxed(instance, value) })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: Color3, _: PVInstance, _: Vector3, _: CFrame, _: AdornCullingMode, _: AdornShading, _: ConeHandleAdornment) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: Color3,
+  _: PVInstance,
+  _: Vector3,
+  _: CFrame,
+  _: AdornCullingMode,
+  _: AdornShading,
+  _: ConeHandleAdornment,
+) -> Nil {
   Nil
 }

@@ -1,39 +1,47 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type BasePart, type BrickColor, type CFrame, type CollisionFidelity, type Color3, type Faces, type FlagStand, type FormFactorPart, type Instance, type Material, type NormalId, type Object, type OptionDouble, type OptionInt64, type PVInstance, type Part, type PartType, type PhysicalProperties, type Player, type RenderFidelity, type SecurityCapabilities, type SurfaceType, type UniqueId, type Vector3}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type BasePart, type BrickColor, type CFrame,
+  type CollisionFidelity, type Color3, type Faces, type FlagStand,
+  type FormFactorPart, type Instance, type Material, type NormalId, type Object,
+  type OptionDouble, type OptionInt64, type PVInstance, type Part, type PartType,
+  type PhysicalProperties, type Player, type RenderFidelity,
+  type SecurityCapabilities, type SurfaceType, type UniqueId, type Vector3,
+}
 
-/// Treats `FlagStand` as its Roblox ancestor `Part`.
 @target(luau)
+/// Treats `FlagStand` as its Roblox ancestor `Part`.
 @luau.global("(function(x) return x end)")
 pub fn as_part(instance: FlagStand) -> Part
 
-/// Treats `FlagStand` as its Roblox ancestor `FormFactorPart`.
 @target(luau)
+/// Treats `FlagStand` as its Roblox ancestor `FormFactorPart`.
 @luau.global("(function(x) return x end)")
 pub fn as_form_factor_part(instance: FlagStand) -> FormFactorPart
 
-/// Treats `FlagStand` as its Roblox ancestor `BasePart`.
 @target(luau)
+/// Treats `FlagStand` as its Roblox ancestor `BasePart`.
 @luau.global("(function(x) return x end)")
 pub fn as_base_part(instance: FlagStand) -> BasePart
 
-/// Treats `FlagStand` as its Roblox ancestor `PVInstance`.
 @target(luau)
+/// Treats `FlagStand` as its Roblox ancestor `PVInstance`.
 @luau.global("(function(x) return x end)")
 pub fn as_pv_instance(instance: FlagStand) -> PVInstance
 
-/// Treats `FlagStand` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `FlagStand` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: FlagStand) -> Instance
 
-/// Treats `FlagStand` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `FlagStand` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: FlagStand) -> Object
 
+@target(luau)
 /// Gets Roblox property `FlagStand.TeamColor`.
 ///
 /// The Team that owns the FlagStand. Corresponds with the TeamColors in the Teams service.
@@ -41,10 +49,10 @@ pub fn as_object(instance: FlagStand) -> Object
 /// Roblox: `FlagStand.TeamColor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/FlagStand#TeamColor
-@target(luau)
 @luau.property("TeamColor")
 pub fn get_team_color(instance: FlagStand) -> BrickColor
 
+@target(luau)
 /// Sets Roblox property `FlagStand.TeamColor`.
 ///
 /// The Team that owns the FlagStand. Corresponds with the TeamColors in the Teams service.
@@ -52,19 +60,21 @@ pub fn get_team_color(instance: FlagStand) -> BrickColor
 /// Roblox: `FlagStand.TeamColor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/FlagStand#TeamColor
-@target(luau)
 @luau.set_property("TeamColor")
 pub fn set_team_color(instance: FlagStand, value: BrickColor) -> FlagStand
 
+@target(luau)
 /// Fires when a player bearing an opposing flag, and having the same Player.TeamColor as the stand, touches the FlagStand.
 ///
 /// Roblox: `FlagStand.FlagCaptured`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/FlagStand#FlagCaptured
-@target(luau)
 @luau.event("FlagCaptured")
-pub fn flag_captured(instance: FlagStand) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn flag_captured(
+  instance: FlagStand,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `FlagStand.FlagCaptured`.
 ///
 /// Fires when a player bearing an opposing flag, and having the same Player.TeamColor as the stand, touches the FlagStand.
@@ -72,10 +82,13 @@ pub fn flag_captured(instance: FlagStand) -> RBXScriptSignal(fn(Instance) -> Nil
 /// Roblox: `FlagStand.FlagCaptured`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/FlagStand#FlagCaptured
-@target(luau)
 @luau.global("(function(instance, callback) return instance.FlagCaptured:Connect(callback) end)")
-pub fn on_flag_captured(instance: FlagStand, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_flag_captured(
+  instance: FlagStand,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Part.Shape`.
 ///
 /// Sets the overall shape of the object.
@@ -84,10 +97,10 @@ pub fn on_flag_captured(instance: FlagStand, callback: fn(Instance) -> Nil) -> R
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Part#Shape
-@target(luau)
 @luau.property("Shape")
 pub fn get_shape(instance: FlagStand) -> PartType
 
+@target(luau)
 /// Sets Roblox property `Part.Shape`.
 ///
 /// Sets the overall shape of the object.
@@ -96,10 +109,10 @@ pub fn get_shape(instance: FlagStand) -> PartType
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Part#Shape
-@target(luau)
 @luau.set_property("Shape")
 pub fn set_shape(instance: FlagStand, value: PartType) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.Anchored`.
 ///
 /// Determines whether a part is immovable by physics.
@@ -107,10 +120,10 @@ pub fn set_shape(instance: FlagStand, value: PartType) -> FlagStand
 /// Roblox: `BasePart.Anchored`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Anchored
-@target(luau)
 @luau.property("Anchored")
 pub fn get_anchored(instance: FlagStand) -> Bool
 
+@target(luau)
 /// Sets Roblox property `BasePart.Anchored`.
 ///
 /// Determines whether a part is immovable by physics.
@@ -118,10 +131,10 @@ pub fn get_anchored(instance: FlagStand) -> Bool
 /// Roblox: `BasePart.Anchored`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Anchored
-@target(luau)
 @luau.set_property("Anchored")
 pub fn set_anchored(instance: FlagStand, value: Bool) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.AssemblyAngularVelocity`.
 ///
 /// The angular velocity of the part's assembly.
@@ -130,10 +143,10 @@ pub fn set_anchored(instance: FlagStand, value: Bool) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#AssemblyAngularVelocity
-@target(luau)
 @luau.property("AssemblyAngularVelocity")
 pub fn get_assembly_angular_velocity(instance: FlagStand) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `BasePart.AssemblyAngularVelocity`.
 ///
 /// The angular velocity of the part's assembly.
@@ -142,10 +155,13 @@ pub fn get_assembly_angular_velocity(instance: FlagStand) -> Vector3
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#AssemblyAngularVelocity
-@target(luau)
 @luau.set_property("AssemblyAngularVelocity")
-pub fn set_assembly_angular_velocity(instance: FlagStand, value: Vector3) -> FlagStand
+pub fn set_assembly_angular_velocity(
+  instance: FlagStand,
+  value: Vector3,
+) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.AssemblyCenterOfMass`.
 ///
 /// The center of mass of the part's assembly in world space.
@@ -154,10 +170,10 @@ pub fn set_assembly_angular_velocity(instance: FlagStand, value: Vector3) -> Fla
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#AssemblyCenterOfMass
-@target(luau)
 @luau.property("AssemblyCenterOfMass")
 pub fn get_assembly_center_of_mass(instance: FlagStand) -> Vector3
 
+@target(luau)
 /// Gets Roblox property `BasePart.AssemblyLinearVelocity`.
 ///
 /// The linear velocity of the part's assembly.
@@ -166,10 +182,10 @@ pub fn get_assembly_center_of_mass(instance: FlagStand) -> Vector3
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#AssemblyLinearVelocity
-@target(luau)
 @luau.property("AssemblyLinearVelocity")
 pub fn get_assembly_linear_velocity(instance: FlagStand) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `BasePart.AssemblyLinearVelocity`.
 ///
 /// The linear velocity of the part's assembly.
@@ -178,10 +194,13 @@ pub fn get_assembly_linear_velocity(instance: FlagStand) -> Vector3
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#AssemblyLinearVelocity
-@target(luau)
 @luau.set_property("AssemblyLinearVelocity")
-pub fn set_assembly_linear_velocity(instance: FlagStand, value: Vector3) -> FlagStand
+pub fn set_assembly_linear_velocity(
+  instance: FlagStand,
+  value: Vector3,
+) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.AssemblyMass`.
 ///
 /// The total mass of the part's assembly.
@@ -190,10 +209,10 @@ pub fn set_assembly_linear_velocity(instance: FlagStand, value: Vector3) -> Flag
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#AssemblyMass
-@target(luau)
 @luau.property("AssemblyMass")
 pub fn get_assembly_mass(instance: FlagStand) -> Float
 
+@target(luau)
 /// Gets Roblox property `BasePart.AssemblyRootPart`.
 ///
 /// A reference to the root part of the assembly.
@@ -202,10 +221,10 @@ pub fn get_assembly_mass(instance: FlagStand) -> Float
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#AssemblyRootPart
-@target(luau)
 @luau.property("AssemblyRootPart")
 pub fn get_assembly_root_part(instance: FlagStand) -> BasePart
 
+@target(luau)
 /// Gets Roblox property `BasePart.AudioCanCollide`.
 ///
 /// Determines whether the part will physically interact with audio simulation, similar to CastShadow for lighting.
@@ -213,10 +232,10 @@ pub fn get_assembly_root_part(instance: FlagStand) -> BasePart
 /// Roblox: `BasePart.AudioCanCollide`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#AudioCanCollide
-@target(luau)
 @luau.property("AudioCanCollide")
 pub fn get_audio_can_collide(instance: FlagStand) -> Bool
 
+@target(luau)
 /// Sets Roblox property `BasePart.AudioCanCollide`.
 ///
 /// Determines whether the part will physically interact with audio simulation, similar to CastShadow for lighting.
@@ -224,10 +243,10 @@ pub fn get_audio_can_collide(instance: FlagStand) -> Bool
 /// Roblox: `BasePart.AudioCanCollide`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#AudioCanCollide
-@target(luau)
 @luau.set_property("AudioCanCollide")
 pub fn set_audio_can_collide(instance: FlagStand, value: Bool) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.BackSurface`.
 ///
 /// Determines the type of surface for the back face of a part.
@@ -235,10 +254,10 @@ pub fn set_audio_can_collide(instance: FlagStand, value: Bool) -> FlagStand
 /// Roblox: `BasePart.BackSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#BackSurface
-@target(luau)
 @luau.property("BackSurface")
 pub fn get_back_surface(instance: FlagStand) -> SurfaceType
 
+@target(luau)
 /// Sets Roblox property `BasePart.BackSurface`.
 ///
 /// Determines the type of surface for the back face of a part.
@@ -246,10 +265,10 @@ pub fn get_back_surface(instance: FlagStand) -> SurfaceType
 /// Roblox: `BasePart.BackSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#BackSurface
-@target(luau)
 @luau.set_property("BackSurface")
 pub fn set_back_surface(instance: FlagStand, value: SurfaceType) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.BottomSurface`.
 ///
 /// Determines the type of surface for the bottom face of a part.
@@ -257,10 +276,10 @@ pub fn set_back_surface(instance: FlagStand, value: SurfaceType) -> FlagStand
 /// Roblox: `BasePart.BottomSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#BottomSurface
-@target(luau)
 @luau.property("BottomSurface")
 pub fn get_bottom_surface(instance: FlagStand) -> SurfaceType
 
+@target(luau)
 /// Sets Roblox property `BasePart.BottomSurface`.
 ///
 /// Determines the type of surface for the bottom face of a part.
@@ -268,10 +287,10 @@ pub fn get_bottom_surface(instance: FlagStand) -> SurfaceType
 /// Roblox: `BasePart.BottomSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#BottomSurface
-@target(luau)
 @luau.set_property("BottomSurface")
 pub fn set_bottom_surface(instance: FlagStand, value: SurfaceType) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.BrickColor`.
 ///
 /// Determines the color of a part.
@@ -280,10 +299,10 @@ pub fn set_bottom_surface(instance: FlagStand, value: SurfaceType) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#BrickColor
-@target(luau)
 @luau.property("BrickColor")
 pub fn get_brick_color(instance: FlagStand) -> BrickColor
 
+@target(luau)
 /// Sets Roblox property `BasePart.BrickColor`.
 ///
 /// Determines the color of a part.
@@ -292,10 +311,10 @@ pub fn get_brick_color(instance: FlagStand) -> BrickColor
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#BrickColor
-@target(luau)
 @luau.set_property("BrickColor")
 pub fn set_brick_color(instance: FlagStand, value: BrickColor) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.CFrame`.
 ///
 /// Determines the position and orientation of the BasePart in the world.
@@ -303,10 +322,10 @@ pub fn set_brick_color(instance: FlagStand, value: BrickColor) -> FlagStand
 /// Roblox: `BasePart.CFrame`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CFrame
-@target(luau)
 @luau.property("CFrame")
 pub fn get_cframe(instance: FlagStand) -> CFrame
 
+@target(luau)
 /// Sets Roblox property `BasePart.CFrame`.
 ///
 /// Determines the position and orientation of the BasePart in the world.
@@ -314,10 +333,10 @@ pub fn get_cframe(instance: FlagStand) -> CFrame
 /// Roblox: `BasePart.CFrame`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CFrame
-@target(luau)
 @luau.set_property("CFrame")
 pub fn set_cframe(instance: FlagStand, value: CFrame) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.CanCollide`.
 ///
 /// Determines whether a part may collide with other parts.
@@ -325,10 +344,10 @@ pub fn set_cframe(instance: FlagStand, value: CFrame) -> FlagStand
 /// Roblox: `BasePart.CanCollide`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CanCollide
-@target(luau)
 @luau.property("CanCollide")
 pub fn get_can_collide(instance: FlagStand) -> Bool
 
+@target(luau)
 /// Sets Roblox property `BasePart.CanCollide`.
 ///
 /// Determines whether a part may collide with other parts.
@@ -336,10 +355,10 @@ pub fn get_can_collide(instance: FlagStand) -> Bool
 /// Roblox: `BasePart.CanCollide`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CanCollide
-@target(luau)
 @luau.set_property("CanCollide")
 pub fn set_can_collide(instance: FlagStand, value: Bool) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.CanQuery`.
 ///
 /// Determines whether the part is considered during spatial query operations.
@@ -347,10 +366,10 @@ pub fn set_can_collide(instance: FlagStand, value: Bool) -> FlagStand
 /// Roblox: `BasePart.CanQuery`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CanQuery
-@target(luau)
 @luau.property("CanQuery")
 pub fn get_can_query(instance: FlagStand) -> Bool
 
+@target(luau)
 /// Sets Roblox property `BasePart.CanQuery`.
 ///
 /// Determines whether the part is considered during spatial query operations.
@@ -358,10 +377,10 @@ pub fn get_can_query(instance: FlagStand) -> Bool
 /// Roblox: `BasePart.CanQuery`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CanQuery
-@target(luau)
 @luau.set_property("CanQuery")
 pub fn set_can_query(instance: FlagStand, value: Bool) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.CanTouch`.
 ///
 /// Determines if Touched and TouchEnded events fire on the part.
@@ -369,10 +388,10 @@ pub fn set_can_query(instance: FlagStand, value: Bool) -> FlagStand
 /// Roblox: `BasePart.CanTouch`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CanTouch
-@target(luau)
 @luau.property("CanTouch")
 pub fn get_can_touch(instance: FlagStand) -> Bool
 
+@target(luau)
 /// Sets Roblox property `BasePart.CanTouch`.
 ///
 /// Determines if Touched and TouchEnded events fire on the part.
@@ -380,10 +399,10 @@ pub fn get_can_touch(instance: FlagStand) -> Bool
 /// Roblox: `BasePart.CanTouch`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CanTouch
-@target(luau)
 @luau.set_property("CanTouch")
 pub fn set_can_touch(instance: FlagStand, value: Bool) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.CastShadow`.
 ///
 /// Determines whether or not a part casts a shadow.
@@ -391,10 +410,10 @@ pub fn set_can_touch(instance: FlagStand, value: Bool) -> FlagStand
 /// Roblox: `BasePart.CastShadow`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CastShadow
-@target(luau)
 @luau.property("CastShadow")
 pub fn get_cast_shadow(instance: FlagStand) -> Bool
 
+@target(luau)
 /// Sets Roblox property `BasePart.CastShadow`.
 ///
 /// Determines whether or not a part casts a shadow.
@@ -402,10 +421,10 @@ pub fn get_cast_shadow(instance: FlagStand) -> Bool
 /// Roblox: `BasePart.CastShadow`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CastShadow
-@target(luau)
 @luau.set_property("CastShadow")
 pub fn set_cast_shadow(instance: FlagStand, value: Bool) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.CenterOfMass`.
 ///
 /// Describes the world position in which a part's center of mass is located.
@@ -414,10 +433,10 @@ pub fn set_cast_shadow(instance: FlagStand, value: Bool) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CenterOfMass
-@target(luau)
 @luau.property("CenterOfMass")
 pub fn get_center_of_mass(instance: FlagStand) -> Vector3
 
+@target(luau)
 /// Gets Roblox property `BasePart.CollisionGroup`.
 ///
 /// Describes the name of a part's collision group.
@@ -426,10 +445,10 @@ pub fn get_center_of_mass(instance: FlagStand) -> Vector3
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CollisionGroup
-@target(luau)
 @luau.property("CollisionGroup")
 pub fn get_collision_group(instance: FlagStand) -> String
 
+@target(luau)
 /// Sets Roblox property `BasePart.CollisionGroup`.
 ///
 /// Describes the name of a part's collision group.
@@ -438,10 +457,10 @@ pub fn get_collision_group(instance: FlagStand) -> String
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CollisionGroup
-@target(luau)
 @luau.set_property("CollisionGroup")
 pub fn set_collision_group(instance: FlagStand, value: String) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.Color`.
 ///
 /// Determines the color of a part.
@@ -450,10 +469,10 @@ pub fn set_collision_group(instance: FlagStand, value: String) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Color
-@target(luau)
 @luau.property("Color")
 pub fn get_color(instance: FlagStand) -> Color3
 
+@target(luau)
 /// Sets Roblox property `BasePart.Color`.
 ///
 /// Determines the color of a part.
@@ -462,10 +481,10 @@ pub fn get_color(instance: FlagStand) -> Color3
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Color
-@target(luau)
 @luau.set_property("Color")
 pub fn set_color(instance: FlagStand, value: Color3) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.CurrentPhysicalProperties`.
 ///
 /// Indicates the current physical properties of the part.
@@ -474,10 +493,12 @@ pub fn set_color(instance: FlagStand, value: Color3) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CurrentPhysicalProperties
-@target(luau)
 @luau.property("CurrentPhysicalProperties")
-pub fn get_current_physical_properties(instance: FlagStand) -> PhysicalProperties
+pub fn get_current_physical_properties(
+  instance: FlagStand,
+) -> PhysicalProperties
 
+@target(luau)
 /// Gets Roblox property `BasePart.CustomPhysicalProperties`.
 ///
 /// Determines several physical properties of a part.
@@ -485,10 +506,10 @@ pub fn get_current_physical_properties(instance: FlagStand) -> PhysicalPropertie
 /// Roblox: `BasePart.CustomPhysicalProperties`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CustomPhysicalProperties
-@target(luau)
 @luau.property("CustomPhysicalProperties")
 pub fn get_custom_physical_properties(instance: FlagStand) -> PhysicalProperties
 
+@target(luau)
 /// Sets Roblox property `BasePart.CustomPhysicalProperties`.
 ///
 /// Determines several physical properties of a part.
@@ -496,10 +517,13 @@ pub fn get_custom_physical_properties(instance: FlagStand) -> PhysicalProperties
 /// Roblox: `BasePart.CustomPhysicalProperties`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#CustomPhysicalProperties
-@target(luau)
 @luau.set_property("CustomPhysicalProperties")
-pub fn set_custom_physical_properties(instance: FlagStand, value: PhysicalProperties) -> FlagStand
+pub fn set_custom_physical_properties(
+  instance: FlagStand,
+  value: PhysicalProperties,
+) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.EnableFluidForces`.
 ///
 /// Used to enable or disable aerodynamic forces on parts and assemblies.
@@ -507,10 +531,10 @@ pub fn set_custom_physical_properties(instance: FlagStand, value: PhysicalProper
 /// Roblox: `BasePart.EnableFluidForces`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#EnableFluidForces
-@target(luau)
 @luau.property("EnableFluidForces")
 pub fn get_enable_fluid_forces(instance: FlagStand) -> Bool
 
+@target(luau)
 /// Sets Roblox property `BasePart.EnableFluidForces`.
 ///
 /// Used to enable or disable aerodynamic forces on parts and assemblies.
@@ -518,10 +542,10 @@ pub fn get_enable_fluid_forces(instance: FlagStand) -> Bool
 /// Roblox: `BasePart.EnableFluidForces`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#EnableFluidForces
-@target(luau)
 @luau.set_property("EnableFluidForces")
 pub fn set_enable_fluid_forces(instance: FlagStand, value: Bool) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.ExtentsCFrame`.
 ///
 /// The CFrame of the physical extents of the BasePart.
@@ -530,10 +554,10 @@ pub fn set_enable_fluid_forces(instance: FlagStand, value: Bool) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#ExtentsCFrame
-@target(luau)
 @luau.property("ExtentsCFrame")
 pub fn get_extents_cframe(instance: FlagStand) -> CFrame
 
+@target(luau)
 /// Gets Roblox property `BasePart.ExtentsSize`.
 ///
 /// The actual physical size of the BasePart as regarded by the physics engine.
@@ -542,10 +566,10 @@ pub fn get_extents_cframe(instance: FlagStand) -> CFrame
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#ExtentsSize
-@target(luau)
 @luau.property("ExtentsSize")
 pub fn get_extents_size(instance: FlagStand) -> Vector3
 
+@target(luau)
 /// Gets Roblox property `BasePart.FrontSurface`.
 ///
 /// Determines the type of surface for the front face of a part.
@@ -553,10 +577,10 @@ pub fn get_extents_size(instance: FlagStand) -> Vector3
 /// Roblox: `BasePart.FrontSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#FrontSurface
-@target(luau)
 @luau.property("FrontSurface")
 pub fn get_front_surface(instance: FlagStand) -> SurfaceType
 
+@target(luau)
 /// Sets Roblox property `BasePart.FrontSurface`.
 ///
 /// Determines the type of surface for the front face of a part.
@@ -564,10 +588,10 @@ pub fn get_front_surface(instance: FlagStand) -> SurfaceType
 /// Roblox: `BasePart.FrontSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#FrontSurface
-@target(luau)
 @luau.set_property("FrontSurface")
 pub fn set_front_surface(instance: FlagStand, value: SurfaceType) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.LeftSurface`.
 ///
 /// Determines the type of surface for the left face of a part.
@@ -575,10 +599,10 @@ pub fn set_front_surface(instance: FlagStand, value: SurfaceType) -> FlagStand
 /// Roblox: `BasePart.LeftSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#LeftSurface
-@target(luau)
 @luau.property("LeftSurface")
 pub fn get_left_surface(instance: FlagStand) -> SurfaceType
 
+@target(luau)
 /// Sets Roblox property `BasePart.LeftSurface`.
 ///
 /// Determines the type of surface for the left face of a part.
@@ -586,10 +610,10 @@ pub fn get_left_surface(instance: FlagStand) -> SurfaceType
 /// Roblox: `BasePart.LeftSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#LeftSurface
-@target(luau)
 @luau.set_property("LeftSurface")
 pub fn set_left_surface(instance: FlagStand, value: SurfaceType) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.LocalTransparencyModifier`.
 ///
 /// Determines a multiplier for BasePart.Transparency that is only visible to the local client.
@@ -598,10 +622,10 @@ pub fn set_left_surface(instance: FlagStand, value: SurfaceType) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#LocalTransparencyModifier
-@target(luau)
 @luau.property("LocalTransparencyModifier")
 pub fn get_local_transparency_modifier(instance: FlagStand) -> Float
 
+@target(luau)
 /// Sets Roblox property `BasePart.LocalTransparencyModifier`.
 ///
 /// Determines a multiplier for BasePart.Transparency that is only visible to the local client.
@@ -610,10 +634,13 @@ pub fn get_local_transparency_modifier(instance: FlagStand) -> Float
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#LocalTransparencyModifier
-@target(luau)
 @luau.set_property("LocalTransparencyModifier")
-pub fn set_local_transparency_modifier(instance: FlagStand, value: Float) -> FlagStand
+pub fn set_local_transparency_modifier(
+  instance: FlagStand,
+  value: Float,
+) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.Locked`.
 ///
 /// Determines whether a part is selectable in Studio.
@@ -621,10 +648,10 @@ pub fn set_local_transparency_modifier(instance: FlagStand, value: Float) -> Fla
 /// Roblox: `BasePart.Locked`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Locked
-@target(luau)
 @luau.property("Locked")
 pub fn get_locked(instance: FlagStand) -> Bool
 
+@target(luau)
 /// Sets Roblox property `BasePart.Locked`.
 ///
 /// Determines whether a part is selectable in Studio.
@@ -632,10 +659,10 @@ pub fn get_locked(instance: FlagStand) -> Bool
 /// Roblox: `BasePart.Locked`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Locked
-@target(luau)
 @luau.set_property("Locked")
 pub fn set_locked(instance: FlagStand, value: Bool) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.Mass`.
 ///
 /// Describes the mass of the part, the product of its density and volume.
@@ -644,10 +671,10 @@ pub fn set_locked(instance: FlagStand, value: Bool) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Mass
-@target(luau)
 @luau.property("Mass")
 pub fn get_mass(instance: FlagStand) -> Float
 
+@target(luau)
 /// Gets Roblox property `BasePart.Massless`.
 ///
 /// Determines whether the part contributes to the total mass or inertia of its rigid body.
@@ -655,10 +682,10 @@ pub fn get_mass(instance: FlagStand) -> Float
 /// Roblox: `BasePart.Massless`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Massless
-@target(luau)
 @luau.property("Massless")
 pub fn get_massless(instance: FlagStand) -> Bool
 
+@target(luau)
 /// Sets Roblox property `BasePart.Massless`.
 ///
 /// Determines whether the part contributes to the total mass or inertia of its rigid body.
@@ -666,10 +693,10 @@ pub fn get_massless(instance: FlagStand) -> Bool
 /// Roblox: `BasePart.Massless`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Massless
-@target(luau)
 @luau.set_property("Massless")
 pub fn set_massless(instance: FlagStand, value: Bool) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.Material`.
 ///
 /// Determines the texture and default physical properties of a part.
@@ -677,10 +704,10 @@ pub fn set_massless(instance: FlagStand, value: Bool) -> FlagStand
 /// Roblox: `BasePart.Material`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Material
-@target(luau)
 @luau.property("Material")
 pub fn get_material(instance: FlagStand) -> Material
 
+@target(luau)
 /// Sets Roblox property `BasePart.Material`.
 ///
 /// Determines the texture and default physical properties of a part.
@@ -688,10 +715,10 @@ pub fn get_material(instance: FlagStand) -> Material
 /// Roblox: `BasePart.Material`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Material
-@target(luau)
 @luau.set_property("Material")
 pub fn set_material(instance: FlagStand, value: Material) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.MaterialVariant`.
 ///
 /// The name of MaterialVariant.
@@ -700,10 +727,10 @@ pub fn set_material(instance: FlagStand, value: Material) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#MaterialVariant
-@target(luau)
 @luau.property("MaterialVariant")
 pub fn get_material_variant(instance: FlagStand) -> String
 
+@target(luau)
 /// Sets Roblox property `BasePart.MaterialVariant`.
 ///
 /// The name of MaterialVariant.
@@ -712,10 +739,10 @@ pub fn get_material_variant(instance: FlagStand) -> String
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#MaterialVariant
-@target(luau)
 @luau.set_property("MaterialVariant")
 pub fn set_material_variant(instance: FlagStand, value: String) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.Orientation`.
 ///
 /// Describes the rotation of the part in the world.
@@ -724,10 +751,10 @@ pub fn set_material_variant(instance: FlagStand, value: String) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Orientation
-@target(luau)
 @luau.property("Orientation")
 pub fn get_orientation(instance: FlagStand) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `BasePart.Orientation`.
 ///
 /// Describes the rotation of the part in the world.
@@ -736,10 +763,10 @@ pub fn get_orientation(instance: FlagStand) -> Vector3
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Orientation
-@target(luau)
 @luau.set_property("Orientation")
 pub fn set_orientation(instance: FlagStand, value: Vector3) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.PivotOffset`.
 ///
 /// Specifies the offset of the part's pivot from its CFrame.
@@ -747,10 +774,10 @@ pub fn set_orientation(instance: FlagStand, value: Vector3) -> FlagStand
 /// Roblox: `BasePart.PivotOffset`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#PivotOffset
-@target(luau)
 @luau.property("PivotOffset")
 pub fn get_pivot_offset(instance: FlagStand) -> CFrame
 
+@target(luau)
 /// Sets Roblox property `BasePart.PivotOffset`.
 ///
 /// Specifies the offset of the part's pivot from its CFrame.
@@ -758,10 +785,10 @@ pub fn get_pivot_offset(instance: FlagStand) -> CFrame
 /// Roblox: `BasePart.PivotOffset`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#PivotOffset
-@target(luau)
 @luau.set_property("PivotOffset")
 pub fn set_pivot_offset(instance: FlagStand, value: CFrame) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.Position`.
 ///
 /// Describes the position of the part in the world.
@@ -770,10 +797,10 @@ pub fn set_pivot_offset(instance: FlagStand, value: CFrame) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Position
-@target(luau)
 @luau.property("Position")
 pub fn get_position(instance: FlagStand) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `BasePart.Position`.
 ///
 /// Describes the position of the part in the world.
@@ -782,10 +809,10 @@ pub fn get_position(instance: FlagStand) -> Vector3
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Position
-@target(luau)
 @luau.set_property("Position")
 pub fn set_position(instance: FlagStand, value: Vector3) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.ReceiveAge`.
 ///
 /// Time since last recorded physics update.
@@ -794,10 +821,10 @@ pub fn set_position(instance: FlagStand, value: Vector3) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#ReceiveAge
-@target(luau)
 @luau.property("ReceiveAge")
 pub fn get_receive_age(instance: FlagStand) -> Float
 
+@target(luau)
 /// Gets Roblox property `BasePart.Reflectance`.
 ///
 /// Determines how much a part reflects the skybox.
@@ -805,10 +832,10 @@ pub fn get_receive_age(instance: FlagStand) -> Float
 /// Roblox: `BasePart.Reflectance`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Reflectance
-@target(luau)
 @luau.property("Reflectance")
 pub fn get_reflectance(instance: FlagStand) -> Float
 
+@target(luau)
 /// Sets Roblox property `BasePart.Reflectance`.
 ///
 /// Determines how much a part reflects the skybox.
@@ -816,10 +843,10 @@ pub fn get_reflectance(instance: FlagStand) -> Float
 /// Roblox: `BasePart.Reflectance`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Reflectance
-@target(luau)
 @luau.set_property("Reflectance")
 pub fn set_reflectance(instance: FlagStand, value: Float) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.ResizeIncrement`.
 ///
 /// Describes the smallest change in size allowable by the Resize() method.
@@ -828,10 +855,10 @@ pub fn set_reflectance(instance: FlagStand, value: Float) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#ResizeIncrement
-@target(luau)
 @luau.property("ResizeIncrement")
 pub fn get_resize_increment(instance: FlagStand) -> Int
 
+@target(luau)
 /// Gets Roblox property `BasePart.ResizeableFaces`.
 ///
 /// Describes the faces on which a part may be resized.
@@ -840,10 +867,10 @@ pub fn get_resize_increment(instance: FlagStand) -> Int
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#ResizeableFaces
-@target(luau)
 @luau.property("ResizeableFaces")
 pub fn get_resizeable_faces(instance: FlagStand) -> Faces
 
+@target(luau)
 /// Gets Roblox property `BasePart.RightSurface`.
 ///
 /// Determines the type of surface for the right face of a part.
@@ -851,10 +878,10 @@ pub fn get_resizeable_faces(instance: FlagStand) -> Faces
 /// Roblox: `BasePart.RightSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#RightSurface
-@target(luau)
 @luau.property("RightSurface")
 pub fn get_right_surface(instance: FlagStand) -> SurfaceType
 
+@target(luau)
 /// Sets Roblox property `BasePart.RightSurface`.
 ///
 /// Determines the type of surface for the right face of a part.
@@ -862,10 +889,10 @@ pub fn get_right_surface(instance: FlagStand) -> SurfaceType
 /// Roblox: `BasePart.RightSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#RightSurface
-@target(luau)
 @luau.set_property("RightSurface")
 pub fn set_right_surface(instance: FlagStand, value: SurfaceType) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.RootPriority`.
 ///
 /// The main rule in determining the root part of an assembly.
@@ -873,10 +900,10 @@ pub fn set_right_surface(instance: FlagStand, value: SurfaceType) -> FlagStand
 /// Roblox: `BasePart.RootPriority`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#RootPriority
-@target(luau)
 @luau.property("RootPriority")
 pub fn get_root_priority(instance: FlagStand) -> Int
 
+@target(luau)
 /// Sets Roblox property `BasePart.RootPriority`.
 ///
 /// The main rule in determining the root part of an assembly.
@@ -884,10 +911,10 @@ pub fn get_root_priority(instance: FlagStand) -> Int
 /// Roblox: `BasePart.RootPriority`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#RootPriority
-@target(luau)
 @luau.set_property("RootPriority")
 pub fn set_root_priority(instance: FlagStand, value: Int) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.Rotation`.
 ///
 /// The rotation of the part in degrees for the three axes.
@@ -896,10 +923,10 @@ pub fn set_root_priority(instance: FlagStand, value: Int) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Rotation
-@target(luau)
 @luau.property("Rotation")
 pub fn get_rotation(instance: FlagStand) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `BasePart.Rotation`.
 ///
 /// The rotation of the part in degrees for the three axes.
@@ -908,10 +935,10 @@ pub fn get_rotation(instance: FlagStand) -> Vector3
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Rotation
-@target(luau)
 @luau.set_property("Rotation")
 pub fn set_rotation(instance: FlagStand, value: Vector3) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.Size`.
 ///
 /// Determines the dimensions of a part (length, width, height).
@@ -920,10 +947,10 @@ pub fn set_rotation(instance: FlagStand, value: Vector3) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Size
-@target(luau)
 @luau.property("Size")
 pub fn get_size(instance: FlagStand) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `BasePart.Size`.
 ///
 /// Determines the dimensions of a part (length, width, height).
@@ -932,10 +959,10 @@ pub fn get_size(instance: FlagStand) -> Vector3
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Size
-@target(luau)
 @luau.set_property("Size")
 pub fn set_size(instance: FlagStand, value: Vector3) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.TopSurface`.
 ///
 /// Determines the type of surface for the top face of a part.
@@ -943,10 +970,10 @@ pub fn set_size(instance: FlagStand, value: Vector3) -> FlagStand
 /// Roblox: `BasePart.TopSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#TopSurface
-@target(luau)
 @luau.property("TopSurface")
 pub fn get_top_surface(instance: FlagStand) -> SurfaceType
 
+@target(luau)
 /// Sets Roblox property `BasePart.TopSurface`.
 ///
 /// Determines the type of surface for the top face of a part.
@@ -954,10 +981,10 @@ pub fn get_top_surface(instance: FlagStand) -> SurfaceType
 /// Roblox: `BasePart.TopSurface`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#TopSurface
-@target(luau)
 @luau.set_property("TopSurface")
 pub fn set_top_surface(instance: FlagStand, value: SurfaceType) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `BasePart.Transparency`.
 ///
 /// Determines how much a part can be seen through (the inverse of part opacity).
@@ -965,10 +992,10 @@ pub fn set_top_surface(instance: FlagStand, value: SurfaceType) -> FlagStand
 /// Roblox: `BasePart.Transparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Transparency
-@target(luau)
 @luau.property("Transparency")
 pub fn get_transparency(instance: FlagStand) -> Float
 
+@target(luau)
 /// Sets Roblox property `BasePart.Transparency`.
 ///
 /// Determines how much a part can be seen through (the inverse of part opacity).
@@ -976,20 +1003,24 @@ pub fn get_transparency(instance: FlagStand) -> Float
 /// Roblox: `BasePart.Transparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Transparency
-@target(luau)
 @luau.set_property("Transparency")
 pub fn set_transparency(instance: FlagStand, value: Float) -> FlagStand
 
+@target(luau)
 /// Roblox: `BasePart.AngularAccelerationToTorque`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#AngularAccelerationToTorque
 ///
 /// Parameters:
 /// - `instance`: The abstract base class for in-world objects that physically interact.
-@target(luau)
 @luau.method("AngularAccelerationToTorque")
-pub fn angular_acceleration_to_torque(instance: FlagStand, ang_acceleration: Vector3, ang_velocity: Vector3) -> Vector3
+pub fn angular_acceleration_to_torque(
+  instance: FlagStand,
+  ang_acceleration: Vector3,
+  ang_velocity: Vector3,
+) -> Vector3
 
+@target(luau)
 /// Apply an angular impulse to the assembly.
 ///
 /// Roblox: `BasePart.ApplyAngularImpulse`
@@ -999,10 +1030,10 @@ pub fn angular_acceleration_to_torque(instance: FlagStand, ang_acceleration: Vec
 /// Parameters:
 /// - `instance`: The abstract base class for in-world objects that physically interact.
 /// - `impulse`: An angular impulse vector to be applied to the assembly.
-@target(luau)
 @luau.method("ApplyAngularImpulse")
 pub fn apply_angular_impulse(instance: FlagStand, impulse: Vector3) -> Nil
 
+@target(luau)
 /// Apply an impulse to the assembly at the assembly's center of mass.
 ///
 /// Roblox: `BasePart.ApplyImpulse`
@@ -1012,10 +1043,10 @@ pub fn apply_angular_impulse(instance: FlagStand, impulse: Vector3) -> Nil
 /// Parameters:
 /// - `instance`: The abstract base class for in-world objects that physically interact.
 /// - `impulse`: A linear impulse vector to be applied to the assembly.
-@target(luau)
 @luau.method("ApplyImpulse")
 pub fn apply_impulse(instance: FlagStand, impulse: Vector3) -> Nil
 
+@target(luau)
 /// Apply an impulse to the assembly at specified position.
 ///
 /// Roblox: `BasePart.ApplyImpulseAtPosition`
@@ -1026,10 +1057,14 @@ pub fn apply_impulse(instance: FlagStand, impulse: Vector3) -> Nil
 /// - `instance`: The abstract base class for in-world objects that physically interact.
 /// - `impulse`: An impulse vector to be applied to the assembly.
 /// - `position`: The position, in world space, to apply the impulse.
-@target(luau)
 @luau.method("ApplyImpulseAtPosition")
-pub fn apply_impulse_at_position(instance: FlagStand, impulse: Vector3, position: Vector3) -> Nil
+pub fn apply_impulse_at_position(
+  instance: FlagStand,
+  impulse: Vector3,
+  position: Vector3,
+) -> Nil
 
+@target(luau)
 /// Returns whether the parts can collide with each other.
 ///
 /// Roblox: `BasePart.CanCollideWith`
@@ -1042,10 +1077,10 @@ pub fn apply_impulse_at_position(instance: FlagStand, impulse: Vector3, position
 ///
 /// Returns:
 /// - Whether the parts can collide with each other.
-@target(luau)
 @luau.method("CanCollideWith")
 pub fn can_collide_with(instance: FlagStand, part: BasePart) -> Bool
 
+@target(luau)
 /// Checks whether you can set a part's network ownership.
 ///
 /// Roblox: `BasePart.CanSetNetworkOwnership`
@@ -1057,20 +1092,23 @@ pub fn can_collide_with(instance: FlagStand, part: BasePart) -> Bool
 ///
 /// Returns:
 /// - Whether you can modify or read the network ownership and the reason.
-@target(luau)
 @luau.method("CanSetNetworkOwnership")
 pub fn can_set_network_ownership(instance: FlagStand) -> Dynamic
 
+@target(luau)
 /// Roblox: `BasePart.GetClosestPointOnSurface`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#GetClosestPointOnSurface
 ///
 /// Parameters:
 /// - `instance`: The abstract base class for in-world objects that physically interact.
-@target(luau)
 @luau.method("GetClosestPointOnSurface")
-pub fn get_closest_point_on_surface(instance: FlagStand, position: Vector3) -> Vector3
+pub fn get_closest_point_on_surface(
+  instance: FlagStand,
+  position: Vector3,
+) -> Vector3
 
+@target(luau)
 /// Returns a table of parts connected to the object by any kind of rigid joint.
 ///
 /// Roblox: `BasePart.GetConnectedParts`
@@ -1080,10 +1118,13 @@ pub fn get_closest_point_on_surface(instance: FlagStand, position: Vector3) -> V
 /// Parameters:
 /// - `instance`: The abstract base class for in-world objects that physically interact.
 /// - `recursive`: A table of parts connected to the object by any kind of joint.
-@target(luau)
 @luau.method("GetConnectedParts")
-pub fn get_connected_parts(instance: FlagStand, recursive: Bool) -> List(Instance)
+pub fn get_connected_parts(
+  instance: FlagStand,
+  recursive: Bool,
+) -> List(Instance)
 
+@target(luau)
 /// Return all Joints or Constraints that is connected to this Part.
 ///
 /// Roblox: `BasePart.GetJoints`
@@ -1095,10 +1136,10 @@ pub fn get_connected_parts(instance: FlagStand, recursive: Bool) -> List(Instanc
 ///
 /// Returns:
 /// - An array of all Joints or Constraints connected to the Part.
-@target(luau)
 @luau.method("GetJoints")
 pub fn get_joints(instance: FlagStand) -> List(Instance)
 
+@target(luau)
 /// Returns the current player who is the network owner of this part, or nil in case of the server.
 ///
 /// Roblox: `BasePart.GetNetworkOwner`
@@ -1110,10 +1151,10 @@ pub fn get_joints(instance: FlagStand) -> List(Instance)
 ///
 /// Returns:
 /// - The current player who is the network owner of this part, or nil in case of the server.
-@target(luau)
 @luau.method("GetNetworkOwner")
 pub fn get_network_owner(instance: FlagStand) -> Instance
 
+@target(luau)
 /// Returns true if the game engine automatically decides the network owner for this part.
 ///
 /// Roblox: `BasePart.GetNetworkOwnershipAuto`
@@ -1125,20 +1166,20 @@ pub fn get_network_owner(instance: FlagStand) -> Instance
 ///
 /// Returns:
 /// - Whether the game engine automatically decides the network owner for this part.
-@target(luau)
 @luau.method("GetNetworkOwnershipAuto")
 pub fn get_network_ownership_auto(instance: FlagStand) -> Bool
 
+@target(luau)
 /// Roblox: `BasePart.GetNoCollisionConstraints`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#GetNoCollisionConstraints
 ///
 /// Parameters:
 /// - `instance`: The abstract base class for in-world objects that physically interact.
-@target(luau)
 @luau.method("GetNoCollisionConstraints")
 pub fn get_no_collision_constraints(instance: FlagStand) -> List(Instance)
 
+@target(luau)
 /// Returns a table of all BasePart.CanCollide true parts that intersect with this part.
 ///
 /// Roblox: `BasePart.GetTouchingParts`
@@ -1150,10 +1191,10 @@ pub fn get_no_collision_constraints(instance: FlagStand) -> List(Instance)
 ///
 /// Returns:
 /// - A table of all parts that intersect and can collide with this part.
-@target(luau)
 @luau.method("GetTouchingParts")
 pub fn get_touching_parts(instance: FlagStand) -> List(Instance)
 
+@target(luau)
 /// Returns the linear velocity of the part's assembly at the given position relative to this part.
 ///
 /// Roblox: `BasePart.GetVelocityAtPosition`
@@ -1162,10 +1203,13 @@ pub fn get_touching_parts(instance: FlagStand) -> List(Instance)
 ///
 /// Parameters:
 /// - `instance`: The abstract base class for in-world objects that physically interact.
-@target(luau)
 @luau.method("GetVelocityAtPosition")
-pub fn get_velocity_at_position(instance: FlagStand, position: Vector3) -> Vector3
+pub fn get_velocity_at_position(
+  instance: FlagStand,
+  position: Vector3,
+) -> Vector3
 
+@target(luau)
 /// Returns true if the object is connected to a part that will hold it in place (eg an Anchored part), otherwise returns false.
 ///
 /// Roblox: `BasePart.IsGrounded`
@@ -1177,10 +1221,10 @@ pub fn get_velocity_at_position(instance: FlagStand, position: Vector3) -> Vecto
 ///
 /// Returns:
 /// - Whether the object is connected to a part that will hold it in place.
-@target(luau)
 @luau.method("IsGrounded")
 pub fn is_grounded(instance: FlagStand) -> Bool
 
+@target(luau)
 /// Changes the size of an object just like using the Studio resize tool.
 ///
 /// Roblox: `BasePart.Resize`
@@ -1194,10 +1238,14 @@ pub fn is_grounded(instance: FlagStand) -> Bool
 ///
 /// Returns:
 /// - Whether the part is resized.
-@target(luau)
 @luau.method("Resize")
-pub fn resize(instance: FlagStand, normal_id: NormalId, delta_amount: Int) -> Bool
+pub fn resize(
+  instance: FlagStand,
+  normal_id: NormalId,
+  delta_amount: Int,
+) -> Bool
 
+@target(luau)
 /// Sets the given player as network owner for this and all connected parts.
 ///
 /// Roblox: `BasePart.SetNetworkOwner`
@@ -1207,10 +1255,10 @@ pub fn resize(instance: FlagStand, normal_id: NormalId, delta_amount: Int) -> Bo
 /// Parameters:
 /// - `instance`: The abstract base class for in-world objects that physically interact.
 /// - `playerInstance`: The player being given network ownership of the part.
-@target(luau)
 @luau.method("SetNetworkOwner")
 pub fn set_network_owner(instance: FlagStand, player_instance: Player) -> Nil
 
+@target(luau)
 /// Lets the game engine dynamically decide who will handle the part's physics (one of the clients or the server).
 ///
 /// Roblox: `BasePart.SetNetworkOwnershipAuto`
@@ -1219,20 +1267,24 @@ pub fn set_network_owner(instance: FlagStand, player_instance: Player) -> Nil
 ///
 /// Parameters:
 /// - `instance`: The abstract base class for in-world objects that physically interact.
-@target(luau)
 @luau.method("SetNetworkOwnershipAuto")
 pub fn set_network_ownership_auto(instance: FlagStand) -> Nil
 
+@target(luau)
 /// Roblox: `BasePart.TorqueToAngularAcceleration`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#TorqueToAngularAcceleration
 ///
 /// Parameters:
 /// - `instance`: The abstract base class for in-world objects that physically interact.
-@target(luau)
 @luau.method("TorqueToAngularAcceleration")
-pub fn torque_to_angular_acceleration(instance: FlagStand, torque: Vector3, ang_velocity: Vector3) -> Vector3
+pub fn torque_to_angular_acceleration(
+  instance: FlagStand,
+  torque: Vector3,
+  ang_velocity: Vector3,
+) -> Vector3
 
+@target(luau)
 /// Note: It is highly recommended to use the newer GeometryService:IntersectAsync instead of this function. As well as having better performance and more features, the new function differs as follows: The output is an array of instances rather than a single instance. The input parts do not need to be parented to the scene, allowing for background operations. When the SplitApart option is set to true (default), each distinct body will be returned in its own PartOperation. All the returned parts are in the coordinate space of the main part, so their PVInstance.Origin positions are the same as the main part's. This keeps the vertices of the mesh in the same position relative to the object as before the operation, but it does also mean the (0, 0, 0) of a returned part is not necessarily at the center of its body. Creates a new IntersectOperation from the overlapping geometry of the part and the other parts in the given array.
 ///
 /// Roblox: `BasePart.IntersectAsync`
@@ -1248,10 +1300,15 @@ pub fn torque_to_angular_acceleration(instance: FlagStand, torque: Vector3, ang_
 ///
 /// Returns:
 /// - Resulting IntersectOperation with default name Intersect.
-@target(luau)
 @luau.method("IntersectAsync")
-pub fn intersect_async(instance: FlagStand, parts: List(Instance), collisionfidelity: CollisionFidelity, render_fidelity: RenderFidelity) -> Instance
+pub fn intersect_async(
+  instance: FlagStand,
+  parts: List(Instance),
+  collisionfidelity: CollisionFidelity,
+  render_fidelity: RenderFidelity,
+) -> Instance
 
+@target(luau)
 /// Note: It is highly recommended to use the newer GeometryService:UnionAsync instead of this function. As well as having better performance and more features, the new function differs as follows: The output is an array of instances rather than a single instance. The input parts do not need to be parented to the scene, allowing for background operations. When the SplitApart option is set to true (default), each distinct body will be returned in its own PartOperation. All the returned parts are in the coordinate space of the main part, so their PVInstance.Origin positions are the same as the main part's. This keeps the vertices of the mesh in the same position relative to the object as before the operation, but it does also mean the (0, 0, 0) of a returned part is not necessarily at the center of its body. Creates a new UnionOperation from the part, minus the geometry occupied by the parts in the given array.
 ///
 /// Roblox: `BasePart.SubtractAsync`
@@ -1267,10 +1324,15 @@ pub fn intersect_async(instance: FlagStand, parts: List(Instance), collisionfide
 ///
 /// Returns:
 /// - Resulting UnionOperation with default name Union.
-@target(luau)
 @luau.method("SubtractAsync")
-pub fn subtract_async(instance: FlagStand, parts: List(Instance), collisionfidelity: CollisionFidelity, render_fidelity: RenderFidelity) -> Instance
+pub fn subtract_async(
+  instance: FlagStand,
+  parts: List(Instance),
+  collisionfidelity: CollisionFidelity,
+  render_fidelity: RenderFidelity,
+) -> Instance
 
+@target(luau)
 /// Note: It is highly recommended to use the newer GeometryService:UnionAsync instead of this function. As well as having better performance and more features, the new function differs as follows: The output is an array of instances rather than a single instance. The input parts do not need to be parented to the scene, allowing for background operations. When the SplitApart option is set to true (default), each distinct body will be returned in its own PartOperation. All the returned parts are in the coordinate space of the main part, so their PVInstance.Origin positions are the same as the main part's. This keeps the vertices of the mesh in the same position relative to the object as before the operation, but it does also mean the (0, 0, 0) of a returned part is not necessarily at the center of its body.Creates a new `UnionOperation` from the part, plus the geometry occupied by the parts in the given array.
 ///
 /// Roblox: `BasePart.UnionAsync`
@@ -1286,19 +1348,24 @@ pub fn subtract_async(instance: FlagStand, parts: List(Instance), collisionfidel
 ///
 /// Returns:
 /// - Resulting UnionOperation with default name Union.
-@target(luau)
 @luau.method("UnionAsync")
-pub fn union_async(instance: FlagStand, parts: List(Instance), collisionfidelity: CollisionFidelity, render_fidelity: RenderFidelity) -> Instance
+pub fn union_async(
+  instance: FlagStand,
+  parts: List(Instance),
+  collisionfidelity: CollisionFidelity,
+  render_fidelity: RenderFidelity,
+) -> Instance
 
+@target(luau)
 /// Fires when a part stops touching another part as a result of physical movement.
 ///
 /// Roblox: `BasePart.TouchEnded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#TouchEnded
-@target(luau)
 @luau.event("TouchEnded")
 pub fn touch_ended(instance: FlagStand) -> RBXScriptSignal(fn(BasePart) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `BasePart.TouchEnded`.
 ///
 /// Fires when a part stops touching another part as a result of physical movement.
@@ -1306,19 +1373,22 @@ pub fn touch_ended(instance: FlagStand) -> RBXScriptSignal(fn(BasePart) -> Nil)
 /// Roblox: `BasePart.TouchEnded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#TouchEnded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchEnded:Connect(callback) end)")
-pub fn on_touch_ended(instance: FlagStand, callback: fn(BasePart) -> Nil) -> RBXScriptConnection
+pub fn on_touch_ended(
+  instance: FlagStand,
+  callback: fn(BasePart) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a part touches another part as a result of physical movement.
 ///
 /// Roblox: `BasePart.Touched`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Touched
-@target(luau)
 @luau.event("Touched")
 pub fn touched(instance: FlagStand) -> RBXScriptSignal(fn(BasePart) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `BasePart.Touched`.
 ///
 /// Fires when a part touches another part as a result of physical movement.
@@ -1326,10 +1396,13 @@ pub fn touched(instance: FlagStand) -> RBXScriptSignal(fn(BasePart) -> Nil)
 /// Roblox: `BasePart.Touched`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BasePart#Touched
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Touched:Connect(callback) end)")
-pub fn on_touched(instance: FlagStand, callback: fn(BasePart) -> Nil) -> RBXScriptConnection
+pub fn on_touched(
+  instance: FlagStand,
+  callback: fn(BasePart) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets the pivot of a PVInstance.
 ///
 /// Roblox: `PVInstance.GetPivot`
@@ -1338,10 +1411,10 @@ pub fn on_touched(instance: FlagStand, callback: fn(BasePart) -> Nil) -> RBXScri
 ///
 /// Parameters:
 /// - `instance`: Abstract class for all objects that have a physical location in the world.
-@target(luau)
 @luau.method("GetPivot")
 pub fn get_pivot(instance: FlagStand) -> CFrame
 
+@target(luau)
 /// Transforms the PVInstance along with all of its descendant PVInstances such that the pivot is now located at the specified CFrame.
 ///
 /// Roblox: `PVInstance.PivotTo`
@@ -1351,10 +1424,10 @@ pub fn get_pivot(instance: FlagStand) -> CFrame
 /// Parameters:
 /// - `instance`: Abstract class for all objects that have a physical location in the world.
 /// - `targetCFrame`: The CFrame that the PVInstance pivot should equal after moving it.
-@target(luau)
 @luau.method("PivotTo")
 pub fn pivot_to(instance: FlagStand, target_cframe: CFrame) -> Nil
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -1362,10 +1435,10 @@ pub fn pivot_to(instance: FlagStand, target_cframe: CFrame) -> Nil
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: FlagStand) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -1373,10 +1446,10 @@ pub fn get_archivable(instance: FlagStand) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: FlagStand, value: Bool) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -1384,10 +1457,10 @@ pub fn set_archivable(instance: FlagStand, value: Bool) -> FlagStand
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: FlagStand) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -1395,10 +1468,13 @@ pub fn get_capabilities(instance: FlagStand) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: FlagStand, value: SecurityCapabilities) -> FlagStand
+pub fn set_capabilities(
+  instance: FlagStand,
+  value: SecurityCapabilities,
+) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -1406,10 +1482,10 @@ pub fn set_capabilities(instance: FlagStand, value: SecurityCapabilities) -> Fla
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: FlagStand) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -1417,10 +1493,10 @@ pub fn get_name(instance: FlagStand) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: FlagStand, value: String) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -1429,10 +1505,10 @@ pub fn set_name(instance: FlagStand, value: String) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: FlagStand) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -1441,10 +1517,10 @@ pub fn get_parent(instance: FlagStand) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: FlagStand, value: parent) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -1453,10 +1529,10 @@ pub fn set_parent(instance: FlagStand, value: parent) -> FlagStand
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: FlagStand) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -1465,10 +1541,10 @@ pub fn get_roblox_locked(instance: FlagStand) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: FlagStand) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -1477,20 +1553,20 @@ pub fn get_sandboxed(instance: FlagStand) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: FlagStand, value: Bool) -> FlagStand
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: FlagStand) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -1499,10 +1575,10 @@ pub fn get_source_asset_id(instance: FlagStand) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: FlagStand) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -1511,10 +1587,10 @@ pub fn get_unique_id(instance: FlagStand) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: FlagStand, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -1523,10 +1599,10 @@ pub fn add_tag(instance: FlagStand, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: FlagStand) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -1535,10 +1611,10 @@ pub fn clear_all_children(instance: FlagStand) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: FlagStand) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -1547,10 +1623,10 @@ pub fn clone(instance: FlagStand) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: FlagStand) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -1563,10 +1639,13 @@ pub fn destroy_instance(instance: FlagStand) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: FlagStand, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: FlagStand,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -1579,10 +1658,13 @@ pub fn find_first_ancestor(instance: FlagStand, name: String) -> Option(Instance
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: FlagStand, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: FlagStand,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -1595,10 +1677,13 @@ pub fn find_first_ancestor_of_class(instance: FlagStand, class_name: String) -> 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: FlagStand, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: FlagStand,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -1612,10 +1697,14 @@ pub fn find_first_ancestor_which_is_a(instance: FlagStand, class_name: String) -
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: FlagStand, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: FlagStand,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -1628,10 +1717,13 @@ pub fn find_first_child(instance: FlagStand, name: String, recursive: Bool) -> O
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: FlagStand, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: FlagStand,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -1645,10 +1737,14 @@ pub fn find_first_child_of_class(instance: FlagStand, class_name: String) -> Opt
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: FlagStand, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: FlagStand,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -1661,10 +1757,13 @@ pub fn find_first_child_which_is_a(instance: FlagStand, class_name: String, recu
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: FlagStand, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: FlagStand,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -1676,10 +1775,10 @@ pub fn find_first_descendant(instance: FlagStand, name: String) -> Option(Instan
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: FlagStand) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -1692,10 +1791,10 @@ pub fn get_actor(instance: FlagStand) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: FlagStand, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -1708,10 +1807,13 @@ pub fn get_attribute(instance: FlagStand, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: FlagStand, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: FlagStand,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -1724,10 +1826,10 @@ pub fn get_attribute_changed_signal(instance: FlagStand, attribute: String) -> R
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: FlagStand) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -1739,10 +1841,10 @@ pub fn get_attributes(instance: FlagStand) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: FlagStand) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -1755,10 +1857,10 @@ pub fn get_children(instance: FlagStand) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: FlagStand) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -1770,10 +1872,10 @@ pub fn get_descendants(instance: FlagStand) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: FlagStand) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -1787,10 +1889,14 @@ pub fn get_full_name(instance: FlagStand) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: FlagStand, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: FlagStand,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -1801,10 +1907,13 @@ pub fn get_styled(instance: FlagStand, name: String, selector: Option(String)) -
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: FlagStand, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: FlagStand,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -1813,10 +1922,10 @@ pub fn get_styled_property_changed_signal(instance: FlagStand, property: String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: FlagStand) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -1825,10 +1934,10 @@ pub fn get_tags(instance: FlagStand) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: FlagStand, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -1841,10 +1950,10 @@ pub fn has_tag(instance: FlagStand, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: FlagStand, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -1857,10 +1966,10 @@ pub fn is_ancestor_of(instance: FlagStand, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: FlagStand, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -1873,10 +1982,10 @@ pub fn is_descendant_of(instance: FlagStand, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: FlagStand, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -1888,10 +1997,13 @@ pub fn is_property_modified(instance: FlagStand, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: FlagStand, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: FlagStand,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -1900,10 +2012,10 @@ pub fn query_descendants(instance: FlagStand, selector: String) -> List(Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: FlagStand, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -1913,10 +2025,10 @@ pub fn remove_tag(instance: FlagStand, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
 pub fn reset_property_to_default(instance: FlagStand, property: String) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -1927,10 +2039,14 @@ pub fn reset_property_to_default(instance: FlagStand, property: String) -> Nil
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: FlagStand, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: FlagStand,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -1945,19 +2061,25 @@ pub fn set_attribute(instance: FlagStand, attribute: String, value: Dynamic) -> 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: FlagStand, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: FlagStand,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: FlagStand) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: FlagStand,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -1965,19 +2087,24 @@ pub fn ancestry_changed(instance: FlagStand) -> RBXScriptSignal(fn(Instance, Ins
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: FlagStand, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: FlagStand,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: FlagStand) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: FlagStand,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -1985,19 +2112,22 @@ pub fn attribute_changed(instance: FlagStand) -> RBXScriptSignal(fn(String) -> N
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: FlagStand, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: FlagStand,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
 pub fn child_added(instance: FlagStand) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -2005,19 +2135,24 @@ pub fn child_added(instance: FlagStand) -> RBXScriptSignal(fn(Instance) -> Nil)
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: FlagStand, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: FlagStand,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: FlagStand) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: FlagStand,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -2025,19 +2160,24 @@ pub fn child_removed(instance: FlagStand) -> RBXScriptSignal(fn(Instance) -> Nil
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: FlagStand, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: FlagStand,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: FlagStand) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: FlagStand,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -2045,19 +2185,24 @@ pub fn descendant_added(instance: FlagStand) -> RBXScriptSignal(fn(Instance) -> 
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: FlagStand, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: FlagStand,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: FlagStand) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: FlagStand,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -2065,19 +2210,22 @@ pub fn descendant_removing(instance: FlagStand) -> RBXScriptSignal(fn(Instance) 
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: FlagStand, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: FlagStand,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: FlagStand) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -2085,19 +2233,24 @@ pub fn destroying(instance: FlagStand) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: FlagStand, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: FlagStand,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: FlagStand) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: FlagStand,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -2105,10 +2258,13 @@ pub fn styled_properties_changed(instance: FlagStand) -> RBXScriptSignal(fn() ->
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: FlagStand, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: FlagStand,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -2117,10 +2273,10 @@ pub fn on_styled_properties_changed(instance: FlagStand, callback: fn() -> Nil) 
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: FlagStand) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -2133,10 +2289,13 @@ pub fn get_class_name(instance: FlagStand) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: FlagStand, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: FlagStand,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -2150,19 +2309,19 @@ pub fn get_property_changed_signal(instance: FlagStand, property: String) -> RBX
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: FlagStand, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: FlagStand) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -2170,12 +2329,43 @@ pub fn changed(instance: FlagStand) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: FlagStand, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: FlagStand,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: CFrame, _: BasePart, _: CollisionFidelity, _: RenderFidelity, _: Vector3, _: Player, _: NormalId, _: SurfaceType, _: Faces, _: Material, _: PhysicalProperties, _: Color3, _: BrickColor, _: PartType, _: FlagStand, _: Part, _: FormFactorPart, _: PVInstance, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: CFrame,
+  _: BasePart,
+  _: CollisionFidelity,
+  _: RenderFidelity,
+  _: Vector3,
+  _: Player,
+  _: NormalId,
+  _: SurfaceType,
+  _: Faces,
+  _: Material,
+  _: PhysicalProperties,
+  _: Color3,
+  _: BrickColor,
+  _: PartType,
+  _: FlagStand,
+  _: Part,
+  _: FormFactorPart,
+  _: PVInstance,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

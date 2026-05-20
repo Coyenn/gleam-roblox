@@ -2,30 +2,32 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type AnnotationChannelContentPreference}
 
+@target(luau)
 /// Gets the Roblox `AnnotationChannelContentPreference` enum object.
 ///
 /// Roblox: `Enum.AnnotationChannelContentPreference`
-@target(luau)
 @luau.global("Enum.AnnotationChannelContentPreference")
 pub fn roblox_enum() -> RobloxEnum(AnnotationChannelContentPreference)
 
-/// Roblox enum item `AnnotationChannelContentPreference.None`.
 @target(luau)
+/// Roblox enum item `AnnotationChannelContentPreference.None`.
 @luau.global("Enum.AnnotationChannelContentPreference.None")
 pub fn none() -> AnnotationChannelContentPreference
 
-/// Roblox enum item `AnnotationChannelContentPreference.All`.
 @target(luau)
+/// Roblox enum item `AnnotationChannelContentPreference.All`.
 @luau.global("Enum.AnnotationChannelContentPreference.All")
 pub fn all() -> AnnotationChannelContentPreference
 
-/// Roblox enum item `AnnotationChannelContentPreference.Unknown`.
 @target(luau)
+/// Roblox enum item `AnnotationChannelContentPreference.Unknown`.
 @luau.global("Enum.AnnotationChannelContentPreference.Unknown")
 pub fn unknown() -> AnnotationChannelContentPreference
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(AnnotationChannelContentPreference), _: AnnotationChannelContentPreference) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(AnnotationChannelContentPreference),
+  _: AnnotationChannelContentPreference,
+) -> Nil {
   Nil
 }

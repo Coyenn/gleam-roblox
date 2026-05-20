@@ -1,19 +1,25 @@
 // Generated declarative builders for Roblox `GeneratedFolder` instances.
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/generated_folder
-import roblox/types.{type GeneratedFolder, type Instance, type SecurityCapabilities}
+import roblox/types.{
+  type GeneratedFolder, type Instance, type SecurityCapabilities,
+}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: GeneratedFolder) -> Instance
 
-/// Creates a declarative Roblox `GeneratedFolder` node.
 @target(luau)
-pub fn node(properties: List(Property(GeneratedFolder)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `GeneratedFolder` node.
+pub fn node(
+  properties: List(Property(GeneratedFolder)),
+  children: List(Node),
+) -> Node {
   let instance = apply(generated_folder.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `GeneratedFolder` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -21,11 +27,11 @@ pub fn node(properties: List(Property(GeneratedFolder)), children: List(Node)) -
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(GeneratedFolder) {
   Property(fn(instance) { generated_folder.set_archivable(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `GeneratedFolder` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -33,11 +39,11 @@ pub fn archivable(value: Bool) -> Property(GeneratedFolder) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 pub fn capabilities(value: SecurityCapabilities) -> Property(GeneratedFolder) {
   Property(fn(instance) { generated_folder.set_capabilities(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `GeneratedFolder` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -45,11 +51,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(GeneratedFolder) {
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(GeneratedFolder) {
   Property(fn(instance) { generated_folder.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `GeneratedFolder` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -58,11 +64,11 @@ pub fn name(value: String) -> Property(GeneratedFolder) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(GeneratedFolder) {
   Property(fn(instance) { generated_folder.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `GeneratedFolder` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -71,13 +77,15 @@ pub fn parent(value: Instance) -> Property(GeneratedFolder) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(GeneratedFolder) {
   Property(fn(instance) { generated_folder.set_sandboxed(instance, value) })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: GeneratedFolder) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: GeneratedFolder,
+) -> Nil {
   Nil
 }

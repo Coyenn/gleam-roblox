@@ -19,7 +19,6 @@ pub fn apply(instance: a, properties: List(Property(a))) -> a {
   }
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(_: Instance) -> Nil {
   Nil

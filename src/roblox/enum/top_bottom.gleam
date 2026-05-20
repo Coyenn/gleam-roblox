@@ -2,29 +2,28 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type TopBottom}
 
+@target(luau)
 /// Sets where the object is on the side of its parent.
 ///
 /// Roblox: `Enum.TopBottom`
 /// See: https://create.roblox.com/docs/reference/engine/enums/TopBottom
-@target(luau)
 @luau.global("Enum.TopBottom")
 pub fn roblox_enum() -> RobloxEnum(TopBottom)
 
-/// Roblox enum item `TopBottom.Top`.
 @target(luau)
+/// Roblox enum item `TopBottom.Top`.
 @luau.global("Enum.TopBottom.Top")
 pub fn top() -> TopBottom
 
-/// Roblox enum item `TopBottom.Center`.
 @target(luau)
+/// Roblox enum item `TopBottom.Center`.
 @luau.global("Enum.TopBottom.Center")
 pub fn center() -> TopBottom
 
-/// Roblox enum item `TopBottom.Bottom`.
 @target(luau)
+/// Roblox enum item `TopBottom.Bottom`.
 @luau.global("Enum.TopBottom.Bottom")
 pub fn bottom() -> TopBottom
-
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(_: RobloxEnum(TopBottom), _: TopBottom) -> Nil {

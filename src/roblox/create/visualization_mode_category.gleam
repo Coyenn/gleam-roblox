@@ -1,19 +1,25 @@
 // Generated declarative builders for Roblox `VisualizationModeCategory` instances.
 import roblox/create.{type Node, type Property, Node, Property, apply}
+import roblox/types.{
+  type Instance, type SecurityCapabilities, type VisualizationModeCategory,
+}
 import roblox/visualization_mode_category
-import roblox/types.{type Instance, type SecurityCapabilities, type VisualizationModeCategory}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: VisualizationModeCategory) -> Instance
 
-/// Creates a declarative Roblox `VisualizationModeCategory` node.
 @target(luau)
-pub fn node(properties: List(Property(VisualizationModeCategory)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `VisualizationModeCategory` node.
+pub fn node(
+  properties: List(Property(VisualizationModeCategory)),
+  children: List(Node),
+) -> Node {
   let instance = apply(visualization_mode_category.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `VisualizationModeCategory` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -21,11 +27,13 @@ pub fn node(properties: List(Property(VisualizationModeCategory)), children: Lis
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(VisualizationModeCategory) {
-  Property(fn(instance) { visualization_mode_category.set_archivable(instance, value) })
+  Property(fn(instance) {
+    visualization_mode_category.set_archivable(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `VisualizationModeCategory` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -33,11 +41,15 @@ pub fn archivable(value: Bool) -> Property(VisualizationModeCategory) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
-pub fn capabilities(value: SecurityCapabilities) -> Property(VisualizationModeCategory) {
-  Property(fn(instance) { visualization_mode_category.set_capabilities(instance, value) })
+pub fn capabilities(
+  value: SecurityCapabilities,
+) -> Property(VisualizationModeCategory) {
+  Property(fn(instance) {
+    visualization_mode_category.set_capabilities(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `VisualizationModeCategory` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -45,11 +57,13 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(VisualizationModeCa
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(VisualizationModeCategory) {
-  Property(fn(instance) { visualization_mode_category.set_name(instance, value) })
+  Property(fn(instance) {
+    visualization_mode_category.set_name(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `VisualizationModeCategory` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -58,11 +72,13 @@ pub fn name(value: String) -> Property(VisualizationModeCategory) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(VisualizationModeCategory) {
-  Property(fn(instance) { visualization_mode_category.set_parent(instance, value) })
+  Property(fn(instance) {
+    visualization_mode_category.set_parent(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `VisualizationModeCategory` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -71,13 +87,17 @@ pub fn parent(value: Instance) -> Property(VisualizationModeCategory) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(VisualizationModeCategory) {
-  Property(fn(instance) { visualization_mode_category.set_sandboxed(instance, value) })
+  Property(fn(instance) {
+    visualization_mode_category.set_sandboxed(instance, value)
+  })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: VisualizationModeCategory) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: VisualizationModeCategory,
+) -> Nil {
   Nil
 }

@@ -1,19 +1,25 @@
 // Generated declarative builders for Roblox `DistortionSoundEffect` instances.
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/distortion_sound_effect
-import roblox/types.{type DistortionSoundEffect, type Instance, type SecurityCapabilities}
+import roblox/types.{
+  type DistortionSoundEffect, type Instance, type SecurityCapabilities,
+}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: DistortionSoundEffect) -> Instance
 
-/// Creates a declarative Roblox `DistortionSoundEffect` node.
 @target(luau)
-pub fn node(properties: List(Property(DistortionSoundEffect)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `DistortionSoundEffect` node.
+pub fn node(
+  properties: List(Property(DistortionSoundEffect)),
+  children: List(Node),
+) -> Node {
   let instance = apply(distortion_sound_effect.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `DistortionSoundEffect.Level` on `DistortionSoundEffect` nodes.
 ///
 /// The intensity of the effect.
@@ -21,11 +27,11 @@ pub fn node(properties: List(Property(DistortionSoundEffect)), children: List(No
 /// Roblox: `DistortionSoundEffect.Level`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/DistortionSoundEffect#Level
-@target(luau)
 pub fn level(value: Float) -> Property(DistortionSoundEffect) {
   Property(fn(instance) { distortion_sound_effect.set_level(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `SoundEffect.Enabled` on `DistortionSoundEffect` nodes.
 ///
 /// Toggles the effect on and off.
@@ -33,11 +39,11 @@ pub fn level(value: Float) -> Property(DistortionSoundEffect) {
 /// Roblox: `SoundEffect.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundEffect#Enabled
-@target(luau)
 pub fn enabled(value: Bool) -> Property(DistortionSoundEffect) {
   Property(fn(instance) { distortion_sound_effect.set_enabled(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `SoundEffect.Priority` on `DistortionSoundEffect` nodes.
 ///
 /// Determines the order the effect will be applied in relation to other effects.
@@ -45,11 +51,13 @@ pub fn enabled(value: Bool) -> Property(DistortionSoundEffect) {
 /// Roblox: `SoundEffect.Priority`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SoundEffect#Priority
-@target(luau)
 pub fn priority(value: Int) -> Property(DistortionSoundEffect) {
-  Property(fn(instance) { distortion_sound_effect.set_priority(instance, value) })
+  Property(fn(instance) {
+    distortion_sound_effect.set_priority(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `DistortionSoundEffect` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -57,11 +65,13 @@ pub fn priority(value: Int) -> Property(DistortionSoundEffect) {
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(DistortionSoundEffect) {
-  Property(fn(instance) { distortion_sound_effect.set_archivable(instance, value) })
+  Property(fn(instance) {
+    distortion_sound_effect.set_archivable(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `DistortionSoundEffect` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -69,11 +79,15 @@ pub fn archivable(value: Bool) -> Property(DistortionSoundEffect) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
-pub fn capabilities(value: SecurityCapabilities) -> Property(DistortionSoundEffect) {
-  Property(fn(instance) { distortion_sound_effect.set_capabilities(instance, value) })
+pub fn capabilities(
+  value: SecurityCapabilities,
+) -> Property(DistortionSoundEffect) {
+  Property(fn(instance) {
+    distortion_sound_effect.set_capabilities(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `DistortionSoundEffect` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -81,11 +95,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(DistortionSoundEffe
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(DistortionSoundEffect) {
   Property(fn(instance) { distortion_sound_effect.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `DistortionSoundEffect` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -94,11 +108,11 @@ pub fn name(value: String) -> Property(DistortionSoundEffect) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(DistortionSoundEffect) {
   Property(fn(instance) { distortion_sound_effect.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `DistortionSoundEffect` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -107,13 +121,17 @@ pub fn parent(value: Instance) -> Property(DistortionSoundEffect) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(DistortionSoundEffect) {
-  Property(fn(instance) { distortion_sound_effect.set_sandboxed(instance, value) })
+  Property(fn(instance) {
+    distortion_sound_effect.set_sandboxed(instance, value)
+  })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: DistortionSoundEffect) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: DistortionSoundEffect,
+) -> Nil {
   Nil
 }

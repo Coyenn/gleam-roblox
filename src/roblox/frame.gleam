@@ -1,41 +1,50 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type AutomaticSize, type BorderMode, type Color3, type EasingDirection, type EasingStyle, type Frame, type FrameStyle, type GuiBase, type GuiBase2d, type GuiObject, type GuiState, type InputObject, type InputSink, type Instance, type LocalizationTable, type Object, type OptionDouble, type OptionInt64, type Rect, type SecurityCapabilities, type SelectionBehavior, type SizeConstraint, type SwipeDirection, type UDim2, type UniqueId, type UserInputState, type Vector2}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type AutomaticSize, type BorderMode, type Color3,
+  type EasingDirection, type EasingStyle, type Frame, type FrameStyle,
+  type GuiBase, type GuiBase2d, type GuiObject, type GuiState, type InputObject,
+  type InputSink, type Instance, type LocalizationTable, type Object,
+  type OptionDouble, type OptionInt64, type Rect, type SecurityCapabilities,
+  type SelectionBehavior, type SizeConstraint, type SwipeDirection, type UDim2,
+  type UniqueId, type UserInputState, type Vector2,
+}
 
+@target(luau)
 /// Creates a new Roblox `Frame` instance.
 ///
 /// Roblox: `Instance.new("Frame")`
-@target(luau)
 @luau.global("Instance.new(\"Frame\")")
 pub fn new() -> Frame
 
-/// Treats `Frame` as its Roblox ancestor `GuiObject`.
 @target(luau)
+/// Treats `Frame` as its Roblox ancestor `GuiObject`.
 @luau.global("(function(x) return x end)")
 pub fn as_gui_object(instance: Frame) -> GuiObject
 
-/// Treats `Frame` as its Roblox ancestor `GuiBase2d`.
 @target(luau)
+/// Treats `Frame` as its Roblox ancestor `GuiBase2d`.
 @luau.global("(function(x) return x end)")
 pub fn as_gui_base2d(instance: Frame) -> GuiBase2d
 
-/// Treats `Frame` as its Roblox ancestor `GuiBase`.
 @target(luau)
+/// Treats `Frame` as its Roblox ancestor `GuiBase`.
 @luau.global("(function(x) return x end)")
 pub fn as_gui_base(instance: Frame) -> GuiBase
 
-/// Treats `Frame` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `Frame` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Frame) -> Instance
 
-/// Treats `Frame` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `Frame` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: Frame) -> Object
 
+@target(luau)
 /// Gets Roblox property `Frame.Style`.
 ///
 /// Sets what the frame looks like from a selection of pre-determined styles.
@@ -43,10 +52,10 @@ pub fn as_object(instance: Frame) -> Object
 /// Roblox: `Frame.Style`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Frame#Style
-@target(luau)
 @luau.property("Style")
 pub fn get_style(instance: Frame) -> FrameStyle
 
+@target(luau)
 /// Sets Roblox property `Frame.Style`.
 ///
 /// Sets what the frame looks like from a selection of pre-determined styles.
@@ -54,10 +63,10 @@ pub fn get_style(instance: Frame) -> FrameStyle
 /// Roblox: `Frame.Style`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Frame#Style
-@target(luau)
 @luau.set_property("Style")
 pub fn set_style(instance: Frame, value: FrameStyle) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Active`.
 ///
 /// Determines whether this UI element sinks input.
@@ -65,10 +74,10 @@ pub fn set_style(instance: Frame, value: FrameStyle) -> Frame
 /// Roblox: `GuiObject.Active`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Active
-@target(luau)
 @luau.property("Active")
 pub fn get_active(instance: Frame) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Active`.
 ///
 /// Determines whether this UI element sinks input.
@@ -76,10 +85,10 @@ pub fn get_active(instance: Frame) -> Bool
 /// Roblox: `GuiObject.Active`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Active
-@target(luau)
 @luau.set_property("Active")
 pub fn set_active(instance: Frame, value: Bool) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.AnchorPoint`.
 ///
 /// Determines the origin point of a GuiObject, relative to its absolute size.
@@ -87,10 +96,10 @@ pub fn set_active(instance: Frame, value: Bool) -> Frame
 /// Roblox: `GuiObject.AnchorPoint`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#AnchorPoint
-@target(luau)
 @luau.property("AnchorPoint")
 pub fn get_anchor_point(instance: Frame) -> Vector2
 
+@target(luau)
 /// Sets Roblox property `GuiObject.AnchorPoint`.
 ///
 /// Determines the origin point of a GuiObject, relative to its absolute size.
@@ -98,10 +107,10 @@ pub fn get_anchor_point(instance: Frame) -> Vector2
 /// Roblox: `GuiObject.AnchorPoint`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#AnchorPoint
-@target(luau)
 @luau.set_property("AnchorPoint")
 pub fn set_anchor_point(instance: Frame, value: Vector2) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.AutomaticSize`.
 ///
 /// Determines whether resizing occurs based on child content.
@@ -109,10 +118,10 @@ pub fn set_anchor_point(instance: Frame, value: Vector2) -> Frame
 /// Roblox: `GuiObject.AutomaticSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#AutomaticSize
-@target(luau)
 @luau.property("AutomaticSize")
 pub fn get_automatic_size(instance: Frame) -> AutomaticSize
 
+@target(luau)
 /// Sets Roblox property `GuiObject.AutomaticSize`.
 ///
 /// Determines whether resizing occurs based on child content.
@@ -120,10 +129,10 @@ pub fn get_automatic_size(instance: Frame) -> AutomaticSize
 /// Roblox: `GuiObject.AutomaticSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#AutomaticSize
-@target(luau)
 @luau.set_property("AutomaticSize")
 pub fn set_automatic_size(instance: Frame, value: AutomaticSize) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.BackgroundColor3`.
 ///
 /// Determines the GuiObject background color.
@@ -131,10 +140,10 @@ pub fn set_automatic_size(instance: Frame, value: AutomaticSize) -> Frame
 /// Roblox: `GuiObject.BackgroundColor3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BackgroundColor3
-@target(luau)
 @luau.property("BackgroundColor3")
 pub fn get_background_color3(instance: Frame) -> Color3
 
+@target(luau)
 /// Sets Roblox property `GuiObject.BackgroundColor3`.
 ///
 /// Determines the GuiObject background color.
@@ -142,10 +151,10 @@ pub fn get_background_color3(instance: Frame) -> Color3
 /// Roblox: `GuiObject.BackgroundColor3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BackgroundColor3
-@target(luau)
 @luau.set_property("BackgroundColor3")
 pub fn set_background_color3(instance: Frame, value: Color3) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.BackgroundTransparency`.
 ///
 /// Determines the transparency of the GuiObject background and border.
@@ -153,10 +162,10 @@ pub fn set_background_color3(instance: Frame, value: Color3) -> Frame
 /// Roblox: `GuiObject.BackgroundTransparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BackgroundTransparency
-@target(luau)
 @luau.property("BackgroundTransparency")
 pub fn get_background_transparency(instance: Frame) -> Float
 
+@target(luau)
 /// Sets Roblox property `GuiObject.BackgroundTransparency`.
 ///
 /// Determines the transparency of the GuiObject background and border.
@@ -164,10 +173,10 @@ pub fn get_background_transparency(instance: Frame) -> Float
 /// Roblox: `GuiObject.BackgroundTransparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BackgroundTransparency
-@target(luau)
 @luau.set_property("BackgroundTransparency")
 pub fn set_background_transparency(instance: Frame, value: Float) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.BorderColor3`.
 ///
 /// Determines the color of the GuiObject border.
@@ -175,10 +184,10 @@ pub fn set_background_transparency(instance: Frame, value: Float) -> Frame
 /// Roblox: `GuiObject.BorderColor3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderColor3
-@target(luau)
 @luau.property("BorderColor3")
 pub fn get_border_color3(instance: Frame) -> Color3
 
+@target(luau)
 /// Sets Roblox property `GuiObject.BorderColor3`.
 ///
 /// Determines the color of the GuiObject border.
@@ -186,10 +195,10 @@ pub fn get_border_color3(instance: Frame) -> Color3
 /// Roblox: `GuiObject.BorderColor3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderColor3
-@target(luau)
 @luau.set_property("BorderColor3")
 pub fn set_border_color3(instance: Frame, value: Color3) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.BorderMode`.
 ///
 /// Determines in what manner the GuiObject border is laid out relative to its dimensions.
@@ -197,10 +206,10 @@ pub fn set_border_color3(instance: Frame, value: Color3) -> Frame
 /// Roblox: `GuiObject.BorderMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderMode
-@target(luau)
 @luau.property("BorderMode")
 pub fn get_border_mode(instance: Frame) -> BorderMode
 
+@target(luau)
 /// Sets Roblox property `GuiObject.BorderMode`.
 ///
 /// Determines in what manner the GuiObject border is laid out relative to its dimensions.
@@ -208,10 +217,10 @@ pub fn get_border_mode(instance: Frame) -> BorderMode
 /// Roblox: `GuiObject.BorderMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderMode
-@target(luau)
 @luau.set_property("BorderMode")
 pub fn set_border_mode(instance: Frame, value: BorderMode) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.BorderSizePixel`.
 ///
 /// Determines the pixel width of the GuiObject border.
@@ -219,10 +228,10 @@ pub fn set_border_mode(instance: Frame, value: BorderMode) -> Frame
 /// Roblox: `GuiObject.BorderSizePixel`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderSizePixel
-@target(luau)
 @luau.property("BorderSizePixel")
 pub fn get_border_size_pixel(instance: Frame) -> Int
 
+@target(luau)
 /// Sets Roblox property `GuiObject.BorderSizePixel`.
 ///
 /// Determines the pixel width of the GuiObject border.
@@ -230,10 +239,10 @@ pub fn get_border_size_pixel(instance: Frame) -> Int
 /// Roblox: `GuiObject.BorderSizePixel`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#BorderSizePixel
-@target(luau)
 @luau.set_property("BorderSizePixel")
 pub fn set_border_size_pixel(instance: Frame, value: Int) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.ClipsDescendants`.
 ///
 /// Determines if descendant GuiObjects outside of the bounds of a parent GUI element should render.
@@ -241,10 +250,10 @@ pub fn set_border_size_pixel(instance: Frame, value: Int) -> Frame
 /// Roblox: `GuiObject.ClipsDescendants`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#ClipsDescendants
-@target(luau)
 @luau.property("ClipsDescendants")
 pub fn get_clips_descendants(instance: Frame) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiObject.ClipsDescendants`.
 ///
 /// Determines if descendant GuiObjects outside of the bounds of a parent GUI element should render.
@@ -252,10 +261,10 @@ pub fn get_clips_descendants(instance: Frame) -> Bool
 /// Roblox: `GuiObject.ClipsDescendants`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#ClipsDescendants
-@target(luau)
 @luau.set_property("ClipsDescendants")
 pub fn set_clips_descendants(instance: Frame, value: Bool) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.GuiState`.
 ///
 /// Determines whether the player's mouse is being actively pressed on the GuiObject or not.
@@ -264,28 +273,28 @@ pub fn set_clips_descendants(instance: Frame, value: Bool) -> Frame
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#GuiState
-@target(luau)
 @luau.property("GuiState")
 pub fn get_gui_state(instance: Frame) -> GuiState
 
+@target(luau)
 /// Gets Roblox property `GuiObject.InputSink`.
 ///
 /// Roblox: `GuiObject.InputSink`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputSink
-@target(luau)
 @luau.property("InputSink")
 pub fn get_input_sink(instance: Frame) -> InputSink
 
+@target(luau)
 /// Sets Roblox property `GuiObject.InputSink`.
 ///
 /// Roblox: `GuiObject.InputSink`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputSink
-@target(luau)
 @luau.set_property("InputSink")
 pub fn set_input_sink(instance: Frame, value: InputSink) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Interactable`.
 ///
 /// Determines whether the GuiButton can be interacted with or not, or if the GuiState of the GuiObject is changing or not.
@@ -293,10 +302,10 @@ pub fn set_input_sink(instance: Frame, value: InputSink) -> Frame
 /// Roblox: `GuiObject.Interactable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Interactable
-@target(luau)
 @luau.property("Interactable")
 pub fn get_interactable(instance: Frame) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Interactable`.
 ///
 /// Determines whether the GuiButton can be interacted with or not, or if the GuiState of the GuiObject is changing or not.
@@ -304,10 +313,10 @@ pub fn get_interactable(instance: Frame) -> Bool
 /// Roblox: `GuiObject.Interactable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Interactable
-@target(luau)
 @luau.set_property("Interactable")
 pub fn set_interactable(instance: Frame, value: Bool) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.LayoutOrder`.
 ///
 /// Controls the sort order of the GuiObject when used with a UIGridStyleLayout.
@@ -315,10 +324,10 @@ pub fn set_interactable(instance: Frame, value: Bool) -> Frame
 /// Roblox: `GuiObject.LayoutOrder`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#LayoutOrder
-@target(luau)
 @luau.property("LayoutOrder")
 pub fn get_layout_order(instance: Frame) -> Int
 
+@target(luau)
 /// Sets Roblox property `GuiObject.LayoutOrder`.
 ///
 /// Controls the sort order of the GuiObject when used with a UIGridStyleLayout.
@@ -326,10 +335,10 @@ pub fn get_layout_order(instance: Frame) -> Int
 /// Roblox: `GuiObject.LayoutOrder`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#LayoutOrder
-@target(luau)
 @luau.set_property("LayoutOrder")
 pub fn set_layout_order(instance: Frame, value: Int) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.NextSelectionDown`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved downward.
@@ -337,10 +346,10 @@ pub fn set_layout_order(instance: Frame, value: Int) -> Frame
 /// Roblox: `GuiObject.NextSelectionDown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionDown
-@target(luau)
 @luau.property("NextSelectionDown")
 pub fn get_next_selection_down(instance: Frame) -> GuiObject
 
+@target(luau)
 /// Sets Roblox property `GuiObject.NextSelectionDown`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved downward.
@@ -348,10 +357,10 @@ pub fn get_next_selection_down(instance: Frame) -> GuiObject
 /// Roblox: `GuiObject.NextSelectionDown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionDown
-@target(luau)
 @luau.set_property("NextSelectionDown")
 pub fn set_next_selection_down(instance: Frame, value: GuiObject) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.NextSelectionLeft`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved to the left.
@@ -359,10 +368,10 @@ pub fn set_next_selection_down(instance: Frame, value: GuiObject) -> Frame
 /// Roblox: `GuiObject.NextSelectionLeft`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionLeft
-@target(luau)
 @luau.property("NextSelectionLeft")
 pub fn get_next_selection_left(instance: Frame) -> GuiObject
 
+@target(luau)
 /// Sets Roblox property `GuiObject.NextSelectionLeft`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved to the left.
@@ -370,10 +379,10 @@ pub fn get_next_selection_left(instance: Frame) -> GuiObject
 /// Roblox: `GuiObject.NextSelectionLeft`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionLeft
-@target(luau)
 @luau.set_property("NextSelectionLeft")
 pub fn set_next_selection_left(instance: Frame, value: GuiObject) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.NextSelectionRight`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved to the right.
@@ -381,10 +390,10 @@ pub fn set_next_selection_left(instance: Frame, value: GuiObject) -> Frame
 /// Roblox: `GuiObject.NextSelectionRight`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionRight
-@target(luau)
 @luau.property("NextSelectionRight")
 pub fn get_next_selection_right(instance: Frame) -> GuiObject
 
+@target(luau)
 /// Sets Roblox property `GuiObject.NextSelectionRight`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved to the right.
@@ -392,10 +401,10 @@ pub fn get_next_selection_right(instance: Frame) -> GuiObject
 /// Roblox: `GuiObject.NextSelectionRight`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionRight
-@target(luau)
 @luau.set_property("NextSelectionRight")
 pub fn set_next_selection_right(instance: Frame, value: GuiObject) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.NextSelectionUp`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved upward.
@@ -403,10 +412,10 @@ pub fn set_next_selection_right(instance: Frame, value: GuiObject) -> Frame
 /// Roblox: `GuiObject.NextSelectionUp`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionUp
-@target(luau)
 @luau.property("NextSelectionUp")
 pub fn get_next_selection_up(instance: Frame) -> GuiObject
 
+@target(luau)
 /// Sets Roblox property `GuiObject.NextSelectionUp`.
 ///
 /// Sets the GuiObject which will be selected when the gamepad selector is moved upward.
@@ -414,10 +423,10 @@ pub fn get_next_selection_up(instance: Frame) -> GuiObject
 /// Roblox: `GuiObject.NextSelectionUp`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#NextSelectionUp
-@target(luau)
 @luau.set_property("NextSelectionUp")
 pub fn set_next_selection_up(instance: Frame, value: GuiObject) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Position`.
 ///
 /// Determines the pixel and scalar position of the GuiObject.
@@ -425,10 +434,10 @@ pub fn set_next_selection_up(instance: Frame, value: GuiObject) -> Frame
 /// Roblox: `GuiObject.Position`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Position
-@target(luau)
 @luau.property("Position")
 pub fn get_position(instance: Frame) -> UDim2
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Position`.
 ///
 /// Determines the pixel and scalar position of the GuiObject.
@@ -436,10 +445,10 @@ pub fn get_position(instance: Frame) -> UDim2
 /// Roblox: `GuiObject.Position`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Position
-@target(luau)
 @luau.set_property("Position")
 pub fn set_position(instance: Frame, value: UDim2) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Rotation`.
 ///
 /// Determines the number of degrees by which the GuiObject is rotated.
@@ -447,10 +456,10 @@ pub fn set_position(instance: Frame, value: UDim2) -> Frame
 /// Roblox: `GuiObject.Rotation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Rotation
-@target(luau)
 @luau.property("Rotation")
 pub fn get_rotation(instance: Frame) -> Float
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Rotation`.
 ///
 /// Determines the number of degrees by which the GuiObject is rotated.
@@ -458,10 +467,10 @@ pub fn get_rotation(instance: Frame) -> Float
 /// Roblox: `GuiObject.Rotation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Rotation
-@target(luau)
 @luau.set_property("Rotation")
 pub fn set_rotation(instance: Frame, value: Float) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Selectable`.
 ///
 /// Determine whether the GuiObject can be selected by a gamepad.
@@ -469,10 +478,10 @@ pub fn set_rotation(instance: Frame, value: Float) -> Frame
 /// Roblox: `GuiObject.Selectable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Selectable
-@target(luau)
 @luau.property("Selectable")
 pub fn get_selectable(instance: Frame) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Selectable`.
 ///
 /// Determine whether the GuiObject can be selected by a gamepad.
@@ -480,10 +489,10 @@ pub fn get_selectable(instance: Frame) -> Bool
 /// Roblox: `GuiObject.Selectable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Selectable
-@target(luau)
 @luau.set_property("Selectable")
 pub fn set_selectable(instance: Frame, value: Bool) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.SelectionImageObject`.
 ///
 /// Overrides the default selection adornment used for gamepads.
@@ -491,10 +500,10 @@ pub fn set_selectable(instance: Frame, value: Bool) -> Frame
 /// Roblox: `GuiObject.SelectionImageObject`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionImageObject
-@target(luau)
 @luau.property("SelectionImageObject")
 pub fn get_selection_image_object(instance: Frame) -> GuiObject
 
+@target(luau)
 /// Sets Roblox property `GuiObject.SelectionImageObject`.
 ///
 /// Overrides the default selection adornment used for gamepads.
@@ -502,10 +511,10 @@ pub fn get_selection_image_object(instance: Frame) -> GuiObject
 /// Roblox: `GuiObject.SelectionImageObject`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionImageObject
-@target(luau)
 @luau.set_property("SelectionImageObject")
 pub fn set_selection_image_object(instance: Frame, value: GuiObject) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.SelectionOrder`.
 ///
 /// The order of GuiObjects selected by the gamepad UI selection.
@@ -513,10 +522,10 @@ pub fn set_selection_image_object(instance: Frame, value: GuiObject) -> Frame
 /// Roblox: `GuiObject.SelectionOrder`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionOrder
-@target(luau)
 @luau.property("SelectionOrder")
 pub fn get_selection_order(instance: Frame) -> Int
 
+@target(luau)
 /// Sets Roblox property `GuiObject.SelectionOrder`.
 ///
 /// The order of GuiObjects selected by the gamepad UI selection.
@@ -524,20 +533,20 @@ pub fn get_selection_order(instance: Frame) -> Int
 /// Roblox: `GuiObject.SelectionOrder`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionOrder
-@target(luau)
 @luau.set_property("SelectionOrder")
 pub fn set_selection_order(instance: Frame, value: Int) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.SelectionRect2D`.
 ///
 /// Roblox: `GuiObject.SelectionRect2D`
 /// ThreadSafety: Unsafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionRect2D
-@target(luau)
 @luau.property("SelectionRect2D")
 pub fn get_selection_rect2_d(instance: Frame) -> Rect
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Size`.
 ///
 /// Determines the pixel and scalar size of the GuiObject.
@@ -545,10 +554,10 @@ pub fn get_selection_rect2_d(instance: Frame) -> Rect
 /// Roblox: `GuiObject.Size`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Size
-@target(luau)
 @luau.property("Size")
 pub fn get_size(instance: Frame) -> UDim2
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Size`.
 ///
 /// Determines the pixel and scalar size of the GuiObject.
@@ -556,10 +565,10 @@ pub fn get_size(instance: Frame) -> UDim2
 /// Roblox: `GuiObject.Size`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Size
-@target(luau)
 @luau.set_property("Size")
 pub fn set_size(instance: Frame, value: UDim2) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.SizeConstraint`.
 ///
 /// Sets the Size axes that the GuiObject will be based on, relative to the size of its parent.
@@ -567,10 +576,10 @@ pub fn set_size(instance: Frame, value: UDim2) -> Frame
 /// Roblox: `GuiObject.SizeConstraint`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SizeConstraint
-@target(luau)
 @luau.property("SizeConstraint")
 pub fn get_size_constraint(instance: Frame) -> SizeConstraint
 
+@target(luau)
 /// Sets Roblox property `GuiObject.SizeConstraint`.
 ///
 /// Sets the Size axes that the GuiObject will be based on, relative to the size of its parent.
@@ -578,10 +587,10 @@ pub fn get_size_constraint(instance: Frame) -> SizeConstraint
 /// Roblox: `GuiObject.SizeConstraint`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SizeConstraint
-@target(luau)
 @luau.set_property("SizeConstraint")
 pub fn set_size_constraint(instance: Frame, value: SizeConstraint) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Transparency`.
 ///
 /// A mixed property of BackgroundTransparency and TextTransparency.
@@ -590,10 +599,10 @@ pub fn set_size_constraint(instance: Frame, value: SizeConstraint) -> Frame
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Transparency
-@target(luau)
 @luau.property("Transparency")
 pub fn get_transparency(instance: Frame) -> Float
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Transparency`.
 ///
 /// A mixed property of BackgroundTransparency and TextTransparency.
@@ -602,10 +611,10 @@ pub fn get_transparency(instance: Frame) -> Float
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Transparency
-@target(luau)
 @luau.set_property("Transparency")
 pub fn set_transparency(instance: Frame, value: Float) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.Visible`.
 ///
 /// Determines whether the GuiObject and its descendants will be rendered.
@@ -613,10 +622,10 @@ pub fn set_transparency(instance: Frame, value: Float) -> Frame
 /// Roblox: `GuiObject.Visible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Visible
-@target(luau)
 @luau.property("Visible")
 pub fn get_visible(instance: Frame) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiObject.Visible`.
 ///
 /// Determines whether the GuiObject and its descendants will be rendered.
@@ -624,10 +633,10 @@ pub fn get_visible(instance: Frame) -> Bool
 /// Roblox: `GuiObject.Visible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#Visible
-@target(luau)
 @luau.set_property("Visible")
 pub fn set_visible(instance: Frame, value: Bool) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiObject.ZIndex`.
 ///
 /// Determines the order in which a GuiObject renders relative to others.
@@ -635,10 +644,10 @@ pub fn set_visible(instance: Frame, value: Bool) -> Frame
 /// Roblox: `GuiObject.ZIndex`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#ZIndex
-@target(luau)
 @luau.property("ZIndex")
 pub fn get_z_index(instance: Frame) -> Int
 
+@target(luau)
 /// Sets Roblox property `GuiObject.ZIndex`.
 ///
 /// Determines the order in which a GuiObject renders relative to others.
@@ -646,10 +655,10 @@ pub fn get_z_index(instance: Frame) -> Int
 /// Roblox: `GuiObject.ZIndex`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#ZIndex
-@target(luau)
 @luau.set_property("ZIndex")
 pub fn set_z_index(instance: Frame, value: Int) -> Frame
 
+@target(luau)
 /// Smoothly moves a GUI to a new UDim2.
 ///
 /// Roblox: `GuiObject.TweenPosition`
@@ -667,10 +676,18 @@ pub fn set_z_index(instance: Frame, value: Int) -> Frame
 ///
 /// Returns:
 /// - Whether the tween will play.
-@target(luau)
 @luau.method("TweenPosition")
-pub fn tween_position(instance: Frame, end_position: UDim2, easing_direction: EasingDirection, easing_style: EasingStyle, time: Float, override: Bool, callback: fn() -> Nil) -> Bool
+pub fn tween_position(
+  instance: Frame,
+  end_position: UDim2,
+  easing_direction: EasingDirection,
+  easing_style: EasingStyle,
+  time: Float,
+  override: Bool,
+  callback: fn() -> Nil,
+) -> Bool
 
+@target(luau)
 /// Smoothly resizes a GuiObject to a new UDim2.
 ///
 /// Roblox: `GuiObject.TweenSize`
@@ -688,10 +705,18 @@ pub fn tween_position(instance: Frame, end_position: UDim2, easing_direction: Ea
 ///
 /// Returns:
 /// - Whether the tween will play.
-@target(luau)
 @luau.method("TweenSize")
-pub fn tween_size(instance: Frame, end_size: UDim2, easing_direction: EasingDirection, easing_style: EasingStyle, time: Float, override: Bool, callback: fn() -> Nil) -> Bool
+pub fn tween_size(
+  instance: Frame,
+  end_size: UDim2,
+  easing_direction: EasingDirection,
+  easing_style: EasingStyle,
+  time: Float,
+  override: Bool,
+  callback: fn() -> Nil,
+) -> Bool
 
+@target(luau)
 /// Smoothly moves a GUI to a new size and position.
 ///
 /// Roblox: `GuiObject.TweenSizeAndPosition`
@@ -710,19 +735,28 @@ pub fn tween_size(instance: Frame, end_size: UDim2, easing_direction: EasingDire
 ///
 /// Returns:
 /// - Whether the tween will play.
-@target(luau)
 @luau.method("TweenSizeAndPosition")
-pub fn tween_size_and_position(instance: Frame, end_size: UDim2, end_position: UDim2, easing_direction: EasingDirection, easing_style: EasingStyle, time: Float, override: Bool, callback: fn() -> Nil) -> Bool
+pub fn tween_size_and_position(
+  instance: Frame,
+  end_size: UDim2,
+  end_position: UDim2,
+  easing_direction: EasingDirection,
+  easing_style: EasingStyle,
+  time: Float,
+  override: Bool,
+  callback: fn() -> Nil,
+) -> Bool
 
+@target(luau)
 /// Fired when a user begins interacting via a Human-Computer Interface device (Mouse button down, touch begin, keyboard button down, etc).
 ///
 /// Roblox: `GuiObject.InputBegan`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputBegan
-@target(luau)
 @luau.event("InputBegan")
 pub fn input_began(instance: Frame) -> RBXScriptSignal(fn(InputObject) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.InputBegan`.
 ///
 /// Fired when a user begins interacting via a Human-Computer Interface device (Mouse button down, touch begin, keyboard button down, etc).
@@ -730,19 +764,22 @@ pub fn input_began(instance: Frame) -> RBXScriptSignal(fn(InputObject) -> Nil)
 /// Roblox: `GuiObject.InputBegan`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputBegan
-@target(luau)
 @luau.global("(function(instance, callback) return instance.InputBegan:Connect(callback) end)")
-pub fn on_input_began(instance: Frame, callback: fn(InputObject) -> Nil) -> RBXScriptConnection
+pub fn on_input_began(
+  instance: Frame,
+  callback: fn(InputObject) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fired when a user changes how they're interacting via a Human-Computer Interface device (Mouse button down, touch begin, keyboard button down, etc).
 ///
 /// Roblox: `GuiObject.InputChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputChanged
-@target(luau)
 @luau.event("InputChanged")
 pub fn input_changed(instance: Frame) -> RBXScriptSignal(fn(InputObject) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.InputChanged`.
 ///
 /// Fired when a user changes how they're interacting via a Human-Computer Interface device (Mouse button down, touch begin, keyboard button down, etc).
@@ -750,19 +787,22 @@ pub fn input_changed(instance: Frame) -> RBXScriptSignal(fn(InputObject) -> Nil)
 /// Roblox: `GuiObject.InputChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.InputChanged:Connect(callback) end)")
-pub fn on_input_changed(instance: Frame, callback: fn(InputObject) -> Nil) -> RBXScriptConnection
+pub fn on_input_changed(
+  instance: Frame,
+  callback: fn(InputObject) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fired when a user stops interacting via a Human-Computer Interface device (Mouse button down, touch begin, keyboard button down, etc).
 ///
 /// Roblox: `GuiObject.InputEnded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputEnded
-@target(luau)
 @luau.event("InputEnded")
 pub fn input_ended(instance: Frame) -> RBXScriptSignal(fn(InputObject) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.InputEnded`.
 ///
 /// Fired when a user stops interacting via a Human-Computer Interface device (Mouse button down, touch begin, keyboard button down, etc).
@@ -770,19 +810,22 @@ pub fn input_ended(instance: Frame) -> RBXScriptSignal(fn(InputObject) -> Nil)
 /// Roblox: `GuiObject.InputEnded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#InputEnded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.InputEnded:Connect(callback) end)")
-pub fn on_input_ended(instance: Frame, callback: fn(InputObject) -> Nil) -> RBXScriptConnection
+pub fn on_input_ended(
+  instance: Frame,
+  callback: fn(InputObject) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user moves their mouse into a GUI element.
 ///
 /// Roblox: `GuiObject.MouseEnter`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseEnter
-@target(luau)
 @luau.event("MouseEnter")
 pub fn mouse_enter(instance: Frame) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.MouseEnter`.
 ///
 /// Fires when a user moves their mouse into a GUI element.
@@ -790,19 +833,22 @@ pub fn mouse_enter(instance: Frame) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 /// Roblox: `GuiObject.MouseEnter`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseEnter
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseEnter:Connect(callback) end)")
-pub fn on_mouse_enter(instance: Frame, callback: fn(Int, Int) -> Nil) -> RBXScriptConnection
+pub fn on_mouse_enter(
+  instance: Frame,
+  callback: fn(Int, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user moves their mouse out of a GUI element.
 ///
 /// Roblox: `GuiObject.MouseLeave`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseLeave
-@target(luau)
 @luau.event("MouseLeave")
 pub fn mouse_leave(instance: Frame) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.MouseLeave`.
 ///
 /// Fires when a user moves their mouse out of a GUI element.
@@ -810,19 +856,22 @@ pub fn mouse_leave(instance: Frame) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 /// Roblox: `GuiObject.MouseLeave`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseLeave
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseLeave:Connect(callback) end)")
-pub fn on_mouse_leave(instance: Frame, callback: fn(Int, Int) -> Nil) -> RBXScriptConnection
+pub fn on_mouse_leave(
+  instance: Frame,
+  callback: fn(Int, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever a user moves their mouse while it is inside a GUI element.
 ///
 /// Roblox: `GuiObject.MouseMoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseMoved
-@target(luau)
 @luau.event("MouseMoved")
 pub fn mouse_moved(instance: Frame) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.MouseMoved`.
 ///
 /// Fires whenever a user moves their mouse while it is inside a GUI element.
@@ -830,19 +879,24 @@ pub fn mouse_moved(instance: Frame) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 /// Roblox: `GuiObject.MouseMoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseMoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseMoved:Connect(callback) end)")
-pub fn on_mouse_moved(instance: Frame, callback: fn(Int, Int) -> Nil) -> RBXScriptConnection
+pub fn on_mouse_moved(
+  instance: Frame,
+  callback: fn(Int, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user scrolls their mouse wheel back when the mouse is over a GUI element.
 ///
 /// Roblox: `GuiObject.MouseWheelBackward`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseWheelBackward
-@target(luau)
 @luau.event("MouseWheelBackward")
-pub fn mouse_wheel_backward(instance: Frame) -> RBXScriptSignal(fn(Int, Int) -> Nil)
+pub fn mouse_wheel_backward(
+  instance: Frame,
+) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.MouseWheelBackward`.
 ///
 /// Fires when a user scrolls their mouse wheel back when the mouse is over a GUI element.
@@ -850,19 +904,24 @@ pub fn mouse_wheel_backward(instance: Frame) -> RBXScriptSignal(fn(Int, Int) -> 
 /// Roblox: `GuiObject.MouseWheelBackward`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseWheelBackward
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseWheelBackward:Connect(callback) end)")
-pub fn on_mouse_wheel_backward(instance: Frame, callback: fn(Int, Int) -> Nil) -> RBXScriptConnection
+pub fn on_mouse_wheel_backward(
+  instance: Frame,
+  callback: fn(Int, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when a user scrolls their mouse wheel forward when the mouse is over a GUI element.
 ///
 /// Roblox: `GuiObject.MouseWheelForward`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseWheelForward
-@target(luau)
 @luau.event("MouseWheelForward")
-pub fn mouse_wheel_forward(instance: Frame) -> RBXScriptSignal(fn(Int, Int) -> Nil)
+pub fn mouse_wheel_forward(
+  instance: Frame,
+) -> RBXScriptSignal(fn(Int, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.MouseWheelForward`.
 ///
 /// Fires when a user scrolls their mouse wheel forward when the mouse is over a GUI element.
@@ -870,19 +929,22 @@ pub fn mouse_wheel_forward(instance: Frame) -> RBXScriptSignal(fn(Int, Int) -> N
 /// Roblox: `GuiObject.MouseWheelForward`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#MouseWheelForward
-@target(luau)
 @luau.global("(function(instance, callback) return instance.MouseWheelForward:Connect(callback) end)")
-pub fn on_mouse_wheel_forward(instance: Frame, callback: fn(Int, Int) -> Nil) -> RBXScriptConnection
+pub fn on_mouse_wheel_forward(
+  instance: Frame,
+  callback: fn(Int, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fired when the GuiObject is being focused on with the Gamepad selector.
 ///
 /// Roblox: `GuiObject.SelectionGained`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionGained
-@target(luau)
 @luau.event("SelectionGained")
 pub fn selection_gained(instance: Frame) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.SelectionGained`.
 ///
 /// Fired when the GuiObject is being focused on with the Gamepad selector.
@@ -890,19 +952,22 @@ pub fn selection_gained(instance: Frame) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `GuiObject.SelectionGained`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionGained
-@target(luau)
 @luau.global("(function(instance, callback) return instance.SelectionGained:Connect(callback) end)")
-pub fn on_selection_gained(instance: Frame, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_selection_gained(
+  instance: Frame,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fired when the Gamepad selector stops focusing on the GuiObject.
 ///
 /// Roblox: `GuiObject.SelectionLost`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionLost
-@target(luau)
 @luau.event("SelectionLost")
 pub fn selection_lost(instance: Frame) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.SelectionLost`.
 ///
 /// Fired when the Gamepad selector stops focusing on the GuiObject.
@@ -910,19 +975,24 @@ pub fn selection_lost(instance: Frame) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `GuiObject.SelectionLost`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#SelectionLost
-@target(luau)
 @luau.global("(function(instance, callback) return instance.SelectionLost:Connect(callback) end)")
-pub fn on_selection_lost(instance: Frame, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_selection_lost(
+  instance: Frame,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the player starts, continues and stops long-pressing the UI element.
 ///
 /// Roblox: `GuiObject.TouchLongPress`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchLongPress
-@target(luau)
 @luau.event("TouchLongPress")
-pub fn touch_long_press(instance: Frame) -> RBXScriptSignal(fn(List(Vector2), UserInputState) -> Nil)
+pub fn touch_long_press(
+  instance: Frame,
+) -> RBXScriptSignal(fn(List(Vector2), UserInputState) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.TouchLongPress`.
 ///
 /// Fires when the player starts, continues and stops long-pressing the UI element.
@@ -930,19 +1000,24 @@ pub fn touch_long_press(instance: Frame) -> RBXScriptSignal(fn(List(Vector2), Us
 /// Roblox: `GuiObject.TouchLongPress`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchLongPress
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchLongPress:Connect(callback) end)")
-pub fn on_touch_long_press(instance: Frame, callback: fn(List(Vector2), UserInputState) -> Nil) -> RBXScriptConnection
+pub fn on_touch_long_press(
+  instance: Frame,
+  callback: fn(List(Vector2), UserInputState) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the player moves their finger on the UI element.
 ///
 /// Roblox: `GuiObject.TouchPan`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchPan
-@target(luau)
 @luau.event("TouchPan")
-pub fn touch_pan(instance: Frame) -> RBXScriptSignal(fn(List(Vector2), Vector2, Vector2, UserInputState) -> Nil)
+pub fn touch_pan(
+  instance: Frame,
+) -> RBXScriptSignal(fn(List(Vector2), Vector2, Vector2, UserInputState) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.TouchPan`.
 ///
 /// Fires when the player moves their finger on the UI element.
@@ -950,19 +1025,24 @@ pub fn touch_pan(instance: Frame) -> RBXScriptSignal(fn(List(Vector2), Vector2, 
 /// Roblox: `GuiObject.TouchPan`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchPan
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchPan:Connect(callback) end)")
-pub fn on_touch_pan(instance: Frame, callback: fn(List(Vector2), Vector2, Vector2, UserInputState) -> Nil) -> RBXScriptConnection
+pub fn on_touch_pan(
+  instance: Frame,
+  callback: fn(List(Vector2), Vector2, Vector2, UserInputState) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the player performs a pinch or pull gesture using two fingers on the UI element.
 ///
 /// Roblox: `GuiObject.TouchPinch`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchPinch
-@target(luau)
 @luau.event("TouchPinch")
-pub fn touch_pinch(instance: Frame) -> RBXScriptSignal(fn(List(Vector2), Float, Float, UserInputState) -> Nil)
+pub fn touch_pinch(
+  instance: Frame,
+) -> RBXScriptSignal(fn(List(Vector2), Float, Float, UserInputState) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.TouchPinch`.
 ///
 /// Fires when the player performs a pinch or pull gesture using two fingers on the UI element.
@@ -970,19 +1050,24 @@ pub fn touch_pinch(instance: Frame) -> RBXScriptSignal(fn(List(Vector2), Float, 
 /// Roblox: `GuiObject.TouchPinch`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchPinch
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchPinch:Connect(callback) end)")
-pub fn on_touch_pinch(instance: Frame, callback: fn(List(Vector2), Float, Float, UserInputState) -> Nil) -> RBXScriptConnection
+pub fn on_touch_pinch(
+  instance: Frame,
+  callback: fn(List(Vector2), Float, Float, UserInputState) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the player performs a rotation gesture using two fingers on the UI element.
 ///
 /// Roblox: `GuiObject.TouchRotate`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchRotate
-@target(luau)
 @luau.event("TouchRotate")
-pub fn touch_rotate(instance: Frame) -> RBXScriptSignal(fn(List(Vector2), Float, Float, UserInputState) -> Nil)
+pub fn touch_rotate(
+  instance: Frame,
+) -> RBXScriptSignal(fn(List(Vector2), Float, Float, UserInputState) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.TouchRotate`.
 ///
 /// Fires when the player performs a rotation gesture using two fingers on the UI element.
@@ -990,19 +1075,24 @@ pub fn touch_rotate(instance: Frame) -> RBXScriptSignal(fn(List(Vector2), Float,
 /// Roblox: `GuiObject.TouchRotate`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchRotate
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchRotate:Connect(callback) end)")
-pub fn on_touch_rotate(instance: Frame, callback: fn(List(Vector2), Float, Float, UserInputState) -> Nil) -> RBXScriptConnection
+pub fn on_touch_rotate(
+  instance: Frame,
+  callback: fn(List(Vector2), Float, Float, UserInputState) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the player performs a swipe gesture on the UI element.
 ///
 /// Roblox: `GuiObject.TouchSwipe`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchSwipe
-@target(luau)
 @luau.event("TouchSwipe")
-pub fn touch_swipe(instance: Frame) -> RBXScriptSignal(fn(SwipeDirection, Int) -> Nil)
+pub fn touch_swipe(
+  instance: Frame,
+) -> RBXScriptSignal(fn(SwipeDirection, Int) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.TouchSwipe`.
 ///
 /// Fires when the player performs a swipe gesture on the UI element.
@@ -1010,19 +1100,22 @@ pub fn touch_swipe(instance: Frame) -> RBXScriptSignal(fn(SwipeDirection, Int) -
 /// Roblox: `GuiObject.TouchSwipe`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchSwipe
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchSwipe:Connect(callback) end)")
-pub fn on_touch_swipe(instance: Frame, callback: fn(SwipeDirection, Int) -> Nil) -> RBXScriptConnection
+pub fn on_touch_swipe(
+  instance: Frame,
+  callback: fn(SwipeDirection, Int) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires when the player performs a tap gesture on the UI element.
 ///
 /// Roblox: `GuiObject.TouchTap`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchTap
-@target(luau)
 @luau.event("TouchTap")
 pub fn touch_tap(instance: Frame) -> RBXScriptSignal(fn(List(Vector2)) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiObject.TouchTap`.
 ///
 /// Fires when the player performs a tap gesture on the UI element.
@@ -1030,10 +1123,13 @@ pub fn touch_tap(instance: Frame) -> RBXScriptSignal(fn(List(Vector2)) -> Nil)
 /// Roblox: `GuiObject.TouchTap`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiObject#TouchTap
-@target(luau)
 @luau.global("(function(instance, callback) return instance.TouchTap:Connect(callback) end)")
-pub fn on_touch_tap(instance: Frame, callback: fn(List(Vector2)) -> Nil) -> RBXScriptConnection
+pub fn on_touch_tap(
+  instance: Frame,
+  callback: fn(List(Vector2)) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.AbsolutePosition`.
 ///
 /// Describes the actual screen position of a GuiBase2d element, in pixels.
@@ -1042,10 +1138,10 @@ pub fn on_touch_tap(instance: Frame, callback: fn(List(Vector2)) -> Nil) -> RBXS
 /// ThreadSafety: Unsafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#AbsolutePosition
-@target(luau)
 @luau.property("AbsolutePosition")
 pub fn get_absolute_position(instance: Frame) -> Vector2
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.AbsoluteRotation`.
 ///
 /// Describes the actual screen rotation of a GuiBase2d element, in degrees.
@@ -1054,10 +1150,10 @@ pub fn get_absolute_position(instance: Frame) -> Vector2
 /// ThreadSafety: Unsafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#AbsoluteRotation
-@target(luau)
 @luau.property("AbsoluteRotation")
 pub fn get_absolute_rotation(instance: Frame) -> Float
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.AbsoluteSize`.
 ///
 /// Describes the actual screen size of a GuiBase2d element, in pixels.
@@ -1066,10 +1162,10 @@ pub fn get_absolute_rotation(instance: Frame) -> Float
 /// ThreadSafety: Unsafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#AbsoluteSize
-@target(luau)
 @luau.property("AbsoluteSize")
 pub fn get_absolute_size(instance: Frame) -> Vector2
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.AutoLocalize`.
 ///
 /// When set to true, localization will be applied to this GuiBase2d and its descendants.
@@ -1077,10 +1173,10 @@ pub fn get_absolute_size(instance: Frame) -> Vector2
 /// Roblox: `GuiBase2d.AutoLocalize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#AutoLocalize
-@target(luau)
 @luau.property("AutoLocalize")
 pub fn get_auto_localize(instance: Frame) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiBase2d.AutoLocalize`.
 ///
 /// When set to true, localization will be applied to this GuiBase2d and its descendants.
@@ -1088,40 +1184,40 @@ pub fn get_auto_localize(instance: Frame) -> Bool
 /// Roblox: `GuiBase2d.AutoLocalize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#AutoLocalize
-@target(luau)
 @luau.set_property("AutoLocalize")
 pub fn set_auto_localize(instance: Frame, value: Bool) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.ClippedRect`.
 ///
 /// Roblox: `GuiBase2d.ClippedRect`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#ClippedRect
-@target(luau)
 @luau.property("ClippedRect")
 pub fn get_clipped_rect(instance: Frame) -> Rect
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.IsNotOccluded`.
 ///
 /// Roblox: `GuiBase2d.IsNotOccluded`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#IsNotOccluded
-@target(luau)
 @luau.property("IsNotOccluded")
 pub fn get_is_not_occluded(instance: Frame) -> Bool
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.RawRect2D`.
 ///
 /// Roblox: `GuiBase2d.RawRect2D`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#RawRect2D
-@target(luau)
 @luau.property("RawRect2D")
 pub fn get_raw_rect2_d(instance: Frame) -> Rect
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.RootLocalizationTable`.
 ///
 /// A reference to a LocalizationTable to be used to apply automated localization to this GuiBase2d and its descendants.
@@ -1129,10 +1225,10 @@ pub fn get_raw_rect2_d(instance: Frame) -> Rect
 /// Roblox: `GuiBase2d.RootLocalizationTable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#RootLocalizationTable
-@target(luau)
 @luau.property("RootLocalizationTable")
 pub fn get_root_localization_table(instance: Frame) -> LocalizationTable
 
+@target(luau)
 /// Sets Roblox property `GuiBase2d.RootLocalizationTable`.
 ///
 /// A reference to a LocalizationTable to be used to apply automated localization to this GuiBase2d and its descendants.
@@ -1140,10 +1236,13 @@ pub fn get_root_localization_table(instance: Frame) -> LocalizationTable
 /// Roblox: `GuiBase2d.RootLocalizationTable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#RootLocalizationTable
-@target(luau)
 @luau.set_property("RootLocalizationTable")
-pub fn set_root_localization_table(instance: Frame, value: LocalizationTable) -> Frame
+pub fn set_root_localization_table(
+  instance: Frame,
+  value: LocalizationTable,
+) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.SelectionBehaviorDown`.
 ///
 /// Customizes gamepad selection behavior in the down direction.
@@ -1151,10 +1250,10 @@ pub fn set_root_localization_table(instance: Frame, value: LocalizationTable) ->
 /// Roblox: `GuiBase2d.SelectionBehaviorDown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorDown
-@target(luau)
 @luau.property("SelectionBehaviorDown")
 pub fn get_selection_behavior_down(instance: Frame) -> SelectionBehavior
 
+@target(luau)
 /// Sets Roblox property `GuiBase2d.SelectionBehaviorDown`.
 ///
 /// Customizes gamepad selection behavior in the down direction.
@@ -1162,10 +1261,13 @@ pub fn get_selection_behavior_down(instance: Frame) -> SelectionBehavior
 /// Roblox: `GuiBase2d.SelectionBehaviorDown`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorDown
-@target(luau)
 @luau.set_property("SelectionBehaviorDown")
-pub fn set_selection_behavior_down(instance: Frame, value: SelectionBehavior) -> Frame
+pub fn set_selection_behavior_down(
+  instance: Frame,
+  value: SelectionBehavior,
+) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.SelectionBehaviorLeft`.
 ///
 /// Customizes gamepad selection behavior in the left direction.
@@ -1173,10 +1275,10 @@ pub fn set_selection_behavior_down(instance: Frame, value: SelectionBehavior) ->
 /// Roblox: `GuiBase2d.SelectionBehaviorLeft`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorLeft
-@target(luau)
 @luau.property("SelectionBehaviorLeft")
 pub fn get_selection_behavior_left(instance: Frame) -> SelectionBehavior
 
+@target(luau)
 /// Sets Roblox property `GuiBase2d.SelectionBehaviorLeft`.
 ///
 /// Customizes gamepad selection behavior in the left direction.
@@ -1184,10 +1286,13 @@ pub fn get_selection_behavior_left(instance: Frame) -> SelectionBehavior
 /// Roblox: `GuiBase2d.SelectionBehaviorLeft`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorLeft
-@target(luau)
 @luau.set_property("SelectionBehaviorLeft")
-pub fn set_selection_behavior_left(instance: Frame, value: SelectionBehavior) -> Frame
+pub fn set_selection_behavior_left(
+  instance: Frame,
+  value: SelectionBehavior,
+) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.SelectionBehaviorRight`.
 ///
 /// Customizes gamepad selection behavior in the right direction.
@@ -1195,10 +1300,10 @@ pub fn set_selection_behavior_left(instance: Frame, value: SelectionBehavior) ->
 /// Roblox: `GuiBase2d.SelectionBehaviorRight`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorRight
-@target(luau)
 @luau.property("SelectionBehaviorRight")
 pub fn get_selection_behavior_right(instance: Frame) -> SelectionBehavior
 
+@target(luau)
 /// Sets Roblox property `GuiBase2d.SelectionBehaviorRight`.
 ///
 /// Customizes gamepad selection behavior in the right direction.
@@ -1206,10 +1311,13 @@ pub fn get_selection_behavior_right(instance: Frame) -> SelectionBehavior
 /// Roblox: `GuiBase2d.SelectionBehaviorRight`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorRight
-@target(luau)
 @luau.set_property("SelectionBehaviorRight")
-pub fn set_selection_behavior_right(instance: Frame, value: SelectionBehavior) -> Frame
+pub fn set_selection_behavior_right(
+  instance: Frame,
+  value: SelectionBehavior,
+) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.SelectionBehaviorUp`.
 ///
 /// Customizes gamepad selection behavior in the up direction.
@@ -1217,10 +1325,10 @@ pub fn set_selection_behavior_right(instance: Frame, value: SelectionBehavior) -
 /// Roblox: `GuiBase2d.SelectionBehaviorUp`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorUp
-@target(luau)
 @luau.property("SelectionBehaviorUp")
 pub fn get_selection_behavior_up(instance: Frame) -> SelectionBehavior
 
+@target(luau)
 /// Sets Roblox property `GuiBase2d.SelectionBehaviorUp`.
 ///
 /// Customizes gamepad selection behavior in the up direction.
@@ -1228,10 +1336,13 @@ pub fn get_selection_behavior_up(instance: Frame) -> SelectionBehavior
 /// Roblox: `GuiBase2d.SelectionBehaviorUp`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionBehaviorUp
-@target(luau)
 @luau.set_property("SelectionBehaviorUp")
-pub fn set_selection_behavior_up(instance: Frame, value: SelectionBehavior) -> Frame
+pub fn set_selection_behavior_up(
+  instance: Frame,
+  value: SelectionBehavior,
+) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.SelectionGroup`.
 ///
 /// Allows customization of gamepad selection movement.
@@ -1239,10 +1350,10 @@ pub fn set_selection_behavior_up(instance: Frame, value: SelectionBehavior) -> F
 /// Roblox: `GuiBase2d.SelectionGroup`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionGroup
-@target(luau)
 @luau.property("SelectionGroup")
 pub fn get_selection_group(instance: Frame) -> Bool
 
+@target(luau)
 /// Sets Roblox property `GuiBase2d.SelectionGroup`.
 ///
 /// Allows customization of gamepad selection movement.
@@ -1250,29 +1361,31 @@ pub fn get_selection_group(instance: Frame) -> Bool
 /// Roblox: `GuiBase2d.SelectionGroup`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionGroup
-@target(luau)
 @luau.set_property("SelectionGroup")
 pub fn set_selection_group(instance: Frame, value: Bool) -> Frame
 
+@target(luau)
 /// Gets Roblox property `GuiBase2d.TotalGroupScale`.
 ///
 /// Roblox: `GuiBase2d.TotalGroupScale`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#TotalGroupScale
-@target(luau)
 @luau.property("TotalGroupScale")
 pub fn get_total_group_scale(instance: Frame) -> Float
 
+@target(luau)
 /// Fires when the gamepad selection moves to, leaves, or changes within the connected GuiBase2d or any descendant GuiObjects.
 ///
 /// Roblox: `GuiBase2d.SelectionChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionChanged
-@target(luau)
 @luau.event("SelectionChanged")
-pub fn selection_changed(instance: Frame) -> RBXScriptSignal(fn(Bool, GuiObject, GuiObject) -> Nil)
+pub fn selection_changed(
+  instance: Frame,
+) -> RBXScriptSignal(fn(Bool, GuiObject, GuiObject) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `GuiBase2d.SelectionChanged`.
 ///
 /// Fires when the gamepad selection moves to, leaves, or changes within the connected GuiBase2d or any descendant GuiObjects.
@@ -1280,10 +1393,13 @@ pub fn selection_changed(instance: Frame) -> RBXScriptSignal(fn(Bool, GuiObject,
 /// Roblox: `GuiBase2d.SelectionChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase2d#SelectionChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.SelectionChanged:Connect(callback) end)")
-pub fn on_selection_changed(instance: Frame, callback: fn(Bool, GuiObject, GuiObject) -> Nil) -> RBXScriptConnection
+pub fn on_selection_changed(
+  instance: Frame,
+  callback: fn(Bool, GuiObject, GuiObject) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -1291,10 +1407,10 @@ pub fn on_selection_changed(instance: Frame, callback: fn(Bool, GuiObject, GuiOb
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: Frame) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -1302,10 +1418,10 @@ pub fn get_archivable(instance: Frame) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: Frame, value: Bool) -> Frame
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -1313,10 +1429,10 @@ pub fn set_archivable(instance: Frame, value: Bool) -> Frame
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: Frame) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -1324,10 +1440,10 @@ pub fn get_capabilities(instance: Frame) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
 pub fn set_capabilities(instance: Frame, value: SecurityCapabilities) -> Frame
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -1335,10 +1451,10 @@ pub fn set_capabilities(instance: Frame, value: SecurityCapabilities) -> Frame
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: Frame) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -1346,10 +1462,10 @@ pub fn get_name(instance: Frame) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: Frame, value: String) -> Frame
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -1358,10 +1474,10 @@ pub fn set_name(instance: Frame, value: String) -> Frame
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: Frame) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -1370,10 +1486,10 @@ pub fn get_parent(instance: Frame) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: Frame, value: parent) -> Frame
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -1382,10 +1498,10 @@ pub fn set_parent(instance: Frame, value: parent) -> Frame
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: Frame) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -1394,10 +1510,10 @@ pub fn get_roblox_locked(instance: Frame) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: Frame) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -1406,20 +1522,20 @@ pub fn get_sandboxed(instance: Frame) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: Frame, value: Bool) -> Frame
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: Frame) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -1428,10 +1544,10 @@ pub fn get_source_asset_id(instance: Frame) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: Frame) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -1440,10 +1556,10 @@ pub fn get_unique_id(instance: Frame) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: Frame, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -1452,10 +1568,10 @@ pub fn add_tag(instance: Frame, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: Frame) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -1464,10 +1580,10 @@ pub fn clear_all_children(instance: Frame) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: Frame) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -1476,10 +1592,10 @@ pub fn clone(instance: Frame) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: Frame) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -1492,10 +1608,10 @@ pub fn destroy_instance(instance: Frame) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
 pub fn find_first_ancestor(instance: Frame, name: String) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -1508,10 +1624,13 @@ pub fn find_first_ancestor(instance: Frame, name: String) -> Option(Instance)
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: Frame, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: Frame,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -1524,10 +1643,13 @@ pub fn find_first_ancestor_of_class(instance: Frame, class_name: String) -> Opti
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: Frame, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: Frame,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -1541,10 +1663,14 @@ pub fn find_first_ancestor_which_is_a(instance: Frame, class_name: String) -> Op
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: Frame, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: Frame,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -1557,10 +1683,13 @@ pub fn find_first_child(instance: Frame, name: String, recursive: Bool) -> Optio
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: Frame, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: Frame,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -1574,10 +1703,14 @@ pub fn find_first_child_of_class(instance: Frame, class_name: String) -> Option(
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: Frame, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: Frame,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -1590,10 +1723,10 @@ pub fn find_first_child_which_is_a(instance: Frame, class_name: String, recursiv
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
 pub fn find_first_descendant(instance: Frame, name: String) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -1605,10 +1738,10 @@ pub fn find_first_descendant(instance: Frame, name: String) -> Option(Instance)
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: Frame) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -1621,10 +1754,10 @@ pub fn get_actor(instance: Frame) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: Frame, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -1637,10 +1770,13 @@ pub fn get_attribute(instance: Frame, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: Frame, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: Frame,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -1653,10 +1789,10 @@ pub fn get_attribute_changed_signal(instance: Frame, attribute: String) -> RBXSc
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: Frame) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -1668,10 +1804,10 @@ pub fn get_attributes(instance: Frame) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: Frame) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -1684,10 +1820,10 @@ pub fn get_children(instance: Frame) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: Frame) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -1699,10 +1835,10 @@ pub fn get_descendants(instance: Frame) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: Frame) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -1716,10 +1852,14 @@ pub fn get_full_name(instance: Frame) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: Frame, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: Frame,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -1730,10 +1870,13 @@ pub fn get_styled(instance: Frame, name: String, selector: Option(String)) -> Dy
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: Frame, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: Frame,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -1742,10 +1885,10 @@ pub fn get_styled_property_changed_signal(instance: Frame, property: String) -> 
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: Frame) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -1754,10 +1897,10 @@ pub fn get_tags(instance: Frame) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: Frame, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -1770,10 +1913,10 @@ pub fn has_tag(instance: Frame, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: Frame, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -1786,10 +1929,10 @@ pub fn is_ancestor_of(instance: Frame, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: Frame, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -1802,10 +1945,10 @@ pub fn is_descendant_of(instance: Frame, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: Frame, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -1817,10 +1960,10 @@ pub fn is_property_modified(instance: Frame, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
 pub fn query_descendants(instance: Frame, selector: String) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -1829,10 +1972,10 @@ pub fn query_descendants(instance: Frame, selector: String) -> List(Instance)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: Frame, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -1842,10 +1985,10 @@ pub fn remove_tag(instance: Frame, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
 pub fn reset_property_to_default(instance: Frame, property: String) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -1856,10 +1999,10 @@ pub fn reset_property_to_default(instance: Frame, property: String) -> Nil
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
 pub fn set_attribute(instance: Frame, attribute: String, value: Dynamic) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -1874,19 +2017,25 @@ pub fn set_attribute(instance: Frame, attribute: String, value: Dynamic) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: Frame, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: Frame,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: Frame) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: Frame,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -1894,19 +2043,22 @@ pub fn ancestry_changed(instance: Frame) -> RBXScriptSignal(fn(Instance, Instanc
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: Frame, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: Frame,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
 pub fn attribute_changed(instance: Frame) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -1914,19 +2066,22 @@ pub fn attribute_changed(instance: Frame) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: Frame, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: Frame,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
 pub fn child_added(instance: Frame) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -1934,19 +2089,22 @@ pub fn child_added(instance: Frame) -> RBXScriptSignal(fn(Instance) -> Nil)
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: Frame, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: Frame,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
 pub fn child_removed(instance: Frame) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -1954,19 +2112,22 @@ pub fn child_removed(instance: Frame) -> RBXScriptSignal(fn(Instance) -> Nil)
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: Frame, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: Frame,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
 pub fn descendant_added(instance: Frame) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -1974,19 +2135,24 @@ pub fn descendant_added(instance: Frame) -> RBXScriptSignal(fn(Instance) -> Nil)
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: Frame, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: Frame,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: Frame) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: Frame,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -1994,19 +2160,22 @@ pub fn descendant_removing(instance: Frame) -> RBXScriptSignal(fn(Instance) -> N
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: Frame, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: Frame,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: Frame) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -2014,19 +2183,24 @@ pub fn destroying(instance: Frame) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: Frame, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: Frame,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: Frame) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: Frame,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -2034,10 +2208,13 @@ pub fn styled_properties_changed(instance: Frame) -> RBXScriptSignal(fn() -> Nil
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: Frame, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: Frame,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -2046,10 +2223,10 @@ pub fn on_styled_properties_changed(instance: Frame, callback: fn() -> Nil) -> R
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: Frame) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -2062,10 +2239,13 @@ pub fn get_class_name(instance: Frame) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: Frame, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: Frame,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -2079,19 +2259,19 @@ pub fn get_property_changed_signal(instance: Frame, property: String) -> RBXScri
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: Frame, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: Frame) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -2099,12 +2279,46 @@ pub fn changed(instance: Frame) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: Frame, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: Frame,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: GuiObject, _: SelectionBehavior, _: LocalizationTable, _: Rect, _: Vector2, _: SwipeDirection, _: UserInputState, _: InputObject, _: UDim2, _: EasingDirection, _: EasingStyle, _: SizeConstraint, _: InputSink, _: GuiState, _: BorderMode, _: Color3, _: AutomaticSize, _: FrameStyle, _: Frame, _: GuiBase2d, _: GuiBase, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: GuiObject,
+  _: SelectionBehavior,
+  _: LocalizationTable,
+  _: Rect,
+  _: Vector2,
+  _: SwipeDirection,
+  _: UserInputState,
+  _: InputObject,
+  _: UDim2,
+  _: EasingDirection,
+  _: EasingStyle,
+  _: SizeConstraint,
+  _: InputSink,
+  _: GuiState,
+  _: BorderMode,
+  _: Color3,
+  _: AutomaticSize,
+  _: FrameStyle,
+  _: Frame,
+  _: GuiBase2d,
+  _: GuiBase,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

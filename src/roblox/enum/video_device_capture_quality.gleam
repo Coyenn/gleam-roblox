@@ -2,36 +2,38 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type VideoDeviceCaptureQuality}
 
+@target(luau)
 /// Gets the Roblox `VideoDeviceCaptureQuality` enum object.
 ///
 /// Roblox: `Enum.VideoDeviceCaptureQuality`
 /// See: https://create.roblox.com/docs/reference/engine/enums/VideoDeviceCaptureQuality
-@target(luau)
 @luau.global("Enum.VideoDeviceCaptureQuality")
 pub fn roblox_enum() -> RobloxEnum(VideoDeviceCaptureQuality)
 
-/// Roblox enum item `VideoDeviceCaptureQuality.Default`.
 @target(luau)
+/// Roblox enum item `VideoDeviceCaptureQuality.Default`.
 @luau.global("Enum.VideoDeviceCaptureQuality.Default")
 pub fn default() -> VideoDeviceCaptureQuality
 
-/// Roblox enum item `VideoDeviceCaptureQuality.Low`.
 @target(luau)
+/// Roblox enum item `VideoDeviceCaptureQuality.Low`.
 @luau.global("Enum.VideoDeviceCaptureQuality.Low")
 pub fn low() -> VideoDeviceCaptureQuality
 
-/// Roblox enum item `VideoDeviceCaptureQuality.Medium`.
 @target(luau)
+/// Roblox enum item `VideoDeviceCaptureQuality.Medium`.
 @luau.global("Enum.VideoDeviceCaptureQuality.Medium")
 pub fn medium() -> VideoDeviceCaptureQuality
 
-/// Roblox enum item `VideoDeviceCaptureQuality.High`.
 @target(luau)
+/// Roblox enum item `VideoDeviceCaptureQuality.High`.
 @luau.global("Enum.VideoDeviceCaptureQuality.High")
 pub fn high() -> VideoDeviceCaptureQuality
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(VideoDeviceCaptureQuality), _: VideoDeviceCaptureQuality) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(VideoDeviceCaptureQuality),
+  _: VideoDeviceCaptureQuality,
+) -> Nil {
   Nil
 }

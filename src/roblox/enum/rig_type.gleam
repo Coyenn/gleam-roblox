@@ -2,34 +2,33 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type RigType}
 
+@target(luau)
 /// The type of rig being imported with the 3D Importer.
 ///
 /// Roblox: `Enum.RigType`
 /// See: https://create.roblox.com/docs/reference/engine/enums/RigType
-@target(luau)
 @luau.global("Enum.RigType")
 pub fn roblox_enum() -> RobloxEnum(RigType)
 
-/// Roblox enum item `RigType.R15`.
 @target(luau)
+/// Roblox enum item `RigType.R15`.
 @luau.global("Enum.RigType.R15")
 pub fn r15() -> RigType
 
-/// Roblox enum item `RigType.CustomHumanoid`.
 @target(luau)
+/// Roblox enum item `RigType.CustomHumanoid`.
 @luau.global("Enum.RigType.CustomHumanoid")
 pub fn custom_humanoid() -> RigType
 
-/// Roblox enum item `RigType.Custom`.
 @target(luau)
+/// Roblox enum item `RigType.Custom`.
 @luau.global("Enum.RigType.Custom")
 pub fn custom() -> RigType
 
-/// Roblox enum item `RigType.None`.
 @target(luau)
+/// Roblox enum item `RigType.None`.
 @luau.global("Enum.RigType.None")
 pub fn none() -> RigType
-
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(_: RobloxEnum(RigType), _: RigType) -> Nil {

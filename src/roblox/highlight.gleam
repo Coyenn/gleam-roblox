@@ -1,26 +1,31 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type Color3, type Highlight, type HighlightDepthMode, type Instance, type Object, type OptionDouble, type OptionInt64, type ReservedHighlightId, type SecurityCapabilities, type UniqueId}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type Color3, type Highlight, type HighlightDepthMode,
+  type Instance, type Object, type OptionDouble, type OptionInt64,
+  type ReservedHighlightId, type SecurityCapabilities, type UniqueId,
+}
 
+@target(luau)
 /// Creates a new Roblox `Highlight` instance.
 ///
 /// Roblox: `Instance.new("Highlight")`
-@target(luau)
 @luau.global("Instance.new(\"Highlight\")")
 pub fn new() -> Highlight
 
-/// Treats `Highlight` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `Highlight` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Highlight) -> Instance
 
-/// Treats `Highlight` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `Highlight` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: Highlight) -> Object
 
+@target(luau)
 /// Gets Roblox property `Highlight.Adornee`.
 ///
 /// The Instance that the Highlight is applied to.
@@ -28,10 +33,10 @@ pub fn as_object(instance: Highlight) -> Object
 /// Roblox: `Highlight.Adornee`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#Adornee
-@target(luau)
 @luau.property("Adornee")
 pub fn get_adornee(instance: Highlight) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Highlight.Adornee`.
 ///
 /// The Instance that the Highlight is applied to.
@@ -39,10 +44,10 @@ pub fn get_adornee(instance: Highlight) -> Instance
 /// Roblox: `Highlight.Adornee`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#Adornee
-@target(luau)
 @luau.set_property("Adornee")
 pub fn set_adornee(instance: Highlight, value: Instance) -> Highlight
 
+@target(luau)
 /// Gets Roblox property `Highlight.DepthMode`.
 ///
 /// Controls how the Highlight effect displays with respect to other objects in the world.
@@ -50,10 +55,10 @@ pub fn set_adornee(instance: Highlight, value: Instance) -> Highlight
 /// Roblox: `Highlight.DepthMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#DepthMode
-@target(luau)
 @luau.property("DepthMode")
 pub fn get_depth_mode(instance: Highlight) -> HighlightDepthMode
 
+@target(luau)
 /// Sets Roblox property `Highlight.DepthMode`.
 ///
 /// Controls how the Highlight effect displays with respect to other objects in the world.
@@ -61,10 +66,13 @@ pub fn get_depth_mode(instance: Highlight) -> HighlightDepthMode
 /// Roblox: `Highlight.DepthMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#DepthMode
-@target(luau)
 @luau.set_property("DepthMode")
-pub fn set_depth_mode(instance: Highlight, value: HighlightDepthMode) -> Highlight
+pub fn set_depth_mode(
+  instance: Highlight,
+  value: HighlightDepthMode,
+) -> Highlight
 
+@target(luau)
 /// Gets Roblox property `Highlight.Enabled`.
 ///
 /// Sets whether or not the highlight is enabled.
@@ -72,10 +80,10 @@ pub fn set_depth_mode(instance: Highlight, value: HighlightDepthMode) -> Highlig
 /// Roblox: `Highlight.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#Enabled
-@target(luau)
 @luau.property("Enabled")
 pub fn get_enabled(instance: Highlight) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Highlight.Enabled`.
 ///
 /// Sets whether or not the highlight is enabled.
@@ -83,10 +91,10 @@ pub fn get_enabled(instance: Highlight) -> Bool
 /// Roblox: `Highlight.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#Enabled
-@target(luau)
 @luau.set_property("Enabled")
 pub fn set_enabled(instance: Highlight, value: Bool) -> Highlight
 
+@target(luau)
 /// Gets Roblox property `Highlight.FillColor`.
 ///
 /// Sets the Color3 value of the highlight's interior.
@@ -94,10 +102,10 @@ pub fn set_enabled(instance: Highlight, value: Bool) -> Highlight
 /// Roblox: `Highlight.FillColor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#FillColor
-@target(luau)
 @luau.property("FillColor")
 pub fn get_fill_color(instance: Highlight) -> Color3
 
+@target(luau)
 /// Sets Roblox property `Highlight.FillColor`.
 ///
 /// Sets the Color3 value of the highlight's interior.
@@ -105,10 +113,10 @@ pub fn get_fill_color(instance: Highlight) -> Color3
 /// Roblox: `Highlight.FillColor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#FillColor
-@target(luau)
 @luau.set_property("FillColor")
 pub fn set_fill_color(instance: Highlight, value: Color3) -> Highlight
 
+@target(luau)
 /// Gets Roblox property `Highlight.FillTransparency`.
 ///
 /// Sets the transparency of the highlight's interior.
@@ -116,10 +124,10 @@ pub fn set_fill_color(instance: Highlight, value: Color3) -> Highlight
 /// Roblox: `Highlight.FillTransparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#FillTransparency
-@target(luau)
 @luau.property("FillTransparency")
 pub fn get_fill_transparency(instance: Highlight) -> Float
 
+@target(luau)
 /// Sets Roblox property `Highlight.FillTransparency`.
 ///
 /// Sets the transparency of the highlight's interior.
@@ -127,20 +135,20 @@ pub fn get_fill_transparency(instance: Highlight) -> Float
 /// Roblox: `Highlight.FillTransparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#FillTransparency
-@target(luau)
 @luau.set_property("FillTransparency")
 pub fn set_fill_transparency(instance: Highlight, value: Float) -> Highlight
 
+@target(luau)
 /// Gets Roblox property `Highlight.LineThickness`.
 ///
 /// Roblox: `Highlight.LineThickness`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#LineThickness
-@target(luau)
 @luau.property("LineThickness")
 pub fn get_line_thickness(instance: Highlight) -> Int
 
+@target(luau)
 /// Gets Roblox property `Highlight.OutlineColor`.
 ///
 /// Sets the Color3 value of the highlight's outline.
@@ -148,10 +156,10 @@ pub fn get_line_thickness(instance: Highlight) -> Int
 /// Roblox: `Highlight.OutlineColor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#OutlineColor
-@target(luau)
 @luau.property("OutlineColor")
 pub fn get_outline_color(instance: Highlight) -> Color3
 
+@target(luau)
 /// Sets Roblox property `Highlight.OutlineColor`.
 ///
 /// Sets the Color3 value of the highlight's outline.
@@ -159,10 +167,10 @@ pub fn get_outline_color(instance: Highlight) -> Color3
 /// Roblox: `Highlight.OutlineColor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#OutlineColor
-@target(luau)
 @luau.set_property("OutlineColor")
 pub fn set_outline_color(instance: Highlight, value: Color3) -> Highlight
 
+@target(luau)
 /// Gets Roblox property `Highlight.OutlineTransparency`.
 ///
 /// Sets the transparency of the highlight's outline.
@@ -170,10 +178,10 @@ pub fn set_outline_color(instance: Highlight, value: Color3) -> Highlight
 /// Roblox: `Highlight.OutlineTransparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#OutlineTransparency
-@target(luau)
 @luau.property("OutlineTransparency")
 pub fn get_outline_transparency(instance: Highlight) -> Float
 
+@target(luau)
 /// Sets Roblox property `Highlight.OutlineTransparency`.
 ///
 /// Sets the transparency of the highlight's outline.
@@ -181,20 +189,20 @@ pub fn get_outline_transparency(instance: Highlight) -> Float
 /// Roblox: `Highlight.OutlineTransparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#OutlineTransparency
-@target(luau)
 @luau.set_property("OutlineTransparency")
 pub fn set_outline_transparency(instance: Highlight, value: Float) -> Highlight
 
+@target(luau)
 /// Gets Roblox property `Highlight.ReservedId`.
 ///
 /// Roblox: `Highlight.ReservedId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Highlight#ReservedId
-@target(luau)
 @luau.property("ReservedId")
 pub fn get_reserved_id(instance: Highlight) -> ReservedHighlightId
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -202,10 +210,10 @@ pub fn get_reserved_id(instance: Highlight) -> ReservedHighlightId
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: Highlight) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -213,10 +221,10 @@ pub fn get_archivable(instance: Highlight) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: Highlight, value: Bool) -> Highlight
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -224,10 +232,10 @@ pub fn set_archivable(instance: Highlight, value: Bool) -> Highlight
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: Highlight) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -235,10 +243,13 @@ pub fn get_capabilities(instance: Highlight) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: Highlight, value: SecurityCapabilities) -> Highlight
+pub fn set_capabilities(
+  instance: Highlight,
+  value: SecurityCapabilities,
+) -> Highlight
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -246,10 +257,10 @@ pub fn set_capabilities(instance: Highlight, value: SecurityCapabilities) -> Hig
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: Highlight) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -257,10 +268,10 @@ pub fn get_name(instance: Highlight) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: Highlight, value: String) -> Highlight
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -269,10 +280,10 @@ pub fn set_name(instance: Highlight, value: String) -> Highlight
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: Highlight) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -281,10 +292,10 @@ pub fn get_parent(instance: Highlight) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: Highlight, value: parent) -> Highlight
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -293,10 +304,10 @@ pub fn set_parent(instance: Highlight, value: parent) -> Highlight
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: Highlight) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -305,10 +316,10 @@ pub fn get_roblox_locked(instance: Highlight) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: Highlight) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -317,20 +328,20 @@ pub fn get_sandboxed(instance: Highlight) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: Highlight, value: Bool) -> Highlight
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: Highlight) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -339,10 +350,10 @@ pub fn get_source_asset_id(instance: Highlight) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: Highlight) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -351,10 +362,10 @@ pub fn get_unique_id(instance: Highlight) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: Highlight, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -363,10 +374,10 @@ pub fn add_tag(instance: Highlight, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: Highlight) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -375,10 +386,10 @@ pub fn clear_all_children(instance: Highlight) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: Highlight) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -387,10 +398,10 @@ pub fn clone(instance: Highlight) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: Highlight) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -403,10 +414,13 @@ pub fn destroy_instance(instance: Highlight) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: Highlight, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: Highlight,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -419,10 +433,13 @@ pub fn find_first_ancestor(instance: Highlight, name: String) -> Option(Instance
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: Highlight, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: Highlight,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -435,10 +452,13 @@ pub fn find_first_ancestor_of_class(instance: Highlight, class_name: String) -> 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: Highlight, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: Highlight,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -452,10 +472,14 @@ pub fn find_first_ancestor_which_is_a(instance: Highlight, class_name: String) -
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: Highlight, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: Highlight,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -468,10 +492,13 @@ pub fn find_first_child(instance: Highlight, name: String, recursive: Bool) -> O
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: Highlight, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: Highlight,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -485,10 +512,14 @@ pub fn find_first_child_of_class(instance: Highlight, class_name: String) -> Opt
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: Highlight, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: Highlight,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -501,10 +532,13 @@ pub fn find_first_child_which_is_a(instance: Highlight, class_name: String, recu
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: Highlight, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: Highlight,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -516,10 +550,10 @@ pub fn find_first_descendant(instance: Highlight, name: String) -> Option(Instan
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: Highlight) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -532,10 +566,10 @@ pub fn get_actor(instance: Highlight) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: Highlight, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -548,10 +582,13 @@ pub fn get_attribute(instance: Highlight, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: Highlight, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: Highlight,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -564,10 +601,10 @@ pub fn get_attribute_changed_signal(instance: Highlight, attribute: String) -> R
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: Highlight) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -579,10 +616,10 @@ pub fn get_attributes(instance: Highlight) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: Highlight) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -595,10 +632,10 @@ pub fn get_children(instance: Highlight) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: Highlight) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -610,10 +647,10 @@ pub fn get_descendants(instance: Highlight) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: Highlight) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -627,10 +664,14 @@ pub fn get_full_name(instance: Highlight) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: Highlight, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: Highlight,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -641,10 +682,13 @@ pub fn get_styled(instance: Highlight, name: String, selector: Option(String)) -
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: Highlight, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: Highlight,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -653,10 +697,10 @@ pub fn get_styled_property_changed_signal(instance: Highlight, property: String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: Highlight) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -665,10 +709,10 @@ pub fn get_tags(instance: Highlight) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: Highlight, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -681,10 +725,10 @@ pub fn has_tag(instance: Highlight, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: Highlight, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -697,10 +741,10 @@ pub fn is_ancestor_of(instance: Highlight, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: Highlight, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -713,10 +757,10 @@ pub fn is_descendant_of(instance: Highlight, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: Highlight, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -728,10 +772,13 @@ pub fn is_property_modified(instance: Highlight, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: Highlight, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: Highlight,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -740,10 +787,10 @@ pub fn query_descendants(instance: Highlight, selector: String) -> List(Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: Highlight, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -753,10 +800,10 @@ pub fn remove_tag(instance: Highlight, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
 pub fn reset_property_to_default(instance: Highlight, property: String) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -767,10 +814,14 @@ pub fn reset_property_to_default(instance: Highlight, property: String) -> Nil
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: Highlight, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: Highlight,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -785,19 +836,25 @@ pub fn set_attribute(instance: Highlight, attribute: String, value: Dynamic) -> 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: Highlight, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: Highlight,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: Highlight) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: Highlight,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -805,19 +862,24 @@ pub fn ancestry_changed(instance: Highlight) -> RBXScriptSignal(fn(Instance, Ins
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: Highlight, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: Highlight,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: Highlight) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: Highlight,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -825,19 +887,22 @@ pub fn attribute_changed(instance: Highlight) -> RBXScriptSignal(fn(String) -> N
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: Highlight, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: Highlight,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
 pub fn child_added(instance: Highlight) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -845,19 +910,24 @@ pub fn child_added(instance: Highlight) -> RBXScriptSignal(fn(Instance) -> Nil)
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: Highlight, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: Highlight,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: Highlight) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: Highlight,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -865,19 +935,24 @@ pub fn child_removed(instance: Highlight) -> RBXScriptSignal(fn(Instance) -> Nil
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: Highlight, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: Highlight,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: Highlight) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: Highlight,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -885,19 +960,24 @@ pub fn descendant_added(instance: Highlight) -> RBXScriptSignal(fn(Instance) -> 
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: Highlight, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: Highlight,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: Highlight) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: Highlight,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -905,19 +985,22 @@ pub fn descendant_removing(instance: Highlight) -> RBXScriptSignal(fn(Instance) 
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: Highlight, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: Highlight,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: Highlight) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -925,19 +1008,24 @@ pub fn destroying(instance: Highlight) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: Highlight, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: Highlight,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: Highlight) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: Highlight,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -945,10 +1033,13 @@ pub fn styled_properties_changed(instance: Highlight) -> RBXScriptSignal(fn() ->
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: Highlight, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: Highlight,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -957,10 +1048,10 @@ pub fn on_styled_properties_changed(instance: Highlight, callback: fn() -> Nil) 
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: Highlight) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -973,10 +1064,13 @@ pub fn get_class_name(instance: Highlight) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: Highlight, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: Highlight,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -990,19 +1084,19 @@ pub fn get_property_changed_signal(instance: Highlight, property: String) -> RBX
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: Highlight, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: Highlight) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1010,12 +1104,29 @@ pub fn changed(instance: Highlight) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: Highlight, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: Highlight,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: ReservedHighlightId, _: Color3, _: HighlightDepthMode, _: Highlight, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: ReservedHighlightId,
+  _: Color3,
+  _: HighlightDepthMode,
+  _: Highlight,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

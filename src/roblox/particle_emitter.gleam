@@ -1,26 +1,35 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type ColorSequence, type ContentId, type Instance, type NormalId, type NumberRange, type NumberSequence, type Object, type OptionDouble, type OptionInt64, type ParticleEmitter, type ParticleEmitterShape, type ParticleEmitterShapeInOut, type ParticleEmitterShapeStyle, type ParticleFlipbookLayout, type ParticleFlipbookMode, type ParticleOrientation, type SecurityCapabilities, type UniqueId, type Vector2, type Vector3}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type ColorSequence, type ContentId, type Instance, type NormalId,
+  type NumberRange, type NumberSequence, type Object, type OptionDouble,
+  type OptionInt64, type ParticleEmitter, type ParticleEmitterShape,
+  type ParticleEmitterShapeInOut, type ParticleEmitterShapeStyle,
+  type ParticleFlipbookLayout, type ParticleFlipbookMode,
+  type ParticleOrientation, type SecurityCapabilities, type UniqueId,
+  type Vector2, type Vector3,
+}
 
+@target(luau)
 /// Creates a new Roblox `ParticleEmitter` instance.
 ///
 /// Roblox: `Instance.new("ParticleEmitter")`
-@target(luau)
 @luau.global("Instance.new(\"ParticleEmitter\")")
 pub fn new() -> ParticleEmitter
 
-/// Treats `ParticleEmitter` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `ParticleEmitter` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ParticleEmitter) -> Instance
 
-/// Treats `ParticleEmitter` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `ParticleEmitter` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: ParticleEmitter) -> Object
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Acceleration`.
 ///
 /// Determines the global-axis acceleration of all active particles, measured in studs per second squared.
@@ -28,10 +37,10 @@ pub fn as_object(instance: ParticleEmitter) -> Object
 /// Roblox: `ParticleEmitter.Acceleration`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Acceleration
-@target(luau)
 @luau.property("Acceleration")
 pub fn get_acceleration(instance: ParticleEmitter) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Acceleration`.
 ///
 /// Determines the global-axis acceleration of all active particles, measured in studs per second squared.
@@ -39,10 +48,13 @@ pub fn get_acceleration(instance: ParticleEmitter) -> Vector3
 /// Roblox: `ParticleEmitter.Acceleration`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Acceleration
-@target(luau)
 @luau.set_property("Acceleration")
-pub fn set_acceleration(instance: ParticleEmitter, value: Vector3) -> ParticleEmitter
+pub fn set_acceleration(
+  instance: ParticleEmitter,
+  value: Vector3,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Brightness`.
 ///
 /// Scales the light emitted from the emitter when ParticleEmitter.LightInfluence is 0.
@@ -50,10 +62,10 @@ pub fn set_acceleration(instance: ParticleEmitter, value: Vector3) -> ParticleEm
 /// Roblox: `ParticleEmitter.Brightness`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Brightness
-@target(luau)
 @luau.property("Brightness")
 pub fn get_brightness(instance: ParticleEmitter) -> Float
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Brightness`.
 ///
 /// Scales the light emitted from the emitter when ParticleEmitter.LightInfluence is 0.
@@ -61,10 +73,13 @@ pub fn get_brightness(instance: ParticleEmitter) -> Float
 /// Roblox: `ParticleEmitter.Brightness`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Brightness
-@target(luau)
 @luau.set_property("Brightness")
-pub fn set_brightness(instance: ParticleEmitter, value: Float) -> ParticleEmitter
+pub fn set_brightness(
+  instance: ParticleEmitter,
+  value: Float,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Color`.
 ///
 /// Determines the color of all active particles over their individual lifetimes.
@@ -72,10 +87,10 @@ pub fn set_brightness(instance: ParticleEmitter, value: Float) -> ParticleEmitte
 /// Roblox: `ParticleEmitter.Color`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Color
-@target(luau)
 @luau.property("Color")
 pub fn get_color(instance: ParticleEmitter) -> ColorSequence
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Color`.
 ///
 /// Determines the color of all active particles over their individual lifetimes.
@@ -83,10 +98,13 @@ pub fn get_color(instance: ParticleEmitter) -> ColorSequence
 /// Roblox: `ParticleEmitter.Color`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Color
-@target(luau)
 @luau.set_property("Color")
-pub fn set_color(instance: ParticleEmitter, value: ColorSequence) -> ParticleEmitter
+pub fn set_color(
+  instance: ParticleEmitter,
+  value: ColorSequence,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Drag`.
 ///
 /// Determines the rate at which particles will lose half their speed through exponential decay.
@@ -94,10 +112,10 @@ pub fn set_color(instance: ParticleEmitter, value: ColorSequence) -> ParticleEmi
 /// Roblox: `ParticleEmitter.Drag`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Drag
-@target(luau)
 @luau.property("Drag")
 pub fn get_drag(instance: ParticleEmitter) -> Float
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Drag`.
 ///
 /// Determines the rate at which particles will lose half their speed through exponential decay.
@@ -105,10 +123,10 @@ pub fn get_drag(instance: ParticleEmitter) -> Float
 /// Roblox: `ParticleEmitter.Drag`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Drag
-@target(luau)
 @luau.set_property("Drag")
 pub fn set_drag(instance: ParticleEmitter, value: Float) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.EmissionDirection`.
 ///
 /// Determines the face of the object that particles emit from.
@@ -116,10 +134,10 @@ pub fn set_drag(instance: ParticleEmitter, value: Float) -> ParticleEmitter
 /// Roblox: `ParticleEmitter.EmissionDirection`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#EmissionDirection
-@target(luau)
 @luau.property("EmissionDirection")
 pub fn get_emission_direction(instance: ParticleEmitter) -> NormalId
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.EmissionDirection`.
 ///
 /// Determines the face of the object that particles emit from.
@@ -127,10 +145,13 @@ pub fn get_emission_direction(instance: ParticleEmitter) -> NormalId
 /// Roblox: `ParticleEmitter.EmissionDirection`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#EmissionDirection
-@target(luau)
 @luau.set_property("EmissionDirection")
-pub fn set_emission_direction(instance: ParticleEmitter, value: NormalId) -> ParticleEmitter
+pub fn set_emission_direction(
+  instance: ParticleEmitter,
+  value: NormalId,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Enabled`.
 ///
 /// Determines if particles emit from the emitter.
@@ -138,10 +159,10 @@ pub fn set_emission_direction(instance: ParticleEmitter, value: NormalId) -> Par
 /// Roblox: `ParticleEmitter.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Enabled
-@target(luau)
 @luau.property("Enabled")
 pub fn get_enabled(instance: ParticleEmitter) -> Bool
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Enabled`.
 ///
 /// Determines if particles emit from the emitter.
@@ -149,10 +170,10 @@ pub fn get_enabled(instance: ParticleEmitter) -> Bool
 /// Roblox: `ParticleEmitter.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Enabled
-@target(luau)
 @luau.set_property("Enabled")
 pub fn set_enabled(instance: ParticleEmitter, value: Bool) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.FlipbookBlendFrames`.
 ///
 /// Determines whether the flipbook frames are blended between.
@@ -160,10 +181,10 @@ pub fn set_enabled(instance: ParticleEmitter, value: Bool) -> ParticleEmitter
 /// Roblox: `ParticleEmitter.FlipbookBlendFrames`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookBlendFrames
-@target(luau)
 @luau.property("FlipbookBlendFrames")
 pub fn get_flipbook_blend_frames(instance: ParticleEmitter) -> Bool
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.FlipbookBlendFrames`.
 ///
 /// Determines whether the flipbook frames are blended between.
@@ -171,10 +192,13 @@ pub fn get_flipbook_blend_frames(instance: ParticleEmitter) -> Bool
 /// Roblox: `ParticleEmitter.FlipbookBlendFrames`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookBlendFrames
-@target(luau)
 @luau.set_property("FlipbookBlendFrames")
-pub fn set_flipbook_blend_frames(instance: ParticleEmitter, value: Bool) -> ParticleEmitter
+pub fn set_flipbook_blend_frames(
+  instance: ParticleEmitter,
+  value: Bool,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.FlipbookFramerate`.
 ///
 /// Determines how fast the flipbook texture animates in frames per second.
@@ -182,10 +206,10 @@ pub fn set_flipbook_blend_frames(instance: ParticleEmitter, value: Bool) -> Part
 /// Roblox: `ParticleEmitter.FlipbookFramerate`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookFramerate
-@target(luau)
 @luau.property("FlipbookFramerate")
 pub fn get_flipbook_framerate(instance: ParticleEmitter) -> NumberRange
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.FlipbookFramerate`.
 ///
 /// Determines how fast the flipbook texture animates in frames per second.
@@ -193,10 +217,13 @@ pub fn get_flipbook_framerate(instance: ParticleEmitter) -> NumberRange
 /// Roblox: `ParticleEmitter.FlipbookFramerate`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookFramerate
-@target(luau)
 @luau.set_property("FlipbookFramerate")
-pub fn set_flipbook_framerate(instance: ParticleEmitter, value: NumberRange) -> ParticleEmitter
+pub fn set_flipbook_framerate(
+  instance: ParticleEmitter,
+  value: NumberRange,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.FlipbookIncompatible`.
 ///
 /// The error message to display if the Texture is incompatible for a flipbook.
@@ -204,10 +231,10 @@ pub fn set_flipbook_framerate(instance: ParticleEmitter, value: NumberRange) -> 
 /// Roblox: `ParticleEmitter.FlipbookIncompatible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookIncompatible
-@target(luau)
 @luau.property("FlipbookIncompatible")
 pub fn get_flipbook_incompatible(instance: ParticleEmitter) -> String
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.FlipbookIncompatible`.
 ///
 /// The error message to display if the Texture is incompatible for a flipbook.
@@ -215,10 +242,13 @@ pub fn get_flipbook_incompatible(instance: ParticleEmitter) -> String
 /// Roblox: `ParticleEmitter.FlipbookIncompatible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookIncompatible
-@target(luau)
 @luau.set_property("FlipbookIncompatible")
-pub fn set_flipbook_incompatible(instance: ParticleEmitter, value: String) -> ParticleEmitter
+pub fn set_flipbook_incompatible(
+  instance: ParticleEmitter,
+  value: String,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.FlipbookLayout`.
 ///
 /// Determines the layout of the flipbook texture. Must be None, Grid2x2, Grid4x4, Grid8x8 or Custom.
@@ -226,10 +256,10 @@ pub fn set_flipbook_incompatible(instance: ParticleEmitter, value: String) -> Pa
 /// Roblox: `ParticleEmitter.FlipbookLayout`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookLayout
-@target(luau)
 @luau.property("FlipbookLayout")
 pub fn get_flipbook_layout(instance: ParticleEmitter) -> ParticleFlipbookLayout
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.FlipbookLayout`.
 ///
 /// Determines the layout of the flipbook texture. Must be None, Grid2x2, Grid4x4, Grid8x8 or Custom.
@@ -237,10 +267,13 @@ pub fn get_flipbook_layout(instance: ParticleEmitter) -> ParticleFlipbookLayout
 /// Roblox: `ParticleEmitter.FlipbookLayout`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookLayout
-@target(luau)
 @luau.set_property("FlipbookLayout")
-pub fn set_flipbook_layout(instance: ParticleEmitter, value: ParticleFlipbookLayout) -> ParticleEmitter
+pub fn set_flipbook_layout(
+  instance: ParticleEmitter,
+  value: ParticleFlipbookLayout,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.FlipbookMode`.
 ///
 /// Determines the type of the flipbook animation. Must be Loop, OneShot, PingPong, or Random.
@@ -248,10 +281,10 @@ pub fn set_flipbook_layout(instance: ParticleEmitter, value: ParticleFlipbookLay
 /// Roblox: `ParticleEmitter.FlipbookMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookMode
-@target(luau)
 @luau.property("FlipbookMode")
 pub fn get_flipbook_mode(instance: ParticleEmitter) -> ParticleFlipbookMode
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.FlipbookMode`.
 ///
 /// Determines the type of the flipbook animation. Must be Loop, OneShot, PingPong, or Random.
@@ -259,10 +292,13 @@ pub fn get_flipbook_mode(instance: ParticleEmitter) -> ParticleFlipbookMode
 /// Roblox: `ParticleEmitter.FlipbookMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookMode
-@target(luau)
 @luau.set_property("FlipbookMode")
-pub fn set_flipbook_mode(instance: ParticleEmitter, value: ParticleFlipbookMode) -> ParticleEmitter
+pub fn set_flipbook_mode(
+  instance: ParticleEmitter,
+  value: ParticleFlipbookMode,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.FlipbookSizeX`.
 ///
 /// Defines the number of horizontal frames in a custom flipbook layout.
@@ -270,10 +306,10 @@ pub fn set_flipbook_mode(instance: ParticleEmitter, value: ParticleFlipbookMode)
 /// Roblox: `ParticleEmitter.FlipbookSizeX`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookSizeX
-@target(luau)
 @luau.property("FlipbookSizeX")
 pub fn get_flipbook_size_x(instance: ParticleEmitter) -> Int
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.FlipbookSizeX`.
 ///
 /// Defines the number of horizontal frames in a custom flipbook layout.
@@ -281,10 +317,13 @@ pub fn get_flipbook_size_x(instance: ParticleEmitter) -> Int
 /// Roblox: `ParticleEmitter.FlipbookSizeX`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookSizeX
-@target(luau)
 @luau.set_property("FlipbookSizeX")
-pub fn set_flipbook_size_x(instance: ParticleEmitter, value: Int) -> ParticleEmitter
+pub fn set_flipbook_size_x(
+  instance: ParticleEmitter,
+  value: Int,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.FlipbookSizeY`.
 ///
 /// Defines the number of vertical frames in a custom flipbook layout.
@@ -292,10 +331,10 @@ pub fn set_flipbook_size_x(instance: ParticleEmitter, value: Int) -> ParticleEmi
 /// Roblox: `ParticleEmitter.FlipbookSizeY`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookSizeY
-@target(luau)
 @luau.property("FlipbookSizeY")
 pub fn get_flipbook_size_y(instance: ParticleEmitter) -> Int
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.FlipbookSizeY`.
 ///
 /// Defines the number of vertical frames in a custom flipbook layout.
@@ -303,10 +342,13 @@ pub fn get_flipbook_size_y(instance: ParticleEmitter) -> Int
 /// Roblox: `ParticleEmitter.FlipbookSizeY`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookSizeY
-@target(luau)
 @luau.set_property("FlipbookSizeY")
-pub fn set_flipbook_size_y(instance: ParticleEmitter, value: Int) -> ParticleEmitter
+pub fn set_flipbook_size_y(
+  instance: ParticleEmitter,
+  value: Int,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.FlipbookStartRandom`.
 ///
 /// Determines whether the animation starts at a random frame chosen per particle instead of always starting at frame zero.
@@ -314,10 +356,10 @@ pub fn set_flipbook_size_y(instance: ParticleEmitter, value: Int) -> ParticleEmi
 /// Roblox: `ParticleEmitter.FlipbookStartRandom`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookStartRandom
-@target(luau)
 @luau.property("FlipbookStartRandom")
 pub fn get_flipbook_start_random(instance: ParticleEmitter) -> Bool
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.FlipbookStartRandom`.
 ///
 /// Determines whether the animation starts at a random frame chosen per particle instead of always starting at frame zero.
@@ -325,10 +367,13 @@ pub fn get_flipbook_start_random(instance: ParticleEmitter) -> Bool
 /// Roblox: `ParticleEmitter.FlipbookStartRandom`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#FlipbookStartRandom
-@target(luau)
 @luau.set_property("FlipbookStartRandom")
-pub fn set_flipbook_start_random(instance: ParticleEmitter, value: Bool) -> ParticleEmitter
+pub fn set_flipbook_start_random(
+  instance: ParticleEmitter,
+  value: Bool,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Lifetime`.
 ///
 /// Defines a random range of ages for newly emitted particles.
@@ -336,10 +381,10 @@ pub fn set_flipbook_start_random(instance: ParticleEmitter, value: Bool) -> Part
 /// Roblox: `ParticleEmitter.Lifetime`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Lifetime
-@target(luau)
 @luau.property("Lifetime")
 pub fn get_lifetime(instance: ParticleEmitter) -> NumberRange
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Lifetime`.
 ///
 /// Defines a random range of ages for newly emitted particles.
@@ -347,10 +392,13 @@ pub fn get_lifetime(instance: ParticleEmitter) -> NumberRange
 /// Roblox: `ParticleEmitter.Lifetime`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Lifetime
-@target(luau)
 @luau.set_property("Lifetime")
-pub fn set_lifetime(instance: ParticleEmitter, value: NumberRange) -> ParticleEmitter
+pub fn set_lifetime(
+  instance: ParticleEmitter,
+  value: NumberRange,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.LightEmission`.
 ///
 /// Determines how much particles' colors are blended with the colors behind them.
@@ -358,10 +406,10 @@ pub fn set_lifetime(instance: ParticleEmitter, value: NumberRange) -> ParticleEm
 /// Roblox: `ParticleEmitter.LightEmission`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#LightEmission
-@target(luau)
 @luau.property("LightEmission")
 pub fn get_light_emission(instance: ParticleEmitter) -> Float
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.LightEmission`.
 ///
 /// Determines how much particles' colors are blended with the colors behind them.
@@ -369,10 +417,13 @@ pub fn get_light_emission(instance: ParticleEmitter) -> Float
 /// Roblox: `ParticleEmitter.LightEmission`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#LightEmission
-@target(luau)
 @luau.set_property("LightEmission")
-pub fn set_light_emission(instance: ParticleEmitter, value: Float) -> ParticleEmitter
+pub fn set_light_emission(
+  instance: ParticleEmitter,
+  value: Float,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.LightInfluence`.
 ///
 /// Determines how much particles are influenced by the environmental light.
@@ -380,10 +431,10 @@ pub fn set_light_emission(instance: ParticleEmitter, value: Float) -> ParticleEm
 /// Roblox: `ParticleEmitter.LightInfluence`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#LightInfluence
-@target(luau)
 @luau.property("LightInfluence")
 pub fn get_light_influence(instance: ParticleEmitter) -> Float
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.LightInfluence`.
 ///
 /// Determines how much particles are influenced by the environmental light.
@@ -391,30 +442,36 @@ pub fn get_light_influence(instance: ParticleEmitter) -> Float
 /// Roblox: `ParticleEmitter.LightInfluence`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#LightInfluence
-@target(luau)
 @luau.set_property("LightInfluence")
-pub fn set_light_influence(instance: ParticleEmitter, value: Float) -> ParticleEmitter
+pub fn set_light_influence(
+  instance: ParticleEmitter,
+  value: Float,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.LocalTransparencyModifier`.
 ///
 /// Roblox: `ParticleEmitter.LocalTransparencyModifier`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#LocalTransparencyModifier
-@target(luau)
 @luau.property("LocalTransparencyModifier")
 pub fn get_local_transparency_modifier(instance: ParticleEmitter) -> Float
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.LocalTransparencyModifier`.
 ///
 /// Roblox: `ParticleEmitter.LocalTransparencyModifier`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#LocalTransparencyModifier
-@target(luau)
 @luau.set_property("LocalTransparencyModifier")
-pub fn set_local_transparency_modifier(instance: ParticleEmitter, value: Float) -> ParticleEmitter
+pub fn set_local_transparency_modifier(
+  instance: ParticleEmitter,
+  value: Float,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.LockedToPart`.
 ///
 /// Determines whether the particles rigidly move with the part they're being emitted from.
@@ -422,10 +479,10 @@ pub fn set_local_transparency_modifier(instance: ParticleEmitter, value: Float) 
 /// Roblox: `ParticleEmitter.LockedToPart`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#LockedToPart
-@target(luau)
 @luau.property("LockedToPart")
 pub fn get_locked_to_part(instance: ParticleEmitter) -> Bool
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.LockedToPart`.
 ///
 /// Determines whether the particles rigidly move with the part they're being emitted from.
@@ -433,10 +490,13 @@ pub fn get_locked_to_part(instance: ParticleEmitter) -> Bool
 /// Roblox: `ParticleEmitter.LockedToPart`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#LockedToPart
-@target(luau)
 @luau.set_property("LockedToPart")
-pub fn set_locked_to_part(instance: ParticleEmitter, value: Bool) -> ParticleEmitter
+pub fn set_locked_to_part(
+  instance: ParticleEmitter,
+  value: Bool,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Orientation`.
 ///
 /// Specifies how to orient particles.
@@ -444,10 +504,10 @@ pub fn set_locked_to_part(instance: ParticleEmitter, value: Bool) -> ParticleEmi
 /// Roblox: `ParticleEmitter.Orientation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Orientation
-@target(luau)
 @luau.property("Orientation")
 pub fn get_orientation(instance: ParticleEmitter) -> ParticleOrientation
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Orientation`.
 ///
 /// Specifies how to orient particles.
@@ -455,10 +515,13 @@ pub fn get_orientation(instance: ParticleEmitter) -> ParticleOrientation
 /// Roblox: `ParticleEmitter.Orientation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Orientation
-@target(luau)
 @luau.set_property("Orientation")
-pub fn set_orientation(instance: ParticleEmitter, value: ParticleOrientation) -> ParticleEmitter
+pub fn set_orientation(
+  instance: ParticleEmitter,
+  value: ParticleOrientation,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Rate`.
 ///
 /// Determines the number of particles emitted per second.
@@ -466,10 +529,10 @@ pub fn set_orientation(instance: ParticleEmitter, value: ParticleOrientation) ->
 /// Roblox: `ParticleEmitter.Rate`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Rate
-@target(luau)
 @luau.property("Rate")
 pub fn get_rate(instance: ParticleEmitter) -> Float
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Rate`.
 ///
 /// Determines the number of particles emitted per second.
@@ -477,10 +540,10 @@ pub fn get_rate(instance: ParticleEmitter) -> Float
 /// Roblox: `ParticleEmitter.Rate`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Rate
-@target(luau)
 @luau.set_property("Rate")
 pub fn set_rate(instance: ParticleEmitter, value: Float) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.RotSpeed`.
 ///
 /// Determines the range of angular speeds of emitted particles, measured in degrees per second.
@@ -488,10 +551,10 @@ pub fn set_rate(instance: ParticleEmitter, value: Float) -> ParticleEmitter
 /// Roblox: `ParticleEmitter.RotSpeed`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#RotSpeed
-@target(luau)
 @luau.property("RotSpeed")
 pub fn get_rot_speed(instance: ParticleEmitter) -> NumberRange
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.RotSpeed`.
 ///
 /// Determines the range of angular speeds of emitted particles, measured in degrees per second.
@@ -499,10 +562,13 @@ pub fn get_rot_speed(instance: ParticleEmitter) -> NumberRange
 /// Roblox: `ParticleEmitter.RotSpeed`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#RotSpeed
-@target(luau)
 @luau.set_property("RotSpeed")
-pub fn set_rot_speed(instance: ParticleEmitter, value: NumberRange) -> ParticleEmitter
+pub fn set_rot_speed(
+  instance: ParticleEmitter,
+  value: NumberRange,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Rotation`.
 ///
 /// Determines the range of rotations in degrees for newly emitted particles.
@@ -510,10 +576,10 @@ pub fn set_rot_speed(instance: ParticleEmitter, value: NumberRange) -> ParticleE
 /// Roblox: `ParticleEmitter.Rotation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Rotation
-@target(luau)
 @luau.property("Rotation")
 pub fn get_rotation(instance: ParticleEmitter) -> NumberRange
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Rotation`.
 ///
 /// Determines the range of rotations in degrees for newly emitted particles.
@@ -521,10 +587,13 @@ pub fn get_rotation(instance: ParticleEmitter) -> NumberRange
 /// Roblox: `ParticleEmitter.Rotation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Rotation
-@target(luau)
 @luau.set_property("Rotation")
-pub fn set_rotation(instance: ParticleEmitter, value: NumberRange) -> ParticleEmitter
+pub fn set_rotation(
+  instance: ParticleEmitter,
+  value: NumberRange,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Shape`.
 ///
 /// Sets the shape of the emitter to either a box, sphere, cylinder, or disc.
@@ -532,10 +601,10 @@ pub fn set_rotation(instance: ParticleEmitter, value: NumberRange) -> ParticleEm
 /// Roblox: `ParticleEmitter.Shape`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Shape
-@target(luau)
 @luau.property("Shape")
 pub fn get_shape(instance: ParticleEmitter) -> ParticleEmitterShape
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Shape`.
 ///
 /// Sets the shape of the emitter to either a box, sphere, cylinder, or disc.
@@ -543,10 +612,13 @@ pub fn get_shape(instance: ParticleEmitter) -> ParticleEmitterShape
 /// Roblox: `ParticleEmitter.Shape`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Shape
-@target(luau)
 @luau.set_property("Shape")
-pub fn set_shape(instance: ParticleEmitter, value: ParticleEmitterShape) -> ParticleEmitter
+pub fn set_shape(
+  instance: ParticleEmitter,
+  value: ParticleEmitterShape,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.ShapeInOut`.
 ///
 /// Sets whether particles emit outward only, inward only, or in both directions.
@@ -554,10 +626,10 @@ pub fn set_shape(instance: ParticleEmitter, value: ParticleEmitterShape) -> Part
 /// Roblox: `ParticleEmitter.ShapeInOut`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#ShapeInOut
-@target(luau)
 @luau.property("ShapeInOut")
 pub fn get_shape_in_out(instance: ParticleEmitter) -> ParticleEmitterShapeInOut
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.ShapeInOut`.
 ///
 /// Sets whether particles emit outward only, inward only, or in both directions.
@@ -565,10 +637,13 @@ pub fn get_shape_in_out(instance: ParticleEmitter) -> ParticleEmitterShapeInOut
 /// Roblox: `ParticleEmitter.ShapeInOut`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#ShapeInOut
-@target(luau)
 @luau.set_property("ShapeInOut")
-pub fn set_shape_in_out(instance: ParticleEmitter, value: ParticleEmitterShapeInOut) -> ParticleEmitter
+pub fn set_shape_in_out(
+  instance: ParticleEmitter,
+  value: ParticleEmitterShapeInOut,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.ShapePartial`.
 ///
 /// Influences particle emission from cylinder, disc, sphere, and box shapes.
@@ -576,10 +651,10 @@ pub fn set_shape_in_out(instance: ParticleEmitter, value: ParticleEmitterShapeIn
 /// Roblox: `ParticleEmitter.ShapePartial`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#ShapePartial
-@target(luau)
 @luau.property("ShapePartial")
 pub fn get_shape_partial(instance: ParticleEmitter) -> Float
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.ShapePartial`.
 ///
 /// Influences particle emission from cylinder, disc, sphere, and box shapes.
@@ -587,10 +662,13 @@ pub fn get_shape_partial(instance: ParticleEmitter) -> Float
 /// Roblox: `ParticleEmitter.ShapePartial`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#ShapePartial
-@target(luau)
 @luau.set_property("ShapePartial")
-pub fn set_shape_partial(instance: ParticleEmitter, value: Float) -> ParticleEmitter
+pub fn set_shape_partial(
+  instance: ParticleEmitter,
+  value: Float,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.ShapeStyle`.
 ///
 /// Sets particle emission to either volumetric or surface-only emission.
@@ -598,10 +676,10 @@ pub fn set_shape_partial(instance: ParticleEmitter, value: Float) -> ParticleEmi
 /// Roblox: `ParticleEmitter.ShapeStyle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#ShapeStyle
-@target(luau)
 @luau.property("ShapeStyle")
 pub fn get_shape_style(instance: ParticleEmitter) -> ParticleEmitterShapeStyle
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.ShapeStyle`.
 ///
 /// Sets particle emission to either volumetric or surface-only emission.
@@ -609,10 +687,13 @@ pub fn get_shape_style(instance: ParticleEmitter) -> ParticleEmitterShapeStyle
 /// Roblox: `ParticleEmitter.ShapeStyle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#ShapeStyle
-@target(luau)
 @luau.set_property("ShapeStyle")
-pub fn set_shape_style(instance: ParticleEmitter, value: ParticleEmitterShapeStyle) -> ParticleEmitter
+pub fn set_shape_style(
+  instance: ParticleEmitter,
+  value: ParticleEmitterShapeStyle,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Size`.
 ///
 /// Determines the world size over individual particles' lifetimes.
@@ -620,10 +701,10 @@ pub fn set_shape_style(instance: ParticleEmitter, value: ParticleEmitterShapeSty
 /// Roblox: `ParticleEmitter.Size`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Size
-@target(luau)
 @luau.property("Size")
 pub fn get_size(instance: ParticleEmitter) -> NumberSequence
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Size`.
 ///
 /// Determines the world size over individual particles' lifetimes.
@@ -631,10 +712,13 @@ pub fn get_size(instance: ParticleEmitter) -> NumberSequence
 /// Roblox: `ParticleEmitter.Size`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Size
-@target(luau)
 @luau.set_property("Size")
-pub fn set_size(instance: ParticleEmitter, value: NumberSequence) -> ParticleEmitter
+pub fn set_size(
+  instance: ParticleEmitter,
+  value: NumberSequence,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Speed`.
 ///
 /// Determines a random range of velocities (minimum to maximum) at which new particles will emit, measured in studs per second.
@@ -642,10 +726,10 @@ pub fn set_size(instance: ParticleEmitter, value: NumberSequence) -> ParticleEmi
 /// Roblox: `ParticleEmitter.Speed`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Speed
-@target(luau)
 @luau.property("Speed")
 pub fn get_speed(instance: ParticleEmitter) -> NumberRange
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Speed`.
 ///
 /// Determines a random range of velocities (minimum to maximum) at which new particles will emit, measured in studs per second.
@@ -653,10 +737,13 @@ pub fn get_speed(instance: ParticleEmitter) -> NumberRange
 /// Roblox: `ParticleEmitter.Speed`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Speed
-@target(luau)
 @luau.set_property("Speed")
-pub fn set_speed(instance: ParticleEmitter, value: NumberRange) -> ParticleEmitter
+pub fn set_speed(
+  instance: ParticleEmitter,
+  value: NumberRange,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.SpreadAngle`.
 ///
 /// Determines the angles at which particles may be randomly emit, measured in degrees.
@@ -664,10 +751,10 @@ pub fn set_speed(instance: ParticleEmitter, value: NumberRange) -> ParticleEmitt
 /// Roblox: `ParticleEmitter.SpreadAngle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#SpreadAngle
-@target(luau)
 @luau.property("SpreadAngle")
 pub fn get_spread_angle(instance: ParticleEmitter) -> Vector2
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.SpreadAngle`.
 ///
 /// Determines the angles at which particles may be randomly emit, measured in degrees.
@@ -675,10 +762,13 @@ pub fn get_spread_angle(instance: ParticleEmitter) -> Vector2
 /// Roblox: `ParticleEmitter.SpreadAngle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#SpreadAngle
-@target(luau)
 @luau.set_property("SpreadAngle")
-pub fn set_spread_angle(instance: ParticleEmitter, value: Vector2) -> ParticleEmitter
+pub fn set_spread_angle(
+  instance: ParticleEmitter,
+  value: Vector2,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Squash`.
 ///
 /// Allows for non-uniform scaling of particles, curve-controlled over their lifetime.
@@ -686,10 +776,10 @@ pub fn set_spread_angle(instance: ParticleEmitter, value: Vector2) -> ParticleEm
 /// Roblox: `ParticleEmitter.Squash`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Squash
-@target(luau)
 @luau.property("Squash")
 pub fn get_squash(instance: ParticleEmitter) -> NumberSequence
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Squash`.
 ///
 /// Allows for non-uniform scaling of particles, curve-controlled over their lifetime.
@@ -697,10 +787,13 @@ pub fn get_squash(instance: ParticleEmitter) -> NumberSequence
 /// Roblox: `ParticleEmitter.Squash`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Squash
-@target(luau)
 @luau.set_property("Squash")
-pub fn set_squash(instance: ParticleEmitter, value: NumberSequence) -> ParticleEmitter
+pub fn set_squash(
+  instance: ParticleEmitter,
+  value: NumberSequence,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Texture`.
 ///
 /// Determines the image rendered on particles.
@@ -708,10 +801,10 @@ pub fn set_squash(instance: ParticleEmitter, value: NumberSequence) -> ParticleE
 /// Roblox: `ParticleEmitter.Texture`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Texture
-@target(luau)
 @luau.property("Texture")
 pub fn get_texture(instance: ParticleEmitter) -> ContentId
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Texture`.
 ///
 /// Determines the image rendered on particles.
@@ -719,10 +812,13 @@ pub fn get_texture(instance: ParticleEmitter) -> ContentId
 /// Roblox: `ParticleEmitter.Texture`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Texture
-@target(luau)
 @luau.set_property("Texture")
-pub fn set_texture(instance: ParticleEmitter, value: ContentId) -> ParticleEmitter
+pub fn set_texture(
+  instance: ParticleEmitter,
+  value: ContentId,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.TimeScale`.
 ///
 /// Value between 0 and 1 that controls the speed of the particle effect.
@@ -730,10 +826,10 @@ pub fn set_texture(instance: ParticleEmitter, value: ContentId) -> ParticleEmitt
 /// Roblox: `ParticleEmitter.TimeScale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#TimeScale
-@target(luau)
 @luau.property("TimeScale")
 pub fn get_time_scale(instance: ParticleEmitter) -> Float
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.TimeScale`.
 ///
 /// Value between 0 and 1 that controls the speed of the particle effect.
@@ -741,10 +837,13 @@ pub fn get_time_scale(instance: ParticleEmitter) -> Float
 /// Roblox: `ParticleEmitter.TimeScale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#TimeScale
-@target(luau)
 @luau.set_property("TimeScale")
-pub fn set_time_scale(instance: ParticleEmitter, value: Float) -> ParticleEmitter
+pub fn set_time_scale(
+  instance: ParticleEmitter,
+  value: Float,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.Transparency`.
 ///
 /// Determines the transparency of particles over their individual lifetimes.
@@ -752,10 +851,10 @@ pub fn set_time_scale(instance: ParticleEmitter, value: Float) -> ParticleEmitte
 /// Roblox: `ParticleEmitter.Transparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Transparency
-@target(luau)
 @luau.property("Transparency")
 pub fn get_transparency(instance: ParticleEmitter) -> NumberSequence
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.Transparency`.
 ///
 /// Determines the transparency of particles over their individual lifetimes.
@@ -763,10 +862,13 @@ pub fn get_transparency(instance: ParticleEmitter) -> NumberSequence
 /// Roblox: `ParticleEmitter.Transparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#Transparency
-@target(luau)
 @luau.set_property("Transparency")
-pub fn set_transparency(instance: ParticleEmitter, value: NumberSequence) -> ParticleEmitter
+pub fn set_transparency(
+  instance: ParticleEmitter,
+  value: NumberSequence,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.VelocityInheritance`.
 ///
 /// Determines how much of the parent's velocity is inherited by particles when emitted.
@@ -774,10 +876,10 @@ pub fn set_transparency(instance: ParticleEmitter, value: NumberSequence) -> Par
 /// Roblox: `ParticleEmitter.VelocityInheritance`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#VelocityInheritance
-@target(luau)
 @luau.property("VelocityInheritance")
 pub fn get_velocity_inheritance(instance: ParticleEmitter) -> Float
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.VelocityInheritance`.
 ///
 /// Determines how much of the parent's velocity is inherited by particles when emitted.
@@ -785,10 +887,13 @@ pub fn get_velocity_inheritance(instance: ParticleEmitter) -> Float
 /// Roblox: `ParticleEmitter.VelocityInheritance`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#VelocityInheritance
-@target(luau)
 @luau.set_property("VelocityInheritance")
-pub fn set_velocity_inheritance(instance: ParticleEmitter, value: Float) -> ParticleEmitter
+pub fn set_velocity_inheritance(
+  instance: ParticleEmitter,
+  value: Float,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.WindAffectsDrag`.
 ///
 /// Whether emitted particles follow the Workspace.GlobalWind vector.
@@ -796,10 +901,10 @@ pub fn set_velocity_inheritance(instance: ParticleEmitter, value: Float) -> Part
 /// Roblox: `ParticleEmitter.WindAffectsDrag`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#WindAffectsDrag
-@target(luau)
 @luau.property("WindAffectsDrag")
 pub fn get_wind_affects_drag(instance: ParticleEmitter) -> Bool
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.WindAffectsDrag`.
 ///
 /// Whether emitted particles follow the Workspace.GlobalWind vector.
@@ -807,10 +912,13 @@ pub fn get_wind_affects_drag(instance: ParticleEmitter) -> Bool
 /// Roblox: `ParticleEmitter.WindAffectsDrag`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#WindAffectsDrag
-@target(luau)
 @luau.set_property("WindAffectsDrag")
-pub fn set_wind_affects_drag(instance: ParticleEmitter, value: Bool) -> ParticleEmitter
+pub fn set_wind_affects_drag(
+  instance: ParticleEmitter,
+  value: Bool,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `ParticleEmitter.ZOffset`.
 ///
 /// Determines the forward-backward render position of particles; used to control what particles render on top/bottom.
@@ -818,10 +926,10 @@ pub fn set_wind_affects_drag(instance: ParticleEmitter, value: Bool) -> Particle
 /// Roblox: `ParticleEmitter.ZOffset`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#ZOffset
-@target(luau)
 @luau.property("ZOffset")
 pub fn get_z_offset(instance: ParticleEmitter) -> Float
 
+@target(luau)
 /// Sets Roblox property `ParticleEmitter.ZOffset`.
 ///
 /// Determines the forward-backward render position of particles; used to control what particles render on top/bottom.
@@ -829,10 +937,10 @@ pub fn get_z_offset(instance: ParticleEmitter) -> Float
 /// Roblox: `ParticleEmitter.ZOffset`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ParticleEmitter#ZOffset
-@target(luau)
 @luau.set_property("ZOffset")
 pub fn set_z_offset(instance: ParticleEmitter, value: Float) -> ParticleEmitter
 
+@target(luau)
 /// Clears all particles that have been emitted.
 ///
 /// Roblox: `ParticleEmitter.Clear`
@@ -841,10 +949,10 @@ pub fn set_z_offset(instance: ParticleEmitter, value: Float) -> ParticleEmitter
 ///
 /// Parameters:
 /// - `instance`: A special object that emits customizable 2D particles into the world.
-@target(luau)
 @luau.method("Clear")
 pub fn clear(instance: ParticleEmitter) -> Nil
 
+@target(luau)
 /// Emits a given number of particles.
 ///
 /// Roblox: `ParticleEmitter.Emit`
@@ -854,10 +962,10 @@ pub fn clear(instance: ParticleEmitter) -> Nil
 /// Parameters:
 /// - `instance`: A special object that emits customizable 2D particles into the world.
 /// - `particleCount`: The number of particles to emit.
-@target(luau)
 @luau.method("Emit")
 pub fn emit(instance: ParticleEmitter, particle_count: Int) -> Nil
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -865,10 +973,10 @@ pub fn emit(instance: ParticleEmitter, particle_count: Int) -> Nil
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: ParticleEmitter) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -876,10 +984,10 @@ pub fn get_archivable(instance: ParticleEmitter) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: ParticleEmitter, value: Bool) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -887,10 +995,10 @@ pub fn set_archivable(instance: ParticleEmitter, value: Bool) -> ParticleEmitter
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: ParticleEmitter) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -898,10 +1006,13 @@ pub fn get_capabilities(instance: ParticleEmitter) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: ParticleEmitter, value: SecurityCapabilities) -> ParticleEmitter
+pub fn set_capabilities(
+  instance: ParticleEmitter,
+  value: SecurityCapabilities,
+) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -909,10 +1020,10 @@ pub fn set_capabilities(instance: ParticleEmitter, value: SecurityCapabilities) 
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: ParticleEmitter) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -920,10 +1031,10 @@ pub fn get_name(instance: ParticleEmitter) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: ParticleEmitter, value: String) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -932,10 +1043,10 @@ pub fn set_name(instance: ParticleEmitter, value: String) -> ParticleEmitter
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: ParticleEmitter) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -944,10 +1055,10 @@ pub fn get_parent(instance: ParticleEmitter) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: ParticleEmitter, value: parent) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -956,10 +1067,10 @@ pub fn set_parent(instance: ParticleEmitter, value: parent) -> ParticleEmitter
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: ParticleEmitter) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -968,10 +1079,10 @@ pub fn get_roblox_locked(instance: ParticleEmitter) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: ParticleEmitter) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -980,20 +1091,20 @@ pub fn get_sandboxed(instance: ParticleEmitter) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: ParticleEmitter, value: Bool) -> ParticleEmitter
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: ParticleEmitter) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -1002,10 +1113,10 @@ pub fn get_source_asset_id(instance: ParticleEmitter) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: ParticleEmitter) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -1014,10 +1125,10 @@ pub fn get_unique_id(instance: ParticleEmitter) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: ParticleEmitter, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -1026,10 +1137,10 @@ pub fn add_tag(instance: ParticleEmitter, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: ParticleEmitter) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -1038,10 +1149,10 @@ pub fn clear_all_children(instance: ParticleEmitter) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: ParticleEmitter) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -1050,10 +1161,10 @@ pub fn clone(instance: ParticleEmitter) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: ParticleEmitter) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -1066,10 +1177,13 @@ pub fn destroy_instance(instance: ParticleEmitter) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: ParticleEmitter, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: ParticleEmitter,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -1082,10 +1196,13 @@ pub fn find_first_ancestor(instance: ParticleEmitter, name: String) -> Option(In
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: ParticleEmitter, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: ParticleEmitter,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -1098,10 +1215,13 @@ pub fn find_first_ancestor_of_class(instance: ParticleEmitter, class_name: Strin
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: ParticleEmitter, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: ParticleEmitter,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -1115,10 +1235,14 @@ pub fn find_first_ancestor_which_is_a(instance: ParticleEmitter, class_name: Str
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: ParticleEmitter, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: ParticleEmitter,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -1131,10 +1255,13 @@ pub fn find_first_child(instance: ParticleEmitter, name: String, recursive: Bool
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: ParticleEmitter, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: ParticleEmitter,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -1148,10 +1275,14 @@ pub fn find_first_child_of_class(instance: ParticleEmitter, class_name: String) 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: ParticleEmitter, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: ParticleEmitter,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -1164,10 +1295,13 @@ pub fn find_first_child_which_is_a(instance: ParticleEmitter, class_name: String
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: ParticleEmitter, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: ParticleEmitter,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -1179,10 +1313,10 @@ pub fn find_first_descendant(instance: ParticleEmitter, name: String) -> Option(
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: ParticleEmitter) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -1195,10 +1329,10 @@ pub fn get_actor(instance: ParticleEmitter) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: ParticleEmitter, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -1211,10 +1345,13 @@ pub fn get_attribute(instance: ParticleEmitter, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: ParticleEmitter, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: ParticleEmitter,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -1227,10 +1364,10 @@ pub fn get_attribute_changed_signal(instance: ParticleEmitter, attribute: String
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: ParticleEmitter) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -1242,10 +1379,10 @@ pub fn get_attributes(instance: ParticleEmitter) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: ParticleEmitter) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -1258,10 +1395,10 @@ pub fn get_children(instance: ParticleEmitter) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: ParticleEmitter) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -1273,10 +1410,10 @@ pub fn get_descendants(instance: ParticleEmitter) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: ParticleEmitter) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -1290,10 +1427,14 @@ pub fn get_full_name(instance: ParticleEmitter) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: ParticleEmitter, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: ParticleEmitter,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -1304,10 +1445,13 @@ pub fn get_styled(instance: ParticleEmitter, name: String, selector: Option(Stri
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: ParticleEmitter, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: ParticleEmitter,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -1316,10 +1460,10 @@ pub fn get_styled_property_changed_signal(instance: ParticleEmitter, property: S
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: ParticleEmitter) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -1328,10 +1472,10 @@ pub fn get_tags(instance: ParticleEmitter) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: ParticleEmitter, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -1344,10 +1488,10 @@ pub fn has_tag(instance: ParticleEmitter, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: ParticleEmitter, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -1360,10 +1504,10 @@ pub fn is_ancestor_of(instance: ParticleEmitter, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: ParticleEmitter, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -1376,10 +1520,10 @@ pub fn is_descendant_of(instance: ParticleEmitter, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: ParticleEmitter, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -1391,10 +1535,13 @@ pub fn is_property_modified(instance: ParticleEmitter, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: ParticleEmitter, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: ParticleEmitter,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -1403,10 +1550,10 @@ pub fn query_descendants(instance: ParticleEmitter, selector: String) -> List(In
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: ParticleEmitter, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -1416,10 +1563,13 @@ pub fn remove_tag(instance: ParticleEmitter, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: ParticleEmitter, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: ParticleEmitter,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -1430,10 +1580,14 @@ pub fn reset_property_to_default(instance: ParticleEmitter, property: String) ->
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: ParticleEmitter, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: ParticleEmitter,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -1448,19 +1602,25 @@ pub fn set_attribute(instance: ParticleEmitter, attribute: String, value: Dynami
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: ParticleEmitter, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: ParticleEmitter,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: ParticleEmitter) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: ParticleEmitter,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -1468,19 +1628,24 @@ pub fn ancestry_changed(instance: ParticleEmitter) -> RBXScriptSignal(fn(Instanc
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: ParticleEmitter, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: ParticleEmitter,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: ParticleEmitter) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: ParticleEmitter,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -1488,19 +1653,24 @@ pub fn attribute_changed(instance: ParticleEmitter) -> RBXScriptSignal(fn(String
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: ParticleEmitter, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: ParticleEmitter,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: ParticleEmitter) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: ParticleEmitter,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -1508,19 +1678,24 @@ pub fn child_added(instance: ParticleEmitter) -> RBXScriptSignal(fn(Instance) ->
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: ParticleEmitter, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: ParticleEmitter,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: ParticleEmitter) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: ParticleEmitter,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -1528,19 +1703,24 @@ pub fn child_removed(instance: ParticleEmitter) -> RBXScriptSignal(fn(Instance) 
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: ParticleEmitter, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: ParticleEmitter,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: ParticleEmitter) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: ParticleEmitter,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -1548,19 +1728,24 @@ pub fn descendant_added(instance: ParticleEmitter) -> RBXScriptSignal(fn(Instanc
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: ParticleEmitter, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: ParticleEmitter,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: ParticleEmitter) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: ParticleEmitter,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -1568,19 +1753,22 @@ pub fn descendant_removing(instance: ParticleEmitter) -> RBXScriptSignal(fn(Inst
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: ParticleEmitter, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: ParticleEmitter,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: ParticleEmitter) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1588,19 +1776,24 @@ pub fn destroying(instance: ParticleEmitter) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: ParticleEmitter, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: ParticleEmitter,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: ParticleEmitter) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: ParticleEmitter,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1608,10 +1801,13 @@ pub fn styled_properties_changed(instance: ParticleEmitter) -> RBXScriptSignal(f
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: ParticleEmitter, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: ParticleEmitter,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1620,10 +1816,10 @@ pub fn on_styled_properties_changed(instance: ParticleEmitter, callback: fn() ->
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: ParticleEmitter) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1636,10 +1832,13 @@ pub fn get_class_name(instance: ParticleEmitter) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: ParticleEmitter, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: ParticleEmitter,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1653,19 +1852,19 @@ pub fn get_property_changed_signal(instance: ParticleEmitter, property: String) 
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: ParticleEmitter, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: ParticleEmitter) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1673,12 +1872,39 @@ pub fn changed(instance: ParticleEmitter) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: ParticleEmitter, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: ParticleEmitter,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: NumberSequence, _: ContentId, _: Vector2, _: NumberRange, _: ParticleEmitterShapeStyle, _: ParticleEmitterShapeInOut, _: ParticleEmitterShape, _: ParticleOrientation, _: ParticleFlipbookMode, _: ParticleFlipbookLayout, _: NormalId, _: ColorSequence, _: Vector3, _: ParticleEmitter, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: NumberSequence,
+  _: ContentId,
+  _: Vector2,
+  _: NumberRange,
+  _: ParticleEmitterShapeStyle,
+  _: ParticleEmitterShapeInOut,
+  _: ParticleEmitterShape,
+  _: ParticleOrientation,
+  _: ParticleFlipbookMode,
+  _: ParticleFlipbookLayout,
+  _: NormalId,
+  _: ColorSequence,
+  _: Vector3,
+  _: ParticleEmitter,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

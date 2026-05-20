@@ -2,69 +2,68 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type RibbonTool}
 
+@target(luau)
 /// Gets the Roblox `RibbonTool` enum object.
 ///
 /// Roblox: `Enum.RibbonTool`
 /// See: https://create.roblox.com/docs/reference/engine/enums/RibbonTool
-@target(luau)
 @luau.global("Enum.RibbonTool")
 pub fn roblox_enum() -> RobloxEnum(RibbonTool)
 
-/// Roblox enum item `RibbonTool.Select`.
 @target(luau)
+/// Roblox enum item `RibbonTool.Select`.
 @luau.global("Enum.RibbonTool.Select")
 pub fn select() -> RibbonTool
 
-/// Roblox enum item `RibbonTool.Scale`.
 @target(luau)
+/// Roblox enum item `RibbonTool.Scale`.
 @luau.global("Enum.RibbonTool.Scale")
 pub fn scale() -> RibbonTool
 
-/// Roblox enum item `RibbonTool.Rotate`.
 @target(luau)
+/// Roblox enum item `RibbonTool.Rotate`.
 @luau.global("Enum.RibbonTool.Rotate")
 pub fn rotate() -> RibbonTool
 
-/// Roblox enum item `RibbonTool.Move`.
 @target(luau)
+/// Roblox enum item `RibbonTool.Move`.
 @luau.global("Enum.RibbonTool.Move")
 pub fn move() -> RibbonTool
 
-/// Roblox enum item `RibbonTool.Transform`.
 @target(luau)
+/// Roblox enum item `RibbonTool.Transform`.
 @luau.global("Enum.RibbonTool.Transform")
 pub fn transform() -> RibbonTool
 
-/// Roblox enum item `RibbonTool.ColorPicker`.
 @target(luau)
+/// Roblox enum item `RibbonTool.ColorPicker`.
 @luau.global("Enum.RibbonTool.ColorPicker")
 pub fn color_picker() -> RibbonTool
 
-/// Roblox enum item `RibbonTool.MaterialPicker`.
 @target(luau)
+/// Roblox enum item `RibbonTool.MaterialPicker`.
 @luau.global("Enum.RibbonTool.MaterialPicker")
 pub fn material_picker() -> RibbonTool
 
-/// Roblox enum item `RibbonTool.Group`.
 @target(luau)
+/// Roblox enum item `RibbonTool.Group`.
 @luau.global("Enum.RibbonTool.Group")
 pub fn group() -> RibbonTool
 
-/// Roblox enum item `RibbonTool.Ungroup`.
 @target(luau)
+/// Roblox enum item `RibbonTool.Ungroup`.
 @luau.global("Enum.RibbonTool.Ungroup")
 pub fn ungroup() -> RibbonTool
 
-/// Roblox enum item `RibbonTool.None`.
 @target(luau)
+/// Roblox enum item `RibbonTool.None`.
 @luau.global("Enum.RibbonTool.None")
 pub fn none() -> RibbonTool
 
-/// Roblox enum item `RibbonTool.PivotEditor`.
 @target(luau)
+/// Roblox enum item `RibbonTool.PivotEditor`.
 @luau.global("Enum.RibbonTool.PivotEditor")
 pub fn pivot_editor() -> RibbonTool
-
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(_: RobloxEnum(RibbonTool), _: RibbonTool) -> Nil {

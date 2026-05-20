@@ -1,19 +1,23 @@
 // Generated declarative builders for Roblox `AudioEcho` instances.
-import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/audio_echo
+import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/types.{type AudioEcho, type Instance, type SecurityCapabilities}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: AudioEcho) -> Instance
 
-/// Creates a declarative Roblox `AudioEcho` node.
 @target(luau)
-pub fn node(properties: List(Property(AudioEcho)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `AudioEcho` node.
+pub fn node(
+  properties: List(Property(AudioEcho)),
+  children: List(Node),
+) -> Node {
   let instance = apply(audio_echo.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AudioEcho.Bypass` on `AudioEcho` nodes.
 ///
 /// Whether audio streams are passed-through unaffected by this effect.
@@ -21,11 +25,11 @@ pub fn node(properties: List(Property(AudioEcho)), children: List(Node)) -> Node
 /// Roblox: `AudioEcho.Bypass`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioEcho#Bypass
-@target(luau)
 pub fn bypass(value: Bool) -> Property(AudioEcho) {
   Property(fn(instance) { audio_echo.set_bypass(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AudioEcho.DelayTime` on `AudioEcho` nodes.
 ///
 /// The amount of time between echoes.
@@ -33,11 +37,11 @@ pub fn bypass(value: Bool) -> Property(AudioEcho) {
 /// Roblox: `AudioEcho.DelayTime`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioEcho#DelayTime
-@target(luau)
 pub fn delay_time(value: Float) -> Property(AudioEcho) {
   Property(fn(instance) { audio_echo.set_delay_time(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AudioEcho.DryLevel` on `AudioEcho` nodes.
 ///
 /// Gain level determining how loud the original, unaltered audio stream will be.
@@ -45,11 +49,11 @@ pub fn delay_time(value: Float) -> Property(AudioEcho) {
 /// Roblox: `AudioEcho.DryLevel`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioEcho#DryLevel
-@target(luau)
 pub fn dry_level(value: Float) -> Property(AudioEcho) {
   Property(fn(instance) { audio_echo.set_dry_level(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AudioEcho.Feedback` on `AudioEcho` nodes.
 ///
 /// How slowly echoes fade away.
@@ -57,11 +61,11 @@ pub fn dry_level(value: Float) -> Property(AudioEcho) {
 /// Roblox: `AudioEcho.Feedback`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioEcho#Feedback
-@target(luau)
 pub fn feedback(value: Float) -> Property(AudioEcho) {
   Property(fn(instance) { audio_echo.set_feedback(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AudioEcho.RampTime` on `AudioEcho` nodes.
 ///
 /// The time taken to interpolate between DelayTime values.
@@ -69,11 +73,11 @@ pub fn feedback(value: Float) -> Property(AudioEcho) {
 /// Roblox: `AudioEcho.RampTime`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioEcho#RampTime
-@target(luau)
 pub fn ramp_time(value: Float) -> Property(AudioEcho) {
   Property(fn(instance) { audio_echo.set_ramp_time(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AudioEcho.WetLevel` on `AudioEcho` nodes.
 ///
 /// Gain level determining how loud the echoed stream will be.
@@ -81,11 +85,11 @@ pub fn ramp_time(value: Float) -> Property(AudioEcho) {
 /// Roblox: `AudioEcho.WetLevel`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioEcho#WetLevel
-@target(luau)
 pub fn wet_level(value: Float) -> Property(AudioEcho) {
   Property(fn(instance) { audio_echo.set_wet_level(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `AudioEcho` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -93,11 +97,11 @@ pub fn wet_level(value: Float) -> Property(AudioEcho) {
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(AudioEcho) {
   Property(fn(instance) { audio_echo.set_archivable(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `AudioEcho` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -105,11 +109,11 @@ pub fn archivable(value: Bool) -> Property(AudioEcho) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 pub fn capabilities(value: SecurityCapabilities) -> Property(AudioEcho) {
   Property(fn(instance) { audio_echo.set_capabilities(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `AudioEcho` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -117,11 +121,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(AudioEcho) {
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(AudioEcho) {
   Property(fn(instance) { audio_echo.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `AudioEcho` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -130,11 +134,11 @@ pub fn name(value: String) -> Property(AudioEcho) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(AudioEcho) {
   Property(fn(instance) { audio_echo.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `AudioEcho` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -143,13 +147,15 @@ pub fn parent(value: Instance) -> Property(AudioEcho) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(AudioEcho) {
   Property(fn(instance) { audio_echo.set_sandboxed(instance, value) })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: AudioEcho) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: AudioEcho,
+) -> Nil {
   Nil
 }

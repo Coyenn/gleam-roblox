@@ -2,36 +2,38 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type StudioCloseMode}
 
+@target(luau)
 /// Gets the Roblox `StudioCloseMode` enum object.
 ///
 /// Roblox: `Enum.StudioCloseMode`
 /// See: https://create.roblox.com/docs/reference/engine/enums/StudioCloseMode
-@target(luau)
 @luau.global("Enum.StudioCloseMode")
 pub fn roblox_enum() -> RobloxEnum(StudioCloseMode)
 
-/// Roblox enum item `StudioCloseMode.None`.
 @target(luau)
+/// Roblox enum item `StudioCloseMode.None`.
 @luau.global("Enum.StudioCloseMode.None")
 pub fn none() -> StudioCloseMode
 
-/// Roblox enum item `StudioCloseMode.CloseStudio`.
 @target(luau)
+/// Roblox enum item `StudioCloseMode.CloseStudio`.
 @luau.global("Enum.StudioCloseMode.CloseStudio")
 pub fn close_studio() -> StudioCloseMode
 
-/// Roblox enum item `StudioCloseMode.CloseDoc`.
 @target(luau)
+/// Roblox enum item `StudioCloseMode.CloseDoc`.
 @luau.global("Enum.StudioCloseMode.CloseDoc")
 pub fn close_doc() -> StudioCloseMode
 
-/// Roblox enum item `StudioCloseMode.LogOut`.
 @target(luau)
+/// Roblox enum item `StudioCloseMode.LogOut`.
 @luau.global("Enum.StudioCloseMode.LogOut")
 pub fn log_out() -> StudioCloseMode
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(StudioCloseMode), _: StudioCloseMode) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(StudioCloseMode),
+  _: StudioCloseMode,
+) -> Nil {
   Nil
 }

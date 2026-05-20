@@ -1,19 +1,25 @@
 // Generated declarative builders for Roblox `UITextSizeConstraint` instances.
 import roblox/create.{type Node, type Property, Node, Property, apply}
+import roblox/types.{
+  type Instance, type SecurityCapabilities, type UITextSizeConstraint,
+}
 import roblox/ui_text_size_constraint
-import roblox/types.{type Instance, type SecurityCapabilities, type UITextSizeConstraint}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: UITextSizeConstraint) -> Instance
 
-/// Creates a declarative Roblox `UITextSizeConstraint` node.
 @target(luau)
-pub fn node(properties: List(Property(UITextSizeConstraint)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `UITextSizeConstraint` node.
+pub fn node(
+  properties: List(Property(UITextSizeConstraint)),
+  children: List(Node),
+) -> Node {
   let instance = apply(ui_text_size_constraint.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `UITextSizeConstraint.MaxTextSize` on `UITextSizeConstraint` nodes.
 ///
 /// The largest size in pixels the font is allowed to be.
@@ -21,11 +27,13 @@ pub fn node(properties: List(Property(UITextSizeConstraint)), children: List(Nod
 /// Roblox: `UITextSizeConstraint.MaxTextSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UITextSizeConstraint#MaxTextSize
-@target(luau)
 pub fn max_text_size(value: Int) -> Property(UITextSizeConstraint) {
-  Property(fn(instance) { ui_text_size_constraint.set_max_text_size(instance, value) })
+  Property(fn(instance) {
+    ui_text_size_constraint.set_max_text_size(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `UITextSizeConstraint.MinTextSize` on `UITextSizeConstraint` nodes.
 ///
 /// The smallest size in pixels the font is allowed to be.
@@ -33,11 +41,13 @@ pub fn max_text_size(value: Int) -> Property(UITextSizeConstraint) {
 /// Roblox: `UITextSizeConstraint.MinTextSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UITextSizeConstraint#MinTextSize
-@target(luau)
 pub fn min_text_size(value: Int) -> Property(UITextSizeConstraint) {
-  Property(fn(instance) { ui_text_size_constraint.set_min_text_size(instance, value) })
+  Property(fn(instance) {
+    ui_text_size_constraint.set_min_text_size(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `UITextSizeConstraint` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -45,11 +55,13 @@ pub fn min_text_size(value: Int) -> Property(UITextSizeConstraint) {
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(UITextSizeConstraint) {
-  Property(fn(instance) { ui_text_size_constraint.set_archivable(instance, value) })
+  Property(fn(instance) {
+    ui_text_size_constraint.set_archivable(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `UITextSizeConstraint` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -57,11 +69,15 @@ pub fn archivable(value: Bool) -> Property(UITextSizeConstraint) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
-pub fn capabilities(value: SecurityCapabilities) -> Property(UITextSizeConstraint) {
-  Property(fn(instance) { ui_text_size_constraint.set_capabilities(instance, value) })
+pub fn capabilities(
+  value: SecurityCapabilities,
+) -> Property(UITextSizeConstraint) {
+  Property(fn(instance) {
+    ui_text_size_constraint.set_capabilities(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `UITextSizeConstraint` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -69,11 +85,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(UITextSizeConstrain
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(UITextSizeConstraint) {
   Property(fn(instance) { ui_text_size_constraint.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `UITextSizeConstraint` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -82,11 +98,11 @@ pub fn name(value: String) -> Property(UITextSizeConstraint) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(UITextSizeConstraint) {
   Property(fn(instance) { ui_text_size_constraint.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `UITextSizeConstraint` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -95,13 +111,17 @@ pub fn parent(value: Instance) -> Property(UITextSizeConstraint) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(UITextSizeConstraint) {
-  Property(fn(instance) { ui_text_size_constraint.set_sandboxed(instance, value) })
+  Property(fn(instance) {
+    ui_text_size_constraint.set_sandboxed(instance, value)
+  })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: UITextSizeConstraint) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: UITextSizeConstraint,
+) -> Nil {
   Nil
 }

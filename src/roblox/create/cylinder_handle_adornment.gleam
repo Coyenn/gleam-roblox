@@ -1,19 +1,27 @@
 // Generated declarative builders for Roblox `CylinderHandleAdornment` instances.
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/cylinder_handle_adornment
-import roblox/types.{type AdornCullingMode, type AdornShading, type CFrame, type Color3, type CylinderHandleAdornment, type Instance, type PVInstance, type SecurityCapabilities, type Vector3}
+import roblox/types.{
+  type AdornCullingMode, type AdornShading, type CFrame, type Color3,
+  type CylinderHandleAdornment, type Instance, type PVInstance,
+  type SecurityCapabilities, type Vector3,
+}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: CylinderHandleAdornment) -> Instance
 
-/// Creates a declarative Roblox `CylinderHandleAdornment` node.
 @target(luau)
-pub fn node(properties: List(Property(CylinderHandleAdornment)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `CylinderHandleAdornment` node.
+pub fn node(
+  properties: List(Property(CylinderHandleAdornment)),
+  children: List(Node),
+) -> Node {
   let instance = apply(cylinder_handle_adornment.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `CylinderHandleAdornment.Angle` on `CylinderHandleAdornment` nodes.
 ///
 /// Angle of the cylinder handle as in a "pie slice" sector.
@@ -21,11 +29,11 @@ pub fn node(properties: List(Property(CylinderHandleAdornment)), children: List(
 /// Roblox: `CylinderHandleAdornment.Angle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CylinderHandleAdornment#Angle
-@target(luau)
 pub fn angle(value: Float) -> Property(CylinderHandleAdornment) {
   Property(fn(instance) { cylinder_handle_adornment.set_angle(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `CylinderHandleAdornment.Height` on `CylinderHandleAdornment` nodes.
 ///
 /// Height of the cylinder adornment.
@@ -33,11 +41,13 @@ pub fn angle(value: Float) -> Property(CylinderHandleAdornment) {
 /// Roblox: `CylinderHandleAdornment.Height`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CylinderHandleAdornment#Height
-@target(luau)
 pub fn height(value: Float) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_height(instance, value) })
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_height(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `CylinderHandleAdornment.InnerRadius` on `CylinderHandleAdornment` nodes.
 ///
 /// Inner radius with which to render a hollow cylinder.
@@ -45,11 +55,13 @@ pub fn height(value: Float) -> Property(CylinderHandleAdornment) {
 /// Roblox: `CylinderHandleAdornment.InnerRadius`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CylinderHandleAdornment#InnerRadius
-@target(luau)
 pub fn inner_radius(value: Float) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_inner_radius(instance, value) })
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_inner_radius(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `CylinderHandleAdornment.Radius` on `CylinderHandleAdornment` nodes.
 ///
 /// Radius of the cylinder adornment.
@@ -57,21 +69,25 @@ pub fn inner_radius(value: Float) -> Property(CylinderHandleAdornment) {
 /// Roblox: `CylinderHandleAdornment.Radius`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CylinderHandleAdornment#Radius
-@target(luau)
 pub fn radius(value: Float) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_radius(instance, value) })
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_radius(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `CylinderHandleAdornment.Shading` on `CylinderHandleAdornment` nodes.
 ///
 /// Roblox: `CylinderHandleAdornment.Shading`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CylinderHandleAdornment#Shading
-@target(luau)
 pub fn shading(value: AdornShading) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_shading(instance, value) })
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_shading(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `HandleAdornment.AdornCullingMode` on `CylinderHandleAdornment` nodes.
 ///
 /// Determines whether to automatically cull the adornment.
@@ -79,11 +95,15 @@ pub fn shading(value: AdornShading) -> Property(CylinderHandleAdornment) {
 /// Roblox: `HandleAdornment.AdornCullingMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HandleAdornment#AdornCullingMode
-@target(luau)
-pub fn adorn_culling_mode(value: AdornCullingMode) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_adorn_culling_mode(instance, value) })
+pub fn adorn_culling_mode(
+  value: AdornCullingMode,
+) -> Property(CylinderHandleAdornment) {
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_adorn_culling_mode(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `HandleAdornment.AlwaysOnTop` on `CylinderHandleAdornment` nodes.
 ///
 /// Forces this adornment to render on top of all 3D objects in the workspace.
@@ -91,11 +111,13 @@ pub fn adorn_culling_mode(value: AdornCullingMode) -> Property(CylinderHandleAdo
 /// Roblox: `HandleAdornment.AlwaysOnTop`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HandleAdornment#AlwaysOnTop
-@target(luau)
 pub fn always_on_top(value: Bool) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_always_on_top(instance, value) })
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_always_on_top(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `HandleAdornment.CFrame` on `CylinderHandleAdornment` nodes.
 ///
 /// The position and rotation of the object relative to its PVAdornment.Adornee.
@@ -103,11 +125,13 @@ pub fn always_on_top(value: Bool) -> Property(CylinderHandleAdornment) {
 /// Roblox: `HandleAdornment.CFrame`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HandleAdornment#CFrame
-@target(luau)
 pub fn cframe(value: CFrame) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_cframe(instance, value) })
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_cframe(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `HandleAdornment.SizeRelativeOffset` on `CylinderHandleAdornment` nodes.
 ///
 /// The positional offset of the adornment based on the adornee's BasePart.Size.
@@ -115,11 +139,15 @@ pub fn cframe(value: CFrame) -> Property(CylinderHandleAdornment) {
 /// Roblox: `HandleAdornment.SizeRelativeOffset`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HandleAdornment#SizeRelativeOffset
-@target(luau)
-pub fn size_relative_offset(value: Vector3) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_size_relative_offset(instance, value) })
+pub fn size_relative_offset(
+  value: Vector3,
+) -> Property(CylinderHandleAdornment) {
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_size_relative_offset(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `HandleAdornment.ZIndex` on `CylinderHandleAdornment` nodes.
 ///
 /// Determines the draw order of this HandleAdornment when AlwaysOnTop is true.
@@ -127,11 +155,13 @@ pub fn size_relative_offset(value: Vector3) -> Property(CylinderHandleAdornment)
 /// Roblox: `HandleAdornment.ZIndex`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HandleAdornment#ZIndex
-@target(luau)
 pub fn z_index(value: Int) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_z_index(instance, value) })
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_z_index(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `PVAdornment.Adornee` on `CylinderHandleAdornment` nodes.
 ///
 /// The PVInstance which this PVAdornment is attached to.
@@ -139,11 +169,13 @@ pub fn z_index(value: Int) -> Property(CylinderHandleAdornment) {
 /// Roblox: `PVAdornment.Adornee`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PVAdornment#Adornee
-@target(luau)
 pub fn adornee(value: PVInstance) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_adornee(instance, value) })
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_adornee(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiBase3d.Color3` on `CylinderHandleAdornment` nodes.
 ///
 /// Sets the color of this GuiBase3d object.
@@ -151,11 +183,13 @@ pub fn adornee(value: PVInstance) -> Property(CylinderHandleAdornment) {
 /// Roblox: `GuiBase3d.Color3`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase3d#Color3
-@target(luau)
 pub fn color3(value: Color3) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_color3(instance, value) })
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_color3(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiBase3d.Transparency` on `CylinderHandleAdornment` nodes.
 ///
 /// Sets the transparency of this GuiBase3d object.
@@ -163,11 +197,13 @@ pub fn color3(value: Color3) -> Property(CylinderHandleAdornment) {
 /// Roblox: `GuiBase3d.Transparency`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase3d#Transparency
-@target(luau)
 pub fn transparency(value: Float) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_transparency(instance, value) })
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_transparency(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `GuiBase3d.Visible` on `CylinderHandleAdornment` nodes.
 ///
 /// Determines whether this GuiBase3d object and its descendants will be displayed.
@@ -175,11 +211,13 @@ pub fn transparency(value: Float) -> Property(CylinderHandleAdornment) {
 /// Roblox: `GuiBase3d.Visible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/GuiBase3d#Visible
-@target(luau)
 pub fn visible(value: Bool) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_visible(instance, value) })
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_visible(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `CylinderHandleAdornment` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -187,11 +225,13 @@ pub fn visible(value: Bool) -> Property(CylinderHandleAdornment) {
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_archivable(instance, value) })
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_archivable(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `CylinderHandleAdornment` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -199,11 +239,15 @@ pub fn archivable(value: Bool) -> Property(CylinderHandleAdornment) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
-pub fn capabilities(value: SecurityCapabilities) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_capabilities(instance, value) })
+pub fn capabilities(
+  value: SecurityCapabilities,
+) -> Property(CylinderHandleAdornment) {
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_capabilities(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `CylinderHandleAdornment` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -211,11 +255,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(CylinderHandleAdorn
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(CylinderHandleAdornment) {
   Property(fn(instance) { cylinder_handle_adornment.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `CylinderHandleAdornment` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -224,11 +268,13 @@ pub fn name(value: String) -> Property(CylinderHandleAdornment) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_parent(instance, value) })
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_parent(instance, value)
+  })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `CylinderHandleAdornment` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -237,13 +283,23 @@ pub fn parent(value: Instance) -> Property(CylinderHandleAdornment) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(CylinderHandleAdornment) {
-  Property(fn(instance) { cylinder_handle_adornment.set_sandboxed(instance, value) })
+  Property(fn(instance) {
+    cylinder_handle_adornment.set_sandboxed(instance, value)
+  })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: Color3, _: PVInstance, _: Vector3, _: CFrame, _: AdornCullingMode, _: AdornShading, _: CylinderHandleAdornment) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: Color3,
+  _: PVInstance,
+  _: Vector3,
+  _: CFrame,
+  _: AdornCullingMode,
+  _: AdornShading,
+  _: CylinderHandleAdornment,
+) -> Nil {
   Nil
 }

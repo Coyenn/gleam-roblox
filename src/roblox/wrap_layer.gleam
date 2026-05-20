@@ -1,49 +1,55 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type BaseWrap, type CFrame, type Content, type ContentId, type Instance, type Object, type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId, type Vector3, type WrapLayer, type WrapLayerAutoSkin}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type BaseWrap, type CFrame, type Content, type ContentId,
+  type Instance, type Object, type OptionDouble, type OptionInt64,
+  type SecurityCapabilities, type UniqueId, type Vector3, type WrapLayer,
+  type WrapLayerAutoSkin,
+}
 
+@target(luau)
 /// Creates a new Roblox `WrapLayer` instance.
 ///
 /// Roblox: `Instance.new("WrapLayer")`
-@target(luau)
 @luau.global("Instance.new(\"WrapLayer\")")
 pub fn new() -> WrapLayer
 
-/// Treats `WrapLayer` as its Roblox ancestor `BaseWrap`.
 @target(luau)
+/// Treats `WrapLayer` as its Roblox ancestor `BaseWrap`.
 @luau.global("(function(x) return x end)")
 pub fn as_base_wrap(instance: WrapLayer) -> BaseWrap
 
-/// Treats `WrapLayer` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `WrapLayer` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: WrapLayer) -> Instance
 
-/// Treats `WrapLayer` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `WrapLayer` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: WrapLayer) -> Object
 
+@target(luau)
 /// Gets Roblox property `WrapLayer.AutoSkin`.
 ///
 /// Roblox: `WrapLayer.AutoSkin`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#AutoSkin
-@target(luau)
 @luau.property("AutoSkin")
 pub fn get_auto_skin(instance: WrapLayer) -> WrapLayerAutoSkin
 
+@target(luau)
 /// Sets Roblox property `WrapLayer.AutoSkin`.
 ///
 /// Roblox: `WrapLayer.AutoSkin`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#AutoSkin
-@target(luau)
 @luau.set_property("AutoSkin")
 pub fn set_auto_skin(instance: WrapLayer, value: WrapLayerAutoSkin) -> WrapLayer
 
+@target(luau)
 /// Gets Roblox property `WrapLayer.BindOffset`.
 ///
 /// CFrame is used to adjust a binding point for clothing item mesh. Could be used to move and rotate clothing items. This property is intended for fine-tuning only and it is heavily optional.
@@ -51,10 +57,10 @@ pub fn set_auto_skin(instance: WrapLayer, value: WrapLayerAutoSkin) -> WrapLayer
 /// Roblox: `WrapLayer.BindOffset`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#BindOffset
-@target(luau)
 @luau.property("BindOffset")
 pub fn get_bind_offset(instance: WrapLayer) -> CFrame
 
+@target(luau)
 /// Gets Roblox property `WrapLayer.Enabled`.
 ///
 /// Allows for disabling of the WrapLayer object as if it does not exist.
@@ -62,10 +68,10 @@ pub fn get_bind_offset(instance: WrapLayer) -> CFrame
 /// Roblox: `WrapLayer.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#Enabled
-@target(luau)
 @luau.property("Enabled")
 pub fn get_enabled(instance: WrapLayer) -> Bool
 
+@target(luau)
 /// Sets Roblox property `WrapLayer.Enabled`.
 ///
 /// Allows for disabling of the WrapLayer object as if it does not exist.
@@ -73,30 +79,30 @@ pub fn get_enabled(instance: WrapLayer) -> Bool
 /// Roblox: `WrapLayer.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#Enabled
-@target(luau)
 @luau.set_property("Enabled")
 pub fn set_enabled(instance: WrapLayer, value: Bool) -> WrapLayer
 
+@target(luau)
 /// Gets Roblox property `WrapLayer.MaxSize`.
 ///
 /// Roblox: `WrapLayer.MaxSize`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#MaxSize
-@target(luau)
 @luau.property("MaxSize")
 pub fn get_max_size(instance: WrapLayer) -> Vector3
 
+@target(luau)
 /// Gets Roblox property `WrapLayer.Offset`.
 ///
 /// Roblox: `WrapLayer.Offset`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#Offset
-@target(luau)
 @luau.property("Offset")
 pub fn get_offset(instance: WrapLayer) -> Vector3
 
+@target(luau)
 /// Gets Roblox property `WrapLayer.Order`.
 ///
 /// Controls the composition order for layered clothing.
@@ -104,10 +110,10 @@ pub fn get_offset(instance: WrapLayer) -> Vector3
 /// Roblox: `WrapLayer.Order`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#Order
-@target(luau)
 @luau.property("Order")
 pub fn get_order(instance: WrapLayer) -> Int
 
+@target(luau)
 /// Sets Roblox property `WrapLayer.Order`.
 ///
 /// Controls the composition order for layered clothing.
@@ -115,10 +121,10 @@ pub fn get_order(instance: WrapLayer) -> Int
 /// Roblox: `WrapLayer.Order`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#Order
-@target(luau)
 @luau.set_property("Order")
 pub fn set_order(instance: WrapLayer, value: Int) -> WrapLayer
 
+@target(luau)
 /// Gets Roblox property `WrapLayer.Puffiness`.
 ///
 /// Controls how much underlying clothing items inflate the current clothing item.
@@ -126,10 +132,10 @@ pub fn set_order(instance: WrapLayer, value: Int) -> WrapLayer
 /// Roblox: `WrapLayer.Puffiness`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#Puffiness
-@target(luau)
 @luau.property("Puffiness")
 pub fn get_puffiness(instance: WrapLayer) -> Float
 
+@target(luau)
 /// Sets Roblox property `WrapLayer.Puffiness`.
 ///
 /// Controls how much underlying clothing items inflate the current clothing item.
@@ -137,19 +143,19 @@ pub fn get_puffiness(instance: WrapLayer) -> Float
 /// Roblox: `WrapLayer.Puffiness`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#Puffiness
-@target(luau)
 @luau.set_property("Puffiness")
 pub fn set_puffiness(instance: WrapLayer, value: Float) -> WrapLayer
 
+@target(luau)
 /// Gets Roblox property `WrapLayer.ReferenceMeshContent`.
 ///
 /// Roblox: `WrapLayer.ReferenceMeshContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#ReferenceMeshContent
-@target(luau)
 @luau.property("ReferenceMeshContent")
 pub fn get_reference_mesh_content(instance: WrapLayer) -> Content
 
+@target(luau)
 /// Gets Roblox property `WrapLayer.ReferenceMeshId`.
 ///
 /// AssetID for reference mesh used to define Inner Cage of a 3D object.
@@ -157,10 +163,10 @@ pub fn get_reference_mesh_content(instance: WrapLayer) -> Content
 /// Roblox: `WrapLayer.ReferenceMeshId`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#ReferenceMeshId
-@target(luau)
 @luau.property("ReferenceMeshId")
 pub fn get_reference_mesh_id(instance: WrapLayer) -> ContentId
 
+@target(luau)
 /// Gets Roblox property `WrapLayer.ReferenceOrigin`.
 ///
 /// Reference mesh offset relative to parent MeshPart (in the parent MeshPart space) Note: this property is set up automatically by the FBX importer.
@@ -168,10 +174,10 @@ pub fn get_reference_mesh_id(instance: WrapLayer) -> ContentId
 /// Roblox: `WrapLayer.ReferenceOrigin`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#ReferenceOrigin
-@target(luau)
 @luau.property("ReferenceOrigin")
 pub fn get_reference_origin(instance: WrapLayer) -> CFrame
 
+@target(luau)
 /// Gets Roblox property `WrapLayer.ReferenceOriginWorld`.
 ///
 /// Reference mesh offset relative to parent MeshPart (in the world space) Note: this property is set up automatically by the FBX importer.
@@ -180,10 +186,10 @@ pub fn get_reference_origin(instance: WrapLayer) -> CFrame
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#ReferenceOriginWorld
-@target(luau)
 @luau.property("ReferenceOriginWorld")
 pub fn get_reference_origin_world(instance: WrapLayer) -> CFrame
 
+@target(luau)
 /// Gets Roblox property `WrapLayer.ShrinkFactor`.
 ///
 /// Allows slight shrinking/expanding of the resulting render mesh, without affecting any other layers.
@@ -191,19 +197,19 @@ pub fn get_reference_origin_world(instance: WrapLayer) -> CFrame
 /// Roblox: `WrapLayer.ShrinkFactor`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WrapLayer#ShrinkFactor
-@target(luau)
 @luau.property("ShrinkFactor")
 pub fn get_shrink_factor(instance: WrapLayer) -> Float
 
+@target(luau)
 /// Gets Roblox property `BaseWrap.CageMeshContent`.
 ///
 /// Roblox: `BaseWrap.CageMeshContent`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BaseWrap#CageMeshContent
-@target(luau)
 @luau.property("CageMeshContent")
 pub fn get_cage_mesh_content(instance: WrapLayer) -> Content
 
+@target(luau)
 /// Gets Roblox property `BaseWrap.CageMeshId`.
 ///
 /// Asset ID for cage mesh.
@@ -211,10 +217,10 @@ pub fn get_cage_mesh_content(instance: WrapLayer) -> Content
 /// Roblox: `BaseWrap.CageMeshId`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BaseWrap#CageMeshId
-@target(luau)
 @luau.property("CageMeshId")
 pub fn get_cage_mesh_id(instance: WrapLayer) -> ContentId
 
+@target(luau)
 /// Gets Roblox property `BaseWrap.CageOrigin`.
 ///
 /// Cage mesh offset relative to parent MeshPart.
@@ -222,10 +228,10 @@ pub fn get_cage_mesh_id(instance: WrapLayer) -> ContentId
 /// Roblox: `BaseWrap.CageOrigin`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BaseWrap#CageOrigin
-@target(luau)
 @luau.property("CageOrigin")
 pub fn get_cage_origin(instance: WrapLayer) -> CFrame
 
+@target(luau)
 /// Gets Roblox property `BaseWrap.CageOriginWorld`.
 ///
 /// Cage mesh offset in world space.
@@ -234,19 +240,19 @@ pub fn get_cage_origin(instance: WrapLayer) -> CFrame
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BaseWrap#CageOriginWorld
-@target(luau)
 @luau.property("CageOriginWorld")
 pub fn get_cage_origin_world(instance: WrapLayer) -> CFrame
 
+@target(luau)
 /// Gets Roblox property `BaseWrap.HSRAssetId`.
 ///
 /// Roblox: `BaseWrap.HSRAssetId`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BaseWrap#HSRAssetId
-@target(luau)
 @luau.property("HSRAssetId")
 pub fn get_hsr_asset_id(instance: WrapLayer) -> ContentId
 
+@target(luau)
 /// Gets Roblox property `BaseWrap.ImportOrigin`.
 ///
 /// Describes where a global zero was while authoring the cage mesh in an asset creation tool.
@@ -254,10 +260,10 @@ pub fn get_hsr_asset_id(instance: WrapLayer) -> ContentId
 /// Roblox: `BaseWrap.ImportOrigin`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BaseWrap#ImportOrigin
-@target(luau)
 @luau.property("ImportOrigin")
 pub fn get_import_origin(instance: WrapLayer) -> CFrame
 
+@target(luau)
 /// Gets Roblox property `BaseWrap.ImportOriginWorld`.
 ///
 /// Describes where the origin (in world space) was while authoring the cage mesh in an asset creation tool.
@@ -266,10 +272,10 @@ pub fn get_import_origin(instance: WrapLayer) -> CFrame
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/BaseWrap#ImportOriginWorld
-@target(luau)
 @luau.property("ImportOriginWorld")
 pub fn get_import_origin_world(instance: WrapLayer) -> CFrame
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -277,10 +283,10 @@ pub fn get_import_origin_world(instance: WrapLayer) -> CFrame
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: WrapLayer) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -288,10 +294,10 @@ pub fn get_archivable(instance: WrapLayer) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: WrapLayer, value: Bool) -> WrapLayer
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -299,10 +305,10 @@ pub fn set_archivable(instance: WrapLayer, value: Bool) -> WrapLayer
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: WrapLayer) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -310,10 +316,13 @@ pub fn get_capabilities(instance: WrapLayer) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: WrapLayer, value: SecurityCapabilities) -> WrapLayer
+pub fn set_capabilities(
+  instance: WrapLayer,
+  value: SecurityCapabilities,
+) -> WrapLayer
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -321,10 +330,10 @@ pub fn set_capabilities(instance: WrapLayer, value: SecurityCapabilities) -> Wra
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: WrapLayer) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -332,10 +341,10 @@ pub fn get_name(instance: WrapLayer) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: WrapLayer, value: String) -> WrapLayer
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -344,10 +353,10 @@ pub fn set_name(instance: WrapLayer, value: String) -> WrapLayer
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: WrapLayer) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -356,10 +365,10 @@ pub fn get_parent(instance: WrapLayer) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: WrapLayer, value: parent) -> WrapLayer
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -368,10 +377,10 @@ pub fn set_parent(instance: WrapLayer, value: parent) -> WrapLayer
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: WrapLayer) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -380,10 +389,10 @@ pub fn get_roblox_locked(instance: WrapLayer) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: WrapLayer) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -392,20 +401,20 @@ pub fn get_sandboxed(instance: WrapLayer) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: WrapLayer, value: Bool) -> WrapLayer
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: WrapLayer) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -414,10 +423,10 @@ pub fn get_source_asset_id(instance: WrapLayer) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: WrapLayer) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -426,10 +435,10 @@ pub fn get_unique_id(instance: WrapLayer) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: WrapLayer, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -438,10 +447,10 @@ pub fn add_tag(instance: WrapLayer, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: WrapLayer) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -450,10 +459,10 @@ pub fn clear_all_children(instance: WrapLayer) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: WrapLayer) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -462,10 +471,10 @@ pub fn clone(instance: WrapLayer) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: WrapLayer) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -478,10 +487,13 @@ pub fn destroy_instance(instance: WrapLayer) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: WrapLayer, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: WrapLayer,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -494,10 +506,13 @@ pub fn find_first_ancestor(instance: WrapLayer, name: String) -> Option(Instance
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: WrapLayer, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: WrapLayer,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -510,10 +525,13 @@ pub fn find_first_ancestor_of_class(instance: WrapLayer, class_name: String) -> 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: WrapLayer, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: WrapLayer,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -527,10 +545,14 @@ pub fn find_first_ancestor_which_is_a(instance: WrapLayer, class_name: String) -
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: WrapLayer, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: WrapLayer,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -543,10 +565,13 @@ pub fn find_first_child(instance: WrapLayer, name: String, recursive: Bool) -> O
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: WrapLayer, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: WrapLayer,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -560,10 +585,14 @@ pub fn find_first_child_of_class(instance: WrapLayer, class_name: String) -> Opt
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: WrapLayer, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: WrapLayer,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -576,10 +605,13 @@ pub fn find_first_child_which_is_a(instance: WrapLayer, class_name: String, recu
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: WrapLayer, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: WrapLayer,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -591,10 +623,10 @@ pub fn find_first_descendant(instance: WrapLayer, name: String) -> Option(Instan
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: WrapLayer) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -607,10 +639,10 @@ pub fn get_actor(instance: WrapLayer) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: WrapLayer, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -623,10 +655,13 @@ pub fn get_attribute(instance: WrapLayer, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: WrapLayer, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: WrapLayer,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -639,10 +674,10 @@ pub fn get_attribute_changed_signal(instance: WrapLayer, attribute: String) -> R
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: WrapLayer) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -654,10 +689,10 @@ pub fn get_attributes(instance: WrapLayer) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: WrapLayer) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -670,10 +705,10 @@ pub fn get_children(instance: WrapLayer) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: WrapLayer) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -685,10 +720,10 @@ pub fn get_descendants(instance: WrapLayer) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: WrapLayer) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -702,10 +737,14 @@ pub fn get_full_name(instance: WrapLayer) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: WrapLayer, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: WrapLayer,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -716,10 +755,13 @@ pub fn get_styled(instance: WrapLayer, name: String, selector: Option(String)) -
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: WrapLayer, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: WrapLayer,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -728,10 +770,10 @@ pub fn get_styled_property_changed_signal(instance: WrapLayer, property: String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: WrapLayer) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -740,10 +782,10 @@ pub fn get_tags(instance: WrapLayer) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: WrapLayer, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -756,10 +798,10 @@ pub fn has_tag(instance: WrapLayer, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: WrapLayer, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -772,10 +814,10 @@ pub fn is_ancestor_of(instance: WrapLayer, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: WrapLayer, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -788,10 +830,10 @@ pub fn is_descendant_of(instance: WrapLayer, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: WrapLayer, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -803,10 +845,13 @@ pub fn is_property_modified(instance: WrapLayer, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: WrapLayer, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: WrapLayer,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -815,10 +860,10 @@ pub fn query_descendants(instance: WrapLayer, selector: String) -> List(Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: WrapLayer, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -828,10 +873,10 @@ pub fn remove_tag(instance: WrapLayer, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
 pub fn reset_property_to_default(instance: WrapLayer, property: String) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -842,10 +887,14 @@ pub fn reset_property_to_default(instance: WrapLayer, property: String) -> Nil
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: WrapLayer, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: WrapLayer,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -860,19 +909,25 @@ pub fn set_attribute(instance: WrapLayer, attribute: String, value: Dynamic) -> 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: WrapLayer, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: WrapLayer,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: WrapLayer) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: WrapLayer,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -880,19 +935,24 @@ pub fn ancestry_changed(instance: WrapLayer) -> RBXScriptSignal(fn(Instance, Ins
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: WrapLayer, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: WrapLayer,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: WrapLayer) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: WrapLayer,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -900,19 +960,22 @@ pub fn attribute_changed(instance: WrapLayer) -> RBXScriptSignal(fn(String) -> N
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: WrapLayer, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: WrapLayer,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
 pub fn child_added(instance: WrapLayer) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -920,19 +983,24 @@ pub fn child_added(instance: WrapLayer) -> RBXScriptSignal(fn(Instance) -> Nil)
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: WrapLayer, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: WrapLayer,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: WrapLayer) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: WrapLayer,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -940,19 +1008,24 @@ pub fn child_removed(instance: WrapLayer) -> RBXScriptSignal(fn(Instance) -> Nil
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: WrapLayer, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: WrapLayer,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: WrapLayer) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: WrapLayer,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -960,19 +1033,24 @@ pub fn descendant_added(instance: WrapLayer) -> RBXScriptSignal(fn(Instance) -> 
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: WrapLayer, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: WrapLayer,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: WrapLayer) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: WrapLayer,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -980,19 +1058,22 @@ pub fn descendant_removing(instance: WrapLayer) -> RBXScriptSignal(fn(Instance) 
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: WrapLayer, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: WrapLayer,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: WrapLayer) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1000,19 +1081,24 @@ pub fn destroying(instance: WrapLayer) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: WrapLayer, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: WrapLayer,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: WrapLayer) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: WrapLayer,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1020,10 +1106,13 @@ pub fn styled_properties_changed(instance: WrapLayer) -> RBXScriptSignal(fn() ->
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: WrapLayer, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: WrapLayer,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1032,10 +1121,10 @@ pub fn on_styled_properties_changed(instance: WrapLayer, callback: fn() -> Nil) 
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: WrapLayer) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1048,10 +1137,13 @@ pub fn get_class_name(instance: WrapLayer) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: WrapLayer, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: WrapLayer,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1065,19 +1157,19 @@ pub fn get_property_changed_signal(instance: WrapLayer, property: String) -> RBX
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: WrapLayer, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: WrapLayer) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1085,12 +1177,32 @@ pub fn changed(instance: WrapLayer) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: WrapLayer, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: WrapLayer,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: CFrame, _: ContentId, _: Content, _: Vector3, _: WrapLayerAutoSkin, _: WrapLayer, _: BaseWrap, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: CFrame,
+  _: ContentId,
+  _: Content,
+  _: Vector3,
+  _: WrapLayerAutoSkin,
+  _: WrapLayer,
+  _: BaseWrap,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

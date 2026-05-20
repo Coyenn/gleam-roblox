@@ -1,31 +1,38 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type Instance, type Object, type OptionDouble, type OptionInt64, type ReflectionMetadataItem, type ReflectionMetadataMember, type SecurityCapabilities, type UniqueId}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type Instance, type Object, type OptionDouble, type OptionInt64,
+  type ReflectionMetadataItem, type ReflectionMetadataMember,
+  type SecurityCapabilities, type UniqueId,
+}
 
+@target(luau)
 /// Creates a new Roblox `ReflectionMetadataMember` instance.
 ///
 /// Roblox: `Instance.new("ReflectionMetadataMember")`
-@target(luau)
 @luau.global("Instance.new(\"ReflectionMetadataMember\")")
 pub fn new() -> ReflectionMetadataMember
 
+@target(luau)
 /// Treats `ReflectionMetadataMember` as its Roblox ancestor `ReflectionMetadataItem`.
-@target(luau)
 @luau.global("(function(x) return x end)")
-pub fn as_reflection_metadata_item(instance: ReflectionMetadataMember) -> ReflectionMetadataItem
+pub fn as_reflection_metadata_item(
+  instance: ReflectionMetadataMember,
+) -> ReflectionMetadataItem
 
-/// Treats `ReflectionMetadataMember` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `ReflectionMetadataMember` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ReflectionMetadataMember) -> Instance
 
-/// Treats `ReflectionMetadataMember` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `ReflectionMetadataMember` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: ReflectionMetadataMember) -> Object
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.Browsable`.
 ///
 /// Whether or not this can be seen in studio.
@@ -33,10 +40,10 @@ pub fn as_object(instance: ReflectionMetadataMember) -> Object
 /// Roblox: `ReflectionMetadataItem.Browsable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#Browsable
-@target(luau)
 @luau.property("Browsable")
 pub fn get_browsable(instance: ReflectionMetadataMember) -> Bool
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.Browsable`.
 ///
 /// Whether or not this can be seen in studio.
@@ -44,10 +51,13 @@ pub fn get_browsable(instance: ReflectionMetadataMember) -> Bool
 /// Roblox: `ReflectionMetadataItem.Browsable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#Browsable
-@target(luau)
 @luau.set_property("Browsable")
-pub fn set_browsable(instance: ReflectionMetadataMember, value: Bool) -> ReflectionMetadataMember
+pub fn set_browsable(
+  instance: ReflectionMetadataMember,
+  value: Bool,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.ClassCategory`.
 ///
 /// Describes the category of this class.
@@ -55,10 +65,10 @@ pub fn set_browsable(instance: ReflectionMetadataMember, value: Bool) -> Reflect
 /// Roblox: `ReflectionMetadataItem.ClassCategory`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#ClassCategory
-@target(luau)
 @luau.property("ClassCategory")
 pub fn get_class_category(instance: ReflectionMetadataMember) -> String
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.ClassCategory`.
 ///
 /// Describes the category of this class.
@@ -66,28 +76,34 @@ pub fn get_class_category(instance: ReflectionMetadataMember) -> String
 /// Roblox: `ReflectionMetadataItem.ClassCategory`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#ClassCategory
-@target(luau)
 @luau.set_property("ClassCategory")
-pub fn set_class_category(instance: ReflectionMetadataMember, value: String) -> ReflectionMetadataMember
+pub fn set_class_category(
+  instance: ReflectionMetadataMember,
+  value: String,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.ClientOnly`.
 ///
 /// Roblox: `ReflectionMetadataItem.ClientOnly`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#ClientOnly
-@target(luau)
 @luau.property("ClientOnly")
 pub fn get_client_only(instance: ReflectionMetadataMember) -> Bool
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.ClientOnly`.
 ///
 /// Roblox: `ReflectionMetadataItem.ClientOnly`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#ClientOnly
-@target(luau)
 @luau.set_property("ClientOnly")
-pub fn set_client_only(instance: ReflectionMetadataMember, value: Bool) -> ReflectionMetadataMember
+pub fn set_client_only(
+  instance: ReflectionMetadataMember,
+  value: Bool,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.Constraint`.
 ///
 /// Describes a constraint for a single-argument function whose argument type is a Object.ClassName.
@@ -95,10 +111,10 @@ pub fn set_client_only(instance: ReflectionMetadataMember, value: Bool) -> Refle
 /// Roblox: `ReflectionMetadataItem.Constraint`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#Constraint
-@target(luau)
 @luau.property("Constraint")
 pub fn get_constraint(instance: ReflectionMetadataMember) -> String
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.Constraint`.
 ///
 /// Describes a constraint for a single-argument function whose argument type is a Object.ClassName.
@@ -106,10 +122,13 @@ pub fn get_constraint(instance: ReflectionMetadataMember) -> String
 /// Roblox: `ReflectionMetadataItem.Constraint`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#Constraint
-@target(luau)
 @luau.set_property("Constraint")
-pub fn set_constraint(instance: ReflectionMetadataMember, value: String) -> ReflectionMetadataMember
+pub fn set_constraint(
+  instance: ReflectionMetadataMember,
+  value: String,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.Deprecated`.
 ///
 /// Whether or not this item is deprecated.
@@ -117,10 +136,10 @@ pub fn set_constraint(instance: ReflectionMetadataMember, value: String) -> Refl
 /// Roblox: `ReflectionMetadataItem.Deprecated`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#Deprecated
-@target(luau)
 @luau.property("Deprecated")
 pub fn get_deprecated(instance: ReflectionMetadataMember) -> Bool
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.Deprecated`.
 ///
 /// Whether or not this item is deprecated.
@@ -128,10 +147,13 @@ pub fn get_deprecated(instance: ReflectionMetadataMember) -> Bool
 /// Roblox: `ReflectionMetadataItem.Deprecated`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#Deprecated
-@target(luau)
 @luau.set_property("Deprecated")
-pub fn set_deprecated(instance: ReflectionMetadataMember, value: Bool) -> ReflectionMetadataMember
+pub fn set_deprecated(
+  instance: ReflectionMetadataMember,
+  value: Bool,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.EditingDisabled`.
 ///
 /// Toggles whether this property can be edited from the Properties window.
@@ -139,10 +161,10 @@ pub fn set_deprecated(instance: ReflectionMetadataMember, value: Bool) -> Reflec
 /// Roblox: `ReflectionMetadataItem.EditingDisabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#EditingDisabled
-@target(luau)
 @luau.property("EditingDisabled")
 pub fn get_editing_disabled(instance: ReflectionMetadataMember) -> Bool
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.EditingDisabled`.
 ///
 /// Toggles whether this property can be edited from the Properties window.
@@ -150,46 +172,55 @@ pub fn get_editing_disabled(instance: ReflectionMetadataMember) -> Bool
 /// Roblox: `ReflectionMetadataItem.EditingDisabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#EditingDisabled
-@target(luau)
 @luau.set_property("EditingDisabled")
-pub fn set_editing_disabled(instance: ReflectionMetadataMember, value: Bool) -> ReflectionMetadataMember
+pub fn set_editing_disabled(
+  instance: ReflectionMetadataMember,
+  value: Bool,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.EditorType`.
 ///
 /// Roblox: `ReflectionMetadataItem.EditorType`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#EditorType
-@target(luau)
 @luau.property("EditorType")
 pub fn get_editor_type(instance: ReflectionMetadataMember) -> String
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.EditorType`.
 ///
 /// Roblox: `ReflectionMetadataItem.EditorType`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#EditorType
-@target(luau)
 @luau.set_property("EditorType")
-pub fn set_editor_type(instance: ReflectionMetadataMember, value: String) -> ReflectionMetadataMember
+pub fn set_editor_type(
+  instance: ReflectionMetadataMember,
+  value: String,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.FFlag`.
 ///
 /// Roblox: `ReflectionMetadataItem.FFlag`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#FFlag
-@target(luau)
 @luau.property("FFlag")
 pub fn get_f_flag(instance: ReflectionMetadataMember) -> String
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.FFlag`.
 ///
 /// Roblox: `ReflectionMetadataItem.FFlag`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#FFlag
-@target(luau)
 @luau.set_property("FFlag")
-pub fn set_f_flag(instance: ReflectionMetadataMember, value: String) -> ReflectionMetadataMember
+pub fn set_f_flag(
+  instance: ReflectionMetadataMember,
+  value: String,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.IsBackend`.
 ///
 /// Vague value for showing if this depends on backend stuff.
@@ -197,10 +228,10 @@ pub fn set_f_flag(instance: ReflectionMetadataMember, value: String) -> Reflecti
 /// Roblox: `ReflectionMetadataItem.IsBackend`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#IsBackend
-@target(luau)
 @luau.property("IsBackend")
 pub fn get_is_backend(instance: ReflectionMetadataMember) -> Bool
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.IsBackend`.
 ///
 /// Vague value for showing if this depends on backend stuff.
@@ -208,28 +239,34 @@ pub fn get_is_backend(instance: ReflectionMetadataMember) -> Bool
 /// Roblox: `ReflectionMetadataItem.IsBackend`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#IsBackend
-@target(luau)
 @luau.set_property("IsBackend")
-pub fn set_is_backend(instance: ReflectionMetadataMember, value: Bool) -> ReflectionMetadataMember
+pub fn set_is_backend(
+  instance: ReflectionMetadataMember,
+  value: Bool,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.PropertyOrder`.
 ///
 /// Roblox: `ReflectionMetadataItem.PropertyOrder`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#PropertyOrder
-@target(luau)
 @luau.property("PropertyOrder")
 pub fn get_property_order(instance: ReflectionMetadataMember) -> Int
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.PropertyOrder`.
 ///
 /// Roblox: `ReflectionMetadataItem.PropertyOrder`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#PropertyOrder
-@target(luau)
 @luau.set_property("PropertyOrder")
-pub fn set_property_order(instance: ReflectionMetadataMember, value: Int) -> ReflectionMetadataMember
+pub fn set_property_order(
+  instance: ReflectionMetadataMember,
+  value: Int,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.ScriptContext`.
 ///
 /// Describes the context where this member can be used. If set to "Server", this member will not be available to auto fill when editing a LocalScript. If set to "Client", this member will not be available to auto fill when editing a Script.
@@ -237,10 +274,10 @@ pub fn set_property_order(instance: ReflectionMetadataMember, value: Int) -> Ref
 /// Roblox: `ReflectionMetadataItem.ScriptContext`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#ScriptContext
-@target(luau)
 @luau.property("ScriptContext")
 pub fn get_script_context(instance: ReflectionMetadataMember) -> String
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.ScriptContext`.
 ///
 /// Describes the context where this member can be used. If set to "Server", this member will not be available to auto fill when editing a LocalScript. If set to "Client", this member will not be available to auto fill when editing a Script.
@@ -248,46 +285,55 @@ pub fn get_script_context(instance: ReflectionMetadataMember) -> String
 /// Roblox: `ReflectionMetadataItem.ScriptContext`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#ScriptContext
-@target(luau)
 @luau.set_property("ScriptContext")
-pub fn set_script_context(instance: ReflectionMetadataMember, value: String) -> ReflectionMetadataMember
+pub fn set_script_context(
+  instance: ReflectionMetadataMember,
+  value: String,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.ServerOnly`.
 ///
 /// Roblox: `ReflectionMetadataItem.ServerOnly`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#ServerOnly
-@target(luau)
 @luau.property("ServerOnly")
 pub fn get_server_only(instance: ReflectionMetadataMember) -> Bool
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.ServerOnly`.
 ///
 /// Roblox: `ReflectionMetadataItem.ServerOnly`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#ServerOnly
-@target(luau)
 @luau.set_property("ServerOnly")
-pub fn set_server_only(instance: ReflectionMetadataMember, value: Bool) -> ReflectionMetadataMember
+pub fn set_server_only(
+  instance: ReflectionMetadataMember,
+  value: Bool,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.SliderScaling`.
 ///
 /// Roblox: `ReflectionMetadataItem.SliderScaling`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#SliderScaling
-@target(luau)
 @luau.property("SliderScaling")
 pub fn get_slider_scaling(instance: ReflectionMetadataMember) -> String
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.SliderScaling`.
 ///
 /// Roblox: `ReflectionMetadataItem.SliderScaling`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#SliderScaling
-@target(luau)
 @luau.set_property("SliderScaling")
-pub fn set_slider_scaling(instance: ReflectionMetadataMember, value: String) -> ReflectionMetadataMember
+pub fn set_slider_scaling(
+  instance: ReflectionMetadataMember,
+  value: String,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.UIMaximum`.
 ///
 /// The maximum value of this property. Used with ReflectionMetadataItem.UIMinimum to control the slider bar of this property in the Properties window.
@@ -295,10 +341,10 @@ pub fn set_slider_scaling(instance: ReflectionMetadataMember, value: String) -> 
 /// Roblox: `ReflectionMetadataItem.UIMaximum`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UIMaximum
-@target(luau)
 @luau.property("UIMaximum")
 pub fn get_ui_maximum(instance: ReflectionMetadataMember) -> OptionDouble
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.UIMaximum`.
 ///
 /// The maximum value of this property. Used with ReflectionMetadataItem.UIMinimum to control the slider bar of this property in the Properties window.
@@ -306,10 +352,13 @@ pub fn get_ui_maximum(instance: ReflectionMetadataMember) -> OptionDouble
 /// Roblox: `ReflectionMetadataItem.UIMaximum`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UIMaximum
-@target(luau)
 @luau.set_property("UIMaximum")
-pub fn set_ui_maximum(instance: ReflectionMetadataMember, value: OptionDouble) -> ReflectionMetadataMember
+pub fn set_ui_maximum(
+  instance: ReflectionMetadataMember,
+  value: OptionDouble,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.UIMinimum`.
 ///
 /// The minimum value of this property. Used with ReflectionMetadataItem.UIMaximum to control the slider bar of this property in the Properties window.
@@ -317,10 +366,10 @@ pub fn set_ui_maximum(instance: ReflectionMetadataMember, value: OptionDouble) -
 /// Roblox: `ReflectionMetadataItem.UIMinimum`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UIMinimum
-@target(luau)
 @luau.property("UIMinimum")
 pub fn get_ui_minimum(instance: ReflectionMetadataMember) -> OptionDouble
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.UIMinimum`.
 ///
 /// The minimum value of this property. Used with ReflectionMetadataItem.UIMaximum to control the slider bar of this property in the Properties window.
@@ -328,10 +377,13 @@ pub fn get_ui_minimum(instance: ReflectionMetadataMember) -> OptionDouble
 /// Roblox: `ReflectionMetadataItem.UIMinimum`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UIMinimum
-@target(luau)
 @luau.set_property("UIMinimum")
-pub fn set_ui_minimum(instance: ReflectionMetadataMember, value: OptionDouble) -> ReflectionMetadataMember
+pub fn set_ui_minimum(
+  instance: ReflectionMetadataMember,
+  value: OptionDouble,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.UINumTicks`.
 ///
 /// The number of potential values the property's slider bar can be set to, ReflectionMetadataItem.UIMinimum and ReflectionMetadataItem.UIMaximum.
@@ -339,10 +391,10 @@ pub fn set_ui_minimum(instance: ReflectionMetadataMember, value: OptionDouble) -
 /// Roblox: `ReflectionMetadataItem.UINumTicks`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UINumTicks
-@target(luau)
 @luau.property("UINumTicks")
 pub fn get_ui_num_ticks(instance: ReflectionMetadataMember) -> OptionDouble
 
+@target(luau)
 /// Sets Roblox property `ReflectionMetadataItem.UINumTicks`.
 ///
 /// The number of potential values the property's slider bar can be set to, ReflectionMetadataItem.UIMinimum and ReflectionMetadataItem.UIMaximum.
@@ -350,10 +402,13 @@ pub fn get_ui_num_ticks(instance: ReflectionMetadataMember) -> OptionDouble
 /// Roblox: `ReflectionMetadataItem.UINumTicks`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ReflectionMetadataItem#UINumTicks
-@target(luau)
 @luau.set_property("UINumTicks")
-pub fn set_ui_num_ticks(instance: ReflectionMetadataMember, value: OptionDouble) -> ReflectionMetadataMember
+pub fn set_ui_num_ticks(
+  instance: ReflectionMetadataMember,
+  value: OptionDouble,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -361,10 +416,10 @@ pub fn set_ui_num_ticks(instance: ReflectionMetadataMember, value: OptionDouble)
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: ReflectionMetadataMember) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -372,10 +427,13 @@ pub fn get_archivable(instance: ReflectionMetadataMember) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
-pub fn set_archivable(instance: ReflectionMetadataMember, value: Bool) -> ReflectionMetadataMember
+pub fn set_archivable(
+  instance: ReflectionMetadataMember,
+  value: Bool,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -383,10 +441,12 @@ pub fn set_archivable(instance: ReflectionMetadataMember, value: Bool) -> Reflec
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
-pub fn get_capabilities(instance: ReflectionMetadataMember) -> SecurityCapabilities
+pub fn get_capabilities(
+  instance: ReflectionMetadataMember,
+) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -394,10 +454,13 @@ pub fn get_capabilities(instance: ReflectionMetadataMember) -> SecurityCapabilit
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: ReflectionMetadataMember, value: SecurityCapabilities) -> ReflectionMetadataMember
+pub fn set_capabilities(
+  instance: ReflectionMetadataMember,
+  value: SecurityCapabilities,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -405,10 +468,10 @@ pub fn set_capabilities(instance: ReflectionMetadataMember, value: SecurityCapab
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: ReflectionMetadataMember) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -416,10 +479,13 @@ pub fn get_name(instance: ReflectionMetadataMember) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
-pub fn set_name(instance: ReflectionMetadataMember, value: String) -> ReflectionMetadataMember
+pub fn set_name(
+  instance: ReflectionMetadataMember,
+  value: String,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -428,10 +494,10 @@ pub fn set_name(instance: ReflectionMetadataMember, value: String) -> Reflection
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: ReflectionMetadataMember) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -440,10 +506,13 @@ pub fn get_parent(instance: ReflectionMetadataMember) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
-pub fn set_parent(instance: ReflectionMetadataMember, value: parent) -> ReflectionMetadataMember
+pub fn set_parent(
+  instance: ReflectionMetadataMember,
+  value: parent,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -452,10 +521,10 @@ pub fn set_parent(instance: ReflectionMetadataMember, value: parent) -> Reflecti
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: ReflectionMetadataMember) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -464,10 +533,10 @@ pub fn get_roblox_locked(instance: ReflectionMetadataMember) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: ReflectionMetadataMember) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -476,20 +545,23 @@ pub fn get_sandboxed(instance: ReflectionMetadataMember) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
-pub fn set_sandboxed(instance: ReflectionMetadataMember, value: Bool) -> ReflectionMetadataMember
+pub fn set_sandboxed(
+  instance: ReflectionMetadataMember,
+  value: Bool,
+) -> ReflectionMetadataMember
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: ReflectionMetadataMember) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -498,10 +570,10 @@ pub fn get_source_asset_id(instance: ReflectionMetadataMember) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: ReflectionMetadataMember) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -510,10 +582,10 @@ pub fn get_unique_id(instance: ReflectionMetadataMember) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: ReflectionMetadataMember, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -522,10 +594,10 @@ pub fn add_tag(instance: ReflectionMetadataMember, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: ReflectionMetadataMember) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -534,10 +606,10 @@ pub fn clear_all_children(instance: ReflectionMetadataMember) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: ReflectionMetadataMember) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -546,10 +618,10 @@ pub fn clone(instance: ReflectionMetadataMember) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: ReflectionMetadataMember) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -562,10 +634,13 @@ pub fn destroy_instance(instance: ReflectionMetadataMember) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: ReflectionMetadataMember, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: ReflectionMetadataMember,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -578,10 +653,13 @@ pub fn find_first_ancestor(instance: ReflectionMetadataMember, name: String) -> 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: ReflectionMetadataMember, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: ReflectionMetadataMember,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -594,10 +672,13 @@ pub fn find_first_ancestor_of_class(instance: ReflectionMetadataMember, class_na
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: ReflectionMetadataMember, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: ReflectionMetadataMember,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -611,10 +692,14 @@ pub fn find_first_ancestor_which_is_a(instance: ReflectionMetadataMember, class_
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: ReflectionMetadataMember, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: ReflectionMetadataMember,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -627,10 +712,13 @@ pub fn find_first_child(instance: ReflectionMetadataMember, name: String, recurs
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: ReflectionMetadataMember, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: ReflectionMetadataMember,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -644,10 +732,14 @@ pub fn find_first_child_of_class(instance: ReflectionMetadataMember, class_name:
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: ReflectionMetadataMember, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: ReflectionMetadataMember,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -660,10 +752,13 @@ pub fn find_first_child_which_is_a(instance: ReflectionMetadataMember, class_nam
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: ReflectionMetadataMember, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: ReflectionMetadataMember,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -675,10 +770,10 @@ pub fn find_first_descendant(instance: ReflectionMetadataMember, name: String) -
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: ReflectionMetadataMember) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -691,10 +786,13 @@ pub fn get_actor(instance: ReflectionMetadataMember) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
-pub fn get_attribute(instance: ReflectionMetadataMember, attribute: String) -> Dynamic
+pub fn get_attribute(
+  instance: ReflectionMetadataMember,
+  attribute: String,
+) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -707,10 +805,13 @@ pub fn get_attribute(instance: ReflectionMetadataMember, attribute: String) -> D
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: ReflectionMetadataMember, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: ReflectionMetadataMember,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -723,10 +824,10 @@ pub fn get_attribute_changed_signal(instance: ReflectionMetadataMember, attribut
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: ReflectionMetadataMember) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -738,10 +839,10 @@ pub fn get_attributes(instance: ReflectionMetadataMember) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: ReflectionMetadataMember) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -754,10 +855,10 @@ pub fn get_children(instance: ReflectionMetadataMember) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: ReflectionMetadataMember) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -769,10 +870,10 @@ pub fn get_descendants(instance: ReflectionMetadataMember) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: ReflectionMetadataMember) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -786,10 +887,14 @@ pub fn get_full_name(instance: ReflectionMetadataMember) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: ReflectionMetadataMember, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: ReflectionMetadataMember,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -800,10 +905,13 @@ pub fn get_styled(instance: ReflectionMetadataMember, name: String, selector: Op
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: ReflectionMetadataMember, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: ReflectionMetadataMember,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -812,10 +920,10 @@ pub fn get_styled_property_changed_signal(instance: ReflectionMetadataMember, pr
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: ReflectionMetadataMember) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -824,10 +932,10 @@ pub fn get_tags(instance: ReflectionMetadataMember) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: ReflectionMetadataMember, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -840,10 +948,13 @@ pub fn has_tag(instance: ReflectionMetadataMember, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
-pub fn is_ancestor_of(instance: ReflectionMetadataMember, descendant: Instance) -> Bool
+pub fn is_ancestor_of(
+  instance: ReflectionMetadataMember,
+  descendant: Instance,
+) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -856,10 +967,13 @@ pub fn is_ancestor_of(instance: ReflectionMetadataMember, descendant: Instance) 
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
-pub fn is_descendant_of(instance: ReflectionMetadataMember, ancestor: Instance) -> Bool
+pub fn is_descendant_of(
+  instance: ReflectionMetadataMember,
+  ancestor: Instance,
+) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -872,10 +986,13 @@ pub fn is_descendant_of(instance: ReflectionMetadataMember, ancestor: Instance) 
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
-pub fn is_property_modified(instance: ReflectionMetadataMember, property: String) -> Bool
+pub fn is_property_modified(
+  instance: ReflectionMetadataMember,
+  property: String,
+) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -887,10 +1004,13 @@ pub fn is_property_modified(instance: ReflectionMetadataMember, property: String
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: ReflectionMetadataMember, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: ReflectionMetadataMember,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -899,10 +1019,10 @@ pub fn query_descendants(instance: ReflectionMetadataMember, selector: String) -
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: ReflectionMetadataMember, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -912,10 +1032,13 @@ pub fn remove_tag(instance: ReflectionMetadataMember, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: ReflectionMetadataMember, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: ReflectionMetadataMember,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -926,10 +1049,14 @@ pub fn reset_property_to_default(instance: ReflectionMetadataMember, property: S
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: ReflectionMetadataMember, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: ReflectionMetadataMember,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -944,19 +1071,25 @@ pub fn set_attribute(instance: ReflectionMetadataMember, attribute: String, valu
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: ReflectionMetadataMember, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: ReflectionMetadataMember,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: ReflectionMetadataMember) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: ReflectionMetadataMember,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -964,19 +1097,24 @@ pub fn ancestry_changed(instance: ReflectionMetadataMember) -> RBXScriptSignal(f
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: ReflectionMetadataMember, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: ReflectionMetadataMember,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: ReflectionMetadataMember) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: ReflectionMetadataMember,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -984,19 +1122,24 @@ pub fn attribute_changed(instance: ReflectionMetadataMember) -> RBXScriptSignal(
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: ReflectionMetadataMember, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: ReflectionMetadataMember,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: ReflectionMetadataMember) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: ReflectionMetadataMember,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -1004,19 +1147,24 @@ pub fn child_added(instance: ReflectionMetadataMember) -> RBXScriptSignal(fn(Ins
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: ReflectionMetadataMember, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: ReflectionMetadataMember,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: ReflectionMetadataMember) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: ReflectionMetadataMember,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -1024,19 +1172,24 @@ pub fn child_removed(instance: ReflectionMetadataMember) -> RBXScriptSignal(fn(I
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: ReflectionMetadataMember, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: ReflectionMetadataMember,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: ReflectionMetadataMember) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: ReflectionMetadataMember,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -1044,19 +1197,24 @@ pub fn descendant_added(instance: ReflectionMetadataMember) -> RBXScriptSignal(f
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: ReflectionMetadataMember, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: ReflectionMetadataMember,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: ReflectionMetadataMember) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: ReflectionMetadataMember,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -1064,19 +1222,24 @@ pub fn descendant_removing(instance: ReflectionMetadataMember) -> RBXScriptSigna
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: ReflectionMetadataMember, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: ReflectionMetadataMember,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
-pub fn destroying(instance: ReflectionMetadataMember) -> RBXScriptSignal(fn() -> Nil)
+pub fn destroying(
+  instance: ReflectionMetadataMember,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1084,19 +1247,24 @@ pub fn destroying(instance: ReflectionMetadataMember) -> RBXScriptSignal(fn() ->
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: ReflectionMetadataMember, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: ReflectionMetadataMember,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: ReflectionMetadataMember) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: ReflectionMetadataMember,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1104,10 +1272,13 @@ pub fn styled_properties_changed(instance: ReflectionMetadataMember) -> RBXScrip
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: ReflectionMetadataMember, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: ReflectionMetadataMember,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1116,10 +1287,10 @@ pub fn on_styled_properties_changed(instance: ReflectionMetadataMember, callback
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: ReflectionMetadataMember) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1132,10 +1303,13 @@ pub fn get_class_name(instance: ReflectionMetadataMember) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: ReflectionMetadataMember, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: ReflectionMetadataMember,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1149,19 +1323,21 @@ pub fn get_property_changed_signal(instance: ReflectionMetadataMember, property:
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: ReflectionMetadataMember, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
-pub fn changed(instance: ReflectionMetadataMember) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn changed(
+  instance: ReflectionMetadataMember,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1169,12 +1345,27 @@ pub fn changed(instance: ReflectionMetadataMember) -> RBXScriptSignal(fn(String)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: ReflectionMetadataMember, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: ReflectionMetadataMember,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: ReflectionMetadataMember, _: ReflectionMetadataItem, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: ReflectionMetadataMember,
+  _: ReflectionMetadataItem,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

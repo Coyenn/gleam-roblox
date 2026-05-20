@@ -2,71 +2,73 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type TextInputType}
 
+@target(luau)
 /// Gets the Roblox `TextInputType` enum object.
 ///
 /// Roblox: `Enum.TextInputType`
 /// See: https://create.roblox.com/docs/reference/engine/enums/TextInputType
-@target(luau)
 @luau.global("Enum.TextInputType")
 pub fn roblox_enum() -> RobloxEnum(TextInputType)
 
-/// Roblox enum item `TextInputType.Default`.
 @target(luau)
+/// Roblox enum item `TextInputType.Default`.
 @luau.global("Enum.TextInputType.Default")
 pub fn default() -> TextInputType
 
-/// Roblox enum item `TextInputType.NoSuggestions`.
 @target(luau)
+/// Roblox enum item `TextInputType.NoSuggestions`.
 @luau.global("Enum.TextInputType.NoSuggestions")
 pub fn no_suggestions() -> TextInputType
 
-/// Roblox enum item `TextInputType.Number`.
 @target(luau)
+/// Roblox enum item `TextInputType.Number`.
 @luau.global("Enum.TextInputType.Number")
 pub fn number() -> TextInputType
 
-/// Roblox enum item `TextInputType.Email`.
 @target(luau)
+/// Roblox enum item `TextInputType.Email`.
 @luau.global("Enum.TextInputType.Email")
 pub fn email() -> TextInputType
 
-/// Roblox enum item `TextInputType.Phone`.
 @target(luau)
+/// Roblox enum item `TextInputType.Phone`.
 @luau.global("Enum.TextInputType.Phone")
 pub fn phone() -> TextInputType
 
-/// Roblox enum item `TextInputType.Password`.
 @target(luau)
+/// Roblox enum item `TextInputType.Password`.
 @luau.global("Enum.TextInputType.Password")
 pub fn password() -> TextInputType
 
-/// Roblox enum item `TextInputType.PasswordShown`.
 @target(luau)
+/// Roblox enum item `TextInputType.PasswordShown`.
 @luau.global("Enum.TextInputType.PasswordShown")
 pub fn password_shown() -> TextInputType
 
-/// Roblox enum item `TextInputType.Username`.
 @target(luau)
+/// Roblox enum item `TextInputType.Username`.
 @luau.global("Enum.TextInputType.Username")
 pub fn username() -> TextInputType
 
-/// Roblox enum item `TextInputType.OneTimePassword`.
 @target(luau)
+/// Roblox enum item `TextInputType.OneTimePassword`.
 @luau.global("Enum.TextInputType.OneTimePassword")
 pub fn one_time_password() -> TextInputType
 
-/// Roblox enum item `TextInputType.NewPassword`.
 @target(luau)
+/// Roblox enum item `TextInputType.NewPassword`.
 @luau.global("Enum.TextInputType.NewPassword")
 pub fn new_password() -> TextInputType
 
-/// Roblox enum item `TextInputType.NewPasswordShown`.
 @target(luau)
+/// Roblox enum item `TextInputType.NewPasswordShown`.
 @luau.global("Enum.TextInputType.NewPasswordShown")
 pub fn new_password_shown() -> TextInputType
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(TextInputType), _: TextInputType) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(TextInputType),
+  _: TextInputType,
+) -> Nil {
   Nil
 }

@@ -1,13 +1,16 @@
 // Generated class bindings for Roblox API
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type ConfigSnapshot, type ConfigSnapshotErrorState, type Object}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type ConfigSnapshot, type ConfigSnapshotErrorState, type Object,
+}
 
-/// Treats `ConfigSnapshot` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `ConfigSnapshot` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: ConfigSnapshot) -> Object
 
+@target(luau)
 /// Gets Roblox property `ConfigSnapshot.Error`.
 ///
 /// Populated if snapshot was in an error state.
@@ -16,10 +19,10 @@ pub fn as_object(instance: ConfigSnapshot) -> Object
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/ConfigSnapshot#Error
-@target(luau)
 @luau.property("Error")
 pub fn get_error(instance: ConfigSnapshot) -> ConfigSnapshotErrorState
 
+@target(luau)
 /// Gets Roblox property `ConfigSnapshot.Outdated`.
 ///
 /// If true, indicates the snapshot is outdated and can be refreshed to newer values.
@@ -28,10 +31,10 @@ pub fn get_error(instance: ConfigSnapshot) -> ConfigSnapshotErrorState
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/ConfigSnapshot#Outdated
-@target(luau)
 @luau.property("Outdated")
 pub fn get_outdated(instance: ConfigSnapshot) -> Bool
 
+@target(luau)
 /// Returns the value for the given key.
 ///
 /// Roblox: `ConfigSnapshot.GetValue`
@@ -44,10 +47,10 @@ pub fn get_outdated(instance: ConfigSnapshot) -> Bool
 ///
 /// Returns:
 /// - The value of the configuration for the given key.
-@target(luau)
 @luau.method("GetValue")
 pub fn get_value(instance: ConfigSnapshot, key: String) -> Dynamic
 
+@target(luau)
 /// Returns a signal that fires when the value for the given key changes due to a refresh.
 ///
 /// Roblox: `ConfigSnapshot.GetValueChangedSignal`
@@ -60,10 +63,13 @@ pub fn get_value(instance: ConfigSnapshot, key: String) -> Dynamic
 ///
 /// Returns:
 /// - A RBXScriptSignal that fires when the value for the given key changes upon refresh.
-@target(luau)
 @luau.method("GetValueChangedSignal")
-pub fn get_value_changed_signal(instance: ConfigSnapshot, key: String) -> RBXScriptSignal(fn(Dynamic) -> Nil)
+pub fn get_value_changed_signal(
+  instance: ConfigSnapshot,
+  key: String,
+) -> RBXScriptSignal(fn(Dynamic) -> Nil)
 
+@target(luau)
 /// Refreshes the snapshot to the latest configuration values.
 ///
 /// Roblox: `ConfigSnapshot.Refresh`
@@ -72,19 +78,21 @@ pub fn get_value_changed_signal(instance: ConfigSnapshot, key: String) -> RBXScr
 ///
 /// Parameters:
 /// - `instance`: A snapshot of configuration values at a given version. Can be player-specific.
-@target(luau)
 @luau.method("Refresh")
 pub fn refresh(instance: ConfigSnapshot) -> Nil
 
+@target(luau)
 /// Fires when a newer version of the configuration is available.
 ///
 /// Roblox: `ConfigSnapshot.UpdateAvailable`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ConfigSnapshot#UpdateAvailable
-@target(luau)
 @luau.event("UpdateAvailable")
-pub fn update_available(instance: ConfigSnapshot) -> RBXScriptSignal(fn() -> Nil)
+pub fn update_available(
+  instance: ConfigSnapshot,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `ConfigSnapshot.UpdateAvailable`.
 ///
 /// Fires when a newer version of the configuration is available.
@@ -92,10 +100,13 @@ pub fn update_available(instance: ConfigSnapshot) -> RBXScriptSignal(fn() -> Nil
 /// Roblox: `ConfigSnapshot.UpdateAvailable`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ConfigSnapshot#UpdateAvailable
-@target(luau)
 @luau.global("(function(instance, callback) return instance.UpdateAvailable:Connect(callback) end)")
-pub fn on_update_available(instance: ConfigSnapshot, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_update_available(
+  instance: ConfigSnapshot,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -104,10 +115,10 @@ pub fn on_update_available(instance: ConfigSnapshot, callback: fn() -> Nil) -> R
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: ConfigSnapshot) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -120,10 +131,13 @@ pub fn get_class_name(instance: ConfigSnapshot) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: ConfigSnapshot, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: ConfigSnapshot,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -137,19 +151,19 @@ pub fn get_property_changed_signal(instance: ConfigSnapshot, property: String) -
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: ConfigSnapshot, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: ConfigSnapshot) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -157,12 +171,20 @@ pub fn changed(instance: ConfigSnapshot) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: ConfigSnapshot, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: ConfigSnapshot,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: ConfigSnapshotErrorState, _: ConfigSnapshot, _: Object, _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: ConfigSnapshotErrorState,
+  _: ConfigSnapshot,
+  _: Object,
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

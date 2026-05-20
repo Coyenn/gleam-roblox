@@ -1,31 +1,37 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type CFrame, type Camera, type CameraType, type FieldOfViewMode, type Instance, type Object, type OptionDouble, type OptionInt64, type PVInstance, type Ray, type SecurityCapabilities, type UniqueId, type Vector2, type Vector3}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type CFrame, type Camera, type CameraType, type FieldOfViewMode,
+  type Instance, type Object, type OptionDouble, type OptionInt64,
+  type PVInstance, type Ray, type SecurityCapabilities, type UniqueId,
+  type Vector2, type Vector3,
+}
 
+@target(luau)
 /// Creates a new Roblox `Camera` instance.
 ///
 /// Roblox: `Instance.new("Camera")`
-@target(luau)
 @luau.global("Instance.new(\"Camera\")")
 pub fn new() -> Camera
 
-/// Treats `Camera` as its Roblox ancestor `PVInstance`.
 @target(luau)
+/// Treats `Camera` as its Roblox ancestor `PVInstance`.
 @luau.global("(function(x) return x end)")
 pub fn as_pv_instance(instance: Camera) -> PVInstance
 
-/// Treats `Camera` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `Camera` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Camera) -> Instance
 
-/// Treats `Camera` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `Camera` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: Camera) -> Object
 
+@target(luau)
 /// Gets Roblox property `Camera.CFrame`.
 ///
 /// The CFrame of the Camera, defining its position and orientation in the 3D world.
@@ -33,10 +39,10 @@ pub fn as_object(instance: Camera) -> Object
 /// Roblox: `Camera.CFrame`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#CFrame
-@target(luau)
 @luau.property("CFrame")
 pub fn get_cframe(instance: Camera) -> CFrame
 
+@target(luau)
 /// Sets Roblox property `Camera.CFrame`.
 ///
 /// The CFrame of the Camera, defining its position and orientation in the 3D world.
@@ -44,10 +50,10 @@ pub fn get_cframe(instance: Camera) -> CFrame
 /// Roblox: `Camera.CFrame`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#CFrame
-@target(luau)
 @luau.set_property("CFrame")
 pub fn set_cframe(instance: Camera, value: CFrame) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Camera.CameraSubject`.
 ///
 /// The Humanoid or BasePart that is the Camera subject.
@@ -55,10 +61,10 @@ pub fn set_cframe(instance: Camera, value: CFrame) -> Camera
 /// Roblox: `Camera.CameraSubject`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#CameraSubject
-@target(luau)
 @luau.property("CameraSubject")
 pub fn get_camera_subject(instance: Camera) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Camera.CameraSubject`.
 ///
 /// The Humanoid or BasePart that is the Camera subject.
@@ -66,10 +72,10 @@ pub fn get_camera_subject(instance: Camera) -> Instance
 /// Roblox: `Camera.CameraSubject`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#CameraSubject
-@target(luau)
 @luau.set_property("CameraSubject")
 pub fn set_camera_subject(instance: Camera, value: Instance) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Camera.CameraType`.
 ///
 /// Specifies the CameraType to be read by the camera scripts.
@@ -77,10 +83,10 @@ pub fn set_camera_subject(instance: Camera, value: Instance) -> Camera
 /// Roblox: `Camera.CameraType`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#CameraType
-@target(luau)
 @luau.property("CameraType")
 pub fn get_camera_type(instance: Camera) -> CameraType
 
+@target(luau)
 /// Sets Roblox property `Camera.CameraType`.
 ///
 /// Specifies the CameraType to be read by the camera scripts.
@@ -88,10 +94,10 @@ pub fn get_camera_type(instance: Camera) -> CameraType
 /// Roblox: `Camera.CameraType`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#CameraType
-@target(luau)
 @luau.set_property("CameraType")
 pub fn set_camera_type(instance: Camera, value: CameraType) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Camera.DiagonalFieldOfView`.
 ///
 /// Sets the angle of the camera's diagonal field of view.
@@ -100,10 +106,10 @@ pub fn set_camera_type(instance: Camera, value: CameraType) -> Camera
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#DiagonalFieldOfView
-@target(luau)
 @luau.property("DiagonalFieldOfView")
 pub fn get_diagonal_field_of_view(instance: Camera) -> Float
 
+@target(luau)
 /// Sets Roblox property `Camera.DiagonalFieldOfView`.
 ///
 /// Sets the angle of the camera's diagonal field of view.
@@ -112,10 +118,10 @@ pub fn get_diagonal_field_of_view(instance: Camera) -> Float
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#DiagonalFieldOfView
-@target(luau)
 @luau.set_property("DiagonalFieldOfView")
 pub fn set_diagonal_field_of_view(instance: Camera, value: Float) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Camera.FieldOfView`.
 ///
 /// Sets the angle of the camera's vertical field of view.
@@ -123,10 +129,10 @@ pub fn set_diagonal_field_of_view(instance: Camera, value: Float) -> Camera
 /// Roblox: `Camera.FieldOfView`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#FieldOfView
-@target(luau)
 @luau.property("FieldOfView")
 pub fn get_field_of_view(instance: Camera) -> Float
 
+@target(luau)
 /// Sets Roblox property `Camera.FieldOfView`.
 ///
 /// Sets the angle of the camera's vertical field of view.
@@ -134,10 +140,10 @@ pub fn get_field_of_view(instance: Camera) -> Float
 /// Roblox: `Camera.FieldOfView`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#FieldOfView
-@target(luau)
 @luau.set_property("FieldOfView")
 pub fn set_field_of_view(instance: Camera, value: Float) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Camera.FieldOfViewMode`.
 ///
 /// Determines the FOV value of the Camera that's invariant under viewport size changes.
@@ -145,10 +151,10 @@ pub fn set_field_of_view(instance: Camera, value: Float) -> Camera
 /// Roblox: `Camera.FieldOfViewMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#FieldOfViewMode
-@target(luau)
 @luau.property("FieldOfViewMode")
 pub fn get_field_of_view_mode(instance: Camera) -> FieldOfViewMode
 
+@target(luau)
 /// Sets Roblox property `Camera.FieldOfViewMode`.
 ///
 /// Determines the FOV value of the Camera that's invariant under viewport size changes.
@@ -156,10 +162,13 @@ pub fn get_field_of_view_mode(instance: Camera) -> FieldOfViewMode
 /// Roblox: `Camera.FieldOfViewMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#FieldOfViewMode
-@target(luau)
 @luau.set_property("FieldOfViewMode")
-pub fn set_field_of_view_mode(instance: Camera, value: FieldOfViewMode) -> Camera
+pub fn set_field_of_view_mode(
+  instance: Camera,
+  value: FieldOfViewMode,
+) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Camera.Focus`.
 ///
 /// Sets the area in 3D space that is prioritized by Roblox's graphical systems.
@@ -167,10 +176,10 @@ pub fn set_field_of_view_mode(instance: Camera, value: FieldOfViewMode) -> Camer
 /// Roblox: `Camera.Focus`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#Focus
-@target(luau)
 @luau.property("Focus")
 pub fn get_focus(instance: Camera) -> CFrame
 
+@target(luau)
 /// Sets Roblox property `Camera.Focus`.
 ///
 /// Sets the area in 3D space that is prioritized by Roblox's graphical systems.
@@ -178,10 +187,10 @@ pub fn get_focus(instance: Camera) -> CFrame
 /// Roblox: `Camera.Focus`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#Focus
-@target(luau)
 @luau.set_property("Focus")
 pub fn set_focus(instance: Camera, value: CFrame) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Camera.HeadLocked`.
 ///
 /// Toggles whether the camera will automatically track the head motion of a player using a VR device.
@@ -189,10 +198,10 @@ pub fn set_focus(instance: Camera, value: CFrame) -> Camera
 /// Roblox: `Camera.HeadLocked`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#HeadLocked
-@target(luau)
 @luau.property("HeadLocked")
 pub fn get_head_locked(instance: Camera) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Camera.HeadLocked`.
 ///
 /// Toggles whether the camera will automatically track the head motion of a player using a VR device.
@@ -200,10 +209,10 @@ pub fn get_head_locked(instance: Camera) -> Bool
 /// Roblox: `Camera.HeadLocked`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#HeadLocked
-@target(luau)
 @luau.set_property("HeadLocked")
 pub fn set_head_locked(instance: Camera, value: Bool) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Camera.HeadScale`.
 ///
 /// Sets the scale of the user's perspective of the world when using VR.
@@ -211,10 +220,10 @@ pub fn set_head_locked(instance: Camera, value: Bool) -> Camera
 /// Roblox: `Camera.HeadScale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#HeadScale
-@target(luau)
 @luau.property("HeadScale")
 pub fn get_head_scale(instance: Camera) -> Float
 
+@target(luau)
 /// Sets Roblox property `Camera.HeadScale`.
 ///
 /// Sets the scale of the user's perspective of the world when using VR.
@@ -222,10 +231,10 @@ pub fn get_head_scale(instance: Camera) -> Float
 /// Roblox: `Camera.HeadScale`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#HeadScale
-@target(luau)
 @luau.set_property("HeadScale")
 pub fn set_head_scale(instance: Camera, value: Float) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Camera.MaxAxisFieldOfView`.
 ///
 /// Sets the angle of the camera's field of view along the longest viewport axis.
@@ -234,10 +243,10 @@ pub fn set_head_scale(instance: Camera, value: Float) -> Camera
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#MaxAxisFieldOfView
-@target(luau)
 @luau.property("MaxAxisFieldOfView")
 pub fn get_max_axis_field_of_view(instance: Camera) -> Float
 
+@target(luau)
 /// Sets Roblox property `Camera.MaxAxisFieldOfView`.
 ///
 /// Sets the angle of the camera's field of view along the longest viewport axis.
@@ -246,10 +255,10 @@ pub fn get_max_axis_field_of_view(instance: Camera) -> Float
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#MaxAxisFieldOfView
-@target(luau)
 @luau.set_property("MaxAxisFieldOfView")
 pub fn set_max_axis_field_of_view(instance: Camera, value: Float) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Camera.NearPlaneZ`.
 ///
 /// Describes the negative Z offset, in studs, of the camera's near clipping plane.
@@ -258,10 +267,10 @@ pub fn set_max_axis_field_of_view(instance: Camera, value: Float) -> Camera
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#NearPlaneZ
-@target(luau)
 @luau.property("NearPlaneZ")
 pub fn get_near_plane_z(instance: Camera) -> Float
 
+@target(luau)
 /// Gets Roblox property `Camera.VRTiltAndRollEnabled`.
 ///
 /// Toggles whether to apply tilt and roll from the CFrame property while the player is using a VR device.
@@ -269,10 +278,10 @@ pub fn get_near_plane_z(instance: Camera) -> Float
 /// Roblox: `Camera.VRTiltAndRollEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#VRTiltAndRollEnabled
-@target(luau)
 @luau.property("VRTiltAndRollEnabled")
 pub fn get_vr_tilt_and_roll_enabled(instance: Camera) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Camera.VRTiltAndRollEnabled`.
 ///
 /// Toggles whether to apply tilt and roll from the CFrame property while the player is using a VR device.
@@ -280,10 +289,10 @@ pub fn get_vr_tilt_and_roll_enabled(instance: Camera) -> Bool
 /// Roblox: `Camera.VRTiltAndRollEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#VRTiltAndRollEnabled
-@target(luau)
 @luau.set_property("VRTiltAndRollEnabled")
 pub fn set_vr_tilt_and_roll_enabled(instance: Camera, value: Bool) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Camera.ViewportSize`.
 ///
 /// The dimensions of the device safe area on a Roblox client.
@@ -292,10 +301,10 @@ pub fn set_vr_tilt_and_roll_enabled(instance: Camera, value: Bool) -> Camera
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#ViewportSize
-@target(luau)
 @luau.property("ViewportSize")
 pub fn get_viewport_size(instance: Camera) -> Vector2
 
+@target(luau)
 /// Returns an array of BaseParts that are obscuring the lines of sight between the camera's CFrame and the cast points.
 ///
 /// Roblox: `Camera.GetPartsObscuringTarget`
@@ -309,10 +318,14 @@ pub fn get_viewport_size(instance: Camera) -> Vector2
 ///
 /// Returns:
 /// - An array of BaseParts that obscure the lines of sight between the camera's CFrame and the castPoints.
-@target(luau)
 @luau.method("GetPartsObscuringTarget")
-pub fn get_parts_obscuring_target(instance: Camera, cast_points: List(Vector3), ignore_list: List(Instance)) -> List(Instance)
+pub fn get_parts_obscuring_target(
+  instance: Camera,
+  cast_points: List(Vector3),
+  ignore_list: List(Instance),
+) -> List(Instance)
 
+@target(luau)
 /// Returns the actual CFramewhere the Camera is being rendered, accounting for any roll applied and the impact of VR devices.
 ///
 /// Roblox: `Camera.GetRenderCFrame`
@@ -324,10 +337,10 @@ pub fn get_parts_obscuring_target(instance: Camera, cast_points: List(Vector3), 
 ///
 /// Returns:
 /// - The CFrame the Camera is being rendered at.
-@target(luau)
 @luau.method("GetRenderCFrame")
 pub fn get_render_cframe(instance: Camera) -> CFrame
 
+@target(luau)
 /// Returns in radians the current roll, or rotation around the camera's Z-axis, applied to the Camera using SetRoll().
 ///
 /// Roblox: `Camera.GetRoll`
@@ -339,10 +352,10 @@ pub fn get_render_cframe(instance: Camera) -> CFrame
 ///
 /// Returns:
 /// - The current roll applied by SetRoll(), in radians.
-@target(luau)
 @luau.method("GetRoll")
 pub fn get_roll(instance: Camera) -> Float
 
+@target(luau)
 /// Creates a unit Ray from a position on the screen (in pixels), at a set depth from the Camera orientated in the camera's direction. Accounts for the GUI inset.
 ///
 /// Roblox: `Camera.ScreenPointToRay`
@@ -357,10 +370,15 @@ pub fn get_roll(instance: Camera) -> Float
 ///
 /// Returns:
 /// - A unit Ray, originating from the equivalent Vector3 world position of the given screen coordinates at the given depth away from the Camera. This ray is orientated in the direction of the Camera.
-@target(luau)
 @luau.method("ScreenPointToRay")
-pub fn screen_point_to_ray(instance: Camera, x: Float, y: Float, depth: Float) -> Ray
+pub fn screen_point_to_ray(
+  instance: Camera,
+  x: Float,
+  y: Float,
+  depth: Float,
+) -> Ray
 
+@target(luau)
 /// Sets the current rotation applied around the camera's Z-axis.
 ///
 /// Roblox: `Camera.SetRoll`
@@ -370,10 +388,10 @@ pub fn screen_point_to_ray(instance: Camera, x: Float, y: Float, depth: Float) -
 /// Parameters:
 /// - `instance`: A class which defines a view of the 3D world.
 /// - `rollAngle`: The roll angle, in radians, to be applied to the Camera.
-@target(luau)
 @luau.method("SetRoll")
 pub fn set_roll(instance: Camera, roll_angle: Float) -> Nil
 
+@target(luau)
 /// Creates a unit Ray from a position on the viewport (in pixels), at a given depth from the Camera, orientated in the camera's direction. Does not account for the CoreUISafeInsets inset.
 ///
 /// Roblox: `Camera.ViewportPointToRay`
@@ -388,10 +406,15 @@ pub fn set_roll(instance: Camera, roll_angle: Float) -> Nil
 ///
 /// Returns:
 /// - A unit Ray, originating from the equivalent Vector3 world position of the given viewport coordinates at the given depth away from the Camera. This ray is orientated in the direction of the Camera.
-@target(luau)
 @luau.method("ViewportPointToRay")
-pub fn viewport_point_to_ray(instance: Camera, x: Float, y: Float, depth: Float) -> Ray
+pub fn viewport_point_to_ray(
+  instance: Camera,
+  x: Float,
+  y: Float,
+  depth: Float,
+) -> Ray
 
+@target(luau)
 /// Returns the screen location and depth of a Vector3 worldPoint and whether this point is within the bounds of the screen. Accounts for the GUI inset.
 ///
 /// Roblox: `Camera.WorldToScreenPoint`
@@ -404,10 +427,10 @@ pub fn viewport_point_to_ray(instance: Camera, x: Float, y: Float, depth: Float)
 ///
 /// Returns:
 /// - A tuple containing, in order: A Vector3 whose X and Y components represent the offset of the worldPoint from the top left corner of the screen, in pixels. The Vector3 Z component represents the depth of the worldPoint from the screen (in studs). A boolean indicating if the worldPoint is within the bounds of the screen.
-@target(luau)
 @luau.method("WorldToScreenPoint")
 pub fn world_to_screen_point(instance: Camera, world_point: Vector3) -> Dynamic
 
+@target(luau)
 /// Returns the screen location and depth of a Vector3 worldPoint and whether this point is within the bounds of the screen. Does not account for the GUI inset.
 ///
 /// Roblox: `Camera.WorldToViewportPoint`
@@ -420,10 +443,13 @@ pub fn world_to_screen_point(instance: Camera, world_point: Vector3) -> Dynamic
 ///
 /// Returns:
 /// - A tuple containing, in order: A Vector3 whose X and Y components represent the offset of the worldPoint from the top left corner of the viewport, in pixels. The Vector3 Z component represents the depth of the worldPoint from the screen (in studs). A boolean indicating if the worldPoint is within the bounds of the screen.
-@target(luau)
 @luau.method("WorldToViewportPoint")
-pub fn world_to_viewport_point(instance: Camera, world_point: Vector3) -> Dynamic
+pub fn world_to_viewport_point(
+  instance: Camera,
+  world_point: Vector3,
+) -> Dynamic
 
+@target(luau)
 /// Adjusts the CFrame so that the specified bounding box is fully visible within the camera's viewport.
 ///
 /// Roblox: `Camera.ZoomToExtents`
@@ -434,19 +460,23 @@ pub fn world_to_viewport_point(instance: Camera, world_point: Vector3) -> Dynami
 /// - `instance`: A class which defines a view of the 3D world.
 /// - `boundingBoxCFrame`: The CFrame representing the center and orientation of the bounding box to fit into the viewport.
 /// - `boundingBoxSize`: The Vector3 size of the bounding box to fit into the viewport.
-@target(luau)
 @luau.method("ZoomToExtents")
-pub fn zoom_to_extents(instance: Camera, bounding_box_cframe: CFrame, bounding_box_size: Vector3) -> Nil
+pub fn zoom_to_extents(
+  instance: Camera,
+  bounding_box_cframe: CFrame,
+  bounding_box_size: Vector3,
+) -> Nil
 
+@target(luau)
 /// Fired when the Camera has finished interpolating usingInterpolate().
 ///
 /// Roblox: `Camera.InterpolationFinished`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#InterpolationFinished
-@target(luau)
 @luau.event("InterpolationFinished")
 pub fn interpolation_finished(instance: Camera) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Camera.InterpolationFinished`.
 ///
 /// Fired when the Camera has finished interpolating usingInterpolate().
@@ -454,10 +484,13 @@ pub fn interpolation_finished(instance: Camera) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Camera.InterpolationFinished`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Camera#InterpolationFinished
-@target(luau)
 @luau.global("(function(instance, callback) return instance.InterpolationFinished:Connect(callback) end)")
-pub fn on_interpolation_finished(instance: Camera, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_interpolation_finished(
+  instance: Camera,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets the pivot of a PVInstance.
 ///
 /// Roblox: `PVInstance.GetPivot`
@@ -466,10 +499,10 @@ pub fn on_interpolation_finished(instance: Camera, callback: fn() -> Nil) -> RBX
 ///
 /// Parameters:
 /// - `instance`: Abstract class for all objects that have a physical location in the world.
-@target(luau)
 @luau.method("GetPivot")
 pub fn get_pivot(instance: Camera) -> CFrame
 
+@target(luau)
 /// Transforms the PVInstance along with all of its descendant PVInstances such that the pivot is now located at the specified CFrame.
 ///
 /// Roblox: `PVInstance.PivotTo`
@@ -479,10 +512,10 @@ pub fn get_pivot(instance: Camera) -> CFrame
 /// Parameters:
 /// - `instance`: Abstract class for all objects that have a physical location in the world.
 /// - `targetCFrame`: The CFrame that the PVInstance pivot should equal after moving it.
-@target(luau)
 @luau.method("PivotTo")
 pub fn pivot_to(instance: Camera, target_cframe: CFrame) -> Nil
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -490,10 +523,10 @@ pub fn pivot_to(instance: Camera, target_cframe: CFrame) -> Nil
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: Camera) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -501,10 +534,10 @@ pub fn get_archivable(instance: Camera) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: Camera, value: Bool) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -512,10 +545,10 @@ pub fn set_archivable(instance: Camera, value: Bool) -> Camera
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: Camera) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -523,10 +556,10 @@ pub fn get_capabilities(instance: Camera) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
 pub fn set_capabilities(instance: Camera, value: SecurityCapabilities) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -534,10 +567,10 @@ pub fn set_capabilities(instance: Camera, value: SecurityCapabilities) -> Camera
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: Camera) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -545,10 +578,10 @@ pub fn get_name(instance: Camera) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: Camera, value: String) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -557,10 +590,10 @@ pub fn set_name(instance: Camera, value: String) -> Camera
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: Camera) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -569,10 +602,10 @@ pub fn get_parent(instance: Camera) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: Camera, value: parent) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -581,10 +614,10 @@ pub fn set_parent(instance: Camera, value: parent) -> Camera
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: Camera) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -593,10 +626,10 @@ pub fn get_roblox_locked(instance: Camera) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: Camera) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -605,20 +638,20 @@ pub fn get_sandboxed(instance: Camera) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: Camera, value: Bool) -> Camera
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: Camera) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -627,10 +660,10 @@ pub fn get_source_asset_id(instance: Camera) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: Camera) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -639,10 +672,10 @@ pub fn get_unique_id(instance: Camera) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: Camera, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -651,10 +684,10 @@ pub fn add_tag(instance: Camera, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: Camera) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -663,10 +696,10 @@ pub fn clear_all_children(instance: Camera) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: Camera) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -675,10 +708,10 @@ pub fn clone(instance: Camera) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: Camera) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -691,10 +724,10 @@ pub fn destroy_instance(instance: Camera) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
 pub fn find_first_ancestor(instance: Camera, name: String) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -707,10 +740,13 @@ pub fn find_first_ancestor(instance: Camera, name: String) -> Option(Instance)
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: Camera, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: Camera,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -723,10 +759,13 @@ pub fn find_first_ancestor_of_class(instance: Camera, class_name: String) -> Opt
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: Camera, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: Camera,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -740,10 +779,14 @@ pub fn find_first_ancestor_which_is_a(instance: Camera, class_name: String) -> O
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: Camera, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: Camera,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -756,10 +799,13 @@ pub fn find_first_child(instance: Camera, name: String, recursive: Bool) -> Opti
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: Camera, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: Camera,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -773,10 +819,14 @@ pub fn find_first_child_of_class(instance: Camera, class_name: String) -> Option
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: Camera, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: Camera,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -789,10 +839,10 @@ pub fn find_first_child_which_is_a(instance: Camera, class_name: String, recursi
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
 pub fn find_first_descendant(instance: Camera, name: String) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -804,10 +854,10 @@ pub fn find_first_descendant(instance: Camera, name: String) -> Option(Instance)
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: Camera) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -820,10 +870,10 @@ pub fn get_actor(instance: Camera) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: Camera, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -836,10 +886,13 @@ pub fn get_attribute(instance: Camera, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: Camera, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: Camera,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -852,10 +905,10 @@ pub fn get_attribute_changed_signal(instance: Camera, attribute: String) -> RBXS
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: Camera) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -867,10 +920,10 @@ pub fn get_attributes(instance: Camera) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: Camera) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -883,10 +936,10 @@ pub fn get_children(instance: Camera) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: Camera) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -898,10 +951,10 @@ pub fn get_descendants(instance: Camera) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: Camera) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -915,10 +968,14 @@ pub fn get_full_name(instance: Camera) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: Camera, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: Camera,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -929,10 +986,13 @@ pub fn get_styled(instance: Camera, name: String, selector: Option(String)) -> D
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: Camera, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: Camera,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -941,10 +1001,10 @@ pub fn get_styled_property_changed_signal(instance: Camera, property: String) ->
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: Camera) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -953,10 +1013,10 @@ pub fn get_tags(instance: Camera) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: Camera, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -969,10 +1029,10 @@ pub fn has_tag(instance: Camera, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: Camera, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -985,10 +1045,10 @@ pub fn is_ancestor_of(instance: Camera, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: Camera, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -1001,10 +1061,10 @@ pub fn is_descendant_of(instance: Camera, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: Camera, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -1016,10 +1076,10 @@ pub fn is_property_modified(instance: Camera, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
 pub fn query_descendants(instance: Camera, selector: String) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -1028,10 +1088,10 @@ pub fn query_descendants(instance: Camera, selector: String) -> List(Instance)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: Camera, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -1041,10 +1101,10 @@ pub fn remove_tag(instance: Camera, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
 pub fn reset_property_to_default(instance: Camera, property: String) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -1055,10 +1115,10 @@ pub fn reset_property_to_default(instance: Camera, property: String) -> Nil
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
 pub fn set_attribute(instance: Camera, attribute: String, value: Dynamic) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -1073,19 +1133,25 @@ pub fn set_attribute(instance: Camera, attribute: String, value: Dynamic) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: Camera, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: Camera,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: Camera) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: Camera,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -1093,19 +1159,22 @@ pub fn ancestry_changed(instance: Camera) -> RBXScriptSignal(fn(Instance, Instan
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: Camera, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: Camera,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
 pub fn attribute_changed(instance: Camera) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -1113,19 +1182,22 @@ pub fn attribute_changed(instance: Camera) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: Camera, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: Camera,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
 pub fn child_added(instance: Camera) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -1133,19 +1205,22 @@ pub fn child_added(instance: Camera) -> RBXScriptSignal(fn(Instance) -> Nil)
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: Camera, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: Camera,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
 pub fn child_removed(instance: Camera) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -1153,19 +1228,24 @@ pub fn child_removed(instance: Camera) -> RBXScriptSignal(fn(Instance) -> Nil)
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: Camera, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: Camera,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: Camera) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: Camera,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -1173,19 +1253,24 @@ pub fn descendant_added(instance: Camera) -> RBXScriptSignal(fn(Instance) -> Nil
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: Camera, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: Camera,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: Camera) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: Camera,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -1193,19 +1278,22 @@ pub fn descendant_removing(instance: Camera) -> RBXScriptSignal(fn(Instance) -> 
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: Camera, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: Camera,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: Camera) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1213,19 +1301,24 @@ pub fn destroying(instance: Camera) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: Camera, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: Camera,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: Camera) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: Camera,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1233,10 +1326,13 @@ pub fn styled_properties_changed(instance: Camera) -> RBXScriptSignal(fn() -> Ni
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: Camera, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: Camera,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1245,10 +1341,10 @@ pub fn on_styled_properties_changed(instance: Camera, callback: fn() -> Nil) -> 
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: Camera) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1261,10 +1357,13 @@ pub fn get_class_name(instance: Camera) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: Camera, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: Camera,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1278,19 +1377,19 @@ pub fn get_property_changed_signal(instance: Camera, property: String) -> RBXScr
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: Camera, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: Camera) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1298,12 +1397,33 @@ pub fn changed(instance: Camera) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: Camera, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: Camera,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: CFrame, _: Vector3, _: Ray, _: Vector2, _: FieldOfViewMode, _: CameraType, _: Camera, _: PVInstance, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: CFrame,
+  _: Vector3,
+  _: Ray,
+  _: Vector2,
+  _: FieldOfViewMode,
+  _: CameraType,
+  _: Camera,
+  _: PVInstance,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

@@ -1,36 +1,44 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type ActuatorType, type Attachment, type BrickColor, type Constraint, type Instance, type Object, type OptionDouble, type OptionInt64, type PrismaticConstraint, type SecurityCapabilities, type SlidingBallConstraint, type UniqueId}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type ActuatorType, type Attachment, type BrickColor,
+  type Constraint, type Instance, type Object, type OptionDouble,
+  type OptionInt64, type PrismaticConstraint, type SecurityCapabilities,
+  type SlidingBallConstraint, type UniqueId,
+}
 
+@target(luau)
 /// Creates a new Roblox `PrismaticConstraint` instance.
 ///
 /// Roblox: `Instance.new("PrismaticConstraint")`
-@target(luau)
 @luau.global("Instance.new(\"PrismaticConstraint\")")
 pub fn new() -> PrismaticConstraint
 
+@target(luau)
 /// Treats `PrismaticConstraint` as its Roblox ancestor `SlidingBallConstraint`.
-@target(luau)
 @luau.global("(function(x) return x end)")
-pub fn as_sliding_ball_constraint(instance: PrismaticConstraint) -> SlidingBallConstraint
+pub fn as_sliding_ball_constraint(
+  instance: PrismaticConstraint,
+) -> SlidingBallConstraint
 
-/// Treats `PrismaticConstraint` as its Roblox ancestor `Constraint`.
 @target(luau)
+/// Treats `PrismaticConstraint` as its Roblox ancestor `Constraint`.
 @luau.global("(function(x) return x end)")
 pub fn as_constraint(instance: PrismaticConstraint) -> Constraint
 
-/// Treats `PrismaticConstraint` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `PrismaticConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: PrismaticConstraint) -> Instance
 
-/// Treats `PrismaticConstraint` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `PrismaticConstraint` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: PrismaticConstraint) -> Object
 
+@target(luau)
 /// Gets Roblox property `SlidingBallConstraint.ActuatorType`.
 ///
 /// Sets whether the translation of the SlidingBallConstraint is actuated and, if so, what kind of actuation.
@@ -38,10 +46,10 @@ pub fn as_object(instance: PrismaticConstraint) -> Object
 /// Roblox: `SlidingBallConstraint.ActuatorType`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#ActuatorType
-@target(luau)
 @luau.property("ActuatorType")
 pub fn get_actuator_type(instance: PrismaticConstraint) -> ActuatorType
 
+@target(luau)
 /// Sets Roblox property `SlidingBallConstraint.ActuatorType`.
 ///
 /// Sets whether the translation of the SlidingBallConstraint is actuated and, if so, what kind of actuation.
@@ -49,10 +57,13 @@ pub fn get_actuator_type(instance: PrismaticConstraint) -> ActuatorType
 /// Roblox: `SlidingBallConstraint.ActuatorType`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#ActuatorType
-@target(luau)
 @luau.set_property("ActuatorType")
-pub fn set_actuator_type(instance: PrismaticConstraint, value: ActuatorType) -> PrismaticConstraint
+pub fn set_actuator_type(
+  instance: PrismaticConstraint,
+  value: ActuatorType,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `SlidingBallConstraint.CurrentPosition`.
 ///
 /// The current offset between the constraint's Attachments.
@@ -61,10 +72,10 @@ pub fn set_actuator_type(instance: PrismaticConstraint, value: ActuatorType) -> 
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#CurrentPosition
-@target(luau)
 @luau.property("CurrentPosition")
 pub fn get_current_position(instance: PrismaticConstraint) -> Float
 
+@target(luau)
 /// Gets Roblox property `SlidingBallConstraint.LimitsEnabled`.
 ///
 /// Sets whether the SlidingBallConstraint will limit the range of translation.
@@ -72,10 +83,10 @@ pub fn get_current_position(instance: PrismaticConstraint) -> Float
 /// Roblox: `SlidingBallConstraint.LimitsEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#LimitsEnabled
-@target(luau)
 @luau.property("LimitsEnabled")
 pub fn get_limits_enabled(instance: PrismaticConstraint) -> Bool
 
+@target(luau)
 /// Sets Roblox property `SlidingBallConstraint.LimitsEnabled`.
 ///
 /// Sets whether the SlidingBallConstraint will limit the range of translation.
@@ -83,10 +94,13 @@ pub fn get_limits_enabled(instance: PrismaticConstraint) -> Bool
 /// Roblox: `SlidingBallConstraint.LimitsEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#LimitsEnabled
-@target(luau)
 @luau.set_property("LimitsEnabled")
-pub fn set_limits_enabled(instance: PrismaticConstraint, value: Bool) -> PrismaticConstraint
+pub fn set_limits_enabled(
+  instance: PrismaticConstraint,
+  value: Bool,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `SlidingBallConstraint.LinearResponsiveness`.
 ///
 /// Specifies the "sharpness" of the linear servo motor in reaching the TargetPosition.
@@ -94,10 +108,10 @@ pub fn set_limits_enabled(instance: PrismaticConstraint, value: Bool) -> Prismat
 /// Roblox: `SlidingBallConstraint.LinearResponsiveness`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#LinearResponsiveness
-@target(luau)
 @luau.property("LinearResponsiveness")
 pub fn get_linear_responsiveness(instance: PrismaticConstraint) -> Float
 
+@target(luau)
 /// Sets Roblox property `SlidingBallConstraint.LinearResponsiveness`.
 ///
 /// Specifies the "sharpness" of the linear servo motor in reaching the TargetPosition.
@@ -105,10 +119,13 @@ pub fn get_linear_responsiveness(instance: PrismaticConstraint) -> Float
 /// Roblox: `SlidingBallConstraint.LinearResponsiveness`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#LinearResponsiveness
-@target(luau)
 @luau.set_property("LinearResponsiveness")
-pub fn set_linear_responsiveness(instance: PrismaticConstraint, value: Float) -> PrismaticConstraint
+pub fn set_linear_responsiveness(
+  instance: PrismaticConstraint,
+  value: Float,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `SlidingBallConstraint.LowerLimit`.
 ///
 /// The lower positional limit along the X axis of Attachment0 if LimitsEnabled is true.
@@ -116,10 +133,10 @@ pub fn set_linear_responsiveness(instance: PrismaticConstraint, value: Float) ->
 /// Roblox: `SlidingBallConstraint.LowerLimit`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#LowerLimit
-@target(luau)
 @luau.property("LowerLimit")
 pub fn get_lower_limit(instance: PrismaticConstraint) -> Float
 
+@target(luau)
 /// Sets Roblox property `SlidingBallConstraint.LowerLimit`.
 ///
 /// The lower positional limit along the X axis of Attachment0 if LimitsEnabled is true.
@@ -127,10 +144,13 @@ pub fn get_lower_limit(instance: PrismaticConstraint) -> Float
 /// Roblox: `SlidingBallConstraint.LowerLimit`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#LowerLimit
-@target(luau)
 @luau.set_property("LowerLimit")
-pub fn set_lower_limit(instance: PrismaticConstraint, value: Float) -> PrismaticConstraint
+pub fn set_lower_limit(
+  instance: PrismaticConstraint,
+  value: Float,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `SlidingBallConstraint.MotorMaxAcceleration`.
 ///
 /// The constraint's maximum acceleration when ActuatorType is set to Motor as the constraint attempts to reach its desired Velocity.
@@ -138,10 +158,10 @@ pub fn set_lower_limit(instance: PrismaticConstraint, value: Float) -> Prismatic
 /// Roblox: `SlidingBallConstraint.MotorMaxAcceleration`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#MotorMaxAcceleration
-@target(luau)
 @luau.property("MotorMaxAcceleration")
 pub fn get_motor_max_acceleration(instance: PrismaticConstraint) -> Float
 
+@target(luau)
 /// Sets Roblox property `SlidingBallConstraint.MotorMaxAcceleration`.
 ///
 /// The constraint's maximum acceleration when ActuatorType is set to Motor as the constraint attempts to reach its desired Velocity.
@@ -149,10 +169,13 @@ pub fn get_motor_max_acceleration(instance: PrismaticConstraint) -> Float
 /// Roblox: `SlidingBallConstraint.MotorMaxAcceleration`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#MotorMaxAcceleration
-@target(luau)
 @luau.set_property("MotorMaxAcceleration")
-pub fn set_motor_max_acceleration(instance: PrismaticConstraint, value: Float) -> PrismaticConstraint
+pub fn set_motor_max_acceleration(
+  instance: PrismaticConstraint,
+  value: Float,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `SlidingBallConstraint.MotorMaxForce`.
 ///
 /// The constraint's maximum force when ActuatorType is set to Motor, as the constraint attempts to reach its desired Velocity.
@@ -160,10 +183,10 @@ pub fn set_motor_max_acceleration(instance: PrismaticConstraint, value: Float) -
 /// Roblox: `SlidingBallConstraint.MotorMaxForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#MotorMaxForce
-@target(luau)
 @luau.property("MotorMaxForce")
 pub fn get_motor_max_force(instance: PrismaticConstraint) -> Float
 
+@target(luau)
 /// Sets Roblox property `SlidingBallConstraint.MotorMaxForce`.
 ///
 /// The constraint's maximum force when ActuatorType is set to Motor, as the constraint attempts to reach its desired Velocity.
@@ -171,10 +194,13 @@ pub fn get_motor_max_force(instance: PrismaticConstraint) -> Float
 /// Roblox: `SlidingBallConstraint.MotorMaxForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#MotorMaxForce
-@target(luau)
 @luau.set_property("MotorMaxForce")
-pub fn set_motor_max_force(instance: PrismaticConstraint, value: Float) -> PrismaticConstraint
+pub fn set_motor_max_force(
+  instance: PrismaticConstraint,
+  value: Float,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `SlidingBallConstraint.Restitution`.
 ///
 /// The elasticity of the constraint's Attachments when they reach the end of the range specified by UpperLimit and LowerLimit, assuming LimitsEnabled is set to true.
@@ -182,10 +208,10 @@ pub fn set_motor_max_force(instance: PrismaticConstraint, value: Float) -> Prism
 /// Roblox: `SlidingBallConstraint.Restitution`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#Restitution
-@target(luau)
 @luau.property("Restitution")
 pub fn get_restitution(instance: PrismaticConstraint) -> Float
 
+@target(luau)
 /// Sets Roblox property `SlidingBallConstraint.Restitution`.
 ///
 /// The elasticity of the constraint's Attachments when they reach the end of the range specified by UpperLimit and LowerLimit, assuming LimitsEnabled is set to true.
@@ -193,10 +219,13 @@ pub fn get_restitution(instance: PrismaticConstraint) -> Float
 /// Roblox: `SlidingBallConstraint.Restitution`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#Restitution
-@target(luau)
 @luau.set_property("Restitution")
-pub fn set_restitution(instance: PrismaticConstraint, value: Float) -> PrismaticConstraint
+pub fn set_restitution(
+  instance: PrismaticConstraint,
+  value: Float,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `SlidingBallConstraint.ServoMaxForce`.
 ///
 /// The constraint's maximum force when ActuatorType is set to Servo, as the constraint attempts to reach its desired Speed.
@@ -204,10 +233,10 @@ pub fn set_restitution(instance: PrismaticConstraint, value: Float) -> Prismatic
 /// Roblox: `SlidingBallConstraint.ServoMaxForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#ServoMaxForce
-@target(luau)
 @luau.property("ServoMaxForce")
 pub fn get_servo_max_force(instance: PrismaticConstraint) -> Float
 
+@target(luau)
 /// Sets Roblox property `SlidingBallConstraint.ServoMaxForce`.
 ///
 /// The constraint's maximum force when ActuatorType is set to Servo, as the constraint attempts to reach its desired Speed.
@@ -215,10 +244,13 @@ pub fn get_servo_max_force(instance: PrismaticConstraint) -> Float
 /// Roblox: `SlidingBallConstraint.ServoMaxForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#ServoMaxForce
-@target(luau)
 @luau.set_property("ServoMaxForce")
-pub fn set_servo_max_force(instance: PrismaticConstraint, value: Float) -> PrismaticConstraint
+pub fn set_servo_max_force(
+  instance: PrismaticConstraint,
+  value: Float,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `SlidingBallConstraint.Size`.
 ///
 /// The constraint's visualized size.
@@ -226,10 +258,10 @@ pub fn set_servo_max_force(instance: PrismaticConstraint, value: Float) -> Prism
 /// Roblox: `SlidingBallConstraint.Size`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#Size
-@target(luau)
 @luau.property("Size")
 pub fn get_size(instance: PrismaticConstraint) -> Float
 
+@target(luau)
 /// Sets Roblox property `SlidingBallConstraint.Size`.
 ///
 /// The constraint's visualized size.
@@ -237,10 +269,13 @@ pub fn get_size(instance: PrismaticConstraint) -> Float
 /// Roblox: `SlidingBallConstraint.Size`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#Size
-@target(luau)
 @luau.set_property("Size")
-pub fn set_size(instance: PrismaticConstraint, value: Float) -> PrismaticConstraint
+pub fn set_size(
+  instance: PrismaticConstraint,
+  value: Float,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `SlidingBallConstraint.Speed`.
 ///
 /// The constraint's desired speed when ActuatorType is set to Servo, as the constraint translates towards its TargetPosition. Measured in studs per second.
@@ -248,10 +283,10 @@ pub fn set_size(instance: PrismaticConstraint, value: Float) -> PrismaticConstra
 /// Roblox: `SlidingBallConstraint.Speed`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#Speed
-@target(luau)
 @luau.property("Speed")
 pub fn get_speed(instance: PrismaticConstraint) -> Float
 
+@target(luau)
 /// Sets Roblox property `SlidingBallConstraint.Speed`.
 ///
 /// The constraint's desired speed when ActuatorType is set to Servo, as the constraint translates towards its TargetPosition. Measured in studs per second.
@@ -259,10 +294,13 @@ pub fn get_speed(instance: PrismaticConstraint) -> Float
 /// Roblox: `SlidingBallConstraint.Speed`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#Speed
-@target(luau)
 @luau.set_property("Speed")
-pub fn set_speed(instance: PrismaticConstraint, value: Float) -> PrismaticConstraint
+pub fn set_speed(
+  instance: PrismaticConstraint,
+  value: Float,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `SlidingBallConstraint.TargetPosition`.
 ///
 /// The constraint's attempted target position when ActuatorType is set to Servo. Measured in studs.
@@ -270,10 +308,10 @@ pub fn set_speed(instance: PrismaticConstraint, value: Float) -> PrismaticConstr
 /// Roblox: `SlidingBallConstraint.TargetPosition`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#TargetPosition
-@target(luau)
 @luau.property("TargetPosition")
 pub fn get_target_position(instance: PrismaticConstraint) -> Float
 
+@target(luau)
 /// Sets Roblox property `SlidingBallConstraint.TargetPosition`.
 ///
 /// The constraint's attempted target position when ActuatorType is set to Servo. Measured in studs.
@@ -281,10 +319,13 @@ pub fn get_target_position(instance: PrismaticConstraint) -> Float
 /// Roblox: `SlidingBallConstraint.TargetPosition`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#TargetPosition
-@target(luau)
 @luau.set_property("TargetPosition")
-pub fn set_target_position(instance: PrismaticConstraint, value: Float) -> PrismaticConstraint
+pub fn set_target_position(
+  instance: PrismaticConstraint,
+  value: Float,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `SlidingBallConstraint.UpperLimit`.
 ///
 /// The upper positional limit along the X axis of Attachment0 if LimitsEnabled is true.
@@ -292,10 +333,10 @@ pub fn set_target_position(instance: PrismaticConstraint, value: Float) -> Prism
 /// Roblox: `SlidingBallConstraint.UpperLimit`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#UpperLimit
-@target(luau)
 @luau.property("UpperLimit")
 pub fn get_upper_limit(instance: PrismaticConstraint) -> Float
 
+@target(luau)
 /// Sets Roblox property `SlidingBallConstraint.UpperLimit`.
 ///
 /// The upper positional limit along the X axis of Attachment0 if LimitsEnabled is true.
@@ -303,10 +344,13 @@ pub fn get_upper_limit(instance: PrismaticConstraint) -> Float
 /// Roblox: `SlidingBallConstraint.UpperLimit`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#UpperLimit
-@target(luau)
 @luau.set_property("UpperLimit")
-pub fn set_upper_limit(instance: PrismaticConstraint, value: Float) -> PrismaticConstraint
+pub fn set_upper_limit(
+  instance: PrismaticConstraint,
+  value: Float,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `SlidingBallConstraint.Velocity`.
 ///
 /// The constraint's attempted velocity when ActuatorType is set to Motor. Measured in studs per second.
@@ -314,10 +358,10 @@ pub fn set_upper_limit(instance: PrismaticConstraint, value: Float) -> Prismatic
 /// Roblox: `SlidingBallConstraint.Velocity`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#Velocity
-@target(luau)
 @luau.property("Velocity")
 pub fn get_velocity(instance: PrismaticConstraint) -> Float
 
+@target(luau)
 /// Sets Roblox property `SlidingBallConstraint.Velocity`.
 ///
 /// The constraint's attempted velocity when ActuatorType is set to Motor. Measured in studs per second.
@@ -325,10 +369,13 @@ pub fn get_velocity(instance: PrismaticConstraint) -> Float
 /// Roblox: `SlidingBallConstraint.Velocity`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/SlidingBallConstraint#Velocity
-@target(luau)
 @luau.set_property("Velocity")
-pub fn set_velocity(instance: PrismaticConstraint, value: Float) -> PrismaticConstraint
+pub fn set_velocity(
+  instance: PrismaticConstraint,
+  value: Float,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `Constraint.Active`.
 ///
 /// Indicates if the constraint is currently active in the world.
@@ -337,10 +384,10 @@ pub fn set_velocity(instance: PrismaticConstraint, value: Float) -> PrismaticCon
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Active
-@target(luau)
 @luau.property("Active")
 pub fn get_active(instance: PrismaticConstraint) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Constraint.Attachment0`.
 ///
 /// The Attachment that is connected to Constraint.Attachment1.
@@ -348,10 +395,10 @@ pub fn get_active(instance: PrismaticConstraint) -> Bool
 /// Roblox: `Constraint.Attachment0`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Attachment0
-@target(luau)
 @luau.property("Attachment0")
 pub fn get_attachment0(instance: PrismaticConstraint) -> Attachment
 
+@target(luau)
 /// Sets Roblox property `Constraint.Attachment0`.
 ///
 /// The Attachment that is connected to Constraint.Attachment1.
@@ -359,10 +406,13 @@ pub fn get_attachment0(instance: PrismaticConstraint) -> Attachment
 /// Roblox: `Constraint.Attachment0`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Attachment0
-@target(luau)
 @luau.set_property("Attachment0")
-pub fn set_attachment0(instance: PrismaticConstraint, value: Attachment) -> PrismaticConstraint
+pub fn set_attachment0(
+  instance: PrismaticConstraint,
+  value: Attachment,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `Constraint.Attachment1`.
 ///
 /// The Attachment that is connected to Constraint.Attachment0.
@@ -370,10 +420,10 @@ pub fn set_attachment0(instance: PrismaticConstraint, value: Attachment) -> Pris
 /// Roblox: `Constraint.Attachment1`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Attachment1
-@target(luau)
 @luau.property("Attachment1")
 pub fn get_attachment1(instance: PrismaticConstraint) -> Attachment
 
+@target(luau)
 /// Sets Roblox property `Constraint.Attachment1`.
 ///
 /// The Attachment that is connected to Constraint.Attachment0.
@@ -381,10 +431,13 @@ pub fn get_attachment1(instance: PrismaticConstraint) -> Attachment
 /// Roblox: `Constraint.Attachment1`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Attachment1
-@target(luau)
 @luau.set_property("Attachment1")
-pub fn set_attachment1(instance: PrismaticConstraint, value: Attachment) -> PrismaticConstraint
+pub fn set_attachment1(
+  instance: PrismaticConstraint,
+  value: Attachment,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `Constraint.Color`.
 ///
 /// The color of the constraint.
@@ -392,10 +445,10 @@ pub fn set_attachment1(instance: PrismaticConstraint, value: Attachment) -> Pris
 /// Roblox: `Constraint.Color`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Color
-@target(luau)
 @luau.property("Color")
 pub fn get_color(instance: PrismaticConstraint) -> BrickColor
 
+@target(luau)
 /// Sets Roblox property `Constraint.Color`.
 ///
 /// The color of the constraint.
@@ -403,10 +456,13 @@ pub fn get_color(instance: PrismaticConstraint) -> BrickColor
 /// Roblox: `Constraint.Color`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Color
-@target(luau)
 @luau.set_property("Color")
-pub fn set_color(instance: PrismaticConstraint, value: BrickColor) -> PrismaticConstraint
+pub fn set_color(
+  instance: PrismaticConstraint,
+  value: BrickColor,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `Constraint.Enabled`.
 ///
 /// Toggles whether or not the constraint is enabled.
@@ -414,10 +470,10 @@ pub fn set_color(instance: PrismaticConstraint, value: BrickColor) -> PrismaticC
 /// Roblox: `Constraint.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Enabled
-@target(luau)
 @luau.property("Enabled")
 pub fn get_enabled(instance: PrismaticConstraint) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Constraint.Enabled`.
 ///
 /// Toggles whether or not the constraint is enabled.
@@ -425,10 +481,13 @@ pub fn get_enabled(instance: PrismaticConstraint) -> Bool
 /// Roblox: `Constraint.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Enabled
-@target(luau)
 @luau.set_property("Enabled")
-pub fn set_enabled(instance: PrismaticConstraint, value: Bool) -> PrismaticConstraint
+pub fn set_enabled(
+  instance: PrismaticConstraint,
+  value: Bool,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `Constraint.Visible`.
 ///
 /// Toggles the constraint's visibility.
@@ -436,10 +495,10 @@ pub fn set_enabled(instance: PrismaticConstraint, value: Bool) -> PrismaticConst
 /// Roblox: `Constraint.Visible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Visible
-@target(luau)
 @luau.property("Visible")
 pub fn get_visible(instance: PrismaticConstraint) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Constraint.Visible`.
 ///
 /// Toggles the constraint's visibility.
@@ -447,10 +506,13 @@ pub fn get_visible(instance: PrismaticConstraint) -> Bool
 /// Roblox: `Constraint.Visible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Visible
-@target(luau)
 @luau.set_property("Visible")
-pub fn set_visible(instance: PrismaticConstraint, value: Bool) -> PrismaticConstraint
+pub fn set_visible(
+  instance: PrismaticConstraint,
+  value: Bool,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -458,10 +520,10 @@ pub fn set_visible(instance: PrismaticConstraint, value: Bool) -> PrismaticConst
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: PrismaticConstraint) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -469,10 +531,13 @@ pub fn get_archivable(instance: PrismaticConstraint) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
-pub fn set_archivable(instance: PrismaticConstraint, value: Bool) -> PrismaticConstraint
+pub fn set_archivable(
+  instance: PrismaticConstraint,
+  value: Bool,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -480,10 +545,10 @@ pub fn set_archivable(instance: PrismaticConstraint, value: Bool) -> PrismaticCo
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: PrismaticConstraint) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -491,10 +556,13 @@ pub fn get_capabilities(instance: PrismaticConstraint) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: PrismaticConstraint, value: SecurityCapabilities) -> PrismaticConstraint
+pub fn set_capabilities(
+  instance: PrismaticConstraint,
+  value: SecurityCapabilities,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -502,10 +570,10 @@ pub fn set_capabilities(instance: PrismaticConstraint, value: SecurityCapabiliti
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: PrismaticConstraint) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -513,10 +581,13 @@ pub fn get_name(instance: PrismaticConstraint) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
-pub fn set_name(instance: PrismaticConstraint, value: String) -> PrismaticConstraint
+pub fn set_name(
+  instance: PrismaticConstraint,
+  value: String,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -525,10 +596,10 @@ pub fn set_name(instance: PrismaticConstraint, value: String) -> PrismaticConstr
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: PrismaticConstraint) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -537,10 +608,13 @@ pub fn get_parent(instance: PrismaticConstraint) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
-pub fn set_parent(instance: PrismaticConstraint, value: parent) -> PrismaticConstraint
+pub fn set_parent(
+  instance: PrismaticConstraint,
+  value: parent,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -549,10 +623,10 @@ pub fn set_parent(instance: PrismaticConstraint, value: parent) -> PrismaticCons
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: PrismaticConstraint) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -561,10 +635,10 @@ pub fn get_roblox_locked(instance: PrismaticConstraint) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: PrismaticConstraint) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -573,20 +647,23 @@ pub fn get_sandboxed(instance: PrismaticConstraint) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
-pub fn set_sandboxed(instance: PrismaticConstraint, value: Bool) -> PrismaticConstraint
+pub fn set_sandboxed(
+  instance: PrismaticConstraint,
+  value: Bool,
+) -> PrismaticConstraint
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: PrismaticConstraint) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -595,10 +672,10 @@ pub fn get_source_asset_id(instance: PrismaticConstraint) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: PrismaticConstraint) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -607,10 +684,10 @@ pub fn get_unique_id(instance: PrismaticConstraint) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: PrismaticConstraint, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -619,10 +696,10 @@ pub fn add_tag(instance: PrismaticConstraint, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: PrismaticConstraint) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -631,10 +708,10 @@ pub fn clear_all_children(instance: PrismaticConstraint) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: PrismaticConstraint) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -643,10 +720,10 @@ pub fn clone(instance: PrismaticConstraint) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: PrismaticConstraint) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -659,10 +736,13 @@ pub fn destroy_instance(instance: PrismaticConstraint) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: PrismaticConstraint, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: PrismaticConstraint,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -675,10 +755,13 @@ pub fn find_first_ancestor(instance: PrismaticConstraint, name: String) -> Optio
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: PrismaticConstraint, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: PrismaticConstraint,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -691,10 +774,13 @@ pub fn find_first_ancestor_of_class(instance: PrismaticConstraint, class_name: S
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: PrismaticConstraint, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: PrismaticConstraint,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -708,10 +794,14 @@ pub fn find_first_ancestor_which_is_a(instance: PrismaticConstraint, class_name:
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: PrismaticConstraint, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: PrismaticConstraint,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -724,10 +814,13 @@ pub fn find_first_child(instance: PrismaticConstraint, name: String, recursive: 
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: PrismaticConstraint, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: PrismaticConstraint,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -741,10 +834,14 @@ pub fn find_first_child_of_class(instance: PrismaticConstraint, class_name: Stri
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: PrismaticConstraint, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: PrismaticConstraint,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -757,10 +854,13 @@ pub fn find_first_child_which_is_a(instance: PrismaticConstraint, class_name: St
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: PrismaticConstraint, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: PrismaticConstraint,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -772,10 +872,10 @@ pub fn find_first_descendant(instance: PrismaticConstraint, name: String) -> Opt
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: PrismaticConstraint) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -788,10 +888,13 @@ pub fn get_actor(instance: PrismaticConstraint) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
-pub fn get_attribute(instance: PrismaticConstraint, attribute: String) -> Dynamic
+pub fn get_attribute(
+  instance: PrismaticConstraint,
+  attribute: String,
+) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -804,10 +907,13 @@ pub fn get_attribute(instance: PrismaticConstraint, attribute: String) -> Dynami
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: PrismaticConstraint, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: PrismaticConstraint,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -820,10 +926,10 @@ pub fn get_attribute_changed_signal(instance: PrismaticConstraint, attribute: St
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: PrismaticConstraint) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -835,10 +941,10 @@ pub fn get_attributes(instance: PrismaticConstraint) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: PrismaticConstraint) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -851,10 +957,10 @@ pub fn get_children(instance: PrismaticConstraint) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: PrismaticConstraint) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -866,10 +972,10 @@ pub fn get_descendants(instance: PrismaticConstraint) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: PrismaticConstraint) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -883,10 +989,14 @@ pub fn get_full_name(instance: PrismaticConstraint) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: PrismaticConstraint, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: PrismaticConstraint,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -897,10 +1007,13 @@ pub fn get_styled(instance: PrismaticConstraint, name: String, selector: Option(
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: PrismaticConstraint, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: PrismaticConstraint,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -909,10 +1022,10 @@ pub fn get_styled_property_changed_signal(instance: PrismaticConstraint, propert
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: PrismaticConstraint) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -921,10 +1034,10 @@ pub fn get_tags(instance: PrismaticConstraint) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: PrismaticConstraint, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -937,10 +1050,13 @@ pub fn has_tag(instance: PrismaticConstraint, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
-pub fn is_ancestor_of(instance: PrismaticConstraint, descendant: Instance) -> Bool
+pub fn is_ancestor_of(
+  instance: PrismaticConstraint,
+  descendant: Instance,
+) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -953,10 +1069,13 @@ pub fn is_ancestor_of(instance: PrismaticConstraint, descendant: Instance) -> Bo
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
-pub fn is_descendant_of(instance: PrismaticConstraint, ancestor: Instance) -> Bool
+pub fn is_descendant_of(
+  instance: PrismaticConstraint,
+  ancestor: Instance,
+) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -969,10 +1088,13 @@ pub fn is_descendant_of(instance: PrismaticConstraint, ancestor: Instance) -> Bo
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
-pub fn is_property_modified(instance: PrismaticConstraint, property: String) -> Bool
+pub fn is_property_modified(
+  instance: PrismaticConstraint,
+  property: String,
+) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -984,10 +1106,13 @@ pub fn is_property_modified(instance: PrismaticConstraint, property: String) -> 
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: PrismaticConstraint, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: PrismaticConstraint,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -996,10 +1121,10 @@ pub fn query_descendants(instance: PrismaticConstraint, selector: String) -> Lis
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: PrismaticConstraint, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -1009,10 +1134,13 @@ pub fn remove_tag(instance: PrismaticConstraint, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: PrismaticConstraint, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: PrismaticConstraint,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -1023,10 +1151,14 @@ pub fn reset_property_to_default(instance: PrismaticConstraint, property: String
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: PrismaticConstraint, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: PrismaticConstraint,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -1041,19 +1173,25 @@ pub fn set_attribute(instance: PrismaticConstraint, attribute: String, value: Dy
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: PrismaticConstraint, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: PrismaticConstraint,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: PrismaticConstraint) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: PrismaticConstraint,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -1061,19 +1199,24 @@ pub fn ancestry_changed(instance: PrismaticConstraint) -> RBXScriptSignal(fn(Ins
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: PrismaticConstraint, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: PrismaticConstraint,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: PrismaticConstraint) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: PrismaticConstraint,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -1081,19 +1224,24 @@ pub fn attribute_changed(instance: PrismaticConstraint) -> RBXScriptSignal(fn(St
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: PrismaticConstraint, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: PrismaticConstraint,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: PrismaticConstraint) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: PrismaticConstraint,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -1101,19 +1249,24 @@ pub fn child_added(instance: PrismaticConstraint) -> RBXScriptSignal(fn(Instance
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: PrismaticConstraint, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: PrismaticConstraint,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: PrismaticConstraint) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: PrismaticConstraint,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -1121,19 +1274,24 @@ pub fn child_removed(instance: PrismaticConstraint) -> RBXScriptSignal(fn(Instan
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: PrismaticConstraint, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: PrismaticConstraint,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: PrismaticConstraint) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: PrismaticConstraint,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -1141,19 +1299,24 @@ pub fn descendant_added(instance: PrismaticConstraint) -> RBXScriptSignal(fn(Ins
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: PrismaticConstraint, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: PrismaticConstraint,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: PrismaticConstraint) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: PrismaticConstraint,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -1161,19 +1324,22 @@ pub fn descendant_removing(instance: PrismaticConstraint) -> RBXScriptSignal(fn(
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: PrismaticConstraint, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: PrismaticConstraint,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: PrismaticConstraint) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1181,19 +1347,24 @@ pub fn destroying(instance: PrismaticConstraint) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: PrismaticConstraint, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: PrismaticConstraint,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: PrismaticConstraint) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: PrismaticConstraint,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1201,10 +1372,13 @@ pub fn styled_properties_changed(instance: PrismaticConstraint) -> RBXScriptSign
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: PrismaticConstraint, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: PrismaticConstraint,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1213,10 +1387,10 @@ pub fn on_styled_properties_changed(instance: PrismaticConstraint, callback: fn(
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: PrismaticConstraint) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1229,10 +1403,13 @@ pub fn get_class_name(instance: PrismaticConstraint) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: PrismaticConstraint, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: PrismaticConstraint,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1246,19 +1423,21 @@ pub fn get_property_changed_signal(instance: PrismaticConstraint, property: Stri
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: PrismaticConstraint, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
-pub fn changed(instance: PrismaticConstraint) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn changed(
+  instance: PrismaticConstraint,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1266,12 +1445,31 @@ pub fn changed(instance: PrismaticConstraint) -> RBXScriptSignal(fn(String) -> N
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: PrismaticConstraint, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: PrismaticConstraint,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: BrickColor, _: Attachment, _: ActuatorType, _: PrismaticConstraint, _: SlidingBallConstraint, _: Constraint, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: BrickColor,
+  _: Attachment,
+  _: ActuatorType,
+  _: PrismaticConstraint,
+  _: SlidingBallConstraint,
+  _: Constraint,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

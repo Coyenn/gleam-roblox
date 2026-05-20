@@ -1,31 +1,37 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type ActuatorRelativeTo, type Attachment, type BrickColor, type Constraint, type ForceLimitMode, type Instance, type LinearVelocity, type Object, type OptionDouble, type OptionInt64, type SecurityCapabilities, type UniqueId, type Vector2, type Vector3, type VelocityConstraintMode}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type ActuatorRelativeTo, type Attachment, type BrickColor,
+  type Constraint, type ForceLimitMode, type Instance, type LinearVelocity,
+  type Object, type OptionDouble, type OptionInt64, type SecurityCapabilities,
+  type UniqueId, type Vector2, type Vector3, type VelocityConstraintMode,
+}
 
+@target(luau)
 /// Creates a new Roblox `LinearVelocity` instance.
 ///
 /// Roblox: `Instance.new("LinearVelocity")`
-@target(luau)
 @luau.global("Instance.new(\"LinearVelocity\")")
 pub fn new() -> LinearVelocity
 
-/// Treats `LinearVelocity` as its Roblox ancestor `Constraint`.
 @target(luau)
+/// Treats `LinearVelocity` as its Roblox ancestor `Constraint`.
 @luau.global("(function(x) return x end)")
 pub fn as_constraint(instance: LinearVelocity) -> Constraint
 
-/// Treats `LinearVelocity` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `LinearVelocity` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: LinearVelocity) -> Instance
 
-/// Treats `LinearVelocity` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `LinearVelocity` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: LinearVelocity) -> Object
 
+@target(luau)
 /// Gets Roblox property `LinearVelocity.ForceLimitMode`.
 ///
 /// Determines how the constraint force will be limited.
@@ -33,10 +39,10 @@ pub fn as_object(instance: LinearVelocity) -> Object
 /// Roblox: `LinearVelocity.ForceLimitMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#ForceLimitMode
-@target(luau)
 @luau.property("ForceLimitMode")
 pub fn get_force_limit_mode(instance: LinearVelocity) -> ForceLimitMode
 
+@target(luau)
 /// Sets Roblox property `LinearVelocity.ForceLimitMode`.
 ///
 /// Determines how the constraint force will be limited.
@@ -44,10 +50,13 @@ pub fn get_force_limit_mode(instance: LinearVelocity) -> ForceLimitMode
 /// Roblox: `LinearVelocity.ForceLimitMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#ForceLimitMode
-@target(luau)
 @luau.set_property("ForceLimitMode")
-pub fn set_force_limit_mode(instance: LinearVelocity, value: ForceLimitMode) -> LinearVelocity
+pub fn set_force_limit_mode(
+  instance: LinearVelocity,
+  value: ForceLimitMode,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `LinearVelocity.ForceLimitsEnabled`.
 ///
 /// Determines if the constraint force will be limited or if the physics solver can apply an unlimited force to achieve the target velocity.
@@ -55,10 +64,10 @@ pub fn set_force_limit_mode(instance: LinearVelocity, value: ForceLimitMode) -> 
 /// Roblox: `LinearVelocity.ForceLimitsEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#ForceLimitsEnabled
-@target(luau)
 @luau.property("ForceLimitsEnabled")
 pub fn get_force_limits_enabled(instance: LinearVelocity) -> Bool
 
+@target(luau)
 /// Sets Roblox property `LinearVelocity.ForceLimitsEnabled`.
 ///
 /// Determines if the constraint force will be limited or if the physics solver can apply an unlimited force to achieve the target velocity.
@@ -66,10 +75,13 @@ pub fn get_force_limits_enabled(instance: LinearVelocity) -> Bool
 /// Roblox: `LinearVelocity.ForceLimitsEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#ForceLimitsEnabled
-@target(luau)
 @luau.set_property("ForceLimitsEnabled")
-pub fn set_force_limits_enabled(instance: LinearVelocity, value: Bool) -> LinearVelocity
+pub fn set_force_limits_enabled(
+  instance: LinearVelocity,
+  value: Bool,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `LinearVelocity.LineDirection`.
 ///
 /// The normalized Vector3 direction for constraining the velocity along a line.
@@ -77,10 +89,10 @@ pub fn set_force_limits_enabled(instance: LinearVelocity, value: Bool) -> Linear
 /// Roblox: `LinearVelocity.LineDirection`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#LineDirection
-@target(luau)
 @luau.property("LineDirection")
 pub fn get_line_direction(instance: LinearVelocity) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `LinearVelocity.LineDirection`.
 ///
 /// The normalized Vector3 direction for constraining the velocity along a line.
@@ -88,10 +100,13 @@ pub fn get_line_direction(instance: LinearVelocity) -> Vector3
 /// Roblox: `LinearVelocity.LineDirection`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#LineDirection
-@target(luau)
 @luau.set_property("LineDirection")
-pub fn set_line_direction(instance: LinearVelocity, value: Vector3) -> LinearVelocity
+pub fn set_line_direction(
+  instance: LinearVelocity,
+  value: Vector3,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `LinearVelocity.LineVelocity`.
 ///
 /// Float value of the velocity when VelocityConstraintMode is set to Line.
@@ -99,10 +114,10 @@ pub fn set_line_direction(instance: LinearVelocity, value: Vector3) -> LinearVel
 /// Roblox: `LinearVelocity.LineVelocity`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#LineVelocity
-@target(luau)
 @luau.property("LineVelocity")
 pub fn get_line_velocity(instance: LinearVelocity) -> Float
 
+@target(luau)
 /// Sets Roblox property `LinearVelocity.LineVelocity`.
 ///
 /// Float value of the velocity when VelocityConstraintMode is set to Line.
@@ -110,10 +125,13 @@ pub fn get_line_velocity(instance: LinearVelocity) -> Float
 /// Roblox: `LinearVelocity.LineVelocity`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#LineVelocity
-@target(luau)
 @luau.set_property("LineVelocity")
-pub fn set_line_velocity(instance: LinearVelocity, value: Float) -> LinearVelocity
+pub fn set_line_velocity(
+  instance: LinearVelocity,
+  value: Float,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `LinearVelocity.MaxAxesForce`.
 ///
 /// Maximum force along each axis that the constraint can apply to achieve the vector velocity. Only used if ForceLimitsEnabled is true, ForceLimitMode is PerAxis, and VelocityConstraintMode is Vector.
@@ -121,10 +139,10 @@ pub fn set_line_velocity(instance: LinearVelocity, value: Float) -> LinearVeloci
 /// Roblox: `LinearVelocity.MaxAxesForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#MaxAxesForce
-@target(luau)
 @luau.property("MaxAxesForce")
 pub fn get_max_axes_force(instance: LinearVelocity) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `LinearVelocity.MaxAxesForce`.
 ///
 /// Maximum force along each axis that the constraint can apply to achieve the vector velocity. Only used if ForceLimitsEnabled is true, ForceLimitMode is PerAxis, and VelocityConstraintMode is Vector.
@@ -132,10 +150,13 @@ pub fn get_max_axes_force(instance: LinearVelocity) -> Vector3
 /// Roblox: `LinearVelocity.MaxAxesForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#MaxAxesForce
-@target(luau)
 @luau.set_property("MaxAxesForce")
-pub fn set_max_axes_force(instance: LinearVelocity, value: Vector3) -> LinearVelocity
+pub fn set_max_axes_force(
+  instance: LinearVelocity,
+  value: Vector3,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `LinearVelocity.MaxForce`.
 ///
 /// Maximum magnitude of the force vector the constraint can apply.
@@ -143,10 +164,10 @@ pub fn set_max_axes_force(instance: LinearVelocity, value: Vector3) -> LinearVel
 /// Roblox: `LinearVelocity.MaxForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#MaxForce
-@target(luau)
 @luau.property("MaxForce")
 pub fn get_max_force(instance: LinearVelocity) -> Float
 
+@target(luau)
 /// Sets Roblox property `LinearVelocity.MaxForce`.
 ///
 /// Maximum magnitude of the force vector the constraint can apply.
@@ -154,10 +175,10 @@ pub fn get_max_force(instance: LinearVelocity) -> Float
 /// Roblox: `LinearVelocity.MaxForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#MaxForce
-@target(luau)
 @luau.set_property("MaxForce")
 pub fn set_max_force(instance: LinearVelocity, value: Float) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `LinearVelocity.MaxPlanarAxesForce`.
 ///
 /// Maximum force along each axis that the constraint can apply to achieve the plane velocity. Only used if ForceLimitsEnabled is true, ForceLimitMode is PerAxis, and VelocityConstraintMode is Plane.
@@ -165,10 +186,10 @@ pub fn set_max_force(instance: LinearVelocity, value: Float) -> LinearVelocity
 /// Roblox: `LinearVelocity.MaxPlanarAxesForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#MaxPlanarAxesForce
-@target(luau)
 @luau.property("MaxPlanarAxesForce")
 pub fn get_max_planar_axes_force(instance: LinearVelocity) -> Vector2
 
+@target(luau)
 /// Sets Roblox property `LinearVelocity.MaxPlanarAxesForce`.
 ///
 /// Maximum force along each axis that the constraint can apply to achieve the plane velocity. Only used if ForceLimitsEnabled is true, ForceLimitMode is PerAxis, and VelocityConstraintMode is Plane.
@@ -176,10 +197,13 @@ pub fn get_max_planar_axes_force(instance: LinearVelocity) -> Vector2
 /// Roblox: `LinearVelocity.MaxPlanarAxesForce`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#MaxPlanarAxesForce
-@target(luau)
 @luau.set_property("MaxPlanarAxesForce")
-pub fn set_max_planar_axes_force(instance: LinearVelocity, value: Vector2) -> LinearVelocity
+pub fn set_max_planar_axes_force(
+  instance: LinearVelocity,
+  value: Vector2,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `LinearVelocity.PlaneVelocity`.
 ///
 /// Vector2 value of the velocity in each tangent direction of the plane.
@@ -187,10 +211,10 @@ pub fn set_max_planar_axes_force(instance: LinearVelocity, value: Vector2) -> Li
 /// Roblox: `LinearVelocity.PlaneVelocity`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#PlaneVelocity
-@target(luau)
 @luau.property("PlaneVelocity")
 pub fn get_plane_velocity(instance: LinearVelocity) -> Vector2
 
+@target(luau)
 /// Sets Roblox property `LinearVelocity.PlaneVelocity`.
 ///
 /// Vector2 value of the velocity in each tangent direction of the plane.
@@ -198,10 +222,13 @@ pub fn get_plane_velocity(instance: LinearVelocity) -> Vector2
 /// Roblox: `LinearVelocity.PlaneVelocity`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#PlaneVelocity
-@target(luau)
 @luau.set_property("PlaneVelocity")
-pub fn set_plane_velocity(instance: LinearVelocity, value: Vector2) -> LinearVelocity
+pub fn set_plane_velocity(
+  instance: LinearVelocity,
+  value: Vector2,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `LinearVelocity.PrimaryTangentAxis`.
 ///
 /// The primary axis in the plane, when VelocityConstraintMode is set to Plane.
@@ -209,10 +236,10 @@ pub fn set_plane_velocity(instance: LinearVelocity, value: Vector2) -> LinearVel
 /// Roblox: `LinearVelocity.PrimaryTangentAxis`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#PrimaryTangentAxis
-@target(luau)
 @luau.property("PrimaryTangentAxis")
 pub fn get_primary_tangent_axis(instance: LinearVelocity) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `LinearVelocity.PrimaryTangentAxis`.
 ///
 /// The primary axis in the plane, when VelocityConstraintMode is set to Plane.
@@ -220,28 +247,34 @@ pub fn get_primary_tangent_axis(instance: LinearVelocity) -> Vector3
 /// Roblox: `LinearVelocity.PrimaryTangentAxis`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#PrimaryTangentAxis
-@target(luau)
 @luau.set_property("PrimaryTangentAxis")
-pub fn set_primary_tangent_axis(instance: LinearVelocity, value: Vector3) -> LinearVelocity
+pub fn set_primary_tangent_axis(
+  instance: LinearVelocity,
+  value: Vector3,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `LinearVelocity.ReactionForceEnabled`.
 ///
 /// Roblox: `LinearVelocity.ReactionForceEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#ReactionForceEnabled
-@target(luau)
 @luau.property("ReactionForceEnabled")
 pub fn get_reaction_force_enabled(instance: LinearVelocity) -> Bool
 
+@target(luau)
 /// Sets Roblox property `LinearVelocity.ReactionForceEnabled`.
 ///
 /// Roblox: `LinearVelocity.ReactionForceEnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#ReactionForceEnabled
-@target(luau)
 @luau.set_property("ReactionForceEnabled")
-pub fn set_reaction_force_enabled(instance: LinearVelocity, value: Bool) -> LinearVelocity
+pub fn set_reaction_force_enabled(
+  instance: LinearVelocity,
+  value: Bool,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `LinearVelocity.RelativeTo`.
 ///
 /// Sets the ActuatorRelativeTo property for the constraint.
@@ -249,10 +282,10 @@ pub fn set_reaction_force_enabled(instance: LinearVelocity, value: Bool) -> Line
 /// Roblox: `LinearVelocity.RelativeTo`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#RelativeTo
-@target(luau)
 @luau.property("RelativeTo")
 pub fn get_relative_to(instance: LinearVelocity) -> ActuatorRelativeTo
 
+@target(luau)
 /// Sets Roblox property `LinearVelocity.RelativeTo`.
 ///
 /// Sets the ActuatorRelativeTo property for the constraint.
@@ -260,10 +293,13 @@ pub fn get_relative_to(instance: LinearVelocity) -> ActuatorRelativeTo
 /// Roblox: `LinearVelocity.RelativeTo`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#RelativeTo
-@target(luau)
 @luau.set_property("RelativeTo")
-pub fn set_relative_to(instance: LinearVelocity, value: ActuatorRelativeTo) -> LinearVelocity
+pub fn set_relative_to(
+  instance: LinearVelocity,
+  value: ActuatorRelativeTo,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `LinearVelocity.SecondaryTangentAxis`.
 ///
 /// The secondary axis in the plane, when VelocityConstraintMode is set to Plane.
@@ -271,10 +307,10 @@ pub fn set_relative_to(instance: LinearVelocity, value: ActuatorRelativeTo) -> L
 /// Roblox: `LinearVelocity.SecondaryTangentAxis`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#SecondaryTangentAxis
-@target(luau)
 @luau.property("SecondaryTangentAxis")
 pub fn get_secondary_tangent_axis(instance: LinearVelocity) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `LinearVelocity.SecondaryTangentAxis`.
 ///
 /// The secondary axis in the plane, when VelocityConstraintMode is set to Plane.
@@ -282,10 +318,13 @@ pub fn get_secondary_tangent_axis(instance: LinearVelocity) -> Vector3
 /// Roblox: `LinearVelocity.SecondaryTangentAxis`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#SecondaryTangentAxis
-@target(luau)
 @luau.set_property("SecondaryTangentAxis")
-pub fn set_secondary_tangent_axis(instance: LinearVelocity, value: Vector3) -> LinearVelocity
+pub fn set_secondary_tangent_axis(
+  instance: LinearVelocity,
+  value: Vector3,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `LinearVelocity.VectorVelocity`.
 ///
 /// Vector3 velocity value when VelocityConstraintMode is set to Vector.
@@ -293,10 +332,10 @@ pub fn set_secondary_tangent_axis(instance: LinearVelocity, value: Vector3) -> L
 /// Roblox: `LinearVelocity.VectorVelocity`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#VectorVelocity
-@target(luau)
 @luau.property("VectorVelocity")
 pub fn get_vector_velocity(instance: LinearVelocity) -> Vector3
 
+@target(luau)
 /// Sets Roblox property `LinearVelocity.VectorVelocity`.
 ///
 /// Vector3 velocity value when VelocityConstraintMode is set to Vector.
@@ -304,10 +343,13 @@ pub fn get_vector_velocity(instance: LinearVelocity) -> Vector3
 /// Roblox: `LinearVelocity.VectorVelocity`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#VectorVelocity
-@target(luau)
 @luau.set_property("VectorVelocity")
-pub fn set_vector_velocity(instance: LinearVelocity, value: Vector3) -> LinearVelocity
+pub fn set_vector_velocity(
+  instance: LinearVelocity,
+  value: Vector3,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `LinearVelocity.VelocityConstraintMode`.
 ///
 /// The mode of the constraint.
@@ -315,10 +357,12 @@ pub fn set_vector_velocity(instance: LinearVelocity, value: Vector3) -> LinearVe
 /// Roblox: `LinearVelocity.VelocityConstraintMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#VelocityConstraintMode
-@target(luau)
 @luau.property("VelocityConstraintMode")
-pub fn get_velocity_constraint_mode(instance: LinearVelocity) -> VelocityConstraintMode
+pub fn get_velocity_constraint_mode(
+  instance: LinearVelocity,
+) -> VelocityConstraintMode
 
+@target(luau)
 /// Sets Roblox property `LinearVelocity.VelocityConstraintMode`.
 ///
 /// The mode of the constraint.
@@ -326,10 +370,13 @@ pub fn get_velocity_constraint_mode(instance: LinearVelocity) -> VelocityConstra
 /// Roblox: `LinearVelocity.VelocityConstraintMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/LinearVelocity#VelocityConstraintMode
-@target(luau)
 @luau.set_property("VelocityConstraintMode")
-pub fn set_velocity_constraint_mode(instance: LinearVelocity, value: VelocityConstraintMode) -> LinearVelocity
+pub fn set_velocity_constraint_mode(
+  instance: LinearVelocity,
+  value: VelocityConstraintMode,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `Constraint.Active`.
 ///
 /// Indicates if the constraint is currently active in the world.
@@ -338,10 +385,10 @@ pub fn set_velocity_constraint_mode(instance: LinearVelocity, value: VelocityCon
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Active
-@target(luau)
 @luau.property("Active")
 pub fn get_active(instance: LinearVelocity) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Constraint.Attachment0`.
 ///
 /// The Attachment that is connected to Constraint.Attachment1.
@@ -349,10 +396,10 @@ pub fn get_active(instance: LinearVelocity) -> Bool
 /// Roblox: `Constraint.Attachment0`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Attachment0
-@target(luau)
 @luau.property("Attachment0")
 pub fn get_attachment0(instance: LinearVelocity) -> Attachment
 
+@target(luau)
 /// Sets Roblox property `Constraint.Attachment0`.
 ///
 /// The Attachment that is connected to Constraint.Attachment1.
@@ -360,10 +407,13 @@ pub fn get_attachment0(instance: LinearVelocity) -> Attachment
 /// Roblox: `Constraint.Attachment0`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Attachment0
-@target(luau)
 @luau.set_property("Attachment0")
-pub fn set_attachment0(instance: LinearVelocity, value: Attachment) -> LinearVelocity
+pub fn set_attachment0(
+  instance: LinearVelocity,
+  value: Attachment,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `Constraint.Attachment1`.
 ///
 /// The Attachment that is connected to Constraint.Attachment0.
@@ -371,10 +421,10 @@ pub fn set_attachment0(instance: LinearVelocity, value: Attachment) -> LinearVel
 /// Roblox: `Constraint.Attachment1`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Attachment1
-@target(luau)
 @luau.property("Attachment1")
 pub fn get_attachment1(instance: LinearVelocity) -> Attachment
 
+@target(luau)
 /// Sets Roblox property `Constraint.Attachment1`.
 ///
 /// The Attachment that is connected to Constraint.Attachment0.
@@ -382,10 +432,13 @@ pub fn get_attachment1(instance: LinearVelocity) -> Attachment
 /// Roblox: `Constraint.Attachment1`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Attachment1
-@target(luau)
 @luau.set_property("Attachment1")
-pub fn set_attachment1(instance: LinearVelocity, value: Attachment) -> LinearVelocity
+pub fn set_attachment1(
+  instance: LinearVelocity,
+  value: Attachment,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `Constraint.Color`.
 ///
 /// The color of the constraint.
@@ -393,10 +446,10 @@ pub fn set_attachment1(instance: LinearVelocity, value: Attachment) -> LinearVel
 /// Roblox: `Constraint.Color`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Color
-@target(luau)
 @luau.property("Color")
 pub fn get_color(instance: LinearVelocity) -> BrickColor
 
+@target(luau)
 /// Sets Roblox property `Constraint.Color`.
 ///
 /// The color of the constraint.
@@ -404,10 +457,10 @@ pub fn get_color(instance: LinearVelocity) -> BrickColor
 /// Roblox: `Constraint.Color`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Color
-@target(luau)
 @luau.set_property("Color")
 pub fn set_color(instance: LinearVelocity, value: BrickColor) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `Constraint.Enabled`.
 ///
 /// Toggles whether or not the constraint is enabled.
@@ -415,10 +468,10 @@ pub fn set_color(instance: LinearVelocity, value: BrickColor) -> LinearVelocity
 /// Roblox: `Constraint.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Enabled
-@target(luau)
 @luau.property("Enabled")
 pub fn get_enabled(instance: LinearVelocity) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Constraint.Enabled`.
 ///
 /// Toggles whether or not the constraint is enabled.
@@ -426,10 +479,10 @@ pub fn get_enabled(instance: LinearVelocity) -> Bool
 /// Roblox: `Constraint.Enabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Enabled
-@target(luau)
 @luau.set_property("Enabled")
 pub fn set_enabled(instance: LinearVelocity, value: Bool) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `Constraint.Visible`.
 ///
 /// Toggles the constraint's visibility.
@@ -437,10 +490,10 @@ pub fn set_enabled(instance: LinearVelocity, value: Bool) -> LinearVelocity
 /// Roblox: `Constraint.Visible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Visible
-@target(luau)
 @luau.property("Visible")
 pub fn get_visible(instance: LinearVelocity) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Constraint.Visible`.
 ///
 /// Toggles the constraint's visibility.
@@ -448,10 +501,10 @@ pub fn get_visible(instance: LinearVelocity) -> Bool
 /// Roblox: `Constraint.Visible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Constraint#Visible
-@target(luau)
 @luau.set_property("Visible")
 pub fn set_visible(instance: LinearVelocity, value: Bool) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -459,10 +512,10 @@ pub fn set_visible(instance: LinearVelocity, value: Bool) -> LinearVelocity
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: LinearVelocity) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -470,10 +523,10 @@ pub fn get_archivable(instance: LinearVelocity) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
 pub fn set_archivable(instance: LinearVelocity, value: Bool) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -481,10 +534,10 @@ pub fn set_archivable(instance: LinearVelocity, value: Bool) -> LinearVelocity
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: LinearVelocity) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -492,10 +545,13 @@ pub fn get_capabilities(instance: LinearVelocity) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: LinearVelocity, value: SecurityCapabilities) -> LinearVelocity
+pub fn set_capabilities(
+  instance: LinearVelocity,
+  value: SecurityCapabilities,
+) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -503,10 +559,10 @@ pub fn set_capabilities(instance: LinearVelocity, value: SecurityCapabilities) -
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: LinearVelocity) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -514,10 +570,10 @@ pub fn get_name(instance: LinearVelocity) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: LinearVelocity, value: String) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -526,10 +582,10 @@ pub fn set_name(instance: LinearVelocity, value: String) -> LinearVelocity
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: LinearVelocity) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -538,10 +594,10 @@ pub fn get_parent(instance: LinearVelocity) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: LinearVelocity, value: parent) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -550,10 +606,10 @@ pub fn set_parent(instance: LinearVelocity, value: parent) -> LinearVelocity
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: LinearVelocity) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -562,10 +618,10 @@ pub fn get_roblox_locked(instance: LinearVelocity) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: LinearVelocity) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -574,20 +630,20 @@ pub fn get_sandboxed(instance: LinearVelocity) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
 pub fn set_sandboxed(instance: LinearVelocity, value: Bool) -> LinearVelocity
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: LinearVelocity) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -596,10 +652,10 @@ pub fn get_source_asset_id(instance: LinearVelocity) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: LinearVelocity) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -608,10 +664,10 @@ pub fn get_unique_id(instance: LinearVelocity) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: LinearVelocity, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -620,10 +676,10 @@ pub fn add_tag(instance: LinearVelocity, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: LinearVelocity) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -632,10 +688,10 @@ pub fn clear_all_children(instance: LinearVelocity) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: LinearVelocity) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -644,10 +700,10 @@ pub fn clone(instance: LinearVelocity) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: LinearVelocity) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -660,10 +716,13 @@ pub fn destroy_instance(instance: LinearVelocity) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: LinearVelocity, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: LinearVelocity,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -676,10 +735,13 @@ pub fn find_first_ancestor(instance: LinearVelocity, name: String) -> Option(Ins
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: LinearVelocity, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: LinearVelocity,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -692,10 +754,13 @@ pub fn find_first_ancestor_of_class(instance: LinearVelocity, class_name: String
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: LinearVelocity, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: LinearVelocity,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -709,10 +774,14 @@ pub fn find_first_ancestor_which_is_a(instance: LinearVelocity, class_name: Stri
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: LinearVelocity, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: LinearVelocity,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -725,10 +794,13 @@ pub fn find_first_child(instance: LinearVelocity, name: String, recursive: Bool)
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: LinearVelocity, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: LinearVelocity,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -742,10 +814,14 @@ pub fn find_first_child_of_class(instance: LinearVelocity, class_name: String) -
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: LinearVelocity, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: LinearVelocity,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -758,10 +834,13 @@ pub fn find_first_child_which_is_a(instance: LinearVelocity, class_name: String,
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: LinearVelocity, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: LinearVelocity,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -773,10 +852,10 @@ pub fn find_first_descendant(instance: LinearVelocity, name: String) -> Option(I
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: LinearVelocity) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -789,10 +868,10 @@ pub fn get_actor(instance: LinearVelocity) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: LinearVelocity, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -805,10 +884,13 @@ pub fn get_attribute(instance: LinearVelocity, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: LinearVelocity, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: LinearVelocity,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -821,10 +903,10 @@ pub fn get_attribute_changed_signal(instance: LinearVelocity, attribute: String)
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: LinearVelocity) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -836,10 +918,10 @@ pub fn get_attributes(instance: LinearVelocity) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: LinearVelocity) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -852,10 +934,10 @@ pub fn get_children(instance: LinearVelocity) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: LinearVelocity) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -867,10 +949,10 @@ pub fn get_descendants(instance: LinearVelocity) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: LinearVelocity) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -884,10 +966,14 @@ pub fn get_full_name(instance: LinearVelocity) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: LinearVelocity, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: LinearVelocity,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -898,10 +984,13 @@ pub fn get_styled(instance: LinearVelocity, name: String, selector: Option(Strin
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: LinearVelocity, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: LinearVelocity,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -910,10 +999,10 @@ pub fn get_styled_property_changed_signal(instance: LinearVelocity, property: St
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: LinearVelocity) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -922,10 +1011,10 @@ pub fn get_tags(instance: LinearVelocity) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: LinearVelocity, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -938,10 +1027,10 @@ pub fn has_tag(instance: LinearVelocity, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: LinearVelocity, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -954,10 +1043,10 @@ pub fn is_ancestor_of(instance: LinearVelocity, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: LinearVelocity, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -970,10 +1059,10 @@ pub fn is_descendant_of(instance: LinearVelocity, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
 pub fn is_property_modified(instance: LinearVelocity, property: String) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -985,10 +1074,13 @@ pub fn is_property_modified(instance: LinearVelocity, property: String) -> Bool
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: LinearVelocity, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: LinearVelocity,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -997,10 +1089,10 @@ pub fn query_descendants(instance: LinearVelocity, selector: String) -> List(Ins
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: LinearVelocity, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -1010,10 +1102,13 @@ pub fn remove_tag(instance: LinearVelocity, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: LinearVelocity, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: LinearVelocity,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -1024,10 +1119,14 @@ pub fn reset_property_to_default(instance: LinearVelocity, property: String) -> 
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: LinearVelocity, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: LinearVelocity,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -1042,19 +1141,25 @@ pub fn set_attribute(instance: LinearVelocity, attribute: String, value: Dynamic
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: LinearVelocity, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: LinearVelocity,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: LinearVelocity) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: LinearVelocity,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -1062,19 +1167,24 @@ pub fn ancestry_changed(instance: LinearVelocity) -> RBXScriptSignal(fn(Instance
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: LinearVelocity, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: LinearVelocity,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: LinearVelocity) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: LinearVelocity,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -1082,19 +1192,24 @@ pub fn attribute_changed(instance: LinearVelocity) -> RBXScriptSignal(fn(String)
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: LinearVelocity, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: LinearVelocity,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: LinearVelocity) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: LinearVelocity,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -1102,19 +1217,24 @@ pub fn child_added(instance: LinearVelocity) -> RBXScriptSignal(fn(Instance) -> 
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: LinearVelocity, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: LinearVelocity,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: LinearVelocity) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: LinearVelocity,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -1122,19 +1242,24 @@ pub fn child_removed(instance: LinearVelocity) -> RBXScriptSignal(fn(Instance) -
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: LinearVelocity, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: LinearVelocity,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: LinearVelocity) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: LinearVelocity,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -1142,19 +1267,24 @@ pub fn descendant_added(instance: LinearVelocity) -> RBXScriptSignal(fn(Instance
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: LinearVelocity, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: LinearVelocity,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: LinearVelocity) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: LinearVelocity,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -1162,19 +1292,22 @@ pub fn descendant_removing(instance: LinearVelocity) -> RBXScriptSignal(fn(Insta
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: LinearVelocity, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: LinearVelocity,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: LinearVelocity) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -1182,19 +1315,24 @@ pub fn destroying(instance: LinearVelocity) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: LinearVelocity, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: LinearVelocity,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: LinearVelocity) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: LinearVelocity,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -1202,10 +1340,13 @@ pub fn styled_properties_changed(instance: LinearVelocity) -> RBXScriptSignal(fn
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: LinearVelocity, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: LinearVelocity,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -1214,10 +1355,10 @@ pub fn on_styled_properties_changed(instance: LinearVelocity, callback: fn() -> 
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: LinearVelocity) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -1230,10 +1371,13 @@ pub fn get_class_name(instance: LinearVelocity) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: LinearVelocity, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: LinearVelocity,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -1247,19 +1391,19 @@ pub fn get_property_changed_signal(instance: LinearVelocity, property: String) -
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: LinearVelocity, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: LinearVelocity) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -1267,12 +1411,34 @@ pub fn changed(instance: LinearVelocity) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: LinearVelocity, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: LinearVelocity,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: BrickColor, _: Attachment, _: VelocityConstraintMode, _: Vector3, _: ActuatorRelativeTo, _: Vector2, _: ForceLimitMode, _: LinearVelocity, _: Constraint, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: BrickColor,
+  _: Attachment,
+  _: VelocityConstraintMode,
+  _: Vector3,
+  _: ActuatorRelativeTo,
+  _: Vector2,
+  _: ForceLimitMode,
+  _: LinearVelocity,
+  _: Constraint,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

@@ -2,26 +2,28 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type TweenStatus}
 
+@target(luau)
 /// The completion status of a GuiObject tween function.
 ///
 /// Roblox: `Enum.TweenStatus`
 /// See: https://create.roblox.com/docs/reference/engine/enums/TweenStatus
-@target(luau)
 @luau.global("Enum.TweenStatus")
 pub fn roblox_enum() -> RobloxEnum(TweenStatus)
 
-/// Roblox enum item `TweenStatus.Canceled`.
 @target(luau)
+/// Roblox enum item `TweenStatus.Canceled`.
 @luau.global("Enum.TweenStatus.Canceled")
 pub fn canceled() -> TweenStatus
 
-/// Roblox enum item `TweenStatus.Completed`.
 @target(luau)
+/// Roblox enum item `TweenStatus.Completed`.
 @luau.global("Enum.TweenStatus.Completed")
 pub fn completed() -> TweenStatus
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(TweenStatus), _: TweenStatus) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(TweenStatus),
+  _: TweenStatus,
+) -> Nil {
   Nil
 }

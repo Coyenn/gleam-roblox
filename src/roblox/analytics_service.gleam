@@ -1,26 +1,31 @@
 // Generated class bindings for Roblox API
-import roblox/option.{type Option}
-import roblox/signal.{type RBXScriptSignal, type RBXScriptConnection}
 import roblox/dynamic.{type Dynamic}
-import roblox/types.{type Actor, type AnalyticsEconomyFlowType, type AnalyticsProgressionType, type AnalyticsService, type Instance, type Object, type OptionDouble, type OptionInt64, type Player, type SecurityCapabilities, type UniqueId}
+import roblox/option.{type Option}
+import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
+import roblox/types.{
+  type Actor, type AnalyticsEconomyFlowType, type AnalyticsProgressionType,
+  type AnalyticsService, type Instance, type Object, type OptionDouble,
+  type OptionInt64, type Player, type SecurityCapabilities, type UniqueId,
+}
 
-/// Treats `AnalyticsService` as its Roblox ancestor `Instance`.
 @target(luau)
+/// Treats `AnalyticsService` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AnalyticsService) -> Instance
 
-/// Treats `AnalyticsService` as its Roblox ancestor `Object`.
 @target(luau)
+/// Treats `AnalyticsService` as its Roblox ancestor `Object`.
 @luau.global("(function(x) return x end)")
 pub fn as_object(instance: AnalyticsService) -> Object
 
+@target(luau)
 /// Roblox: `AnalyticsService.GetDurationLoggerTimestamp`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AnalyticsService#GetDurationLoggerTimestamp
-@target(luau)
 @luau.method("GetDurationLoggerTimestamp")
 pub fn get_duration_logger_timestamp(instance: AnalyticsService) -> Int
 
+@target(luau)
 /// Logs an event used to track custom metrics of a user in experience.
 ///
 /// Roblox: `AnalyticsService.LogCustomEvent`
@@ -33,10 +38,16 @@ pub fn get_duration_logger_timestamp(instance: AnalyticsService) -> Int
 /// - `eventName`: The name of the custom event.
 /// - `value`: The value of the event that will be used in aggregation.
 /// - `customFields`: Optional dictionary of custom fields that will provide breakdowns in Roblox-provided charts. Only specific keys, provided by AnalyticsCustomFieldKeys, will be used for these breakdowns. Limited to 8,000 unique combinations of values across the three custom fields per experience.
-@target(luau)
 @luau.method("LogCustomEvent")
-pub fn log_custom_event(instance: AnalyticsService, player: Player, event_name: String, value: OptionDouble, custom_fields: Dynamic) -> Nil
+pub fn log_custom_event(
+  instance: AnalyticsService,
+  player: Player,
+  event_name: String,
+  value: OptionDouble,
+  custom_fields: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Logs an event used to track player actions related in experience.
 ///
 /// Roblox: `AnalyticsService.LogEconomyEvent`
@@ -53,10 +64,20 @@ pub fn log_custom_event(instance: AnalyticsService, player: Player, event_name: 
 /// - `transactionType`: The type of transaction that occurred. While you're free to use any transaction type, it's recommended to use the provided types from AnalyticsEconomyTransactionType such as "IAP" or "ContextualPurchase" to enable future insights from Roblox tools and charts. Because this field type is a string, you'll need to pass the Name value of the enum. For example Enum.AnalyticsEconomyTransactionType.IAP.Name. Limited to 20 unique types per experience.
 /// - `itemSku`: Optional SKU of the item or bundle being purchased. This is a unique identifier for the item being purchased. Limited to 100 unique SKUs per experience.
 /// - `customFields`: Optional dictionary of custom fields that will provide breakdowns in Roblox-provided charts. Only specific keys, provided by AnalyticsCustomFieldKeys, will be used for these breakdowns. Limited to 8,000 unique combinations of values across the three custom fields per experience.
-@target(luau)
 @luau.method("LogEconomyEvent")
-pub fn log_economy_event(instance: AnalyticsService, player: Player, flow_type: AnalyticsEconomyFlowType, currency_type: String, amount: Float, ending_balance: Float, transaction_type: String, item_sku: String, custom_fields: Dynamic) -> Nil
+pub fn log_economy_event(
+  instance: AnalyticsService,
+  player: Player,
+  flow_type: AnalyticsEconomyFlowType,
+  currency_type: String,
+  amount: Float,
+  ending_balance: Float,
+  transaction_type: String,
+  item_sku: String,
+  custom_fields: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Logs an event used to track user actions stepping through a pre-planned funnel.
 ///
 /// Roblox: `AnalyticsService.LogFunnelStepEvent`
@@ -71,10 +92,18 @@ pub fn log_economy_event(instance: AnalyticsService, player: Player, flow_type: 
 /// - `step`: The step number in the funnel. This should be unique for each step in the funnel. All funnels start at step 1. Limited to steps 1-100. Repeated steps by the same user in the same funnel session, or when funnelSessionId is nil will be ignored. Note that if any steps are skipped, the intermediate steps will be considered completed.
 /// - `stepName`: Optional name of the step in the funnel. This field is only used for display purposes in Roblox-provided charts.
 /// - `customFields`: Optional dictionary of custom fields that will provide breakdowns in Roblox-provided charts. Only specific keys, provided by AnalyticsCustomFieldKeys, will be used for these breakdowns. Limited to 8,000 unique combinations of values across the three custom fields per experience.
-@target(luau)
 @luau.method("LogFunnelStepEvent")
-pub fn log_funnel_step_event(instance: AnalyticsService, player: Player, funnel_name: String, funnel_session_id: String, step: Int, step_name: String, custom_fields: Dynamic) -> Nil
+pub fn log_funnel_step_event(
+  instance: AnalyticsService,
+  player: Player,
+  funnel_name: String,
+  funnel_session_id: String,
+  step: Int,
+  step_name: String,
+  custom_fields: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Logs an event used to track user actions stepping through an onboarding funnel.
 ///
 /// Roblox: `AnalyticsService.LogOnboardingFunnelStepEvent`
@@ -87,10 +116,16 @@ pub fn log_funnel_step_event(instance: AnalyticsService, player: Player, funnel_
 /// - `step`: The step number in the funnel. This should be unique for each step in the funnel. All funnels start at step 1. Limited to steps 1-100. Note that if any steps are skipped, the intermediate steps will be considered completed.
 /// - `stepName`: Optional name of the step in the funnel. This field is only used for display purposes in Roblox-provided charts.
 /// - `customFields`: Optional dictionary of custom fields that will provide breakdowns in Roblox-provided charts. Only specific keys, provided by AnalyticsCustomFieldKeys, will be used for these breakdowns. Limited to 8,000 unique combinations of values across the three custom fields per experience.
-@target(luau)
 @luau.method("LogOnboardingFunnelStepEvent")
-pub fn log_onboarding_funnel_step_event(instance: AnalyticsService, player: Player, step: Int, step_name: String, custom_fields: Dynamic) -> Nil
+pub fn log_onboarding_funnel_step_event(
+  instance: AnalyticsService,
+  player: Player,
+  step: Int,
+  step_name: String,
+  custom_fields: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Logs an event for when a user has completed a level attempt.
 ///
 /// Roblox: `AnalyticsService.LogProgressionCompleteEvent`
@@ -100,10 +135,17 @@ pub fn log_onboarding_funnel_step_event(instance: AnalyticsService, player: Play
 /// Parameters:
 /// - `instance`: Collection of methods that allows you to track how users interact with your experiences.
 /// - `player`: The player who triggered the event.
-@target(luau)
 @luau.method("LogProgressionCompleteEvent")
-pub fn log_progression_complete_event(instance: AnalyticsService, player: Player, progression_path_name: String, level: Int, level_name: String, custom_fields: Dynamic) -> Nil
+pub fn log_progression_complete_event(
+  instance: AnalyticsService,
+  player: Player,
+  progression_path_name: String,
+  level: Int,
+  level_name: String,
+  custom_fields: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Logs an event for when a user has started, completed, or failed a level attempt.
 ///
 /// Roblox: `AnalyticsService.LogProgressionEvent`
@@ -113,10 +155,18 @@ pub fn log_progression_complete_event(instance: AnalyticsService, player: Player
 /// Parameters:
 /// - `instance`: Collection of methods that allows you to track how users interact with your experiences.
 /// - `player`: The player who triggered the event.
-@target(luau)
 @luau.method("LogProgressionEvent")
-pub fn log_progression_event(instance: AnalyticsService, player: Player, progression_path_name: String, status: AnalyticsProgressionType, level: Int, level_name: String, custom_fields: Dynamic) -> Nil
+pub fn log_progression_event(
+  instance: AnalyticsService,
+  player: Player,
+  progression_path_name: String,
+  status: AnalyticsProgressionType,
+  level: Int,
+  level_name: String,
+  custom_fields: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Logs an event for when a user has failed a level attempt.
 ///
 /// Roblox: `AnalyticsService.LogProgressionFailEvent`
@@ -126,10 +176,17 @@ pub fn log_progression_event(instance: AnalyticsService, player: Player, progres
 /// Parameters:
 /// - `instance`: Collection of methods that allows you to track how users interact with your experiences.
 /// - `player`: The user who triggered the event.
-@target(luau)
 @luau.method("LogProgressionFailEvent")
-pub fn log_progression_fail_event(instance: AnalyticsService, player: Player, progression_path_name: String, level: Int, level_name: String, custom_fields: Dynamic) -> Nil
+pub fn log_progression_fail_event(
+  instance: AnalyticsService,
+  player: Player,
+  progression_path_name: String,
+  level: Int,
+  level_name: String,
+  custom_fields: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Logs an event for when a user has started a level attempt.
 ///
 /// Roblox: `AnalyticsService.LogProgressionStartEvent`
@@ -139,10 +196,17 @@ pub fn log_progression_fail_event(instance: AnalyticsService, player: Player, pr
 /// Parameters:
 /// - `instance`: Collection of methods that allows you to track how users interact with your experiences.
 /// - `player`: The player who triggered the event.
-@target(luau)
 @luau.method("LogProgressionStartEvent")
-pub fn log_progression_start_event(instance: AnalyticsService, player: Player, progression_path_name: String, level: Int, level_name: String, custom_fields: Dynamic) -> Nil
+pub fn log_progression_start_event(
+  instance: AnalyticsService,
+  player: Player,
+  progression_path_name: String,
+  level: Int,
+  level_name: String,
+  custom_fields: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns coarse player segment buckets for the current experience.
 ///
 /// Roblox: `AnalyticsService.GetPlayerSegmentsAsync`
@@ -156,10 +220,13 @@ pub fn log_progression_start_event(instance: AnalyticsService, player: Player, p
 ///
 /// Returns:
 /// - A dictionary containing coarse player segment buckets for the current experience.
-@target(luau)
 @luau.method("GetPlayerSegmentsAsync")
-pub fn get_player_segments_async(instance: AnalyticsService, player: Player) -> Dynamic
+pub fn get_player_segments_async(
+  instance: AnalyticsService,
+  player: Player,
+) -> Dynamic
 
+@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -167,10 +234,10 @@ pub fn get_player_segments_async(instance: AnalyticsService, player: Player) -> 
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.property("Archivable")
 pub fn get_archivable(instance: AnalyticsService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -178,10 +245,13 @@ pub fn get_archivable(instance: AnalyticsService) -> Bool
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 @luau.set_property("Archivable")
-pub fn set_archivable(instance: AnalyticsService, value: Bool) -> AnalyticsService
+pub fn set_archivable(
+  instance: AnalyticsService,
+  value: Bool,
+) -> AnalyticsService
 
+@target(luau)
 /// Gets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -189,10 +259,10 @@ pub fn set_archivable(instance: AnalyticsService, value: Bool) -> AnalyticsServi
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.property("Capabilities")
 pub fn get_capabilities(instance: AnalyticsService) -> SecurityCapabilities
 
+@target(luau)
 /// Sets Roblox property `Instance.Capabilities`.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -200,10 +270,13 @@ pub fn get_capabilities(instance: AnalyticsService) -> SecurityCapabilities
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 @luau.set_property("Capabilities")
-pub fn set_capabilities(instance: AnalyticsService, value: SecurityCapabilities) -> AnalyticsService
+pub fn set_capabilities(
+  instance: AnalyticsService,
+  value: SecurityCapabilities,
+) -> AnalyticsService
 
+@target(luau)
 /// Gets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -211,10 +284,10 @@ pub fn set_capabilities(instance: AnalyticsService, value: SecurityCapabilities)
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.property("Name")
 pub fn get_name(instance: AnalyticsService) -> String
 
+@target(luau)
 /// Sets Roblox property `Instance.Name`.
 ///
 /// A non-unique identifier of the Instance.
@@ -222,10 +295,10 @@ pub fn get_name(instance: AnalyticsService) -> String
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 @luau.set_property("Name")
 pub fn set_name(instance: AnalyticsService, value: String) -> AnalyticsService
 
+@target(luau)
 /// Gets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -234,10 +307,10 @@ pub fn set_name(instance: AnalyticsService, value: String) -> AnalyticsService
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.property("Parent")
 pub fn get_parent(instance: AnalyticsService) -> Instance
 
+@target(luau)
 /// Sets Roblox property `Instance.Parent`.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -246,10 +319,10 @@ pub fn get_parent(instance: AnalyticsService) -> Instance
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 @luau.set_property("Parent")
 pub fn set_parent(instance: AnalyticsService, value: parent) -> AnalyticsService
 
+@target(luau)
 /// Gets Roblox property `Instance.RobloxLocked`.
 ///
 /// A deprecated property that used to protect CoreGui objects.
@@ -258,10 +331,10 @@ pub fn set_parent(instance: AnalyticsService, value: parent) -> AnalyticsService
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#RobloxLocked
-@target(luau)
 @luau.property("RobloxLocked")
 pub fn get_roblox_locked(instance: AnalyticsService) -> Bool
 
+@target(luau)
 /// Gets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -270,10 +343,10 @@ pub fn get_roblox_locked(instance: AnalyticsService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.property("Sandboxed")
 pub fn get_sandboxed(instance: AnalyticsService) -> Bool
 
+@target(luau)
 /// Sets Roblox property `Instance.Sandboxed`.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -282,20 +355,23 @@ pub fn get_sandboxed(instance: AnalyticsService) -> Bool
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 @luau.set_property("Sandboxed")
-pub fn set_sandboxed(instance: AnalyticsService, value: Bool) -> AnalyticsService
+pub fn set_sandboxed(
+  instance: AnalyticsService,
+  value: Bool,
+) -> AnalyticsService
 
+@target(luau)
 /// Gets Roblox property `Instance.SourceAssetId`.
 ///
 /// Roblox: `Instance.SourceAssetId`
 /// ThreadSafety: ReadSafe
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
-@target(luau)
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(instance: AnalyticsService) -> OptionInt64
 
+@target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
 ///
 /// A unique identifier for the instance.
@@ -304,10 +380,10 @@ pub fn get_source_asset_id(instance: AnalyticsService) -> OptionInt64
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#UniqueId
-@target(luau)
 @luau.property("UniqueId")
 pub fn get_unique_id(instance: AnalyticsService) -> UniqueId
 
+@target(luau)
 /// Applies a tag to the instance.
 ///
 /// Roblox: `Instance.AddTag`
@@ -316,10 +392,10 @@ pub fn get_unique_id(instance: AnalyticsService) -> UniqueId
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("AddTag")
 pub fn add_tag(instance: AnalyticsService, tag: String) -> Nil
 
+@target(luau)
 /// This method destroys all of an instance's children.
 ///
 /// Roblox: `Instance.ClearAllChildren`
@@ -328,10 +404,10 @@ pub fn add_tag(instance: AnalyticsService, tag: String) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("ClearAllChildren")
 pub fn clear_all_children(instance: AnalyticsService) -> Nil
 
+@target(luau)
 /// Create a copy of an instance and all its descendants, ignoring instances that are not Archivable.
 ///
 /// Roblox: `Instance.Clone`
@@ -340,10 +416,10 @@ pub fn clear_all_children(instance: AnalyticsService) -> Nil
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Clone")
 pub fn clone(instance: AnalyticsService) -> Instance
 
+@target(luau)
 /// Sets the Instance.Parent property to nil, locks the Instance.Parent property, disconnects all connections, and calls Destroy() on all children.
 ///
 /// Roblox: `Instance.Destroy`
@@ -352,10 +428,10 @@ pub fn clone(instance: AnalyticsService) -> Instance
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("Destroy")
 pub fn destroy_instance(instance: AnalyticsService) -> Nil
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Instance.Name is equal to the given name.
 ///
 /// Roblox: `Instance.FindFirstAncestor`
@@ -368,10 +444,13 @@ pub fn destroy_instance(instance: AnalyticsService) -> Nil
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestor")
-pub fn find_first_ancestor(instance: AnalyticsService, name: String) -> Option(Instance)
+pub fn find_first_ancestor(
+  instance: AnalyticsService,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance whose Object.ClassName is equal to the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorOfClass`
@@ -384,10 +463,13 @@ pub fn find_first_ancestor(instance: AnalyticsService, name: String) -> Option(I
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorOfClass")
-pub fn find_first_ancestor_of_class(instance: AnalyticsService, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_of_class(
+  instance: AnalyticsService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first ancestor of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstAncestorWhichIsA`
@@ -400,10 +482,13 @@ pub fn find_first_ancestor_of_class(instance: AnalyticsService, class_name: Stri
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstAncestorWhichIsA")
-pub fn find_first_ancestor_which_is_a(instance: AnalyticsService, class_name: String) -> Option(Instance)
+pub fn find_first_ancestor_which_is_a(
+  instance: AnalyticsService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance found with the given name.
 ///
 /// Roblox: `Instance.FindFirstChild`
@@ -417,10 +502,14 @@ pub fn find_first_ancestor_which_is_a(instance: AnalyticsService, class_name: St
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChild")
-pub fn find_first_child(instance: AnalyticsService, name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child(
+  instance: AnalyticsService,
+  name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance whose ClassName is equal to the given class name.
 ///
 /// Roblox: `Instance.FindFirstChildOfClass`
@@ -433,10 +522,13 @@ pub fn find_first_child(instance: AnalyticsService, name: String, recursive: Boo
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildOfClass")
-pub fn find_first_child_of_class(instance: AnalyticsService, class_name: String) -> Option(Instance)
+pub fn find_first_child_of_class(
+  instance: AnalyticsService,
+  class_name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first child of the Instance for whom Object:IsA() returns true for the given className.
 ///
 /// Roblox: `Instance.FindFirstChildWhichIsA`
@@ -450,10 +542,14 @@ pub fn find_first_child_of_class(instance: AnalyticsService, class_name: String)
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstChildWhichIsA")
-pub fn find_first_child_which_is_a(instance: AnalyticsService, class_name: String, recursive: Bool) -> Option(Instance)
+pub fn find_first_child_which_is_a(
+  instance: AnalyticsService,
+  class_name: String,
+  recursive: Bool,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the first descendant found with the given Instance.Name.
 ///
 /// Roblox: `Instance.FindFirstDescendant`
@@ -466,10 +562,13 @@ pub fn find_first_child_which_is_a(instance: AnalyticsService, class_name: Strin
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("FindFirstDescendant")
-pub fn find_first_descendant(instance: AnalyticsService, name: String) -> Option(Instance)
+pub fn find_first_descendant(
+  instance: AnalyticsService,
+  name: String,
+) -> Option(Instance)
 
+@target(luau)
 /// Returns the Actor associated with the Instance, if any.
 ///
 /// Roblox: `Instance.GetActor`
@@ -481,10 +580,10 @@ pub fn find_first_descendant(instance: AnalyticsService, name: String) -> Option
 ///
 /// Returns:
 /// - The Actor found.
-@target(luau)
 @luau.method("GetActor")
 pub fn get_actor(instance: AnalyticsService) -> Actor
 
+@target(luau)
 /// Returns the value which has been assigned to the given attribute name.
 ///
 /// Roblox: `Instance.GetAttribute`
@@ -497,10 +596,10 @@ pub fn get_actor(instance: AnalyticsService) -> Actor
 ///
 /// Returns:
 /// - The value which has been assigned to the given attribute name. If no attribute has been assigned, nil is returned.
-@target(luau)
 @luau.method("GetAttribute")
 pub fn get_attribute(instance: AnalyticsService, attribute: String) -> Dynamic
 
+@target(luau)
 /// Returns an event that fires when the given attribute changes.
 ///
 /// Roblox: `Instance.GetAttributeChangedSignal`
@@ -513,10 +612,13 @@ pub fn get_attribute(instance: AnalyticsService, attribute: String) -> Dynamic
 ///
 /// Returns:
 /// - An event that fires when the given attribute changes.
-@target(luau)
 @luau.method("GetAttributeChangedSignal")
-pub fn get_attribute_changed_signal(instance: AnalyticsService, attribute: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_attribute_changed_signal(
+  instance: AnalyticsService,
+  attribute: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns a dictionary of the instance's attributes.
 ///
 /// Roblox: `Instance.GetAttributes`
@@ -529,10 +631,10 @@ pub fn get_attribute_changed_signal(instance: AnalyticsService, attribute: Strin
 ///
 /// Returns:
 /// - A dictionary of string → variant pairs for each attribute where the string is the name of the attribute and the variant is a non-nil value.
-@target(luau)
 @luau.method("GetAttributes")
 pub fn get_attributes(instance: AnalyticsService) -> Dynamic
 
+@target(luau)
 /// Returns an array containing all of the instance's children.
 ///
 /// Roblox: `Instance.GetChildren`
@@ -544,10 +646,10 @@ pub fn get_attributes(instance: AnalyticsService) -> Dynamic
 ///
 /// Returns:
 /// - An array containing the instance's children.
-@target(luau)
 @luau.method("GetChildren")
 pub fn get_children(instance: AnalyticsService) -> List(Instance)
 
+@target(luau)
 /// Returns an array containing all of the descendants of the instance.
 ///
 /// Roblox: `Instance.GetDescendants`
@@ -560,10 +662,10 @@ pub fn get_children(instance: AnalyticsService) -> List(Instance)
 ///
 /// Returns:
 /// - An array containing the instance's descendants.
-@target(luau)
 @luau.method("GetDescendants")
 pub fn get_descendants(instance: AnalyticsService) -> List(Instance)
 
+@target(luau)
 /// Returns a string describing the instance's ancestry.
 ///
 /// Roblox: `Instance.GetFullName`
@@ -575,10 +677,10 @@ pub fn get_descendants(instance: AnalyticsService) -> List(Instance)
 ///
 /// Returns:
 /// - The full name of the Instance.
-@target(luau)
 @luau.method("GetFullName")
 pub fn get_full_name(instance: AnalyticsService) -> String
 
+@target(luau)
 /// Returns the styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
 ///
 /// Roblox: `Instance.GetStyled`
@@ -592,10 +694,14 @@ pub fn get_full_name(instance: AnalyticsService) -> String
 ///
 /// Returns:
 /// - The styled or explicitly modified value of the specified property, or else the default property value if it hasn't been styled/modified.
-@target(luau)
 @luau.method("GetStyled")
-pub fn get_styled(instance: AnalyticsService, name: String, selector: Option(String)) -> Dynamic
+pub fn get_styled(
+  instance: AnalyticsService,
+  name: String,
+  selector: Option(String),
+) -> Dynamic
 
+@target(luau)
 /// Roblox: `Instance.GetStyledPropertyChangedSignal`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#GetStyledPropertyChangedSignal
@@ -606,10 +712,13 @@ pub fn get_styled(instance: AnalyticsService, name: String, selector: Option(Str
 ///
 /// Returns:
 /// - Event that fires when the given style property changes.
-@target(luau)
 @luau.method("GetStyledPropertyChangedSignal")
-pub fn get_styled_property_changed_signal(instance: AnalyticsService, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_styled_property_changed_signal(
+  instance: AnalyticsService,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Gets an array of all tags applied to the instance.
 ///
 /// Roblox: `Instance.GetTags`
@@ -618,10 +727,10 @@ pub fn get_styled_property_changed_signal(instance: AnalyticsService, property: 
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("GetTags")
 pub fn get_tags(instance: AnalyticsService) -> List(String)
 
+@target(luau)
 /// Check whether the instance has a given tag.
 ///
 /// Roblox: `Instance.HasTag`
@@ -630,10 +739,10 @@ pub fn get_tags(instance: AnalyticsService) -> List(String)
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("HasTag")
 pub fn has_tag(instance: AnalyticsService, tag: String) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is an ancestor of the given descendant.
 ///
 /// Roblox: `Instance.IsAncestorOf`
@@ -646,10 +755,10 @@ pub fn has_tag(instance: AnalyticsService, tag: String) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is an ancestor of the given descendant.
-@target(luau)
 @luau.method("IsAncestorOf")
 pub fn is_ancestor_of(instance: AnalyticsService, descendant: Instance) -> Bool
 
+@target(luau)
 /// Returns true if an Instance is a descendant of the given ancestor.
 ///
 /// Roblox: `Instance.IsDescendantOf`
@@ -662,10 +771,10 @@ pub fn is_ancestor_of(instance: AnalyticsService, descendant: Instance) -> Bool
 ///
 /// Returns:
 /// - True if the Instance is a descendant of the given ancestor.
-@target(luau)
 @luau.method("IsDescendantOf")
 pub fn is_descendant_of(instance: AnalyticsService, ancestor: Instance) -> Bool
 
+@target(luau)
 /// Returns true if the value stored in the specified property is not equal to the code-instantiated default.
 ///
 /// Roblox: `Instance.IsPropertyModified`
@@ -678,10 +787,13 @@ pub fn is_descendant_of(instance: AnalyticsService, ancestor: Instance) -> Bool
 ///
 /// Returns:
 /// - Boolean indicating whether the property is modified from its code‑instantiated default.
-@target(luau)
 @luau.method("IsPropertyModified")
-pub fn is_property_modified(instance: AnalyticsService, property: String) -> Bool
+pub fn is_property_modified(
+  instance: AnalyticsService,
+  property: String,
+) -> Bool
 
+@target(luau)
 /// Roblox: `Instance.QueryDescendants`
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
@@ -693,10 +805,13 @@ pub fn is_property_modified(instance: AnalyticsService, property: String) -> Boo
 ///
 /// Returns:
 /// - An array of instances (empty if nothing matched the selector).
-@target(luau)
 @luau.method("QueryDescendants")
-pub fn query_descendants(instance: AnalyticsService, selector: String) -> List(Instance)
+pub fn query_descendants(
+  instance: AnalyticsService,
+  selector: String,
+) -> List(Instance)
 
+@target(luau)
 /// Removes a tag from the instance.
 ///
 /// Roblox: `Instance.RemoveTag`
@@ -705,10 +820,10 @@ pub fn query_descendants(instance: AnalyticsService, selector: String) -> List(I
 ///
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
-@target(luau)
 @luau.method("RemoveTag")
 pub fn remove_tag(instance: AnalyticsService, tag: String) -> Nil
 
+@target(luau)
 /// Resets a property to its default value.
 ///
 /// Roblox: `Instance.ResetPropertyToDefault`
@@ -718,10 +833,13 @@ pub fn remove_tag(instance: AnalyticsService, tag: String) -> Nil
 /// Parameters:
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `property`: Name of the property to reset.
-@target(luau)
 @luau.method("ResetPropertyToDefault")
-pub fn reset_property_to_default(instance: AnalyticsService, property: String) -> Nil
+pub fn reset_property_to_default(
+  instance: AnalyticsService,
+  property: String,
+) -> Nil
 
+@target(luau)
 /// Sets the attribute with the given name to the given value.
 ///
 /// Roblox: `Instance.SetAttribute`
@@ -732,10 +850,14 @@ pub fn reset_property_to_default(instance: AnalyticsService, property: String) -
 /// - `instance`: Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 /// - `attribute`: The name of the attribute being set.
 /// - `value`: The value to set the specified attribute to.
-@target(luau)
 @luau.method("SetAttribute")
-pub fn set_attribute(instance: AnalyticsService, attribute: String, value: Dynamic) -> Nil
+pub fn set_attribute(
+  instance: AnalyticsService,
+  attribute: String,
+  value: Dynamic,
+) -> Nil
 
+@target(luau)
 /// Returns the child of the Instance with the given name. If the child does not exist, it will yield the current thread until it does.
 ///
 /// Roblox: `Instance.WaitForChild`
@@ -750,19 +872,25 @@ pub fn set_attribute(instance: AnalyticsService, attribute: String, value: Dynam
 ///
 /// Returns:
 /// - The Instance found.
-@target(luau)
 @luau.method("WaitForChild")
-pub fn wait_for_child(instance: AnalyticsService, child_name: String, time_out: OptionDouble) -> Option(Instance)
+pub fn wait_for_child(
+  instance: AnalyticsService,
+  child_name: String,
+  time_out: OptionDouble,
+) -> Option(Instance)
 
+@target(luau)
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
 ///
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.event("AncestryChanged")
-pub fn ancestry_changed(instance: AnalyticsService) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
+pub fn ancestry_changed(
+  instance: AnalyticsService,
+) -> RBXScriptSignal(fn(Instance, Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AncestryChanged`.
 ///
 /// Fires when the Instance.Parent property of this object or one of its ancestors is changed.
@@ -770,19 +898,24 @@ pub fn ancestry_changed(instance: AnalyticsService) -> RBXScriptSignal(fn(Instan
 /// Roblox: `Instance.AncestryChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AncestryChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AncestryChanged:Connect(callback) end)")
-pub fn on_ancestry_changed(instance: AnalyticsService, callback: fn(Instance, Instance) -> Nil) -> RBXScriptConnection
+pub fn on_ancestry_changed(
+  instance: AnalyticsService,
+  callback: fn(Instance, Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever an attribute is changed on the Instance.
 ///
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.event("AttributeChanged")
-pub fn attribute_changed(instance: AnalyticsService) -> RBXScriptSignal(fn(String) -> Nil)
+pub fn attribute_changed(
+  instance: AnalyticsService,
+) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.AttributeChanged`.
 ///
 /// Fires whenever an attribute is changed on the Instance.
@@ -790,19 +923,24 @@ pub fn attribute_changed(instance: AnalyticsService) -> RBXScriptSignal(fn(Strin
 /// Roblox: `Instance.AttributeChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#AttributeChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.AttributeChanged:Connect(callback) end)")
-pub fn on_attribute_changed(instance: AnalyticsService, callback: fn(String) -> Nil) -> RBXScriptConnection
+pub fn on_attribute_changed(
+  instance: AnalyticsService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after an object is parented to this Instance.
 ///
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.event("ChildAdded")
-pub fn child_added(instance: AnalyticsService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_added(
+  instance: AnalyticsService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildAdded`.
 ///
 /// Fires after an object is parented to this Instance.
@@ -810,19 +948,24 @@ pub fn child_added(instance: AnalyticsService) -> RBXScriptSignal(fn(Instance) -
 /// Roblox: `Instance.ChildAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildAdded:Connect(callback) end)")
-pub fn on_child_added(instance: AnalyticsService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_added(
+  instance: AnalyticsService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a child is removed from this Instance.
 ///
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.event("ChildRemoved")
-pub fn child_removed(instance: AnalyticsService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn child_removed(
+  instance: AnalyticsService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.ChildRemoved`.
 ///
 /// Fires after a child is removed from this Instance.
@@ -830,19 +973,24 @@ pub fn child_removed(instance: AnalyticsService) -> RBXScriptSignal(fn(Instance)
 /// Roblox: `Instance.ChildRemoved`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#ChildRemoved
-@target(luau)
 @luau.global("(function(instance, callback) return instance.ChildRemoved:Connect(callback) end)")
-pub fn on_child_removed(instance: AnalyticsService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_child_removed(
+  instance: AnalyticsService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires after a descendant is added to the Instance.
 ///
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.event("DescendantAdded")
-pub fn descendant_added(instance: AnalyticsService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_added(
+  instance: AnalyticsService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantAdded`.
 ///
 /// Fires after a descendant is added to the Instance.
@@ -850,19 +998,24 @@ pub fn descendant_added(instance: AnalyticsService) -> RBXScriptSignal(fn(Instan
 /// Roblox: `Instance.DescendantAdded`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantAdded
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantAdded:Connect(callback) end)")
-pub fn on_descendant_added(instance: AnalyticsService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_added(
+  instance: AnalyticsService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before a descendant of the Instance is removed.
 ///
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.event("DescendantRemoving")
-pub fn descendant_removing(instance: AnalyticsService) -> RBXScriptSignal(fn(Instance) -> Nil)
+pub fn descendant_removing(
+  instance: AnalyticsService,
+) -> RBXScriptSignal(fn(Instance) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.DescendantRemoving`.
 ///
 /// Fires immediately before a descendant of the Instance is removed.
@@ -870,19 +1023,22 @@ pub fn descendant_removing(instance: AnalyticsService) -> RBXScriptSignal(fn(Ins
 /// Roblox: `Instance.DescendantRemoving`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#DescendantRemoving
-@target(luau)
 @luau.global("(function(instance, callback) return instance.DescendantRemoving:Connect(callback) end)")
-pub fn on_descendant_removing(instance: AnalyticsService, callback: fn(Instance) -> Nil) -> RBXScriptConnection
+pub fn on_descendant_removing(
+  instance: AnalyticsService,
+  callback: fn(Instance) -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
 ///
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.event("Destroying")
 pub fn destroying(instance: AnalyticsService) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.Destroying`.
 ///
 /// Fires immediately before (or is deferred until after) the instance is destroyed via Instance:Destroy().
@@ -890,19 +1046,24 @@ pub fn destroying(instance: AnalyticsService) -> RBXScriptSignal(fn() -> Nil)
 /// Roblox: `Instance.Destroying`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Destroying
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Destroying:Connect(callback) end)")
-pub fn on_destroying(instance: AnalyticsService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_destroying(
+  instance: AnalyticsService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
 ///
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.event("StyledPropertiesChanged")
-pub fn styled_properties_changed(instance: AnalyticsService) -> RBXScriptSignal(fn() -> Nil)
+pub fn styled_properties_changed(
+  instance: AnalyticsService,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Instance.StyledPropertiesChanged`.
 ///
 /// Fires whenever any style property is changed on the instance, including when a property is set to nil.
@@ -910,10 +1071,13 @@ pub fn styled_properties_changed(instance: AnalyticsService) -> RBXScriptSignal(
 /// Roblox: `Instance.StyledPropertiesChanged`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#StyledPropertiesChanged
-@target(luau)
 @luau.global("(function(instance, callback) return instance.StyledPropertiesChanged:Connect(callback) end)")
-pub fn on_styled_properties_changed(instance: AnalyticsService, callback: fn() -> Nil) -> RBXScriptConnection
+pub fn on_styled_properties_changed(
+  instance: AnalyticsService,
+  callback: fn() -> Nil,
+) -> RBXScriptConnection
 
+@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.
@@ -922,10 +1086,10 @@ pub fn on_styled_properties_changed(instance: AnalyticsService, callback: fn() -
 /// ThreadSafety: ReadSafe
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#ClassName
-@target(luau)
 @luau.property("ClassName")
 pub fn get_class_name(instance: AnalyticsService) -> String
 
+@target(luau)
 /// Get an event that fires when a given property of the object changes.
 ///
 /// Roblox: `Object.GetPropertyChangedSignal`
@@ -938,10 +1102,13 @@ pub fn get_class_name(instance: AnalyticsService) -> String
 ///
 /// Returns:
 /// - A signal that fires whenever the property changes.
-@target(luau)
 @luau.method("GetPropertyChangedSignal")
-pub fn get_property_changed_signal(instance: AnalyticsService, property: String) -> RBXScriptSignal(fn() -> Nil)
+pub fn get_property_changed_signal(
+  instance: AnalyticsService,
+  property: String,
+) -> RBXScriptSignal(fn() -> Nil)
 
+@target(luau)
 /// Returns true if an object's class matches or inherits from a given class.
 ///
 /// Roblox: `Object.IsA`
@@ -955,19 +1122,19 @@ pub fn get_property_changed_signal(instance: AnalyticsService, property: String)
 ///
 /// Returns:
 /// - Describes whether the Object's class matched or is a subclass of the given class.
-@target(luau)
 @luau.method("IsA")
 pub fn is_a(instance: AnalyticsService, class_name: String) -> Bool
 
+@target(luau)
 /// Fires immediately after a property of the object changes, with some limitations.
 ///
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.event("Changed")
 pub fn changed(instance: AnalyticsService) -> RBXScriptSignal(fn(String) -> Nil)
 
+@target(luau)
 /// Connects to Roblox event `Object.Changed`.
 ///
 /// Fires immediately after a property of the object changes, with some limitations.
@@ -975,12 +1142,29 @@ pub fn changed(instance: AnalyticsService) -> RBXScriptSignal(fn(String) -> Nil)
 /// Roblox: `Object.Changed`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Object#Changed
-@target(luau)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
-pub fn on_changed(instance: AnalyticsService, callback: fn(String) -> Nil) -> RBXScriptConnection
-
+pub fn on_changed(
+  instance: AnalyticsService,
+  callback: fn(String) -> Nil,
+) -> RBXScriptConnection
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: OptionDouble, _: Actor, _: UniqueId, _: OptionInt64, _: SecurityCapabilities, _: Player, _: AnalyticsProgressionType, _: AnalyticsEconomyFlowType, _: AnalyticsService, _: Object, _: Option(Nil), _: Dynamic, _: RBXScriptSignal(fn() -> Nil), _: RBXScriptConnection) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: OptionDouble,
+  _: Actor,
+  _: UniqueId,
+  _: OptionInt64,
+  _: SecurityCapabilities,
+  _: Player,
+  _: AnalyticsProgressionType,
+  _: AnalyticsEconomyFlowType,
+  _: AnalyticsService,
+  _: Object,
+  _: Option(Nil),
+  _: Dynamic,
+  _: RBXScriptSignal(fn() -> Nil),
+  _: RBXScriptConnection,
+) -> Nil {
   Nil
 }

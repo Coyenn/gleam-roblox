@@ -2,41 +2,43 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type ReservedHighlightId}
 
+@target(luau)
 /// Gets the Roblox `ReservedHighlightId` enum object.
 ///
 /// Roblox: `Enum.ReservedHighlightId`
 /// See: https://create.roblox.com/docs/reference/engine/enums/ReservedHighlightId
-@target(luau)
 @luau.global("Enum.ReservedHighlightId")
 pub fn roblox_enum() -> RobloxEnum(ReservedHighlightId)
 
-/// Roblox enum item `ReservedHighlightId.Standard`.
 @target(luau)
+/// Roblox enum item `ReservedHighlightId.Standard`.
 @luau.global("Enum.ReservedHighlightId.Standard")
 pub fn standard() -> ReservedHighlightId
 
-/// Roblox enum item `ReservedHighlightId.Active`.
 @target(luau)
+/// Roblox enum item `ReservedHighlightId.Active`.
 @luau.global("Enum.ReservedHighlightId.Active")
 pub fn active() -> ReservedHighlightId
 
-/// Roblox enum item `ReservedHighlightId.Hover`.
 @target(luau)
+/// Roblox enum item `ReservedHighlightId.Hover`.
 @luau.global("Enum.ReservedHighlightId.Hover")
 pub fn hover() -> ReservedHighlightId
 
-/// Roblox enum item `ReservedHighlightId.Selection`.
 @target(luau)
+/// Roblox enum item `ReservedHighlightId.Selection`.
 @luau.global("Enum.ReservedHighlightId.Selection")
 pub fn selection() -> ReservedHighlightId
 
-/// Roblox enum item `ReservedHighlightId.NegatedPart`.
 @target(luau)
+/// Roblox enum item `ReservedHighlightId.NegatedPart`.
 @luau.global("Enum.ReservedHighlightId.NegatedPart")
 pub fn negated_part() -> ReservedHighlightId
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(ReservedHighlightId), _: ReservedHighlightId) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(ReservedHighlightId),
+  _: ReservedHighlightId,
+) -> Nil {
   Nil
 }

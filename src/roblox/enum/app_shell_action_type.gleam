@@ -2,76 +2,78 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type AppShellActionType}
 
+@target(luau)
 /// Gets the Roblox `AppShellActionType` enum object.
 ///
 /// Roblox: `Enum.AppShellActionType`
 /// See: https://create.roblox.com/docs/reference/engine/enums/AppShellActionType
-@target(luau)
 @luau.global("Enum.AppShellActionType")
 pub fn roblox_enum() -> RobloxEnum(AppShellActionType)
 
-/// Roblox enum item `AppShellActionType.None`.
 @target(luau)
+/// Roblox enum item `AppShellActionType.None`.
 @luau.global("Enum.AppShellActionType.None")
 pub fn none() -> AppShellActionType
 
-/// Roblox enum item `AppShellActionType.OpenApp`.
 @target(luau)
+/// Roblox enum item `AppShellActionType.OpenApp`.
 @luau.global("Enum.AppShellActionType.OpenApp")
 pub fn open_app() -> AppShellActionType
 
-/// Roblox enum item `AppShellActionType.TapChatTab`.
 @target(luau)
+/// Roblox enum item `AppShellActionType.TapChatTab`.
 @luau.global("Enum.AppShellActionType.TapChatTab")
 pub fn tap_chat_tab() -> AppShellActionType
 
-/// Roblox enum item `AppShellActionType.TapConversationEntry`.
 @target(luau)
+/// Roblox enum item `AppShellActionType.TapConversationEntry`.
 @luau.global("Enum.AppShellActionType.TapConversationEntry")
 pub fn tap_conversation_entry() -> AppShellActionType
 
-/// Roblox enum item `AppShellActionType.TapAvatarTab`.
 @target(luau)
+/// Roblox enum item `AppShellActionType.TapAvatarTab`.
 @luau.global("Enum.AppShellActionType.TapAvatarTab")
 pub fn tap_avatar_tab() -> AppShellActionType
 
-/// Roblox enum item `AppShellActionType.ReadConversation`.
 @target(luau)
+/// Roblox enum item `AppShellActionType.ReadConversation`.
 @luau.global("Enum.AppShellActionType.ReadConversation")
 pub fn read_conversation() -> AppShellActionType
 
-/// Roblox enum item `AppShellActionType.TapGamePageTab`.
 @target(luau)
+/// Roblox enum item `AppShellActionType.TapGamePageTab`.
 @luau.global("Enum.AppShellActionType.TapGamePageTab")
 pub fn tap_game_page_tab() -> AppShellActionType
 
-/// Roblox enum item `AppShellActionType.TapHomePageTab`.
 @target(luau)
+/// Roblox enum item `AppShellActionType.TapHomePageTab`.
 @luau.global("Enum.AppShellActionType.TapHomePageTab")
 pub fn tap_home_page_tab() -> AppShellActionType
 
-/// Roblox enum item `AppShellActionType.GamePageLoaded`.
 @target(luau)
+/// Roblox enum item `AppShellActionType.GamePageLoaded`.
 @luau.global("Enum.AppShellActionType.GamePageLoaded")
 pub fn game_page_loaded() -> AppShellActionType
 
-/// Roblox enum item `AppShellActionType.HomePageLoaded`.
 @target(luau)
+/// Roblox enum item `AppShellActionType.HomePageLoaded`.
 @luau.global("Enum.AppShellActionType.HomePageLoaded")
 pub fn home_page_loaded() -> AppShellActionType
 
-/// Roblox enum item `AppShellActionType.AvatarEditorPageLoaded`.
 @target(luau)
+/// Roblox enum item `AppShellActionType.AvatarEditorPageLoaded`.
 @luau.global("Enum.AppShellActionType.AvatarEditorPageLoaded")
 pub fn avatar_editor_page_loaded() -> AppShellActionType
 
-/// Roblox enum item `AppShellActionType.HomePageInteractive`.
 @target(luau)
+/// Roblox enum item `AppShellActionType.HomePageInteractive`.
 @luau.global("Enum.AppShellActionType.HomePageInteractive")
 pub fn home_page_interactive() -> AppShellActionType
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(AppShellActionType), _: AppShellActionType) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(AppShellActionType),
+  _: AppShellActionType,
+) -> Nil {
   Nil
 }

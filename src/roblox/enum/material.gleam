@@ -2,239 +2,238 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type Material}
 
+@target(luau)
 /// Materials used for parts and/or terrain.
 ///
 /// Roblox: `Enum.Material`
 /// See: https://create.roblox.com/docs/reference/engine/enums/Material
-@target(luau)
 @luau.global("Enum.Material")
 pub fn roblox_enum() -> RobloxEnum(Material)
 
-/// Roblox enum item `Material.Plastic`.
 @target(luau)
+/// Roblox enum item `Material.Plastic`.
 @luau.global("Enum.Material.Plastic")
 pub fn plastic() -> Material
 
-/// Roblox enum item `Material.SmoothPlastic`.
 @target(luau)
+/// Roblox enum item `Material.SmoothPlastic`.
 @luau.global("Enum.Material.SmoothPlastic")
 pub fn smooth_plastic() -> Material
 
-/// Roblox enum item `Material.Neon`.
 @target(luau)
+/// Roblox enum item `Material.Neon`.
 @luau.global("Enum.Material.Neon")
 pub fn neon() -> Material
 
-/// Roblox enum item `Material.Wood`.
 @target(luau)
+/// Roblox enum item `Material.Wood`.
 @luau.global("Enum.Material.Wood")
 pub fn wood() -> Material
 
-/// Roblox enum item `Material.WoodPlanks`.
 @target(luau)
+/// Roblox enum item `Material.WoodPlanks`.
 @luau.global("Enum.Material.WoodPlanks")
 pub fn wood_planks() -> Material
 
-/// Roblox enum item `Material.Marble`.
 @target(luau)
+/// Roblox enum item `Material.Marble`.
 @luau.global("Enum.Material.Marble")
 pub fn marble() -> Material
 
-/// Roblox enum item `Material.Basalt`.
 @target(luau)
+/// Roblox enum item `Material.Basalt`.
 @luau.global("Enum.Material.Basalt")
 pub fn basalt() -> Material
 
-/// Roblox enum item `Material.Slate`.
 @target(luau)
+/// Roblox enum item `Material.Slate`.
 @luau.global("Enum.Material.Slate")
 pub fn slate() -> Material
 
-/// Roblox enum item `Material.CrackedLava`.
 @target(luau)
+/// Roblox enum item `Material.CrackedLava`.
 @luau.global("Enum.Material.CrackedLava")
 pub fn cracked_lava() -> Material
 
-/// Roblox enum item `Material.Concrete`.
 @target(luau)
+/// Roblox enum item `Material.Concrete`.
 @luau.global("Enum.Material.Concrete")
 pub fn concrete() -> Material
 
-/// Roblox enum item `Material.Limestone`.
 @target(luau)
+/// Roblox enum item `Material.Limestone`.
 @luau.global("Enum.Material.Limestone")
 pub fn limestone() -> Material
 
-/// Roblox enum item `Material.Granite`.
 @target(luau)
+/// Roblox enum item `Material.Granite`.
 @luau.global("Enum.Material.Granite")
 pub fn granite() -> Material
 
-/// Roblox enum item `Material.Pavement`.
 @target(luau)
+/// Roblox enum item `Material.Pavement`.
 @luau.global("Enum.Material.Pavement")
 pub fn pavement() -> Material
 
-/// Roblox enum item `Material.Brick`.
 @target(luau)
+/// Roblox enum item `Material.Brick`.
 @luau.global("Enum.Material.Brick")
 pub fn brick() -> Material
 
-/// Roblox enum item `Material.Pebble`.
 @target(luau)
+/// Roblox enum item `Material.Pebble`.
 @luau.global("Enum.Material.Pebble")
 pub fn pebble() -> Material
 
-/// Roblox enum item `Material.Cobblestone`.
 @target(luau)
+/// Roblox enum item `Material.Cobblestone`.
 @luau.global("Enum.Material.Cobblestone")
 pub fn cobblestone() -> Material
 
-/// Roblox enum item `Material.Rock`.
 @target(luau)
+/// Roblox enum item `Material.Rock`.
 @luau.global("Enum.Material.Rock")
 pub fn rock() -> Material
 
-/// Roblox enum item `Material.Sandstone`.
 @target(luau)
+/// Roblox enum item `Material.Sandstone`.
 @luau.global("Enum.Material.Sandstone")
 pub fn sandstone() -> Material
 
-/// Roblox enum item `Material.CorrodedMetal`.
 @target(luau)
+/// Roblox enum item `Material.CorrodedMetal`.
 @luau.global("Enum.Material.CorrodedMetal")
 pub fn corroded_metal() -> Material
 
-/// Roblox enum item `Material.DiamondPlate`.
 @target(luau)
+/// Roblox enum item `Material.DiamondPlate`.
 @luau.global("Enum.Material.DiamondPlate")
 pub fn diamond_plate() -> Material
 
-/// Roblox enum item `Material.Foil`.
 @target(luau)
+/// Roblox enum item `Material.Foil`.
 @luau.global("Enum.Material.Foil")
 pub fn foil() -> Material
 
-/// Roblox enum item `Material.Metal`.
 @target(luau)
+/// Roblox enum item `Material.Metal`.
 @luau.global("Enum.Material.Metal")
 pub fn metal() -> Material
 
-/// Roblox enum item `Material.Grass`.
 @target(luau)
+/// Roblox enum item `Material.Grass`.
 @luau.global("Enum.Material.Grass")
 pub fn grass() -> Material
 
-/// Roblox enum item `Material.LeafyGrass`.
 @target(luau)
+/// Roblox enum item `Material.LeafyGrass`.
 @luau.global("Enum.Material.LeafyGrass")
 pub fn leafy_grass() -> Material
 
-/// Roblox enum item `Material.Sand`.
 @target(luau)
+/// Roblox enum item `Material.Sand`.
 @luau.global("Enum.Material.Sand")
 pub fn sand() -> Material
 
-/// Roblox enum item `Material.Fabric`.
 @target(luau)
+/// Roblox enum item `Material.Fabric`.
 @luau.global("Enum.Material.Fabric")
 pub fn fabric() -> Material
 
-/// Roblox enum item `Material.Snow`.
 @target(luau)
+/// Roblox enum item `Material.Snow`.
 @luau.global("Enum.Material.Snow")
 pub fn snow() -> Material
 
-/// Roblox enum item `Material.Mud`.
 @target(luau)
+/// Roblox enum item `Material.Mud`.
 @luau.global("Enum.Material.Mud")
 pub fn mud() -> Material
 
-/// Roblox enum item `Material.Ground`.
 @target(luau)
+/// Roblox enum item `Material.Ground`.
 @luau.global("Enum.Material.Ground")
 pub fn ground() -> Material
 
-/// Roblox enum item `Material.Asphalt`.
 @target(luau)
+/// Roblox enum item `Material.Asphalt`.
 @luau.global("Enum.Material.Asphalt")
 pub fn asphalt() -> Material
 
-/// Roblox enum item `Material.Salt`.
 @target(luau)
+/// Roblox enum item `Material.Salt`.
 @luau.global("Enum.Material.Salt")
 pub fn salt() -> Material
 
-/// Roblox enum item `Material.Ice`.
 @target(luau)
+/// Roblox enum item `Material.Ice`.
 @luau.global("Enum.Material.Ice")
 pub fn ice() -> Material
 
-/// Roblox enum item `Material.Glacier`.
 @target(luau)
+/// Roblox enum item `Material.Glacier`.
 @luau.global("Enum.Material.Glacier")
 pub fn glacier() -> Material
 
-/// Roblox enum item `Material.Glass`.
 @target(luau)
+/// Roblox enum item `Material.Glass`.
 @luau.global("Enum.Material.Glass")
 pub fn glass() -> Material
 
-/// Roblox enum item `Material.ForceField`.
 @target(luau)
+/// Roblox enum item `Material.ForceField`.
 @luau.global("Enum.Material.ForceField")
 pub fn force_field() -> Material
 
-/// Roblox enum item `Material.Air`.
 @target(luau)
+/// Roblox enum item `Material.Air`.
 @luau.global("Enum.Material.Air")
 pub fn air() -> Material
 
-/// Roblox enum item `Material.Water`.
 @target(luau)
+/// Roblox enum item `Material.Water`.
 @luau.global("Enum.Material.Water")
 pub fn water() -> Material
 
-/// Roblox enum item `Material.Cardboard`.
 @target(luau)
+/// Roblox enum item `Material.Cardboard`.
 @luau.global("Enum.Material.Cardboard")
 pub fn cardboard() -> Material
 
-/// Roblox enum item `Material.Carpet`.
 @target(luau)
+/// Roblox enum item `Material.Carpet`.
 @luau.global("Enum.Material.Carpet")
 pub fn carpet() -> Material
 
-/// Roblox enum item `Material.CeramicTiles`.
 @target(luau)
+/// Roblox enum item `Material.CeramicTiles`.
 @luau.global("Enum.Material.CeramicTiles")
 pub fn ceramic_tiles() -> Material
 
-/// Roblox enum item `Material.ClayRoofTiles`.
 @target(luau)
+/// Roblox enum item `Material.ClayRoofTiles`.
 @luau.global("Enum.Material.ClayRoofTiles")
 pub fn clay_roof_tiles() -> Material
 
-/// Roblox enum item `Material.RoofShingles`.
 @target(luau)
+/// Roblox enum item `Material.RoofShingles`.
 @luau.global("Enum.Material.RoofShingles")
 pub fn roof_shingles() -> Material
 
-/// Roblox enum item `Material.Leather`.
 @target(luau)
+/// Roblox enum item `Material.Leather`.
 @luau.global("Enum.Material.Leather")
 pub fn leather() -> Material
 
-/// Roblox enum item `Material.Plaster`.
 @target(luau)
+/// Roblox enum item `Material.Plaster`.
 @luau.global("Enum.Material.Plaster")
 pub fn plaster() -> Material
 
-/// Roblox enum item `Material.Rubber`.
 @target(luau)
+/// Roblox enum item `Material.Rubber`.
 @luau.global("Enum.Material.Rubber")
 pub fn rubber() -> Material
-
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(_: RobloxEnum(Material), _: Material) -> Nil {

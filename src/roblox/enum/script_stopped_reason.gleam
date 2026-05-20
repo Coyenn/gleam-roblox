@@ -2,40 +2,42 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type ScriptStoppedReason}
 
+@target(luau)
 /// Gets the Roblox `ScriptStoppedReason` enum object.
 ///
 /// Roblox: `Enum.ScriptStoppedReason`
-@target(luau)
 @luau.global("Enum.ScriptStoppedReason")
 pub fn roblox_enum() -> RobloxEnum(ScriptStoppedReason)
 
-/// Roblox enum item `ScriptStoppedReason.Breakpoint`.
 @target(luau)
+/// Roblox enum item `ScriptStoppedReason.Breakpoint`.
 @luau.global("Enum.ScriptStoppedReason.Breakpoint")
 pub fn breakpoint() -> ScriptStoppedReason
 
-/// Roblox enum item `ScriptStoppedReason.Exception`.
 @target(luau)
+/// Roblox enum item `ScriptStoppedReason.Exception`.
 @luau.global("Enum.ScriptStoppedReason.Exception")
 pub fn exception() -> ScriptStoppedReason
 
-/// Roblox enum item `ScriptStoppedReason.Pause`.
 @target(luau)
+/// Roblox enum item `ScriptStoppedReason.Pause`.
 @luau.global("Enum.ScriptStoppedReason.Pause")
 pub fn pause() -> ScriptStoppedReason
 
-/// Roblox enum item `ScriptStoppedReason.Step`.
 @target(luau)
+/// Roblox enum item `ScriptStoppedReason.Step`.
 @luau.global("Enum.ScriptStoppedReason.Step")
 pub fn step() -> ScriptStoppedReason
 
-/// Roblox enum item `ScriptStoppedReason.Entry`.
 @target(luau)
+/// Roblox enum item `ScriptStoppedReason.Entry`.
 @luau.global("Enum.ScriptStoppedReason.Entry")
 pub fn entry() -> ScriptStoppedReason
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(ScriptStoppedReason), _: ScriptStoppedReason) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(ScriptStoppedReason),
+  _: ScriptStoppedReason,
+) -> Nil {
   Nil
 }

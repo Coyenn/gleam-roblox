@@ -2,61 +2,63 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type DebuggerStatus}
 
+@target(luau)
 /// Result of a debugger request.
 ///
 /// Roblox: `Enum.DebuggerStatus`
 /// See: https://create.roblox.com/docs/reference/engine/enums/DebuggerStatus
-@target(luau)
 @luau.global("Enum.DebuggerStatus")
 pub fn roblox_enum() -> RobloxEnum(DebuggerStatus)
 
-/// Roblox enum item `DebuggerStatus.Success`.
 @target(luau)
+/// Roblox enum item `DebuggerStatus.Success`.
 @luau.global("Enum.DebuggerStatus.Success")
 pub fn success() -> DebuggerStatus
 
-/// Roblox enum item `DebuggerStatus.Timeout`.
 @target(luau)
+/// Roblox enum item `DebuggerStatus.Timeout`.
 @luau.global("Enum.DebuggerStatus.Timeout")
 pub fn timeout() -> DebuggerStatus
 
-/// Roblox enum item `DebuggerStatus.ConnectionLost`.
 @target(luau)
+/// Roblox enum item `DebuggerStatus.ConnectionLost`.
 @luau.global("Enum.DebuggerStatus.ConnectionLost")
 pub fn connection_lost() -> DebuggerStatus
 
-/// Roblox enum item `DebuggerStatus.InvalidResponse`.
 @target(luau)
+/// Roblox enum item `DebuggerStatus.InvalidResponse`.
 @luau.global("Enum.DebuggerStatus.InvalidResponse")
 pub fn invalid_response() -> DebuggerStatus
 
-/// Roblox enum item `DebuggerStatus.InternalError`.
 @target(luau)
+/// Roblox enum item `DebuggerStatus.InternalError`.
 @luau.global("Enum.DebuggerStatus.InternalError")
 pub fn internal_error() -> DebuggerStatus
 
-/// Roblox enum item `DebuggerStatus.InvalidState`.
 @target(luau)
+/// Roblox enum item `DebuggerStatus.InvalidState`.
 @luau.global("Enum.DebuggerStatus.InvalidState")
 pub fn invalid_state() -> DebuggerStatus
 
-/// Roblox enum item `DebuggerStatus.RpcError`.
 @target(luau)
+/// Roblox enum item `DebuggerStatus.RpcError`.
 @luau.global("Enum.DebuggerStatus.RpcError")
 pub fn rpc_error() -> DebuggerStatus
 
-/// Roblox enum item `DebuggerStatus.InvalidArgument`.
 @target(luau)
+/// Roblox enum item `DebuggerStatus.InvalidArgument`.
 @luau.global("Enum.DebuggerStatus.InvalidArgument")
 pub fn invalid_argument() -> DebuggerStatus
 
-/// Roblox enum item `DebuggerStatus.ConnectionClosed`.
 @target(luau)
+/// Roblox enum item `DebuggerStatus.ConnectionClosed`.
 @luau.global("Enum.DebuggerStatus.ConnectionClosed")
 pub fn connection_closed() -> DebuggerStatus
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(DebuggerStatus), _: DebuggerStatus) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(DebuggerStatus),
+  _: DebuggerStatus,
+) -> Nil {
   Nil
 }

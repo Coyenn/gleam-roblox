@@ -2,31 +2,33 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type ProximityPromptInputType}
 
+@target(luau)
 /// Gets the Roblox `ProximityPromptInputType` enum object.
 ///
 /// Roblox: `Enum.ProximityPromptInputType`
 /// See: https://create.roblox.com/docs/reference/engine/enums/ProximityPromptInputType
-@target(luau)
 @luau.global("Enum.ProximityPromptInputType")
 pub fn roblox_enum() -> RobloxEnum(ProximityPromptInputType)
 
-/// Roblox enum item `ProximityPromptInputType.Keyboard`.
 @target(luau)
+/// Roblox enum item `ProximityPromptInputType.Keyboard`.
 @luau.global("Enum.ProximityPromptInputType.Keyboard")
 pub fn keyboard() -> ProximityPromptInputType
 
-/// Roblox enum item `ProximityPromptInputType.Gamepad`.
 @target(luau)
+/// Roblox enum item `ProximityPromptInputType.Gamepad`.
 @luau.global("Enum.ProximityPromptInputType.Gamepad")
 pub fn gamepad() -> ProximityPromptInputType
 
-/// Roblox enum item `ProximityPromptInputType.Touch`.
 @target(luau)
+/// Roblox enum item `ProximityPromptInputType.Touch`.
 @luau.global("Enum.ProximityPromptInputType.Touch")
 pub fn touch() -> ProximityPromptInputType
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(ProximityPromptInputType), _: ProximityPromptInputType) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(ProximityPromptInputType),
+  _: ProximityPromptInputType,
+) -> Nil {
   Nil
 }

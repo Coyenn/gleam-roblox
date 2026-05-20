@@ -2,61 +2,63 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type StateObjectFieldType}
 
+@target(luau)
 /// Gets the Roblox `StateObjectFieldType` enum object.
 ///
 /// Roblox: `Enum.StateObjectFieldType`
 /// See: https://create.roblox.com/docs/reference/engine/enums/StateObjectFieldType
-@target(luau)
 @luau.global("Enum.StateObjectFieldType")
 pub fn roblox_enum() -> RobloxEnum(StateObjectFieldType)
 
-/// Roblox enum item `StateObjectFieldType.Boolean`.
 @target(luau)
+/// Roblox enum item `StateObjectFieldType.Boolean`.
 @luau.global("Enum.StateObjectFieldType.Boolean")
 pub fn boolean() -> StateObjectFieldType
 
-/// Roblox enum item `StateObjectFieldType.CFrame`.
 @target(luau)
+/// Roblox enum item `StateObjectFieldType.CFrame`.
 @luau.global("Enum.StateObjectFieldType.CFrame")
 pub fn cframe() -> StateObjectFieldType
 
-/// Roblox enum item `StateObjectFieldType.Color3`.
 @target(luau)
+/// Roblox enum item `StateObjectFieldType.Color3`.
 @luau.global("Enum.StateObjectFieldType.Color3")
 pub fn color3() -> StateObjectFieldType
 
-/// Roblox enum item `StateObjectFieldType.Float`.
 @target(luau)
+/// Roblox enum item `StateObjectFieldType.Float`.
 @luau.global("Enum.StateObjectFieldType.Float")
 pub fn float() -> StateObjectFieldType
 
-/// Roblox enum item `StateObjectFieldType.Instance`.
 @target(luau)
+/// Roblox enum item `StateObjectFieldType.Instance`.
 @luau.global("Enum.StateObjectFieldType.Instance")
 pub fn instance() -> StateObjectFieldType
 
-/// Roblox enum item `StateObjectFieldType.Random`.
 @target(luau)
+/// Roblox enum item `StateObjectFieldType.Random`.
 @luau.global("Enum.StateObjectFieldType.Random")
 pub fn random() -> StateObjectFieldType
 
-/// Roblox enum item `StateObjectFieldType.Vector2`.
 @target(luau)
+/// Roblox enum item `StateObjectFieldType.Vector2`.
 @luau.global("Enum.StateObjectFieldType.Vector2")
 pub fn vector2() -> StateObjectFieldType
 
-/// Roblox enum item `StateObjectFieldType.Vector3`.
 @target(luau)
+/// Roblox enum item `StateObjectFieldType.Vector3`.
 @luau.global("Enum.StateObjectFieldType.Vector3")
 pub fn vector3() -> StateObjectFieldType
 
-/// Roblox enum item `StateObjectFieldType.INVALID`.
 @target(luau)
+/// Roblox enum item `StateObjectFieldType.INVALID`.
 @luau.global("Enum.StateObjectFieldType.INVALID")
 pub fn invalid() -> StateObjectFieldType
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(StateObjectFieldType), _: StateObjectFieldType) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(StateObjectFieldType),
+  _: StateObjectFieldType,
+) -> Nil {
   Nil
 }

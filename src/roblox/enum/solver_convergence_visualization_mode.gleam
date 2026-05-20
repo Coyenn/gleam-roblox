@@ -2,31 +2,33 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type SolverConvergenceVisualizationMode}
 
+@target(luau)
 /// Gets the Roblox `SolverConvergenceVisualizationMode` enum object.
 ///
 /// Roblox: `Enum.SolverConvergenceVisualizationMode`
 /// See: https://create.roblox.com/docs/reference/engine/enums/SolverConvergenceVisualizationMode
-@target(luau)
 @luau.global("Enum.SolverConvergenceVisualizationMode")
 pub fn roblox_enum() -> RobloxEnum(SolverConvergenceVisualizationMode)
 
-/// Roblox enum item `SolverConvergenceVisualizationMode.Disabled`.
 @target(luau)
+/// Roblox enum item `SolverConvergenceVisualizationMode.Disabled`.
 @luau.global("Enum.SolverConvergenceVisualizationMode.Disabled")
 pub fn disabled() -> SolverConvergenceVisualizationMode
 
-/// Roblox enum item `SolverConvergenceVisualizationMode.PerIsland`.
 @target(luau)
+/// Roblox enum item `SolverConvergenceVisualizationMode.PerIsland`.
 @luau.global("Enum.SolverConvergenceVisualizationMode.PerIsland")
 pub fn per_island() -> SolverConvergenceVisualizationMode
 
-/// Roblox enum item `SolverConvergenceVisualizationMode.PerEdge`.
 @target(luau)
+/// Roblox enum item `SolverConvergenceVisualizationMode.PerEdge`.
 @luau.global("Enum.SolverConvergenceVisualizationMode.PerEdge")
 pub fn per_edge() -> SolverConvergenceVisualizationMode
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(SolverConvergenceVisualizationMode), _: SolverConvergenceVisualizationMode) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(SolverConvergenceVisualizationMode),
+  _: SolverConvergenceVisualizationMode,
+) -> Nil {
   Nil
 }

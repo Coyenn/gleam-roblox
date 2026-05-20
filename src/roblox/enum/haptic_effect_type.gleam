@@ -2,46 +2,48 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type HapticEffectType}
 
+@target(luau)
 /// Enum used alongside HapticEffect.Type.
 ///
 /// Roblox: `Enum.HapticEffectType`
 /// See: https://create.roblox.com/docs/reference/engine/enums/HapticEffectType
-@target(luau)
 @luau.global("Enum.HapticEffectType")
 pub fn roblox_enum() -> RobloxEnum(HapticEffectType)
 
-/// Roblox enum item `HapticEffectType.Custom`.
 @target(luau)
+/// Roblox enum item `HapticEffectType.Custom`.
 @luau.global("Enum.HapticEffectType.Custom")
 pub fn custom() -> HapticEffectType
 
-/// Roblox enum item `HapticEffectType.UIHover`.
 @target(luau)
+/// Roblox enum item `HapticEffectType.UIHover`.
 @luau.global("Enum.HapticEffectType.UIHover")
 pub fn ui_hover() -> HapticEffectType
 
-/// Roblox enum item `HapticEffectType.UIClick`.
 @target(luau)
+/// Roblox enum item `HapticEffectType.UIClick`.
 @luau.global("Enum.HapticEffectType.UIClick")
 pub fn ui_click() -> HapticEffectType
 
-/// Roblox enum item `HapticEffectType.UINotification`.
 @target(luau)
+/// Roblox enum item `HapticEffectType.UINotification`.
 @luau.global("Enum.HapticEffectType.UINotification")
 pub fn ui_notification() -> HapticEffectType
 
-/// Roblox enum item `HapticEffectType.GameplayExplosion`.
 @target(luau)
+/// Roblox enum item `HapticEffectType.GameplayExplosion`.
 @luau.global("Enum.HapticEffectType.GameplayExplosion")
 pub fn gameplay_explosion() -> HapticEffectType
 
-/// Roblox enum item `HapticEffectType.GameplayCollision`.
 @target(luau)
+/// Roblox enum item `HapticEffectType.GameplayCollision`.
 @luau.global("Enum.HapticEffectType.GameplayCollision")
 pub fn gameplay_collision() -> HapticEffectType
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(HapticEffectType), _: HapticEffectType) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(HapticEffectType),
+  _: HapticEffectType,
+) -> Nil {
   Nil
 }

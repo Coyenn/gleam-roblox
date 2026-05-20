@@ -1,19 +1,23 @@
 // Generated declarative builders for Roblox `AudioFlanger` instances.
-import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/audio_flanger
+import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/types.{type AudioFlanger, type Instance, type SecurityCapabilities}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: AudioFlanger) -> Instance
 
-/// Creates a declarative Roblox `AudioFlanger` node.
 @target(luau)
-pub fn node(properties: List(Property(AudioFlanger)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `AudioFlanger` node.
+pub fn node(
+  properties: List(Property(AudioFlanger)),
+  children: List(Node),
+) -> Node {
   let instance = apply(audio_flanger.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AudioFlanger.Bypass` on `AudioFlanger` nodes.
 ///
 /// Whether audio streams are passed-through unaffected by this effect.
@@ -21,11 +25,11 @@ pub fn node(properties: List(Property(AudioFlanger)), children: List(Node)) -> N
 /// Roblox: `AudioFlanger.Bypass`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioFlanger#Bypass
-@target(luau)
 pub fn bypass(value: Bool) -> Property(AudioFlanger) {
   Property(fn(instance) { audio_flanger.set_bypass(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AudioFlanger.Depth` on `AudioFlanger` nodes.
 ///
 /// Controls how strong the pitch modulation of the flanger is.
@@ -33,11 +37,11 @@ pub fn bypass(value: Bool) -> Property(AudioFlanger) {
 /// Roblox: `AudioFlanger.Depth`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioFlanger#Depth
-@target(luau)
 pub fn depth(value: Float) -> Property(AudioFlanger) {
   Property(fn(instance) { audio_flanger.set_depth(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AudioFlanger.Mix` on `AudioFlanger` nodes.
 ///
 /// Controls the balance of plain input stream to modified output stream.
@@ -45,11 +49,11 @@ pub fn depth(value: Float) -> Property(AudioFlanger) {
 /// Roblox: `AudioFlanger.Mix`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioFlanger#Mix
-@target(luau)
 pub fn mix(value: Float) -> Property(AudioFlanger) {
   Property(fn(instance) { audio_flanger.set_mix(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `AudioFlanger.Rate` on `AudioFlanger` nodes.
 ///
 /// Controls the rate of pitch modulations.
@@ -57,11 +61,11 @@ pub fn mix(value: Float) -> Property(AudioFlanger) {
 /// Roblox: `AudioFlanger.Rate`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioFlanger#Rate
-@target(luau)
 pub fn rate(value: Float) -> Property(AudioFlanger) {
   Property(fn(instance) { audio_flanger.set_rate(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `AudioFlanger` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -69,11 +73,11 @@ pub fn rate(value: Float) -> Property(AudioFlanger) {
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(AudioFlanger) {
   Property(fn(instance) { audio_flanger.set_archivable(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `AudioFlanger` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -81,11 +85,11 @@ pub fn archivable(value: Bool) -> Property(AudioFlanger) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
 pub fn capabilities(value: SecurityCapabilities) -> Property(AudioFlanger) {
   Property(fn(instance) { audio_flanger.set_capabilities(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `AudioFlanger` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -93,11 +97,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(AudioFlanger) {
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(AudioFlanger) {
   Property(fn(instance) { audio_flanger.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `AudioFlanger` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -106,11 +110,11 @@ pub fn name(value: String) -> Property(AudioFlanger) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(AudioFlanger) {
   Property(fn(instance) { audio_flanger.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `AudioFlanger` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -119,13 +123,15 @@ pub fn parent(value: Instance) -> Property(AudioFlanger) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(AudioFlanger) {
   Property(fn(instance) { audio_flanger.set_sandboxed(instance, value) })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: AudioFlanger) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: AudioFlanger,
+) -> Nil {
   Nil
 }

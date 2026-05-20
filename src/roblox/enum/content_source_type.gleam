@@ -2,36 +2,38 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type ContentSourceType}
 
+@target(luau)
 /// The source type of a Content value.
 ///
 /// Roblox: `Enum.ContentSourceType`
 /// See: https://create.roblox.com/docs/reference/engine/enums/ContentSourceType
-@target(luau)
 @luau.global("Enum.ContentSourceType")
 pub fn roblox_enum() -> RobloxEnum(ContentSourceType)
 
-/// Roblox enum item `ContentSourceType.None`.
 @target(luau)
+/// Roblox enum item `ContentSourceType.None`.
 @luau.global("Enum.ContentSourceType.None")
 pub fn none() -> ContentSourceType
 
-/// Roblox enum item `ContentSourceType.Uri`.
 @target(luau)
+/// Roblox enum item `ContentSourceType.Uri`.
 @luau.global("Enum.ContentSourceType.Uri")
 pub fn uri() -> ContentSourceType
 
-/// Roblox enum item `ContentSourceType.Object`.
 @target(luau)
+/// Roblox enum item `ContentSourceType.Object`.
 @luau.global("Enum.ContentSourceType.Object")
 pub fn object() -> ContentSourceType
 
-/// Roblox enum item `ContentSourceType.Opaque`.
 @target(luau)
+/// Roblox enum item `ContentSourceType.Opaque`.
 @luau.global("Enum.ContentSourceType.Opaque")
 pub fn opaque_() -> ContentSourceType
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(ContentSourceType), _: ContentSourceType) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(ContentSourceType),
+  _: ContentSourceType,
+) -> Nil {
   Nil
 }

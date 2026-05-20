@@ -2,34 +2,33 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type OutfitType}
 
+@target(luau)
 /// Gets the Roblox `OutfitType` enum object.
 ///
 /// Roblox: `Enum.OutfitType`
 /// See: https://create.roblox.com/docs/reference/engine/enums/OutfitType
-@target(luau)
 @luau.global("Enum.OutfitType")
 pub fn roblox_enum() -> RobloxEnum(OutfitType)
 
-/// Roblox enum item `OutfitType.All`.
 @target(luau)
+/// Roblox enum item `OutfitType.All`.
 @luau.global("Enum.OutfitType.All")
 pub fn all() -> OutfitType
 
-/// Roblox enum item `OutfitType.Avatar`.
 @target(luau)
+/// Roblox enum item `OutfitType.Avatar`.
 @luau.global("Enum.OutfitType.Avatar")
 pub fn avatar() -> OutfitType
 
-/// Roblox enum item `OutfitType.DynamicHead`.
 @target(luau)
+/// Roblox enum item `OutfitType.DynamicHead`.
 @luau.global("Enum.OutfitType.DynamicHead")
 pub fn dynamic_head() -> OutfitType
 
-/// Roblox enum item `OutfitType.Shoes`.
 @target(luau)
+/// Roblox enum item `OutfitType.Shoes`.
 @luau.global("Enum.OutfitType.Shoes")
 pub fn shoes() -> OutfitType
-
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(_: RobloxEnum(OutfitType), _: OutfitType) -> Nil {

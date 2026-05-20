@@ -1,19 +1,25 @@
 // Generated declarative builders for Roblox `VehicleController` instances.
 import roblox/create.{type Node, type Property, Node, Property, apply}
+import roblox/types.{
+  type Instance, type SecurityCapabilities, type VehicleController,
+}
 import roblox/vehicle_controller
-import roblox/types.{type Instance, type SecurityCapabilities, type VehicleController}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
 fn as_instance(instance: VehicleController) -> Instance
 
-/// Creates a declarative Roblox `VehicleController` node.
 @target(luau)
-pub fn node(properties: List(Property(VehicleController)), children: List(Node)) -> Node {
+/// Creates a declarative Roblox `VehicleController` node.
+pub fn node(
+  properties: List(Property(VehicleController)),
+  children: List(Node),
+) -> Node {
   let instance = apply(vehicle_controller.new(), properties)
   Node(as_instance(instance), children)
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Archivable` on `VehicleController` nodes.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.
@@ -21,11 +27,11 @@ pub fn node(properties: List(Property(VehicleController)), children: List(Node))
 /// Roblox: `Instance.Archivable`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Archivable
-@target(luau)
 pub fn archivable(value: Bool) -> Property(VehicleController) {
   Property(fn(instance) { vehicle_controller.set_archivable(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Capabilities` on `VehicleController` nodes.
 ///
 /// The set of capabilities allowed to be used for scripts inside this container.
@@ -33,11 +39,13 @@ pub fn archivable(value: Bool) -> Property(VehicleController) {
 /// Roblox: `Instance.Capabilities`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Capabilities
-@target(luau)
-pub fn capabilities(value: SecurityCapabilities) -> Property(VehicleController) {
+pub fn capabilities(
+  value: SecurityCapabilities,
+) -> Property(VehicleController) {
   Property(fn(instance) { vehicle_controller.set_capabilities(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Name` on `VehicleController` nodes.
 ///
 /// A non-unique identifier of the Instance.
@@ -45,11 +53,11 @@ pub fn capabilities(value: SecurityCapabilities) -> Property(VehicleController) 
 /// Roblox: `Instance.Name`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Name
-@target(luau)
 pub fn name(value: String) -> Property(VehicleController) {
   Property(fn(instance) { vehicle_controller.set_name(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Parent` on `VehicleController` nodes.
 ///
 /// Determines the hierarchical parent of the Instance.
@@ -58,11 +66,11 @@ pub fn name(value: String) -> Property(VehicleController) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Parent
-@target(luau)
 pub fn parent(value: Instance) -> Property(VehicleController) {
   Property(fn(instance) { vehicle_controller.set_parent(instance, value) })
 }
 
+@target(luau)
 /// Builds a property setter for Roblox property `Instance.Sandboxed` on `VehicleController` nodes.
 ///
 /// When enabled, the instance can only access abilities in its Capabilities list.
@@ -71,13 +79,15 @@ pub fn parent(value: Instance) -> Property(VehicleController) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
-@target(luau)
 pub fn sandboxed(value: Bool) -> Property(VehicleController) {
   Property(fn(instance) { vehicle_controller.set_sandboxed(instance, value) })
 }
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: Instance, _: SecurityCapabilities, _: VehicleController) -> Nil {
+pub fn javascript_type_anchor(
+  _: Instance,
+  _: SecurityCapabilities,
+  _: VehicleController,
+) -> Nil {
   Nil
 }

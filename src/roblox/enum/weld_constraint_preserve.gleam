@@ -2,31 +2,33 @@
 import roblox/enum.{type RobloxEnum}
 import roblox/types.{type WeldConstraintPreserve}
 
+@target(luau)
 /// Gets the Roblox `WeldConstraintPreserve` enum object.
 ///
 /// Roblox: `Enum.WeldConstraintPreserve`
 /// See: https://create.roblox.com/docs/reference/engine/enums/WeldConstraintPreserve
-@target(luau)
 @luau.global("Enum.WeldConstraintPreserve")
 pub fn roblox_enum() -> RobloxEnum(WeldConstraintPreserve)
 
-/// Roblox enum item `WeldConstraintPreserve.All`.
 @target(luau)
+/// Roblox enum item `WeldConstraintPreserve.All`.
 @luau.global("Enum.WeldConstraintPreserve.All")
 pub fn all() -> WeldConstraintPreserve
 
-/// Roblox enum item `WeldConstraintPreserve.None`.
 @target(luau)
+/// Roblox enum item `WeldConstraintPreserve.None`.
 @luau.global("Enum.WeldConstraintPreserve.None")
 pub fn none() -> WeldConstraintPreserve
 
-/// Roblox enum item `WeldConstraintPreserve.Touching`.
 @target(luau)
+/// Roblox enum item `WeldConstraintPreserve.Touching`.
 @luau.global("Enum.WeldConstraintPreserve.Touching")
 pub fn touching() -> WeldConstraintPreserve
 
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
-pub fn javascript_type_anchor(_: RobloxEnum(WeldConstraintPreserve), _: WeldConstraintPreserve) -> Nil {
+pub fn javascript_type_anchor(
+  _: RobloxEnum(WeldConstraintPreserve),
+  _: WeldConstraintPreserve,
+) -> Nil {
   Nil
 }
