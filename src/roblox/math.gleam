@@ -121,6 +121,46 @@ pub fn frexp(value: Float) -> Dynamic
 @luau.global("math.huge")
 pub fn huge() -> Float
 
+/// The value of Euler's number, e.
+///
+/// Luau: `math.e`
+/// See: https://create.roblox.com/docs/reference/engine/libraries/math#e
+@target(luau)
+@luau.global("math.e")
+pub fn e() -> Float
+
+/// A NaN value, as defined by the IEEE 754 standard.
+///
+/// Luau: `math.nan`
+/// See: https://create.roblox.com/docs/reference/engine/libraries/math#nan
+@target(luau)
+@luau.global("math.nan")
+pub fn nan() -> Float
+
+/// The value of the golden ratio.
+///
+/// Luau: `math.phi`
+/// See: https://create.roblox.com/docs/reference/engine/libraries/math#phi
+@target(luau)
+@luau.global("math.phi")
+pub fn phi() -> Float
+
+/// The value of the square root of 2.
+///
+/// Luau: `math.sqrt2`
+/// See: https://create.roblox.com/docs/reference/engine/libraries/math#sqrt2
+@target(luau)
+@luau.global("math.sqrt2")
+pub fn sqrt2() -> Float
+
+/// The value of tau, which is defined as 2 * math.pi.
+///
+/// Luau: `math.tau`
+/// See: https://create.roblox.com/docs/reference/engine/libraries/math#tau
+@target(luau)
+@luau.global("math.tau")
+pub fn tau() -> Float
+
 /// Returns x*2^e (e should be an integer).
 ///
 /// Luau: `math.ldexp`
@@ -184,6 +224,46 @@ pub fn max(a: Float, b: Float) -> Float
 @target(luau)
 @luau.global("math.min")
 pub fn min(a: Float, b: Float) -> Float
+
+/// Returns the maximum value among the numbers passed to the function.
+///
+/// Luau: `math.max`
+/// See: https://create.roblox.com/docs/reference/engine/libraries/math#max
+@target(luau)
+@luau.global("math.max")
+pub fn max3(a: Float, b: Float, c: Float) -> Float
+
+/// Returns the minimum value among the numbers passed to the function.
+///
+/// Luau: `math.min`
+/// See: https://create.roblox.com/docs/reference/engine/libraries/math#min
+@target(luau)
+@luau.global("math.min")
+pub fn min3(a: Float, b: Float, c: Float) -> Float
+
+/// Returns true if x is a finite number.
+///
+/// Luau: `math.isfinite`
+/// See: https://create.roblox.com/docs/reference/engine/libraries/math#isfinite
+@target(luau)
+@luau.global("math.isfinite")
+pub fn isfinite(value: Float) -> Bool
+
+/// Returns true if x is positive or negative infinity and false otherwise.
+///
+/// Luau: `math.isinf`
+/// See: https://create.roblox.com/docs/reference/engine/libraries/math#isinf
+@target(luau)
+@luau.global("math.isinf")
+pub fn isinf(value: Float) -> Bool
+
+/// Returns true if x is not a number (NaN) and false otherwise.
+///
+/// Luau: `math.isnan`
+/// See: https://create.roblox.com/docs/reference/engine/libraries/math#isnan
+@target(luau)
+@luau.global("math.isnan")
+pub fn isnan(value: Float) -> Bool
 
 /// Returns two numbers: the integral part of x and the fractional part of x.
 ///

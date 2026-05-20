@@ -2170,6 +2170,11 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "@luau/global/math.frexp",
       ),
       global_fn("huge", "math.huge", "", "Float", "@luau/global/math.huge"),
+      global_fn("e", "math.e", "", "Float", "@luau/global/math.e"),
+      global_fn("nan", "math.nan", "", "Float", "@luau/global/math.nan"),
+      global_fn("phi", "math.phi", "", "Float", "@luau/global/math.phi"),
+      global_fn("sqrt2", "math.sqrt2", "", "Float", "@luau/global/math.sqrt2"),
+      global_fn("tau", "math.tau", "", "Float", "@luau/global/math.tau"),
       global_fn(
         "ldexp",
         "math.ldexp",
@@ -2225,6 +2230,41 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "a: Float, b: Float",
         "Float",
         "@luau/global/math.min",
+      ),
+      global_fn(
+        "max3",
+        "math.max",
+        "a: Float, b: Float, c: Float",
+        "Float",
+        "@luau/global/math.max",
+      ),
+      global_fn(
+        "min3",
+        "math.min",
+        "a: Float, b: Float, c: Float",
+        "Float",
+        "@luau/global/math.min",
+      ),
+      global_fn(
+        "isfinite",
+        "math.isfinite",
+        "value: Float",
+        "Bool",
+        "@luau/global/math.isfinite",
+      ),
+      global_fn(
+        "isinf",
+        "math.isinf",
+        "value: Float",
+        "Bool",
+        "@luau/global/math.isinf",
+      ),
+      global_fn(
+        "isnan",
+        "math.isnan",
+        "value: Float",
+        "Bool",
+        "@luau/global/math.isnan",
       ),
       global_fn(
         "modf",
@@ -2931,6 +2971,13 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "@luau/global/coroutine.resume",
       ),
       global_fn(
+        "resume_with_args",
+        "coroutine.resume",
+        "thread: Thread, args: Dynamic",
+        "Dynamic",
+        "@luau/global/coroutine.resume",
+      ),
+      global_fn(
         "running",
         "coroutine.running",
         "",
@@ -2959,6 +3006,13 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "@luau/global/coroutine.yield",
       ),
       global_fn(
+        "yield_with_args",
+        "coroutine.yield",
+        "args: Dynamic",
+        "Dynamic",
+        "@luau/global/coroutine.yield",
+      ),
+      global_fn(
         "close",
         "coroutine.close",
         "thread: Thread",
@@ -2978,6 +3032,20 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "info",
         "debug.info",
         "level: Int, options: String",
+        "Dynamic",
+        "@luau/global/debug.info",
+      ),
+      global_fn(
+        "info_for_function",
+        "debug.info",
+        "callback: fn() -> Nil, options: String",
+        "Dynamic",
+        "@luau/global/debug.info",
+      ),
+      global_fn(
+        "info_for_thread",
+        "debug.info",
+        "thread: Thread, level: Int, options: String",
         "Dynamic",
         "@luau/global/debug.info",
       ),
@@ -3015,6 +3083,48 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "message: String, level: Int",
         "String",
         "@luau/global/debug.traceback",
+      ),
+      global_fn(
+        "traceback_for_thread",
+        "debug.traceback",
+        "thread: Thread, message: String",
+        "String",
+        "@luau/global/debug.traceback",
+      ),
+      global_fn(
+        "traceback_for_thread_with_level",
+        "debug.traceback",
+        "thread: Thread, message: String, level: Int",
+        "String",
+        "@luau/global/debug.traceback",
+      ),
+      global_fn(
+        "get_memory_category",
+        "debug.getmemorycategory",
+        "",
+        "String",
+        "@luau/global/debug.getmemorycategory",
+      ),
+      global_fn(
+        "set_memory_category",
+        "debug.setmemorycategory",
+        "tag: String",
+        "String",
+        "@luau/global/debug.setmemorycategory",
+      ),
+      global_fn(
+        "reset_memory_category",
+        "debug.resetmemorycategory",
+        "",
+        "Nil",
+        "@luau/global/debug.resetmemorycategory",
+      ),
+      global_fn(
+        "dump_code_size",
+        "debug.dumpcodesize",
+        "",
+        "Nil",
+        "@luau/global/debug.dumpcodesize",
       ),
     ]),
     #("os", [
@@ -3067,6 +3177,379 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "String",
         "@roblox/global/typeof",
       ),
+    ]),
+    #("vector", [
+      global_fn("zero", "vector.zero", "", "Vector", "@luau/global/vector.zero"),
+      global_fn("one", "vector.one", "", "Vector", "@luau/global/vector.one"),
+      global_fn(
+        "create",
+        "vector.create",
+        "x: Float, y: Float, z: Float",
+        "Vector",
+        "@luau/global/vector.create",
+      ),
+      global_fn(
+        "magnitude",
+        "vector.magnitude",
+        "value: Vector",
+        "Float",
+        "@luau/global/vector.magnitude",
+      ),
+      global_fn(
+        "normalize",
+        "vector.normalize",
+        "value: Vector",
+        "Vector",
+        "@luau/global/vector.normalize",
+      ),
+      global_fn(
+        "cross",
+        "vector.cross",
+        "a: Vector, b: Vector",
+        "Vector",
+        "@luau/global/vector.cross",
+      ),
+      global_fn(
+        "dot",
+        "vector.dot",
+        "a: Vector, b: Vector",
+        "Float",
+        "@luau/global/vector.dot",
+      ),
+      global_fn(
+        "angle",
+        "vector.angle",
+        "a: Vector, b: Vector",
+        "Float",
+        "@luau/global/vector.angle",
+      ),
+      global_fn(
+        "angle_with_axis",
+        "vector.angle",
+        "a: Vector, b: Vector, axis: Vector",
+        "Float",
+        "@luau/global/vector.angle",
+      ),
+      global_fn(
+        "floor",
+        "vector.floor",
+        "value: Vector",
+        "Vector",
+        "@luau/global/vector.floor",
+      ),
+      global_fn(
+        "ceil",
+        "vector.ceil",
+        "value: Vector",
+        "Vector",
+        "@luau/global/vector.ceil",
+      ),
+      global_fn(
+        "abs",
+        "vector.abs",
+        "value: Vector",
+        "Vector",
+        "@luau/global/vector.abs",
+      ),
+      global_fn(
+        "sign",
+        "vector.sign",
+        "value: Vector",
+        "Vector",
+        "@luau/global/vector.sign",
+      ),
+      global_fn(
+        "clamp",
+        "vector.clamp",
+        "value: Vector, min: Vector, max: Vector",
+        "Vector",
+        "@luau/global/vector.clamp",
+      ),
+      global_fn(
+        "lerp",
+        "vector.lerp",
+        "a: Vector, b: Vector, alpha: Float",
+        "Vector",
+        "@luau/global/vector.lerp",
+      ),
+      global_fn(
+        "max",
+        "vector.max",
+        "a: Vector, b: Vector",
+        "Vector",
+        "@luau/global/vector.max",
+      ),
+      global_fn(
+        "min",
+        "vector.min",
+        "a: Vector, b: Vector",
+        "Vector",
+        "@luau/global/vector.min",
+      ),
+    ]),
+    #("lua_globals", [
+      global_fn(
+        "interpreter_version",
+        "_VERSION",
+        "",
+        "String",
+        "@luau/global/_VERSION",
+      ),
+      global_fn("shared_table", "_G", "", "Dynamic", "@luau/global/_G"),
+      global_fn(
+        "assert_value",
+        "assert",
+        "value: Dynamic",
+        "Dynamic",
+        "@luau/global/assert",
+      ),
+      global_fn(
+        "assert_with_message",
+        "assert",
+        "value: Dynamic, message: String",
+        "Dynamic",
+        "@luau/global/assert",
+      ),
+      global_fn(
+        "error_message",
+        "error",
+        "message: Dynamic",
+        "Nil",
+        "@luau/global/error",
+      ),
+      global_fn(
+        "error_with_level",
+        "error",
+        "message: Dynamic, level: Int",
+        "Nil",
+        "@luau/global/error",
+      ),
+      global_fn("gcinfo", "gcinfo", "", "Float", "@luau/global/gcinfo"),
+      global_fn(
+        "getmetatable",
+        "getmetatable",
+        "value: Dynamic",
+        "Dynamic",
+        "@luau/global/getmetatable",
+      ),
+      global_fn(
+        "ipairs",
+        "ipairs",
+        "table: Dynamic",
+        "Dynamic",
+        "@luau/global/ipairs",
+      ),
+      global_fn(
+        "loadstring",
+        "loadstring",
+        "contents: String",
+        "Dynamic",
+        "@luau/global/loadstring",
+      ),
+      global_fn(
+        "loadstring_named",
+        "loadstring",
+        "contents: String, chunkname: String",
+        "Dynamic",
+        "@luau/global/loadstring",
+      ),
+      global_fn("newproxy", "newproxy", "", "Dynamic", "@luau/global/newproxy"),
+      global_fn(
+        "newproxy_with_metatable",
+        "newproxy",
+        "add_metatable: Bool",
+        "Dynamic",
+        "@luau/global/newproxy",
+      ),
+      global_fn("next", "next", "table: Dynamic", "Dynamic", "@luau/global/next"),
+      global_fn(
+        "next_from",
+        "next",
+        "table: Dynamic, last_key: Dynamic",
+        "Dynamic",
+        "@luau/global/next",
+      ),
+      global_fn("pairs", "pairs", "table: Dynamic", "Dynamic", "@luau/global/pairs"),
+      global_fn(
+        "pcall",
+        "pcall",
+        "callback: fn() -> a",
+        "Dynamic",
+        "@luau/global/pcall",
+      ),
+      global_fn("print", "print", "value: Dynamic", "Nil", "@luau/global/print"),
+      global_fn(
+        "rawequal",
+        "rawequal",
+        "a: Dynamic, b: Dynamic",
+        "Bool",
+        "@luau/global/rawequal",
+      ),
+      global_fn(
+        "rawget",
+        "rawget",
+        "table: Dynamic, index: Dynamic",
+        "Dynamic",
+        "@luau/global/rawget",
+      ),
+      global_fn("rawlen", "rawlen", "value: Dynamic", "Int", "@luau/global/rawlen"),
+      global_fn(
+        "rawset",
+        "rawset",
+        "table: Dynamic, index: Dynamic, value: Dynamic",
+        "Dynamic",
+        "@luau/global/rawset",
+      ),
+      global_fn(
+        "require_module",
+        "require",
+        "module: ModuleScript",
+        "Dynamic",
+        "@luau/global/require",
+      ),
+      global_fn(
+        "require_path",
+        "require",
+        "path: String",
+        "Dynamic",
+        "@luau/global/require",
+      ),
+      global_fn(
+        "require_asset",
+        "require",
+        "asset_id: Int",
+        "Dynamic",
+        "@luau/global/require",
+      ),
+      global_fn(
+        "select",
+        "select",
+        "index: Int, args: Dynamic",
+        "Dynamic",
+        "@luau/global/select",
+      ),
+      global_fn(
+        "select_arg_count",
+        "(function(...) return select('#', ...) end)",
+        "args: Dynamic",
+        "Int",
+        "@luau/global/select",
+      ),
+      global_fn(
+        "setmetatable",
+        "setmetatable",
+        "table: Dynamic, metatable: Dynamic",
+        "Dynamic",
+        "@luau/global/setmetatable",
+      ),
+      global_fn(
+        "tonumber",
+        "tonumber",
+        "value: Dynamic",
+        "Dynamic",
+        "@luau/global/tonumber",
+      ),
+      global_fn(
+        "tonumber_with_base",
+        "tonumber",
+        "value: Dynamic, base: Int",
+        "Dynamic",
+        "@luau/global/tonumber",
+      ),
+      global_fn(
+        "tostring",
+        "tostring",
+        "value: Dynamic",
+        "String",
+        "@luau/global/tostring",
+      ),
+      global_fn(
+        "unpack",
+        "unpack",
+        "list: Dynamic",
+        "Dynamic",
+        "@luau/global/unpack",
+      ),
+      global_fn(
+        "unpack_range",
+        "unpack",
+        "list: Dynamic, first: Int, last: Int",
+        "Dynamic",
+        "@luau/global/unpack",
+      ),
+      global_fn(
+        "xpcall",
+        "xpcall",
+        "callback: fn() -> a, handler: fn(Dynamic) -> Dynamic",
+        "Dynamic",
+        "@luau/global/xpcall",
+      ),
+      global_fn(
+        "collectgarbage",
+        "collectgarbage",
+        "operation: String",
+        "Dynamic",
+        "@luau/global/collectgarbage",
+      ),
+      global_fn("getfenv", "getfenv", "", "Dynamic", "@luau/global/getfenv"),
+      global_fn(
+        "getfenv_at",
+        "getfenv",
+        "stack: Int",
+        "Dynamic",
+        "@luau/global/getfenv",
+      ),
+      global_fn(
+        "setfenv",
+        "setfenv",
+        "target: Dynamic, environment: Dynamic",
+        "Dynamic",
+        "@luau/global/setfenv",
+      ),
+    ]),
+    #("roblox_globals", [
+      global_fn("game", "game", "", "DataModel", "@luau/global/game"),
+      global_fn(
+        "script",
+        "script",
+        "",
+        "LuaSourceContainer",
+        "@luau/global/script",
+      ),
+      global_fn("plugin", "plugin", "", "Plugin", "@luau/global/plugin"),
+      global_fn("shared", "shared", "", "Dynamic", "@luau/global/shared"),
+      global_fn(
+        "elapsed_time",
+        "elapsedTime",
+        "",
+        "Float",
+        "@luau/global/elapsedTime",
+      ),
+      global_fn(
+        "plugin_manager",
+        "PluginManager",
+        "",
+        "PluginManager",
+        "@luau/global/PluginManager",
+      ),
+      global_fn(
+        "settings",
+        "settings",
+        "",
+        "GlobalSettings",
+        "@luau/global/settings",
+      ),
+      global_fn("tick", "tick", "", "Float", "@luau/global/tick"),
+      global_fn("time", "time", "", "Float", "@luau/global/time"),
+      global_fn(
+        "user_settings",
+        "UserSettings",
+        "",
+        "UserSettings",
+        "@luau/global/UserSettings",
+      ),
+      global_fn("version", "version", "", "String", "@luau/global/version"),
+      global_fn("warn", "warn", "value: Dynamic", "Nil", "@luau/global/warn"),
     ]),
     #("buffer", [
       global_fn(
@@ -3297,13 +3780,32 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         string.contains(args, "Option(")
         || string.contains(return_type, "Option(")
       })
+    let needs_thread =
+      functions
+      |> list.any(fn(function) {
+        let GlobalFunction(args:, return_type:, ..) = function
+        string.contains(args, "Thread") || return_type == "Thread"
+      })
+    let needs_vector =
+      functions
+      |> list.any(fn(function) {
+        let GlobalFunction(args:, return_type:, ..) = function
+        string.contains(args, "Vector") || return_type == "Vector"
+      })
+    let extra_imports = module_extra_imports(module)
     let imports =
       []
+      |> list.append(extra_imports)
+      |> prepend_if(
+        needs_thread && module != "coroutine",
+        "import roblox/coroutine.{type Thread}",
+      )
       |> prepend_if(needs_option, "import roblox/option.{type Option}")
       |> prepend_if(needs_dynamic, "import roblox/dynamic.{type Dynamic}")
       |> prepend_if(needs_buffer, "import roblox/types.{type Buffer}")
     let type_lines = case module {
       "coroutine" -> ["pub type Thread", ""]
+      "vector" -> ["pub type Vector", ""]
       _ -> []
     }
     let lines =
@@ -3322,10 +3824,16 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
       out_dir <> "/" <> module <> ".gleam",
       lines,
       javascript_type_anchor(
-        case needs_buffer {
-          True -> ["Buffer"]
-          False -> []
-        },
+        list.append(
+          case needs_buffer {
+            True -> ["Buffer"]
+            False -> []
+          },
+          case needs_vector {
+            True -> ["Vector"]
+            False -> []
+          },
+        ),
         needs_option,
         needs_dynamic,
         False,
@@ -3358,6 +3866,13 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
     ),
     global_fn(
       "wait",
+      "task.wait",
+      "",
+      "Float",
+      "@roblox/global/task.wait",
+    ),
+    global_fn(
+      "wait_for",
       "task.wait",
       "duration: Float",
       "Float",
@@ -3442,6 +3957,16 @@ fn global_fn(
   doc_key: String,
 ) -> GlobalFunction {
   GlobalFunction(name, luau, args, return_type, doc_key)
+}
+
+fn module_extra_imports(module: String) -> List(String) {
+  case module {
+    "lua_globals" -> ["import roblox/types.{type ModuleScript}"]
+    "roblox_globals" -> [
+      "import roblox/types.{type DataModel, type GlobalSettings, type LuaSourceContainer, type Plugin, type PluginManager, type UserSettings}",
+    ]
+    _ -> []
+  }
 }
 
 fn map_type(val_type: ApiType) -> #(String, List(String)) {

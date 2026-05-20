@@ -19,6 +19,14 @@ pub fn create(callback: fn() -> a) -> Thread
 @luau.global("coroutine.resume")
 pub fn resume(thread: Thread) -> Dynamic
 
+/// Starts or continues the execution of coroutine co.
+///
+/// Luau: `coroutine.resume`
+/// See: https://create.roblox.com/docs/reference/engine/libraries/coroutine#resume
+@target(luau)
+@luau.global("coroutine.resume")
+pub fn resume_with_args(thread: Thread, args: Dynamic) -> Dynamic
+
 /// Returns the running coroutine.
 ///
 /// Luau: `coroutine.running`
@@ -50,6 +58,14 @@ pub fn wrap(callback: fn() -> a) -> fn() -> Dynamic
 @target(luau)
 @luau.global("coroutine.yield")
 pub fn yield() -> Dynamic
+
+/// Suspends execution of the coroutine.
+///
+/// Luau: `coroutine.yield`
+/// See: https://create.roblox.com/docs/reference/engine/libraries/coroutine#yield
+@target(luau)
+@luau.global("coroutine.yield")
+pub fn yield_with_args(args: Dynamic) -> Dynamic
 
 /// Closes and puts the provided coroutine in a dead state.
 ///

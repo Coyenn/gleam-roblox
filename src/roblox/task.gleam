@@ -31,7 +31,15 @@ pub fn delay(duration: Float, callback: fn() -> a) -> Thread
 /// See: https://create.roblox.com/docs/reference/engine/libraries/task#wait
 @target(luau)
 @luau.global("task.wait")
-pub fn wait(duration: Float) -> Float
+pub fn wait() -> Float
+
+/// Yields the current thread without throttling.
+///
+/// Luau: `task.wait`
+/// See: https://create.roblox.com/docs/reference/engine/libraries/task#wait
+@target(luau)
+@luau.global("task.wait")
+pub fn wait_for(duration: Float) -> Float
 
 /// Cancels a thread, preventing it from being resumed.
 ///
