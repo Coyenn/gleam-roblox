@@ -65,9 +65,9 @@ pub fn material_enum_test() {
 
 @target(luau)
 pub fn generated_api_signatures_test() {
-  let assert _: fn(Part, String) -> Part = part.set_name
-  let assert _: fn(Part, Bool) -> Part = part.set_anchored
-  let assert _: fn(Players, BanConfig) -> Nil = players.ban_async
+  let _: fn(Part, String) -> Part = part.set_name
+  let _: fn(Part, Bool) -> Part = part.set_anchored
+  let _: fn(Players, BanConfig) -> Nil = players.ban_async
   let _property_type: Property(Part) = create_part.name("x")
   Nil
 }
