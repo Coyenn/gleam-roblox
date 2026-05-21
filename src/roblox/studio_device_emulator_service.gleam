@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: StudioDeviceEmulatorService) -> Instance
 
 @target(luau)
-/// Treats `StudioDeviceEmulatorService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StudioDeviceEmulatorService) -> Object
-
-@target(luau)
 /// Gets Roblox property `StudioDeviceEmulatorService.HasMultiTouchStarted`.
 ///
 /// Roblox: `StudioDeviceEmulatorService.HasMultiTouchStarted`

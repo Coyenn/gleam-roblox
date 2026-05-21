@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ScreenshotHud) -> Instance
 
 @target(luau)
-/// Treats `ScreenshotHud` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ScreenshotHud) -> Object
-
-@target(luau)
 /// Gets Roblox property `ScreenshotHud.CameraButtonIcon`.
 ///
 /// Asset ID of the icon used for the camera button.

@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `DataStoreVersionPages` as its Roblox ancestor `Pages`.
-@luau.global("(function(x) return x end)")
-pub fn as_pages(instance: DataStoreVersionPages) -> Pages
-
-@target(luau)
 /// Treats `DataStoreVersionPages` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: DataStoreVersionPages) -> Instance
-
-@target(luau)
-/// Treats `DataStoreVersionPages` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DataStoreVersionPages) -> Object
 
 @target(luau)
 /// Gets Roblox property `Pages.IsFinished`.

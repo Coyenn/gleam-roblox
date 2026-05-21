@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: Message) -> Instance
 
 @target(luau)
-/// Treats `Message` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Message) -> Object
-
-@target(luau)
 /// Gets Roblox property `Message.Text`.
 ///
 /// Sets the text of a Message or Hint.

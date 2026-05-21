@@ -18,34 +18,9 @@ import roblox/types.{
 pub fn new() -> UIPageLayout
 
 @target(luau)
-/// Treats `UIPageLayout` as its Roblox ancestor `UIGridStyleLayout`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_grid_style_layout(instance: UIPageLayout) -> UIGridStyleLayout
-
-@target(luau)
-/// Treats `UIPageLayout` as its Roblox ancestor `UILayout`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_layout(instance: UIPageLayout) -> UILayout
-
-@target(luau)
-/// Treats `UIPageLayout` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UIPageLayout) -> UIComponent
-
-@target(luau)
-/// Treats `UIPageLayout` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UIPageLayout) -> UIBase
-
-@target(luau)
 /// Treats `UIPageLayout` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UIPageLayout) -> Instance
-
-@target(luau)
-/// Treats `UIPageLayout` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UIPageLayout) -> Object
 
 @target(luau)
 /// Gets Roblox property `UIPageLayout.Animated`.

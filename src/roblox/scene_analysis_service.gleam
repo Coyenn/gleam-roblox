@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: SceneAnalysisService) -> Instance
 
 @target(luau)
-/// Treats `SceneAnalysisService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SceneAnalysisService) -> Object
-
-@target(luau)
 /// Roblox: `SceneAnalysisService.GetAnimationMemoryAsync`
 /// ThreadSafety: Unsafe
 /// Tags: Yields

@@ -20,11 +20,6 @@ pub fn new() -> CompositeValueCurve
 pub fn as_instance(instance: CompositeValueCurve) -> Instance
 
 @target(luau)
-/// Treats `CompositeValueCurve` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CompositeValueCurve) -> Object
-
-@target(luau)
 /// Gets Roblox property `CompositeValueCurve.CurveType`.
 ///
 /// The type of value animated by this CompositeValueCurve.

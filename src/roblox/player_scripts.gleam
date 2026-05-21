@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: PlayerScripts) -> Instance
 
 @target(luau)
-/// Treats `PlayerScripts` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PlayerScripts) -> Object
-
-@target(luau)
 /// Unregisters all ComputerCameraMovementMode enums from the experience's settings menu.
 ///
 /// Roblox: `PlayerScripts.ClearComputerCameraMovementModes`

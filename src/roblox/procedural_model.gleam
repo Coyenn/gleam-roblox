@@ -17,24 +17,9 @@ import roblox/types.{
 pub fn new() -> ProceduralModel
 
 @target(luau)
-/// Treats `ProceduralModel` as its Roblox ancestor `Model`.
-@luau.global("(function(x) return x end)")
-pub fn as_model(instance: ProceduralModel) -> Model
-
-@target(luau)
-/// Treats `ProceduralModel` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: ProceduralModel) -> PVInstance
-
-@target(luau)
 /// Treats `ProceduralModel` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ProceduralModel) -> Instance
-
-@target(luau)
-/// Treats `ProceduralModel` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ProceduralModel) -> Object
 
 @target(luau)
 /// Gets Roblox property `ProceduralModel.GenerationError`.

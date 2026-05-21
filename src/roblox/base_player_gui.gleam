@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: BasePlayerGui) -> Instance
 
 @target(luau)
-/// Treats `BasePlayerGui` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BasePlayerGui) -> Object
-
-@target(luau)
 /// Returns a list of all GuiObject instances occupying the given point on the screen.
 ///
 /// Roblox: `BasePlayerGui.GetGuiObjectsAtPosition`

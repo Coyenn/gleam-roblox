@@ -13,34 +13,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `SkateboardPlatform` as its Roblox ancestor `Part`.
-@luau.global("(function(x) return x end)")
-pub fn as_part(instance: SkateboardPlatform) -> Part
-
-@target(luau)
-/// Treats `SkateboardPlatform` as its Roblox ancestor `FormFactorPart`.
-@luau.global("(function(x) return x end)")
-pub fn as_form_factor_part(instance: SkateboardPlatform) -> FormFactorPart
-
-@target(luau)
-/// Treats `SkateboardPlatform` as its Roblox ancestor `BasePart`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_part(instance: SkateboardPlatform) -> BasePart
-
-@target(luau)
-/// Treats `SkateboardPlatform` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: SkateboardPlatform) -> PVInstance
-
-@target(luau)
 /// Treats `SkateboardPlatform` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SkateboardPlatform) -> Instance
-
-@target(luau)
-/// Treats `SkateboardPlatform` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SkateboardPlatform) -> Object
 
 @target(luau)
 /// Gets Roblox property `SkateboardPlatform.Controller`.

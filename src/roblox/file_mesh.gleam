@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> FileMesh
 
 @target(luau)
-/// Treats `FileMesh` as its Roblox ancestor `DataModelMesh`.
-@luau.global("(function(x) return x end)")
-pub fn as_data_model_mesh(instance: FileMesh) -> DataModelMesh
-
-@target(luau)
 /// Treats `FileMesh` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: FileMesh) -> Instance
-
-@target(luau)
-/// Treats `FileMesh` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: FileMesh) -> Object
 
 @target(luau)
 /// Gets Roblox property `FileMesh.MeshId`.

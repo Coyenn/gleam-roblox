@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: DataStoreInfo) -> Instance
 
 @target(luau)
-/// Treats `DataStoreInfo` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DataStoreInfo) -> Object
-
-@target(luau)
 /// Gets Roblox property `DataStoreInfo.CreatedTime`.
 ///
 /// Indicates when the data store was created in milliseconds since epoch.

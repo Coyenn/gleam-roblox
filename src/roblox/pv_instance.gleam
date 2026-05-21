@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PVInstance) -> Instance
 
 @target(luau)
-/// Treats `PVInstance` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PVInstance) -> Object
-
-@target(luau)
 /// Gets the pivot of a PVInstance.
 ///
 /// Roblox: `PVInstance.GetPivot`

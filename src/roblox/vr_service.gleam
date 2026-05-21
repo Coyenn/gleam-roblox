@@ -15,11 +15,6 @@ import roblox/types.{
 pub fn as_instance(instance: VRService) -> Instance
 
 @target(luau)
-/// Treats `VRService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VRService) -> Object
-
-@target(luau)
 /// Gets Roblox property `VRService.AutomaticScaling`.
 ///
 /// Automatically adjusts scaling in VR to align the player with their avatar.

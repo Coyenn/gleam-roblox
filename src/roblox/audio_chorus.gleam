@@ -20,11 +20,6 @@ pub fn new() -> AudioChorus
 pub fn as_instance(instance: AudioChorus) -> Instance
 
 @target(luau)
-/// Treats `AudioChorus` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioChorus) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioChorus.Bypass`.
 ///
 /// Whether audio streams are passed-through unaffected by this effect.

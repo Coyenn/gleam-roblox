@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: FacialAnimationRecordingService) -> Instance
 
 @target(luau)
-/// Treats `FacialAnimationRecordingService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: FacialAnimationRecordingService) -> Object
-
-@target(luau)
 /// Gets Roblox property `FacialAnimationRecordingService.BiometricDataConsent`.
 ///
 /// Roblox: `FacialAnimationRecordingService.BiometricDataConsent`

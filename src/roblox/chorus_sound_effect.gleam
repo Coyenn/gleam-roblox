@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> ChorusSoundEffect
 
 @target(luau)
-/// Treats `ChorusSoundEffect` as its Roblox ancestor `SoundEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_sound_effect(instance: ChorusSoundEffect) -> SoundEffect
-
-@target(luau)
 /// Treats `ChorusSoundEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ChorusSoundEffect) -> Instance
-
-@target(luau)
-/// Treats `ChorusSoundEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ChorusSoundEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `ChorusSoundEffect.Depth`.

@@ -18,11 +18,6 @@ import roblox/types.{
 pub fn as_instance(instance: UserGameSettings) -> Instance
 
 @target(luau)
-/// Treats `UserGameSettings` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UserGameSettings) -> Object
-
-@target(luau)
 /// Gets Roblox property `UserGameSettings.AllTutorialsDisabled`.
 ///
 /// Roblox: `UserGameSettings.AllTutorialsDisabled`

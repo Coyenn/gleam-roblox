@@ -19,34 +19,9 @@ import roblox/types.{
 pub fn new() -> SpawnLocation
 
 @target(luau)
-/// Treats `SpawnLocation` as its Roblox ancestor `Part`.
-@luau.global("(function(x) return x end)")
-pub fn as_part(instance: SpawnLocation) -> Part
-
-@target(luau)
-/// Treats `SpawnLocation` as its Roblox ancestor `FormFactorPart`.
-@luau.global("(function(x) return x end)")
-pub fn as_form_factor_part(instance: SpawnLocation) -> FormFactorPart
-
-@target(luau)
-/// Treats `SpawnLocation` as its Roblox ancestor `BasePart`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_part(instance: SpawnLocation) -> BasePart
-
-@target(luau)
-/// Treats `SpawnLocation` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: SpawnLocation) -> PVInstance
-
-@target(luau)
 /// Treats `SpawnLocation` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SpawnLocation) -> Instance
-
-@target(luau)
-/// Treats `SpawnLocation` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SpawnLocation) -> Object
 
 @target(luau)
 /// Gets Roblox property `SpawnLocation.AllowTeamChangeOnTouch`.

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: WebSocketService) -> Instance
 
 @target(luau)
-/// Treats `WebSocketService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: WebSocketService) -> Object
-
-@target(luau)
 /// Roblox: `WebSocketService.CreateClient`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/WebSocketService#CreateClient

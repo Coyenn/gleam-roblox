@@ -16,21 +16,9 @@ import roblox/types.{
 pub fn new() -> ReflectionMetadataClass
 
 @target(luau)
-/// Treats `ReflectionMetadataClass` as its Roblox ancestor `ReflectionMetadataItem`.
-@luau.global("(function(x) return x end)")
-pub fn as_reflection_metadata_item(
-  instance: ReflectionMetadataClass,
-) -> ReflectionMetadataItem
-
-@target(luau)
 /// Treats `ReflectionMetadataClass` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ReflectionMetadataClass) -> Instance
-
-@target(luau)
-/// Treats `ReflectionMetadataClass` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ReflectionMetadataClass) -> Object
 
 @target(luau)
 /// Gets Roblox property `ReflectionMetadataClass.ExplorerImageIndex`.

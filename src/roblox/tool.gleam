@@ -17,29 +17,9 @@ import roblox/types.{
 pub fn new() -> Tool
 
 @target(luau)
-/// Treats `Tool` as its Roblox ancestor `BackpackItem`.
-@luau.global("(function(x) return x end)")
-pub fn as_backpack_item(instance: Tool) -> BackpackItem
-
-@target(luau)
-/// Treats `Tool` as its Roblox ancestor `Model`.
-@luau.global("(function(x) return x end)")
-pub fn as_model(instance: Tool) -> Model
-
-@target(luau)
-/// Treats `Tool` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: Tool) -> PVInstance
-
-@target(luau)
 /// Treats `Tool` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Tool) -> Instance
-
-@target(luau)
-/// Treats `Tool` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Tool) -> Object
 
 @target(luau)
 /// Gets Roblox property `Tool.CanBeDropped`.

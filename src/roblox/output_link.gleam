@@ -3,11 +3,6 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{type Object, type OutputLink}
 
 @target(luau)
-/// Treats `OutputLink` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: OutputLink) -> Object
-
-@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.

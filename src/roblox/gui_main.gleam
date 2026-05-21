@@ -11,34 +11,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `GuiMain` as its Roblox ancestor `ScreenGui`.
-@luau.global("(function(x) return x end)")
-pub fn as_screen_gui(instance: GuiMain) -> ScreenGui
-
-@target(luau)
-/// Treats `GuiMain` as its Roblox ancestor `LayerCollector`.
-@luau.global("(function(x) return x end)")
-pub fn as_layer_collector(instance: GuiMain) -> LayerCollector
-
-@target(luau)
-/// Treats `GuiMain` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: GuiMain) -> GuiBase2d
-
-@target(luau)
-/// Treats `GuiMain` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: GuiMain) -> GuiBase
-
-@target(luau)
 /// Treats `GuiMain` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: GuiMain) -> Instance
-
-@target(luau)
-/// Treats `GuiMain` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GuiMain) -> Object
 
 @target(luau)
 /// Gets Roblox property `ScreenGui.ClipToDeviceSafeArea`.

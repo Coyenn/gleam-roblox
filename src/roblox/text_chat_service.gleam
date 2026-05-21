@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: TextChatService) -> Instance
 
 @target(luau)
-/// Treats `TextChatService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TextChatService) -> Object
-
-@target(luau)
 /// Gets Roblox property `TextChatService.ChatTranslationEnabled`.
 ///
 /// Determines whether a user has chat translation enabled.

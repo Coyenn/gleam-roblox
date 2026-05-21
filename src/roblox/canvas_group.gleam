@@ -19,29 +19,9 @@ import roblox/types.{
 pub fn new() -> CanvasGroup
 
 @target(luau)
-/// Treats `CanvasGroup` as its Roblox ancestor `GuiObject`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_object(instance: CanvasGroup) -> GuiObject
-
-@target(luau)
-/// Treats `CanvasGroup` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: CanvasGroup) -> GuiBase2d
-
-@target(luau)
-/// Treats `CanvasGroup` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: CanvasGroup) -> GuiBase
-
-@target(luau)
 /// Treats `CanvasGroup` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: CanvasGroup) -> Instance
-
-@target(luau)
-/// Treats `CanvasGroup` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CanvasGroup) -> Object
 
 @target(luau)
 /// Gets Roblox property `CanvasGroup.GroupColor3`.

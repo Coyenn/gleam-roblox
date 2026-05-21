@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> DepthOfFieldEffect
 
 @target(luau)
-/// Treats `DepthOfFieldEffect` as its Roblox ancestor `PostEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_post_effect(instance: DepthOfFieldEffect) -> PostEffect
-
-@target(luau)
 /// Treats `DepthOfFieldEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: DepthOfFieldEffect) -> Instance
-
-@target(luau)
-/// Treats `DepthOfFieldEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DepthOfFieldEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `DepthOfFieldEffect.FarIntensity`.

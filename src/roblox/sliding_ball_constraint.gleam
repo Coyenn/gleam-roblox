@@ -9,19 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `SlidingBallConstraint` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: SlidingBallConstraint) -> Constraint
-
-@target(luau)
 /// Treats `SlidingBallConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SlidingBallConstraint) -> Instance
-
-@target(luau)
-/// Treats `SlidingBallConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SlidingBallConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `SlidingBallConstraint.ActuatorType`.

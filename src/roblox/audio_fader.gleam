@@ -20,11 +20,6 @@ pub fn new() -> AudioFader
 pub fn as_instance(instance: AudioFader) -> Instance
 
 @target(luau)
-/// Treats `AudioFader` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioFader) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioFader.Bypass`.
 ///
 /// Whether audio streams are passed-through unaffected by this effect.

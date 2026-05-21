@@ -15,29 +15,9 @@ import roblox/types.{
 pub fn new() -> UITextSizeConstraint
 
 @target(luau)
-/// Treats `UITextSizeConstraint` as its Roblox ancestor `UIConstraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_constraint(instance: UITextSizeConstraint) -> UIConstraint
-
-@target(luau)
-/// Treats `UITextSizeConstraint` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UITextSizeConstraint) -> UIComponent
-
-@target(luau)
-/// Treats `UITextSizeConstraint` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UITextSizeConstraint) -> UIBase
-
-@target(luau)
 /// Treats `UITextSizeConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UITextSizeConstraint) -> Instance
-
-@target(luau)
-/// Treats `UITextSizeConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UITextSizeConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `UITextSizeConstraint.MaxTextSize`.

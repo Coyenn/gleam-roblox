@@ -16,11 +16,6 @@ import roblox/types.{
 pub fn as_instance(instance: RecommendationService) -> Instance
 
 @target(luau)
-/// Treats `RecommendationService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RecommendationService) -> Object
-
-@target(luau)
 /// Roblox: `RecommendationService.LogActionEvent`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RecommendationService#LogActionEvent

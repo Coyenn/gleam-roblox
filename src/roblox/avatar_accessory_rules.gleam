@@ -22,11 +22,6 @@ pub fn new() -> AvatarAccessoryRules
 pub fn as_instance(instance: AvatarAccessoryRules) -> Instance
 
 @target(luau)
-/// Treats `AvatarAccessoryRules` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AvatarAccessoryRules) -> Object
-
-@target(luau)
 /// Gets Roblox property `AvatarAccessoryRules.AccessoryMode`.
 ///
 /// Roblox: `AvatarAccessoryRules.AccessoryMode`

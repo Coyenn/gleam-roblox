@@ -17,24 +17,9 @@ import roblox/types.{
 pub fn new() -> UIStroke
 
 @target(luau)
-/// Treats `UIStroke` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UIStroke) -> UIComponent
-
-@target(luau)
-/// Treats `UIStroke` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UIStroke) -> UIBase
-
-@target(luau)
 /// Treats `UIStroke` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UIStroke) -> Instance
-
-@target(luau)
-/// Treats `UIStroke` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UIStroke) -> Object
 
 @target(luau)
 /// Gets Roblox property `UIStroke.ApplyStrokeMode`.

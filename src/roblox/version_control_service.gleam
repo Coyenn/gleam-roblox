@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: VersionControlService) -> Instance
 
 @target(luau)
-/// Treats `VersionControlService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VersionControlService) -> Object
-
-@target(luau)
 /// Gets Roblox property `VersionControlService.ScriptCollabEnabled`.
 ///
 /// Roblox: `VersionControlService.ScriptCollabEnabled`

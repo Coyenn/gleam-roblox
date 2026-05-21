@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: LiveSyncService) -> Instance
 
 @target(luau)
-/// Treats `LiveSyncService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: LiveSyncService) -> Object
-
-@target(luau)
 /// Gets Roblox property `LiveSyncService.HasSyncedInstances`.
 ///
 /// Roblox: `LiveSyncService.HasSyncedInstances`

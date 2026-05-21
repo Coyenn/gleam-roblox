@@ -20,11 +20,6 @@ pub fn new() -> StyleQuery
 pub fn as_instance(instance: StyleQuery) -> Instance
 
 @target(luau)
-/// Treats `StyleQuery` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StyleQuery) -> Object
-
-@target(luau)
 /// Gets Roblox property `StyleQuery.IsActive`.
 ///
 /// A boolean that determines whether a StyleRule.Selector of @ will match the StyleQuery name.

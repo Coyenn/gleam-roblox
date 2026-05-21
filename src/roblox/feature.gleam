@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: Feature) -> Instance
 
 @target(luau)
-/// Treats `Feature` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Feature) -> Object
-
-@target(luau)
 /// Gets Roblox property `Feature.FaceId`.
 ///
 /// Sets what side of the Parent the object is on.

@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: SoundService) -> Instance
 
 @target(luau)
-/// Treats `SoundService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SoundService) -> Object
-
-@target(luau)
 /// Gets Roblox property `SoundService.AcousticSimulationEnabled`.
 ///
 /// Determines whether acoustic simulation is enabled globally in the advanced audio system.

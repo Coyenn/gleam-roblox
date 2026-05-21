@@ -15,11 +15,6 @@ import roblox/types.{
 pub fn as_instance(instance: TextService) -> Instance
 
 @target(luau)
-/// Treats `TextService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TextService) -> Object
-
-@target(luau)
 /// Computes the Vector2 dimensions (in pixels) that will be taken up with text when using the specified formatting parameters and size constraints.
 ///
 /// Roblox: `TextService.GetTextSize`

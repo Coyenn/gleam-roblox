@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> Torque
 
 @target(luau)
-/// Treats `Torque` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: Torque) -> Constraint
-
-@target(luau)
 /// Treats `Torque` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Torque) -> Instance
-
-@target(luau)
-/// Treats `Torque` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Torque) -> Object
 
 @target(luau)
 /// Gets Roblox property `Torque.RelativeTo`.

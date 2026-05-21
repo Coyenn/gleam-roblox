@@ -20,11 +20,6 @@ pub fn new() -> BindableFunction
 pub fn as_instance(instance: BindableFunction) -> Instance
 
 @target(luau)
-/// Treats `BindableFunction` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BindableFunction) -> Object
-
-@target(luau)
 /// Invokes the BindableFunction which in turn calls the OnInvoke callback, returning any values returned by the callback.
 ///
 /// Roblox: `BindableFunction.Invoke`

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PackageLink) -> Instance
 
 @target(luau)
-/// Treats `PackageLink` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PackageLink) -> Object
-
-@target(luau)
 /// Gets Roblox property `PackageLink.AutoUpdate`.
 ///
 /// When this property is set to true, the package associated with the given PackageLink automatically updates to the latest version.

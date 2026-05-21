@@ -20,11 +20,6 @@ pub fn new() -> AvatarRules
 pub fn as_instance(instance: AvatarRules) -> Instance
 
 @target(luau)
-/// Treats `AvatarRules` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AvatarRules) -> Object
-
-@target(luau)
 /// Gets Roblox property `AvatarRules.AvatarType`.
 ///
 /// Roblox: `AvatarRules.AvatarType`

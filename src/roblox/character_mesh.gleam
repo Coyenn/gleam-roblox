@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> CharacterMesh
 
 @target(luau)
-/// Treats `CharacterMesh` as its Roblox ancestor `CharacterAppearance`.
-@luau.global("(function(x) return x end)")
-pub fn as_character_appearance(instance: CharacterMesh) -> CharacterAppearance
-
-@target(luau)
 /// Treats `CharacterMesh` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: CharacterMesh) -> Instance
-
-@target(luau)
-/// Treats `CharacterMesh` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CharacterMesh) -> Object
 
 @target(luau)
 /// Gets Roblox property `CharacterMesh.BaseTextureContent`.

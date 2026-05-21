@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PointsService) -> Instance
 
 @target(luau)
-/// Treats `PointsService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PointsService) -> Object
-
-@target(luau)
 /// Fires when points have been successfully awarded to a player, while also passing along the updated balance of points the player has in the current game and all games.
 ///
 /// Roblox: `PointsService.PointsAwarded`

@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: GeometryService) -> Instance
 
 @target(luau)
-/// Treats `GeometryService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GeometryService) -> Object
-
-@target(luau)
 /// Returns a table of Constraints and Attachments which you may choose to preserve, along with their respective parents.
 ///
 /// Roblox: `GeometryService.CalculateConstraintsToPreserve`

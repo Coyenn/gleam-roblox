@@ -12,24 +12,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `TriangleMeshPart` as its Roblox ancestor `BasePart`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_part(instance: TriangleMeshPart) -> BasePart
-
-@target(luau)
-/// Treats `TriangleMeshPart` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: TriangleMeshPart) -> PVInstance
-
-@target(luau)
 /// Treats `TriangleMeshPart` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: TriangleMeshPart) -> Instance
-
-@target(luau)
-/// Treats `TriangleMeshPart` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TriangleMeshPart) -> Object
 
 @target(luau)
 /// Gets Roblox property `TriangleMeshPart.CollisionFidelity`.

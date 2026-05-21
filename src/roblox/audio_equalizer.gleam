@@ -20,11 +20,6 @@ pub fn new() -> AudioEqualizer
 pub fn as_instance(instance: AudioEqualizer) -> Instance
 
 @target(luau)
-/// Treats `AudioEqualizer` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioEqualizer) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioEqualizer.Bypass`.
 ///
 /// Whether audio streams are passed-through unaffected by this effect.

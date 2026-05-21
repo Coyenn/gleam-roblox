@@ -20,11 +20,6 @@ pub fn new() -> AudioReverb
 pub fn as_instance(instance: AudioReverb) -> Instance
 
 @target(luau)
-/// Treats `AudioReverb` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioReverb) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioReverb.Bypass`.
 ///
 /// Whether audio streams are passed-through unaffected by this effect.

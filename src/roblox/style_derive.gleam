@@ -20,11 +20,6 @@ pub fn new() -> StyleDerive
 pub fn as_instance(instance: StyleDerive) -> Instance
 
 @target(luau)
-/// Treats `StyleDerive` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StyleDerive) -> Object
-
-@target(luau)
 /// Gets Roblox property `StyleDerive.Priority`.
 ///
 /// A number that determines how style properties inherited through this StyleDerive apply relative to the same properties inherited through other StyleDerives.

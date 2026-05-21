@@ -20,11 +20,6 @@ pub fn new() -> Wire
 pub fn as_instance(instance: Wire) -> Instance
 
 @target(luau)
-/// Treats `Wire` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Wire) -> Object
-
-@target(luau)
 /// Gets Roblox property `Wire.Connected`.
 ///
 /// Denotes whether the Wire is carrying a stream of data.

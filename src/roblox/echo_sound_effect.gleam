@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> EchoSoundEffect
 
 @target(luau)
-/// Treats `EchoSoundEffect` as its Roblox ancestor `SoundEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_sound_effect(instance: EchoSoundEffect) -> SoundEffect
-
-@target(luau)
 /// Treats `EchoSoundEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: EchoSoundEffect) -> Instance
-
-@target(luau)
-/// Treats `EchoSoundEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: EchoSoundEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `EchoSoundEffect.Delay`.

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: GuiBase) -> Instance
 
 @target(luau)
-/// Treats `GuiBase` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GuiBase) -> Object
-
-@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.

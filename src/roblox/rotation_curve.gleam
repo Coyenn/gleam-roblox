@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Object, type OptionCoordinateFrame,
+  type Actor, type CoordinateFrame, type Instance, type Object,
   type RotationCurve, type RotationCurveKey, type SecurityCapabilities,
   type UniqueId,
 }
@@ -19,11 +19,6 @@ pub fn new() -> RotationCurve
 /// Treats `RotationCurve` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: RotationCurve) -> Instance
-
-@target(luau)
-/// Treats `RotationCurve` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RotationCurve) -> Object
 
 @target(luau)
 /// Gets Roblox property `RotationCurve.Length`.
@@ -96,7 +91,7 @@ pub fn get_keys(instance: RotationCurve) -> List(Dynamic)
 pub fn get_value_at_time(
   instance: RotationCurve,
   time: Float,
-) -> OptionCoordinateFrame
+) -> Option(CoordinateFrame)
 
 @target(luau)
 /// Adds the key passed as an argument to this curve. If a key at the same time is found, it will be replaced.
@@ -1074,7 +1069,7 @@ pub fn javascript_type_anchor(
   _: UniqueId,
   _: SecurityCapabilities,
   _: RotationCurveKey,
-  _: OptionCoordinateFrame,
+  _: CoordinateFrame,
   _: RotationCurve,
   _: Object,
   _: Option(Nil),

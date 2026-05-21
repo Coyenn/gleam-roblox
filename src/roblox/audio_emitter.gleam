@@ -21,11 +21,6 @@ pub fn new() -> AudioEmitter
 pub fn as_instance(instance: AudioEmitter) -> Instance
 
 @target(luau)
-/// Treats `AudioEmitter` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioEmitter) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioEmitter.AcousticSimulationEnabled`.
 ///
 /// Determines whether acoustic simulation should be used for this AudioEmitter.

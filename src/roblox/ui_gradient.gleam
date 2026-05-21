@@ -16,24 +16,9 @@ import roblox/types.{
 pub fn new() -> UIGradient
 
 @target(luau)
-/// Treats `UIGradient` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UIGradient) -> UIComponent
-
-@target(luau)
-/// Treats `UIGradient` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UIGradient) -> UIBase
-
-@target(luau)
 /// Treats `UIGradient` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UIGradient) -> Instance
-
-@target(luau)
-/// Treats `UIGradient` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UIGradient) -> Object
 
 @target(luau)
 /// Gets Roblox property `UIGradient.Color`.

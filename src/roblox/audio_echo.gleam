@@ -20,11 +20,6 @@ pub fn new() -> AudioEcho
 pub fn as_instance(instance: AudioEcho) -> Instance
 
 @target(luau)
-/// Treats `AudioEcho` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioEcho) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioEcho.Bypass`.
 ///
 /// Whether audio streams are passed-through unaffected by this effect.

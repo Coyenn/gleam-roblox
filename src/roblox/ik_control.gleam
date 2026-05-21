@@ -20,11 +20,6 @@ pub fn new() -> IKControl
 pub fn as_instance(instance: IKControl) -> Instance
 
 @target(luau)
-/// Treats `IKControl` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: IKControl) -> Object
-
-@target(luau)
 /// Gets Roblox property `IKControl.ChainRoot`.
 ///
 /// The last part that you are interested in moving your character. For example, the upper arm. Must be an ancestor of EndEffector and be a BasePart or a Bone in your character.

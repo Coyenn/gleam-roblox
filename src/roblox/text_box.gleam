@@ -22,29 +22,9 @@ import roblox/types.{
 pub fn new() -> TextBox
 
 @target(luau)
-/// Treats `TextBox` as its Roblox ancestor `GuiObject`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_object(instance: TextBox) -> GuiObject
-
-@target(luau)
-/// Treats `TextBox` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: TextBox) -> GuiBase2d
-
-@target(luau)
-/// Treats `TextBox` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: TextBox) -> GuiBase
-
-@target(luau)
 /// Treats `TextBox` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: TextBox) -> Instance
-
-@target(luau)
-/// Treats `TextBox` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TextBox) -> Object
 
 @target(luau)
 /// Gets Roblox property `TextBox.ClearTextOnFocus`.

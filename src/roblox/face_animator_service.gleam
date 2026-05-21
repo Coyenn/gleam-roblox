@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: FaceAnimatorService) -> Instance
 
 @target(luau)
-/// Treats `FaceAnimatorService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: FaceAnimatorService) -> Object
-
-@target(luau)
 /// Gets Roblox property `FaceAnimatorService.AudioAnimationEnabled`.
 ///
 /// Roblox: `FaceAnimatorService.AudioAnimationEnabled`

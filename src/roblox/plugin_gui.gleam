@@ -10,29 +10,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `PluginGui` as its Roblox ancestor `LayerCollector`.
-@luau.global("(function(x) return x end)")
-pub fn as_layer_collector(instance: PluginGui) -> LayerCollector
-
-@target(luau)
-/// Treats `PluginGui` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: PluginGui) -> GuiBase2d
-
-@target(luau)
-/// Treats `PluginGui` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: PluginGui) -> GuiBase
-
-@target(luau)
 /// Treats `PluginGui` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: PluginGui) -> Instance
-
-@target(luau)
-/// Treats `PluginGui` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PluginGui) -> Object
 
 @target(luau)
 /// Gets Roblox property `PluginGui.Plugin`.

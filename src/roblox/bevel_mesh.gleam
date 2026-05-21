@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `BevelMesh` as its Roblox ancestor `DataModelMesh`.
-@luau.global("(function(x) return x end)")
-pub fn as_data_model_mesh(instance: BevelMesh) -> DataModelMesh
-
-@target(luau)
 /// Treats `BevelMesh` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BevelMesh) -> Instance
-
-@target(luau)
-/// Treats `BevelMesh` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BevelMesh) -> Object
 
 @target(luau)
 /// Gets Roblox property `DataModelMesh.Offset`.

@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: Mouse) -> Instance
 
 @target(luau)
-/// Treats `Mouse` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Mouse) -> Object
-
-@target(luau)
 /// Gets Roblox property `Mouse.Hit`.
 ///
 /// The CFrame of the mouse's position in 3D space.

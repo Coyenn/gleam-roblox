@@ -20,11 +20,6 @@ pub fn new() -> DataStoreOptions
 pub fn as_instance(instance: DataStoreOptions) -> Instance
 
 @target(luau)
-/// Treats `DataStoreOptions` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DataStoreOptions) -> Object
-
-@target(luau)
 /// Gets Roblox property `DataStoreOptions.AllScopes`.
 ///
 /// Whether the GlobalDataStore should work with all scopes.

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: Pages) -> Instance
 
 @target(luau)
-/// Treats `Pages` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Pages) -> Object
-
-@target(luau)
 /// Gets Roblox property `Pages.IsFinished`.
 ///
 /// Whether or not the current page is the last page available.

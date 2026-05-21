@@ -20,11 +20,6 @@ pub fn new() -> AudioSearchParams
 pub fn as_instance(instance: AudioSearchParams) -> Instance
 
 @target(luau)
-/// Treats `AudioSearchParams` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioSearchParams) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioSearchParams.Album`.
 ///
 /// The album the audio asset belongs to.

@@ -16,29 +16,9 @@ import roblox/types.{
 pub fn new() -> LocalScript
 
 @target(luau)
-/// Treats `LocalScript` as its Roblox ancestor `Script`.
-@luau.global("(function(x) return x end)")
-pub fn as_script(instance: LocalScript) -> Script
-
-@target(luau)
-/// Treats `LocalScript` as its Roblox ancestor `BaseScript`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_script(instance: LocalScript) -> BaseScript
-
-@target(luau)
-/// Treats `LocalScript` as its Roblox ancestor `LuaSourceContainer`.
-@luau.global("(function(x) return x end)")
-pub fn as_lua_source_container(instance: LocalScript) -> LuaSourceContainer
-
-@target(luau)
 /// Treats `LocalScript` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: LocalScript) -> Instance
-
-@target(luau)
-/// Treats `LocalScript` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: LocalScript) -> Object
 
 @target(luau)
 /// Gets Roblox property `Script.Source`.

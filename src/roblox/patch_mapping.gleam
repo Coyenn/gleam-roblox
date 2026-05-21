@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PatchMapping) -> Instance
 
 @target(luau)
-/// Treats `PatchMapping` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PatchMapping) -> Object
-
-@target(luau)
 /// Gets Roblox property `PatchMapping.FlattenTree`.
 ///
 /// Roblox: `PatchMapping.FlattenTree`

@@ -4,19 +4,14 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type EasingDirection, type EasingStyle, type Instance, type Object,
-  type OptionFloat, type SecurityCapabilities, type Tween, type TweenInfo,
-  type TweenService, type UniqueId,
+  type SecurityCapabilities, type Tween, type TweenInfo, type TweenService,
+  type UniqueId,
 }
 
 @target(luau)
 /// Treats `TweenService` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: TweenService) -> Instance
-
-@target(luau)
-/// Treats `TweenService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TweenService) -> Object
 
 @target(luau)
 /// Creates a new Tween given the object whose properties are to be tweened, a TweenInfo, and a dictionary of goal property values.
@@ -86,8 +81,8 @@ pub fn smooth_damp(
   target: Dynamic,
   velocity: Dynamic,
   smooth_time: Float,
-  max_speed: OptionFloat,
-  dt: OptionFloat,
+  max_speed: Option(Float),
+  dt: Option(Float),
 ) -> Dynamic
 
 @target(luau)
@@ -1009,7 +1004,6 @@ pub fn javascript_type_anchor(
   _: Actor,
   _: UniqueId,
   _: SecurityCapabilities,
-  _: OptionFloat,
   _: EasingStyle,
   _: EasingDirection,
   _: Tween,

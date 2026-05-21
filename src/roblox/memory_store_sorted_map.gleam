@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: MemoryStoreSortedMap) -> Instance
 
 @target(luau)
-/// Treats `MemoryStoreSortedMap` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MemoryStoreSortedMap) -> Object
-
-@target(luau)
 /// Retrieves the value and sort key of a key in the sorted map.
 ///
 /// Roblox: `MemoryStoreSortedMap.GetAsync`

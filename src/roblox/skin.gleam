@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `Skin` as its Roblox ancestor `CharacterAppearance`.
-@luau.global("(function(x) return x end)")
-pub fn as_character_appearance(instance: Skin) -> CharacterAppearance
-
-@target(luau)
 /// Treats `Skin` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Skin) -> Instance
-
-@target(luau)
-/// Treats `Skin` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Skin) -> Object
 
 @target(luau)
 /// Gets Roblox property `Skin.SkinColor`.

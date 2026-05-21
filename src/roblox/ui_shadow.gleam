@@ -16,24 +16,9 @@ import roblox/types.{
 pub fn new() -> UIShadow
 
 @target(luau)
-/// Treats `UIShadow` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UIShadow) -> UIComponent
-
-@target(luau)
-/// Treats `UIShadow` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UIShadow) -> UIBase
-
-@target(luau)
 /// Treats `UIShadow` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UIShadow) -> Instance
-
-@target(luau)
-/// Treats `UIShadow` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UIShadow) -> Object
 
 @target(luau)
 /// Gets Roblox property `UIShadow.BlurRadius`.

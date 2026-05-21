@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `Hat` as its Roblox ancestor `Accoutrement`.
-@luau.global("(function(x) return x end)")
-pub fn as_accoutrement(instance: Hat) -> Accoutrement
-
-@target(luau)
 /// Treats `Hat` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Hat) -> Instance
-
-@target(luau)
-/// Treats `Hat` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Hat) -> Object
 
 @target(luau)
 /// Gets Roblox property `Accoutrement.AttachmentForward`.

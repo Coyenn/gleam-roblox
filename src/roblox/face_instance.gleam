@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: FaceInstance) -> Instance
 
 @target(luau)
-/// Treats `FaceInstance` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: FaceInstance) -> Object
-
-@target(luau)
 /// Gets Roblox property `FaceInstance.Face`.
 ///
 /// Sets which face of the parent BasePart the object appears on.

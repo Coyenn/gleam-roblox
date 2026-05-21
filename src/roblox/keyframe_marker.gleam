@@ -20,11 +20,6 @@ pub fn new() -> KeyframeMarker
 pub fn as_instance(instance: KeyframeMarker) -> Instance
 
 @target(luau)
-/// Treats `KeyframeMarker` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: KeyframeMarker) -> Object
-
-@target(luau)
 /// Gets Roblox property `KeyframeMarker.Value`.
 ///
 /// A value that is specified for a KeyframeMarker.

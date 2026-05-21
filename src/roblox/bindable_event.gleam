@@ -20,11 +20,6 @@ pub fn new() -> BindableEvent
 pub fn as_instance(instance: BindableEvent) -> Instance
 
 @target(luau)
-/// Treats `BindableEvent` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BindableEvent) -> Object
-
-@target(luau)
 /// Fires the BindableEvent which in turn fires the Event event.
 ///
 /// Roblox: `BindableEvent.Fire`

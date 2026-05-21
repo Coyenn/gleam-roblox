@@ -1,16 +1,11 @@
 // Generated class bindings for Roblox API
 import roblox/dynamic.{type Dynamic}
+import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type CFrame, type Color3, type EditableMesh, type FacsActionUnit, type Object,
-  type OptionColor3, type OptionFloat, type OptionVector2, type OptionVector3,
   type Vector2, type Vector3,
 }
-
-@target(luau)
-/// Treats `EditableMesh` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: EditableMesh) -> Object
 
 @target(luau)
 /// Gets Roblox property `EditableMesh.FixedSize`.
@@ -62,7 +57,7 @@ pub fn add_color(instance: EditableMesh, color: Color3, alpha: Float) -> Int
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/EditableMesh#AddFace
 @luau.method("AddFace")
-pub fn add_face(instance: EditableMesh, vertex_ids: List(Dynamic)) -> Int
+pub fn add_face(instance: EditableMesh, vertex_ids: List(Int)) -> Int
 
 @target(luau)
 /// Adds a new normal to the geometry and returns a stable normal ID.
@@ -78,7 +73,7 @@ pub fn add_face(instance: EditableMesh, vertex_ids: List(Dynamic)) -> Int
 /// Returns:
 /// - Stable normal ID of the new normal.
 @luau.method("AddNormal")
-pub fn add_normal(instance: EditableMesh, normal: OptionVector3) -> Int
+pub fn add_normal(instance: EditableMesh, normal: Option(Vector3)) -> Int
 
 @target(luau)
 /// Adds a new triangle to the mesh and returns a stable face ID.
@@ -362,7 +357,7 @@ pub fn get_center(instance: EditableMesh) -> Vector3
 /// Returns:
 /// - Color for the requested stable color ID.
 @luau.method("GetColor")
-pub fn get_color(instance: EditableMesh, color_id: Int) -> OptionColor3
+pub fn get_color(instance: EditableMesh, color_id: Int) -> Option(Color3)
 
 @target(luau)
 /// Returns the color alpha (transparency) at the given color ID.
@@ -378,7 +373,7 @@ pub fn get_color(instance: EditableMesh, color_id: Int) -> OptionColor3
 /// Returns:
 /// - Color alpha at the request stable color ID.
 @luau.method("GetColorAlpha")
-pub fn get_color_alpha(instance: EditableMesh, color_id: Int) -> OptionFloat
+pub fn get_color_alpha(instance: EditableMesh, color_id: Int) -> Option(Float)
 
 @target(luau)
 /// Returns all colors of the mesh.
@@ -615,7 +610,7 @@ pub fn get_facs_poses(instance: EditableMesh) -> List(Dynamic)
 /// Returns:
 /// - Normal vector at the requested normal ID.
 @luau.method("GetNormal")
-pub fn get_normal(instance: EditableMesh, normal_id: Int) -> OptionVector3
+pub fn get_normal(instance: EditableMesh, normal_id: Int) -> Option(Vector3)
 
 @target(luau)
 /// Returns all normals of the mesh.
@@ -676,7 +671,7 @@ pub fn get_size(instance: EditableMesh) -> Vector3
 /// Returns:
 /// - UV coordinates at the requested UV ID.
 @luau.method("GetUV")
-pub fn get_uv(instance: EditableMesh, uv_id: Int) -> OptionVector2
+pub fn get_uv(instance: EditableMesh, uv_id: Int) -> Option(Vector2)
 
 @target(luau)
 /// Returns all UVs of the mesh.
@@ -1253,7 +1248,7 @@ pub fn set_facs_bone_pose(
 pub fn set_facs_corrective_pose(
   instance: EditableMesh,
   actions: List(Dynamic),
-  bone_ids: List(Dynamic),
+  bone_ids: List(Int),
   cframes: List(CFrame),
 ) -> Nil
 
@@ -1273,7 +1268,7 @@ pub fn set_facs_corrective_pose(
 pub fn set_facs_pose(
   instance: EditableMesh,
   action: FacsActionUnit,
-  bone_ids: List(Dynamic),
+  bone_ids: List(Int),
   cframes: List(CFrame),
 ) -> Nil
 
@@ -1509,12 +1504,9 @@ pub fn javascript_type_anchor(
   _: FacsActionUnit,
   _: CFrame,
   _: Color3,
-  _: OptionVector2,
-  _: OptionVector3,
-  _: OptionFloat,
-  _: OptionColor3,
   _: EditableMesh,
   _: Object,
+  _: Option(Nil),
   _: Dynamic,
   _: RBXScriptSignal(fn() -> Nil),
   _: RBXScriptConnection,

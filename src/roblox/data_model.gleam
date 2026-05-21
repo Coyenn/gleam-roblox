@@ -9,19 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `DataModel` as its Roblox ancestor `ServiceProvider`.
-@luau.global("(function(x) return x end)")
-pub fn as_service_provider(instance: DataModel) -> ServiceProvider
-
-@target(luau)
 /// Treats `DataModel` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: DataModel) -> Instance
-
-@target(luau)
-/// Treats `DataModel` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DataModel) -> Object
 
 @target(luau)
 /// Gets Roblox property `DataModel.CreatorId`.

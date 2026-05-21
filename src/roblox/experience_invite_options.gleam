@@ -20,11 +20,6 @@ pub fn new() -> ExperienceInviteOptions
 pub fn as_instance(instance: ExperienceInviteOptions) -> Instance
 
 @target(luau)
-/// Treats `ExperienceInviteOptions` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ExperienceInviteOptions) -> Object
-
-@target(luau)
 /// Gets Roblox property `ExperienceInviteOptions.InviteMessageId`.
 ///
 /// Asset ID that maps to a Notification asset type.

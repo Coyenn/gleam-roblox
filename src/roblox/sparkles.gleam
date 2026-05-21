@@ -20,11 +20,6 @@ pub fn new() -> Sparkles
 pub fn as_instance(instance: Sparkles) -> Instance
 
 @target(luau)
-/// Treats `Sparkles` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Sparkles) -> Object
-
-@target(luau)
 /// Gets Roblox property `Sparkles.Color`.
 ///
 /// Determines the color of the sparkle particles.

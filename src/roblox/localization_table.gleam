@@ -20,11 +20,6 @@ pub fn new() -> LocalizationTable
 pub fn as_instance(instance: LocalizationTable) -> Instance
 
 @target(luau)
-/// Treats `LocalizationTable` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: LocalizationTable) -> Object
-
-@target(luau)
 /// Gets Roblox property `LocalizationTable.SourceLocaleId`.
 ///
 /// The locale of source strings.

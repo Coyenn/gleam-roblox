@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> Path2D
 
 @target(luau)
-/// Treats `Path2D` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: Path2D) -> GuiBase
-
-@target(luau)
 /// Treats `Path2D` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Path2D) -> Instance
-
-@target(luau)
-/// Treats `Path2D` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Path2D) -> Object
 
 @target(luau)
 /// Gets Roblox property `Path2D.Closed`.

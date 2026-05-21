@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `UIComponent` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UIComponent) -> UIBase
-
-@target(luau)
 /// Treats `UIComponent` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UIComponent) -> Instance
-
-@target(luau)
-/// Treats `UIComponent` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UIComponent) -> Object
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.

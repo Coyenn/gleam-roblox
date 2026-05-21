@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: TweenBase) -> Instance
 
 @target(luau)
-/// Treats `TweenBase` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TweenBase) -> Object
-
-@target(luau)
 /// Gets Roblox property `TweenBase.PlaybackState`.
 ///
 /// Read-only property that shows the current state for the Tween animation.

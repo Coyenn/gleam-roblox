@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: CustomEvent) -> Instance
 
 @target(luau)
-/// Treats `CustomEvent` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CustomEvent) -> Object
-
-@target(luau)
 /// Returns the CustomEventReceivers that are connected to the CustomEvent.
 ///
 /// Roblox: `CustomEvent.GetAttachedReceivers`

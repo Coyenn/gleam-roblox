@@ -9,19 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `GuiBase2d` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: GuiBase2d) -> GuiBase
-
-@target(luau)
 /// Treats `GuiBase2d` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: GuiBase2d) -> Instance
-
-@target(luau)
-/// Treats `GuiBase2d` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GuiBase2d) -> Object
 
 @target(luau)
 /// Gets Roblox property `GuiBase2d.AbsolutePosition`.

@@ -21,11 +21,6 @@ pub fn new() -> AudioTextToSpeech
 pub fn as_instance(instance: AudioTextToSpeech) -> Instance
 
 @target(luau)
-/// Treats `AudioTextToSpeech` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioTextToSpeech) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioTextToSpeech.IsLoaded`.
 ///
 /// Denotes whether the AudioTextToSpeech object is loaded, buffered, and ready to play.

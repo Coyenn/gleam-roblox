@@ -19,29 +19,9 @@ import roblox/types.{
 pub fn new() -> Part
 
 @target(luau)
-/// Treats `Part` as its Roblox ancestor `FormFactorPart`.
-@luau.global("(function(x) return x end)")
-pub fn as_form_factor_part(instance: Part) -> FormFactorPart
-
-@target(luau)
-/// Treats `Part` as its Roblox ancestor `BasePart`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_part(instance: Part) -> BasePart
-
-@target(luau)
-/// Treats `Part` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: Part) -> PVInstance
-
-@target(luau)
 /// Treats `Part` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Part) -> Instance
-
-@target(luau)
-/// Treats `Part` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Part) -> Object
 
 @target(luau)
 /// Gets Roblox property `Part.Shape`.

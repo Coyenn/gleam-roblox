@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ExplorerFilterAutocompleter) -> Instance
 
 @target(luau)
-/// Treats `ExplorerFilterAutocompleter` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ExplorerFilterAutocompleter) -> Object
-
-@target(luau)
 /// Gets Roblox property `ExplorerFilterAutocompleter.ReplaceRange`.
 ///
 /// Roblox: `ExplorerFilterAutocompleter.ReplaceRange`

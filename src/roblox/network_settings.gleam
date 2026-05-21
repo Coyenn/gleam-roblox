@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: NetworkSettings) -> Instance
 
 @target(luau)
-/// Treats `NetworkSettings` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: NetworkSettings) -> Object
-
-@target(luau)
 /// Gets Roblox property `NetworkSettings.EmulatedTotalMemoryInMB`.
 ///
 /// Roblox: `NetworkSettings.EmulatedTotalMemoryInMB`

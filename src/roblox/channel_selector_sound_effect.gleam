@@ -9,26 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `ChannelSelectorSoundEffect` as its Roblox ancestor `CustomSoundEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_custom_sound_effect(
-  instance: ChannelSelectorSoundEffect,
-) -> CustomSoundEffect
-
-@target(luau)
-/// Treats `ChannelSelectorSoundEffect` as its Roblox ancestor `SoundEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_sound_effect(instance: ChannelSelectorSoundEffect) -> SoundEffect
-
-@target(luau)
 /// Treats `ChannelSelectorSoundEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ChannelSelectorSoundEffect) -> Instance
-
-@target(luau)
-/// Treats `ChannelSelectorSoundEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ChannelSelectorSoundEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `ChannelSelectorSoundEffect.Channel`.

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: LocalizationService) -> Instance
 
 @target(luau)
-/// Treats `LocalizationService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: LocalizationService) -> Object
-
-@target(luau)
 /// Gets Roblox property `LocalizationService.ForcePlayModeGameLocaleId`.
 ///
 /// Roblox: `LocalizationService.ForcePlayModeGameLocaleId`

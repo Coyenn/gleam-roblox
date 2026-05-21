@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `BodyGyro` as its Roblox ancestor `BodyMover`.
-@luau.global("(function(x) return x end)")
-pub fn as_body_mover(instance: BodyGyro) -> BodyMover
-
-@target(luau)
 /// Treats `BodyGyro` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BodyGyro) -> Instance
-
-@target(luau)
-/// Treats `BodyGyro` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BodyGyro) -> Object
 
 @target(luau)
 /// Gets Roblox property `BodyGyro.CFrame`.

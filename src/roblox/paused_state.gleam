@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PausedState) -> Instance
 
 @target(luau)
-/// Treats `PausedState` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PausedState) -> Object
-
-@target(luau)
 /// Gets Roblox property `PausedState.AllThreadsPaused`.
 ///
 /// Roblox: `PausedState.AllThreadsPaused`

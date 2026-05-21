@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> KeyframeSequence
 
 @target(luau)
-/// Treats `KeyframeSequence` as its Roblox ancestor `AnimationClip`.
-@luau.global("(function(x) return x end)")
-pub fn as_animation_clip(instance: KeyframeSequence) -> AnimationClip
-
-@target(luau)
 /// Treats `KeyframeSequence` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: KeyframeSequence) -> Instance
-
-@target(luau)
-/// Treats `KeyframeSequence` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: KeyframeSequence) -> Object
 
 @target(luau)
 /// Gets Roblox property `KeyframeSequence.AuthoredHipHeight`.

@@ -20,11 +20,6 @@ pub fn new() -> PathfindingLink
 pub fn as_instance(instance: PathfindingLink) -> Instance
 
 @target(luau)
-/// Treats `PathfindingLink` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PathfindingLink) -> Object
-
-@target(luau)
 /// Gets Roblox property `PathfindingLink.Attachment0`.
 ///
 /// The originating attachment of the link.

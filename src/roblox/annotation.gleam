@@ -20,11 +20,6 @@ pub fn new() -> Annotation
 pub fn as_instance(instance: Annotation) -> Instance
 
 @target(luau)
-/// Treats `Annotation` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Annotation) -> Object
-
-@target(luau)
 /// Gets Roblox property `Annotation.AuthorColor3`.
 ///
 /// Roblox: `Annotation.AuthorColor3`

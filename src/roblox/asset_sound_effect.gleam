@@ -8,24 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `AssetSoundEffect` as its Roblox ancestor `CustomSoundEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_custom_sound_effect(instance: AssetSoundEffect) -> CustomSoundEffect
-
-@target(luau)
-/// Treats `AssetSoundEffect` as its Roblox ancestor `SoundEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_sound_effect(instance: AssetSoundEffect) -> SoundEffect
-
-@target(luau)
 /// Treats `AssetSoundEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AssetSoundEffect) -> Instance
-
-@target(luau)
-/// Treats `AssetSoundEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AssetSoundEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `SoundEffect.Enabled`.

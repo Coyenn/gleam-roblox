@@ -4,11 +4,6 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{type ExecutedRemoteCommand, type Object}
 
 @target(luau)
-/// Treats `ExecutedRemoteCommand` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ExecutedRemoteCommand) -> Object
-
-@target(luau)
 /// Roblox: `ExecutedRemoteCommand.RunMoreCode`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ExecutedRemoteCommand#RunMoreCode

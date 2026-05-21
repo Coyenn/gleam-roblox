@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> ClimbController
 
 @target(luau)
-/// Treats `ClimbController` as its Roblox ancestor `ControllerBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_controller_base(instance: ClimbController) -> ControllerBase
-
-@target(luau)
 /// Treats `ClimbController` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ClimbController) -> Instance
-
-@target(luau)
-/// Treats `ClimbController` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ClimbController) -> Object
 
 @target(luau)
 /// Gets Roblox property `ClimbController.AccelerationTime`.

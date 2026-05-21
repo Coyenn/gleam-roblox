@@ -20,11 +20,6 @@ pub fn new() -> AudioSpeechToText
 pub fn as_instance(instance: AudioSpeechToText) -> Instance
 
 @target(luau)
-/// Treats `AudioSpeechToText` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioSpeechToText) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioSpeechToText.Enabled`.
 ///
 /// Whether the AudioSpeechToText object is enabled for processing input audio into text.

@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> BuoyancySensor
 
 @target(luau)
-/// Treats `BuoyancySensor` as its Roblox ancestor `SensorBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_sensor_base(instance: BuoyancySensor) -> SensorBase
-
-@target(luau)
 /// Treats `BuoyancySensor` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BuoyancySensor) -> Instance
-
-@target(luau)
-/// Treats `BuoyancySensor` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BuoyancySensor) -> Object
 
 @target(luau)
 /// Gets Roblox property `BuoyancySensor.FullySubmerged`.

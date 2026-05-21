@@ -16,11 +16,6 @@ import roblox/types.{
 pub fn as_instance(instance: UserInputService) -> Instance
 
 @target(luau)
-/// Treats `UserInputService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UserInputService) -> Object
-
-@target(luau)
 /// Gets Roblox property `UserInputService.AccelerometerEnabled`.
 ///
 /// Describes whether the user's device has an accelerometer.

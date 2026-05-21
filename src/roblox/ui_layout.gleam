@@ -8,24 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `UILayout` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UILayout) -> UIComponent
-
-@target(luau)
-/// Treats `UILayout` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UILayout) -> UIBase
-
-@target(luau)
 /// Treats `UILayout` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UILayout) -> Instance
-
-@target(luau)
-/// Treats `UILayout` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UILayout) -> Object
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.

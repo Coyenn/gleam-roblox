@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> Model
 
 @target(luau)
-/// Treats `Model` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: Model) -> PVInstance
-
-@target(luau)
 /// Treats `Model` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Model) -> Instance
-
-@target(luau)
-/// Treats `Model` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Model) -> Object
 
 @target(luau)
 /// Gets Roblox property `Model.LevelOfDetail`.

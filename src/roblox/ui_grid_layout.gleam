@@ -18,34 +18,9 @@ import roblox/types.{
 pub fn new() -> UIGridLayout
 
 @target(luau)
-/// Treats `UIGridLayout` as its Roblox ancestor `UIGridStyleLayout`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_grid_style_layout(instance: UIGridLayout) -> UIGridStyleLayout
-
-@target(luau)
-/// Treats `UIGridLayout` as its Roblox ancestor `UILayout`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_layout(instance: UIGridLayout) -> UILayout
-
-@target(luau)
-/// Treats `UIGridLayout` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UIGridLayout) -> UIComponent
-
-@target(luau)
-/// Treats `UIGridLayout` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UIGridLayout) -> UIBase
-
-@target(luau)
 /// Treats `UIGridLayout` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UIGridLayout) -> Instance
-
-@target(luau)
-/// Treats `UIGridLayout` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UIGridLayout) -> Object
 
 @target(luau)
 /// Gets Roblox property `UIGridLayout.AbsoluteCellCount`.

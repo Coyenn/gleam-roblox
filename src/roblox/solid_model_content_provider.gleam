@@ -8,21 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `SolidModelContentProvider` as its Roblox ancestor `CacheableContentProvider`.
-@luau.global("(function(x) return x end)")
-pub fn as_cacheable_content_provider(
-  instance: SolidModelContentProvider,
-) -> CacheableContentProvider
-
-@target(luau)
 /// Treats `SolidModelContentProvider` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SolidModelContentProvider) -> Instance
-
-@target(luau)
-/// Treats `SolidModelContentProvider` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SolidModelContentProvider) -> Object
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.

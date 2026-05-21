@@ -20,11 +20,6 @@ pub fn new() -> AccessoryDescription
 pub fn as_instance(instance: AccessoryDescription) -> Instance
 
 @target(luau)
-/// Treats `AccessoryDescription` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AccessoryDescription) -> Object
-
-@target(luau)
 /// Gets Roblox property `AccessoryDescription.AccessoryType`.
 ///
 /// The AccessoryType of the Accessory referred to by this description.

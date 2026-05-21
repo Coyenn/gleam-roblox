@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: DebuggerConnection) -> Instance
 
 @target(luau)
-/// Treats `DebuggerConnection` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DebuggerConnection) -> Object
-
-@target(luau)
 /// Gets Roblox property `DebuggerConnection.ErrorMessage`.
 ///
 /// Roblox: `DebuggerConnection.ErrorMessage`

@@ -3,20 +3,14 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Object, type OptionSharedTable,
-  type SecurityCapabilities, type SharedTable, type SharedTableRegistry,
-  type UniqueId,
+  type Actor, type Instance, type Object, type SecurityCapabilities,
+  type SharedTable, type SharedTableRegistry, type UniqueId,
 }
 
 @target(luau)
 /// Treats `SharedTableRegistry` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SharedTableRegistry) -> Instance
-
-@target(luau)
-/// Treats `SharedTableRegistry` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SharedTableRegistry) -> Object
 
 @target(luau)
 /// Gets the registered SharedTable with the specified name.
@@ -49,7 +43,7 @@ pub fn get_shared_table(
 pub fn set_shared_table(
   instance: SharedTableRegistry,
   name: String,
-  st: OptionSharedTable,
+  st: Option(SharedTable),
 ) -> Nil
 
 @target(luau)
@@ -997,7 +991,6 @@ pub fn javascript_type_anchor(
   _: Actor,
   _: UniqueId,
   _: SecurityCapabilities,
-  _: OptionSharedTable,
   _: SharedTable,
   _: SharedTableRegistry,
   _: Object,

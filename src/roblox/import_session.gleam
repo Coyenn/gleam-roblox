@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ImportSession) -> Instance
 
 @target(luau)
-/// Treats `ImportSession` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ImportSession) -> Object
-
-@target(luau)
 /// Roblox: `ImportSession.UploadComplete`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ImportSession#UploadComplete

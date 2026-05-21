@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: TaskScheduler) -> Instance
 
 @target(luau)
-/// Treats `TaskScheduler` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TaskScheduler) -> Object
-
-@target(luau)
 /// Gets Roblox property `TaskScheduler.SchedulerDutyCycle`.
 ///
 /// The average time divided by the average interval of the duty cycle.

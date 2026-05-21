@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: LanguageService) -> Instance
 
 @target(luau)
-/// Treats `LanguageService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: LanguageService) -> Object
-
-@target(luau)
 /// Roblox: `LanguageService.GetCapabilitiesUsedInPackageAsync`
 /// ThreadSafety: Unsafe
 /// Tags: Yields

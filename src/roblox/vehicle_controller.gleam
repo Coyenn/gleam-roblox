@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> VehicleController
 
 @target(luau)
-/// Treats `VehicleController` as its Roblox ancestor `Controller`.
-@luau.global("(function(x) return x end)")
-pub fn as_controller(instance: VehicleController) -> Controller
-
-@target(luau)
 /// Treats `VehicleController` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: VehicleController) -> Instance
-
-@target(luau)
-/// Treats `VehicleController` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VehicleController) -> Object
 
 @target(luau)
 /// Activates an overriding bind on the specified button.

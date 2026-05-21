@@ -16,24 +16,9 @@ import roblox/types.{
 pub fn new() -> Pants
 
 @target(luau)
-/// Treats `Pants` as its Roblox ancestor `Clothing`.
-@luau.global("(function(x) return x end)")
-pub fn as_clothing(instance: Pants) -> Clothing
-
-@target(luau)
-/// Treats `Pants` as its Roblox ancestor `CharacterAppearance`.
-@luau.global("(function(x) return x end)")
-pub fn as_character_appearance(instance: Pants) -> CharacterAppearance
-
-@target(luau)
 /// Treats `Pants` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Pants) -> Instance
-
-@target(luau)
-/// Treats `Pants` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Pants) -> Object
 
 @target(luau)
 /// Gets Roblox property `Pants.PantsTemplate`.

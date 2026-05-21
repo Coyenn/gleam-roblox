@@ -20,29 +20,9 @@ import roblox/types.{
 pub fn new() -> RelativeGui
 
 @target(luau)
-/// Treats `RelativeGui` as its Roblox ancestor `GuiObject`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_object(instance: RelativeGui) -> GuiObject
-
-@target(luau)
-/// Treats `RelativeGui` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: RelativeGui) -> GuiBase2d
-
-@target(luau)
-/// Treats `RelativeGui` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: RelativeGui) -> GuiBase
-
-@target(luau)
 /// Treats `RelativeGui` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: RelativeGui) -> Instance
-
-@target(luau)
-/// Treats `RelativeGui` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RelativeGui) -> Object
 
 @target(luau)
 /// Gets Roblox property `GuiObject.Active`.

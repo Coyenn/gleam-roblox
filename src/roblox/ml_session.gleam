@@ -4,11 +4,6 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{type MLSession, type Object}
 
 @target(luau)
-/// Treats `MLSession` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MLSession) -> Object
-
-@target(luau)
 /// Roblox: `MLSession.ForwardAsync`
 /// ThreadSafety: Unsafe
 /// Tags: Yields

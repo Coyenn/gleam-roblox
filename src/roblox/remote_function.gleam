@@ -20,11 +20,6 @@ pub fn new() -> RemoteFunction
 pub fn as_instance(instance: RemoteFunction) -> Instance
 
 @target(luau)
-/// Treats `RemoteFunction` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RemoteFunction) -> Object
-
-@target(luau)
 /// Invokes the RemoteFunction which in turn calls the OnClientInvoke callback.
 ///
 /// Roblox: `RemoteFunction.InvokeClient`

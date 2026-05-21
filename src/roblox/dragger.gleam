@@ -20,11 +20,6 @@ pub fn new() -> Dragger
 pub fn as_instance(instance: Dragger) -> Instance
 
 @target(luau)
-/// Treats `Dragger` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Dragger) -> Object
-
-@target(luau)
 /// Rotates the currently dragged part(s) by 90 degrees on the given axis.
 ///
 /// Roblox: `Dragger.AxisRotate`

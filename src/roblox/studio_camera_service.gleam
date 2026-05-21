@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: StudioCameraService) -> Instance
 
 @target(luau)
-/// Treats `StudioCameraService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StudioCameraService) -> Object
-
-@target(luau)
 /// Gets Roblox property `StudioCameraService.FocusDistance`.
 ///
 /// Roblox: `StudioCameraService.FocusDistance`

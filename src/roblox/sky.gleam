@@ -20,11 +20,6 @@ pub fn new() -> Sky
 pub fn as_instance(instance: Sky) -> Instance
 
 @target(luau)
-/// Treats `Sky` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Sky) -> Object
-
-@target(luau)
 /// Gets Roblox property `Sky.CelestialBodiesShown`.
 ///
 /// Sets whether the sun, moon, and stars will show.

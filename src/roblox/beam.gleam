@@ -21,11 +21,6 @@ pub fn new() -> Beam
 pub fn as_instance(instance: Beam) -> Instance
 
 @target(luau)
-/// Treats `Beam` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Beam) -> Object
-
-@target(luau)
 /// Gets Roblox property `Beam.Attachment0`.
 ///
 /// The Attachment the beam originates from.

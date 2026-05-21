@@ -8,24 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `GlobalSettings` as its Roblox ancestor `GenericSettings`.
-@luau.global("(function(x) return x end)")
-pub fn as_generic_settings(instance: GlobalSettings) -> GenericSettings
-
-@target(luau)
-/// Treats `GlobalSettings` as its Roblox ancestor `ServiceProvider`.
-@luau.global("(function(x) return x end)")
-pub fn as_service_provider(instance: GlobalSettings) -> ServiceProvider
-
-@target(luau)
 /// Treats `GlobalSettings` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: GlobalSettings) -> Instance
-
-@target(luau)
-/// Treats `GlobalSettings` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GlobalSettings) -> Object
 
 @target(luau)
 /// Returns the value of an FFlag if it exists.

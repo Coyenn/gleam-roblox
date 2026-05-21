@@ -8,21 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `SelfViewConfiguration` as its Roblox ancestor `BaseCoreGuiConfiguration`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_core_gui_configuration(
-  instance: SelfViewConfiguration,
-) -> BaseCoreGuiConfiguration
-
-@target(luau)
 /// Treats `SelfViewConfiguration` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SelfViewConfiguration) -> Instance
-
-@target(luau)
-/// Treats `SelfViewConfiguration` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SelfViewConfiguration) -> Object
 
 @target(luau)
 /// Gets Roblox property `SelfViewConfiguration.Open`.

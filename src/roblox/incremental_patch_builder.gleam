@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: IncrementalPatchBuilder) -> Instance
 
 @target(luau)
-/// Treats `IncrementalPatchBuilder` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: IncrementalPatchBuilder) -> Object
-
-@target(luau)
 /// Gets Roblox property `IncrementalPatchBuilder.AddPathsToBundle`.
 ///
 /// Roblox: `IncrementalPatchBuilder.AddPathsToBundle`

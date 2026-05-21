@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PathfindingService) -> Instance
 
 @target(luau)
-/// Treats `PathfindingService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PathfindingService) -> Object
-
-@target(luau)
 /// Roblox: `PathfindingService.CreatePath`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PathfindingService#CreatePath

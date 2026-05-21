@@ -16,29 +16,9 @@ import roblox/types.{
 pub fn new() -> SelectionSphere
 
 @target(luau)
-/// Treats `SelectionSphere` as its Roblox ancestor `PVAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_adornment(instance: SelectionSphere) -> PVAdornment
-
-@target(luau)
-/// Treats `SelectionSphere` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: SelectionSphere) -> GuiBase3d
-
-@target(luau)
-/// Treats `SelectionSphere` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: SelectionSphere) -> GuiBase
-
-@target(luau)
 /// Treats `SelectionSphere` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SelectionSphere) -> Instance
-
-@target(luau)
-/// Treats `SelectionSphere` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SelectionSphere) -> Object
 
 @target(luau)
 /// Gets Roblox property `SelectionSphere.SurfaceColor3`.

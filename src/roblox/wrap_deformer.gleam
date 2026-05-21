@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BaseWrap, type CFrame, type Content, type ContentId,
-  type EditableMesh, type Instance, type Object, type OptionCoordinateFrame,
+  type CoordinateFrame, type EditableMesh, type Instance, type Object,
   type SecurityCapabilities, type UniqueId, type WrapDeformer,
 }
 
@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> WrapDeformer
 
 @target(luau)
-/// Treats `WrapDeformer` as its Roblox ancestor `BaseWrap`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_wrap(instance: WrapDeformer) -> BaseWrap
-
-@target(luau)
 /// Treats `WrapDeformer` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: WrapDeformer) -> Instance
-
-@target(luau)
-/// Treats `WrapDeformer` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: WrapDeformer) -> Object
 
 @target(luau)
 /// Sets the cage mesh used to deform against a sibling WrapTarget cage mesh.
@@ -43,7 +33,7 @@ pub fn as_object(instance: WrapDeformer) -> Object
 pub fn set_cage_mesh_content(
   instance: WrapDeformer,
   content: Content,
-  cage_origin: OptionCoordinateFrame,
+  cage_origin: Option(CoordinateFrame),
 ) -> Nil
 
 @target(luau)
@@ -1073,7 +1063,7 @@ pub fn javascript_type_anchor(
   _: ContentId,
   _: Content,
   _: EditableMesh,
-  _: OptionCoordinateFrame,
+  _: CoordinateFrame,
   _: WrapDeformer,
   _: BaseWrap,
   _: Object,

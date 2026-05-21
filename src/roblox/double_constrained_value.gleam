@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `DoubleConstrainedValue` as its Roblox ancestor `ValueBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_value_base(instance: DoubleConstrainedValue) -> ValueBase
-
-@target(luau)
 /// Treats `DoubleConstrainedValue` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: DoubleConstrainedValue) -> Instance
-
-@target(luau)
-/// Treats `DoubleConstrainedValue` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DoubleConstrainedValue) -> Object
 
 @target(luau)
 /// Gets Roblox property `DoubleConstrainedValue.ConstrainedValue`.

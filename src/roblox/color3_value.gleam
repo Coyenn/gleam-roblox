@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> Color3Value
 
 @target(luau)
-/// Treats `Color3Value` as its Roblox ancestor `ValueBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_value_base(instance: Color3Value) -> ValueBase
-
-@target(luau)
 /// Treats `Color3Value` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Color3Value) -> Instance
-
-@target(luau)
-/// Treats `Color3Value` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Color3Value) -> Object
 
 @target(luau)
 /// Gets Roblox property `Color3Value.Value`.

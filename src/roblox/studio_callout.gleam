@@ -20,11 +20,6 @@ pub fn new() -> StudioCallout
 pub fn as_instance(instance: StudioCallout) -> Instance
 
 @target(luau)
-/// Treats `StudioCallout` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StudioCallout) -> Object
-
-@target(luau)
 /// Gets Roblox property `StudioCallout.AnchorPoint`.
 ///
 /// Roblox: `StudioCallout.AnchorPoint`

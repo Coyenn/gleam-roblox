@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: RemoteCommandService) -> Instance
 
 @target(luau)
-/// Treats `RemoteCommandService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RemoteCommandService) -> Object
-
-@target(luau)
 /// Roblox: `RemoteCommandService.GetExecutingPlayer`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RemoteCommandService#GetExecutingPlayer

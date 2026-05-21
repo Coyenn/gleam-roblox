@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ReflectionMetadataItem) -> Instance
 
 @target(luau)
-/// Treats `ReflectionMetadataItem` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ReflectionMetadataItem) -> Object
-
-@target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.Browsable`.
 ///
 /// Whether or not this can be seen in studio.

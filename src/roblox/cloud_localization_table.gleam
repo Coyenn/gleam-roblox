@@ -8,21 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `CloudLocalizationTable` as its Roblox ancestor `LocalizationTable`.
-@luau.global("(function(x) return x end)")
-pub fn as_localization_table(
-  instance: CloudLocalizationTable,
-) -> LocalizationTable
-
-@target(luau)
 /// Treats `CloudLocalizationTable` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: CloudLocalizationTable) -> Instance
-
-@target(luau)
-/// Treats `CloudLocalizationTable` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CloudLocalizationTable) -> Object
 
 @target(luau)
 /// Gets Roblox property `LocalizationTable.SourceLocaleId`.

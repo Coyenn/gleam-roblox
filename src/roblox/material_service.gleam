@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: MaterialService) -> Instance
 
 @target(luau)
-/// Treats `MaterialService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MaterialService) -> Object
-
-@target(luau)
 /// Gets Roblox property `MaterialService.Use2022Materials`.
 ///
 /// Switch built-in material pack.

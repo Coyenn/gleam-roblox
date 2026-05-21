@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> AirController
 
 @target(luau)
-/// Treats `AirController` as its Roblox ancestor `ControllerBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_controller_base(instance: AirController) -> ControllerBase
-
-@target(luau)
 /// Treats `AirController` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AirController) -> Instance
-
-@target(luau)
-/// Treats `AirController` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AirController) -> Object
 
 @target(luau)
 /// Gets Roblox property `AirController.BalanceMaxTorque`.

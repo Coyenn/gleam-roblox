@@ -20,11 +20,6 @@ pub fn new() -> DataStoreSetOptions
 pub fn as_instance(instance: DataStoreSetOptions) -> Instance
 
 @target(luau)
-/// Treats `DataStoreSetOptions` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DataStoreSetOptions) -> Object
-
-@target(luau)
 /// Gets the custom metadata set with this DataStoreSetOptions instance.
 ///
 /// Roblox: `DataStoreSetOptions.GetMetadata`

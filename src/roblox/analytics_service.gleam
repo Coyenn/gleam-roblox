@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: AnalyticsService) -> Instance
 
 @target(luau)
-/// Treats `AnalyticsService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AnalyticsService) -> Object
-
-@target(luau)
 /// Roblox: `AnalyticsService.GetDurationLoggerTimestamp`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AnalyticsService#GetDurationLoggerTimestamp

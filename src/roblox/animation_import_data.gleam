@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `AnimationImportData` as its Roblox ancestor `BaseImportData`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_import_data(instance: AnimationImportData) -> BaseImportData
-
-@target(luau)
 /// Treats `AnimationImportData` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AnimationImportData) -> Instance
-
-@target(luau)
-/// Treats `AnimationImportData` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AnimationImportData) -> Object
 
 @target(luau)
 /// Gets Roblox property `BaseImportData.Id`.

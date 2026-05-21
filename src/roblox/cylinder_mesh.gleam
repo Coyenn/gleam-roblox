@@ -9,24 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `CylinderMesh` as its Roblox ancestor `BevelMesh`.
-@luau.global("(function(x) return x end)")
-pub fn as_bevel_mesh(instance: CylinderMesh) -> BevelMesh
-
-@target(luau)
-/// Treats `CylinderMesh` as its Roblox ancestor `DataModelMesh`.
-@luau.global("(function(x) return x end)")
-pub fn as_data_model_mesh(instance: CylinderMesh) -> DataModelMesh
-
-@target(luau)
 /// Treats `CylinderMesh` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: CylinderMesh) -> Instance
-
-@target(luau)
-/// Treats `CylinderMesh` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CylinderMesh) -> Object
 
 @target(luau)
 /// Gets Roblox property `DataModelMesh.Offset`.

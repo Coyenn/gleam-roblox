@@ -15,24 +15,9 @@ import roblox/types.{
 pub fn new() -> BlockMesh
 
 @target(luau)
-/// Treats `BlockMesh` as its Roblox ancestor `BevelMesh`.
-@luau.global("(function(x) return x end)")
-pub fn as_bevel_mesh(instance: BlockMesh) -> BevelMesh
-
-@target(luau)
-/// Treats `BlockMesh` as its Roblox ancestor `DataModelMesh`.
-@luau.global("(function(x) return x end)")
-pub fn as_data_model_mesh(instance: BlockMesh) -> DataModelMesh
-
-@target(luau)
 /// Treats `BlockMesh` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BlockMesh) -> Instance
-
-@target(luau)
-/// Treats `BlockMesh` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BlockMesh) -> Object
 
 @target(luau)
 /// Gets Roblox property `DataModelMesh.Offset`.

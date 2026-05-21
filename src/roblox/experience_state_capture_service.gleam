@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: ExperienceStateCaptureService) -> Instance
 
 @target(luau)
-/// Treats `ExperienceStateCaptureService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ExperienceStateCaptureService) -> Object
-
-@target(luau)
 /// Gets Roblox property `ExperienceStateCaptureService.HiddenSelectionEnabled`.
 ///
 /// Roblox: `ExperienceStateCaptureService.HiddenSelectionEnabled`

@@ -20,11 +20,6 @@ pub fn new() -> AudioDeviceInput
 pub fn as_instance(instance: AudioDeviceInput) -> Instance
 
 @target(luau)
-/// Treats `AudioDeviceInput` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioDeviceInput) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioDeviceInput.AccessType`.
 ///
 /// Determines whether the list of user IDs provided to SetUserIdAccessList is treated as an allow-list or deny-list.

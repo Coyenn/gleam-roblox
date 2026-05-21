@@ -10,29 +10,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `HopperBin` as its Roblox ancestor `BackpackItem`.
-@luau.global("(function(x) return x end)")
-pub fn as_backpack_item(instance: HopperBin) -> BackpackItem
-
-@target(luau)
-/// Treats `HopperBin` as its Roblox ancestor `Model`.
-@luau.global("(function(x) return x end)")
-pub fn as_model(instance: HopperBin) -> Model
-
-@target(luau)
-/// Treats `HopperBin` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: HopperBin) -> PVInstance
-
-@target(luau)
 /// Treats `HopperBin` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: HopperBin) -> Instance
-
-@target(luau)
-/// Treats `HopperBin` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: HopperBin) -> Object
 
 @target(luau)
 /// Gets Roblox property `HopperBin.Active`.

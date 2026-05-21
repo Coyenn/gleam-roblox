@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> TremoloSoundEffect
 
 @target(luau)
-/// Treats `TremoloSoundEffect` as its Roblox ancestor `SoundEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_sound_effect(instance: TremoloSoundEffect) -> SoundEffect
-
-@target(luau)
 /// Treats `TremoloSoundEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: TremoloSoundEffect) -> Instance
-
-@target(luau)
-/// Treats `TremoloSoundEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TremoloSoundEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `TremoloSoundEffect.Depth`.

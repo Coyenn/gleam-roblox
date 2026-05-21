@@ -16,21 +16,9 @@ import roblox/types.{
 pub fn new() -> BubbleChatMessageProperties
 
 @target(luau)
-/// Treats `BubbleChatMessageProperties` as its Roblox ancestor `TextChatMessageProperties`.
-@luau.global("(function(x) return x end)")
-pub fn as_text_chat_message_properties(
-  instance: BubbleChatMessageProperties,
-) -> TextChatMessageProperties
-
-@target(luau)
 /// Treats `BubbleChatMessageProperties` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BubbleChatMessageProperties) -> Instance
-
-@target(luau)
-/// Treats `BubbleChatMessageProperties` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BubbleChatMessageProperties) -> Object
 
 @target(luau)
 /// Gets Roblox property `BubbleChatMessageProperties.BackgroundColor3`.

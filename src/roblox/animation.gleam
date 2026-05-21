@@ -20,11 +20,6 @@ pub fn new() -> Animation
 pub fn as_instance(instance: Animation) -> Instance
 
 @target(luau)
-/// Treats `Animation` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Animation) -> Object
-
-@target(luau)
 /// Gets Roblox property `Animation.AnimationId`.
 ///
 /// Asset ID of the animation an Animation object is referencing.

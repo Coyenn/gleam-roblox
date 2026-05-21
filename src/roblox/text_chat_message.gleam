@@ -15,11 +15,6 @@ import roblox/types.{
 pub fn as_instance(instance: TextChatMessage) -> Instance
 
 @target(luau)
-/// Treats `TextChatMessage` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TextChatMessage) -> Object
-
-@target(luau)
 /// Gets Roblox property `TextChatMessage.BubbleChatMessageProperties`.
 ///
 /// Roblox: `TextChatMessage.BubbleChatMessageProperties`

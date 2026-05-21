@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `GroupImportData` as its Roblox ancestor `BaseImportData`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_import_data(instance: GroupImportData) -> BaseImportData
-
-@target(luau)
 /// Treats `GroupImportData` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: GroupImportData) -> Instance
-
-@target(luau)
-/// Treats `GroupImportData` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GroupImportData) -> Object
 
 @target(luau)
 /// Gets Roblox property `GroupImportData.Anchored`.

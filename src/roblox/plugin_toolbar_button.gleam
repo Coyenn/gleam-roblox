@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PluginToolbarButton) -> Instance
 
 @target(luau)
-/// Treats `PluginToolbarButton` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PluginToolbarButton) -> Object
-
-@target(luau)
 /// Gets Roblox property `PluginToolbarButton.ClickableWhenViewportHidden`.
 ///
 /// Determines whether the button can be clicked when the 3D viewport is hidden, such as when a Script is being edited in another tab.

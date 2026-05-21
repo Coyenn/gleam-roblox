@@ -15,11 +15,6 @@ import roblox/types.{
 pub fn as_instance(instance: AssetService) -> Instance
 
 @target(luau)
-/// Treats `AssetService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AssetService) -> Object
-
-@target(luau)
 /// Gets Roblox property `AssetService.AllowInsertFreeAssets`.
 ///
 /// Controls whether AssetService:LoadAssetAsync() can load assets that are not owned by the experience creator.

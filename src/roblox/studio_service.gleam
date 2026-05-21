@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: StudioService) -> Instance
 
 @target(luau)
-/// Treats `StudioService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StudioService) -> Object
-
-@target(luau)
 /// Gets Roblox property `StudioService.ActiveScript`.
 ///
 /// Reflects the LuaSourceContainer currently being edited (if any).

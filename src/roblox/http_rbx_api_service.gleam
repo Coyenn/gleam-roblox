@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: HttpRbxApiService) -> Instance
 
 @target(luau)
-/// Treats `HttpRbxApiService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: HttpRbxApiService) -> Object
-
-@target(luau)
 /// Roblox: `HttpRbxApiService.RequestLimitedAsync`
 /// ThreadSafety: Unsafe
 /// Tags: Yields

@@ -9,24 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `UserSettings` as its Roblox ancestor `GenericSettings`.
-@luau.global("(function(x) return x end)")
-pub fn as_generic_settings(instance: UserSettings) -> GenericSettings
-
-@target(luau)
-/// Treats `UserSettings` as its Roblox ancestor `ServiceProvider`.
-@luau.global("(function(x) return x end)")
-pub fn as_service_provider(instance: UserSettings) -> ServiceProvider
-
-@target(luau)
 /// Treats `UserSettings` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UserSettings) -> Instance
-
-@target(luau)
-/// Treats `UserSettings` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UserSettings) -> Object
 
 @target(luau)
 /// Returns true if the specified user feature is enabled. This will throw an error if the user feature does not exist.

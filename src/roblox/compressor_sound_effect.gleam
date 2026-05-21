@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> CompressorSoundEffect
 
 @target(luau)
-/// Treats `CompressorSoundEffect` as its Roblox ancestor `SoundEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_sound_effect(instance: CompressorSoundEffect) -> SoundEffect
-
-@target(luau)
 /// Treats `CompressorSoundEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: CompressorSoundEffect) -> Instance
-
-@target(luau)
-/// Treats `CompressorSoundEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CompressorSoundEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `CompressorSoundEffect.Attack`.

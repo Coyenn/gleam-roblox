@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: OpenCloudApiV1) -> Instance
 
 @target(luau)
-/// Treats `OpenCloudApiV1` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: OpenCloudApiV1) -> Object
-
-@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.

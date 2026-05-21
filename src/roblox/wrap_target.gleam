@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> WrapTarget
 
 @target(luau)
-/// Treats `WrapTarget` as its Roblox ancestor `BaseWrap`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_wrap(instance: WrapTarget) -> BaseWrap
-
-@target(luau)
 /// Treats `WrapTarget` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: WrapTarget) -> Instance
-
-@target(luau)
-/// Treats `WrapTarget` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: WrapTarget) -> Object
 
 @target(luau)
 /// Gets Roblox property `WrapTarget.Stiffness`.

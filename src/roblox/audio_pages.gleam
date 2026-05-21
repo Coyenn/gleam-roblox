@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `AudioPages` as its Roblox ancestor `Pages`.
-@luau.global("(function(x) return x end)")
-pub fn as_pages(instance: AudioPages) -> Pages
-
-@target(luau)
 /// Treats `AudioPages` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AudioPages) -> Instance
-
-@target(luau)
-/// Treats `AudioPages` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioPages) -> Object
 
 @target(luau)
 /// Gets Roblox property `Pages.IsFinished`.

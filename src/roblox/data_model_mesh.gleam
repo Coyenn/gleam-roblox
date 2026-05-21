@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: DataModelMesh) -> Instance
 
 @target(luau)
-/// Treats `DataModelMesh` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DataModelMesh) -> Object
-
-@target(luau)
 /// Gets Roblox property `DataModelMesh.Offset`.
 ///
 /// The Offset of a mesh determines the relative position from the BasePart.Position of a BasePart that the mesh will be displayed at.

@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> ColorGradingEffect
 
 @target(luau)
-/// Treats `ColorGradingEffect` as its Roblox ancestor `PostEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_post_effect(instance: ColorGradingEffect) -> PostEffect
-
-@target(luau)
 /// Treats `ColorGradingEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ColorGradingEffect) -> Instance
-
-@target(luau)
-/// Treats `ColorGradingEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ColorGradingEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `ColorGradingEffect.TonemapperPreset`.

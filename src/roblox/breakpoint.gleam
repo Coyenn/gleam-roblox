@@ -20,11 +20,6 @@ pub fn new() -> Breakpoint
 pub fn as_instance(instance: Breakpoint) -> Instance
 
 @target(luau)
-/// Treats `Breakpoint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Breakpoint) -> Object
-
-@target(luau)
 /// Gets Roblox property `Breakpoint.Condition`.
 ///
 /// Roblox: `Breakpoint.Condition`

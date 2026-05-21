@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> Bone
 
 @target(luau)
-/// Treats `Bone` as its Roblox ancestor `Attachment`.
-@luau.global("(function(x) return x end)")
-pub fn as_attachment(instance: Bone) -> Attachment
-
-@target(luau)
 /// Treats `Bone` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Bone) -> Instance
-
-@target(luau)
-/// Treats `Bone` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Bone) -> Object
 
 @target(luau)
 /// Gets Roblox property `Bone.Transform`.

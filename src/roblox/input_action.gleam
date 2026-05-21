@@ -20,11 +20,6 @@ pub fn new() -> InputAction
 pub fn as_instance(instance: InputAction) -> Instance
 
 @target(luau)
-/// Treats `InputAction` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: InputAction) -> Object
-
-@target(luau)
 /// Gets Roblox property `InputAction.Enabled`.
 ///
 /// Determines if the InputAction is enabled or not.

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: StudioData) -> Instance
 
 @target(luau)
-/// Treats `StudioData` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StudioData) -> Object
-
-@target(luau)
 /// Gets Roblox property `StudioData.EnableScriptCollabByDefaultOnLoad`.
 ///
 /// Roblox: `StudioData.EnableScriptCollabByDefaultOnLoad`

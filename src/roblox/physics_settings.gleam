@@ -15,11 +15,6 @@ import roblox/types.{
 pub fn as_instance(instance: PhysicsSettings) -> Instance
 
 @target(luau)
-/// Treats `PhysicsSettings` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PhysicsSettings) -> Object
-
-@target(luau)
 /// Gets Roblox property `PhysicsSettings.AllowSleep`.
 ///
 /// When set to true, physically simulated objects will stop being simulated if they have little to no motion for a set period of time.

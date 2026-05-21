@@ -20,11 +20,6 @@ pub fn new() -> TextChannel
 pub fn as_instance(instance: TextChannel) -> Instance
 
 @target(luau)
-/// Treats `TextChannel` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TextChannel) -> Object
-
-@target(luau)
 /// Gets Roblox property `TextChannel.DirectChatRequester`.
 ///
 /// The TextChannel will only deliver messages to users that can send direct messages to the DirectChatRequester.

@@ -20,11 +20,6 @@ pub fn new() -> AudioLimiter
 pub fn as_instance(instance: AudioLimiter) -> Instance
 
 @target(luau)
-/// Treats `AudioLimiter` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioLimiter) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioLimiter.Bypass`.
 ///
 /// Whether audio streams are passed-through unaffected by this effect.

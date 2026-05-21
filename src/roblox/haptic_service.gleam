@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: HapticService) -> Instance
 
 @target(luau)
-/// Treats `HapticService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: HapticService) -> Object
-
-@target(luau)
 /// Returns the current vibration value set to the specified UserInputType and VibrationMotor.
 ///
 /// Roblox: `HapticService.GetMotor`

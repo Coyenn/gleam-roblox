@@ -3,11 +3,6 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{type AnimationNode, type Object}
 
 @target(luau)
-/// Treats `AnimationNode` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AnimationNode) -> Object
-
-@target(luau)
 /// Gets Roblox property `Object.ClassName`.
 ///
 /// A read-only string representing the class this Object belongs to.

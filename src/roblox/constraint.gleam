@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: Constraint) -> Instance
 
 @target(luau)
-/// Treats `Constraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Constraint) -> Object
-
-@target(luau)
 /// Gets Roblox property `Constraint.Active`.
 ///
 /// Indicates if the constraint is currently active in the world.

@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> Accessory
 
 @target(luau)
-/// Treats `Accessory` as its Roblox ancestor `Accoutrement`.
-@luau.global("(function(x) return x end)")
-pub fn as_accoutrement(instance: Accessory) -> Accoutrement
-
-@target(luau)
 /// Treats `Accessory` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Accessory) -> Instance
-
-@target(luau)
-/// Treats `Accessory` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Accessory) -> Object
 
 @target(luau)
 /// Gets Roblox property `Accessory.AccessoryType`.

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: NotificationService) -> Instance
 
 @target(luau)
-/// Treats `NotificationService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: NotificationService) -> Object
-
-@target(luau)
 /// Gets Roblox property `NotificationService.IsConnected`.
 ///
 /// Roblox: `NotificationService.IsConnected`

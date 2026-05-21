@@ -20,11 +20,6 @@ pub fn new() -> DataStoreIncrementOptions
 pub fn as_instance(instance: DataStoreIncrementOptions) -> Instance
 
 @target(luau)
-/// Treats `DataStoreIncrementOptions` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DataStoreIncrementOptions) -> Object
-
-@target(luau)
 /// Gets the custom metadata set with this DataStoreIncrementOptions instance.
 ///
 /// Roblox: `DataStoreIncrementOptions.GetMetadata`

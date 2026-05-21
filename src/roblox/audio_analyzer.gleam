@@ -20,11 +20,6 @@ pub fn new() -> AudioAnalyzer
 pub fn as_instance(instance: AudioAnalyzer) -> Instance
 
 @target(luau)
-/// Treats `AudioAnalyzer` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioAnalyzer) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioAnalyzer.PeakLevel`.
 ///
 /// The loudest volume observed during the last audio buffer.

@@ -19,24 +19,9 @@ import roblox/types.{
 pub fn new() -> VehicleSeat
 
 @target(luau)
-/// Treats `VehicleSeat` as its Roblox ancestor `BasePart`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_part(instance: VehicleSeat) -> BasePart
-
-@target(luau)
-/// Treats `VehicleSeat` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: VehicleSeat) -> PVInstance
-
-@target(luau)
 /// Treats `VehicleSeat` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: VehicleSeat) -> Instance
-
-@target(luau)
-/// Treats `VehicleSeat` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VehicleSeat) -> Object
 
 @target(luau)
 /// Gets Roblox property `VehicleSeat.AreHingesDetected`.

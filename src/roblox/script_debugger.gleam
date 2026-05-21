@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ScriptDebugger) -> Instance
 
 @target(luau)
-/// Treats `ScriptDebugger` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ScriptDebugger) -> Object
-
-@target(luau)
 /// Gets Roblox property `ScriptDebugger.CurrentLine`.
 ///
 /// Roblox: `ScriptDebugger.CurrentLine`

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: UserService) -> Instance
 
 @target(luau)
-/// Treats `UserService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UserService) -> Object
-
-@target(luau)
 /// Returns an array of user information including user name and display name.
 ///
 /// Roblox: `UserService.GetUserInfosByUserIdsAsync`

@@ -9,21 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `ChannelTabsConfiguration` as its Roblox ancestor `TextChatConfigurations`.
-@luau.global("(function(x) return x end)")
-pub fn as_text_chat_configurations(
-  instance: ChannelTabsConfiguration,
-) -> TextChatConfigurations
-
-@target(luau)
 /// Treats `ChannelTabsConfiguration` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ChannelTabsConfiguration) -> Instance
-
-@target(luau)
-/// Treats `ChannelTabsConfiguration` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ChannelTabsConfiguration) -> Object
 
 @target(luau)
 /// Gets Roblox property `ChannelTabsConfiguration.AbsolutePosition`.

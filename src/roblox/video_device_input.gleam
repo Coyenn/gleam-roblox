@@ -20,11 +20,6 @@ pub fn new() -> VideoDeviceInput
 pub fn as_instance(instance: VideoDeviceInput) -> Instance
 
 @target(luau)
-/// Treats `VideoDeviceInput` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VideoDeviceInput) -> Object
-
-@target(luau)
 /// Gets Roblox property `VideoDeviceInput.Active`.
 ///
 /// Roblox: `VideoDeviceInput.Active`

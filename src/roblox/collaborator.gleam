@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: Collaborator) -> Instance
 
 @target(luau)
-/// Treats `Collaborator` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Collaborator) -> Object
-
-@target(luau)
 /// Gets Roblox property `Collaborator.CFrame`.
 ///
 /// Roblox: `Collaborator.CFrame`

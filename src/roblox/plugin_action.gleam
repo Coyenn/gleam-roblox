@@ -20,11 +20,6 @@ pub fn new() -> PluginAction
 pub fn as_instance(instance: PluginAction) -> Instance
 
 @target(luau)
-/// Treats `PluginAction` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PluginAction) -> Object
-
-@target(luau)
 /// Gets Roblox property `PluginAction.ActionId`.
 ///
 /// A string that uniquely identifies this action.

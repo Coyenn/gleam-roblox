@@ -20,11 +20,6 @@ pub fn new() -> ForceField
 pub fn as_instance(instance: ForceField) -> Instance
 
 @target(luau)
-/// Treats `ForceField` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ForceField) -> Object
-
-@target(luau)
 /// Gets Roblox property `ForceField.Visible`.
 ///
 /// Determines whether or not the ForceField particle effect is visible.

@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `BanHistoryPages` as its Roblox ancestor `Pages`.
-@luau.global("(function(x) return x end)")
-pub fn as_pages(instance: BanHistoryPages) -> Pages
-
-@target(luau)
 /// Treats `BanHistoryPages` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BanHistoryPages) -> Instance
-
-@target(luau)
-/// Treats `BanHistoryPages` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BanHistoryPages) -> Object
 
 @target(luau)
 /// Gets Roblox property `Pages.IsFinished`.

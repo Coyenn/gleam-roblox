@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `Clothing` as its Roblox ancestor `CharacterAppearance`.
-@luau.global("(function(x) return x end)")
-pub fn as_character_appearance(instance: Clothing) -> CharacterAppearance
-
-@target(luau)
 /// Treats `Clothing` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Clothing) -> Instance
-
-@target(luau)
-/// Treats `Clothing` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Clothing) -> Object
 
 @target(luau)
 /// Gets Roblox property `Clothing.Color3`.

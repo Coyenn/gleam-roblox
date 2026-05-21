@@ -20,11 +20,6 @@ pub fn new() -> VisualizationMode
 pub fn as_instance(instance: VisualizationMode) -> Instance
 
 @target(luau)
-/// Treats `VisualizationMode` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VisualizationMode) -> Object
-
-@target(luau)
 /// Gets Roblox property `VisualizationMode.Enabled`.
 ///
 /// Roblox: `VisualizationMode.Enabled`

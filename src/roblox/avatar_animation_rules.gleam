@@ -21,11 +21,6 @@ pub fn new() -> AvatarAnimationRules
 pub fn as_instance(instance: AvatarAnimationRules) -> Instance
 
 @target(luau)
-/// Treats `AvatarAnimationRules` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AvatarAnimationRules) -> Object
-
-@target(luau)
 /// Gets Roblox property `AvatarAnimationRules.AnimationClipsMode`.
 ///
 /// Roblox: `AvatarAnimationRules.AnimationClipsMode`

@@ -16,24 +16,9 @@ import roblox/types.{
 pub fn new() -> Script
 
 @target(luau)
-/// Treats `Script` as its Roblox ancestor `BaseScript`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_script(instance: Script) -> BaseScript
-
-@target(luau)
-/// Treats `Script` as its Roblox ancestor `LuaSourceContainer`.
-@luau.global("(function(x) return x end)")
-pub fn as_lua_source_container(instance: Script) -> LuaSourceContainer
-
-@target(luau)
 /// Treats `Script` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Script) -> Instance
-
-@target(luau)
-/// Treats `Script` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Script) -> Object
 
 @target(luau)
 /// Gets Roblox property `Script.Source`.

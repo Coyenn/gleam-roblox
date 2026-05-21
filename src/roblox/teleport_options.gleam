@@ -20,11 +20,6 @@ pub fn new() -> TeleportOptions
 pub fn as_instance(instance: TeleportOptions) -> Instance
 
 @target(luau)
-/// Treats `TeleportOptions` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TeleportOptions) -> Object
-
-@target(luau)
 /// Gets Roblox property `TeleportOptions.ReservedServerAccessCode`.
 ///
 /// The reserved server access code that indicates the reserved server that the teleport should be to.

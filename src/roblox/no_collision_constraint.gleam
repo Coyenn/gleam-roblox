@@ -20,11 +20,6 @@ pub fn new() -> NoCollisionConstraint
 pub fn as_instance(instance: NoCollisionConstraint) -> Instance
 
 @target(luau)
-/// Treats `NoCollisionConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: NoCollisionConstraint) -> Object
-
-@target(luau)
 /// Gets Roblox property `NoCollisionConstraint.Enabled`.
 ///
 /// Determines whether the two linked BaseParts will collide with each other.

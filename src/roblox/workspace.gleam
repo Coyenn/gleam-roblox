@@ -7,35 +7,15 @@ import roblox/types.{
   type BulkMoveMode, type CFrame, type Camera, type ClientAnimatorThrottlingMode,
   type Instance, type JointCreationMode, type LuauTypeCheckMode, type Model,
   type ModelLevelOfDetail, type ModelStreamingMode, type Object,
-  type OptionRaycastResult, type OverlapParams, type PVInstance, type Player,
-  type RaycastParams, type SecurityCapabilities, type Terrain, type UniqueId,
+  type OverlapParams, type PVInstance, type Player, type RaycastParams,
+  type RaycastResult, type SecurityCapabilities, type Terrain, type UniqueId,
   type Vector3, type Workspace, type WorldRoot,
 }
-
-@target(luau)
-/// Treats `Workspace` as its Roblox ancestor `WorldRoot`.
-@luau.global("(function(x) return x end)")
-pub fn as_world_root(instance: Workspace) -> WorldRoot
-
-@target(luau)
-/// Treats `Workspace` as its Roblox ancestor `Model`.
-@luau.global("(function(x) return x end)")
-pub fn as_model(instance: Workspace) -> Model
-
-@target(luau)
-/// Treats `Workspace` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: Workspace) -> PVInstance
 
 @target(luau)
 /// Treats `Workspace` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Workspace) -> Instance
-
-@target(luau)
-/// Treats `Workspace` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Workspace) -> Object
 
 @target(luau)
 /// Gets Roblox property `Workspace.AirDensity`.
@@ -533,7 +513,7 @@ pub fn blockcast(
   size: Vector3,
   direction: Vector3,
   params: RaycastParams,
-) -> OptionRaycastResult
+) -> Option(RaycastResult)
 
 @target(luau)
 /// Moves a table of BaseParts to a table of CFrames.
@@ -643,7 +623,7 @@ pub fn raycast(
   origin: Vector3,
   direction: Vector3,
   raycast_params: RaycastParams,
-) -> OptionRaycastResult
+) -> Option(RaycastResult)
 
 @target(luau)
 /// Roblox: `WorldRoot.Shapecast`
@@ -658,7 +638,7 @@ pub fn shapecast(
   part: BasePart,
   direction: Vector3,
   params: RaycastParams,
-) -> OptionRaycastResult
+) -> Option(RaycastResult)
 
 @target(luau)
 /// Casts a spherical shape in a given direction and returns a RaycastResult if the shape hits a BasePart or Terrain cell.
@@ -682,7 +662,7 @@ pub fn spherecast(
   radius: Float,
   direction: Vector3,
   params: RaycastParams,
-) -> OptionRaycastResult
+) -> Option(RaycastResult)
 
 @target(luau)
 /// Gets Roblox property `Model.LevelOfDetail`.
@@ -1841,7 +1821,7 @@ pub fn javascript_type_anchor(
   _: BasePart,
   _: ModelStreamingMode,
   _: ModelLevelOfDetail,
-  _: OptionRaycastResult,
+  _: RaycastResult,
   _: RaycastParams,
   _: OverlapParams,
   _: BulkMoveMode,

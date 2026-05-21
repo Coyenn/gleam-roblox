@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> LineForce
 
 @target(luau)
-/// Treats `LineForce` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: LineForce) -> Constraint
-
-@target(luau)
 /// Treats `LineForce` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: LineForce) -> Instance
-
-@target(luau)
-/// Treats `LineForce` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: LineForce) -> Object
 
 @target(luau)
 /// Gets Roblox property `LineForce.ApplyAtCenterOfMass`.

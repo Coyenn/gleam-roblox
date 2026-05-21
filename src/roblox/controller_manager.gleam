@@ -21,11 +21,6 @@ pub fn new() -> ControllerManager
 pub fn as_instance(instance: ControllerManager) -> Instance
 
 @target(luau)
-/// Treats `ControllerManager` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ControllerManager) -> Object
-
-@target(luau)
 /// Gets Roblox property `ControllerManager.ActiveController`.
 ///
 /// The ControllerBase that is set to be activated on the character.

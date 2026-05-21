@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: TestService) -> Instance
 
 @target(luau)
-/// Treats `TestService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TestService) -> Object
-
-@target(luau)
 /// Gets Roblox property `TestService.AutoRuns`.
 ///
 /// If set to true, the game will start running when the service's TestService:RunAsync() method is called.

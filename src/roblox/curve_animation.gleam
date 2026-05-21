@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> CurveAnimation
 
 @target(luau)
-/// Treats `CurveAnimation` as its Roblox ancestor `AnimationClip`.
-@luau.global("(function(x) return x end)")
-pub fn as_animation_clip(instance: CurveAnimation) -> AnimationClip
-
-@target(luau)
 /// Treats `CurveAnimation` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: CurveAnimation) -> Instance
-
-@target(luau)
-/// Treats `CurveAnimation` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CurveAnimation) -> Object
 
 @target(luau)
 /// Gets Roblox property `AnimationClip.Guid`.

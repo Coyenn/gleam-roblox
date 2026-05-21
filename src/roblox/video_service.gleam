@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: VideoService) -> Instance
 
 @target(luau)
-/// Treats `VideoService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VideoService) -> Object
-
-@target(luau)
 /// Creates a VideoSampler that samples frames from the provided video content.
 ///
 /// Roblox: `VideoService.CreateVideoSamplerAsync`

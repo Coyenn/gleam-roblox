@@ -4,11 +4,6 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{type Object, type TerrainIterateOperation}
 
 @target(luau)
-/// Treats `TerrainIterateOperation` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TerrainIterateOperation) -> Object
-
-@target(luau)
 /// Roblox: `TerrainIterateOperation.CommitBlock`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/TerrainIterateOperation#CommitBlock

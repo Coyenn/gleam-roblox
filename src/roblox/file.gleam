@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: File) -> Instance
 
 @target(luau)
-/// Treats `File` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: File) -> Object
-
-@target(luau)
 /// Gets Roblox property `File.Size`.
 ///
 /// The size of the file on disk, in bytes.

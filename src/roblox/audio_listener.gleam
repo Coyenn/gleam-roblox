@@ -21,11 +21,6 @@ pub fn new() -> AudioListener
 pub fn as_instance(instance: AudioListener) -> Instance
 
 @target(luau)
-/// Treats `AudioListener` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioListener) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioListener.AcousticSimulationEnabled`.
 ///
 /// Determines whether acoustic simulation should be used for this AudioListener.

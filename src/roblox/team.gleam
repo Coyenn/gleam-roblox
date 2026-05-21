@@ -20,11 +20,6 @@ pub fn new() -> Team
 pub fn as_instance(instance: Team) -> Instance
 
 @target(luau)
-/// Treats `Team` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Team) -> Object
-
-@target(luau)
 /// Gets Roblox property `Team.AutoAssignable`.
 ///
 /// This property determines whether Players will be automatically placed onto the Team when joining. If multiple teams have this property set to true, Roblox will attempt to even the teams out when Players are added.

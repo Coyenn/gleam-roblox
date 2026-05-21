@@ -21,34 +21,9 @@ import roblox/types.{
 pub fn new() -> ImageButton
 
 @target(luau)
-/// Treats `ImageButton` as its Roblox ancestor `GuiButton`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_button(instance: ImageButton) -> GuiButton
-
-@target(luau)
-/// Treats `ImageButton` as its Roblox ancestor `GuiObject`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_object(instance: ImageButton) -> GuiObject
-
-@target(luau)
-/// Treats `ImageButton` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: ImageButton) -> GuiBase2d
-
-@target(luau)
-/// Treats `ImageButton` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: ImageButton) -> GuiBase
-
-@target(luau)
 /// Treats `ImageButton` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ImageButton) -> Instance
-
-@target(luau)
-/// Treats `ImageButton` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ImageButton) -> Object
 
 @target(luau)
 /// Gets Roblox property `ImageButton.ContentImageSize`.

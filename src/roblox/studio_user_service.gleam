@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: StudioUserService) -> Instance
 
 @target(luau)
-/// Treats `StudioUserService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StudioUserService) -> Object
-
-@target(luau)
 /// Gets Roblox property `StudioUserService.IsLoggedIn`.
 ///
 /// Roblox: `StudioUserService.IsLoggedIn`

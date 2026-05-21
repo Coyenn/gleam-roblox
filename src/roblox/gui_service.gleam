@@ -15,11 +15,6 @@ import roblox/types.{
 pub fn as_instance(instance: GuiService) -> Instance
 
 @target(luau)
-/// Treats `GuiService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GuiService) -> Object
-
-@target(luau)
 /// Gets Roblox property `GuiService.AutoSelectGuiEnabled`.
 ///
 /// If activated, the Select button on a gamepad or Backslash will automatically set a GUI as the selected object.

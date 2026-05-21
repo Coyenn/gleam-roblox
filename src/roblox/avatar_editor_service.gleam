@@ -16,11 +16,6 @@ import roblox/types.{
 pub fn as_instance(instance: AvatarEditorService) -> Instance
 
 @target(luau)
-/// Treats `AvatarEditorService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AvatarEditorService) -> Object
-
-@target(luau)
 /// Roblox: `AvatarEditorService.GetAccessoryType`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#GetAccessoryType
@@ -226,7 +221,7 @@ pub fn get_avatar_rules_async(instance: AvatarEditorService) -> Dynamic
 @luau.method("GetBatchItemDetailsAsync")
 pub fn get_batch_item_details_async(
   instance: AvatarEditorService,
-  item_ids: List(Dynamic),
+  item_ids: List(Int),
   item_type: AvatarItemType,
 ) -> List(Dynamic)
 

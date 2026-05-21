@@ -8,24 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `UIConstraint` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UIConstraint) -> UIComponent
-
-@target(luau)
-/// Treats `UIConstraint` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UIConstraint) -> UIBase
-
-@target(luau)
 /// Treats `UIConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UIConstraint) -> Instance
-
-@target(luau)
-/// Treats `UIConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UIConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.

@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `RocketPropulsion` as its Roblox ancestor `BodyMover`.
-@luau.global("(function(x) return x end)")
-pub fn as_body_mover(instance: RocketPropulsion) -> BodyMover
-
-@target(luau)
 /// Treats `RocketPropulsion` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: RocketPropulsion) -> Instance
-
-@target(luau)
-/// Treats `RocketPropulsion` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RocketPropulsion) -> Object
 
 @target(luau)
 /// Gets Roblox property `RocketPropulsion.CartoonFactor`.

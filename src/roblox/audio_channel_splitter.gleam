@@ -20,11 +20,6 @@ pub fn new() -> AudioChannelSplitter
 pub fn as_instance(instance: AudioChannelSplitter) -> Instance
 
 @target(luau)
-/// Treats `AudioChannelSplitter` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioChannelSplitter) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioChannelSplitter.Layout`.
 ///
 /// Controls the input channel layout to be split from.

@@ -20,11 +20,6 @@ pub fn new() -> Atmosphere
 pub fn as_instance(instance: Atmosphere) -> Instance
 
 @target(luau)
-/// Treats `Atmosphere` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Atmosphere) -> Object
-
-@target(luau)
 /// Gets Roblox property `Atmosphere.Color`.
 ///
 /// Changes the Atmosphere hue for subtle environmental moods.

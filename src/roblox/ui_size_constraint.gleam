@@ -16,29 +16,9 @@ import roblox/types.{
 pub fn new() -> UISizeConstraint
 
 @target(luau)
-/// Treats `UISizeConstraint` as its Roblox ancestor `UIConstraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_constraint(instance: UISizeConstraint) -> UIConstraint
-
-@target(luau)
-/// Treats `UISizeConstraint` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UISizeConstraint) -> UIComponent
-
-@target(luau)
-/// Treats `UISizeConstraint` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UISizeConstraint) -> UIBase
-
-@target(luau)
 /// Treats `UISizeConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UISizeConstraint) -> Instance
-
-@target(luau)
-/// Treats `UISizeConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UISizeConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `UISizeConstraint.MaxSize`.

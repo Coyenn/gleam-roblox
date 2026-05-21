@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: WebSocketClient) -> Instance
 
 @target(luau)
-/// Treats `WebSocketClient` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: WebSocketClient) -> Object
-
-@target(luau)
 /// Gets Roblox property `WebSocketClient.ConnectionState`.
 ///
 /// Roblox: `WebSocketClient.ConnectionState`

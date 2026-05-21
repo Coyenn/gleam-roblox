@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: GamepadService) -> Instance
 
 @target(luau)
-/// Treats `GamepadService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GamepadService) -> Object
-
-@target(luau)
 /// Gets Roblox property `GamepadService.GamepadCursorEnabled`.
 ///
 /// The state of the gamepad virtual cursor.

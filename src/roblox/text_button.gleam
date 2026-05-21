@@ -22,34 +22,9 @@ import roblox/types.{
 pub fn new() -> TextButton
 
 @target(luau)
-/// Treats `TextButton` as its Roblox ancestor `GuiButton`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_button(instance: TextButton) -> GuiButton
-
-@target(luau)
-/// Treats `TextButton` as its Roblox ancestor `GuiObject`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_object(instance: TextButton) -> GuiObject
-
-@target(luau)
-/// Treats `TextButton` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: TextButton) -> GuiBase2d
-
-@target(luau)
-/// Treats `TextButton` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: TextButton) -> GuiBase
-
-@target(luau)
 /// Treats `TextButton` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: TextButton) -> Instance
-
-@target(luau)
-/// Treats `TextButton` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TextButton) -> Object
 
 @target(luau)
 /// Gets Roblox property `TextButton.ContentText`.

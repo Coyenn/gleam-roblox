@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: DebuggerConnectionManager) -> Instance
 
 @target(luau)
-/// Treats `DebuggerConnectionManager` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DebuggerConnectionManager) -> Object
-
-@target(luau)
 /// Gets Roblox property `DebuggerConnectionManager.Timeout`.
 ///
 /// Roblox: `DebuggerConnectionManager.Timeout`

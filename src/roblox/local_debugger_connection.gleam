@@ -9,21 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `LocalDebuggerConnection` as its Roblox ancestor `DebuggerConnection`.
-@luau.global("(function(x) return x end)")
-pub fn as_debugger_connection(
-  instance: LocalDebuggerConnection,
-) -> DebuggerConnection
-
-@target(luau)
 /// Treats `LocalDebuggerConnection` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: LocalDebuggerConnection) -> Instance
-
-@target(luau)
-/// Treats `LocalDebuggerConnection` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: LocalDebuggerConnection) -> Object
 
 @target(luau)
 /// Gets Roblox property `DebuggerConnection.ErrorMessage`.

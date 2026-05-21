@@ -20,11 +20,6 @@ pub fn new() -> DialogChoice
 pub fn as_instance(instance: DialogChoice) -> Instance
 
 @target(luau)
-/// Treats `DialogChoice` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DialogChoice) -> Object
-
-@target(luau)
 /// Gets Roblox property `DialogChoice.GoodbyeChoiceActive`.
 ///
 /// Toggles whether the goodbye option will be displayed.

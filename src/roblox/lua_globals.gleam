@@ -32,7 +32,23 @@ pub fn assert_value(value: Dynamic) -> Dynamic
 /// Luau: `assert`
 /// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#assert
 @luau.global("assert")
+pub fn assert_bool(value: Bool) -> Bool
+
+@target(luau)
+/// Throws an error if the provided value resolves to false or nil.
+///
+/// Luau: `assert`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#assert
+@luau.global("assert")
 pub fn assert_with_message(value: Dynamic, message: String) -> Dynamic
+
+@target(luau)
+/// Throws an error if the provided value resolves to false or nil.
+///
+/// Luau: `assert`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#assert
+@luau.global("assert")
+pub fn assert_bool_with_message(value: Bool, message: String) -> Bool
 
 @target(luau)
 /// Halts thread execution and throws an error.
@@ -48,7 +64,23 @@ pub fn error_message(message: Dynamic) -> Nil
 /// Luau: `error`
 /// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#error
 @luau.global("error")
+pub fn error_string(message: String) -> Nil
+
+@target(luau)
+/// Halts thread execution and throws an error.
+///
+/// Luau: `error`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#error
+@luau.global("error")
 pub fn error_with_level(message: Dynamic, level: Int) -> Nil
+
+@target(luau)
+/// Halts thread execution and throws an error.
+///
+/// Luau: `error`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#error
+@luau.global("error")
+pub fn error_string_with_level(message: String, level: Int) -> Nil
 
 @target(luau)
 /// Returns the total memory heap size in kilobytes.
@@ -147,12 +179,60 @@ pub fn pcall(callback: fn() -> a) -> Dynamic
 pub fn print(value: Dynamic) -> Nil
 
 @target(luau)
+/// Prints all provided values to the output.
+///
+/// Luau: `print`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#print
+@luau.global("print")
+pub fn print_string(value: String) -> Nil
+
+@target(luau)
+/// Prints all provided values to the output.
+///
+/// Luau: `print`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#print
+@luau.global("print")
+pub fn print_int(value: Int) -> Nil
+
+@target(luau)
+/// Prints all provided values to the output.
+///
+/// Luau: `print`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#print
+@luau.global("print")
+pub fn print_bool(value: Bool) -> Nil
+
+@target(luau)
+/// Prints all provided values to the output.
+///
+/// Luau: `print`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#print
+@luau.global("print")
+pub fn print_float(value: Float) -> Nil
+
+@target(luau)
 /// Returns whether v1 is equal to v2, bypassing their metamethods.
 ///
 /// Luau: `rawequal`
 /// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#rawequal
 @luau.global("rawequal")
 pub fn rawequal(a: Dynamic, b: Dynamic) -> Bool
+
+@target(luau)
+/// Returns whether v1 is equal to v2, bypassing their metamethods.
+///
+/// Luau: `rawequal`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#rawequal
+@luau.global("rawequal")
+pub fn rawequal_int(a: Int, b: Int) -> Bool
+
+@target(luau)
+/// Returns whether v1 is equal to v2, bypassing their metamethods.
+///
+/// Luau: `rawequal`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#rawequal
+@luau.global("rawequal")
+pub fn rawequal_string(a: String, b: String) -> Bool
 
 @target(luau)
 /// Gets the real value of table[index], bypassing any metamethods.
@@ -169,6 +249,14 @@ pub fn rawget(table: Dynamic, index: Dynamic) -> Dynamic
 /// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#rawlen
 @luau.global("rawlen")
 pub fn rawlen(value: Dynamic) -> Int
+
+@target(luau)
+/// Returns the length of the string or table, bypassing any metamethods.
+///
+/// Luau: `rawlen`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#rawlen
+@luau.global("rawlen")
+pub fn rawlen_string(value: String) -> Int
 
 @target(luau)
 /// Sets the real value of table[index], bypassing any metamethods.
@@ -249,6 +337,38 @@ pub fn tonumber_with_base(value: Dynamic, base: Int) -> Dynamic
 /// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#tostring
 @luau.global("tostring")
 pub fn tostring(value: Dynamic) -> String
+
+@target(luau)
+/// Returns the provided value converted to a string, or nil if impossible.
+///
+/// Luau: `tostring`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#tostring
+@luau.global("tostring")
+pub fn tostring_string(value: String) -> String
+
+@target(luau)
+/// Returns the provided value converted to a string, or nil if impossible.
+///
+/// Luau: `tostring`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#tostring
+@luau.global("tostring")
+pub fn tostring_int(value: Int) -> String
+
+@target(luau)
+/// Returns the provided value converted to a string, or nil if impossible.
+///
+/// Luau: `tostring`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#tostring
+@luau.global("tostring")
+pub fn tostring_bool(value: Bool) -> String
+
+@target(luau)
+/// Returns the provided value converted to a string, or nil if impossible.
+///
+/// Luau: `tostring`
+/// See: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#tostring
+@luau.global("tostring")
+pub fn tostring_float(value: Float) -> String
 
 @target(luau)
 /// Returns all elements from the given list as a tuple.

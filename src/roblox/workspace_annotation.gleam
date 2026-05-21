@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> WorkspaceAnnotation
 
 @target(luau)
-/// Treats `WorkspaceAnnotation` as its Roblox ancestor `Annotation`.
-@luau.global("(function(x) return x end)")
-pub fn as_annotation(instance: WorkspaceAnnotation) -> Annotation
-
-@target(luau)
 /// Treats `WorkspaceAnnotation` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: WorkspaceAnnotation) -> Instance
-
-@target(luau)
-/// Treats `WorkspaceAnnotation` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: WorkspaceAnnotation) -> Object
 
 @target(luau)
 /// Gets Roblox property `WorkspaceAnnotation.Adornee`.

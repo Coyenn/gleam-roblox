@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: VoiceChatInternal) -> Instance
 
 @target(luau)
-/// Treats `VoiceChatInternal` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VoiceChatInternal) -> Object
-
-@target(luau)
 /// Roblox: `VoiceChatInternal.IsVoiceEnabledForUserIdAsync`
 /// ThreadSafety: Unsafe
 /// Tags: Yields

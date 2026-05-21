@@ -17,24 +17,9 @@ import roblox/types.{
 pub fn new() -> ControllerPartSensor
 
 @target(luau)
-/// Treats `ControllerPartSensor` as its Roblox ancestor `ControllerSensor`.
-@luau.global("(function(x) return x end)")
-pub fn as_controller_sensor(instance: ControllerPartSensor) -> ControllerSensor
-
-@target(luau)
-/// Treats `ControllerPartSensor` as its Roblox ancestor `SensorBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_sensor_base(instance: ControllerPartSensor) -> SensorBase
-
-@target(luau)
 /// Treats `ControllerPartSensor` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ControllerPartSensor) -> Instance
-
-@target(luau)
-/// Treats `ControllerPartSensor` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ControllerPartSensor) -> Object
 
 @target(luau)
 /// Gets Roblox property `ControllerPartSensor.HitFrame`.

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ControllerBase) -> Instance
 
 @target(luau)
-/// Treats `ControllerBase` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ControllerBase) -> Object
-
-@target(luau)
 /// Gets Roblox property `ControllerBase.Active`.
 ///
 /// Roblox: `ControllerBase.Active`

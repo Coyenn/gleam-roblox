@@ -20,29 +20,9 @@ import roblox/types.{
 pub fn new() -> VideoFrame
 
 @target(luau)
-/// Treats `VideoFrame` as its Roblox ancestor `GuiObject`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_object(instance: VideoFrame) -> GuiObject
-
-@target(luau)
-/// Treats `VideoFrame` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: VideoFrame) -> GuiBase2d
-
-@target(luau)
-/// Treats `VideoFrame` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: VideoFrame) -> GuiBase
-
-@target(luau)
 /// Treats `VideoFrame` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: VideoFrame) -> Instance
-
-@target(luau)
-/// Treats `VideoFrame` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VideoFrame) -> Object
 
 @target(luau)
 /// Gets Roblox property `VideoFrame.IsLoaded`.

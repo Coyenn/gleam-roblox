@@ -20,11 +20,6 @@ pub fn new() -> Fire
 pub fn as_instance(instance: Fire) -> Instance
 
 @target(luau)
-/// Treats `Fire` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Fire) -> Object
-
-@target(luau)
 /// Gets Roblox property `Fire.Color`.
 ///
 /// Determines the color of the primary (outer) flame particles.

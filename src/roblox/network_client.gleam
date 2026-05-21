@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `NetworkClient` as its Roblox ancestor `NetworkPeer`.
-@luau.global("(function(x) return x end)")
-pub fn as_network_peer(instance: NetworkClient) -> NetworkPeer
-
-@target(luau)
 /// Treats `NetworkClient` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: NetworkClient) -> Instance
-
-@target(luau)
-/// Treats `NetworkClient` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: NetworkClient) -> Object
 
 @target(luau)
 /// Fired when the client successfully connects to a server. Returns a string showing the server's IP and port, and the client's ClientReplicator.

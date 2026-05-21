@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `MaterialImportData` as its Roblox ancestor `BaseImportData`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_import_data(instance: MaterialImportData) -> BaseImportData
-
-@target(luau)
 /// Treats `MaterialImportData` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: MaterialImportData) -> Instance
-
-@target(luau)
-/// Treats `MaterialImportData` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MaterialImportData) -> Object
 
 @target(luau)
 /// Gets Roblox property `MaterialImportData.DiffuseFilePath`.

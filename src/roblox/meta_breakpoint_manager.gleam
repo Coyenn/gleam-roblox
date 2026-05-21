@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: MetaBreakpointManager) -> Instance
 
 @target(luau)
-/// Treats `MetaBreakpointManager` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MetaBreakpointManager) -> Object
-
-@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: RomarkService) -> Instance
 
 @target(luau)
-/// Treats `RomarkService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RomarkService) -> Object
-
-@target(luau)
 /// Roblox: `RomarkService.EndRemoteRomarkTest`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RomarkService#EndRemoteRomarkTest

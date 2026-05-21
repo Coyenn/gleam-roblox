@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: TrackerLodController) -> Instance
 
 @target(luau)
-/// Treats `TrackerLodController` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TrackerLodController) -> Object
-
-@target(luau)
 /// Gets Roblox property `TrackerLodController.AudioMode`.
 ///
 /// Roblox: `TrackerLodController.AudioMode`

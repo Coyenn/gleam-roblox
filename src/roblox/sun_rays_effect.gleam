@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> SunRaysEffect
 
 @target(luau)
-/// Treats `SunRaysEffect` as its Roblox ancestor `PostEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_post_effect(instance: SunRaysEffect) -> PostEffect
-
-@target(luau)
 /// Treats `SunRaysEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SunRaysEffect) -> Instance
-
-@target(luau)
-/// Treats `SunRaysEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SunRaysEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `SunRaysEffect.Intensity`.

@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> CFrameValue
 
 @target(luau)
-/// Treats `CFrameValue` as its Roblox ancestor `ValueBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_value_base(instance: CFrameValue) -> ValueBase
-
-@target(luau)
 /// Treats `CFrameValue` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: CFrameValue) -> Instance
-
-@target(luau)
-/// Treats `CFrameValue` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CFrameValue) -> Object
 
 @target(luau)
 /// Gets Roblox property `CFrameValue.Value`.

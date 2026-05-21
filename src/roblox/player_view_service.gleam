@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PlayerViewService) -> Instance
 
 @target(luau)
-/// Treats `PlayerViewService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PlayerViewService) -> Object
-
-@target(luau)
 /// Returns a world space CFrame looking at the player's character.
 ///
 /// Roblox: `PlayerViewService.GetDeviceCameraCFrame`

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: DebuggerBreakpoint) -> Instance
 
 @target(luau)
-/// Treats `DebuggerBreakpoint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DebuggerBreakpoint) -> Object
-
-@target(luau)
 /// Gets Roblox property `DebuggerBreakpoint.Condition`.
 ///
 /// Roblox: `DebuggerBreakpoint.Condition`

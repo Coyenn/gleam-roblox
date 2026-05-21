@@ -15,21 +15,9 @@ import roblox/types.{
 pub fn new() -> ReflectionMetadataMember
 
 @target(luau)
-/// Treats `ReflectionMetadataMember` as its Roblox ancestor `ReflectionMetadataItem`.
-@luau.global("(function(x) return x end)")
-pub fn as_reflection_metadata_item(
-  instance: ReflectionMetadataMember,
-) -> ReflectionMetadataItem
-
-@target(luau)
 /// Treats `ReflectionMetadataMember` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ReflectionMetadataMember) -> Instance
-
-@target(luau)
-/// Treats `ReflectionMetadataMember` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ReflectionMetadataMember) -> Object
 
 @target(luau)
 /// Gets Roblox property `ReflectionMetadataItem.Browsable`.

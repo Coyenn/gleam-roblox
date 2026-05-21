@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `CSGDictionaryService` as its Roblox ancestor `FlyweightService`.
-@luau.global("(function(x) return x end)")
-pub fn as_flyweight_service(instance: CSGDictionaryService) -> FlyweightService
-
-@target(luau)
 /// Treats `CSGDictionaryService` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: CSGDictionaryService) -> Instance
-
-@target(luau)
-/// Treats `CSGDictionaryService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CSGDictionaryService) -> Object
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.

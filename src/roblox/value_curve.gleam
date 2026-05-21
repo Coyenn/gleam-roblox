@@ -20,11 +20,6 @@ pub fn new() -> ValueCurve
 pub fn as_instance(instance: ValueCurve) -> Instance
 
 @target(luau)
-/// Treats `ValueCurve` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ValueCurve) -> Object
-
-@target(luau)
 /// Gets Roblox property `ValueCurve.Length`.
 ///
 /// Number of keys in the value curve.

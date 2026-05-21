@@ -9,19 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `ControllerSensor` as its Roblox ancestor `SensorBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_sensor_base(instance: ControllerSensor) -> SensorBase
-
-@target(luau)
 /// Treats `ControllerSensor` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ControllerSensor) -> Instance
-
-@target(luau)
-/// Treats `ControllerSensor` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ControllerSensor) -> Object
 
 @target(luau)
 /// Gets Roblox property `SensorBase.UpdateType`.

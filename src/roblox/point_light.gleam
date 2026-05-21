@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> PointLight
 
 @target(luau)
-/// Treats `PointLight` as its Roblox ancestor `Light`.
-@luau.global("(function(x) return x end)")
-pub fn as_light(instance: PointLight) -> Light
-
-@target(luau)
 /// Treats `PointLight` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: PointLight) -> Instance
-
-@target(luau)
-/// Treats `PointLight` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PointLight) -> Object
 
 @target(luau)
 /// Gets Roblox property `PointLight.Range`.

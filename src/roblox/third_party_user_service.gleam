@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ThirdPartyUserService) -> Instance
 
 @target(luau)
-/// Treats `ThirdPartyUserService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ThirdPartyUserService) -> Object
-
-@target(luau)
 /// Gets Roblox property `ThirdPartyUserService.FriendCommunicationRestrictionStatus`.
 ///
 /// Roblox: `ThirdPartyUserService.FriendCommunicationRestrictionStatus`

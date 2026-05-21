@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> TorsionSpringConstraint
 
 @target(luau)
-/// Treats `TorsionSpringConstraint` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: TorsionSpringConstraint) -> Constraint
-
-@target(luau)
 /// Treats `TorsionSpringConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: TorsionSpringConstraint) -> Instance
-
-@target(luau)
-/// Treats `TorsionSpringConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TorsionSpringConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `TorsionSpringConstraint.Coils`.

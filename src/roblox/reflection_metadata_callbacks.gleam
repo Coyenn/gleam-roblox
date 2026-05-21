@@ -20,11 +20,6 @@ pub fn new() -> ReflectionMetadataCallbacks
 pub fn as_instance(instance: ReflectionMetadataCallbacks) -> Instance
 
 @target(luau)
-/// Treats `ReflectionMetadataCallbacks` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ReflectionMetadataCallbacks) -> Object
-
-@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.

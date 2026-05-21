@@ -22,11 +22,6 @@ pub fn new() -> ProximityPrompt
 pub fn as_instance(instance: ProximityPrompt) -> Instance
 
 @target(luau)
-/// Treats `ProximityPrompt` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ProximityPrompt) -> Object
-
-@target(luau)
 /// Gets Roblox property `ProximityPrompt.ActionText`.
 ///
 /// The action text shown to the user.

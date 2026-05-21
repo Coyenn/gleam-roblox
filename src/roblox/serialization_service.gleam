@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: SerializationService) -> Instance
 
 @target(luau)
-/// Treats `SerializationService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SerializationService) -> Object
-
-@target(luau)
 /// Deserializes a buffer containing .rbxm content, returning a list of instances.
 ///
 /// Roblox: `SerializationService.DeserializeInstancesAsync`

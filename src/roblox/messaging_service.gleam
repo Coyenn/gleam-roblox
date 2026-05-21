@@ -12,10 +12,12 @@ import roblox/types.{
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: MessagingService) -> Instance
 
+pub type MessagingPayload
+
 @target(luau)
-/// Treats `MessagingService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MessagingService) -> Object
+/// Creates a Roblox `MessagingPayload` config table.
+@luau.global("(function(data) local config = { Data = data };  return config end)")
+pub fn messaging_payload(data: Dynamic) -> MessagingPayload
 
 @target(luau)
 /// Invokes the supplied callback whenever a message is pushed to the topic.
@@ -33,7 +35,7 @@ pub fn as_object(instance: MessagingService) -> Object
 pub fn publish_async(
   instance: MessagingService,
   topic: String,
-  message: Dynamic,
+  message: MessagingPayload,
 ) -> Nil
 
 @target(luau)

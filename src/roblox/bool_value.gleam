@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> BoolValue
 
 @target(luau)
-/// Treats `BoolValue` as its Roblox ancestor `ValueBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_value_base(instance: BoolValue) -> ValueBase
-
-@target(luau)
 /// Treats `BoolValue` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BoolValue) -> Instance
-
-@target(luau)
-/// Treats `BoolValue` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BoolValue) -> Object
 
 @target(luau)
 /// Gets Roblox property `BoolValue.Value`.

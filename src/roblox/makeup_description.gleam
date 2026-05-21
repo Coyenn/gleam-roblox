@@ -20,11 +20,6 @@ pub fn new() -> MakeupDescription
 pub fn as_instance(instance: MakeupDescription) -> Instance
 
 @target(luau)
-/// Treats `MakeupDescription` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MakeupDescription) -> Object
-
-@target(luau)
 /// Gets Roblox property `MakeupDescription.AssetId`.
 ///
 /// The asset ID that should be applied when applying this MakeupDescription.

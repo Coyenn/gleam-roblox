@@ -9,24 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `PartAdornment` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: PartAdornment) -> GuiBase3d
-
-@target(luau)
-/// Treats `PartAdornment` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: PartAdornment) -> GuiBase
-
-@target(luau)
 /// Treats `PartAdornment` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: PartAdornment) -> Instance
-
-@target(luau)
-/// Treats `PartAdornment` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PartAdornment) -> Object
 
 @target(luau)
 /// Gets Roblox property `PartAdornment.Adornee`.

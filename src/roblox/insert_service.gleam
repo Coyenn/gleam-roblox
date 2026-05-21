@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: InsertService) -> Instance
 
 @target(luau)
-/// Treats `InsertService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: InsertService) -> Object
-
-@target(luau)
 /// Creates a new MeshPart with specified fidelity values.
 ///
 /// Roblox: `InsertService.CreateMeshPartAsync`

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: NetworkReplicator) -> Instance
 
 @target(luau)
-/// Treats `NetworkReplicator` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: NetworkReplicator) -> Object
-
-@target(luau)
 /// Returns the player that is connected to the NetworkReplicator.
 ///
 /// Roblox: `NetworkReplicator.GetPlayer`

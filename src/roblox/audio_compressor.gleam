@@ -20,11 +20,6 @@ pub fn new() -> AudioCompressor
 pub fn as_instance(instance: AudioCompressor) -> Instance
 
 @target(luau)
-/// Treats `AudioCompressor` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioCompressor) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioCompressor.Attack`.
 ///
 /// Controls how quickly the compressor will clamp down on volume after it surpasses Threshold.

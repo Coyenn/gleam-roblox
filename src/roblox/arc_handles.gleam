@@ -16,34 +16,9 @@ import roblox/types.{
 pub fn new() -> ArcHandles
 
 @target(luau)
-/// Treats `ArcHandles` as its Roblox ancestor `HandlesBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_handles_base(instance: ArcHandles) -> HandlesBase
-
-@target(luau)
-/// Treats `ArcHandles` as its Roblox ancestor `PartAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_part_adornment(instance: ArcHandles) -> PartAdornment
-
-@target(luau)
-/// Treats `ArcHandles` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: ArcHandles) -> GuiBase3d
-
-@target(luau)
-/// Treats `ArcHandles` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: ArcHandles) -> GuiBase
-
-@target(luau)
 /// Treats `ArcHandles` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ArcHandles) -> Instance
-
-@target(luau)
-/// Treats `ArcHandles` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ArcHandles) -> Object
 
 @target(luau)
 /// Gets Roblox property `ArcHandles.Axes`.

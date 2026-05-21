@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PluginDragEvent) -> Instance
 
 @target(luau)
-/// Treats `PluginDragEvent` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PluginDragEvent) -> Object
-
-@target(luau)
 /// Gets Roblox property `PluginDragEvent.Data`.
 ///
 /// Roblox: `PluginDragEvent.Data`

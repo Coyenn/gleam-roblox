@@ -13,29 +13,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `GuiButton` as its Roblox ancestor `GuiObject`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_object(instance: GuiButton) -> GuiObject
-
-@target(luau)
-/// Treats `GuiButton` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: GuiButton) -> GuiBase2d
-
-@target(luau)
-/// Treats `GuiButton` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: GuiButton) -> GuiBase
-
-@target(luau)
 /// Treats `GuiButton` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: GuiButton) -> Instance
-
-@target(luau)
-/// Treats `GuiButton` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GuiButton) -> Object
 
 @target(luau)
 /// Gets Roblox property `GuiButton.AutoButtonColor`.

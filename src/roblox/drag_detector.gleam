@@ -18,19 +18,9 @@ import roblox/types.{
 pub fn new() -> DragDetector
 
 @target(luau)
-/// Treats `DragDetector` as its Roblox ancestor `ClickDetector`.
-@luau.global("(function(x) return x end)")
-pub fn as_click_detector(instance: DragDetector) -> ClickDetector
-
-@target(luau)
 /// Treats `DragDetector` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: DragDetector) -> Instance
-
-@target(luau)
-/// Treats `DragDetector` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DragDetector) -> Object
 
 @target(luau)
 /// Gets Roblox property `DragDetector.ActivatedCursorIcon`.

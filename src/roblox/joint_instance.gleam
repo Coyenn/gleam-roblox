@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: JointInstance) -> Instance
 
 @target(luau)
-/// Treats `JointInstance` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: JointInstance) -> Object
-
-@target(luau)
 /// Gets Roblox property `JointInstance.Active`.
 ///
 /// Determines if the joint is currently active in the world.

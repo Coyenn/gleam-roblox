@@ -18,24 +18,9 @@ import roblox/types.{
 pub fn new() -> CornerWedgePart
 
 @target(luau)
-/// Treats `CornerWedgePart` as its Roblox ancestor `BasePart`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_part(instance: CornerWedgePart) -> BasePart
-
-@target(luau)
-/// Treats `CornerWedgePart` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: CornerWedgePart) -> PVInstance
-
-@target(luau)
 /// Treats `CornerWedgePart` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: CornerWedgePart) -> Instance
-
-@target(luau)
-/// Treats `CornerWedgePart` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CornerWedgePart) -> Object
 
 @target(luau)
 /// Gets Roblox property `BasePart.Anchored`.

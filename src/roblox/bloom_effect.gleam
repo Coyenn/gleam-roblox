@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> BloomEffect
 
 @target(luau)
-/// Treats `BloomEffect` as its Roblox ancestor `PostEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_post_effect(instance: BloomEffect) -> PostEffect
-
-@target(luau)
 /// Treats `BloomEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BloomEffect) -> Instance
-
-@target(luau)
-/// Treats `BloomEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BloomEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `BloomEffect.Intensity`.

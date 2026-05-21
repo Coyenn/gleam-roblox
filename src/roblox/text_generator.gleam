@@ -20,11 +20,6 @@ pub fn new() -> TextGenerator
 pub fn as_instance(instance: TextGenerator) -> Instance
 
 @target(luau)
-/// Treats `TextGenerator` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TextGenerator) -> Object
-
-@target(luau)
 /// Gets Roblox property `TextGenerator.Seed`.
 ///
 /// Sets a fixed seed for the random number generator, allowing reproducible responses in cases where the same input parameters are used across multiple requests.

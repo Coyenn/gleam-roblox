@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> GeneratedFolder
 
 @target(luau)
-/// Treats `GeneratedFolder` as its Roblox ancestor `Folder`.
-@luau.global("(function(x) return x end)")
-pub fn as_folder(instance: GeneratedFolder) -> Folder
-
-@target(luau)
 /// Treats `GeneratedFolder` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: GeneratedFolder) -> Instance
-
-@target(luau)
-/// Treats `GeneratedFolder` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GeneratedFolder) -> Object
 
 @target(luau)
 /// Specifies which part within the GeneratedFolder should be set as the PrimaryPart of the ProceduralModel.

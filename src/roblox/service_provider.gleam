@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ServiceProvider) -> Instance
 
 @target(luau)
-/// Treats `ServiceProvider` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ServiceProvider) -> Object
-
-@target(luau)
 /// Returns the service specified by the given className if it's already created, errors for an invalid name.
 ///
 /// Roblox: `ServiceProvider.FindService`

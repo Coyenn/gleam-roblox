@@ -17,34 +17,9 @@ import roblox/types.{
 pub fn new() -> SphereHandleAdornment
 
 @target(luau)
-/// Treats `SphereHandleAdornment` as its Roblox ancestor `HandleAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_handle_adornment(instance: SphereHandleAdornment) -> HandleAdornment
-
-@target(luau)
-/// Treats `SphereHandleAdornment` as its Roblox ancestor `PVAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_adornment(instance: SphereHandleAdornment) -> PVAdornment
-
-@target(luau)
-/// Treats `SphereHandleAdornment` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: SphereHandleAdornment) -> GuiBase3d
-
-@target(luau)
-/// Treats `SphereHandleAdornment` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: SphereHandleAdornment) -> GuiBase
-
-@target(luau)
 /// Treats `SphereHandleAdornment` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SphereHandleAdornment) -> Instance
-
-@target(luau)
-/// Treats `SphereHandleAdornment` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SphereHandleAdornment) -> Object
 
 @target(luau)
 /// Gets Roblox property `SphereHandleAdornment.Radius`.

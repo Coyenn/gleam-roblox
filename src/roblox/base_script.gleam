@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `BaseScript` as its Roblox ancestor `LuaSourceContainer`.
-@luau.global("(function(x) return x end)")
-pub fn as_lua_source_container(instance: BaseScript) -> LuaSourceContainer
-
-@target(luau)
 /// Treats `BaseScript` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BaseScript) -> Instance
-
-@target(luau)
-/// Treats `BaseScript` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BaseScript) -> Object
 
 @target(luau)
 /// Gets Roblox property `BaseScript.Disabled`.

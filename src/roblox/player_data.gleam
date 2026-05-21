@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PlayerData) -> Instance
 
 @target(luau)
-/// Treats `PlayerData` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PlayerData) -> Object
-
-@target(luau)
 /// Roblox: `PlayerData.GetPlayer`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PlayerData#GetPlayer

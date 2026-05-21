@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: CaptureService) -> Instance
 
 @target(luau)
-/// Treats `CaptureService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CaptureService) -> Object
-
-@target(luau)
 /// Takes a screenshot and provides a temporary contentId to identify it.
 ///
 /// Roblox: `CaptureService.CaptureScreenshot`

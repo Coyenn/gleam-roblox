@@ -19,34 +19,9 @@ import roblox/types.{
 pub fn new() -> NegateOperation
 
 @target(luau)
-/// Treats `NegateOperation` as its Roblox ancestor `PartOperation`.
-@luau.global("(function(x) return x end)")
-pub fn as_part_operation(instance: NegateOperation) -> PartOperation
-
-@target(luau)
-/// Treats `NegateOperation` as its Roblox ancestor `TriangleMeshPart`.
-@luau.global("(function(x) return x end)")
-pub fn as_triangle_mesh_part(instance: NegateOperation) -> TriangleMeshPart
-
-@target(luau)
-/// Treats `NegateOperation` as its Roblox ancestor `BasePart`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_part(instance: NegateOperation) -> BasePart
-
-@target(luau)
-/// Treats `NegateOperation` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: NegateOperation) -> PVInstance
-
-@target(luau)
 /// Treats `NegateOperation` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: NegateOperation) -> Instance
-
-@target(luau)
-/// Treats `NegateOperation` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: NegateOperation) -> Object
 
 @target(luau)
 /// Gets Roblox property `PartOperation.RenderFidelity`.

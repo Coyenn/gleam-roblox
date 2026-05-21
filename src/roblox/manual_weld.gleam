@@ -9,26 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `ManualWeld` as its Roblox ancestor `ManualSurfaceJointInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_manual_surface_joint_instance(
-  instance: ManualWeld,
-) -> ManualSurfaceJointInstance
-
-@target(luau)
-/// Treats `ManualWeld` as its Roblox ancestor `JointInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_joint_instance(instance: ManualWeld) -> JointInstance
-
-@target(luau)
 /// Treats `ManualWeld` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ManualWeld) -> Instance
-
-@target(luau)
-/// Treats `ManualWeld` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ManualWeld) -> Object
 
 @target(luau)
 /// Gets Roblox property `JointInstance.Active`.

@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> VelocityMotor
 
 @target(luau)
-/// Treats `VelocityMotor` as its Roblox ancestor `JointInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_joint_instance(instance: VelocityMotor) -> JointInstance
-
-@target(luau)
 /// Treats `VelocityMotor` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: VelocityMotor) -> Instance
-
-@target(luau)
-/// Treats `VelocityMotor` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VelocityMotor) -> Object
 
 @target(luau)
 /// Gets Roblox property `VelocityMotor.CurrentAngle`.

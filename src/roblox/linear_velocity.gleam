@@ -17,19 +17,9 @@ import roblox/types.{
 pub fn new() -> LinearVelocity
 
 @target(luau)
-/// Treats `LinearVelocity` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: LinearVelocity) -> Constraint
-
-@target(luau)
 /// Treats `LinearVelocity` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: LinearVelocity) -> Instance
-
-@target(luau)
-/// Treats `LinearVelocity` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: LinearVelocity) -> Object
 
 @target(luau)
 /// Gets Roblox property `LinearVelocity.ForceLimitMode`.

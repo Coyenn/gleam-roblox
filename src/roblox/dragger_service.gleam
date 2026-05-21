@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: DraggerService) -> Instance
 
 @target(luau)
-/// Treats `DraggerService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DraggerService) -> Object
-
-@target(luau)
 /// Gets Roblox property `DraggerService.AlignDraggedObjects`.
 ///
 /// Roblox: `DraggerService.AlignDraggedObjects`

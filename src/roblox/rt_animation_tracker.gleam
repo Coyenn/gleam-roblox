@@ -21,11 +21,6 @@ pub fn new() -> RTAnimationTracker
 pub fn as_instance(instance: RTAnimationTracker) -> Instance
 
 @target(luau)
-/// Treats `RTAnimationTracker` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RTAnimationTracker) -> Object
-
-@target(luau)
 /// Gets Roblox property `RTAnimationTracker.Active`.
 ///
 /// Roblox: `RTAnimationTracker.Active`

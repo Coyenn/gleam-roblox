@@ -694,6 +694,8 @@ pub type ControllerService
 
 pub type CookiesService
 
+pub type CoordinateFrame
+
 pub type CoreGui
 
 pub type CoreGuiConfiguration
@@ -1626,30 +1628,6 @@ pub type OperationGraph
 
 pub type OperationType
 
-pub type OptionBool
-
-pub type OptionColor3
-
-pub type OptionCoordinateFrame
-
-pub type OptionFloat
-
-pub type OptionFunction
-
-pub type OptionIXPLoadingStatus
-
-pub type OptionInt
-
-pub type OptionRaycastResult
-
-pub type OptionSharedTable
-
-pub type OptionVector2
-
-pub type OptionVector3
-
-pub type OptionWebViewParams
-
 pub type OptionalCoordinateFrame
 
 pub type OrderedDataStore
@@ -1969,6 +1947,8 @@ pub type RayValue
 pub type RaycastFilterType
 
 pub type RaycastParams
+
+pub type RaycastResult
 
 pub type RbxAnalyticsService
 
@@ -2987,6 +2967,8 @@ pub type WebStreamClient
 pub type WebStreamClientState
 
 pub type WebStreamClientType
+
+pub type WebViewParams
 
 pub type WebViewService
 

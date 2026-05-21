@@ -21,11 +21,6 @@ pub fn new() -> WrapTextureTransfer
 pub fn as_instance(instance: WrapTextureTransfer) -> Instance
 
 @target(luau)
-/// Treats `WrapTextureTransfer` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: WrapTextureTransfer) -> Object
-
-@target(luau)
 /// Gets Roblox property `WrapTextureTransfer.ReferenceCageMeshContent`.
 ///
 /// An optional reference mesh used for pruning and validating the target cage.

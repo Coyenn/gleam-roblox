@@ -20,11 +20,6 @@ pub fn new() -> WeldConstraint
 pub fn as_instance(instance: WeldConstraint) -> Instance
 
 @target(luau)
-/// Treats `WeldConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: WeldConstraint) -> Object
-
-@target(luau)
 /// Gets Roblox property `WeldConstraint.Active`.
 ///
 /// Indicates if the WeldConstraint is currently active in the world.

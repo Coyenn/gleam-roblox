@@ -20,11 +20,6 @@ pub fn new() -> AudioFilter
 pub fn as_instance(instance: AudioFilter) -> Instance
 
 @target(luau)
-/// Treats `AudioFilter` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioFilter) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioFilter.Bypass`.
 ///
 /// Whether audio streams are passed-through unaffected by this effect.

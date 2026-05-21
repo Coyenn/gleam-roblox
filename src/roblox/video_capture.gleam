@@ -5,16 +5,6 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `VideoCapture` as its Roblox ancestor `Capture`.
-@luau.global("(function(x) return x end)")
-pub fn as_capture(instance: VideoCapture) -> Capture
-
-@target(luau)
-/// Treats `VideoCapture` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VideoCapture) -> Object
-
-@target(luau)
 /// Gets Roblox property `VideoCapture.FilePath`.
 ///
 /// Roblox: `VideoCapture.FilePath`

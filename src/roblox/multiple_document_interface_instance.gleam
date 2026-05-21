@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: MultipleDocumentInterfaceInstance) -> Instance
 
 @target(luau)
-/// Treats `MultipleDocumentInterfaceInstance` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MultipleDocumentInterfaceInstance) -> Object
-
-@target(luau)
 /// Gets Roblox property `MultipleDocumentInterfaceInstance.FocusedDataModelSession`.
 ///
 /// Roblox: `MultipleDocumentInterfaceInstance.FocusedDataModelSession`

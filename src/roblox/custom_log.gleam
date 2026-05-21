@@ -20,11 +20,6 @@ pub fn new() -> CustomLog
 pub fn as_instance(instance: CustomLog) -> Instance
 
 @target(luau)
-/// Treats `CustomLog` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CustomLog) -> Object
-
-@target(luau)
 /// Roblox: `CustomLog.Close`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CustomLog#Close

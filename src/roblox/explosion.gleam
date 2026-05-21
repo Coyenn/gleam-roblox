@@ -20,11 +20,6 @@ pub fn new() -> Explosion
 pub fn as_instance(instance: Explosion) -> Instance
 
 @target(luau)
-/// Treats `Explosion` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Explosion) -> Object
-
-@target(luau)
 /// Gets Roblox property `Explosion.BlastPressure`.
 ///
 /// Used to determine the amount of force applied to BaseParts caught in the Explosion.BlastRadius.

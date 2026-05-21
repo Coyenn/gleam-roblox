@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: DataStoreKey) -> Instance
 
 @target(luau)
-/// Treats `DataStoreKey` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DataStoreKey) -> Object
-
-@target(luau)
 /// Gets Roblox property `DataStoreKey.KeyName`.
 ///
 /// The name of the key.

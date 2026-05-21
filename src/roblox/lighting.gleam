@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: Lighting) -> Instance
 
 @target(luau)
-/// Treats `Lighting` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Lighting) -> Object
-
-@target(luau)
 /// Gets Roblox property `Lighting.Ambient`.
 ///
 /// The lighting hue applied to areas that are occluded from the sky, such as indoor areas.

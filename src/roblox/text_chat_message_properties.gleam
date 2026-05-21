@@ -20,11 +20,6 @@ pub fn new() -> TextChatMessageProperties
 pub fn as_instance(instance: TextChatMessageProperties) -> Instance
 
 @target(luau)
-/// Treats `TextChatMessageProperties` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TextChatMessageProperties) -> Object
-
-@target(luau)
 /// Gets Roblox property `TextChatMessageProperties.PrefixText`.
 ///
 /// The TextChatMessage.PrefixText to override.

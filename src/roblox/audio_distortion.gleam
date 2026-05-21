@@ -20,11 +20,6 @@ pub fn new() -> AudioDistortion
 pub fn as_instance(instance: AudioDistortion) -> Instance
 
 @target(luau)
-/// Treats `AudioDistortion` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioDistortion) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioDistortion.Bypass`.
 ///
 /// Whether audio streams are passed-through unaffected by this effect.

@@ -20,11 +20,6 @@ pub fn new() -> AnimationNodeDefinition
 pub fn as_instance(instance: AnimationNodeDefinition) -> Instance
 
 @target(luau)
-/// Treats `AnimationNodeDefinition` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AnimationNodeDefinition) -> Object
-
-@target(luau)
 /// Gets Roblox property `AnimationNodeDefinition.NodeId`.
 ///
 /// Roblox: `AnimationNodeDefinition.NodeId`

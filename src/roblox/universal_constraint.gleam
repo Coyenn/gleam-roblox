@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> UniversalConstraint
 
 @target(luau)
-/// Treats `UniversalConstraint` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: UniversalConstraint) -> Constraint
-
-@target(luau)
 /// Treats `UniversalConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UniversalConstraint) -> Instance
-
-@target(luau)
-/// Treats `UniversalConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UniversalConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `UniversalConstraint.LimitsEnabled`.

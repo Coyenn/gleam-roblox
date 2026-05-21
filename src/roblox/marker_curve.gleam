@@ -20,11 +20,6 @@ pub fn new() -> MarkerCurve
 pub fn as_instance(instance: MarkerCurve) -> Instance
 
 @target(luau)
-/// Treats `MarkerCurve` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MarkerCurve) -> Object
-
-@target(luau)
 /// Gets Roblox property `MarkerCurve.Length`.
 ///
 /// Returns the number of markers in the MarkerCurve.

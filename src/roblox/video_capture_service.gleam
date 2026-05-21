@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: VideoCaptureService) -> Instance
 
 @target(luau)
-/// Treats `VideoCaptureService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VideoCaptureService) -> Object
-
-@target(luau)
 /// Gets Roblox property `VideoCaptureService.Active`.
 ///
 /// Roblox: `VideoCaptureService.Active`

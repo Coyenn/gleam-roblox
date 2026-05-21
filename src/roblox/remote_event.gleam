@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> RemoteEvent
 
 @target(luau)
-/// Treats `RemoteEvent` as its Roblox ancestor `BaseRemoteEvent`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_remote_event(instance: RemoteEvent) -> BaseRemoteEvent
-
-@target(luau)
 /// Treats `RemoteEvent` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: RemoteEvent) -> Instance
-
-@target(luau)
-/// Treats `RemoteEvent` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RemoteEvent) -> Object
 
 @target(luau)
 /// Fires the OnClientEvent event for each connected client.

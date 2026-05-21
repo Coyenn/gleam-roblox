@@ -20,11 +20,6 @@ pub fn new() -> SoundGroup
 pub fn as_instance(instance: SoundGroup) -> Instance
 
 @target(luau)
-/// Treats `SoundGroup` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SoundGroup) -> Object
-
-@target(luau)
 /// Gets Roblox property `SoundGroup.Volume`.
 ///
 /// The volume multiplier applied to Sounds that are in the SoundGroup.

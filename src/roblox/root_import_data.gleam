@@ -10,19 +10,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `RootImportData` as its Roblox ancestor `BaseImportData`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_import_data(instance: RootImportData) -> BaseImportData
-
-@target(luau)
 /// Treats `RootImportData` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: RootImportData) -> Instance
-
-@target(luau)
-/// Treats `RootImportData` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RootImportData) -> Object
 
 @target(luau)
 /// Gets Roblox property `RootImportData.AddModelToInventory`.

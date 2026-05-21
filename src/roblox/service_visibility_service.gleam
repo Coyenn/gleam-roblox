@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ServiceVisibilityService) -> Instance
 
 @target(luau)
-/// Treats `ServiceVisibilityService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ServiceVisibilityService) -> Object
-
-@target(luau)
 /// Gets Roblox property `ServiceVisibilityService.HiddenServices`.
 ///
 /// Roblox: `ServiceVisibilityService.HiddenServices`

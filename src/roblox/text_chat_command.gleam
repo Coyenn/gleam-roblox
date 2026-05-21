@@ -20,11 +20,6 @@ pub fn new() -> TextChatCommand
 pub fn as_instance(instance: TextChatCommand) -> Instance
 
 @target(luau)
-/// Treats `TextChatCommand` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TextChatCommand) -> Object
-
-@target(luau)
 /// Gets Roblox property `TextChatCommand.AutocompleteVisible`.
 ///
 /// Roblox: `TextChatCommand.AutocompleteVisible`

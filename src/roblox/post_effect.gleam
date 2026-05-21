@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PostEffect) -> Instance
 
 @target(luau)
-/// Treats `PostEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PostEffect) -> Object
-
-@target(luau)
 /// Gets Roblox property `PostEffect.Enabled`.
 ///
 /// Toggles whether or not the PostEffect is enabled.

@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> UnreliableRemoteEvent
 
 @target(luau)
-/// Treats `UnreliableRemoteEvent` as its Roblox ancestor `BaseRemoteEvent`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_remote_event(instance: UnreliableRemoteEvent) -> BaseRemoteEvent
-
-@target(luau)
 /// Treats `UnreliableRemoteEvent` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UnreliableRemoteEvent) -> Instance
-
-@target(luau)
-/// Treats `UnreliableRemoteEvent` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UnreliableRemoteEvent) -> Object
 
 @target(luau)
 /// Fires the OnClientEvent event for all connected clients. Has a 1000 byte limit to the payload of the event. Events with larger payloads are dropped.

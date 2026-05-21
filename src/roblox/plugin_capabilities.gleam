@@ -20,11 +20,6 @@ pub fn new() -> PluginCapabilities
 pub fn as_instance(instance: PluginCapabilities) -> Instance
 
 @target(luau)
-/// Treats `PluginCapabilities` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PluginCapabilities) -> Object
-
-@target(luau)
 /// Gets Roblox property `PluginCapabilities.Manifest`.
 ///
 /// Roblox: `PluginCapabilities.Manifest`

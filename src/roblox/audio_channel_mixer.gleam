@@ -20,11 +20,6 @@ pub fn new() -> AudioChannelMixer
 pub fn as_instance(instance: AudioChannelMixer) -> Instance
 
 @target(luau)
-/// Treats `AudioChannelMixer` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioChannelMixer) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioChannelMixer.Layout`.
 ///
 /// Controls the output channel layout to be mixed to.

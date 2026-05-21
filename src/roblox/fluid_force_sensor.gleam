@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> FluidForceSensor
 
 @target(luau)
-/// Treats `FluidForceSensor` as its Roblox ancestor `SensorBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_sensor_base(instance: FluidForceSensor) -> SensorBase
-
-@target(luau)
 /// Treats `FluidForceSensor` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: FluidForceSensor) -> Instance
-
-@target(luau)
-/// Treats `FluidForceSensor` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: FluidForceSensor) -> Object
 
 @target(luau)
 /// Gets Roblox property `FluidForceSensor.CenterOfPressure`.

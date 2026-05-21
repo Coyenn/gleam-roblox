@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> PitchShiftSoundEffect
 
 @target(luau)
-/// Treats `PitchShiftSoundEffect` as its Roblox ancestor `SoundEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_sound_effect(instance: PitchShiftSoundEffect) -> SoundEffect
-
-@target(luau)
 /// Treats `PitchShiftSoundEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: PitchShiftSoundEffect) -> Instance
-
-@target(luau)
-/// Treats `PitchShiftSoundEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PitchShiftSoundEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `PitchShiftSoundEffect.Octave`.

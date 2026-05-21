@@ -16,24 +16,9 @@ import roblox/types.{
 pub fn new() -> Texture
 
 @target(luau)
-/// Treats `Texture` as its Roblox ancestor `Decal`.
-@luau.global("(function(x) return x end)")
-pub fn as_decal(instance: Texture) -> Decal
-
-@target(luau)
-/// Treats `Texture` as its Roblox ancestor `FaceInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_face_instance(instance: Texture) -> FaceInstance
-
-@target(luau)
 /// Treats `Texture` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Texture) -> Instance
-
-@target(luau)
-/// Treats `Texture` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Texture) -> Object
 
 @target(luau)
 /// Gets Roblox property `Texture.OffsetStudsU`.

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: AuroraScriptObject) -> Instance
 
 @target(luau)
-/// Treats `AuroraScriptObject` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AuroraScriptObject) -> Object
-
-@target(luau)
 /// Gets Roblox property `AuroraScriptObject.BehaviorWeak`.
 ///
 /// Roblox: `AuroraScriptObject.BehaviorWeak`

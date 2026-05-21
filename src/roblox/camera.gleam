@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> Camera
 
 @target(luau)
-/// Treats `Camera` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: Camera) -> PVInstance
-
-@target(luau)
 /// Treats `Camera` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Camera) -> Instance
-
-@target(luau)
-/// Treats `Camera` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Camera) -> Object
 
 @target(luau)
 /// Gets Roblox property `Camera.CFrame`.

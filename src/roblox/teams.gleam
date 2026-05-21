@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: Teams) -> Instance
 
 @target(luau)
-/// Treats `Teams` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Teams) -> Object
-
-@target(luau)
 /// Returns a table containing the game's Team objects. Will only return Team objects that are parented to the Teams service.
 ///
 /// Roblox: `Teams.GetTeams`

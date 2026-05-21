@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: UniqueIdLookupService) -> Instance
 
 @target(luau)
-/// Treats `UniqueIdLookupService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UniqueIdLookupService) -> Object
-
-@target(luau)
 /// Roblox: `UniqueIdLookupService.GetOrCreateUniqueIdRemoteCommand`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UniqueIdLookupService#GetOrCreateUniqueIdRemoteCommand

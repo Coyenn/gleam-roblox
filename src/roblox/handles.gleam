@@ -17,34 +17,9 @@ import roblox/types.{
 pub fn new() -> Handles
 
 @target(luau)
-/// Treats `Handles` as its Roblox ancestor `HandlesBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_handles_base(instance: Handles) -> HandlesBase
-
-@target(luau)
-/// Treats `Handles` as its Roblox ancestor `PartAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_part_adornment(instance: Handles) -> PartAdornment
-
-@target(luau)
-/// Treats `Handles` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: Handles) -> GuiBase3d
-
-@target(luau)
-/// Treats `Handles` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: Handles) -> GuiBase
-
-@target(luau)
 /// Treats `Handles` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Handles) -> Instance
-
-@target(luau)
-/// Treats `Handles` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Handles) -> Object
 
 @target(luau)
 /// Gets Roblox property `Handles.Faces`.

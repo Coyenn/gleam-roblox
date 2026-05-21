@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: DataStoreKeyInfo) -> Instance
 
 @target(luau)
-/// Treats `DataStoreKeyInfo` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DataStoreKeyInfo) -> Object
-
-@target(luau)
 /// Gets Roblox property `DataStoreKeyInfo.CreatedTime`.
 ///
 /// The date and time the object was created.

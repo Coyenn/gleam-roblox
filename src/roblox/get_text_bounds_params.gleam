@@ -20,11 +20,6 @@ pub fn new() -> GetTextBoundsParams
 pub fn as_instance(instance: GetTextBoundsParams) -> Instance
 
 @target(luau)
-/// Treats `GetTextBoundsParams` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GetTextBoundsParams) -> Object
-
-@target(luau)
 /// Gets Roblox property `GetTextBoundsParams.Font`.
 ///
 /// The Font of the text being measured.

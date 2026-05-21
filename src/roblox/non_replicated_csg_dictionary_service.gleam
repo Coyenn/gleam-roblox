@@ -9,21 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `NonReplicatedCSGDictionaryService` as its Roblox ancestor `FlyweightService`.
-@luau.global("(function(x) return x end)")
-pub fn as_flyweight_service(
-  instance: NonReplicatedCSGDictionaryService,
-) -> FlyweightService
-
-@target(luau)
 /// Treats `NonReplicatedCSGDictionaryService` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: NonReplicatedCSGDictionaryService) -> Instance
-
-@target(luau)
-/// Treats `NonReplicatedCSGDictionaryService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: NonReplicatedCSGDictionaryService) -> Object
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.

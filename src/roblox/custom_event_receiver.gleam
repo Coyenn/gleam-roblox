@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: CustomEventReceiver) -> Instance
 
 @target(luau)
-/// Treats `CustomEventReceiver` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CustomEventReceiver) -> Object
-
-@target(luau)
 /// Gets Roblox property `CustomEventReceiver.Source`.
 ///
 /// Attaches the CustomEventReceiver object to a CustomEvent.

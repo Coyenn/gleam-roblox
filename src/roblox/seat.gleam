@@ -19,34 +19,9 @@ import roblox/types.{
 pub fn new() -> Seat
 
 @target(luau)
-/// Treats `Seat` as its Roblox ancestor `Part`.
-@luau.global("(function(x) return x end)")
-pub fn as_part(instance: Seat) -> Part
-
-@target(luau)
-/// Treats `Seat` as its Roblox ancestor `FormFactorPart`.
-@luau.global("(function(x) return x end)")
-pub fn as_form_factor_part(instance: Seat) -> FormFactorPart
-
-@target(luau)
-/// Treats `Seat` as its Roblox ancestor `BasePart`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_part(instance: Seat) -> BasePart
-
-@target(luau)
-/// Treats `Seat` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: Seat) -> PVInstance
-
-@target(luau)
 /// Treats `Seat` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Seat) -> Instance
-
-@target(luau)
-/// Treats `Seat` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Seat) -> Object
 
 @target(luau)
 /// Gets Roblox property `Seat.Disabled`.

@@ -20,29 +20,9 @@ import roblox/types.{
 pub fn new() -> VideoDisplay
 
 @target(luau)
-/// Treats `VideoDisplay` as its Roblox ancestor `GuiObject`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_object(instance: VideoDisplay) -> GuiObject
-
-@target(luau)
-/// Treats `VideoDisplay` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: VideoDisplay) -> GuiBase2d
-
-@target(luau)
-/// Treats `VideoDisplay` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: VideoDisplay) -> GuiBase
-
-@target(luau)
 /// Treats `VideoDisplay` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: VideoDisplay) -> Instance
-
-@target(luau)
-/// Treats `VideoDisplay` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VideoDisplay) -> Object
 
 @target(luau)
 /// Gets Roblox property `VideoDisplay.ResampleMode`.

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: FunctionalTest) -> Instance
 
 @target(luau)
-/// Treats `FunctionalTest` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: FunctionalTest) -> Object
-
-@target(luau)
 /// Gets Roblox property `FunctionalTest.Description`.
 ///
 /// The description of the FunctionalTest.

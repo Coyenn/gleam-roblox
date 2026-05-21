@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> SurfaceLight
 
 @target(luau)
-/// Treats `SurfaceLight` as its Roblox ancestor `Light`.
-@luau.global("(function(x) return x end)")
-pub fn as_light(instance: SurfaceLight) -> Light
-
-@target(luau)
 /// Treats `SurfaceLight` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SurfaceLight) -> Instance
-
-@target(luau)
-/// Treats `SurfaceLight` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SurfaceLight) -> Object
 
 @target(luau)
 /// Gets Roblox property `SurfaceLight.Angle`.

@@ -9,24 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `Plane` as its Roblox ancestor `PlaneConstraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_plane_constraint(instance: Plane) -> PlaneConstraint
-
-@target(luau)
-/// Treats `Plane` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: Plane) -> Constraint
-
-@target(luau)
 /// Treats `Plane` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Plane) -> Instance
-
-@target(luau)
-/// Treats `Plane` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Plane) -> Object
 
 @target(luau)
 /// Gets Roblox property `Constraint.Active`.

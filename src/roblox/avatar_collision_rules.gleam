@@ -22,11 +22,6 @@ pub fn new() -> AvatarCollisionRules
 pub fn as_instance(instance: AvatarCollisionRules) -> Instance
 
 @target(luau)
-/// Treats `AvatarCollisionRules` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AvatarCollisionRules) -> Object
-
-@target(luau)
 /// Gets Roblox property `AvatarCollisionRules.CollisionMode`.
 ///
 /// Roblox: `AvatarCollisionRules.CollisionMode`

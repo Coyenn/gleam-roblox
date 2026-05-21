@@ -20,11 +20,6 @@ pub fn new() -> InputContext
 pub fn as_instance(instance: InputContext) -> Instance
 
 @target(luau)
-/// Treats `InputContext` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: InputContext) -> Object
-
-@target(luau)
 /// Gets Roblox property `InputContext.Enabled`.
 ///
 /// Determines if this InputContext is enabled or not.

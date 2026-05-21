@@ -15,24 +15,9 @@ import roblox/types.{
 pub fn new() -> UIPadding
 
 @target(luau)
-/// Treats `UIPadding` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UIPadding) -> UIComponent
-
-@target(luau)
-/// Treats `UIPadding` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UIPadding) -> UIBase
-
-@target(luau)
 /// Treats `UIPadding` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UIPadding) -> Instance
-
-@target(luau)
-/// Treats `UIPadding` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UIPadding) -> Object
 
 @target(luau)
 /// Gets Roblox property `UIPadding.PaddingBottom`.

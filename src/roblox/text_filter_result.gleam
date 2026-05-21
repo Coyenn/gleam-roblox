@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: TextFilterResult) -> Instance
 
 @target(luau)
-/// Treats `TextFilterResult` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TextFilterResult) -> Object
-
-@target(luau)
 /// Returns the text in a properly filtered manner for all users.
 ///
 /// Roblox: `TextFilterResult.GetNonChatStringForBroadcastAsync`

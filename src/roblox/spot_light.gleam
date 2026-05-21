@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> SpotLight
 
 @target(luau)
-/// Treats `SpotLight` as its Roblox ancestor `Light`.
-@luau.global("(function(x) return x end)")
-pub fn as_light(instance: SpotLight) -> Light
-
-@target(luau)
 /// Treats `SpotLight` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SpotLight) -> Instance
-
-@target(luau)
-/// Treats `SpotLight` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SpotLight) -> Object
 
 @target(luau)
 /// Gets Roblox property `SpotLight.Angle`.

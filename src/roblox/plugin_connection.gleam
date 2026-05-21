@@ -5,11 +5,6 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `PluginConnection` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PluginConnection) -> Object
-
-@target(luau)
 /// Gets Roblox property `PluginConnection.Connected`.
 ///
 /// Whether this PluginConnection object is still connected.

@@ -20,11 +20,6 @@ pub fn new() -> ClickDetector
 pub fn as_instance(instance: ClickDetector) -> Instance
 
 @target(luau)
-/// Treats `ClickDetector` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ClickDetector) -> Object
-
-@target(luau)
 /// Gets Roblox property `ClickDetector.CursorIcon`.
 ///
 /// Sets the cursor icon to display when the mouse is hovered over the parent of this ClickDetector or DragDetector.

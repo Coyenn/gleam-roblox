@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `RecommendationPages` as its Roblox ancestor `Pages`.
-@luau.global("(function(x) return x end)")
-pub fn as_pages(instance: RecommendationPages) -> Pages
-
-@target(luau)
 /// Treats `RecommendationPages` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: RecommendationPages) -> Instance
-
-@target(luau)
-/// Treats `RecommendationPages` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RecommendationPages) -> Object
 
 @target(luau)
 /// Gets Roblox property `Pages.IsFinished`.

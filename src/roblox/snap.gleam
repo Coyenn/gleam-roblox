@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `Snap` as its Roblox ancestor `JointInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_joint_instance(instance: Snap) -> JointInstance
-
-@target(luau)
 /// Treats `Snap` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Snap) -> Instance
-
-@target(luau)
-/// Treats `Snap` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Snap) -> Object
 
 @target(luau)
 /// Gets Roblox property `JointInstance.Active`.

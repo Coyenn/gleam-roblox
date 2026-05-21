@@ -16,24 +16,9 @@ import roblox/types.{
 pub fn new() -> Actor
 
 @target(luau)
-/// Treats `Actor` as its Roblox ancestor `Model`.
-@luau.global("(function(x) return x end)")
-pub fn as_model(instance: Actor) -> Model
-
-@target(luau)
-/// Treats `Actor` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: Actor) -> PVInstance
-
-@target(luau)
 /// Treats `Actor` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Actor) -> Instance
-
-@target(luau)
-/// Treats `Actor` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Actor) -> Object
 
 @target(luau)
 /// Binds a Luau callback to a message with the specified topic.

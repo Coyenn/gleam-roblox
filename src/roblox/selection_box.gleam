@@ -16,29 +16,9 @@ import roblox/types.{
 pub fn new() -> SelectionBox
 
 @target(luau)
-/// Treats `SelectionBox` as its Roblox ancestor `InstanceAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_instance_adornment(instance: SelectionBox) -> InstanceAdornment
-
-@target(luau)
-/// Treats `SelectionBox` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: SelectionBox) -> GuiBase3d
-
-@target(luau)
-/// Treats `SelectionBox` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: SelectionBox) -> GuiBase
-
-@target(luau)
 /// Treats `SelectionBox` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SelectionBox) -> Instance
-
-@target(luau)
-/// Treats `SelectionBox` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SelectionBox) -> Object
 
 @target(luau)
 /// Gets Roblox property `SelectionBox.LineThickness`.

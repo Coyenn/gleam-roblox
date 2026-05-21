@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ExperienceNotificationService) -> Instance
 
 @target(luau)
-/// Treats `ExperienceNotificationService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ExperienceNotificationService) -> Object
-
-@target(luau)
 /// Shows an in-experience prompt for the local player to enable notifications.
 ///
 /// Roblox: `ExperienceNotificationService.PromptOptIn`

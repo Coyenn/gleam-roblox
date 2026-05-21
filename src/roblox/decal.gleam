@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> Decal
 
 @target(luau)
-/// Treats `Decal` as its Roblox ancestor `FaceInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_face_instance(instance: Decal) -> FaceInstance
-
-@target(luau)
 /// Treats `Decal` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Decal) -> Instance
-
-@target(luau)
-/// Treats `Decal` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Decal) -> Object
 
 @target(luau)
 /// Gets Roblox property `Decal.Color3`.

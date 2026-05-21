@@ -4,11 +4,6 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{type Object, type TerrainReadOperation}
 
 @target(luau)
-/// Treats `TerrainReadOperation` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TerrainReadOperation) -> Object
-
-@target(luau)
 /// Roblox: `TerrainReadOperation.Ready`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/TerrainReadOperation#Ready

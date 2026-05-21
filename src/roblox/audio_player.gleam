@@ -21,11 +21,6 @@ pub fn new() -> AudioPlayer
 pub fn as_instance(instance: AudioPlayer) -> Instance
 
 @target(luau)
-/// Treats `AudioPlayer` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioPlayer) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioPlayer.Asset`.
 ///
 /// The asset to be loaded into the AudioPlayer.

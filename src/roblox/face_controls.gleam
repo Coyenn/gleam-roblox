@@ -20,11 +20,6 @@ pub fn new() -> FaceControls
 pub fn as_instance(instance: FaceControls) -> Instance
 
 @target(luau)
-/// Treats `FaceControls` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: FaceControls) -> Object
-
-@target(luau)
 /// Gets Roblox property `FaceControls.ChinRaiser`.
 ///
 /// Raises the chin up; moves the lower lip upwards.

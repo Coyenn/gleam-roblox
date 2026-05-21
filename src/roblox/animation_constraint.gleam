@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> AnimationConstraint
 
 @target(luau)
-/// Treats `AnimationConstraint` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: AnimationConstraint) -> Constraint
-
-@target(luau)
 /// Treats `AnimationConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AnimationConstraint) -> Instance
-
-@target(luau)
-/// Treats `AnimationConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AnimationConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `AnimationConstraint.IsKinematic`.

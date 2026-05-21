@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: SensorBase) -> Instance
 
 @target(luau)
-/// Treats `SensorBase` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SensorBase) -> Object
-
-@target(luau)
 /// Gets Roblox property `SensorBase.UpdateType`.
 ///
 /// Determines how the sensor will update its output data.

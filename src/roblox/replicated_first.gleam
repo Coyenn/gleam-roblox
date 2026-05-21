@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ReplicatedFirst) -> Instance
 
 @target(luau)
-/// Treats `ReplicatedFirst` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ReplicatedFirst) -> Object
-
-@target(luau)
 /// Immediately removes the default Roblox loading screen.
 ///
 /// Roblox: `ReplicatedFirst.RemoveDefaultLoadingScreen`

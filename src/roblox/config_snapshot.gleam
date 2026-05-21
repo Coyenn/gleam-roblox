@@ -6,11 +6,6 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `ConfigSnapshot` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ConfigSnapshot) -> Object
-
-@target(luau)
 /// Gets Roblox property `ConfigSnapshot.Error`.
 ///
 /// Populated if snapshot was in an error state.

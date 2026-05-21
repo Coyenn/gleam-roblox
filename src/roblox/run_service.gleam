@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: RunService) -> Instance
 
 @target(luau)
-/// Treats `RunService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RunService) -> Object
-
-@target(luau)
 /// Gets Roblox property `RunService.ClientGitHash`.
 ///
 /// Roblox: `RunService.ClientGitHash`

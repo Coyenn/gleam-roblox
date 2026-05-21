@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: NetworkMarker) -> Instance
 
 @target(luau)
-/// Treats `NetworkMarker` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: NetworkMarker) -> Object
-
-@target(luau)
 /// Fired when the server has finished replicating the world to the client.
 ///
 /// Roblox: `NetworkMarker.Received`

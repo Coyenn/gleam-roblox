@@ -20,11 +20,6 @@ pub fn new() -> Vector3Curve
 pub fn as_instance(instance: Vector3Curve) -> Instance
 
 @target(luau)
-/// Treats `Vector3Curve` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Vector3Curve) -> Object
-
-@target(luau)
 /// Returns the three FloatCurves (X, Y, Z) at the passed time argument.
 ///
 /// Roblox: `Vector3Curve.GetValueAtTime`

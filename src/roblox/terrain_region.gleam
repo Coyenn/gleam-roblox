@@ -20,11 +20,6 @@ pub fn new() -> TerrainRegion
 pub fn as_instance(instance: TerrainRegion) -> Instance
 
 @target(luau)
-/// Treats `TerrainRegion` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TerrainRegion) -> Object
-
-@target(luau)
 /// Gets Roblox property `TerrainRegion.SizeInCells`.
 ///
 /// The size of this TerrainRegion in cells.

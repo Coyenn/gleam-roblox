@@ -18,34 +18,9 @@ import roblox/types.{
 pub fn new() -> AdGui
 
 @target(luau)
-/// Treats `AdGui` as its Roblox ancestor `SurfaceGuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_surface_gui_base(instance: AdGui) -> SurfaceGuiBase
-
-@target(luau)
-/// Treats `AdGui` as its Roblox ancestor `LayerCollector`.
-@luau.global("(function(x) return x end)")
-pub fn as_layer_collector(instance: AdGui) -> LayerCollector
-
-@target(luau)
-/// Treats `AdGui` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: AdGui) -> GuiBase2d
-
-@target(luau)
-/// Treats `AdGui` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: AdGui) -> GuiBase
-
-@target(luau)
 /// Treats `AdGui` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AdGui) -> Instance
-
-@target(luau)
-/// Treats `AdGui` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AdGui) -> Object
 
 @target(luau)
 /// Gets Roblox property `AdGui.AdShape`.

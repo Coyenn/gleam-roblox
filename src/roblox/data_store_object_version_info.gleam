@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: DataStoreObjectVersionInfo) -> Instance
 
 @target(luau)
-/// Treats `DataStoreObjectVersionInfo` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DataStoreObjectVersionInfo) -> Object
-
-@target(luau)
 /// Gets Roblox property `DataStoreObjectVersionInfo.CreatedTime`.
 ///
 /// Indicates when the version was created in milliseconds since epoch.

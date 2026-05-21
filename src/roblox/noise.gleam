@@ -20,11 +20,6 @@ pub fn new() -> Noise
 pub fn as_instance(instance: Noise) -> Instance
 
 @target(luau)
-/// Treats `Noise` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Noise) -> Object
-
-@target(luau)
 /// Gets Roblox property `Noise.NoiseType`.
 ///
 /// Roblox: `Noise.NoiseType`

@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `MemoryStoreHashMapPages` as its Roblox ancestor `Pages`.
-@luau.global("(function(x) return x end)")
-pub fn as_pages(instance: MemoryStoreHashMapPages) -> Pages
-
-@target(luau)
 /// Treats `MemoryStoreHashMapPages` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: MemoryStoreHashMapPages) -> Instance
-
-@target(luau)
-/// Treats `MemoryStoreHashMapPages` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MemoryStoreHashMapPages) -> Object
 
 @target(luau)
 /// Gets Roblox property `Pages.IsFinished`.

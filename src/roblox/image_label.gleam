@@ -21,34 +21,9 @@ import roblox/types.{
 pub fn new() -> ImageLabel
 
 @target(luau)
-/// Treats `ImageLabel` as its Roblox ancestor `GuiLabel`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_label(instance: ImageLabel) -> GuiLabel
-
-@target(luau)
-/// Treats `ImageLabel` as its Roblox ancestor `GuiObject`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_object(instance: ImageLabel) -> GuiObject
-
-@target(luau)
-/// Treats `ImageLabel` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: ImageLabel) -> GuiBase2d
-
-@target(luau)
-/// Treats `ImageLabel` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: ImageLabel) -> GuiBase
-
-@target(luau)
 /// Treats `ImageLabel` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ImageLabel) -> Instance
-
-@target(luau)
-/// Treats `ImageLabel` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ImageLabel) -> Object
 
 @target(luau)
 /// Gets Roblox property `ImageLabel.ContentImageSize`.

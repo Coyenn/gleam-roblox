@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: DebuggerManager) -> Instance
 
 @target(luau)
-/// Treats `DebuggerManager` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DebuggerManager) -> Object
-
-@target(luau)
 /// Gets Roblox property `DebuggerManager.DebuggingEnabled`.
 ///
 /// Roblox: `DebuggerManager.DebuggingEnabled`

@@ -16,24 +16,9 @@ import roblox/types.{
 pub fn new() -> Motor6D
 
 @target(luau)
-/// Treats `Motor6D` as its Roblox ancestor `Motor`.
-@luau.global("(function(x) return x end)")
-pub fn as_motor(instance: Motor6D) -> Motor
-
-@target(luau)
-/// Treats `Motor6D` as its Roblox ancestor `JointInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_joint_instance(instance: Motor6D) -> JointInstance
-
-@target(luau)
 /// Treats `Motor6D` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Motor6D) -> Instance
-
-@target(luau)
-/// Treats `Motor6D` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Motor6D) -> Object
 
 @target(luau)
 /// Gets Roblox property `Motor6D.Transform`.

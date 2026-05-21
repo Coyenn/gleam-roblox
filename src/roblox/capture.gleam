@@ -3,11 +3,6 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{type Capture, type CaptureType, type DateTime, type Object}
 
 @target(luau)
-/// Treats `Capture` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Capture) -> Object
-
-@target(luau)
 /// Gets Roblox property `Capture.CaptureTime`.
 ///
 /// Roblox: `Capture.CaptureTime`

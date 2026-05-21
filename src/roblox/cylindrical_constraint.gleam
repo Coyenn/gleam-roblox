@@ -17,26 +17,9 @@ import roblox/types.{
 pub fn new() -> CylindricalConstraint
 
 @target(luau)
-/// Treats `CylindricalConstraint` as its Roblox ancestor `SlidingBallConstraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_sliding_ball_constraint(
-  instance: CylindricalConstraint,
-) -> SlidingBallConstraint
-
-@target(luau)
-/// Treats `CylindricalConstraint` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: CylindricalConstraint) -> Constraint
-
-@target(luau)
 /// Treats `CylindricalConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: CylindricalConstraint) -> Instance
-
-@target(luau)
-/// Treats `CylindricalConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CylindricalConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `CylindricalConstraint.AngularActuatorType`.

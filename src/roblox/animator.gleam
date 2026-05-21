@@ -21,11 +21,6 @@ pub fn new() -> Animator
 pub fn as_instance(instance: Animator) -> Instance
 
 @target(luau)
-/// Treats `Animator` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Animator) -> Object
-
-@target(luau)
 /// Gets Roblox property `Animator.EvaluationThrottled`.
 ///
 /// Roblox: `Animator.EvaluationThrottled`

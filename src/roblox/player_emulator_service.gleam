@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PlayerEmulatorService) -> Instance
 
 @target(luau)
-/// Treats `PlayerEmulatorService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PlayerEmulatorService) -> Object
-
-@target(luau)
 /// Gets Roblox property `PlayerEmulatorService.CustomPoliciesEnabled`.
 ///
 /// Roblox: `PlayerEmulatorService.CustomPoliciesEnabled`

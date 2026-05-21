@@ -8,21 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `PlayerListConfiguration` as its Roblox ancestor `BaseCoreGuiConfiguration`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_core_gui_configuration(
-  instance: PlayerListConfiguration,
-) -> BaseCoreGuiConfiguration
-
-@target(luau)
 /// Treats `PlayerListConfiguration` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: PlayerListConfiguration) -> Instance
-
-@target(luau)
-/// Treats `PlayerListConfiguration` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PlayerListConfiguration) -> Object
 
 @target(luau)
 /// Gets Roblox property `PlayerListConfiguration.Open`.

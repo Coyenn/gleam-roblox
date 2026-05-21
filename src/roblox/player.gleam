@@ -26,11 +26,6 @@ pub fn new() -> Player
 pub fn as_instance(instance: Player) -> Instance
 
 @target(luau)
-/// Treats `Player` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Player) -> Object
-
-@target(luau)
 /// Gets Roblox property `Player.AccountAge`.
 ///
 /// Describes the player's account age in days.

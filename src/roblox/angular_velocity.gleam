@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> AngularVelocity
 
 @target(luau)
-/// Treats `AngularVelocity` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: AngularVelocity) -> Constraint
-
-@target(luau)
 /// Treats `AngularVelocity` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AngularVelocity) -> Instance
-
-@target(luau)
-/// Treats `AngularVelocity` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AngularVelocity) -> Object
 
 @target(luau)
 /// Gets Roblox property `AngularVelocity.AngularVelocity`.

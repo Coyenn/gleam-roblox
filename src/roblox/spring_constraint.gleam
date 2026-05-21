@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> SpringConstraint
 
 @target(luau)
-/// Treats `SpringConstraint` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: SpringConstraint) -> Constraint
-
-@target(luau)
 /// Treats `SpringConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SpringConstraint) -> Instance
-
-@target(luau)
-/// Treats `SpringConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SpringConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `SpringConstraint.Coils`.

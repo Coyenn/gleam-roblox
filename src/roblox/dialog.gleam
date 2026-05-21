@@ -21,11 +21,6 @@ pub fn new() -> Dialog
 pub fn as_instance(instance: Dialog) -> Instance
 
 @target(luau)
-/// Treats `Dialog` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Dialog) -> Object
-
-@target(luau)
 /// Gets Roblox property `Dialog.BehaviorType`.
 ///
 /// Sets whether the Dialog can be used by multiple players at once.

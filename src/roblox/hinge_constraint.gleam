@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> HingeConstraint
 
 @target(luau)
-/// Treats `HingeConstraint` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: HingeConstraint) -> Constraint
-
-@target(luau)
 /// Treats `HingeConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: HingeConstraint) -> Instance
-
-@target(luau)
-/// Treats `HingeConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: HingeConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `HingeConstraint.ActuatorType`.

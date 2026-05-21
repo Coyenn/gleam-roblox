@@ -21,11 +21,6 @@ pub fn new() -> EulerRotationCurve
 pub fn as_instance(instance: EulerRotationCurve) -> Instance
 
 @target(luau)
-/// Treats `EulerRotationCurve` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: EulerRotationCurve) -> Object
-
-@target(luau)
 /// Gets Roblox property `EulerRotationCurve.RotationOrder`.
 ///
 /// Euler angles rotation order.

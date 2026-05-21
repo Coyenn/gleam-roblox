@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: Path) -> Instance
 
 @target(luau)
-/// Treats `Path` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Path) -> Object
-
-@target(luau)
 /// Gets Roblox property `Path.Status`.
 ///
 /// The PathStatus of the generated Path.

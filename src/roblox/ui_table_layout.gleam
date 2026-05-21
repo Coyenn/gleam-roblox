@@ -18,34 +18,9 @@ import roblox/types.{
 pub fn new() -> UITableLayout
 
 @target(luau)
-/// Treats `UITableLayout` as its Roblox ancestor `UIGridStyleLayout`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_grid_style_layout(instance: UITableLayout) -> UIGridStyleLayout
-
-@target(luau)
-/// Treats `UITableLayout` as its Roblox ancestor `UILayout`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_layout(instance: UITableLayout) -> UILayout
-
-@target(luau)
-/// Treats `UITableLayout` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UITableLayout) -> UIComponent
-
-@target(luau)
-/// Treats `UITableLayout` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UITableLayout) -> UIBase
-
-@target(luau)
 /// Treats `UITableLayout` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UITableLayout) -> Instance
-
-@target(luau)
-/// Treats `UITableLayout` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UITableLayout) -> Object
 
 @target(luau)
 /// Gets Roblox property `UITableLayout.FillEmptySpaceColumns`.

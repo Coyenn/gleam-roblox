@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: FacialAnimationStreamingServiceV2) -> Instance
 
 @target(luau)
-/// Treats `FacialAnimationStreamingServiceV2` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: FacialAnimationStreamingServiceV2) -> Object
-
-@target(luau)
 /// Gets Roblox property `FacialAnimationStreamingServiceV2.ServiceState`.
 ///
 /// Roblox: `FacialAnimationStreamingServiceV2.ServiceState`

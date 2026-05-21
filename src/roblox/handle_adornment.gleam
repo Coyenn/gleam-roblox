@@ -10,29 +10,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `HandleAdornment` as its Roblox ancestor `PVAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_adornment(instance: HandleAdornment) -> PVAdornment
-
-@target(luau)
-/// Treats `HandleAdornment` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: HandleAdornment) -> GuiBase3d
-
-@target(luau)
-/// Treats `HandleAdornment` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: HandleAdornment) -> GuiBase
-
-@target(luau)
 /// Treats `HandleAdornment` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: HandleAdornment) -> Instance
-
-@target(luau)
-/// Treats `HandleAdornment` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: HandleAdornment) -> Object
 
 @target(luau)
 /// Gets Roblox property `HandleAdornment.AdornCullingMode`.

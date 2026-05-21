@@ -19,29 +19,9 @@ import roblox/types.{
 pub fn new() -> WedgePart
 
 @target(luau)
-/// Treats `WedgePart` as its Roblox ancestor `FormFactorPart`.
-@luau.global("(function(x) return x end)")
-pub fn as_form_factor_part(instance: WedgePart) -> FormFactorPart
-
-@target(luau)
-/// Treats `WedgePart` as its Roblox ancestor `BasePart`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_part(instance: WedgePart) -> BasePart
-
-@target(luau)
-/// Treats `WedgePart` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: WedgePart) -> PVInstance
-
-@target(luau)
 /// Treats `WedgePart` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: WedgePart) -> Instance
-
-@target(luau)
-/// Treats `WedgePart` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: WedgePart) -> Object
 
 @target(luau)
 /// Gets Roblox property `BasePart.Anchored`.

@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: VoiceChatService) -> Instance
 
 @target(luau)
-/// Treats `VoiceChatService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VoiceChatService) -> Object
-
-@target(luau)
 /// Gets Roblox property `VoiceChatService.DefaultDistanceAttenuation`.
 ///
 /// Determines which distance attenuation curve the default voice chat setup uses when AudioDeviceInput and AudioEmitter objects are generated.

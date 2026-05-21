@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: Controller) -> Instance
 
 @target(luau)
-/// Treats `Controller` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Controller) -> Object
-
-@target(luau)
 /// Activates an overriding bind on the specified button.
 ///
 /// Roblox: `Controller.BindButton`

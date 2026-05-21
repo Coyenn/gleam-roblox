@@ -5,33 +5,18 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BasePart, type BrickColor, type CFrame,
   type CollisionFidelity, type Color3, type Faces, type Instance, type Material,
-  type NormalId, type Object, type OptionInt, type PVInstance,
-  type PhysicalProperties, type Player, type Region3, type Region3int16,
-  type RenderFidelity, type SecurityCapabilities, type SurfaceType, type Terrain,
+  type NormalId, type Object, type PVInstance, type PhysicalProperties,
+  type Player, type Region3, type Region3int16, type RenderFidelity,
+  type SecurityCapabilities, type SurfaceType, type Terrain,
   type TerrainAcquisitionMethod, type TerrainIterateOperation,
   type TerrainModifyOperation, type TerrainReadOperation, type TerrainRegion,
   type TerrainWriteOperation, type UniqueId, type Vector3, type Vector3int16,
 }
 
 @target(luau)
-/// Treats `Terrain` as its Roblox ancestor `BasePart`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_part(instance: Terrain) -> BasePart
-
-@target(luau)
-/// Treats `Terrain` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: Terrain) -> PVInstance
-
-@target(luau)
 /// Treats `Terrain` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Terrain) -> Instance
-
-@target(luau)
-/// Treats `Terrain` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Terrain) -> Object
 
 @target(luau)
 /// Gets Roblox property `Terrain.LastUsedModificationMethod`.
@@ -235,7 +220,7 @@ pub fn clear(instance: Terrain) -> Nil
 pub fn clear_voxels_async_beta(
   instance: Terrain,
   region: Region3,
-  channel_ids: List(Dynamic),
+  channel_ids: List(Int),
 ) -> Nil
 
 @target(luau)
@@ -369,7 +354,7 @@ pub fn fill_wedge(
 pub fn get_base_material_slot_index(
   instance: Terrain,
   base_material: Material,
-) -> OptionInt
+) -> Option(Int)
 
 @target(luau)
 /// Roblox: `Terrain.GetFirstCustomMaterialSlotIndex`
@@ -410,7 +395,7 @@ pub fn iterate_voxels_async_beta(
   instance: Terrain,
   region: Region3,
   resolution: Int,
-  channel_ids: List(Dynamic),
+  channel_ids: List(Int),
 ) -> TerrainIterateOperation
 
 @target(luau)
@@ -426,7 +411,7 @@ pub fn modify_voxels_async_beta(
   instance: Terrain,
   region: Region3,
   resolution: Int,
-  channel_ids: List(Dynamic),
+  channel_ids: List(Int),
 ) -> TerrainModifyOperation
 
 @target(luau)
@@ -467,7 +452,7 @@ pub fn read_voxel_channels(
   instance: Terrain,
   region: Region3,
   resolution: Float,
-  channel_ids: List(Dynamic),
+  channel_ids: List(Int),
 ) -> Dynamic
 
 @target(luau)
@@ -505,7 +490,7 @@ pub fn read_voxels_async_beta(
   instance: Terrain,
   region: Region3,
   resolution: Int,
-  channel_ids: List(Dynamic),
+  channel_ids: List(Int),
 ) -> TerrainReadOperation
 
 @target(luau)
@@ -665,7 +650,7 @@ pub fn write_voxels_async_beta(
   instance: Terrain,
   region: Region3,
   resolution: Int,
-  channel_ids: List(Dynamic),
+  channel_ids: List(Int),
 ) -> TerrainWriteOperation
 
 @target(luau)
@@ -2897,7 +2882,6 @@ pub fn javascript_type_anchor(
   _: Vector3int16,
   _: TerrainModifyOperation,
   _: TerrainIterateOperation,
-  _: OptionInt,
   _: Region3int16,
   _: TerrainAcquisitionMethod,
   _: Terrain,

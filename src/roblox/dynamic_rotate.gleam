@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `DynamicRotate` as its Roblox ancestor `JointInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_joint_instance(instance: DynamicRotate) -> JointInstance
-
-@target(luau)
 /// Treats `DynamicRotate` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: DynamicRotate) -> Instance
-
-@target(luau)
-/// Treats `DynamicRotate` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DynamicRotate) -> Object
 
 @target(luau)
 /// Gets Roblox property `DynamicRotate.BaseAngle`.

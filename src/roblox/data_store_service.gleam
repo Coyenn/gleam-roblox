@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: DataStoreService) -> Instance
 
 @target(luau)
-/// Treats `DataStoreService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DataStoreService) -> Object
-
-@target(luau)
 /// Gets Roblox property `DataStoreService.AutomaticRetry`.
 ///
 /// Roblox: `DataStoreService.AutomaticRetry`

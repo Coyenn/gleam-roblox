@@ -17,34 +17,9 @@ import roblox/types.{
 pub fn new() -> ConeHandleAdornment
 
 @target(luau)
-/// Treats `ConeHandleAdornment` as its Roblox ancestor `HandleAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_handle_adornment(instance: ConeHandleAdornment) -> HandleAdornment
-
-@target(luau)
-/// Treats `ConeHandleAdornment` as its Roblox ancestor `PVAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_adornment(instance: ConeHandleAdornment) -> PVAdornment
-
-@target(luau)
-/// Treats `ConeHandleAdornment` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: ConeHandleAdornment) -> GuiBase3d
-
-@target(luau)
-/// Treats `ConeHandleAdornment` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: ConeHandleAdornment) -> GuiBase
-
-@target(luau)
 /// Treats `ConeHandleAdornment` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ConeHandleAdornment) -> Instance
-
-@target(luau)
-/// Treats `ConeHandleAdornment` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ConeHandleAdornment) -> Object
 
 @target(luau)
 /// Gets Roblox property `ConeHandleAdornment.Height`.

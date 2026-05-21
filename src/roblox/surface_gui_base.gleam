@@ -10,29 +10,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `SurfaceGuiBase` as its Roblox ancestor `LayerCollector`.
-@luau.global("(function(x) return x end)")
-pub fn as_layer_collector(instance: SurfaceGuiBase) -> LayerCollector
-
-@target(luau)
-/// Treats `SurfaceGuiBase` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: SurfaceGuiBase) -> GuiBase2d
-
-@target(luau)
-/// Treats `SurfaceGuiBase` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: SurfaceGuiBase) -> GuiBase
-
-@target(luau)
 /// Treats `SurfaceGuiBase` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SurfaceGuiBase) -> Instance
-
-@target(luau)
-/// Treats `SurfaceGuiBase` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SurfaceGuiBase) -> Object
 
 @target(luau)
 /// Gets Roblox property `SurfaceGuiBase.Active`.

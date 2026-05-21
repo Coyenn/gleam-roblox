@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: DebugSettings) -> Instance
 
 @target(luau)
-/// Treats `DebugSettings` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DebugSettings) -> Object
-
-@target(luau)
 /// Gets Roblox property `DebugSettings.DataModel`.
 ///
 /// Describes whether a DataModel is actively in memory, as an integer (where 1 = true, and 0 = false).

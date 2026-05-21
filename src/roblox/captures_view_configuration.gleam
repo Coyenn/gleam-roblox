@@ -8,21 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `CapturesViewConfiguration` as its Roblox ancestor `BaseCoreGuiConfiguration`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_core_gui_configuration(
-  instance: CapturesViewConfiguration,
-) -> BaseCoreGuiConfiguration
-
-@target(luau)
 /// Treats `CapturesViewConfiguration` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: CapturesViewConfiguration) -> Instance
-
-@target(luau)
-/// Treats `CapturesViewConfiguration` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CapturesViewConfiguration) -> Object
 
 @target(luau)
 /// Gets Roblox property `CapturesViewConfiguration.Open`.

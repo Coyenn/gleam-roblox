@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `ClientReplicator` as its Roblox ancestor `NetworkReplicator`.
-@luau.global("(function(x) return x end)")
-pub fn as_network_replicator(instance: ClientReplicator) -> NetworkReplicator
-
-@target(luau)
 /// Treats `ClientReplicator` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ClientReplicator) -> Instance
-
-@target(luau)
-/// Treats `ClientReplicator` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ClientReplicator) -> Object
 
 @target(luau)
 /// Returns the player that is connected to the NetworkReplicator.

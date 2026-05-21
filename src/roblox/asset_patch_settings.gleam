@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: AssetPatchSettings) -> Instance
 
 @target(luau)
-/// Treats `AssetPatchSettings` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AssetPatchSettings) -> Object
-
-@target(luau)
 /// Gets Roblox property `AssetPatchSettings.ContentId`.
 ///
 /// Roblox: `AssetPatchSettings.ContentId`

@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> HumanoidController
 
 @target(luau)
-/// Treats `HumanoidController` as its Roblox ancestor `Controller`.
-@luau.global("(function(x) return x end)")
-pub fn as_controller(instance: HumanoidController) -> Controller
-
-@target(luau)
 /// Treats `HumanoidController` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: HumanoidController) -> Instance
-
-@target(luau)
-/// Treats `HumanoidController` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: HumanoidController) -> Object
 
 @target(luau)
 /// Activates an overriding bind on the specified button.

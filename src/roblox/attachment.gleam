@@ -20,11 +20,6 @@ pub fn new() -> Attachment
 pub fn as_instance(instance: Attachment) -> Instance
 
 @target(luau)
-/// Treats `Attachment` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Attachment) -> Object
-
-@target(luau)
 /// Gets Roblox property `Attachment.Axis`.
 ///
 /// Direction of the X axis of the attachment, represented as a unit Vector3.

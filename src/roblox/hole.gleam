@@ -9,19 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `Hole` as its Roblox ancestor `Feature`.
-@luau.global("(function(x) return x end)")
-pub fn as_feature(instance: Hole) -> Feature
-
-@target(luau)
 /// Treats `Hole` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Hole) -> Instance
-
-@target(luau)
-/// Treats `Hole` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Hole) -> Object
 
 @target(luau)
 /// Gets Roblox property `Feature.FaceId`.

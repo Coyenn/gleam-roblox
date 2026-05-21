@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `Hint` as its Roblox ancestor `Message`.
-@luau.global("(function(x) return x end)")
-pub fn as_message(instance: Hint) -> Message
-
-@target(luau)
 /// Treats `Hint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Hint) -> Instance
-
-@target(luau)
-/// Treats `Hint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Hint) -> Object
 
 @target(luau)
 /// Gets Roblox property `Message.Text`.

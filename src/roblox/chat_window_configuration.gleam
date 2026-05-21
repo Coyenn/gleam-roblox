@@ -10,21 +10,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `ChatWindowConfiguration` as its Roblox ancestor `TextChatConfigurations`.
-@luau.global("(function(x) return x end)")
-pub fn as_text_chat_configurations(
-  instance: ChatWindowConfiguration,
-) -> TextChatConfigurations
-
-@target(luau)
 /// Treats `ChatWindowConfiguration` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ChatWindowConfiguration) -> Instance
-
-@target(luau)
-/// Treats `ChatWindowConfiguration` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ChatWindowConfiguration) -> Object
 
 @target(luau)
 /// Gets Roblox property `ChatWindowConfiguration.AbsolutePosition`.

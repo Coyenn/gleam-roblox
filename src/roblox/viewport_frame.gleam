@@ -20,29 +20,9 @@ import roblox/types.{
 pub fn new() -> ViewportFrame
 
 @target(luau)
-/// Treats `ViewportFrame` as its Roblox ancestor `GuiObject`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_object(instance: ViewportFrame) -> GuiObject
-
-@target(luau)
-/// Treats `ViewportFrame` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: ViewportFrame) -> GuiBase2d
-
-@target(luau)
-/// Treats `ViewportFrame` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: ViewportFrame) -> GuiBase
-
-@target(luau)
 /// Treats `ViewportFrame` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ViewportFrame) -> Instance
-
-@target(luau)
-/// Treats `ViewportFrame` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ViewportFrame) -> Object
 
 @target(luau)
 /// Gets Roblox property `ViewportFrame.Ambient`.

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: CollectionService) -> Instance
 
 @target(luau)
-/// Treats `CollectionService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CollectionService) -> Object
-
-@target(luau)
 /// Applies a tag to an Instance.
 ///
 /// Roblox: `CollectionService.AddTag`

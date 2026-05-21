@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: MetaBreakpoint) -> Instance
 
 @target(luau)
-/// Treats `MetaBreakpoint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MetaBreakpoint) -> Object
-
-@target(luau)
 /// Gets Roblox property `MetaBreakpoint.Condition`.
 ///
 /// Roblox: `MetaBreakpoint.Condition`

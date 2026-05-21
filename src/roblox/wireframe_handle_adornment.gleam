@@ -17,36 +17,9 @@ import roblox/types.{
 pub fn new() -> WireframeHandleAdornment
 
 @target(luau)
-/// Treats `WireframeHandleAdornment` as its Roblox ancestor `HandleAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_handle_adornment(
-  instance: WireframeHandleAdornment,
-) -> HandleAdornment
-
-@target(luau)
-/// Treats `WireframeHandleAdornment` as its Roblox ancestor `PVAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_adornment(instance: WireframeHandleAdornment) -> PVAdornment
-
-@target(luau)
-/// Treats `WireframeHandleAdornment` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: WireframeHandleAdornment) -> GuiBase3d
-
-@target(luau)
-/// Treats `WireframeHandleAdornment` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: WireframeHandleAdornment) -> GuiBase
-
-@target(luau)
 /// Treats `WireframeHandleAdornment` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: WireframeHandleAdornment) -> Instance
-
-@target(luau)
-/// Treats `WireframeHandleAdornment` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: WireframeHandleAdornment) -> Object
 
 @target(luau)
 /// Gets Roblox property `WireframeHandleAdornment.Scale`.

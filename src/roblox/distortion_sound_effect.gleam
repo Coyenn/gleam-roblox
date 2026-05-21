@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> DistortionSoundEffect
 
 @target(luau)
-/// Treats `DistortionSoundEffect` as its Roblox ancestor `SoundEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_sound_effect(instance: DistortionSoundEffect) -> SoundEffect
-
-@target(luau)
 /// Treats `DistortionSoundEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: DistortionSoundEffect) -> Instance
-
-@target(luau)
-/// Treats `DistortionSoundEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DistortionSoundEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `DistortionSoundEffect.Level`.

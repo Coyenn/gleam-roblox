@@ -20,11 +20,6 @@ pub fn new() -> Accoutrement
 pub fn as_instance(instance: Accoutrement) -> Instance
 
 @target(luau)
-/// Treats `Accoutrement` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Accoutrement) -> Object
-
-@target(luau)
 /// Gets Roblox property `Accoutrement.AttachmentForward`.
 ///
 /// Sets the offset position of the object on the Player.

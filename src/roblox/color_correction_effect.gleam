@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> ColorCorrectionEffect
 
 @target(luau)
-/// Treats `ColorCorrectionEffect` as its Roblox ancestor `PostEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_post_effect(instance: ColorCorrectionEffect) -> PostEffect
-
-@target(luau)
 /// Treats `ColorCorrectionEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ColorCorrectionEffect) -> Instance
-
-@target(luau)
-/// Treats `ColorCorrectionEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ColorCorrectionEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `ColorCorrectionEffect.Brightness`.

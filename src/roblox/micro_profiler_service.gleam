@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: MicroProfilerService) -> Instance
 
 @target(luau)
-/// Treats `MicroProfilerService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MicroProfilerService) -> Object
-
-@target(luau)
 /// Gets Roblox property `MicroProfilerService.ContextLabel`.
 ///
 /// Roblox: `MicroProfilerService.ContextLabel`

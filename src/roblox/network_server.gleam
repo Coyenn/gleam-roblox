@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `NetworkServer` as its Roblox ancestor `NetworkPeer`.
-@luau.global("(function(x) return x end)")
-pub fn as_network_peer(instance: NetworkServer) -> NetworkPeer
-
-@target(luau)
 /// Treats `NetworkServer` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: NetworkServer) -> Instance
-
-@target(luau)
-/// Treats `NetworkServer` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: NetworkServer) -> Object
 
 @target(luau)
 /// Roblox: `NetworkServer.EncryptStringForPlayerId`

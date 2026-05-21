@@ -4,19 +4,14 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type Buffer, type CompressionAlgorithm, type EncodingService,
-  type HashAlgorithm, type Instance, type Object, type OptionInt,
-  type SecurityCapabilities, type UniqueId,
+  type HashAlgorithm, type Instance, type Object, type SecurityCapabilities,
+  type UniqueId,
 }
 
 @target(luau)
 /// Treats `EncodingService` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: EncodingService) -> Instance
-
-@target(luau)
-/// Treats `EncodingService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: EncodingService) -> Object
 
 @target(luau)
 /// Roblox: `EncodingService.Base64Decode`
@@ -141,7 +136,7 @@ pub fn get_decompressed_buffer_size(
   instance: EncodingService,
   input: Buffer,
   algorithm: CompressionAlgorithm,
-) -> OptionInt
+) -> Option(Int)
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.
@@ -1062,7 +1057,6 @@ pub fn javascript_type_anchor(
   _: Actor,
   _: UniqueId,
   _: SecurityCapabilities,
-  _: OptionInt,
   _: Buffer,
   _: CompressionAlgorithm,
   _: HashAlgorithm,

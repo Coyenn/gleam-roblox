@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: DebuggerVariable) -> Instance
 
 @target(luau)
-/// Treats `DebuggerVariable` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DebuggerVariable) -> Object
-
-@target(luau)
 /// Gets Roblox property `DebuggerVariable.Name`.
 ///
 /// Roblox: `DebuggerVariable.Name`

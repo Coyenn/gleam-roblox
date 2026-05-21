@@ -17,34 +17,9 @@ import roblox/types.{
 pub fn new() -> BoxHandleAdornment
 
 @target(luau)
-/// Treats `BoxHandleAdornment` as its Roblox ancestor `HandleAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_handle_adornment(instance: BoxHandleAdornment) -> HandleAdornment
-
-@target(luau)
-/// Treats `BoxHandleAdornment` as its Roblox ancestor `PVAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_adornment(instance: BoxHandleAdornment) -> PVAdornment
-
-@target(luau)
-/// Treats `BoxHandleAdornment` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: BoxHandleAdornment) -> GuiBase3d
-
-@target(luau)
-/// Treats `BoxHandleAdornment` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: BoxHandleAdornment) -> GuiBase
-
-@target(luau)
 /// Treats `BoxHandleAdornment` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BoxHandleAdornment) -> Instance
-
-@target(luau)
-/// Treats `BoxHandleAdornment` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BoxHandleAdornment) -> Object
 
 @target(luau)
 /// Gets Roblox property `BoxHandleAdornment.Shading`.

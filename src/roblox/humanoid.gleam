@@ -23,11 +23,6 @@ pub fn new() -> Humanoid
 pub fn as_instance(instance: Humanoid) -> Instance
 
 @target(luau)
-/// Treats `Humanoid` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Humanoid) -> Object
-
-@target(luau)
 /// Gets Roblox property `Humanoid.AutoJumpEnabled`.
 ///
 /// Sets whether the character will automatically jump when they hit an obstacle as a player on a mobile device.

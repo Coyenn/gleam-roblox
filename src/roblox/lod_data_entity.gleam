@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: LodDataEntity) -> Instance
 
 @target(luau)
-/// Treats `LodDataEntity` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: LodDataEntity) -> Object
-
-@target(luau)
 /// Gets Roblox property `LodDataEntity.EntityLodEnabled`.
 ///
 /// Roblox: `LodDataEntity.EntityLodEnabled`

@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: PlayerDataService) -> Instance
 
 @target(luau)
-/// Treats `PlayerDataService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PlayerDataService) -> Object
-
-@target(luau)
 /// Gets Roblox property `PlayerDataService.LoadFailureBehavior`.
 ///
 /// Roblox: `PlayerDataService.LoadFailureBehavior`

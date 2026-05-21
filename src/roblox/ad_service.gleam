@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: AdService) -> Instance
 
 @target(luau)
-/// Treats `AdService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AdService) -> Object
-
-@target(luau)
 /// Creates a reward to give users who watch an entire video ad.
 ///
 /// Roblox: `AdService.CreateAdRewardFromDevProductId`

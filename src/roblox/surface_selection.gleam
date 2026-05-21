@@ -16,29 +16,9 @@ import roblox/types.{
 pub fn new() -> SurfaceSelection
 
 @target(luau)
-/// Treats `SurfaceSelection` as its Roblox ancestor `PartAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_part_adornment(instance: SurfaceSelection) -> PartAdornment
-
-@target(luau)
-/// Treats `SurfaceSelection` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: SurfaceSelection) -> GuiBase3d
-
-@target(luau)
-/// Treats `SurfaceSelection` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: SurfaceSelection) -> GuiBase
-
-@target(luau)
 /// Treats `SurfaceSelection` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SurfaceSelection) -> Instance
-
-@target(luau)
-/// Treats `SurfaceSelection` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SurfaceSelection) -> Object
 
 @target(luau)
 /// Gets Roblox property `SurfaceSelection.TargetSurface`.

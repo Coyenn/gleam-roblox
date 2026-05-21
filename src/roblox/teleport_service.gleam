@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: TeleportService) -> Instance
 
 @target(luau)
-/// Treats `TeleportService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TeleportService) -> Object
-
-@target(luau)
 /// Returns the customLoadingScreen the LocalPlayer arrived into the place with.
 ///
 /// Roblox: `TeleportService.GetArrivingTeleportGui`

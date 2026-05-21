@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: Translator) -> Instance
 
 @target(luau)
-/// Treats `Translator` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Translator) -> Object
-
-@target(luau)
 /// Gets Roblox property `Translator.LocaleId`.
 ///
 /// The locale of translated strings.

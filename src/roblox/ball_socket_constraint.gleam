@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> BallSocketConstraint
 
 @target(luau)
-/// Treats `BallSocketConstraint` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: BallSocketConstraint) -> Constraint
-
-@target(luau)
 /// Treats `BallSocketConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BallSocketConstraint) -> Instance
-
-@target(luau)
-/// Treats `BallSocketConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BallSocketConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `BallSocketConstraint.LimitsEnabled`.

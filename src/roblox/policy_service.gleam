@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PolicyService) -> Instance
 
 @target(luau)
-/// Treats `PolicyService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PolicyService) -> Object
-
-@target(luau)
 /// Gets Roblox property `PolicyService.IsLuobuServer`.
 ///
 /// Roblox: `PolicyService.IsLuobuServer`

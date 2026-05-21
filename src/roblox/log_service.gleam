@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: LogService) -> Instance
 
 @target(luau)
-/// Treats `LogService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: LogService) -> Object
-
-@target(luau)
 /// Clears Roblox Studio's Output window.
 ///
 /// Roblox: `LogService.ClearOutput`

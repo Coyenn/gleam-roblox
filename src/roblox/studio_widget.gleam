@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `StudioWidget` as its Roblox ancestor `StudioObjectBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_studio_object_base(instance: StudioWidget) -> StudioObjectBase
-
-@target(luau)
 /// Treats `StudioWidget` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: StudioWidget) -> Instance
-
-@target(luau)
-/// Treats `StudioWidget` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StudioWidget) -> Object
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.

@@ -21,34 +21,9 @@ import roblox/types.{
 pub fn new() -> TextLabel
 
 @target(luau)
-/// Treats `TextLabel` as its Roblox ancestor `GuiLabel`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_label(instance: TextLabel) -> GuiLabel
-
-@target(luau)
-/// Treats `TextLabel` as its Roblox ancestor `GuiObject`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_object(instance: TextLabel) -> GuiObject
-
-@target(luau)
-/// Treats `TextLabel` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: TextLabel) -> GuiBase2d
-
-@target(luau)
-/// Treats `TextLabel` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: TextLabel) -> GuiBase
-
-@target(luau)
 /// Treats `TextLabel` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: TextLabel) -> Instance
-
-@target(luau)
-/// Treats `TextLabel` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TextLabel) -> Object
 
 @target(luau)
 /// Gets Roblox property `TextLabel.ContentText`.

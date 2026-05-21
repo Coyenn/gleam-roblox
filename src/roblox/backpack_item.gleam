@@ -10,24 +10,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `BackpackItem` as its Roblox ancestor `Model`.
-@luau.global("(function(x) return x end)")
-pub fn as_model(instance: BackpackItem) -> Model
-
-@target(luau)
-/// Treats `BackpackItem` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: BackpackItem) -> PVInstance
-
-@target(luau)
 /// Treats `BackpackItem` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BackpackItem) -> Instance
-
-@target(luau)
-/// Treats `BackpackItem` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BackpackItem) -> Object
 
 @target(luau)
 /// Gets Roblox property `BackpackItem.TextureContent`.

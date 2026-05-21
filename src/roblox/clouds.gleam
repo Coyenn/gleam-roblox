@@ -20,11 +20,6 @@ pub fn new() -> Clouds
 pub fn as_instance(instance: Clouds) -> Instance
 
 @target(luau)
-/// Treats `Clouds` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Clouds) -> Object
-
-@target(luau)
 /// Gets Roblox property `Clouds.Color`.
 ///
 /// Controls the material color of cloud particles.

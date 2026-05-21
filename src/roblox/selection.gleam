@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: Selection) -> Instance
 
 @target(luau)
-/// Treats `Selection` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Selection) -> Object
-
-@target(luau)
 /// Gets Roblox property `Selection.ActiveInstance`.
 ///
 /// Roblox: `Selection.ActiveInstance`

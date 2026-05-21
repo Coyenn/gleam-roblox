@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: ProximityPromptService) -> Instance
 
 @target(luau)
-/// Treats `ProximityPromptService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ProximityPromptService) -> Object
-
-@target(luau)
 /// Gets Roblox property `ProximityPromptService.Enabled`.
 ///
 /// Whether ProximityPrompts are enabled, and therefore shown, in-experience.

@@ -24,11 +24,6 @@ pub fn new() -> ParticleEmitter
 pub fn as_instance(instance: ParticleEmitter) -> Instance
 
 @target(luau)
-/// Treats `ParticleEmitter` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ParticleEmitter) -> Object
-
-@target(luau)
 /// Gets Roblox property `ParticleEmitter.Acceleration`.
 ///
 /// Determines the global-axis acceleration of all active particles, measured in studs per second squared.

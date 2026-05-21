@@ -17,34 +17,9 @@ import roblox/types.{
 pub fn new() -> LineHandleAdornment
 
 @target(luau)
-/// Treats `LineHandleAdornment` as its Roblox ancestor `HandleAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_handle_adornment(instance: LineHandleAdornment) -> HandleAdornment
-
-@target(luau)
-/// Treats `LineHandleAdornment` as its Roblox ancestor `PVAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_adornment(instance: LineHandleAdornment) -> PVAdornment
-
-@target(luau)
-/// Treats `LineHandleAdornment` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: LineHandleAdornment) -> GuiBase3d
-
-@target(luau)
-/// Treats `LineHandleAdornment` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: LineHandleAdornment) -> GuiBase
-
-@target(luau)
 /// Treats `LineHandleAdornment` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: LineHandleAdornment) -> Instance
-
-@target(luau)
-/// Treats `LineHandleAdornment` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: LineHandleAdornment) -> Object
 
 @target(luau)
 /// Gets Roblox property `LineHandleAdornment.Length`.

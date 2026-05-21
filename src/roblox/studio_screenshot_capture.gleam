@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: StudioScreenshotCapture) -> Instance
 
 @target(luau)
-/// Treats `StudioScreenshotCapture` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StudioScreenshotCapture) -> Object
-
-@target(luau)
 /// Gets Roblox property `StudioScreenshotCapture.BufferFormat`.
 ///
 /// Roblox: `StudioScreenshotCapture.BufferFormat`

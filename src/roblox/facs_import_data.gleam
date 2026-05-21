@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `FacsImportData` as its Roblox ancestor `BaseImportData`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_import_data(instance: FacsImportData) -> BaseImportData
-
-@target(luau)
 /// Treats `FacsImportData` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: FacsImportData) -> Instance
-
-@target(luau)
-/// Treats `FacsImportData` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: FacsImportData) -> Object
 
 @target(luau)
 /// Gets Roblox property `BaseImportData.Id`.

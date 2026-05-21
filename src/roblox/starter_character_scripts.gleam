@@ -8,21 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `StarterCharacterScripts` as its Roblox ancestor `StarterPlayerScripts`.
-@luau.global("(function(x) return x end)")
-pub fn as_starter_player_scripts(
-  instance: StarterCharacterScripts,
-) -> StarterPlayerScripts
-
-@target(luau)
 /// Treats `StarterCharacterScripts` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: StarterCharacterScripts) -> Instance
-
-@target(luau)
-/// Treats `StarterCharacterScripts` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StarterCharacterScripts) -> Object
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.

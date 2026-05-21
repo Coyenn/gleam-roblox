@@ -11,34 +11,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `Flag` as its Roblox ancestor `Tool`.
-@luau.global("(function(x) return x end)")
-pub fn as_tool(instance: Flag) -> Tool
-
-@target(luau)
-/// Treats `Flag` as its Roblox ancestor `BackpackItem`.
-@luau.global("(function(x) return x end)")
-pub fn as_backpack_item(instance: Flag) -> BackpackItem
-
-@target(luau)
-/// Treats `Flag` as its Roblox ancestor `Model`.
-@luau.global("(function(x) return x end)")
-pub fn as_model(instance: Flag) -> Model
-
-@target(luau)
-/// Treats `Flag` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: Flag) -> PVInstance
-
-@target(luau)
 /// Treats `Flag` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Flag) -> Instance
-
-@target(luau)
-/// Treats `Flag` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Flag) -> Object
 
 @target(luau)
 /// Gets Roblox property `Flag.TeamColor`.

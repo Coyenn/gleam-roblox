@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ReflectionService) -> Instance
 
 @target(luau)
-/// Treats `ReflectionService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ReflectionService) -> Object
-
-@target(luau)
 /// Returns information about a class when given its name, assuming that class is accessible.
 ///
 /// Roblox: `ReflectionService.GetClass`

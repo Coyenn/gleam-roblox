@@ -21,11 +21,6 @@ pub fn new() -> Trail
 pub fn as_instance(instance: Trail) -> Instance
 
 @target(luau)
-/// Treats `Trail` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Trail) -> Object
-
-@target(luau)
 /// Gets Roblox property `Trail.Attachment0`.
 ///
 /// Along with Attachment1, determines where the trail will start drawing its segments.

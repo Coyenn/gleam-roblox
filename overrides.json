@@ -1,4 +1,6 @@
 {
+  "ancestor_casts": "minimal",
+  "include_object_cast": false,
   "classes": {
     "Part": {
       "rename": "Part",
@@ -9,6 +11,9 @@
     "Instance.Destroy": {
       "rename": "destroy_instance"
     }
+  },
+  "type_overrides": {
+    "EditableMesh.AddFace.vertexIds": "List(Int)"
   },
   "typed_configs": {
     "Players.BanAsync.config": {
@@ -30,6 +35,67 @@
         { "name": "UserIds", "type": "List(Int)" },
         { "name": "ApplyToUniverse", "type": "Bool", "optional": true }
       ]
+    },
+    "HttpService.RequestAsync.requestOptions": {
+      "type": "HttpRequestOptions",
+      "constructor": "http_request_options",
+      "fields": [
+        { "name": "Url", "type": "String" },
+        { "name": "Method", "type": "String", "optional": true },
+        { "name": "Headers", "type": "Dynamic", "optional": true },
+        { "name": "Body", "type": "String", "optional": true }
+      ]
+    },
+    "HttpService.CreateWebStreamClient.requestOptions": {
+      "type": "HttpRequestOptions",
+      "constructor": "http_request_options",
+      "fields": [
+        { "name": "Url", "type": "String" },
+        { "name": "Method", "type": "String", "optional": true },
+        { "name": "Headers", "type": "Dynamic", "optional": true },
+        { "name": "Body", "type": "String", "optional": true }
+      ]
+    },
+    "SocialService.PromptLinkSharingAsync.options": {
+      "type": "LinkSharingOptions",
+      "constructor": "link_sharing_options",
+      "fields": [
+        { "name": "FallbackLinkId", "type": "String", "optional": true },
+        { "name": "ExpirationSeconds", "type": "Int", "optional": true },
+        { "name": "PreviewTitle", "type": "String", "optional": true },
+        { "name": "PreviewDescription", "type": "String", "optional": true },
+        { "name": "PreviewAssetId", "type": "Int", "optional": true },
+        { "name": "LaunchData", "type": "String", "optional": true }
+      ]
+    },
+    "ModerationService.CreateReviewableContentAsync.config": {
+      "type": "ReviewableContentConfig",
+      "constructor": "reviewable_content_config",
+      "fields": [
+        { "name": "ContentType", "type": "String" },
+        { "name": "ContentId", "type": "String", "optional": true }
+      ]
+    },
+    "Chat.SetBubbleChatSettings.settings": {
+      "type": "BubbleChatSettings",
+      "constructor": "bubble_chat_settings",
+      "fields": [
+        { "name": "BackgroundColor3", "type": "Color3", "optional": true },
+        { "name": "TextColor3", "type": "Color3", "optional": true },
+        { "name": "TextSize", "type": "Int", "optional": true }
+      ]
+    },
+    "MessagingService.PublishAsync.message": {
+      "type": "MessagingPayload",
+      "constructor": "messaging_payload",
+      "fields": [
+        { "name": "Data", "type": "Dynamic" }
+      ]
+    },
+    "MarketplaceService.PromptBulkPurchase.options": {
+      "type": "BulkPurchaseOptions",
+      "constructor": "bulk_purchase_options",
+      "fields": []
     }
   }
 }

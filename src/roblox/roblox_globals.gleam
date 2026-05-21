@@ -89,6 +89,20 @@ pub fn version() -> String
 @luau.global("warn")
 pub fn warn(value: Dynamic) -> Nil
 
+@target(luau)
+/// Luau `warn` binding.
+///
+/// Luau: `warn`
+@luau.global("warn")
+pub fn warn_string(value: String) -> Nil
+
+@target(luau)
+/// Luau `warn` binding.
+///
+/// Luau: `warn`
+@luau.global("warn")
+pub fn warn_int(value: Int) -> Nil
+
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(_: Dynamic) -> Nil {
   Nil

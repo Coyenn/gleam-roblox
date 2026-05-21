@@ -4,18 +4,13 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type GenerationService, type Instance, type MeshPart, type Object,
-  type OptionFunction, type Player, type SecurityCapabilities, type UniqueId,
+  type Player, type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
 /// Treats `GenerationService` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: GenerationService) -> Instance
-
-@target(luau)
-/// Treats `GenerationService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GenerationService) -> Object
 
 @target(luau)
 /// Roblox: `GenerationService.ConnectAsync`
@@ -62,7 +57,7 @@ pub fn generate_mesh_async(
   inputs: Dynamic,
   player: Player,
   options: Dynamic,
-  intermediate_result_callback: OptionFunction,
+  intermediate_result_callback: Option(Dynamic),
 ) -> Dynamic
 
 @target(luau)
@@ -1106,7 +1101,6 @@ pub fn javascript_type_anchor(
   _: SecurityCapabilities,
   _: MeshPart,
   _: Player,
-  _: OptionFunction,
   _: GenerationService,
   _: Object,
   _: Option(Nil),

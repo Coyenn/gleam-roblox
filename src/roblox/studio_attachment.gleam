@@ -20,11 +20,6 @@ pub fn new() -> StudioAttachment
 pub fn as_instance(instance: StudioAttachment) -> Instance
 
 @target(luau)
-/// Treats `StudioAttachment` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StudioAttachment) -> Object
-
-@target(luau)
 /// Gets Roblox property `StudioAttachment.AutoHideParent`.
 ///
 /// Roblox: `StudioAttachment.AutoHideParent`

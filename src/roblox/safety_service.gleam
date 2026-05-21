@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: SafetyService) -> Instance
 
 @target(luau)
-/// Treats `SafetyService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SafetyService) -> Object
-
-@target(luau)
 /// Gets Roblox property `SafetyService.IsCaptureModeForReport`.
 ///
 /// Roblox: `SafetyService.IsCaptureModeForReport`

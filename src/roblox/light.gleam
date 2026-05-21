@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: Light) -> Instance
 
 @target(luau)
-/// Treats `Light` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Light) -> Object
-
-@target(luau)
 /// Gets Roblox property `Light.Brightness`.
 ///
 /// Sets how bright the emitted light is, defaults to 1.

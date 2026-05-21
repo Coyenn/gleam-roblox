@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: ContextActionService) -> Instance
 
 @target(luau)
-/// Treats `ContextActionService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ContextActionService) -> Object
-
-@target(luau)
 /// Bind user input to an action given an action handling function.
 ///
 /// Roblox: `ContextActionService.BindAction`

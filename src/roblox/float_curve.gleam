@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type FloatCurve, type FloatCurveKey, type Instance, type Object,
-  type OptionFloat, type SecurityCapabilities, type UniqueId,
+  type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -18,11 +18,6 @@ pub fn new() -> FloatCurve
 /// Treats `FloatCurve` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: FloatCurve) -> Instance
-
-@target(luau)
-/// Treats `FloatCurve` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: FloatCurve) -> Object
 
 @target(luau)
 /// Gets Roblox property `FloatCurve.Length`.
@@ -89,7 +84,7 @@ pub fn get_keys(instance: FloatCurve) -> List(FloatCurveKey)
 /// Returns:
 /// - Value of the curve at the requested time.
 @luau.method("GetValueAtTime")
-pub fn get_value_at_time(instance: FloatCurve, time: Float) -> OptionFloat
+pub fn get_value_at_time(instance: FloatCurve, time: Float) -> Option(Float)
 
 @target(luau)
 /// Adds the key passed as an argument to this curve. If a key at the same time is found, it will be replaced.
@@ -1059,7 +1054,6 @@ pub fn javascript_type_anchor(
   _: UniqueId,
   _: SecurityCapabilities,
   _: FloatCurveKey,
-  _: OptionFloat,
   _: FloatCurve,
   _: Object,
   _: Option(Nil),

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: Stats) -> Instance
 
 @target(luau)
-/// Treats `Stats` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Stats) -> Object
-
-@target(luau)
 /// Gets Roblox property `Stats.ContactsCount`.
 ///
 /// A measurement of how many parts are currently in contact with one another.

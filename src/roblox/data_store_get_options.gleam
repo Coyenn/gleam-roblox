@@ -20,11 +20,6 @@ pub fn new() -> DataStoreGetOptions
 pub fn as_instance(instance: DataStoreGetOptions) -> Instance
 
 @target(luau)
-/// Treats `DataStoreGetOptions` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DataStoreGetOptions) -> Object
-
-@target(luau)
 /// Gets Roblox property `DataStoreGetOptions.UseCache`.
 ///
 /// Roblox: `DataStoreGetOptions.UseCache`

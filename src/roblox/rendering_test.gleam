@@ -21,11 +21,6 @@ pub fn new() -> RenderingTest
 pub fn as_instance(instance: RenderingTest) -> Instance
 
 @target(luau)
-/// Treats `RenderingTest` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RenderingTest) -> Object
-
-@target(luau)
 /// Gets Roblox property `RenderingTest.CFrame`.
 ///
 /// Roblox: `RenderingTest.CFrame`

@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: MemoryStoreService) -> Instance
 
 @target(luau)
-/// Treats `MemoryStoreService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MemoryStoreService) -> Object
-
-@target(luau)
 /// Returns a MemoryStoreHashMap instance for the provided name.
 ///
 /// Roblox: `MemoryStoreService.GetHashMap`

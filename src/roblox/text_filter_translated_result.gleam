@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: TextFilterTranslatedResult) -> Instance
 
 @target(luau)
-/// Treats `TextFilterTranslatedResult` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TextFilterTranslatedResult) -> Object
-
-@target(luau)
 /// Gets Roblox property `TextFilterTranslatedResult.SourceLanguage`.
 ///
 /// Roblox: `TextFilterTranslatedResult.SourceLanguage`

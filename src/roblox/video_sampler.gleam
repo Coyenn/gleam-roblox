@@ -4,11 +4,6 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{type Content, type Object, type VideoSampler}
 
 @target(luau)
-/// Treats `VideoSampler` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VideoSampler) -> Object
-
-@target(luau)
 /// Gets Roblox property `VideoSampler.TimeLength`.
 ///
 /// The length of the VideoContent in seconds.

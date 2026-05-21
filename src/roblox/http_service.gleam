@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: HttpService) -> Instance
 
 @target(luau)
-/// Treats `HttpService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: HttpService) -> Object
-
-@target(luau)
 /// Gets Roblox property `HttpService.HttpEnabled`.
 ///
 /// Indicates whether HTTP requests can be sent to external websites.
@@ -28,6 +23,18 @@ pub fn as_object(instance: HttpService) -> Object
 /// See: https://create.roblox.com/docs/reference/engine/classes/HttpService#HttpEnabled
 @luau.property("HttpEnabled")
 pub fn get_http_enabled(instance: HttpService) -> Bool
+
+pub type HttpRequestOptions
+
+@target(luau)
+/// Creates a Roblox `HttpRequestOptions` config table.
+@luau.global("(function(url, method, headers, body) local config = { Url = url }; if method.tag == \"Some\" then config.Method = method.arg_0 end; if headers.tag == \"Some\" then config.Headers = headers.arg_0 end; if body.tag == \"Some\" then config.Body = body.arg_0 end; return config end)")
+pub fn http_request_options(
+  url: String,
+  method: Option(String),
+  headers: Option(Dynamic),
+  body: Option(String),
+) -> HttpRequestOptions
 
 @target(luau)
 /// Creates a client that opens a persistent connection to stream data.
@@ -47,7 +54,7 @@ pub fn get_http_enabled(instance: HttpService) -> Bool
 pub fn create_web_stream_client(
   instance: HttpService,
   stream_client_type: WebStreamClientType,
-  request_options: Dynamic,
+  request_options: HttpRequestOptions,
 ) -> WebStreamClient
 
 @target(luau)
@@ -198,7 +205,10 @@ pub fn post_async(
 /// Returns:
 /// - A dictionary containing response information from the server specified.
 @luau.method("RequestAsync")
-pub fn request_async(instance: HttpService, request_options: Dynamic) -> Dynamic
+pub fn request_async(
+  instance: HttpService,
+  request_options: HttpRequestOptions,
+) -> Dynamic
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.

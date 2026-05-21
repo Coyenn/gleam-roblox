@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> EqualizerSoundEffect
 
 @target(luau)
-/// Treats `EqualizerSoundEffect` as its Roblox ancestor `SoundEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_sound_effect(instance: EqualizerSoundEffect) -> SoundEffect
-
-@target(luau)
 /// Treats `EqualizerSoundEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: EqualizerSoundEffect) -> Instance
-
-@target(luau)
-/// Treats `EqualizerSoundEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: EqualizerSoundEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `EqualizerSoundEffect.HighGain`.

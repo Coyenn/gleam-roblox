@@ -21,11 +21,6 @@ pub fn new() -> InputBinding
 pub fn as_instance(instance: InputBinding) -> Instance
 
 @target(luau)
-/// Treats `InputBinding` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: InputBinding) -> Object
-
-@target(luau)
 /// Gets Roblox property `InputBinding.Backward`.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "backward" inputs to the parent InputAction.

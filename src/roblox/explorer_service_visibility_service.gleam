@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ExplorerServiceVisibilityService) -> Instance
 
 @target(luau)
-/// Treats `ExplorerServiceVisibilityService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ExplorerServiceVisibilityService) -> Object
-
-@target(luau)
 /// Roblox: `ExplorerServiceVisibilityService.GetServiceVisibility`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ExplorerServiceVisibilityService#GetServiceVisibility

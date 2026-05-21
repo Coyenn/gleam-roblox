@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: Debris) -> Instance
 
 @target(luau)
-/// Treats `Debris` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Debris) -> Object
-
-@target(luau)
 /// Schedules a given Instance for destruction within the specified lifetime.
 ///
 /// Roblox: `Debris.AddItem`

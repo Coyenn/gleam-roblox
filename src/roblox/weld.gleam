@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> Weld
 
 @target(luau)
-/// Treats `Weld` as its Roblox ancestor `JointInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_joint_instance(instance: Weld) -> JointInstance
-
-@target(luau)
 /// Treats `Weld` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Weld) -> Instance
-
-@target(luau)
-/// Treats `Weld` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Weld) -> Object
 
 @target(luau)
 /// Gets Roblox property `JointInstance.Active`.

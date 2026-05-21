@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `AssetImportSession` as its Roblox ancestor `ImportSession`.
-@luau.global("(function(x) return x end)")
-pub fn as_import_session(instance: AssetImportSession) -> ImportSession
-
-@target(luau)
 /// Treats `AssetImportSession` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AssetImportSession) -> Instance
-
-@target(luau)
-/// Treats `AssetImportSession` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AssetImportSession) -> Object
 
 @target(luau)
 /// Roblox: `ImportSession.UploadComplete`

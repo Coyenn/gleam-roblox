@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: SoundEffect) -> Instance
 
 @target(luau)
-/// Treats `SoundEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SoundEffect) -> Object
-
-@target(luau)
 /// Gets Roblox property `SoundEffect.Enabled`.
 ///
 /// Toggles the effect on and off.

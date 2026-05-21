@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: StackFrame) -> Instance
 
 @target(luau)
-/// Treats `StackFrame` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StackFrame) -> Object
-
-@target(luau)
 /// Gets Roblox property `StackFrame.FrameId`.
 ///
 /// Roblox: `StackFrame.FrameId`

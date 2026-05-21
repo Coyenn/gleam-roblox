@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: MarketplaceService) -> Instance
 
 @target(luau)
-/// Treats `MarketplaceService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MarketplaceService) -> Object
-
-@target(luau)
 /// Registers a callback to process receipts of a specific type.
 ///
 /// Roblox: `MarketplaceService.BindReceiptHandler`
@@ -38,7 +33,7 @@ pub fn bind_receipt_handler(
   instance: MarketplaceService,
   transaction_type: ReceiptType,
   handler: Dynamic,
-  filter: List(Dynamic),
+  filter: Option(List(Dynamic)),
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -50,6 +45,13 @@ pub fn bind_receipt_handler(
 /// - `instance`: The service responsible for in-experience transactions.
 @luau.method("OpenShop")
 pub fn open_shop(instance: MarketplaceService, player: Player) -> Nil
+
+pub type BulkPurchaseOptions
+
+@target(luau)
+/// Creates a Roblox `BulkPurchaseOptions` config table.
+@luau.global("(function() local config = {};  return config end)")
+pub fn bulk_purchase_options() -> BulkPurchaseOptions
 
 @target(luau)
 /// Prompts a user to purchase multiple avatar items with the given assetId or bundleId.
@@ -68,7 +70,7 @@ pub fn prompt_bulk_purchase(
   instance: MarketplaceService,
   player: Player,
   line_items: List(Dynamic),
-  options: Dynamic,
+  options: BulkPurchaseOptions,
 ) -> Nil
 
 @target(luau)

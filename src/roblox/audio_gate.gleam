@@ -20,11 +20,6 @@ pub fn new() -> AudioGate
 pub fn as_instance(instance: AudioGate) -> Instance
 
 @target(luau)
-/// Treats `AudioGate` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioGate) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioGate.Attack`.
 ///
 /// Controls how long it takes for the gate to open when the signal level rises above the Threshold.

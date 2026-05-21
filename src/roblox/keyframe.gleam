@@ -20,11 +20,6 @@ pub fn new() -> Keyframe
 pub fn as_instance(instance: Keyframe) -> Instance
 
 @target(luau)
-/// Treats `Keyframe` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Keyframe) -> Object
-
-@target(luau)
 /// Gets Roblox property `Keyframe.Time`.
 ///
 /// The Keyframe time position (in seconds) in an animation. This determines the time at which the Poses inside the keyframe will be shown.

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: MemoryStoreQueue) -> Instance
 
 @target(luau)
-/// Treats `MemoryStoreQueue` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MemoryStoreQueue) -> Object
-
-@target(luau)
 /// Adds an item to the queue.
 ///
 /// Roblox: `MemoryStoreQueue.AddAsync`

@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `InventoryPages` as its Roblox ancestor `Pages`.
-@luau.global("(function(x) return x end)")
-pub fn as_pages(instance: InventoryPages) -> Pages
-
-@target(luau)
 /// Treats `InventoryPages` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: InventoryPages) -> Instance
-
-@target(luau)
-/// Treats `InventoryPages` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: InventoryPages) -> Object
 
 @target(luau)
 /// Gets Roblox property `Pages.IsFinished`.

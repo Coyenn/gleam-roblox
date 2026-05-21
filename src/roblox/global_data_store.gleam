@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: GlobalDataStore) -> Instance
 
 @target(luau)
-/// Treats `GlobalDataStore` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GlobalDataStore) -> Object
-
-@target(luau)
 /// Returns the value of a key in a specified data store and a DataStoreKeyInfo instance.
 ///
 /// Roblox: `GlobalDataStore.GetAsync`

@@ -7,11 +7,6 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `EditableImage` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: EditableImage) -> Object
-
-@target(luau)
 /// Gets Roblox property `EditableImage.Size`.
 ///
 /// Size of the EditableImage in pixels.

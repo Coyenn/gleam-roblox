@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: TextSource) -> Instance
 
 @target(luau)
-/// Treats `TextSource` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TextSource) -> Object
-
-@target(luau)
 /// Gets Roblox property `TextSource.CanSend`.
 ///
 /// Determines whether the user can send messages to the TextChannel.

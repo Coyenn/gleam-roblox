@@ -46,7 +46,7 @@ type Member {
 }
 
 type ApiType {
-  ApiType(name: String)
+  ApiType(name: String, category: String)
 }
 
 type Parameter {
@@ -83,6 +83,9 @@ type Overrides {
     ignored_members: Dict(String, List(String)),
     member_renames: Dict(String, String),
     typed_configs: Dict(String, TypedConfig),
+    type_overrides: Dict(String, String),
+    ancestor_casts: String,
+    include_object_cast: Bool,
   )
 }
 
@@ -188,7 +191,16 @@ pub fn generate_from_strings_with_docs(
       |> result.unwrap(or: dict.new())
   }
   let overrides = case string.trim(overrides_json) {
-    "" -> Overrides(dict.new(), dict.new(), dict.new(), dict.new())
+    "" ->
+      Overrides(
+        dict.new(),
+        dict.new(),
+        dict.new(),
+        dict.new(),
+        dict.new(),
+        "full",
+        True,
+      )
     _ -> {
       let assert Ok(overrides) = json.parse(overrides_json, overrides_decoder())
       overrides
@@ -236,12 +248,12 @@ fn member_decoder() {
   use name <- decode.field("Name", decode.string)
   use value_type <- decode.optional_field(
     "ValueType",
-    ApiType("void"),
+    ApiType("void", ""),
     api_type_decoder(),
   )
   use return_type <- decode.optional_field(
     "ReturnType",
-    ApiType("void"),
+    ApiType("void", ""),
     api_type_decoder(),
   )
   use parameters <- decode.optional_field(
@@ -288,10 +300,13 @@ fn write_security_decoder() {
 fn api_type_decoder() {
   let named = {
     use name <- decode.field("Name", decode.string)
-    decode.success(ApiType(name))
+    use category <- decode.optional_field("Category", "", decode.string)
+    decode.success(ApiType(name: name, category: category))
   }
   let variant_list =
-    decode.map(decode.list(decode.dynamic), fn(_) { ApiType("Variant") })
+    decode.map(decode.list(decode.dynamic), fn(_) {
+      ApiType(name: "Variant", category: "Group")
+    })
   decode.one_of(named, or: [variant_list])
 }
 
@@ -367,6 +382,21 @@ fn overrides_decoder() {
     dict.new(),
     decode.dict(decode.string, typed_config_decoder()),
   )
+  use type_overrides <- decode.optional_field(
+    "type_overrides",
+    dict.new(),
+    decode.dict(decode.string, decode.string),
+  )
+  use ancestor_casts <- decode.optional_field(
+    "ancestor_casts",
+    "full",
+    decode.string,
+  )
+  use include_object_cast <- decode.optional_field(
+    "include_object_cast",
+    True,
+    decode.bool,
+  )
 
   let class_entries = dict.to_list(classes)
   let class_renames =
@@ -402,6 +432,9 @@ fn overrides_decoder() {
     ignored_members: ignored_members,
     member_renames: member_renames,
     typed_configs: typed_configs,
+    type_overrides: type_overrides,
+    ancestor_casts: ancestor_casts,
+    include_object_cast: include_object_cast,
   ))
 }
 
@@ -513,26 +546,6 @@ fn generate_support_modules(out_dir: String) {
         "pub type DecodeError =",
         "  decode.DecodeError",
         "",
-        "@target(luau)",
-        "/// Upcasts a Gleam `String` for Luau APIs that take `Dynamic`.",
-        "@luau.global(\"(function(x) return x end)\")",
-        "pub fn from_string(value: String) -> Dynamic",
-        "",
-        "@target(luau)",
-        "/// Upcasts a Gleam `Int` for Luau APIs that take `Dynamic`.",
-        "@luau.global(\"(function(x) return x end)\")",
-        "pub fn from_int(value: Int) -> Dynamic",
-        "",
-        "@target(luau)",
-        "/// Upcasts a Gleam `Float` for Luau APIs that take `Dynamic`.",
-        "@luau.global(\"(function(x) return x end)\")",
-        "pub fn from_float(value: Float) -> Dynamic",
-        "",
-        "@target(luau)",
-        "/// Upcasts a Gleam `Bool` for Luau APIs that take `Dynamic`.",
-        "@luau.global(\"(function(x) return x end)\")",
-        "pub fn from_bool(value: Bool) -> Dynamic",
-        "",
       ],
       with: "\n",
     ),
@@ -569,7 +582,17 @@ fn member_type_names(member: Member) -> List(String) {
       types
     }
     "Function" -> {
-      let #(_, return_types) = member_return_type("", member)
+      let empty_overrides =
+        Overrides(
+          dict.new(),
+          dict.new(),
+          dict.new(),
+          dict.new(),
+          dict.new(),
+          "full",
+          True,
+        )
+      let #(_, return_types) = member_return_type("", member, empty_overrides)
       let parameter_types =
         member.parameters
         |> list.flat_map(fn(parameter) {
@@ -636,6 +659,7 @@ fn generate_class(
 
   let with_ancestors =
     ancestors
+    |> filter_ancestor_casts(overrides)
     |> list.fold(initial, fn(acc, ancestor) {
       let cast_name = "as_" <> to_snake_case(ancestor)
       GeneratedClass(
@@ -787,6 +811,7 @@ fn do_generate_member(
         member_snake,
         member_lower,
         docs,
+        overrides,
         acc,
       )
     _ -> acc
@@ -899,7 +924,7 @@ fn generate_function(
     True -> acc
     False -> {
       let #(raw_return_type, return_base_types) =
-        member_return_type(owner.name, member)
+        member_return_type(owner.name, member, overrides)
       let return_type = case
         string.starts_with(member.name, "FindFirst")
         || member.name == "WaitForChild"
@@ -977,13 +1002,19 @@ fn generate_event(
   member_snake: String,
   member_lower: String,
   docs: DocsMap,
+  overrides: Overrides,
   acc: GeneratedClass,
 ) -> GeneratedClass {
   case member.security != "None" || list.contains(acc.functions, member_lower) {
     True -> acc
     False -> {
       let #(signal_callback_type, signal_callback_types) =
-        event_signal_callback_type(owner.name, member.name, member.parameters)
+        event_signal_callback_type(
+          owner.name,
+          member.name,
+          member.parameters,
+          overrides,
+        )
       let with_signal =
         GeneratedClass(
           ..merge_type_usage(acc, ["RBXScriptSignal", ..signal_callback_types]),
@@ -1013,6 +1044,7 @@ fn generate_event(
         member_snake,
         member_lower,
         docs,
+        overrides,
         with_signal,
       )
     }
@@ -1026,6 +1058,7 @@ fn generate_event_connect_helper(
   member_snake: String,
   member_lower: String,
   docs: DocsMap,
+  overrides: Overrides,
   acc: GeneratedClass,
 ) -> GeneratedClass {
   let helper = "on_" <> member_lower
@@ -1037,11 +1070,16 @@ fn generate_event_connect_helper(
         parameters
         |> list.flat_map(fn(parameter) {
           let #(_, types) =
-            member_parameter_type(owner.name, member.name, parameter)
+            member_parameter_type(owner.name, member.name, parameter, overrides)
           types
         })
       let callback_type =
-        event_callback_type_for_member(owner.name, member.name, parameters)
+        event_callback_type_for_member(
+          owner.name,
+          member.name,
+          parameters,
+          overrides,
+        )
       GeneratedClass(
         ..merge_type_usage(acc, parameter_types),
         functions: [helper, ..acc.functions],
@@ -1081,10 +1119,16 @@ fn event_signal_callback_type(
   class_name: String,
   member_name: String,
   parameters: List(Parameter),
+  overrides: Overrides,
 ) -> #(String, List(String)) {
   #(
-    event_callback_type_for_member(class_name, member_name, parameters),
-    event_parameter_types(class_name, member_name, parameters),
+    event_callback_type_for_member(
+      class_name,
+      member_name,
+      parameters,
+      overrides,
+    ),
+    event_parameter_types(class_name, member_name, parameters, overrides),
   )
 }
 
@@ -1092,10 +1136,12 @@ fn event_parameter_types(
   class_name: String,
   member_name: String,
   parameters: List(Parameter),
+  overrides: Overrides,
 ) -> List(String) {
   parameters
   |> list.flat_map(fn(parameter) {
-    let #(_, types) = member_parameter_type(class_name, member_name, parameter)
+    let #(_, types) =
+      member_parameter_type(class_name, member_name, parameter, overrides)
     types
   })
 }
@@ -1104,6 +1150,7 @@ fn event_callback_type_for_member(
   class_name: String,
   member_name: String,
   parameters: List(Parameter),
+  overrides: Overrides,
 ) -> String {
   case parameters {
     [] -> "fn() -> Nil"
@@ -1112,7 +1159,7 @@ fn event_callback_type_for_member(
         parameters
         |> list.map(fn(parameter) {
           let #(type_, _) =
-            member_parameter_type(class_name, member_name, parameter)
+            member_parameter_type(class_name, member_name, parameter, overrides)
           type_
         })
       "fn(" <> string.join(args, with: ", ") <> ") -> Nil"
@@ -1135,13 +1182,15 @@ fn parameter_type(
         |> list.flat_map(fn(field) { typed_config_field_base_types(field) })
       #(config.type_name, field_types)
     }
-    Error(_) -> member_parameter_type(class_name, member_name, parameter)
+    Error(_) ->
+      member_parameter_type(class_name, member_name, parameter, overrides)
   }
 }
 
 fn member_return_type(
   class_name: String,
   member: Member,
+  overrides: Overrides,
 ) -> #(String, List(String)) {
   case class_name <> "." <> member.name {
     "Object.GetPropertyChangedSignal" -> signal_type("fn() -> Nil", [])
@@ -1173,9 +1222,21 @@ fn member_return_type(
     "ValueCurve.GetKeyIndicesAtTime" -> #("List(Int)", ["List", "Int"])
     "ValueCurve.GetKeys" -> #("List(ValueCurveKey)", ["List", "ValueCurveKey"])
     _ ->
-      case member.name {
-        "GetInputPins" | "GetOutputPins" -> #("List(String)", ["List", "String"])
-        _ -> map_type(member.return_type)
+      case
+        type_override_types(
+          overrides,
+          class_name <> "." <> member.name <> ".return",
+        )
+      {
+        #("", []) ->
+          case member.name {
+            "GetInputPins" | "GetOutputPins" -> #("List(String)", [
+              "List",
+              "String",
+            ])
+            _ -> map_type(member.return_type)
+          }
+        types -> types
       }
   }
 }
@@ -1184,6 +1245,7 @@ fn member_parameter_type(
   class_name: String,
   member_name: String,
   parameter: Parameter,
+  overrides: Overrides,
 ) -> #(String, List(String)) {
   case class_name <> "." <> member_name <> "." <> parameter.name {
     "FloatCurve.SetKeys.keys" -> #("List(FloatCurveKey)", [
@@ -1232,8 +1294,26 @@ fn member_parameter_type(
             True -> #("fn() -> Nil", ["Nil"])
             False -> map_type(parameter.type_)
           }
-        _ -> map_type(parameter.type_)
+        _ ->
+          resolve_parameter_type(class_name, member_name, parameter, overrides)
       }
+  }
+}
+
+fn resolve_parameter_type(
+  class_name: String,
+  member_name: String,
+  parameter: Parameter,
+  overrides: Overrides,
+) -> #(String, List(String)) {
+  let override_key = class_name <> "." <> member_name <> "." <> parameter.name
+  case type_override_types(overrides, override_key) {
+    #("", []) ->
+      case array_parameter_heuristic(parameter.name, parameter.type_.name) {
+        Ok(types) -> types
+        Error(_) -> map_type(parameter.type_)
+      }
+    types -> types
   }
 }
 
@@ -3193,6 +3273,34 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "String",
         "@roblox/global/typeof",
       ),
+      global_fn(
+        "type_of_string",
+        "typeof",
+        "value: String",
+        "String",
+        "@roblox/global/typeof",
+      ),
+      global_fn(
+        "type_of_int",
+        "typeof",
+        "value: Int",
+        "String",
+        "@roblox/global/typeof",
+      ),
+      global_fn(
+        "type_of_bool",
+        "typeof",
+        "value: Bool",
+        "String",
+        "@roblox/global/typeof",
+      ),
+      global_fn(
+        "type_of_float",
+        "typeof",
+        "value: Float",
+        "String",
+        "@roblox/global/typeof",
+      ),
     ]),
     #("vector", [
       global_fn("zero", "vector.zero", "", "Vector", "@luau/global/vector.zero"),
@@ -3320,10 +3428,24 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "@luau/global/assert",
       ),
       global_fn(
+        "assert_bool",
+        "assert",
+        "value: Bool",
+        "Bool",
+        "@luau/global/assert",
+      ),
+      global_fn(
         "assert_with_message",
         "assert",
         "value: Dynamic, message: String",
         "Dynamic",
+        "@luau/global/assert",
+      ),
+      global_fn(
+        "assert_bool_with_message",
+        "assert",
+        "value: Bool, message: String",
+        "Bool",
         "@luau/global/assert",
       ),
       global_fn(
@@ -3334,9 +3456,23 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "@luau/global/error",
       ),
       global_fn(
+        "error_string",
+        "error",
+        "message: String",
+        "Nil",
+        "@luau/global/error",
+      ),
+      global_fn(
         "error_with_level",
         "error",
         "message: Dynamic, level: Int",
+        "Nil",
+        "@luau/global/error",
+      ),
+      global_fn(
+        "error_string_with_level",
+        "error",
+        "message: String, level: Int",
         "Nil",
         "@luau/global/error",
       ),
@@ -3407,9 +3543,45 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
       ),
       global_fn("print", "print", "value: Dynamic", "Nil", "@luau/global/print"),
       global_fn(
+        "print_string",
+        "print",
+        "value: String",
+        "Nil",
+        "@luau/global/print",
+      ),
+      global_fn("print_int", "print", "value: Int", "Nil", "@luau/global/print"),
+      global_fn(
+        "print_bool",
+        "print",
+        "value: Bool",
+        "Nil",
+        "@luau/global/print",
+      ),
+      global_fn(
+        "print_float",
+        "print",
+        "value: Float",
+        "Nil",
+        "@luau/global/print",
+      ),
+      global_fn(
         "rawequal",
         "rawequal",
         "a: Dynamic, b: Dynamic",
+        "Bool",
+        "@luau/global/rawequal",
+      ),
+      global_fn(
+        "rawequal_int",
+        "rawequal",
+        "a: Int, b: Int",
+        "Bool",
+        "@luau/global/rawequal",
+      ),
+      global_fn(
+        "rawequal_string",
+        "rawequal",
+        "a: String, b: String",
         "Bool",
         "@luau/global/rawequal",
       ),
@@ -3424,6 +3596,13 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "rawlen",
         "rawlen",
         "value: Dynamic",
+        "Int",
+        "@luau/global/rawlen",
+      ),
+      global_fn(
+        "rawlen_string",
+        "rawlen",
+        "value: String",
         "Int",
         "@luau/global/rawlen",
       ),
@@ -3494,6 +3673,34 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
         "tostring",
         "tostring",
         "value: Dynamic",
+        "String",
+        "@luau/global/tostring",
+      ),
+      global_fn(
+        "tostring_string",
+        "tostring",
+        "value: String",
+        "String",
+        "@luau/global/tostring",
+      ),
+      global_fn(
+        "tostring_int",
+        "tostring",
+        "value: Int",
+        "String",
+        "@luau/global/tostring",
+      ),
+      global_fn(
+        "tostring_bool",
+        "tostring",
+        "value: Bool",
+        "String",
+        "@luau/global/tostring",
+      ),
+      global_fn(
+        "tostring_float",
+        "tostring",
+        "value: Float",
         "String",
         "@luau/global/tostring",
       ),
@@ -3584,6 +3791,14 @@ fn generate_globals(docs: DocsMap, out_dir: String) {
       ),
       global_fn("version", "version", "", "String", "@luau/global/version"),
       global_fn("warn", "warn", "value: Dynamic", "Nil", "@luau/global/warn"),
+      global_fn(
+        "warn_string",
+        "warn",
+        "value: String",
+        "Nil",
+        "@luau/global/warn",
+      ),
+      global_fn("warn_int", "warn", "value: Int", "Nil", "@luau/global/warn"),
     ]),
     #("buffer", [
       global_fn(
@@ -3998,44 +4213,46 @@ fn module_extra_imports(module: String) -> List(String) {
 }
 
 fn map_type(val_type: ApiType) -> #(String, List(String)) {
-  let name = val_type.name
+  map_type_inner(val_type.name, val_type.category)
+}
+
+fn map_type_inner(name: String, category: String) -> #(String, List(String)) {
   case name {
     "bool" -> #("Bool", ["Bool"])
-    "int" -> #("Int", ["Int"])
-    "int64" -> #("Int", ["Int"])
+    "int" | "int64" -> #("Int", ["Int"])
     "int64?" -> #("Option(Int)", ["Option", "Int"])
-    "float" -> #("Float", ["Float"])
-    "double" -> #("Float", ["Float"])
+    "float" | "double" -> #("Float", ["Float"])
     "double?" -> #("Option(Float)", ["Option", "Float"])
     "string" -> #("String", ["String"])
     "string?" -> #("Option(String)", ["Option", "String"])
-    "void" -> #("Nil", ["Nil"])
-    "null" -> #("Nil", ["Nil"])
-    "Variant" -> #("Dynamic", ["Dynamic"])
-    "Variant?" -> #("Dynamic", ["Dynamic"])
-    "Tuple" -> #("Dynamic", ["Dynamic"])
-    "Tuple?" -> #("Dynamic", ["Dynamic"])
+    "void" | "null" -> #("Nil", ["Nil"])
+    "Variant"
+    | "Variant?"
+    | "Tuple"
+    | "Tuple?"
+    | "Dictionary"
+    | "Dictionary?"
+    | "Map" -> #("Dynamic", ["Dynamic"])
     "Function" -> #("Dynamic", ["Dynamic"])
-    "Array" -> #("List(Dynamic)", ["List", "Dynamic"])
-    "Array?" -> #("List(Dynamic)", ["List", "Dynamic"])
-    "Dictionary" -> #("Dynamic", ["Dynamic"])
-    "Dictionary?" -> #("Dynamic", ["Dynamic"])
-    "Map" -> #("Dynamic", ["Dynamic"])
+    "Array" -> array_list_type(name, category)
+    "Array?" -> {
+      let #(inner, types) = array_list_type("Array", category)
+      #("Option(" <> inner <> ")", ["Option", ..types])
+    }
     "RBXScriptSignal" -> #("RBXScriptSignal(fn(Dynamic) -> Nil)", [
       "RBXScriptSignal",
       "Dynamic",
       "Nil",
     ])
     "RBXScriptConnection" -> #("RBXScriptConnection", ["RBXScriptConnection"])
-    "Objects" -> #("List(Instance)", ["List", "Instance"])
-    "Instances" -> #("List(Instance)", ["List", "Instance"])
+    "Objects" | "Instances" -> #("List(Instance)", ["List", "Instance"])
     "buffer" -> #("Buffer", ["Buffer"])
     _ ->
       case string.ends_with(name, "?") {
         True -> {
           let base_name = string.drop_end(name, 1)
-          let option_name = "Option" <> to_type_name(base_name)
-          #(option_name, [option_name])
+          let #(inner, types) = map_type_inner(base_name, category)
+          #("Option(" <> inner <> ")", ["Option", ..types])
         }
         False -> {
           let type_name = to_type_name(name)
@@ -4043,6 +4260,66 @@ fn map_type(val_type: ApiType) -> #(String, List(String)) {
         }
       }
   }
+}
+
+fn array_list_type(name: String, category: String) -> #(String, List(String)) {
+  case name, category {
+    "Array?", _ -> array_list_type("Array", category)
+    "Array", "Group" -> #("List(Dynamic)", ["List", "Dynamic"])
+    "Array", "" -> #("List(Dynamic)", ["List", "Dynamic"])
+    _, _ -> #("List(Dynamic)", ["List", "Dynamic"])
+  }
+}
+
+fn type_override_types(
+  overrides: Overrides,
+  key: String,
+) -> #(String, List(String)) {
+  case dict.get(overrides.type_overrides, key) {
+    Ok(type_) -> {
+      let types = type_string_base_types(type_)
+      #(type_, types)
+    }
+    Error(_) -> #("", [])
+  }
+}
+
+fn array_parameter_heuristic(
+  parameter_name: String,
+  type_name: String,
+) -> Result(#(String, List(String)), Nil) {
+  case type_name {
+    "Array" | "Array?" ->
+      case ends_with_any(parameter_name, ["Ids", "ID", "Id"]) {
+        True -> Ok(#("List(Int)", ["List", "Int"]))
+        False ->
+          case ends_with_any(parameter_name, ["Names", "Tags", "Locales"]) {
+            True -> Ok(#("List(String)", ["List", "String"]))
+            False -> Error(Nil)
+          }
+      }
+    _ -> Error(Nil)
+  }
+}
+
+fn ends_with_any(value: String, suffixes: List(String)) -> Bool {
+  list.any(suffixes, fn(suffix) { string.ends_with(value, suffix) })
+}
+
+fn filter_ancestor_casts(
+  ancestor_list: List(String),
+  overrides: Overrides,
+) -> List(String) {
+  let filtered = case overrides.ancestor_casts {
+    "none" -> []
+    "minimal" -> list.filter(ancestor_list, fn(a) { a == "Instance" })
+    _ ->
+      case overrides.include_object_cast {
+        True -> ancestor_list
+        False -> list.filter(ancestor_list, fn(a) { a != "Object" })
+      }
+  }
+  filtered
 }
 
 fn merge_type_usage(
@@ -4356,6 +4633,8 @@ fn builtins() -> List(String) {
     "Int",
     "Int64",
     "Float",
+    "Double",
+    "Float64",
     "String",
     "Nil",
     "Dynamic",
@@ -4363,6 +4642,14 @@ fn builtins() -> List(String) {
     "Option",
     "RBXScriptConnection",
     "RBXScriptSignal",
+    "Variant",
+    "Tuple",
+    "Dictionary",
+    "Map",
+    "Array",
+    "Function",
+    "void",
+    "null",
   ]
 }
 

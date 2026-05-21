@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PluginMenu) -> Instance
 
 @target(luau)
-/// Treats `PluginMenu` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PluginMenu) -> Object
-
-@target(luau)
 /// Gets Roblox property `PluginMenu.Icon`.
 ///
 /// The icon to be displayed when used as a submenu.

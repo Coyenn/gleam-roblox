@@ -21,11 +21,6 @@ pub fn new() -> MaterialVariant
 pub fn as_instance(instance: MaterialVariant) -> Instance
 
 @target(luau)
-/// Treats `MaterialVariant` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MaterialVariant) -> Object
-
-@target(luau)
 /// Gets Roblox property `MaterialVariant.AlphaMode`.
 ///
 /// Determines how the alpha channel of the MaterialVariant.ColorMap is used.

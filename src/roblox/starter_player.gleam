@@ -17,11 +17,6 @@ import roblox/types.{
 pub fn as_instance(instance: StarterPlayer) -> Instance
 
 @target(luau)
-/// Treats `StarterPlayer` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StarterPlayer) -> Object
-
-@target(luau)
 /// Gets Roblox property `StarterPlayer.AllowCustomAnimations`.
 ///
 /// Describes the current game's permission levels regarding custom avatar animations from the website.

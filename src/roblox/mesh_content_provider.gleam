@@ -9,21 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `MeshContentProvider` as its Roblox ancestor `CacheableContentProvider`.
-@luau.global("(function(x) return x end)")
-pub fn as_cacheable_content_provider(
-  instance: MeshContentProvider,
-) -> CacheableContentProvider
-
-@target(luau)
 /// Treats `MeshContentProvider` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: MeshContentProvider) -> Instance
-
-@target(luau)
-/// Treats `MeshContentProvider` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MeshContentProvider) -> Object
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.

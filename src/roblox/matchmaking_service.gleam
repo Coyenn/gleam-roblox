@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: MatchmakingService) -> Instance
 
 @target(luau)
-/// Treats `MatchmakingService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MatchmakingService) -> Object
-
-@target(luau)
 /// Retrieves the value of a specific server attribute.
 ///
 /// Roblox: `MatchmakingService.GetServerAttribute`

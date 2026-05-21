@@ -19,34 +19,9 @@ import roblox/types.{
 pub fn new() -> UnionOperation
 
 @target(luau)
-/// Treats `UnionOperation` as its Roblox ancestor `PartOperation`.
-@luau.global("(function(x) return x end)")
-pub fn as_part_operation(instance: UnionOperation) -> PartOperation
-
-@target(luau)
-/// Treats `UnionOperation` as its Roblox ancestor `TriangleMeshPart`.
-@luau.global("(function(x) return x end)")
-pub fn as_triangle_mesh_part(instance: UnionOperation) -> TriangleMeshPart
-
-@target(luau)
-/// Treats `UnionOperation` as its Roblox ancestor `BasePart`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_part(instance: UnionOperation) -> BasePart
-
-@target(luau)
-/// Treats `UnionOperation` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: UnionOperation) -> PVInstance
-
-@target(luau)
 /// Treats `UnionOperation` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UnionOperation) -> Instance
-
-@target(luau)
-/// Treats `UnionOperation` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UnionOperation) -> Object
 
 @target(luau)
 /// Gets Roblox property `PartOperation.RenderFidelity`.

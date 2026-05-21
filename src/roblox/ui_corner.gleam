@@ -15,24 +15,9 @@ import roblox/types.{
 pub fn new() -> UICorner
 
 @target(luau)
-/// Treats `UICorner` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UICorner) -> UIComponent
-
-@target(luau)
-/// Treats `UICorner` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UICorner) -> UIBase
-
-@target(luau)
 /// Treats `UICorner` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UICorner) -> Instance
-
-@target(luau)
-/// Treats `UICorner` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UICorner) -> Object
 
 @target(luau)
 /// Gets Roblox property `UICorner.BottomLeftRadius`.

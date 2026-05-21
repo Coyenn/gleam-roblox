@@ -19,34 +19,9 @@ import roblox/types.{
 pub fn new() -> IntersectOperation
 
 @target(luau)
-/// Treats `IntersectOperation` as its Roblox ancestor `PartOperation`.
-@luau.global("(function(x) return x end)")
-pub fn as_part_operation(instance: IntersectOperation) -> PartOperation
-
-@target(luau)
-/// Treats `IntersectOperation` as its Roblox ancestor `TriangleMeshPart`.
-@luau.global("(function(x) return x end)")
-pub fn as_triangle_mesh_part(instance: IntersectOperation) -> TriangleMeshPart
-
-@target(luau)
-/// Treats `IntersectOperation` as its Roblox ancestor `BasePart`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_part(instance: IntersectOperation) -> BasePart
-
-@target(luau)
-/// Treats `IntersectOperation` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: IntersectOperation) -> PVInstance
-
-@target(luau)
 /// Treats `IntersectOperation` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: IntersectOperation) -> Instance
-
-@target(luau)
-/// Treats `IntersectOperation` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: IntersectOperation) -> Object
 
 @target(luau)
 /// Gets Roblox property `PartOperation.RenderFidelity`.

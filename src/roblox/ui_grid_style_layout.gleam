@@ -10,29 +10,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `UIGridStyleLayout` as its Roblox ancestor `UILayout`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_layout(instance: UIGridStyleLayout) -> UILayout
-
-@target(luau)
-/// Treats `UIGridStyleLayout` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UIGridStyleLayout) -> UIComponent
-
-@target(luau)
-/// Treats `UIGridStyleLayout` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UIGridStyleLayout) -> UIBase
-
-@target(luau)
 /// Treats `UIGridStyleLayout` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UIGridStyleLayout) -> Instance
-
-@target(luau)
-/// Treats `UIGridStyleLayout` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UIGridStyleLayout) -> Object
 
 @target(luau)
 /// Gets Roblox property `UIGridStyleLayout.AbsoluteContentSize`.

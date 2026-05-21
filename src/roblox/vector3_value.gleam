@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> Vector3Value
 
 @target(luau)
-/// Treats `Vector3Value` as its Roblox ancestor `ValueBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_value_base(instance: Vector3Value) -> ValueBase
-
-@target(luau)
 /// Treats `Vector3Value` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Vector3Value) -> Instance
-
-@target(luau)
-/// Treats `Vector3Value` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Vector3Value) -> Object
 
 @target(luau)
 /// Gets Roblox property `Vector3Value.Value`.

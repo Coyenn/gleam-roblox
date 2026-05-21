@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: SocialService) -> Instance
 
 @target(luau)
-/// Treats `SocialService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SocialService) -> Object
-
-@target(luau)
 /// Returns a table of all presently connected Player objects whose Player.PartyId property matches the passed partyId.
 ///
 /// Roblox: `SocialService.GetPlayersByPartyId`
@@ -232,6 +227,20 @@ pub fn get_upcoming_experience_events_async(
 @luau.method("PromptFeedbackSubmissionAsync")
 pub fn prompt_feedback_submission_async(instance: SocialService) -> Nil
 
+pub type LinkSharingOptions
+
+@target(luau)
+/// Creates a Roblox `LinkSharingOptions` config table.
+@luau.global("(function(fallback_link_id, expiration_seconds, preview_title, preview_description, preview_asset_id, launch_data) local config = {}; if fallback_link_id.tag == \"Some\" then config.FallbackLinkId = fallback_link_id.arg_0 end; if expiration_seconds.tag == \"Some\" then config.ExpirationSeconds = expiration_seconds.arg_0 end; if preview_title.tag == \"Some\" then config.PreviewTitle = preview_title.arg_0 end; if preview_description.tag == \"Some\" then config.PreviewDescription = preview_description.arg_0 end; if preview_asset_id.tag == \"Some\" then config.PreviewAssetId = preview_asset_id.arg_0 end; if launch_data.tag == \"Some\" then config.LaunchData = launch_data.arg_0 end; return config end)")
+pub fn link_sharing_options(
+  fallback_link_id: Option(String),
+  expiration_seconds: Option(Int),
+  preview_title: Option(String),
+  preview_description: Option(String),
+  preview_asset_id: Option(Int),
+  launch_data: Option(String),
+) -> LinkSharingOptions
+
 @target(luau)
 /// Roblox: `SocialService.PromptLinkSharingAsync`
 /// ThreadSafety: Unsafe
@@ -249,7 +258,7 @@ pub fn prompt_feedback_submission_async(instance: SocialService) -> Nil
 pub fn prompt_link_sharing_async(
   instance: SocialService,
   player: Player,
-  options: Dynamic,
+  options: LinkSharingOptions,
 ) -> Dynamic
 
 @target(luau)
@@ -306,7 +315,7 @@ pub fn on_call_invite_state_changed(
 @luau.event("GameInvitePromptClosed")
 pub fn game_invite_prompt_closed(
   instance: SocialService,
-) -> RBXScriptSignal(fn(Instance, List(Dynamic)) -> Nil)
+) -> RBXScriptSignal(fn(Instance, List(Int)) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `SocialService.GameInvitePromptClosed`.
@@ -319,7 +328,7 @@ pub fn game_invite_prompt_closed(
 @luau.global("(function(instance, callback) return instance.GameInvitePromptClosed:Connect(callback) end)")
 pub fn on_game_invite_prompt_closed(
   instance: SocialService,
-  callback: fn(Instance, List(Dynamic)) -> Nil,
+  callback: fn(Instance, List(Int)) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)

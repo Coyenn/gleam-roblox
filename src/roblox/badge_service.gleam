@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: BadgeService) -> Instance
 
 @target(luau)
-/// Treats `BadgeService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BadgeService) -> Object
-
-@target(luau)
 /// Award a badge to a player given the ID of each.
 ///
 /// Roblox: `BadgeService.AwardBadgeAsync`

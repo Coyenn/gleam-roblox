@@ -20,11 +20,6 @@ pub fn new() -> RealtimeMedia
 pub fn as_instance(instance: RealtimeMedia) -> Instance
 
 @target(luau)
-/// Treats `RealtimeMedia` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RealtimeMedia) -> Object
-
-@target(luau)
 /// Gets Roblox property `RealtimeMedia.ForwardInput`.
 ///
 /// Roblox: `RealtimeMedia.ForwardInput`

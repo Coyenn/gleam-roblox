@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `GuiBase3d` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: GuiBase3d) -> GuiBase
-
-@target(luau)
 /// Treats `GuiBase3d` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: GuiBase3d) -> Instance
-
-@target(luau)
-/// Treats `GuiBase3d` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GuiBase3d) -> Object
 
 @target(luau)
 /// Gets Roblox property `GuiBase3d.Color3`.

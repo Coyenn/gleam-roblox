@@ -8,21 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `AppStorageService` as its Roblox ancestor `LocalStorageService`.
-@luau.global("(function(x) return x end)")
-pub fn as_local_storage_service(
-  instance: AppStorageService,
-) -> LocalStorageService
-
-@target(luau)
 /// Treats `AppStorageService` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AppStorageService) -> Instance
-
-@target(luau)
-/// Treats `AppStorageService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AppStorageService) -> Object
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.

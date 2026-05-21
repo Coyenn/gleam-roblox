@@ -18,34 +18,9 @@ import roblox/types.{
 pub fn new() -> UIListLayout
 
 @target(luau)
-/// Treats `UIListLayout` as its Roblox ancestor `UIGridStyleLayout`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_grid_style_layout(instance: UIListLayout) -> UIGridStyleLayout
-
-@target(luau)
-/// Treats `UIListLayout` as its Roblox ancestor `UILayout`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_layout(instance: UIListLayout) -> UILayout
-
-@target(luau)
-/// Treats `UIListLayout` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UIListLayout) -> UIComponent
-
-@target(luau)
-/// Treats `UIListLayout` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UIListLayout) -> UIBase
-
-@target(luau)
 /// Treats `UIListLayout` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UIListLayout) -> Instance
-
-@target(luau)
-/// Treats `UIListLayout` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UIListLayout) -> Object
 
 @target(luau)
 /// Gets Roblox property `UIListLayout.HorizontalFlex`.

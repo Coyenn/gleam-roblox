@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: RuntimeContentService) -> Instance
 
 @target(luau)
-/// Treats `RuntimeContentService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RuntimeContentService) -> Object
-
-@target(luau)
 /// Roblox: `RuntimeContentService.RuntimeContentFail`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RuntimeContentService#RuntimeContentFail

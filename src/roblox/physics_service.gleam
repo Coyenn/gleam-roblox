@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PhysicsService) -> Instance
 
 @target(luau)
-/// Treats `PhysicsService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PhysicsService) -> Object
-
-@target(luau)
 /// Sets the collision status between two groups.
 ///
 /// Roblox: `PhysicsService.CollisionGroupSetCollidable`

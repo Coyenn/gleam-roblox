@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: BaseImportData) -> Instance
 
 @target(luau)
-/// Treats `BaseImportData` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BaseImportData) -> Object
-
-@target(luau)
 /// Gets Roblox property `BaseImportData.Id`.
 ///
 /// Roblox: `BaseImportData.Id`

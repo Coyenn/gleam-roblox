@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: AnnotationsService) -> Instance
 
 @target(luau)
-/// Treats `AnnotationsService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AnnotationsService) -> Object
-
-@target(luau)
 /// Gets Roblox property `AnnotationsService.AnnotationsLoadingStatus`.
 ///
 /// Roblox: `AnnotationsService.AnnotationsLoadingStatus`

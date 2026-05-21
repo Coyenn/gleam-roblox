@@ -16,29 +16,9 @@ import roblox/types.{
 pub fn new() -> UIAspectRatioConstraint
 
 @target(luau)
-/// Treats `UIAspectRatioConstraint` as its Roblox ancestor `UIConstraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_constraint(instance: UIAspectRatioConstraint) -> UIConstraint
-
-@target(luau)
-/// Treats `UIAspectRatioConstraint` as its Roblox ancestor `UIComponent`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_component(instance: UIAspectRatioConstraint) -> UIComponent
-
-@target(luau)
-/// Treats `UIAspectRatioConstraint` as its Roblox ancestor `UIBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_ui_base(instance: UIAspectRatioConstraint) -> UIBase
-
-@target(luau)
 /// Treats `UIAspectRatioConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: UIAspectRatioConstraint) -> Instance
-
-@target(luau)
-/// Treats `UIAspectRatioConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: UIAspectRatioConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `UIAspectRatioConstraint.AspectRatio`.

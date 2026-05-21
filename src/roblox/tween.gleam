@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> Tween
 
 @target(luau)
-/// Treats `Tween` as its Roblox ancestor `TweenBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_tween_base(instance: Tween) -> TweenBase
-
-@target(luau)
 /// Treats `Tween` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Tween) -> Instance
-
-@target(luau)
-/// Treats `Tween` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Tween) -> Object
 
 @target(luau)
 /// Gets Roblox property `Tween.Instance`.

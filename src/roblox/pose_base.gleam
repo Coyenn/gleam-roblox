@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: PoseBase) -> Instance
 
 @target(luau)
-/// Treats `PoseBase` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PoseBase) -> Object
-
-@target(luau)
 /// Gets Roblox property `PoseBase.EasingDirection`.
 ///
 /// The easing direction to use to reach the next Pose's value.

@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> SwimController
 
 @target(luau)
-/// Treats `SwimController` as its Roblox ancestor `ControllerBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_controller_base(instance: SwimController) -> ControllerBase
-
-@target(luau)
 /// Treats `SwimController` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SwimController) -> Instance
-
-@target(luau)
-/// Treats `SwimController` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SwimController) -> Object
 
 @target(luau)
 /// Gets Roblox property `SwimController.AccelerationTime`.

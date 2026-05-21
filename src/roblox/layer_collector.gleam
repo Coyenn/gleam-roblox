@@ -10,24 +10,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `LayerCollector` as its Roblox ancestor `GuiBase2d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base2d(instance: LayerCollector) -> GuiBase2d
-
-@target(luau)
-/// Treats `LayerCollector` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: LayerCollector) -> GuiBase
-
-@target(luau)
 /// Treats `LayerCollector` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: LayerCollector) -> Instance
-
-@target(luau)
-/// Treats `LayerCollector` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: LayerCollector) -> Object
 
 @target(luau)
 /// Gets Roblox property `LayerCollector.Enabled`.

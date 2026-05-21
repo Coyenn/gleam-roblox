@@ -157,9 +157,27 @@ pub fn generator_fixture_test() {
   fs.read_text(out_dir <> "/create/part.gleam")
   |> string.contains("pub fn size(value: Vector3) -> Property(Part)")
   |> should.equal(True)
+
+  fs.read_text(out_dir <> "/instance.gleam")
+  |> string.contains("pub fn get_source_asset_id(instance: Instance) -> Int")
+  |> should.equal(True)
+
+  fs.read_text(out_dir <> "/players.gleam")
+  |> string.contains("user_ids: List(Int)")
+  |> should.equal(True)
+
+  fs.read_text(out_dir <> "/part.gleam")
+  |> string.contains("pub fn as_instance(instance: Part) -> Instance")
+  |> should.equal(True)
+
+  fs.read_text(out_dir <> "/part.gleam")
+  |> string.contains("pub fn as_object")
+  |> should.equal(False)
 }
 
 const overrides_fixture = "{
+  \"ancestor_casts\": \"minimal\",
+  \"include_object_cast\": false,
   \"classes\": {
     \"Part\": {
       \"rename\": \"Part\",
@@ -219,13 +237,24 @@ const docs_fixture = "{
 const api_dump_fixture = "{
   \"Classes\": [
     {
-      \"Name\": \"Instance\",
+      \"Name\": \"Object\",
       \"Superclass\": \"<<<ROOT>>>\",
+      \"Members\": []
+    },
+    {
+      \"Name\": \"Instance\",
+      \"Superclass\": \"Object\",
       \"Members\": [
         {
           \"MemberType\": \"Property\",
           \"Name\": \"Name\",
           \"ValueType\": {\"Name\": \"string\"},
+          \"Security\": \"None\"
+        },
+        {
+          \"MemberType\": \"Property\",
+          \"Name\": \"SourceAssetId\",
+          \"ValueType\": {\"Name\": \"int64\", \"Category\": \"Primitive\"},
           \"Security\": \"None\"
         },
         {
@@ -295,6 +324,15 @@ const api_dump_fixture = "{
           \"ReturnType\": {\"Name\": \"null\"},
           \"Parameters\": [
             {\"Name\": \"config\", \"Type\": {\"Name\": \"Dictionary\"}}
+          ],
+          \"Security\": \"None\"
+        },
+        {
+          \"MemberType\": \"Function\",
+          \"Name\": \"KickAsync\",
+          \"ReturnType\": {\"Name\": \"null\"},
+          \"Parameters\": [
+            {\"Name\": \"userIds\", \"Type\": {\"Name\": \"Array\", \"Category\": \"Group\"}}
           ],
           \"Security\": \"None\"
         }

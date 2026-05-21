@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: Packages) -> Instance
 
 @target(luau)
-/// Treats `Packages` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Packages) -> Object
-
-@target(luau)
 /// Gets Roblox property `Packages.IsDehydrated`.
 ///
 /// Roblox: `Packages.IsDehydrated`

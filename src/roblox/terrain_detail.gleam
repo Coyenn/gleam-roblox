@@ -21,11 +21,6 @@ pub fn new() -> TerrainDetail
 pub fn as_instance(instance: TerrainDetail) -> Instance
 
 @target(luau)
-/// Treats `TerrainDetail` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TerrainDetail) -> Object
-
-@target(luau)
 /// Gets Roblox property `TerrainDetail.ColorMap`.
 ///
 /// Determines the color of the surface.

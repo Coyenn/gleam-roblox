@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ConfigureServerService) -> Instance
 
 @target(luau)
-/// Treats `ConfigureServerService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ConfigureServerService) -> Object
-
-@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.

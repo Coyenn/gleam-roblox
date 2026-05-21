@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: BaseWrap) -> Instance
 
 @target(luau)
-/// Treats `BaseWrap` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BaseWrap) -> Object
-
-@target(luau)
 /// Gets Roblox property `BaseWrap.CageMeshContent`.
 ///
 /// Roblox: `BaseWrap.CageMeshContent`

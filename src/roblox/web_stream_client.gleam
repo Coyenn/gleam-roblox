@@ -5,11 +5,6 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `WebStreamClient` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: WebStreamClient) -> Object
-
-@target(luau)
 /// Gets Roblox property `WebStreamClient.ConnectionState`.
 ///
 /// The current WebStreamClientState of the client.

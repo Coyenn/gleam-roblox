@@ -22,11 +22,6 @@ pub fn new() -> Sound
 pub fn as_instance(instance: Sound) -> Instance
 
 @target(luau)
-/// Treats `Sound` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Sound) -> Object
-
-@target(luau)
 /// Gets Roblox property `Sound.AcousticSimulationEnabled`.
 ///
 /// Roblox: `Sound.AcousticSimulationEnabled`

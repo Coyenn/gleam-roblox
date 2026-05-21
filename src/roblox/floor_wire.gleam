@@ -9,24 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `FloorWire` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: FloorWire) -> GuiBase3d
-
-@target(luau)
-/// Treats `FloorWire` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: FloorWire) -> GuiBase
-
-@target(luau)
 /// Treats `FloorWire` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: FloorWire) -> Instance
-
-@target(luau)
-/// Treats `FloorWire` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: FloorWire) -> Object
 
 @target(luau)
 /// Gets Roblox property `FloorWire.CycleOffset`.

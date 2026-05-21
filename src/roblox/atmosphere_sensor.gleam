@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> AtmosphereSensor
 
 @target(luau)
-/// Treats `AtmosphereSensor` as its Roblox ancestor `SensorBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_sensor_base(instance: AtmosphereSensor) -> SensorBase
-
-@target(luau)
 /// Treats `AtmosphereSensor` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AtmosphereSensor) -> Instance
-
-@target(luau)
-/// Treats `AtmosphereSensor` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AtmosphereSensor) -> Object
 
 @target(luau)
 /// Gets Roblox property `AtmosphereSensor.AirDensity`.

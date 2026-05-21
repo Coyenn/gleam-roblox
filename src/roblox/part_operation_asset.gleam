@@ -20,11 +20,6 @@ pub fn new() -> PartOperationAsset
 pub fn as_instance(instance: PartOperationAsset) -> Instance
 
 @target(luau)
-/// Treats `PartOperationAsset` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PartOperationAsset) -> Object
-
-@target(luau)
 /// Gets Roblox property `Instance.Archivable`.
 ///
 /// Determines if an Instance and its descendants can be cloned using Instance:Clone(), and can be saved/published.

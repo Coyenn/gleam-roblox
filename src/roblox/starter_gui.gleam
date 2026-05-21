@@ -9,19 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `StarterGui` as its Roblox ancestor `BasePlayerGui`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_player_gui(instance: StarterGui) -> BasePlayerGui
-
-@target(luau)
 /// Treats `StarterGui` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: StarterGui) -> Instance
-
-@target(luau)
-/// Treats `StarterGui` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StarterGui) -> Object
 
 @target(luau)
 /// Gets Roblox property `StarterGui.ProcessUserInput`.

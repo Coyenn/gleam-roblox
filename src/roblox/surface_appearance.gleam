@@ -21,11 +21,6 @@ pub fn new() -> SurfaceAppearance
 pub fn as_instance(instance: SurfaceAppearance) -> Instance
 
 @target(luau)
-/// Treats `SurfaceAppearance` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SurfaceAppearance) -> Object
-
-@target(luau)
 /// Gets Roblox property `SurfaceAppearance.AlphaMode`.
 ///
 /// Determines how the alpha channel of the SurfaceAppearance.ColorMap is used.

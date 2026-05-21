@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> Pose
 
 @target(luau)
-/// Treats `Pose` as its Roblox ancestor `PoseBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_pose_base(instance: Pose) -> PoseBase
-
-@target(luau)
 /// Treats `Pose` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Pose) -> Instance
-
-@target(luau)
-/// Treats `Pose` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Pose) -> Object
 
 @target(luau)
 /// Gets Roblox property `Pose.CFrame`.

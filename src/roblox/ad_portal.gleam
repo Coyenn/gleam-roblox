@@ -20,11 +20,6 @@ pub fn new() -> AdPortal
 pub fn as_instance(instance: AdPortal) -> Instance
 
 @target(luau)
-/// Treats `AdPortal` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AdPortal) -> Object
-
-@target(luau)
 /// Gets Roblox property `AdPortal.PortalVersion`.
 ///
 /// Roblox: `AdPortal.PortalVersion`

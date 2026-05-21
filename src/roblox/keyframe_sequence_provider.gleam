@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: KeyframeSequenceProvider) -> Instance
 
 @target(luau)
-/// Treats `KeyframeSequenceProvider` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: KeyframeSequenceProvider) -> Object
-
-@target(luau)
 /// Generates a temporary asset ID from a KeyframeSequence that can be used for localized testing of an animation. Generates an active:// URL.
 ///
 /// Roblox: `KeyframeSequenceProvider.RegisterActiveKeyframeSequence`

@@ -20,11 +20,6 @@ pub fn new() -> HapticEffect
 pub fn as_instance(instance: HapticEffect) -> Instance
 
 @target(luau)
-/// Treats `HapticEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: HapticEffect) -> Object
-
-@target(luau)
 /// Gets Roblox property `HapticEffect.Looped`.
 ///
 /// Whether the haptic effect loops continuously.

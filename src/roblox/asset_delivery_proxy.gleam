@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: AssetDeliveryProxy) -> Instance
 
 @target(luau)
-/// Treats `AssetDeliveryProxy` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AssetDeliveryProxy) -> Object
-
-@target(luau)
 /// Gets Roblox property `AssetDeliveryProxy.Interface`.
 ///
 /// Roblox: `AssetDeliveryProxy.Interface`

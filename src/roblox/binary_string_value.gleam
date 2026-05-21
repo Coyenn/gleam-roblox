@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> BinaryStringValue
 
 @target(luau)
-/// Treats `BinaryStringValue` as its Roblox ancestor `ValueBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_value_base(instance: BinaryStringValue) -> ValueBase
-
-@target(luau)
 /// Treats `BinaryStringValue` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BinaryStringValue) -> Instance
-
-@target(luau)
-/// Treats `BinaryStringValue` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BinaryStringValue) -> Object
 
 @target(luau)
 /// Fires if the BinaryStringValue's value is changed.

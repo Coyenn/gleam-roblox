@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> NumberPose
 
 @target(luau)
-/// Treats `NumberPose` as its Roblox ancestor `PoseBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_pose_base(instance: NumberPose) -> PoseBase
-
-@target(luau)
 /// Treats `NumberPose` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: NumberPose) -> Instance
-
-@target(luau)
-/// Treats `NumberPose` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: NumberPose) -> Object
 
 @target(luau)
 /// Gets Roblox property `NumberPose.Value`.

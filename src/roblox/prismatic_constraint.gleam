@@ -16,26 +16,9 @@ import roblox/types.{
 pub fn new() -> PrismaticConstraint
 
 @target(luau)
-/// Treats `PrismaticConstraint` as its Roblox ancestor `SlidingBallConstraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_sliding_ball_constraint(
-  instance: PrismaticConstraint,
-) -> SlidingBallConstraint
-
-@target(luau)
-/// Treats `PrismaticConstraint` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: PrismaticConstraint) -> Constraint
-
-@target(luau)
 /// Treats `PrismaticConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: PrismaticConstraint) -> Instance
-
-@target(luau)
-/// Treats `PrismaticConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PrismaticConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `SlidingBallConstraint.ActuatorType`.

@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> ShirtGraphic
 
 @target(luau)
-/// Treats `ShirtGraphic` as its Roblox ancestor `CharacterAppearance`.
-@luau.global("(function(x) return x end)")
-pub fn as_character_appearance(instance: ShirtGraphic) -> CharacterAppearance
-
-@target(luau)
 /// Treats `ShirtGraphic` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ShirtGraphic) -> Instance
-
-@target(luau)
-/// Treats `ShirtGraphic` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ShirtGraphic) -> Object
 
 @target(luau)
 /// Gets Roblox property `ShirtGraphic.Color3`.

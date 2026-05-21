@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `MeshImportData` as its Roblox ancestor `BaseImportData`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_import_data(instance: MeshImportData) -> BaseImportData
-
-@target(luau)
 /// Treats `MeshImportData` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: MeshImportData) -> Instance
-
-@target(luau)
-/// Treats `MeshImportData` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MeshImportData) -> Object
 
 @target(luau)
 /// Gets Roblox property `MeshImportData.Anchored`.

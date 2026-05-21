@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: GroupService) -> Instance
 
 @target(luau)
-/// Treats `GroupService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GroupService) -> Object
-
-@target(luau)
 /// Returns a StandardPages object including information on all of the specified group's allies.
 ///
 /// Roblox: `GroupService.GetAlliesAsync`

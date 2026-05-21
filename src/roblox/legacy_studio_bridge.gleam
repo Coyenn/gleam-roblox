@@ -8,21 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `LegacyStudioBridge` as its Roblox ancestor `ILegacyStudioBridge`.
-@luau.global("(function(x) return x end)")
-pub fn as_i_legacy_studio_bridge(
-  instance: LegacyStudioBridge,
-) -> ILegacyStudioBridge
-
-@target(luau)
 /// Treats `LegacyStudioBridge` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: LegacyStudioBridge) -> Instance
-
-@target(luau)
-/// Treats `LegacyStudioBridge` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: LegacyStudioBridge) -> Object
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.

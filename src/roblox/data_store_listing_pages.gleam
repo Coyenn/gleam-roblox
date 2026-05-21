@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `DataStoreListingPages` as its Roblox ancestor `Pages`.
-@luau.global("(function(x) return x end)")
-pub fn as_pages(instance: DataStoreListingPages) -> Pages
-
-@target(luau)
 /// Treats `DataStoreListingPages` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: DataStoreListingPages) -> Instance
-
-@target(luau)
-/// Treats `DataStoreListingPages` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DataStoreListingPages) -> Object
 
 @target(luau)
 /// Gets Roblox property `DataStoreListingPages.Cursor`.

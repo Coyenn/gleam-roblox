@@ -11,19 +11,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `DataStore` as its Roblox ancestor `GlobalDataStore`.
-@luau.global("(function(x) return x end)")
-pub fn as_global_data_store(instance: DataStore) -> GlobalDataStore
-
-@target(luau)
 /// Treats `DataStore` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: DataStore) -> Instance
-
-@target(luau)
-/// Treats `DataStore` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DataStore) -> Object
 
 @target(luau)
 /// Retrieves the specified key version.

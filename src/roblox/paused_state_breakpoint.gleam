@@ -9,19 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `PausedStateBreakpoint` as its Roblox ancestor `PausedState`.
-@luau.global("(function(x) return x end)")
-pub fn as_paused_state(instance: PausedStateBreakpoint) -> PausedState
-
-@target(luau)
 /// Treats `PausedStateBreakpoint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: PausedStateBreakpoint) -> Instance
-
-@target(luau)
-/// Treats `PausedStateBreakpoint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PausedStateBreakpoint) -> Object
 
 @target(luau)
 /// Gets Roblox property `PausedStateBreakpoint.Breakpoint`.

@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `RunningAverageItemInt` as its Roblox ancestor `StatsItem`.
-@luau.global("(function(x) return x end)")
-pub fn as_stats_item(instance: RunningAverageItemInt) -> StatsItem
-
-@target(luau)
 /// Treats `RunningAverageItemInt` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: RunningAverageItemInt) -> Instance
-
-@target(luau)
-/// Treats `RunningAverageItemInt` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RunningAverageItemInt) -> Object
 
 @target(luau)
 /// Gets Roblox property `StatsItem.DisplayName`.

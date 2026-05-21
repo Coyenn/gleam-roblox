@@ -21,11 +21,6 @@ pub fn new() -> VideoPlayer
 pub fn as_instance(instance: VideoPlayer) -> Instance
 
 @target(luau)
-/// Treats `VideoPlayer` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VideoPlayer) -> Object
-
-@target(luau)
 /// Gets Roblox property `VideoPlayer.IsLoaded`.
 ///
 /// Indicates when the VideoContent has loaded and is ready to play.

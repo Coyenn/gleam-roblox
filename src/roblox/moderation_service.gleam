@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ModerationService) -> Instance
 
 @target(luau)
-/// Treats `ModerationService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ModerationService) -> Object
-
-@target(luau)
 /// Roblox: `ModerationService.BindReviewableContentEventProcessor`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ModerationService#BindReviewableContentEventProcessor
@@ -38,6 +33,16 @@ pub fn create_reviewable_content_key(
   content: Content,
 ) -> String
 
+pub type ReviewableContentConfig
+
+@target(luau)
+/// Creates a Roblox `ReviewableContentConfig` config table.
+@luau.global("(function(content_type, content_id) local config = { ContentType = content_type }; if content_id.tag == \"Some\" then config.ContentId = content_id.arg_0 end; return config end)")
+pub fn reviewable_content_config(
+  content_type: String,
+  content_id: Option(String),
+) -> ReviewableContentConfig
+
 @target(luau)
 /// Roblox: `ModerationService.CreateReviewableContentAsync`
 /// ThreadSafety: Unsafe
@@ -46,7 +51,7 @@ pub fn create_reviewable_content_key(
 @luau.method("CreateReviewableContentAsync")
 pub fn create_reviewable_content_async(
   instance: ModerationService,
-  config: Dynamic,
+  config: ReviewableContentConfig,
 ) -> String
 
 @target(luau)

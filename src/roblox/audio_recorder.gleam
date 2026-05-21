@@ -20,11 +20,6 @@ pub fn new() -> AudioRecorder
 pub fn as_instance(instance: AudioRecorder) -> Instance
 
 @target(luau)
-/// Treats `AudioRecorder` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioRecorder) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioRecorder.IsRecording`.
 ///
 /// Whether the AudioRecorder is currently recording.

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: AnimationClip) -> Instance
 
 @target(luau)
-/// Treats `AnimationClip` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AnimationClip) -> Object
-
-@target(luau)
 /// Gets Roblox property `AnimationClip.Guid`.
 ///
 /// Roblox: `AnimationClip.Guid`

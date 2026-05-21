@@ -20,11 +20,6 @@ pub fn new() -> AudioDeviceOutput
 pub fn as_instance(instance: AudioDeviceOutput) -> Instance
 
 @target(luau)
-/// Treats `AudioDeviceOutput` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AudioDeviceOutput) -> Object
-
-@target(luau)
 /// Gets Roblox property `AudioDeviceOutput.Player`.
 ///
 /// A Player who is intended to hear the connected audio streams.

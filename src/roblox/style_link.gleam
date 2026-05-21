@@ -20,11 +20,6 @@ pub fn new() -> StyleLink
 pub fn as_instance(instance: StyleLink) -> Instance
 
 @target(luau)
-/// Treats `StyleLink` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StyleLink) -> Object
-
-@target(luau)
 /// Gets Roblox property `StyleLink.StyleSheet`.
 ///
 /// The StyleSheet to link to the parent such that the parent's descendants are styled accordingly.

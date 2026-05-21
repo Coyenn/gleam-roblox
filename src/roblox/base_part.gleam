@@ -11,19 +11,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `BasePart` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: BasePart) -> PVInstance
-
-@target(luau)
 /// Treats `BasePart` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BasePart) -> Instance
-
-@target(luau)
-/// Treats `BasePart` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BasePart) -> Object
 
 @target(luau)
 /// Gets Roblox property `BasePart.Anchored`.

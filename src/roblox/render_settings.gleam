@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: RenderSettings) -> Instance
 
 @target(luau)
-/// Treats `RenderSettings` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RenderSettings) -> Object
-
-@target(luau)
 /// Gets Roblox property `RenderSettings.AutoFRMLevel`.
 ///
 /// Sets the starting quality level of the framerate manager.

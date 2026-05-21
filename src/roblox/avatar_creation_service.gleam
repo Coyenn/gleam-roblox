@@ -6,19 +6,13 @@ import roblox/types.{
   type AccessoryType, type Actor, type AvatarAssetType,
   type AvatarCreationService, type BodyPart, type EditableImage,
   type HumanoidDescription, type Instance, type Model, type ModerationStatus,
-  type Object, type OptionFunction, type Player, type SecurityCapabilities,
-  type UniqueId,
+  type Object, type Player, type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
 /// Treats `AvatarCreationService` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AvatarCreationService) -> Instance
-
-@target(luau)
-/// Treats `AvatarCreationService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AvatarCreationService) -> Object
 
 @target(luau)
 /// Gets data regarding rules that assets must abide by to pass UGC validation.
@@ -57,7 +51,7 @@ pub fn auto_setup_avatar_async(
   instance: AvatarCreationService,
   player: Player,
   auto_setup_params: Dynamic,
-  progress_callback: OptionFunction,
+  progress_callback: Option(Dynamic),
 ) -> String
 
 @target(luau)
@@ -117,7 +111,7 @@ pub fn generate_avatar_async(
 @luau.method("GetBatchTokenDetailsAsync")
 pub fn get_batch_token_details_async(
   instance: AvatarCreationService,
-  token_ids: List(Dynamic),
+  token_ids: List(Int),
 ) -> List(Dynamic)
 
 @target(luau)
@@ -1344,7 +1338,6 @@ pub fn javascript_type_anchor(
   _: AvatarAssetType,
   _: Model,
   _: EditableImage,
-  _: OptionFunction,
   _: AvatarCreationService,
   _: Object,
   _: Option(Nil),

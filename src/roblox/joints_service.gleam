@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: JointsService) -> Instance
 
 @target(luau)
-/// Treats `JointsService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: JointsService) -> Object
-
-@target(luau)
 /// Will remove any 'create joints' that were made visible via the JointsService:ShowPermissibleJoints() method.
 ///
 /// Roblox: `JointsService.ClearJoinAfterMoveJoints`

@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: AvatarSettings) -> Instance
 
 @target(luau)
-/// Treats `AvatarSettings` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AvatarSettings) -> Object
-
-@target(luau)
 /// Gets Roblox property `AvatarSettings.Loaded`.
 ///
 /// Roblox: `AvatarSettings.Loaded`

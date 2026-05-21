@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> BlurEffect
 
 @target(luau)
-/// Treats `BlurEffect` as its Roblox ancestor `PostEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_post_effect(instance: BlurEffect) -> PostEffect
-
-@target(luau)
 /// Treats `BlurEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BlurEffect) -> Instance
-
-@target(luau)
-/// Treats `BlurEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BlurEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `BlurEffect.Size`.

@@ -22,11 +22,6 @@ pub fn new() -> AvatarBodyRules
 pub fn as_instance(instance: AvatarBodyRules) -> Instance
 
 @target(luau)
-/// Treats `AvatarBodyRules` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AvatarBodyRules) -> Object
-
-@target(luau)
 /// Gets Roblox property `AvatarBodyRules.AppearanceMode`.
 ///
 /// Roblox: `AvatarBodyRules.AppearanceMode`

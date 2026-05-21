@@ -9,29 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `SelectionPartLasso` as its Roblox ancestor `SelectionLasso`.
-@luau.global("(function(x) return x end)")
-pub fn as_selection_lasso(instance: SelectionPartLasso) -> SelectionLasso
-
-@target(luau)
-/// Treats `SelectionPartLasso` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: SelectionPartLasso) -> GuiBase3d
-
-@target(luau)
-/// Treats `SelectionPartLasso` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: SelectionPartLasso) -> GuiBase
-
-@target(luau)
 /// Treats `SelectionPartLasso` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SelectionPartLasso) -> Instance
-
-@target(luau)
-/// Treats `SelectionPartLasso` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SelectionPartLasso) -> Object
 
 @target(luau)
 /// Gets Roblox property `SelectionPartLasso.Part`.

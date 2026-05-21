@@ -9,19 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `MotorFeature` as its Roblox ancestor `Feature`.
-@luau.global("(function(x) return x end)")
-pub fn as_feature(instance: MotorFeature) -> Feature
-
-@target(luau)
 /// Treats `MotorFeature` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: MotorFeature) -> Instance
-
-@target(luau)
-/// Treats `MotorFeature` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: MotorFeature) -> Object
 
 @target(luau)
 /// Gets Roblox property `Feature.FaceId`.

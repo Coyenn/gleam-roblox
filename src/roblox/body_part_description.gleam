@@ -20,11 +20,6 @@ pub fn new() -> BodyPartDescription
 pub fn as_instance(instance: BodyPartDescription) -> Instance
 
 @target(luau)
-/// Treats `BodyPartDescription` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BodyPartDescription) -> Object
-
-@target(luau)
 /// Gets Roblox property `BodyPartDescription.AssetId`.
 ///
 /// The asset ID that should be applied when applying this BodyPartDescription.

@@ -10,24 +10,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `Status` as its Roblox ancestor `Model`.
-@luau.global("(function(x) return x end)")
-pub fn as_model(instance: Status) -> Model
-
-@target(luau)
-/// Treats `Status` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: Status) -> PVInstance
-
-@target(luau)
 /// Treats `Status` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Status) -> Instance
-
-@target(luau)
-/// Treats `Status` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Status) -> Object
 
 @target(luau)
 /// Gets Roblox property `Model.LevelOfDetail`.

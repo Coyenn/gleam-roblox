@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: TeleportAsyncResult) -> Instance
 
 @target(luau)
-/// Treats `TeleportAsyncResult` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TeleportAsyncResult) -> Object
-
-@target(luau)
 /// Gets Roblox property `TeleportAsyncResult.PrivateServerId`.
 ///
 /// The private server ID of the reserved server that the players are being teleported to.

@@ -10,19 +10,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `OrderedDataStore` as its Roblox ancestor `GlobalDataStore`.
-@luau.global("(function(x) return x end)")
-pub fn as_global_data_store(instance: OrderedDataStore) -> GlobalDataStore
-
-@target(luau)
 /// Treats `OrderedDataStore` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: OrderedDataStore) -> Instance
-
-@target(luau)
-/// Treats `OrderedDataStore` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: OrderedDataStore) -> Object
 
 @target(luau)
 /// Returns a DataStorePages object.

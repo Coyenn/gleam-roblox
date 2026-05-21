@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> RigidConstraint
 
 @target(luau)
-/// Treats `RigidConstraint` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: RigidConstraint) -> Constraint
-
-@target(luau)
 /// Treats `RigidConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: RigidConstraint) -> Instance
-
-@target(luau)
-/// Treats `RigidConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RigidConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `Constraint.Active`.

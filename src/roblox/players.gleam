@@ -16,11 +16,6 @@ import roblox/types.{
 pub fn as_instance(instance: Players) -> Instance
 
 @target(luau)
-/// Treats `Players` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Players) -> Object
-
-@target(luau)
 /// Gets Roblox property `Players.BubbleChat`.
 ///
 /// Indicates whether or not bubble chat is enabled. It is set with the Players:SetChatStyle() method.

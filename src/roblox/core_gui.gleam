@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `CoreGui` as its Roblox ancestor `BasePlayerGui`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_player_gui(instance: CoreGui) -> BasePlayerGui
-
-@target(luau)
 /// Treats `CoreGui` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: CoreGui) -> Instance
-
-@target(luau)
-/// Treats `CoreGui` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CoreGui) -> Object
 
 @target(luau)
 /// Gets Roblox property `CoreGui.SelectionImageObject`.

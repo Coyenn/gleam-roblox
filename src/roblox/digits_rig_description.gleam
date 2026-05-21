@@ -21,11 +21,6 @@ pub fn new() -> DigitsRigDescription
 pub fn as_instance(instance: DigitsRigDescription) -> Instance
 
 @target(luau)
-/// Treats `DigitsRigDescription` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DigitsRigDescription) -> Object
-
-@target(luau)
 /// Gets Roblox property `DigitsRigDescription.Index1`.
 ///
 /// Roblox: `DigitsRigDescription.Index1`

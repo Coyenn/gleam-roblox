@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ConfigService) -> Instance
 
 @target(luau)
-/// Treats `ConfigService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ConfigService) -> Object
-
-@target(luau)
 /// Clears current testing value for the given key.
 ///
 /// Roblox: `ConfigService.ClearTestingValue`

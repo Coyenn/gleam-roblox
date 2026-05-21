@@ -12,34 +12,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `FlagStand` as its Roblox ancestor `Part`.
-@luau.global("(function(x) return x end)")
-pub fn as_part(instance: FlagStand) -> Part
-
-@target(luau)
-/// Treats `FlagStand` as its Roblox ancestor `FormFactorPart`.
-@luau.global("(function(x) return x end)")
-pub fn as_form_factor_part(instance: FlagStand) -> FormFactorPart
-
-@target(luau)
-/// Treats `FlagStand` as its Roblox ancestor `BasePart`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_part(instance: FlagStand) -> BasePart
-
-@target(luau)
-/// Treats `FlagStand` as its Roblox ancestor `PVInstance`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_instance(instance: FlagStand) -> PVInstance
-
-@target(luau)
 /// Treats `FlagStand` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: FlagStand) -> Instance
-
-@target(luau)
-/// Treats `FlagStand` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: FlagStand) -> Object
 
 @target(luau)
 /// Gets Roblox property `FlagStand.TeamColor`.

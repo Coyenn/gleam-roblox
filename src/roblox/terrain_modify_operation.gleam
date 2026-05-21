@@ -4,11 +4,6 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{type Object, type TerrainModifyOperation}
 
 @target(luau)
-/// Treats `TerrainModifyOperation` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: TerrainModifyOperation) -> Object
-
-@target(luau)
 /// Roblox: `TerrainModifyOperation.CommitBlock`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/TerrainModifyOperation#CommitBlock

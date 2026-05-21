@@ -9,21 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `ChatWindowMessageProperties` as its Roblox ancestor `TextChatMessageProperties`.
-@luau.global("(function(x) return x end)")
-pub fn as_text_chat_message_properties(
-  instance: ChatWindowMessageProperties,
-) -> TextChatMessageProperties
-
-@target(luau)
 /// Treats `ChatWindowMessageProperties` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ChatWindowMessageProperties) -> Instance
-
-@target(luau)
-/// Treats `ChatWindowMessageProperties` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ChatWindowMessageProperties) -> Object
 
 @target(luau)
 /// Gets Roblox property `ChatWindowMessageProperties.FontFace`.

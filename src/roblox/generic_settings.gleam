@@ -8,19 +8,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `GenericSettings` as its Roblox ancestor `ServiceProvider`.
-@luau.global("(function(x) return x end)")
-pub fn as_service_provider(instance: GenericSettings) -> ServiceProvider
-
-@target(luau)
 /// Treats `GenericSettings` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: GenericSettings) -> Instance
-
-@target(luau)
-/// Treats `GenericSettings` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: GenericSettings) -> Object
 
 @target(luau)
 /// Returns the service specified by the given className if it's already created, errors for an invalid name.

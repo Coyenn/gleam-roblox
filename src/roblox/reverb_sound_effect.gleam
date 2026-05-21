@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> ReverbSoundEffect
 
 @target(luau)
-/// Treats `ReverbSoundEffect` as its Roblox ancestor `SoundEffect`.
-@luau.global("(function(x) return x end)")
-pub fn as_sound_effect(instance: ReverbSoundEffect) -> SoundEffect
-
-@target(luau)
 /// Treats `ReverbSoundEffect` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ReverbSoundEffect) -> Instance
-
-@target(luau)
-/// Treats `ReverbSoundEffect` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ReverbSoundEffect) -> Object
 
 @target(luau)
 /// Gets Roblox property `ReverbSoundEffect.DecayTime`.

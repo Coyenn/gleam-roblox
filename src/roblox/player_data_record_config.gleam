@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: PlayerDataRecordConfig) -> Instance
 
 @target(luau)
-/// Treats `PlayerDataRecordConfig` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PlayerDataRecordConfig) -> Object
-
-@target(luau)
 /// Gets Roblox property `PlayerDataRecordConfig.RecordName`.
 ///
 /// Roblox: `PlayerDataRecordConfig.RecordName`

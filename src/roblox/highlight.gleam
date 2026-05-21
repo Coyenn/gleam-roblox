@@ -21,11 +21,6 @@ pub fn new() -> Highlight
 pub fn as_instance(instance: Highlight) -> Instance
 
 @target(luau)
-/// Treats `Highlight` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Highlight) -> Object
-
-@target(luau)
 /// Gets Roblox property `Highlight.Adornee`.
 ///
 /// The Instance that the Highlight is applied to.

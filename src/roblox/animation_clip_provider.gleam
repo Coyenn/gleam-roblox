@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: AnimationClipProvider) -> Instance
 
 @target(luau)
-/// Treats `AnimationClipProvider` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AnimationClipProvider) -> Object
-
-@target(luau)
 /// Generates a temporary asset ID from a AnimationClip that can be used for localized testing of an animation.
 ///
 /// Roblox: `AnimationClipProvider.RegisterActiveAnimationClip`

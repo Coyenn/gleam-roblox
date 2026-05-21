@@ -3,19 +3,15 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Chat, type ChatCallbackType, type ChatColor, type Instance,
-  type Object, type Player, type SecurityCapabilities, type UniqueId,
+  type Actor, type Chat, type ChatCallbackType, type ChatColor, type Color3,
+  type Instance, type Object, type Player, type SecurityCapabilities,
+  type UniqueId,
 }
 
 @target(luau)
 /// Treats `Chat` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: Chat) -> Instance
-
-@target(luau)
-/// Treats `Chat` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Chat) -> Object
 
 @target(luau)
 /// Gets Roblox property `Chat.BubbleChatEnabled`.
@@ -129,6 +125,17 @@ pub fn register_chat_callback(
   callback_function: Dynamic,
 ) -> Nil
 
+pub type BubbleChatSettings
+
+@target(luau)
+/// Creates a Roblox `BubbleChatSettings` config table.
+@luau.global("(function(background_color3, text_color3, text_size) local config = {}; if background_color3.tag == \"Some\" then config.BackgroundColor3 = background_color3.arg_0 end; if text_color3.tag == \"Some\" then config.TextColor3 = text_color3.arg_0 end; if text_size.tag == \"Some\" then config.TextSize = text_size.arg_0 end; return config end)")
+pub fn bubble_chat_settings(
+  background_color3: Option(Color3),
+  text_color3: Option(Color3),
+  text_size: Option(Int),
+) -> BubbleChatSettings
+
 @target(luau)
 /// Customizes various settings of the in-game bubble chat.
 ///
@@ -140,7 +147,10 @@ pub fn register_chat_callback(
 /// - `instance`: Houses the Luau code responsible for running the legacy chat system.
 /// - `settings`: A settings table.
 @luau.method("SetBubbleChatSettings")
-pub fn set_bubble_chat_settings(instance: Chat, settings: Dynamic) -> Nil
+pub fn set_bubble_chat_settings(
+  instance: Chat,
+  settings: BubbleChatSettings,
+) -> Nil
 
 @target(luau)
 /// Will return false if the player with the specified Player.UserId is not allowed to chat because of their account settings.
@@ -1132,6 +1142,7 @@ pub fn javascript_type_anchor(
   _: SecurityCapabilities,
   _: ChatColor,
   _: Player,
+  _: Color3,
   _: ChatCallbackType,
   _: Chat,
   _: Object,

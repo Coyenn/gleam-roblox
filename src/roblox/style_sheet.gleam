@@ -3,9 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Object, type OptionInt,
-  type SecurityCapabilities, type StyleBase, type StyleRule, type StyleSheet,
-  type UniqueId,
+  type Actor, type Instance, type Object, type SecurityCapabilities,
+  type StyleBase, type StyleRule, type StyleSheet, type UniqueId,
 }
 
 @target(luau)
@@ -16,19 +15,9 @@ import roblox/types.{
 pub fn new() -> StyleSheet
 
 @target(luau)
-/// Treats `StyleSheet` as its Roblox ancestor `StyleBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_style_base(instance: StyleSheet) -> StyleBase
-
-@target(luau)
 /// Treats `StyleSheet` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: StyleSheet) -> Instance
-
-@target(luau)
-/// Treats `StyleSheet` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StyleSheet) -> Object
 
 @target(luau)
 /// Returns an array of other StyleSheets from which the StyleSheet is deriving StyleRules and token definitions.
@@ -88,7 +77,7 @@ pub fn get_style_rules(instance: StyleSheet) -> List(Instance)
 pub fn insert_style_rule(
   instance: StyleSheet,
   rule: StyleRule,
-  priority: OptionInt,
+  priority: Option(Int),
 ) -> Nil
 
 @target(luau)
@@ -1042,7 +1031,6 @@ pub fn javascript_type_anchor(
   _: UniqueId,
   _: SecurityCapabilities,
   _: StyleRule,
-  _: OptionInt,
   _: StyleSheet,
   _: StyleBase,
   _: Object,

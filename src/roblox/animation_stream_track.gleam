@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: AnimationStreamTrack) -> Instance
 
 @target(luau)
-/// Treats `AnimationStreamTrack` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AnimationStreamTrack) -> Object
-
-@target(luau)
 /// Gets Roblox property `AnimationStreamTrack.Animation`.
 ///
 /// Roblox: `AnimationStreamTrack.Animation`

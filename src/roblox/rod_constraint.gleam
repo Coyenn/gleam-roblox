@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> RodConstraint
 
 @target(luau)
-/// Treats `RodConstraint` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: RodConstraint) -> Constraint
-
-@target(luau)
 /// Treats `RodConstraint` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: RodConstraint) -> Instance
-
-@target(luau)
-/// Treats `RodConstraint` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: RodConstraint) -> Object
 
 @target(luau)
 /// Gets Roblox property `RodConstraint.CurrentDistance`.

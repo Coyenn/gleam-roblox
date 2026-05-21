@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: ContentProvider) -> Instance
 
 @target(luau)
-/// Treats `ContentProvider` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ContentProvider) -> Object
-
-@target(luau)
 /// Gets Roblox property `ContentProvider.BaseUrl`.
 ///
 /// Used by the ContentProvider to download assets from the Roblox website.

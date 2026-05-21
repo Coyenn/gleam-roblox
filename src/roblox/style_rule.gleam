@@ -3,8 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Object, type OptionInt,
-  type SecurityCapabilities, type StyleBase, type StyleRule, type UniqueId,
+  type Actor, type Instance, type Object, type SecurityCapabilities,
+  type StyleBase, type StyleRule, type UniqueId,
 }
 
 @target(luau)
@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> StyleRule
 
 @target(luau)
-/// Treats `StyleRule` as its Roblox ancestor `StyleBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_style_base(instance: StyleRule) -> StyleBase
-
-@target(luau)
 /// Treats `StyleRule` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: StyleRule) -> Instance
-
-@target(luau)
-/// Treats `StyleRule` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: StyleRule) -> Object
 
 @target(luau)
 /// Gets Roblox property `StyleRule.Priority`.
@@ -248,7 +238,7 @@ pub fn get_style_rules(instance: StyleRule) -> List(Instance)
 pub fn insert_style_rule(
   instance: StyleRule,
   rule: StyleRule,
-  priority: OptionInt,
+  priority: Option(Int),
 ) -> Nil
 
 @target(luau)
@@ -1202,7 +1192,6 @@ pub fn javascript_type_anchor(
   _: UniqueId,
   _: SecurityCapabilities,
   _: StyleRule,
-  _: OptionInt,
   _: StyleBase,
   _: Object,
   _: Option(Nil),

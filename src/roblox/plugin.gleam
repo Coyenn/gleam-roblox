@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: Plugin) -> Instance
 
 @target(luau)
-/// Treats `Plugin` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Plugin) -> Object
-
-@target(luau)
 /// Gets Roblox property `Plugin.CollisionEnabled`.
 ///
 /// Returns whether the user has enabled Collisions in Studio's toolbar.

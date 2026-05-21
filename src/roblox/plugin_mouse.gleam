@@ -9,19 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `PluginMouse` as its Roblox ancestor `Mouse`.
-@luau.global("(function(x) return x end)")
-pub fn as_mouse(instance: PluginMouse) -> Mouse
-
-@target(luau)
 /// Treats `PluginMouse` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: PluginMouse) -> Instance
-
-@target(luau)
-/// Treats `PluginMouse` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PluginMouse) -> Object
 
 @target(luau)
 /// Gets Roblox property `Mouse.Hit`.

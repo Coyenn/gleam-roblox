@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> VectorForce
 
 @target(luau)
-/// Treats `VectorForce` as its Roblox ancestor `Constraint`.
-@luau.global("(function(x) return x end)")
-pub fn as_constraint(instance: VectorForce) -> Constraint
-
-@target(luau)
 /// Treats `VectorForce` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: VectorForce) -> Instance
-
-@target(luau)
-/// Treats `VectorForce` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VectorForce) -> Object
 
 @target(luau)
 /// Gets Roblox property `VectorForce.ApplyAtCenterOfMass`.

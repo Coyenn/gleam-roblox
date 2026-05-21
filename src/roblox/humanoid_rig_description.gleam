@@ -20,11 +20,6 @@ pub fn new() -> HumanoidRigDescription
 pub fn as_instance(instance: HumanoidRigDescription) -> Instance
 
 @target(luau)
-/// Treats `HumanoidRigDescription` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: HumanoidRigDescription) -> Object
-
-@target(luau)
 /// Gets Roblox property `HumanoidRigDescription.Chest`.
 ///
 /// Roblox: `HumanoidRigDescription.Chest`

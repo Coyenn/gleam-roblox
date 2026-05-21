@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> ModuleScript
 
 @target(luau)
-/// Treats `ModuleScript` as its Roblox ancestor `LuaSourceContainer`.
-@luau.global("(function(x) return x end)")
-pub fn as_lua_source_container(instance: ModuleScript) -> LuaSourceContainer
-
-@target(luau)
 /// Treats `ModuleScript` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ModuleScript) -> Instance
-
-@target(luau)
-/// Treats `ModuleScript` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ModuleScript) -> Object
 
 @target(luau)
 /// Gets Roblox property `ModuleScript.Source`.

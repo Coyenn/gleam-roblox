@@ -20,11 +20,6 @@ pub fn new() -> DebuggerWatch
 pub fn as_instance(instance: DebuggerWatch) -> Instance
 
 @target(luau)
-/// Treats `DebuggerWatch` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DebuggerWatch) -> Object
-
-@target(luau)
 /// Gets Roblox property `DebuggerWatch.Expression`.
 ///
 /// Roblox: `DebuggerWatch.Expression`

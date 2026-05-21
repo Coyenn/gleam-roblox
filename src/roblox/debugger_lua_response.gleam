@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: DebuggerLuaResponse) -> Instance
 
 @target(luau)
-/// Treats `DebuggerLuaResponse` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: DebuggerLuaResponse) -> Object
-
-@target(luau)
 /// Gets Roblox property `DebuggerLuaResponse.IsError`.
 ///
 /// Roblox: `DebuggerLuaResponse.IsError`

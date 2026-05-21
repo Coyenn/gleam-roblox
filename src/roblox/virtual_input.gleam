@@ -6,11 +6,6 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `VirtualInput` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: VirtualInput) -> Object
-
-@target(luau)
 /// Injects a keyboard key press or release event.
 ///
 /// Roblox: `VirtualInput.SendKey`

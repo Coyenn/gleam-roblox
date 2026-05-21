@@ -14,11 +14,6 @@ import roblox/types.{
 pub fn as_instance(instance: InputObject) -> Instance
 
 @target(luau)
-/// Treats `InputObject` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: InputObject) -> Object
-
-@target(luau)
 /// Gets Roblox property `InputObject.Delta`.
 ///
 /// A Vector3 describing the delta between input movements.

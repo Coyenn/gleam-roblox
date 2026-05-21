@@ -20,11 +20,6 @@ pub fn new() -> PathfindingModifier
 pub fn as_instance(instance: PathfindingModifier) -> Instance
 
 @target(luau)
-/// Treats `PathfindingModifier` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: PathfindingModifier) -> Object
-
-@target(luau)
 /// Gets Roblox property `PathfindingModifier.Label`.
 ///
 /// The name of the navigation area inside or on top of the parts enclosed by the modifier.

@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> WrapLayer
 
 @target(luau)
-/// Treats `WrapLayer` as its Roblox ancestor `BaseWrap`.
-@luau.global("(function(x) return x end)")
-pub fn as_base_wrap(instance: WrapLayer) -> BaseWrap
-
-@target(luau)
 /// Treats `WrapLayer` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: WrapLayer) -> Instance
-
-@target(luau)
-/// Treats `WrapLayer` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: WrapLayer) -> Object
 
 @target(luau)
 /// Gets Roblox property `WrapLayer.AutoSkin`.

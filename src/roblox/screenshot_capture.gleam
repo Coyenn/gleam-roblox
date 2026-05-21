@@ -6,16 +6,6 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `ScreenshotCapture` as its Roblox ancestor `Capture`.
-@luau.global("(function(x) return x end)")
-pub fn as_capture(instance: ScreenshotCapture) -> Capture
-
-@target(luau)
-/// Treats `ScreenshotCapture` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ScreenshotCapture) -> Object
-
-@target(luau)
 /// Gets Roblox property `Capture.CaptureTime`.
 ///
 /// Roblox: `Capture.CaptureTime`

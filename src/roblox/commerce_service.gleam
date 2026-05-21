@@ -13,11 +13,6 @@ import roblox/types.{
 pub fn as_instance(instance: CommerceService) -> Instance
 
 @target(luau)
-/// Treats `CommerceService` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: CommerceService) -> Object
-
-@target(luau)
 /// Prompts a user to purchase a commerce product using the provided commerceProductId. Opens a webview that guides the user through the purchasing flow.
 ///
 /// Roblox: `CommerceService.PromptCommerceProductPurchase`

@@ -9,21 +9,9 @@ import roblox/types.{
 }
 
 @target(luau)
-/// Treats `BubbleChatConfiguration` as its Roblox ancestor `TextChatConfigurations`.
-@luau.global("(function(x) return x end)")
-pub fn as_text_chat_configurations(
-  instance: BubbleChatConfiguration,
-) -> TextChatConfigurations
-
-@target(luau)
 /// Treats `BubbleChatConfiguration` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: BubbleChatConfiguration) -> Instance
-
-@target(luau)
-/// Treats `BubbleChatConfiguration` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: BubbleChatConfiguration) -> Object
 
 @target(luau)
 /// Gets Roblox property `BubbleChatConfiguration.AdorneeName`.

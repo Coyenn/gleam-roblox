@@ -19,11 +19,6 @@ import roblox/types.{
 pub fn as_instance(instance: Studio) -> Instance
 
 @target(luau)
-/// Treats `Studio` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: Studio) -> Object
-
-@target(luau)
 /// Gets Roblox property `Studio.ActionOnAutoResumeSync`.
 ///
 /// Roblox: `Studio.ActionOnAutoResumeSync`

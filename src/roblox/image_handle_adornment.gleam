@@ -17,34 +17,9 @@ import roblox/types.{
 pub fn new() -> ImageHandleAdornment
 
 @target(luau)
-/// Treats `ImageHandleAdornment` as its Roblox ancestor `HandleAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_handle_adornment(instance: ImageHandleAdornment) -> HandleAdornment
-
-@target(luau)
-/// Treats `ImageHandleAdornment` as its Roblox ancestor `PVAdornment`.
-@luau.global("(function(x) return x end)")
-pub fn as_pv_adornment(instance: ImageHandleAdornment) -> PVAdornment
-
-@target(luau)
-/// Treats `ImageHandleAdornment` as its Roblox ancestor `GuiBase3d`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base3d(instance: ImageHandleAdornment) -> GuiBase3d
-
-@target(luau)
-/// Treats `ImageHandleAdornment` as its Roblox ancestor `GuiBase`.
-@luau.global("(function(x) return x end)")
-pub fn as_gui_base(instance: ImageHandleAdornment) -> GuiBase
-
-@target(luau)
 /// Treats `ImageHandleAdornment` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: ImageHandleAdornment) -> Instance
-
-@target(luau)
-/// Treats `ImageHandleAdornment` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: ImageHandleAdornment) -> Object
 
 @target(luau)
 /// Gets Roblox property `ImageHandleAdornment.Image`.

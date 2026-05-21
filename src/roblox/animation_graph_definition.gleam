@@ -16,19 +16,9 @@ import roblox/types.{
 pub fn new() -> AnimationGraphDefinition
 
 @target(luau)
-/// Treats `AnimationGraphDefinition` as its Roblox ancestor `AnimationClip`.
-@luau.global("(function(x) return x end)")
-pub fn as_animation_clip(instance: AnimationGraphDefinition) -> AnimationClip
-
-@target(luau)
 /// Treats `AnimationGraphDefinition` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: AnimationGraphDefinition) -> Instance
-
-@target(luau)
-/// Treats `AnimationGraphDefinition` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: AnimationGraphDefinition) -> Object
 
 @target(luau)
 /// Gets Roblox property `AnimationClip.Guid`.

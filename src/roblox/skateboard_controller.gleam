@@ -15,19 +15,9 @@ import roblox/types.{
 pub fn new() -> SkateboardController
 
 @target(luau)
-/// Treats `SkateboardController` as its Roblox ancestor `Controller`.
-@luau.global("(function(x) return x end)")
-pub fn as_controller(instance: SkateboardController) -> Controller
-
-@target(luau)
 /// Treats `SkateboardController` as its Roblox ancestor `Instance`.
 @luau.global("(function(x) return x end)")
 pub fn as_instance(instance: SkateboardController) -> Instance
-
-@target(luau)
-/// Treats `SkateboardController` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: SkateboardController) -> Object
 
 @target(luau)
 /// Gets Roblox property `SkateboardController.Steer`.

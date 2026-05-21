@@ -20,11 +20,6 @@ pub fn new() -> HumanoidDescription
 pub fn as_instance(instance: HumanoidDescription) -> Instance
 
 @target(luau)
-/// Treats `HumanoidDescription` as its Roblox ancestor `Object`.
-@luau.global("(function(x) return x end)")
-pub fn as_object(instance: HumanoidDescription) -> Object
-
-@target(luau)
 /// Gets Roblox property `HumanoidDescription.BackAccessory`.
 ///
 /// A comma-separated list of asset IDs that will be added as Accessories to a Humanoid rig when applied, usually those attached to its back (such as capes).
