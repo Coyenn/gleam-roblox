@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type CurrencyType, type InfoType, type Instance, type Int64,
+  type Actor, type CurrencyType, type InfoType, type Instance,
   type MarketplaceBulkPurchasePromptStatus, type MarketplaceService, type Object,
   type Player, type ReceiptType, type SecurityCapabilities, type UniqueId,
 }
@@ -45,6 +45,9 @@ pub fn bind_receipt_handler(
 /// Roblox: `MarketplaceService.OpenShop`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#OpenShop
+///
+/// Parameters:
+/// - `instance`: The service responsible for in-experience transactions.
 @luau.method("OpenShop")
 pub fn open_shop(instance: MarketplaceService, player: Player) -> Nil
 
@@ -81,7 +84,7 @@ pub fn prompt_bulk_purchase(
 pub fn prompt_bundle_purchase(
   instance: MarketplaceService,
   player: Instance,
-  bundle_id: Int64,
+  bundle_id: Int,
 ) -> Nil
 
 @target(luau)
@@ -113,7 +116,7 @@ pub fn prompt_cancel_subscription(
 pub fn prompt_game_pass_purchase(
   instance: MarketplaceService,
   player: Instance,
-  game_pass_id: Int64,
+  game_pass_id: Int,
 ) -> Nil
 
 @target(luau)
@@ -129,7 +132,7 @@ pub fn prompt_game_pass_purchase(
 pub fn prompt_product_purchase(
   instance: MarketplaceService,
   player: Instance,
-  product_id: Int64,
+  product_id: Int,
   equip_if_purchased: Bool,
   currency_type: CurrencyType,
 ) -> Nil
@@ -148,7 +151,7 @@ pub fn prompt_product_purchase(
 pub fn prompt_purchase(
   instance: MarketplaceService,
   player: Instance,
-  asset_id: Int64,
+  asset_id: Int,
   equip_if_purchased: Bool,
   currency_type: CurrencyType,
 ) -> Nil
@@ -218,7 +221,7 @@ pub fn get_developer_products_async(instance: MarketplaceService) -> Instance
 @luau.method("GetProductInfoAsync")
 pub fn get_product_info_async(
   instance: MarketplaceService,
-  asset_id: Int64,
+  asset_id: Int,
   info_type: InfoType,
 ) -> Dynamic
 
@@ -353,7 +356,7 @@ pub fn get_users_price_levels_async(
 pub fn player_owns_asset_async(
   instance: MarketplaceService,
   player: Instance,
-  asset_id: Int64,
+  asset_id: Int,
 ) -> Bool
 
 @target(luau)
@@ -375,7 +378,7 @@ pub fn player_owns_asset_async(
 pub fn player_owns_bundle_async(
   instance: MarketplaceService,
   player: Player,
-  bundle_id: Int64,
+  bundle_id: Int,
 ) -> Bool
 
 @target(luau)
@@ -398,8 +401,8 @@ pub fn player_owns_bundle_async(
 pub fn prompt_robux_transfer_async(
   instance: MarketplaceService,
   sender: Player,
-  receiver_user_id: Int64,
-  amount: Int64,
+  receiver_user_id: Int,
+  amount: Int,
 ) -> String
 
 @target(luau)
@@ -457,8 +460,8 @@ pub fn recommend_top_products_async(
 @luau.method("UserOwnsGamePassAsync")
 pub fn user_owns_game_pass_async(
   instance: MarketplaceService,
-  user_id: Int64,
-  game_pass_id: Int64,
+  user_id: Int,
+  game_pass_id: Int,
 ) -> Bool
 
 @target(luau)
@@ -495,7 +498,7 @@ pub fn on_prompt_bulk_purchase_finished(
 @luau.event("PromptBundlePurchaseFinished")
 pub fn prompt_bundle_purchase_finished(
   instance: MarketplaceService,
-) -> RBXScriptSignal(fn(Instance, Int64, Bool) -> Nil)
+) -> RBXScriptSignal(fn(Instance, Int, Bool) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `MarketplaceService.PromptBundlePurchaseFinished`.
@@ -506,7 +509,7 @@ pub fn prompt_bundle_purchase_finished(
 @luau.global("(function(instance, callback) return instance.PromptBundlePurchaseFinished:Connect(callback) end)")
 pub fn on_prompt_bundle_purchase_finished(
   instance: MarketplaceService,
-  callback: fn(Instance, Int64, Bool) -> Nil,
+  callback: fn(Instance, Int, Bool) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -518,7 +521,7 @@ pub fn on_prompt_bundle_purchase_finished(
 @luau.event("PromptGamePassPurchaseFinished")
 pub fn prompt_game_pass_purchase_finished(
   instance: MarketplaceService,
-) -> RBXScriptSignal(fn(Instance, Int64, Bool) -> Nil)
+) -> RBXScriptSignal(fn(Instance, Int, Bool) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `MarketplaceService.PromptGamePassPurchaseFinished`.
@@ -531,7 +534,7 @@ pub fn prompt_game_pass_purchase_finished(
 @luau.global("(function(instance, callback) return instance.PromptGamePassPurchaseFinished:Connect(callback) end)")
 pub fn on_prompt_game_pass_purchase_finished(
   instance: MarketplaceService,
-  callback: fn(Instance, Int64, Bool) -> Nil,
+  callback: fn(Instance, Int, Bool) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -568,7 +571,7 @@ pub fn on_prompt_premium_purchase_finished(
 @luau.event("PromptProductPurchaseFinished")
 pub fn prompt_product_purchase_finished(
   instance: MarketplaceService,
-) -> RBXScriptSignal(fn(Int64, Int64, Bool) -> Nil)
+) -> RBXScriptSignal(fn(Int, Int, Bool) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `MarketplaceService.PromptProductPurchaseFinished`.
@@ -581,7 +584,7 @@ pub fn prompt_product_purchase_finished(
 @luau.global("(function(instance, callback) return instance.PromptProductPurchaseFinished:Connect(callback) end)")
 pub fn on_prompt_product_purchase_finished(
   instance: MarketplaceService,
-  callback: fn(Int64, Int64, Bool) -> Nil,
+  callback: fn(Int, Int, Bool) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -593,7 +596,7 @@ pub fn on_prompt_product_purchase_finished(
 @luau.event("PromptPurchaseFinished")
 pub fn prompt_purchase_finished(
   instance: MarketplaceService,
-) -> RBXScriptSignal(fn(Instance, Int64, Bool) -> Nil)
+) -> RBXScriptSignal(fn(Instance, Int, Bool) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `MarketplaceService.PromptPurchaseFinished`.
@@ -606,7 +609,7 @@ pub fn prompt_purchase_finished(
 @luau.global("(function(instance, callback) return instance.PromptPurchaseFinished:Connect(callback) end)")
 pub fn on_prompt_purchase_finished(
   instance: MarketplaceService,
-  callback: fn(Instance, Int64, Bool) -> Nil,
+  callback: fn(Instance, Int, Bool) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -808,7 +811,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: MarketplaceService) -> Int64
+pub fn get_source_asset_id(instance: MarketplaceService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1600,7 +1603,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Player,
   _: MarketplaceBulkPurchasePromptStatus,

@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Int64, type Object, type PredictionMode,
+  type Actor, type Instance, type Object, type PredictionMode,
   type PredictionStatus, type RunService, type RunState,
   type SecurityCapabilities, type StepFrequency, type UniqueId,
 }
@@ -36,7 +36,7 @@ pub fn get_client_git_hash(instance: RunService) -> String
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/RunService#FrameNumber
 @luau.property("FrameNumber")
-pub fn get_frame_number(instance: RunService) -> Int64
+pub fn get_frame_number(instance: RunService) -> Int
 
 @target(luau)
 /// Gets Roblox property `RunService.RunState`.
@@ -558,7 +558,7 @@ pub fn set_sandboxed(instance: RunService, value: Bool) -> RunService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: RunService) -> Int64
+pub fn get_source_asset_id(instance: RunService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1334,7 +1334,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: PredictionMode,
   _: PredictionStatus,

@@ -6,7 +6,7 @@ import roblox/types.{
   type AccessoryType, type Actor, type AvatarAssetType, type AvatarEditorService,
   type AvatarItemType, type AvatarPromptResult, type CatalogPages,
   type CatalogSearchParams, type HumanoidDescription, type HumanoidRigType,
-  type Instance, type Int64, type InventoryPages, type Object, type OutfitPages,
+  type Instance, type InventoryPages, type Object, type OutfitPages,
   type OutfitSource, type OutfitType, type SecurityCapabilities, type UniqueId,
 }
 
@@ -76,7 +76,7 @@ pub fn prompt_create_outfit(
 @luau.method("PromptDeleteOutfit")
 pub fn prompt_delete_outfit(
   instance: AvatarEditorService,
-  outfit_id: Int64,
+  outfit_id: Int,
 ) -> Nil
 
 @target(luau)
@@ -92,7 +92,7 @@ pub fn prompt_delete_outfit(
 @luau.method("PromptRenameOutfit")
 pub fn prompt_rename_outfit(
   instance: AvatarEditorService,
-  outfit_id: Int64,
+  outfit_id: Int,
 ) -> Nil
 
 @target(luau)
@@ -127,7 +127,7 @@ pub fn prompt_save_avatar(
 @luau.method("PromptSetFavorite")
 pub fn prompt_set_favorite(
   instance: AvatarEditorService,
-  item_id: Int64,
+  item_id: Int,
   item_type: AvatarItemType,
   should_favorite: Bool,
 ) -> Nil
@@ -147,7 +147,7 @@ pub fn prompt_set_favorite(
 @luau.method("PromptUpdateOutfit")
 pub fn prompt_update_outfit(
   instance: AvatarEditorService,
-  outfit_id: Int64,
+  outfit_id: Int,
   updated_outfit: HumanoidDescription,
   rig_type: HumanoidRigType,
 ) -> Nil
@@ -231,18 +231,6 @@ pub fn get_batch_item_details_async(
 ) -> List(Dynamic)
 
 @target(luau)
-/// Roblox: `AvatarEditorService.GetBundlesByAssetIdAsync`
-/// ThreadSafety: Unsafe
-/// Tags: Yields
-/// See: https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService#GetBundlesByAssetIdAsync
-@luau.method("GetBundlesByAssetIdAsync")
-pub fn get_bundles_by_asset_id_async(
-  instance: AvatarEditorService,
-  asset_id: Int64,
-  limit: Int64,
-) -> CatalogPages
-
-@target(luau)
 /// Returns if the Players.LocalPlayer has favorited the given bundle or asset.
 ///
 /// Roblox: `AvatarEditorService.GetFavoriteAsync`
@@ -260,7 +248,7 @@ pub fn get_bundles_by_asset_id_async(
 @luau.method("GetFavoriteAsync")
 pub fn get_favorite_async(
   instance: AvatarEditorService,
-  item_id: Int64,
+  item_id: Int,
   item_type: AvatarItemType,
 ) -> Bool
 
@@ -315,7 +303,7 @@ pub fn get_inventory_async(
 @luau.method("GetItemDetailsAsync")
 pub fn get_item_details_async(
   instance: AvatarEditorService,
-  item_id: Int64,
+  item_id: Int,
   item_type: AvatarItemType,
 ) -> Dynamic
 
@@ -336,7 +324,7 @@ pub fn get_item_details_async(
 @luau.method("GetOutfitDetailsAsync")
 pub fn get_outfit_details_async(
   instance: AvatarEditorService,
-  outfit_id: Int64,
+  outfit_id: Int,
 ) -> Dynamic
 
 @target(luau)
@@ -375,7 +363,7 @@ pub fn get_outfits_async(
 pub fn get_recommended_assets_async(
   instance: AvatarEditorService,
   asset_type: AvatarAssetType,
-  context_asset_id: Int64,
+  context_asset_id: Int,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -395,7 +383,7 @@ pub fn get_recommended_assets_async(
 @luau.method("GetRecommendedBundlesAsync")
 pub fn get_recommended_bundles_async(
   instance: AvatarEditorService,
-  bundle_id: Int64,
+  bundle_id: Int,
 ) -> List(Dynamic)
 
 @target(luau)
@@ -742,7 +730,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: AvatarEditorService) -> Int64
+pub fn get_source_asset_id(instance: AvatarEditorService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1537,7 +1525,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: AvatarPromptResult,
   _: HumanoidDescription,

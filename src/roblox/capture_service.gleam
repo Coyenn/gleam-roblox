@@ -4,9 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type Capture, type CaptureGalleryPermission, type CaptureService,
-  type CaptureType, type Content, type ContentId, type Instance, type Int64,
-  type Object, type SecurityCapabilities, type UniqueId,
-  type VideoCaptureStartedResult,
+  type CaptureType, type Content, type ContentId, type Instance, type Object,
+  type SecurityCapabilities, type UniqueId, type VideoCaptureStartedResult,
 }
 
 @target(luau)
@@ -134,7 +133,7 @@ pub fn check_upload_capture_status_async(
 @luau.method("InternalCheckPlayabilityAsync")
 pub fn internal_check_playability_async(
   instance: CaptureService,
-  universe_id: Int64,
+  universe_id: Int,
 ) -> Bool
 
 @target(luau)
@@ -145,8 +144,8 @@ pub fn internal_check_playability_async(
 @luau.method("InternalGetStartPlaceIdAsync")
 pub fn internal_get_start_place_id_async(
   instance: CaptureService,
-  universe_id: Int64,
-) -> Int64
+  universe_id: Int,
+) -> Int
 
 @target(luau)
 /// Roblox: `CaptureService.PromptCaptureGalleryPermissionAsync`
@@ -448,7 +447,7 @@ pub fn set_sandboxed(instance: CaptureService, value: Bool) -> CaptureService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: CaptureService) -> Int64
+pub fn get_source_asset_id(instance: CaptureService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1229,7 +1228,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: ContentId,
   _: CaptureType,

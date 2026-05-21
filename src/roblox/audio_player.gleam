@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type AssetRepresentation, type AudioPlayer, type Content,
-  type ContentId, type Instance, type Int64, type NumberRange, type Object,
+  type ContentId, type Instance, type NumberRange, type Object,
   type SecurityCapabilities, type UniqueId, type Wire,
 }
 
@@ -309,7 +309,7 @@ pub fn set_volume(instance: AudioPlayer, value: Float) -> AudioPlayer
 /// Returns:
 /// - Whether the cancellation was successful. Returns false if the action has already occurred, or otherwise does not exist.
 @luau.method("Cancel")
-pub fn cancel(instance: AudioPlayer, action_id: Option(Int64)) -> Bool
+pub fn cancel(instance: AudioPlayer, action_id: Option(Int)) -> Bool
 
 @target(luau)
 /// Returns an array of Wires that are connected to the specified pin.
@@ -371,7 +371,7 @@ pub fn get_output_pins(instance: AudioPlayer) -> List(String)
 /// Returns:
 /// - If atTime was provided, a unique ID, which can be passed to Cancel().
 @luau.method("Play")
-pub fn play(instance: AudioPlayer, at_time: Option(Float)) -> Option(Int64)
+pub fn play(instance: AudioPlayer, at_time: Option(Float)) -> Option(Int)
 
 @target(luau)
 /// Stops the AudioPlayer wherever its TimePosition is.
@@ -387,7 +387,7 @@ pub fn play(instance: AudioPlayer, at_time: Option(Float)) -> Option(Int64)
 /// Returns:
 /// - If atTime was provided, a unique ID, which can be passed to Cancel().
 @luau.method("Stop")
-pub fn stop(instance: AudioPlayer, at_time: Option(Float)) -> Option(Int64)
+pub fn stop(instance: AudioPlayer, at_time: Option(Float)) -> Option(Int)
 
 @target(luau)
 /// Returns a sampling of the waveform data for the loaded Asset.
@@ -619,7 +619,7 @@ pub fn set_sandboxed(instance: AudioPlayer, value: Bool) -> AudioPlayer
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: AudioPlayer) -> Int64
+pub fn get_source_asset_id(instance: AudioPlayer) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1397,7 +1397,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Wire,
   _: NumberRange,

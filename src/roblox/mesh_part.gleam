@@ -5,9 +5,9 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BasePart, type BrickColor, type CFrame,
   type CollisionFidelity, type Color3, type Content, type ContentId, type Faces,
-  type FluidFidelity, type Instance, type Int64, type Material, type MeshPart,
-  type NormalId, type Object, type PVInstance, type PhysicalProperties,
-  type Player, type RenderFidelity, type SecurityCapabilities, type SurfaceType,
+  type FluidFidelity, type Instance, type Material, type MeshPart, type NormalId,
+  type Object, type PVInstance, type PhysicalProperties, type Player,
+  type RenderFidelity, type SecurityCapabilities, type SurfaceType,
   type TriangleMeshPart, type UniqueId, type Vector3,
 }
 
@@ -1678,7 +1678,7 @@ pub fn set_sandboxed(instance: MeshPart, value: Bool) -> MeshPart
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: MeshPart) -> Int64
+pub fn get_source_asset_id(instance: MeshPart) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -2446,7 +2446,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: CFrame,
   _: BasePart,

@@ -3,9 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Int64, type Object, type Player,
-  type SecurityCapabilities, type TextChannel, type TextChatMessage,
-  type UniqueId,
+  type Actor, type Instance, type Object, type Player, type SecurityCapabilities,
+  type TextChannel, type TextChatMessage, type UniqueId,
 }
 
 @target(luau)
@@ -88,7 +87,7 @@ pub fn set_direct_chat_requester(
 /// Returns:
 /// - Returns TextSource and true if a new TextSource is created for the user, TextSource and false if there is an existing TextSource, or nil and false if the user has chat off or is not in this server.
 @luau.method("AddUserAsync")
-pub fn add_user_async(instance: TextChannel, user_id: Int64) -> Dynamic
+pub fn add_user_async(instance: TextChannel, user_id: Int) -> Dynamic
 
 @target(luau)
 /// Sends a TextChatMessage to the server.
@@ -274,7 +273,7 @@ pub fn set_sandboxed(instance: TextChannel, value: Bool) -> TextChannel
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: TextChannel) -> Int64
+pub fn get_source_asset_id(instance: TextChannel) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1052,7 +1051,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: TextChatMessage,
   _: Player,

@@ -325,11 +325,6 @@ pub fn eye_makeup() -> AssetType
 @luau.global("Enum.AssetType.VoxelFragment")
 pub fn voxel_fragment() -> AssetType
 
-@target(luau)
-/// Roblox enum item `AssetType.AvatarBackground`.
-@luau.global("Enum.AssetType.AvatarBackground")
-pub fn avatar_background() -> AssetType
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(_: RobloxEnum(AssetType), _: AssetType) -> Nil {
   Nil

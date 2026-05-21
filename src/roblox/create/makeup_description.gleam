@@ -2,7 +2,7 @@
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/makeup_description
 import roblox/types.{
-  type Instance, type Int64, type MakeupDescription, type MakeupType,
+  type Instance, type MakeupDescription, type MakeupType,
   type SecurityCapabilities,
 }
 
@@ -28,7 +28,7 @@ pub fn node(
 /// Roblox: `MakeupDescription.AssetId`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/MakeupDescription#AssetId
-pub fn asset_id(value: Int64) -> Property(MakeupDescription) {
+pub fn asset_id(value: Int) -> Property(MakeupDescription) {
   Property(fn(instance) { makeup_description.set_asset_id(instance, value) })
 }
 
@@ -137,7 +137,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
   _: MakeupType,
-  _: Int64,
   _: MakeupDescription,
 ) -> Nil {
   Nil

@@ -3,9 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Int64, type Object, type Path,
-  type PathfindingService, type SecurityCapabilities, type UniqueId,
-  type Vector3,
+  type Actor, type Instance, type Object, type Path, type PathfindingService,
+  type SecurityCapabilities, type UniqueId, type Vector3,
 }
 
 @target(luau)
@@ -206,7 +205,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: PathfindingService) -> Int64
+pub fn get_source_asset_id(instance: PathfindingService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -998,7 +997,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Path,
   _: Vector3,

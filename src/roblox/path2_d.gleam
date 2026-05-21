@@ -3,9 +3,9 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Color3, type GuiBase, type Instance, type Int64, type Object,
-  type Path2D, type Path2DControlPoint, type Rect, type SecurityCapabilities,
-  type UDim2, type UniqueId, type Vector2,
+  type Actor, type Color3, type GuiBase, type Instance, type Object, type Path2D,
+  type Path2DControlPoint, type Rect, type SecurityCapabilities, type UDim2,
+  type UniqueId, type Vector2,
 }
 
 @target(luau)
@@ -498,7 +498,7 @@ pub fn set_sandboxed(instance: Path2D, value: Bool) -> Path2D
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Path2D) -> Int64
+pub fn get_source_asset_id(instance: Path2D) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1257,7 +1257,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Path2DControlPoint,
   _: Vector2,

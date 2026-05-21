@@ -6,8 +6,8 @@ import roblox/types.{
   type Actor, type AssetTypeVerification, type BasePart, type BodyPartR15,
   type Humanoid, type HumanoidDescription, type HumanoidDisplayDistanceType,
   type HumanoidHealthDisplayType, type HumanoidRigType, type HumanoidStateType,
-  type Instance, type Int64, type Limb, type Material, type NameOcclusion,
-  type Object, type SecurityCapabilities, type UniqueId, type Vector3,
+  type Instance, type Limb, type Material, type NameOcclusion, type Object,
+  type SecurityCapabilities, type UniqueId, type Vector3,
 }
 
 @target(luau)
@@ -1591,7 +1591,7 @@ pub fn set_sandboxed(instance: Humanoid, value: Bool) -> Humanoid
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Humanoid) -> Int64
+pub fn get_source_asset_id(instance: Humanoid) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -2359,7 +2359,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: BasePart,
   _: HumanoidStateType,

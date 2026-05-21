@@ -4,8 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type AccessoryDescription, type AccessoryType, type Actor, type Instance,
-  type Int64, type Object, type SecurityCapabilities, type UniqueId,
-  type Vector3,
+  type Object, type SecurityCapabilities, type UniqueId, type Vector3,
 }
 
 @target(luau)
@@ -59,7 +58,7 @@ pub fn set_accessory_type(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#AssetId
 @luau.property("AssetId")
-pub fn get_asset_id(instance: AccessoryDescription) -> Int64
+pub fn get_asset_id(instance: AccessoryDescription) -> Int
 
 @target(luau)
 /// Sets Roblox property `AccessoryDescription.AssetId`.
@@ -72,7 +71,7 @@ pub fn get_asset_id(instance: AccessoryDescription) -> Int64
 @luau.set_property("AssetId")
 pub fn set_asset_id(
   instance: AccessoryDescription,
-  value: Int64,
+  value: Int,
 ) -> AccessoryDescription
 
 @target(luau)
@@ -411,7 +410,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: AccessoryDescription) -> Int64
+pub fn get_source_asset_id(instance: AccessoryDescription) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1208,7 +1207,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Vector3,
   _: AccessoryType,

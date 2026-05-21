@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type BadgeService, type Instance, type Int64, type Object,
+  type Actor, type BadgeService, type Instance, type Object,
   type SecurityCapabilities, type UniqueId,
 }
 
@@ -35,8 +35,8 @@ pub fn as_object(instance: BadgeService) -> Object
 @luau.method("AwardBadgeAsync")
 pub fn award_badge_async(
   instance: BadgeService,
-  user_id: Int64,
-  badge_id: Int64,
+  user_id: Int,
+  badge_id: Int,
 ) -> Bool
 
 @target(luau)
@@ -57,7 +57,7 @@ pub fn award_badge_async(
 @luau.method("CheckUserBadgesAsync")
 pub fn check_user_badges_async(
   instance: BadgeService,
-  user_id: Int64,
+  user_id: Int,
   badge_ids: List(Int),
 ) -> List(Dynamic)
 
@@ -76,7 +76,7 @@ pub fn check_user_badges_async(
 /// Returns:
 /// - A dictionary of information about the specified badge.
 @luau.method("GetBadgeInfoAsync")
-pub fn get_badge_info_async(instance: BadgeService, badge_id: Int64) -> Dynamic
+pub fn get_badge_info_async(instance: BadgeService, badge_id: Int) -> Dynamic
 
 @target(luau)
 /// Checks whether a player has the badge given the Player.UserId and the badge ID.
@@ -96,8 +96,8 @@ pub fn get_badge_info_async(instance: BadgeService, badge_id: Int64) -> Dynamic
 @luau.method("UserHasBadgeAsync")
 pub fn user_has_badge_async(
   instance: BadgeService,
-  user_id: Int64,
-  badge_id: Int64,
+  user_id: Int,
+  badge_id: Int,
 ) -> Bool
 
 @target(luau)
@@ -237,7 +237,7 @@ pub fn set_sandboxed(instance: BadgeService, value: Bool) -> BadgeService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: BadgeService) -> Int64
+pub fn get_source_asset_id(instance: BadgeService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1018,7 +1018,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: BadgeService,
   _: Object,

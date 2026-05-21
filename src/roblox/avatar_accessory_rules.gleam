@@ -5,8 +5,8 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type AvatarAccessoryRules, type AvatarSettingsAccessoryLimitMethod,
   type AvatarSettingsAccessoryMode, type AvatarSettingsCustomAccessoryMode,
-  type Instance, type Int64, type Object, type SecurityCapabilities,
-  type UniqueId, type Vector3,
+  type Instance, type Object, type SecurityCapabilities, type UniqueId,
+  type Vector3,
 }
 
 @target(luau)
@@ -64,7 +64,7 @@ pub fn get_custom_back_accessory_enabled(instance: AvatarAccessoryRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAccessoryRules#CustomBackAccessoryId
 @luau.property("CustomBackAccessoryId")
-pub fn get_custom_back_accessory_id(instance: AvatarAccessoryRules) -> Int64
+pub fn get_custom_back_accessory_id(instance: AvatarAccessoryRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAccessoryRules.CustomFaceAccessoryEnabled`.
@@ -82,7 +82,7 @@ pub fn get_custom_face_accessory_enabled(instance: AvatarAccessoryRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAccessoryRules#CustomFaceAccessoryId
 @luau.property("CustomFaceAccessoryId")
-pub fn get_custom_face_accessory_id(instance: AvatarAccessoryRules) -> Int64
+pub fn get_custom_face_accessory_id(instance: AvatarAccessoryRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAccessoryRules.CustomFrontAccessoryEnabled`.
@@ -102,7 +102,7 @@ pub fn get_custom_front_accessory_enabled(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAccessoryRules#CustomFrontAccessoryId
 @luau.property("CustomFrontAccessoryId")
-pub fn get_custom_front_accessory_id(instance: AvatarAccessoryRules) -> Int64
+pub fn get_custom_front_accessory_id(instance: AvatarAccessoryRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAccessoryRules.CustomHairAccessoryEnabled`.
@@ -120,7 +120,7 @@ pub fn get_custom_hair_accessory_enabled(instance: AvatarAccessoryRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAccessoryRules#CustomHairAccessoryId
 @luau.property("CustomHairAccessoryId")
-pub fn get_custom_hair_accessory_id(instance: AvatarAccessoryRules) -> Int64
+pub fn get_custom_hair_accessory_id(instance: AvatarAccessoryRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAccessoryRules.CustomHeadAccessoryEnabled`.
@@ -138,7 +138,7 @@ pub fn get_custom_head_accessory_enabled(instance: AvatarAccessoryRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAccessoryRules#CustomHeadAccessoryId
 @luau.property("CustomHeadAccessoryId")
-pub fn get_custom_head_accessory_id(instance: AvatarAccessoryRules) -> Int64
+pub fn get_custom_head_accessory_id(instance: AvatarAccessoryRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAccessoryRules.CustomNeckAccessoryEnabled`.
@@ -156,7 +156,7 @@ pub fn get_custom_neck_accessory_enabled(instance: AvatarAccessoryRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAccessoryRules#CustomNeckAccessoryId
 @luau.property("CustomNeckAccessoryId")
-pub fn get_custom_neck_accessory_id(instance: AvatarAccessoryRules) -> Int64
+pub fn get_custom_neck_accessory_id(instance: AvatarAccessoryRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAccessoryRules.CustomShoulderAccessoryEnabled`.
@@ -176,7 +176,7 @@ pub fn get_custom_shoulder_accessory_enabled(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAccessoryRules#CustomShoulderAccessoryId
 @luau.property("CustomShoulderAccessoryId")
-pub fn get_custom_shoulder_accessory_id(instance: AvatarAccessoryRules) -> Int64
+pub fn get_custom_shoulder_accessory_id(instance: AvatarAccessoryRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAccessoryRules.CustomWaistAccessoryEnabled`.
@@ -196,7 +196,7 @@ pub fn get_custom_waist_accessory_enabled(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAccessoryRules#CustomWaistAccessoryId
 @luau.property("CustomWaistAccessoryId")
-pub fn get_custom_waist_accessory_id(instance: AvatarAccessoryRules) -> Int64
+pub fn get_custom_waist_accessory_id(instance: AvatarAccessoryRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAccessoryRules.EnableSound`.
@@ -385,7 +385,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: AvatarAccessoryRules) -> Int64
+pub fn get_source_asset_id(instance: AvatarAccessoryRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1182,7 +1182,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: AvatarSettingsAccessoryLimitMethod,
   _: Vector3,

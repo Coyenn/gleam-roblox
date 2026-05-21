@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Int64, type IntConstrainedValue, type Object,
+  type Actor, type Instance, type IntConstrainedValue, type Object,
   type SecurityCapabilities, type UniqueId, type ValueBase,
 }
 
@@ -32,7 +32,7 @@ pub fn as_object(instance: IntConstrainedValue) -> Object
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/IntConstrainedValue#ConstrainedValue
 @luau.property("ConstrainedValue")
-pub fn get_constrained_value(instance: IntConstrainedValue) -> Int64
+pub fn get_constrained_value(instance: IntConstrainedValue) -> Int
 
 @target(luau)
 /// Sets Roblox property `IntConstrainedValue.ConstrainedValue`.
@@ -46,7 +46,7 @@ pub fn get_constrained_value(instance: IntConstrainedValue) -> Int64
 @luau.set_property("ConstrainedValue")
 pub fn set_constrained_value(
   instance: IntConstrainedValue,
-  value: Int64,
+  value: Int,
 ) -> IntConstrainedValue
 
 @target(luau)
@@ -58,7 +58,7 @@ pub fn set_constrained_value(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/IntConstrainedValue#MaxValue
 @luau.property("MaxValue")
-pub fn get_max_value(instance: IntConstrainedValue) -> Int64
+pub fn get_max_value(instance: IntConstrainedValue) -> Int
 
 @target(luau)
 /// Sets Roblox property `IntConstrainedValue.MaxValue`.
@@ -71,7 +71,7 @@ pub fn get_max_value(instance: IntConstrainedValue) -> Int64
 @luau.set_property("MaxValue")
 pub fn set_max_value(
   instance: IntConstrainedValue,
-  value: Int64,
+  value: Int,
 ) -> IntConstrainedValue
 
 @target(luau)
@@ -83,7 +83,7 @@ pub fn set_max_value(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/IntConstrainedValue#MinValue
 @luau.property("MinValue")
-pub fn get_min_value(instance: IntConstrainedValue) -> Int64
+pub fn get_min_value(instance: IntConstrainedValue) -> Int
 
 @target(luau)
 /// Sets Roblox property `IntConstrainedValue.MinValue`.
@@ -96,7 +96,7 @@ pub fn get_min_value(instance: IntConstrainedValue) -> Int64
 @luau.set_property("MinValue")
 pub fn set_min_value(
   instance: IntConstrainedValue,
-  value: Int64,
+  value: Int,
 ) -> IntConstrainedValue
 
 @target(luau)
@@ -109,7 +109,7 @@ pub fn set_min_value(
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/IntConstrainedValue#Value
 @luau.property("Value")
-pub fn get_value(instance: IntConstrainedValue) -> Int64
+pub fn get_value(instance: IntConstrainedValue) -> Int
 
 @target(luau)
 /// Sets Roblox property `IntConstrainedValue.Value`.
@@ -123,7 +123,7 @@ pub fn get_value(instance: IntConstrainedValue) -> Int64
 @luau.set_property("Value")
 pub fn set_value(
   instance: IntConstrainedValue,
-  value: Int64,
+  value: Int,
 ) -> IntConstrainedValue
 
 @target(luau)
@@ -133,9 +133,7 @@ pub fn set_value(
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/IntConstrainedValue#Changed
 @luau.event("Changed")
-pub fn changed(
-  instance: IntConstrainedValue,
-) -> RBXScriptSignal(fn(Int64) -> Nil)
+pub fn changed(instance: IntConstrainedValue) -> RBXScriptSignal(fn(Int) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `IntConstrainedValue.Changed`.
@@ -148,7 +146,7 @@ pub fn changed(
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
 pub fn on_changed(
   instance: IntConstrainedValue,
-  callback: fn(Int64) -> Nil,
+  callback: fn(Int) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -300,7 +298,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: IntConstrainedValue) -> Int64
+pub fn get_source_asset_id(instance: IntConstrainedValue) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1070,7 +1068,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: IntConstrainedValue,
   _: ValueBase,

@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type Chat, type ChatCallbackType, type ChatColor, type Instance,
-  type Int64, type Object, type Player, type SecurityCapabilities, type UniqueId,
+  type Object, type Player, type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -153,7 +153,7 @@ pub fn set_bubble_chat_settings(instance: Chat, settings: Dynamic) -> Nil
 /// Parameters:
 /// - `instance`: Houses the Luau code responsible for running the legacy chat system.
 @luau.method("CanUserChatAsync")
-pub fn can_user_chat_async(instance: Chat, user_id: Int64) -> Bool
+pub fn can_user_chat_async(instance: Chat, user_id: Int) -> Bool
 
 @target(luau)
 /// Will return false if the two users cannot communicate because their account settings do not allow it.
@@ -168,8 +168,8 @@ pub fn can_user_chat_async(instance: Chat, user_id: Int64) -> Bool
 @luau.method("CanUsersChatAsync")
 pub fn can_users_chat_async(
   instance: Chat,
-  user_id_from: Int64,
-  user_id_to: Int64,
+  user_id_from: Int,
+  user_id_to: Int,
 ) -> Bool
 
 @target(luau)
@@ -374,7 +374,7 @@ pub fn set_sandboxed(instance: Chat, value: Bool) -> Chat
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Chat) -> Int64
+pub fn get_source_asset_id(instance: Chat) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1129,7 +1129,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: ChatColor,
   _: Player,

@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type AssetRepresentation, type Content, type ContentId,
-  type Instance, type Int64, type NumberRange, type Object, type RollOffMode,
+  type Instance, type NumberRange, type Object, type RollOffMode,
   type SecurityCapabilities, type Sound, type SoundGroup, type UniqueId,
   type UsageContext,
 }
@@ -835,7 +835,7 @@ pub fn set_sandboxed(instance: Sound, value: Bool) -> Sound
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Sound) -> Int64
+pub fn get_source_asset_id(instance: Sound) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1592,7 +1592,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: UsageContext,
   _: ContentId,

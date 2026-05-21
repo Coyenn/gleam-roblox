@@ -5,9 +5,9 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type AccessoryType, type Actor, type AvatarAssetType,
   type AvatarCreationService, type BodyPart, type EditableImage,
-  type HumanoidDescription, type Instance, type Int64, type Model,
-  type ModerationStatus, type Object, type OptionFunction, type Player,
-  type SecurityCapabilities, type UniqueId,
+  type HumanoidDescription, type Instance, type Model, type ModerationStatus,
+  type Object, type OptionFunction, type Player, type SecurityCapabilities,
+  type UniqueId,
 }
 
 @target(luau)
@@ -348,7 +348,7 @@ pub fn validate_ugc_full_body_async(
 @luau.event("AvatarAssetModerationCompleted")
 pub fn avatar_asset_moderation_completed(
   instance: AvatarCreationService,
-) -> RBXScriptSignal(fn(Int64, ModerationStatus) -> Nil)
+) -> RBXScriptSignal(fn(Int, ModerationStatus) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `AvatarCreationService.AvatarAssetModerationCompleted`.
@@ -361,7 +361,7 @@ pub fn avatar_asset_moderation_completed(
 @luau.global("(function(instance, callback) return instance.AvatarAssetModerationCompleted:Connect(callback) end)")
 pub fn on_avatar_asset_moderation_completed(
   instance: AvatarCreationService,
-  callback: fn(Int64, ModerationStatus) -> Nil,
+  callback: fn(Int, ModerationStatus) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -373,7 +373,7 @@ pub fn on_avatar_asset_moderation_completed(
 @luau.event("AvatarModerationCompleted")
 pub fn avatar_moderation_completed(
   instance: AvatarCreationService,
-) -> RBXScriptSignal(fn(Int64, ModerationStatus) -> Nil)
+) -> RBXScriptSignal(fn(Int, ModerationStatus) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `AvatarCreationService.AvatarModerationCompleted`.
@@ -386,7 +386,7 @@ pub fn avatar_moderation_completed(
 @luau.global("(function(instance, callback) return instance.AvatarModerationCompleted:Connect(callback) end)")
 pub fn on_avatar_moderation_completed(
   instance: AvatarCreationService,
-  callback: fn(Int64, ModerationStatus) -> Nil,
+  callback: fn(Int, ModerationStatus) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -538,7 +538,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: AvatarCreationService) -> Int64
+pub fn get_source_asset_id(instance: AvatarCreationService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1335,7 +1335,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: ModerationStatus,
   _: Player,

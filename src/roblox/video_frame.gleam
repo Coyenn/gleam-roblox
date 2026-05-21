@@ -6,8 +6,8 @@ import roblox/types.{
   type Actor, type AutomaticSize, type BorderMode, type Color3, type Content,
   type ContentId, type EasingDirection, type EasingStyle, type GuiBase,
   type GuiBase2d, type GuiObject, type GuiState, type InputObject,
-  type InputSink, type Instance, type Int64, type LocalizationTable, type Object,
-  type Rect, type RollOffMode, type SecurityCapabilities, type SelectionBehavior,
+  type InputSink, type Instance, type LocalizationTable, type Object, type Rect,
+  type RollOffMode, type SecurityCapabilities, type SelectionBehavior,
   type SizeConstraint, type SwipeDirection, type UDim2, type UniqueId,
   type UserInputState, type Vector2, type VideoFrame, type VideoSampleSize,
 }
@@ -1934,7 +1934,7 @@ pub fn set_sandboxed(instance: VideoFrame, value: Bool) -> VideoFrame
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: VideoFrame) -> Int64
+pub fn get_source_asset_id(instance: VideoFrame) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -2710,7 +2710,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: GuiObject,
   _: SelectionBehavior,

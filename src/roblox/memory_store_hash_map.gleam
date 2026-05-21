@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Int64, type MemoryStoreHashMap,
+  type Actor, type Instance, type MemoryStoreHashMap,
   type MemoryStoreHashMapPages, type Object, type SecurityCapabilities,
   type UniqueId,
 }
@@ -87,7 +87,7 @@ pub fn set_async(
   instance: MemoryStoreHashMap,
   key: String,
   value: Dynamic,
-  expiration: Int64,
+  expiration: Int,
 ) -> Bool
 
 @target(luau)
@@ -111,7 +111,7 @@ pub fn update_async(
   instance: MemoryStoreHashMap,
   key: String,
   transform_function: Dynamic,
-  expiration: Int64,
+  expiration: Int,
 ) -> Dynamic
 
 @target(luau)
@@ -263,7 +263,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: MemoryStoreHashMap) -> Int64
+pub fn get_source_asset_id(instance: MemoryStoreHashMap) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1055,7 +1055,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: MemoryStoreHashMapPages,
   _: MemoryStoreHashMap,

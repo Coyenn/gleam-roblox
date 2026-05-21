@@ -4,8 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type Attachment, type Beam, type ColorSequence, type ContentId,
-  type Instance, type Int64, type NumberSequence, type Object,
-  type SecurityCapabilities, type TextureMode, type UniqueId,
+  type Instance, type NumberSequence, type Object, type SecurityCapabilities,
+  type TextureMode, type UniqueId,
 }
 
 @target(luau)
@@ -610,7 +610,7 @@ pub fn set_sandboxed(instance: Beam, value: Bool) -> Beam
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Beam) -> Int64
+pub fn get_source_asset_id(instance: Beam) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1365,7 +1365,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: NumberSequence,
   _: TextureMode,

@@ -4,8 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BasePart, type BrickColor, type CFrame,
-  type CollisionFidelity, type Color3, type Faces, type Instance, type Int64,
-  type Material, type NormalId, type Object, type OptionInt, type PVInstance,
+  type CollisionFidelity, type Color3, type Faces, type Instance, type Material,
+  type NormalId, type Object, type OptionInt, type PVInstance,
   type PhysicalProperties, type Player, type Region3, type Region3int16,
   type RenderFidelity, type SecurityCapabilities, type SurfaceType, type Terrain,
   type TerrainAcquisitionMethod, type TerrainIterateOperation,
@@ -70,7 +70,7 @@ pub fn get_smooth_voxels_upgraded(instance: Terrain) -> Bool
 @target(luau)
 /// Gets Roblox property `Terrain.WaterColor`.
 ///
-/// The tint of Terrain water.
+/// The tint of the Terrain water.
 ///
 /// Roblox: `Terrain.WaterColor`
 /// ThreadSafety: ReadSafe
@@ -81,7 +81,7 @@ pub fn get_water_color(instance: Terrain) -> Color3
 @target(luau)
 /// Sets Roblox property `Terrain.WaterColor`.
 ///
-/// The tint of Terrain water.
+/// The tint of the Terrain water.
 ///
 /// Roblox: `Terrain.WaterColor`
 /// ThreadSafety: ReadSafe
@@ -92,7 +92,7 @@ pub fn set_water_color(instance: Terrain, value: Color3) -> Terrain
 @target(luau)
 /// Gets Roblox property `Terrain.WaterReflectance`.
 ///
-/// Controls how opaque Terrain water reflections are.
+/// Controls how opaque the Terrain's water reflections are.
 ///
 /// Roblox: `Terrain.WaterReflectance`
 /// ThreadSafety: ReadSafe
@@ -103,7 +103,7 @@ pub fn get_water_reflectance(instance: Terrain) -> Float
 @target(luau)
 /// Sets Roblox property `Terrain.WaterReflectance`.
 ///
-/// Controls how opaque Terrain water reflections are.
+/// Controls how opaque the Terrain's water reflections are.
 ///
 /// Roblox: `Terrain.WaterReflectance`
 /// ThreadSafety: ReadSafe
@@ -114,7 +114,7 @@ pub fn set_water_reflectance(instance: Terrain, value: Float) -> Terrain
 @target(luau)
 /// Gets Roblox property `Terrain.WaterTransparency`.
 ///
-/// The transparency of Terrain water.
+/// The transparency of the Terrain water.
 ///
 /// Roblox: `Terrain.WaterTransparency`
 /// ThreadSafety: ReadSafe
@@ -125,7 +125,7 @@ pub fn get_water_transparency(instance: Terrain) -> Float
 @target(luau)
 /// Sets Roblox property `Terrain.WaterTransparency`.
 ///
-/// The transparency of Terrain water.
+/// The transparency of the Terrain water.
 ///
 /// Roblox: `Terrain.WaterTransparency`
 /// ThreadSafety: ReadSafe
@@ -136,7 +136,7 @@ pub fn set_water_transparency(instance: Terrain, value: Float) -> Terrain
 @target(luau)
 /// Gets Roblox property `Terrain.WaterWaveSize`.
 ///
-/// Sets the maximum height of Terrain water waves in studs.
+/// Sets the maximum height of the Terrain water waves in studs.
 ///
 /// Roblox: `Terrain.WaterWaveSize`
 /// ThreadSafety: ReadSafe
@@ -147,7 +147,7 @@ pub fn get_water_wave_size(instance: Terrain) -> Float
 @target(luau)
 /// Sets Roblox property `Terrain.WaterWaveSize`.
 ///
-/// Sets the maximum height of Terrain water waves in studs.
+/// Sets the maximum height of the Terrain water waves in studs.
 ///
 /// Roblox: `Terrain.WaterWaveSize`
 /// ThreadSafety: ReadSafe
@@ -158,7 +158,7 @@ pub fn set_water_wave_size(instance: Terrain, value: Float) -> Terrain
 @target(luau)
 /// Gets Roblox property `Terrain.WaterWaveSpeed`.
 ///
-/// Sets how many times Terrain water waves will move up and down per minute.
+/// Sets how many times the Terrain water waves will move up and down per minute.
 ///
 /// Roblox: `Terrain.WaterWaveSpeed`
 /// ThreadSafety: ReadSafe
@@ -169,7 +169,7 @@ pub fn get_water_wave_speed(instance: Terrain) -> Float
 @target(luau)
 /// Sets Roblox property `Terrain.WaterWaveSpeed`.
 ///
-/// Sets how many times Terrain water waves will move up and down per minute.
+/// Sets how many times the Terrain water waves will move up and down per minute.
 ///
 /// Roblox: `Terrain.WaterWaveSpeed`
 /// ThreadSafety: ReadSafe
@@ -178,7 +178,7 @@ pub fn get_water_wave_speed(instance: Terrain) -> Float
 pub fn set_water_wave_speed(instance: Terrain, value: Float) -> Terrain
 
 @target(luau)
-/// Returns the world position of the center of the terrain cell.
+/// Returns the world position of the center of the terrain cell (x, y, z).
 ///
 /// Roblox: `Terrain.CellCenterToWorld`
 /// ThreadSafety: Unsafe
@@ -195,7 +195,7 @@ pub fn cell_center_to_world(
 ) -> Vector3
 
 @target(luau)
-/// Returns the position of the lower-left-forward corner of the grid cell.
+/// Returns the position of the lower-left-forward corner of the grid cell (x, y, z).
 ///
 /// Roblox: `Terrain.CellCornerToWorld`
 /// ThreadSafety: Unsafe
@@ -212,7 +212,7 @@ pub fn cell_corner_to_world(
 ) -> Vector3
 
 @target(luau)
-/// Clears all terrain.
+/// Clears the terrain.
 ///
 /// Roblox: `Terrain.Clear`
 /// ThreadSafety: Unsafe
@@ -228,6 +228,9 @@ pub fn clear(instance: Terrain) -> Nil
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
 /// See: https://create.roblox.com/docs/reference/engine/classes/Terrain#ClearVoxelsAsync_beta
+///
+/// Parameters:
+/// - `instance`: Terrain lets you to create dynamically morphable environments.
 @luau.method("ClearVoxelsAsync_beta")
 pub fn clear_voxels_async_beta(
   instance: Terrain,
@@ -236,7 +239,7 @@ pub fn clear_voxels_async_beta(
 ) -> Nil
 
 @target(luau)
-/// Stores a chunk of terrain into a TerrainRegion object so it can be loaded back later.
+/// Stores a chunk of terrain into a TerrainRegion object so it can be loaded back later. Note: TerrainRegion data does not replicate between server and client.
 ///
 /// Roblox: `Terrain.CopyRegion`
 /// ThreadSafety: Unsafe
@@ -248,7 +251,7 @@ pub fn clear_voxels_async_beta(
 pub fn copy_region(instance: Terrain, region: Region3int16) -> TerrainRegion
 
 @target(luau)
-/// Returns the number of non-empty cells in the terrain.
+/// Returns the number of non-empty cells in the Terrain.
 ///
 /// Roblox: `Terrain.CountCells`
 /// ThreadSafety: Unsafe
@@ -289,7 +292,7 @@ pub fn fill_ball(
 /// Parameters:
 /// - `instance`: Terrain lets you to create dynamically morphable environments.
 /// - `cframe`: The position and orientation of the terrain block.
-/// - `size`: The size in studs of the square block (both the height and width).
+/// - `size`: The size in studs of the square block - both the height and width.
 /// - `material`: The Material of the terrain block.
 @luau.method("FillBlock")
 pub fn fill_block(
@@ -339,7 +342,7 @@ pub fn fill_region(
 ) -> Nil
 
 @target(luau)
-/// Fills a wedge-shaped volume of terrain with the given Material.
+/// Fills a wedge-shaped volume of Terrain with the given Material and the area's CFrame and Size.
 ///
 /// Roblox: `Terrain.FillWedge`
 /// ThreadSafety: Unsafe
@@ -399,6 +402,9 @@ pub fn get_material_slot(instance: Terrain, slot_index: Int) -> Dynamic
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
 /// See: https://create.roblox.com/docs/reference/engine/classes/Terrain#IterateVoxelsAsync_beta
+///
+/// Parameters:
+/// - `instance`: Terrain lets you to create dynamically morphable environments.
 @luau.method("IterateVoxelsAsync_beta")
 pub fn iterate_voxels_async_beta(
   instance: Terrain,
@@ -412,6 +418,9 @@ pub fn iterate_voxels_async_beta(
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
 /// See: https://create.roblox.com/docs/reference/engine/classes/Terrain#ModifyVoxelsAsync_beta
+///
+/// Parameters:
+/// - `instance`: Terrain lets you to create dynamically morphable environments.
 @luau.method("ModifyVoxelsAsync_beta")
 pub fn modify_voxels_async_beta(
   instance: Terrain,
@@ -421,7 +430,7 @@ pub fn modify_voxels_async_beta(
 ) -> TerrainModifyOperation
 
 @target(luau)
-/// Applies a chunk of terrain to the Terrain object.
+/// Applies a chunk of terrain to the Terrain object. Note: TerrainRegion data does not replicate between server and client.
 ///
 /// Roblox: `Terrain.PasteRegion`
 /// ThreadSafety: Unsafe
@@ -471,7 +480,7 @@ pub fn read_voxel_channels(
 ///
 /// Parameters:
 /// - `instance`: Terrain lets you to create dynamically morphable environments.
-/// - `region`: Target region to read from. Must be aligned to the voxel grid. Will throw an error if region is too large. The limit is currently 4194304 voxels&sup3;.
+/// - `region`: Target region to read from. Must be aligned to the voxel grid. Will throw an error if region is too large. The limit is currently 4194304 voxels^3.
 /// - `resolution`: Voxel resolution. Must be 4.
 ///
 /// Returns:
@@ -488,6 +497,9 @@ pub fn read_voxels(
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
 /// See: https://create.roblox.com/docs/reference/engine/classes/Terrain#ReadVoxelsAsync_beta
+///
+/// Parameters:
+/// - `instance`: Terrain lets you to create dynamically morphable environments.
 @luau.method("ReadVoxelsAsync_beta")
 pub fn read_voxels_async_beta(
   instance: Terrain,
@@ -555,7 +567,7 @@ pub fn set_material_slot(
 ) -> Nil
 
 @target(luau)
-/// Returns the grid cell location that contains the position point.
+/// Returns the grid cell location that contains the point position.
 ///
 /// Roblox: `Terrain.WorldToCell`
 /// ThreadSafety: Unsafe
@@ -567,7 +579,7 @@ pub fn set_material_slot(
 pub fn world_to_cell(instance: Terrain, position: Vector3) -> Vector3
 
 @target(luau)
-/// Returns the grid cell location that contains the position point, preferring empty grid cells when position is on a grid edge.
+/// Returns the grid cell location that contains the point position, preferring empty grid cells when position is on a grid edge.
 ///
 /// Roblox: `Terrain.WorldToCellPreferEmpty`
 /// ThreadSafety: Unsafe
@@ -629,7 +641,7 @@ pub fn write_voxel_channels(
 /// - `instance`: Terrain lets you to create dynamically morphable environments.
 /// - `region`: Target region to write to. Must be aligned to the voxel grid. Will throw an error if region is too large.
 /// - `resolution`: Voxel resolution. Must be 4.
-/// - `materials`: 3D array of Material. Dimensions must exactly match the size of the target region in voxels.
+/// - `materials`: 3D array of Enum.Material. Dimensions must exactly match the size of the target region in voxels.
 /// - `occupancy`: 3D array of voxel occupancies (number between 0 and 1). Dimensions must exactly match the size of the target region in voxels.
 @luau.method("WriteVoxels")
 pub fn write_voxels(
@@ -645,6 +657,9 @@ pub fn write_voxels(
 /// ThreadSafety: Unsafe
 /// Tags: CustomLuaState
 /// See: https://create.roblox.com/docs/reference/engine/classes/Terrain#WriteVoxelsAsync_beta
+///
+/// Parameters:
+/// - `instance`: Terrain lets you to create dynamically morphable environments.
 @luau.method("WriteVoxelsAsync_beta")
 pub fn write_voxels_async_beta(
   instance: Terrain,
@@ -2093,7 +2108,7 @@ pub fn set_sandboxed(instance: Terrain, value: Bool) -> Terrain
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Terrain) -> Int64
+pub fn get_source_asset_id(instance: Terrain) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -2861,7 +2876,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: CFrame,
   _: BasePart,

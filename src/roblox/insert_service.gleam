@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type CollisionFidelity, type ContentId, type InsertService,
-  type Instance, type Int64, type MeshPart, type Object, type RenderFidelity,
+  type Instance, type MeshPart, type Object, type RenderFidelity,
   type SecurityCapabilities, type UniqueId,
 }
 
@@ -99,8 +99,8 @@ pub fn get_free_models_async(
 @luau.method("GetLatestAssetVersionAsync")
 pub fn get_latest_asset_version_async(
   instance: InsertService,
-  asset_id: Int64,
-) -> Int64
+  asset_id: Int,
+) -> Int
 
 @target(luau)
 /// Returns a Model containing the asset.
@@ -117,7 +117,7 @@ pub fn get_latest_asset_version_async(
 /// Returns:
 /// - An instance of the loaded asset.
 @luau.method("LoadAsset")
-pub fn load_asset(instance: InsertService, asset_id: Int64) -> Instance
+pub fn load_asset(instance: InsertService, asset_id: Int) -> Instance
 
 @target(luau)
 /// Returns a model inserted into InsertService containing the asset with the given assetVersionId.
@@ -132,7 +132,7 @@ pub fn load_asset(instance: InsertService, asset_id: Int64) -> Instance
 @luau.method("LoadAssetVersion")
 pub fn load_asset_version(
   instance: InsertService,
-  asset_version_id: Int64,
+  asset_version_id: Int,
 ) -> Instance
 
 @target(luau)
@@ -272,7 +272,7 @@ pub fn set_sandboxed(instance: InsertService, value: Bool) -> InsertService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: InsertService) -> Int64
+pub fn get_source_asset_id(instance: InsertService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1053,7 +1053,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: MeshPart,
   _: ContentId,

@@ -5,11 +5,11 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type ComputerCameraMovementMode, type ComputerMovementMode,
   type ControlMode, type CustomCameraMode, type GraphicsOptimizationMode,
-  type Instance, type Int64, type Object, type PeoplePageLayout,
-  type PreferredTextSize, type RotationType, type SavedQualitySetting,
-  type SecurityCapabilities, type TouchCameraMovementMode,
-  type TouchMovementMode, type UniqueId, type UserGameSettings,
-  type VRComfortSetting, type VRSafetyBubbleMode, type Vector2,
+  type Instance, type Object, type PeoplePageLayout, type PreferredTextSize,
+  type RotationType, type SavedQualitySetting, type SecurityCapabilities,
+  type TouchCameraMovementMode, type TouchMovementMode, type UniqueId,
+  type UserGameSettings, type VRComfortSetting, type VRSafetyBubbleMode,
+  type Vector2,
 }
 
 @target(luau)
@@ -25,8 +25,6 @@ pub fn as_object(instance: UserGameSettings) -> Object
 @target(luau)
 /// Gets Roblox property `UserGameSettings.AllTutorialsDisabled`.
 ///
-/// Indicates whether all in-experience tutorials have been disabled by the user.
-///
 /// Roblox: `UserGameSettings.AllTutorialsDisabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserGameSettings#AllTutorialsDisabled
@@ -36,8 +34,6 @@ pub fn get_all_tutorials_disabled(instance: UserGameSettings) -> Bool
 @target(luau)
 /// Gets Roblox property `UserGameSettings.BadgeVisible`.
 ///
-/// Indicates whether badge notifications are visible to the client.
-///
 /// Roblox: `UserGameSettings.BadgeVisible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserGameSettings#BadgeVisible
@@ -46,8 +42,6 @@ pub fn get_badge_visible(instance: UserGameSettings) -> Bool
 
 @target(luau)
 /// Gets Roblox property `UserGameSettings.CameraMode`.
-///
-/// The custom camera mode currently in-use by the client.
 ///
 /// Roblox: `UserGameSettings.CameraMode`
 /// ThreadSafety: ReadSafe
@@ -107,8 +101,6 @@ pub fn get_chat_translation_toggle_enabled(instance: UserGameSettings) -> Bool
 
 @target(luau)
 /// Gets Roblox property `UserGameSettings.ChatVisible`.
-///
-/// Indicates whether the in-experience chat is visible to the client.
 ///
 /// Roblox: `UserGameSettings.ChatVisible`
 /// ThreadSafety: ReadSafe
@@ -218,8 +210,6 @@ pub fn get_framerate_cap(instance: UserGameSettings) -> Int
 @target(luau)
 /// Gets Roblox property `UserGameSettings.Fullscreen`.
 ///
-/// Indicates whether the client's window is currently in full screen mode.
-///
 /// Roblox: `UserGameSettings.Fullscreen`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserGameSettings#Fullscreen
@@ -254,8 +244,6 @@ pub fn set_gamepad_camera_sensitivity(
 @target(luau)
 /// Gets Roblox property `UserGameSettings.GraphicsOptimizationMode`.
 ///
-/// The graphics optimization mode used by the client to balance visual quality and performance.
-///
 /// Roblox: `UserGameSettings.GraphicsOptimizationMode`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserGameSettings#GraphicsOptimizationMode
@@ -266,8 +254,6 @@ pub fn get_graphics_optimization_mode(
 
 @target(luau)
 /// Gets Roblox property `UserGameSettings.GraphicsQualityLevel`.
-///
-/// The current graphics quality level being used by the client.
 ///
 /// Roblox: `UserGameSettings.GraphicsQualityLevel`
 /// ThreadSafety: ReadSafe
@@ -287,8 +273,6 @@ pub fn get_haptic_strength(instance: UserGameSettings) -> Float
 
 @target(luau)
 /// Gets Roblox property `UserGameSettings.HasEverUsedVR`.
-///
-/// Indicates whether the user has ever launched the client in VR mode.
 ///
 /// Roblox: `UserGameSettings.HasEverUsedVR`
 /// ThreadSafety: ReadSafe
@@ -332,8 +316,6 @@ pub fn get_master_volume(instance: UserGameSettings) -> Float
 @target(luau)
 /// Gets Roblox property `UserGameSettings.MasterVolumeStudio`.
 ///
-/// A float between 0 and 1 representing the master volume used in Roblox Studio.
-///
 /// Roblox: `UserGameSettings.MasterVolumeStudio`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserGameSettings#MasterVolumeStudio
@@ -342,8 +324,6 @@ pub fn get_master_volume_studio(instance: UserGameSettings) -> Float
 
 @target(luau)
 /// Gets Roblox property `UserGameSettings.MaxQualityEnabled`.
-///
-/// Indicates whether the client's graphics quality is set to the maximum available level.
 ///
 /// Roblox: `UserGameSettings.MaxQualityEnabled`
 /// ThreadSafety: ReadSafe
@@ -439,8 +419,6 @@ pub fn get_on_screen_profiler_enabled(instance: UserGameSettings) -> Bool
 @target(luau)
 /// Gets Roblox property `UserGameSettings.OnboardingsCompleted`.
 ///
-/// A comma-separated list of onboarding IDs that the user has completed.
-///
 /// Roblox: `UserGameSettings.OnboardingsCompleted`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserGameSettings#OnboardingsCompleted
@@ -450,8 +428,6 @@ pub fn get_onboardings_completed(instance: UserGameSettings) -> String
 @target(luau)
 /// Gets Roblox property `UserGameSettings.PartyVoiceVolume`.
 ///
-/// A float between 0 and 1 representing the volume of party voice chat.
-///
 /// Roblox: `UserGameSettings.PartyVoiceVolume`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserGameSettings#PartyVoiceVolume
@@ -460,8 +436,6 @@ pub fn get_party_voice_volume(instance: UserGameSettings) -> Float
 
 @target(luau)
 /// Gets Roblox property `UserGameSettings.PeoplePageLayout`.
-///
-/// The layout style used to display the people page in the in-experience menu.
 ///
 /// Roblox: `UserGameSettings.PeoplePageLayout`
 /// ThreadSafety: ReadSafe
@@ -492,8 +466,6 @@ pub fn get_player_height(instance: UserGameSettings) -> Float
 @target(luau)
 /// Gets Roblox property `UserGameSettings.PlayerListVisible`.
 ///
-/// Indicates whether the in-experience player list is visible to the client.
-///
 /// Roblox: `UserGameSettings.PlayerListVisible`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserGameSettings#PlayerListVisible
@@ -502,8 +474,6 @@ pub fn get_player_list_visible(instance: UserGameSettings) -> Bool
 
 @target(luau)
 /// Gets Roblox property `UserGameSettings.PlayerNamesEnabled`.
-///
-/// Indicates whether player names are displayed above characters in the experience.
 ///
 /// Roblox: `UserGameSettings.PlayerNamesEnabled`
 /// ThreadSafety: ReadSafe
@@ -544,8 +514,6 @@ pub fn get_quality_reset_level(instance: UserGameSettings) -> Int
 @target(luau)
 /// Gets Roblox property `UserGameSettings.RCCProfilerRecordFrameRate`.
 ///
-/// Internal MicroProfiler setting specifying the frame rate used when capturing server-side RCC profiler data.
-///
 /// Roblox: `UserGameSettings.RCCProfilerRecordFrameRate`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserGameSettings#RCCProfilerRecordFrameRate
@@ -554,8 +522,6 @@ pub fn get_rcc_profiler_record_frame_rate(instance: UserGameSettings) -> Int
 
 @target(luau)
 /// Sets Roblox property `UserGameSettings.RCCProfilerRecordFrameRate`.
-///
-/// Internal MicroProfiler setting specifying the frame rate used when capturing server-side RCC profiler data.
 ///
 /// Roblox: `UserGameSettings.RCCProfilerRecordFrameRate`
 /// ThreadSafety: ReadSafe
@@ -569,8 +535,6 @@ pub fn set_rcc_profiler_record_frame_rate(
 @target(luau)
 /// Gets Roblox property `UserGameSettings.RCCProfilerRecordTimeFrame`.
 ///
-/// Internal MicroProfiler setting specifying the duration over which server-side RCC profiler data is captured.
-///
 /// Roblox: `UserGameSettings.RCCProfilerRecordTimeFrame`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserGameSettings#RCCProfilerRecordTimeFrame
@@ -579,8 +543,6 @@ pub fn get_rcc_profiler_record_time_frame(instance: UserGameSettings) -> Int
 
 @target(luau)
 /// Sets Roblox property `UserGameSettings.RCCProfilerRecordTimeFrame`.
-///
-/// Internal MicroProfiler setting specifying the duration over which server-side RCC profiler data is captured.
 ///
 /// Roblox: `UserGameSettings.RCCProfilerRecordTimeFrame`
 /// ThreadSafety: ReadSafe
@@ -740,8 +702,6 @@ pub fn get_ui_navigation_key_bind_enabled(instance: UserGameSettings) -> Bool
 @target(luau)
 /// Gets Roblox property `UserGameSettings.UsedCoreGuiIsVisibleToggle`.
 ///
-/// Indicates whether the user has toggled the visibility of core GUI elements.
-///
 /// Roblox: `UserGameSettings.UsedCoreGuiIsVisibleToggle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserGameSettings#UsedCoreGuiIsVisibleToggle
@@ -751,8 +711,6 @@ pub fn get_used_core_gui_is_visible_toggle(instance: UserGameSettings) -> Bool
 @target(luau)
 /// Gets Roblox property `UserGameSettings.UsedCustomGuiIsVisibleToggle`.
 ///
-/// Indicates whether the user has toggled the visibility of custom GUI elements.
-///
 /// Roblox: `UserGameSettings.UsedCustomGuiIsVisibleToggle`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserGameSettings#UsedCustomGuiIsVisibleToggle
@@ -761,8 +719,6 @@ pub fn get_used_custom_gui_is_visible_toggle(instance: UserGameSettings) -> Bool
 
 @target(luau)
 /// Gets Roblox property `UserGameSettings.UsedHideHudShortcut`.
-///
-/// Indicates whether the user has used the keyboard shortcut for hiding the HUD.
 ///
 /// Roblox: `UserGameSettings.UsedHideHudShortcut`
 /// ThreadSafety: ReadSafe
@@ -783,8 +739,6 @@ pub fn get_vr_comfort_setting(instance: UserGameSettings) -> VRComfortSetting
 @target(luau)
 /// Gets Roblox property `UserGameSettings.VREnabled`.
 ///
-/// Indicates whether the client is currently running in VR mode.
-///
 /// Roblox: `UserGameSettings.VREnabled`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/UserGameSettings#VREnabled
@@ -793,8 +747,6 @@ pub fn get_vr_enabled(instance: UserGameSettings) -> Bool
 
 @target(luau)
 /// Gets Roblox property `UserGameSettings.VRRotationIntensity`.
-///
-/// The intensity of camera rotation when turning in VR.
 ///
 /// Roblox: `UserGameSettings.VRRotationIntensity`
 /// ThreadSafety: ReadSafe
@@ -816,8 +768,6 @@ pub fn get_vr_safety_bubble_mode(
 
 @target(luau)
 /// Gets Roblox property `UserGameSettings.VRSmoothRotationEnabled`.
-///
-/// Indicates whether smooth rotation is used instead of snap rotation in VR.
 ///
 /// Roblox: `UserGameSettings.VRSmoothRotationEnabled`
 /// ThreadSafety: ReadSafe
@@ -863,8 +813,6 @@ pub fn get_vr_third_person_follow_cam_enabled_custom_option(
 
 @target(luau)
 /// Gets Roblox property `UserGameSettings.VignetteEnabled`.
-///
-/// Indicates whether the VR vignette comfort effect is enabled.
 ///
 /// Roblox: `UserGameSettings.VignetteEnabled`
 /// ThreadSafety: ReadSafe
@@ -1170,7 +1118,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: UserGameSettings) -> Int64
+pub fn get_source_asset_id(instance: UserGameSettings) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1954,7 +1902,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: VRSafetyBubbleMode,
   _: VRComfortSetting,

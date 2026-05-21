@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Int64, type IntValue, type Object,
+  type Actor, type Instance, type IntValue, type Object,
   type SecurityCapabilities, type UniqueId, type ValueBase,
 }
 
@@ -38,7 +38,7 @@ pub fn as_object(instance: IntValue) -> Object
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/IntValue#Value
 @luau.property("Value")
-pub fn get_value(instance: IntValue) -> Int64
+pub fn get_value(instance: IntValue) -> Int
 
 @target(luau)
 /// Sets Roblox property `IntValue.Value`.
@@ -49,7 +49,7 @@ pub fn get_value(instance: IntValue) -> Int64
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/IntValue#Value
 @luau.set_property("Value")
-pub fn set_value(instance: IntValue, value: Int64) -> IntValue
+pub fn set_value(instance: IntValue, value: Int) -> IntValue
 
 @target(luau)
 /// Fires whenever the IntValue.Value is changed.
@@ -58,7 +58,7 @@ pub fn set_value(instance: IntValue, value: Int64) -> IntValue
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/IntValue#Changed
 @luau.event("Changed")
-pub fn changed(instance: IntValue) -> RBXScriptSignal(fn(Int64) -> Nil)
+pub fn changed(instance: IntValue) -> RBXScriptSignal(fn(Int) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `IntValue.Changed`.
@@ -71,7 +71,7 @@ pub fn changed(instance: IntValue) -> RBXScriptSignal(fn(Int64) -> Nil)
 @luau.global("(function(instance, callback) return instance.Changed:Connect(callback) end)")
 pub fn on_changed(
   instance: IntValue,
-  callback: fn(Int64) -> Nil,
+  callback: fn(Int) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -211,7 +211,7 @@ pub fn set_sandboxed(instance: IntValue, value: Bool) -> IntValue
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: IntValue) -> Int64
+pub fn get_source_asset_id(instance: IntValue) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -956,7 +956,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: IntValue,
   _: ValueBase,

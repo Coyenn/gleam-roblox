@@ -225,11 +225,6 @@ pub fn lip_makeup() -> AvatarAssetType
 @luau.global("Enum.AvatarAssetType.EyeMakeup")
 pub fn eye_makeup() -> AvatarAssetType
 
-@target(luau)
-/// Roblox enum item `AvatarAssetType.AvatarBackground`.
-@luau.global("Enum.AvatarAssetType.AvatarBackground")
-pub fn avatar_background() -> AvatarAssetType
-
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
   _: RobloxEnum(AvatarAssetType),

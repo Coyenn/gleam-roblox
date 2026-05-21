@@ -4,9 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BasePart, type Color3, type GuiBase, type GuiBase3d,
-  type Humanoid, type Instance, type Int64, type Object,
-  type SecurityCapabilities, type SelectionLasso, type SelectionPartLasso,
-  type UniqueId,
+  type Humanoid, type Instance, type Object, type SecurityCapabilities,
+  type SelectionLasso, type SelectionPartLasso, type UniqueId,
 }
 
 @target(luau)
@@ -308,7 +307,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: SelectionPartLasso) -> Int64
+pub fn get_source_asset_id(instance: SelectionPartLasso) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1100,7 +1099,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Color3,
   _: Humanoid,

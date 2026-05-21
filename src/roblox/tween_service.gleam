@@ -3,9 +3,9 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type EasingDirection, type EasingStyle, type Instance, type Int64,
-  type Object, type OptionFloat, type SecurityCapabilities, type Tween,
-  type TweenInfo, type TweenService, type UniqueId,
+  type Actor, type EasingDirection, type EasingStyle, type Instance, type Object,
+  type OptionFloat, type SecurityCapabilities, type Tween, type TweenInfo,
+  type TweenService, type UniqueId,
 }
 
 @target(luau)
@@ -227,7 +227,7 @@ pub fn set_sandboxed(instance: TweenService, value: Bool) -> TweenService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: TweenService) -> Int64
+pub fn get_source_asset_id(instance: TweenService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1008,7 +1008,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: OptionFloat,
   _: EasingStyle,

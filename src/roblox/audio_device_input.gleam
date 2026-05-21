@@ -4,8 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type AccessModifierType, type Actor, type AudioDeviceInput, type Instance,
-  type Int64, type Object, type Player, type SecurityCapabilities, type UniqueId,
-  type Wire,
+  type Object, type Player, type SecurityCapabilities, type UniqueId, type Wire,
 }
 
 @target(luau)
@@ -62,26 +61,6 @@ pub fn set_access_type(
 pub fn get_active(instance: AudioDeviceInput) -> Bool
 
 @target(luau)
-/// Gets Roblox property `AudioDeviceInput.EchoCancellation`.
-///
-/// Roblox: `AudioDeviceInput.EchoCancellation`
-/// ThreadSafety: ReadSafe
-/// Tags: Hidden, NotReplicated
-/// See: https://create.roblox.com/docs/reference/engine/classes/AudioDeviceInput#EchoCancellation
-@luau.property("EchoCancellation")
-pub fn get_echo_cancellation(instance: AudioDeviceInput) -> Bool
-
-@target(luau)
-/// Gets Roblox property `AudioDeviceInput.GainControl`.
-///
-/// Roblox: `AudioDeviceInput.GainControl`
-/// ThreadSafety: ReadSafe
-/// Tags: Hidden, NotReplicated
-/// See: https://create.roblox.com/docs/reference/engine/classes/AudioDeviceInput#GainControl
-@luau.property("GainControl")
-pub fn get_gain_control(instance: AudioDeviceInput) -> Bool
-
-@target(luau)
 /// Gets Roblox property `AudioDeviceInput.IsReady`.
 ///
 /// Denotes whether this AudioDeviceInput is ready to produce sound.
@@ -124,16 +103,6 @@ pub fn set_muted(instance: AudioDeviceInput, value: Bool) -> AudioDeviceInput
 /// See: https://create.roblox.com/docs/reference/engine/classes/AudioDeviceInput#MutedByLocalUser
 @luau.property("MutedByLocalUser")
 pub fn get_muted_by_local_user(instance: AudioDeviceInput) -> Bool
-
-@target(luau)
-/// Gets Roblox property `AudioDeviceInput.NoiseSuppression`.
-///
-/// Roblox: `AudioDeviceInput.NoiseSuppression`
-/// ThreadSafety: ReadSafe
-/// Tags: Hidden, NotReplicated
-/// See: https://create.roblox.com/docs/reference/engine/classes/AudioDeviceInput#NoiseSuppression
-@luau.property("NoiseSuppression")
-pub fn get_noise_suppression(instance: AudioDeviceInput) -> Bool
 
 @target(luau)
 /// Gets Roblox property `AudioDeviceInput.Player`.
@@ -423,7 +392,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: AudioDeviceInput) -> Int64
+pub fn get_source_asset_id(instance: AudioDeviceInput) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1207,7 +1176,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Wire,
   _: Player,

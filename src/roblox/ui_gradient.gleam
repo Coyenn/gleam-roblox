@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type ColorSequence, type Instance, type Int64, type NumberSequence,
+  type Actor, type ColorSequence, type Instance, type NumberSequence,
   type Object, type SecurityCapabilities, type UIBase, type UIComponent,
   type UIGradient, type UniqueId, type Vector2,
 }
@@ -285,7 +285,7 @@ pub fn set_sandboxed(instance: UIGradient, value: Bool) -> UIGradient
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: UIGradient) -> Int64
+pub fn get_source_asset_id(instance: UIGradient) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1061,7 +1061,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: NumberSequence,
   _: Vector2,

@@ -6,7 +6,7 @@ import roblox/types.{
   type Actor, type CameraMode, type CharacterControlMode,
   type DevCameraOcclusionMode, type DevComputerCameraMovementMode,
   type DevComputerMovementMode, type DevTouchCameraMovementMode,
-  type DevTouchMovementMode, type GameAvatarType, type Instance, type Int64,
+  type DevTouchMovementMode, type GameAvatarType, type Instance,
   type NumberRange, type Object, type R15CollisionType, type RolloutState,
   type SecurityCapabilities, type StarterPlayer, type UniqueId,
 }
@@ -481,7 +481,7 @@ pub fn set_enable_mouse_lock_option(
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/StarterPlayer#GameSettingsAssetIDFace
 @luau.property("GameSettingsAssetIDFace")
-pub fn get_game_settings_asset_id_face(instance: StarterPlayer) -> Int64
+pub fn get_game_settings_asset_id_face(instance: StarterPlayer) -> Int
 
 @target(luau)
 /// Gets Roblox property `StarterPlayer.GameSettingsAssetIDHead`.
@@ -491,7 +491,7 @@ pub fn get_game_settings_asset_id_face(instance: StarterPlayer) -> Int64
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/StarterPlayer#GameSettingsAssetIDHead
 @luau.property("GameSettingsAssetIDHead")
-pub fn get_game_settings_asset_id_head(instance: StarterPlayer) -> Int64
+pub fn get_game_settings_asset_id_head(instance: StarterPlayer) -> Int
 
 @target(luau)
 /// Gets Roblox property `StarterPlayer.GameSettingsAssetIDLeftArm`.
@@ -501,7 +501,7 @@ pub fn get_game_settings_asset_id_head(instance: StarterPlayer) -> Int64
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/StarterPlayer#GameSettingsAssetIDLeftArm
 @luau.property("GameSettingsAssetIDLeftArm")
-pub fn get_game_settings_asset_id_left_arm(instance: StarterPlayer) -> Int64
+pub fn get_game_settings_asset_id_left_arm(instance: StarterPlayer) -> Int
 
 @target(luau)
 /// Gets Roblox property `StarterPlayer.GameSettingsAssetIDLeftLeg`.
@@ -511,7 +511,7 @@ pub fn get_game_settings_asset_id_left_arm(instance: StarterPlayer) -> Int64
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/StarterPlayer#GameSettingsAssetIDLeftLeg
 @luau.property("GameSettingsAssetIDLeftLeg")
-pub fn get_game_settings_asset_id_left_leg(instance: StarterPlayer) -> Int64
+pub fn get_game_settings_asset_id_left_leg(instance: StarterPlayer) -> Int
 
 @target(luau)
 /// Gets Roblox property `StarterPlayer.GameSettingsAssetIDPants`.
@@ -521,7 +521,7 @@ pub fn get_game_settings_asset_id_left_leg(instance: StarterPlayer) -> Int64
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/StarterPlayer#GameSettingsAssetIDPants
 @luau.property("GameSettingsAssetIDPants")
-pub fn get_game_settings_asset_id_pants(instance: StarterPlayer) -> Int64
+pub fn get_game_settings_asset_id_pants(instance: StarterPlayer) -> Int
 
 @target(luau)
 /// Gets Roblox property `StarterPlayer.GameSettingsAssetIDRightArm`.
@@ -531,7 +531,7 @@ pub fn get_game_settings_asset_id_pants(instance: StarterPlayer) -> Int64
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/StarterPlayer#GameSettingsAssetIDRightArm
 @luau.property("GameSettingsAssetIDRightArm")
-pub fn get_game_settings_asset_id_right_arm(instance: StarterPlayer) -> Int64
+pub fn get_game_settings_asset_id_right_arm(instance: StarterPlayer) -> Int
 
 @target(luau)
 /// Gets Roblox property `StarterPlayer.GameSettingsAssetIDRightLeg`.
@@ -541,7 +541,7 @@ pub fn get_game_settings_asset_id_right_arm(instance: StarterPlayer) -> Int64
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/StarterPlayer#GameSettingsAssetIDRightLeg
 @luau.property("GameSettingsAssetIDRightLeg")
-pub fn get_game_settings_asset_id_right_leg(instance: StarterPlayer) -> Int64
+pub fn get_game_settings_asset_id_right_leg(instance: StarterPlayer) -> Int
 
 @target(luau)
 /// Gets Roblox property `StarterPlayer.GameSettingsAssetIDShirt`.
@@ -551,7 +551,7 @@ pub fn get_game_settings_asset_id_right_leg(instance: StarterPlayer) -> Int64
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/StarterPlayer#GameSettingsAssetIDShirt
 @luau.property("GameSettingsAssetIDShirt")
-pub fn get_game_settings_asset_id_shirt(instance: StarterPlayer) -> Int64
+pub fn get_game_settings_asset_id_shirt(instance: StarterPlayer) -> Int
 
 @target(luau)
 /// Gets Roblox property `StarterPlayer.GameSettingsAssetIDTeeShirt`.
@@ -561,7 +561,7 @@ pub fn get_game_settings_asset_id_shirt(instance: StarterPlayer) -> Int64
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/StarterPlayer#GameSettingsAssetIDTeeShirt
 @luau.property("GameSettingsAssetIDTeeShirt")
-pub fn get_game_settings_asset_id_tee_shirt(instance: StarterPlayer) -> Int64
+pub fn get_game_settings_asset_id_tee_shirt(instance: StarterPlayer) -> Int
 
 @target(luau)
 /// Gets Roblox property `StarterPlayer.GameSettingsAssetIDTorso`.
@@ -571,7 +571,7 @@ pub fn get_game_settings_asset_id_tee_shirt(instance: StarterPlayer) -> Int64
 /// Tags: Hidden, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/StarterPlayer#GameSettingsAssetIDTorso
 @luau.property("GameSettingsAssetIDTorso")
-pub fn get_game_settings_asset_id_torso(instance: StarterPlayer) -> Int64
+pub fn get_game_settings_asset_id_torso(instance: StarterPlayer) -> Int
 
 @target(luau)
 /// Gets Roblox property `StarterPlayer.GameSettingsAvatar`.
@@ -915,7 +915,7 @@ pub fn set_sandboxed(instance: StarterPlayer, value: Bool) -> StarterPlayer
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: StarterPlayer) -> Int64
+pub fn get_source_asset_id(instance: StarterPlayer) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1696,7 +1696,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: CharacterControlMode,
   _: NumberRange,

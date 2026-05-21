@@ -203,16 +203,6 @@ pub fn ui_button(value: GuiButton) -> Property(InputBinding) {
 }
 
 @target(luau)
-/// Builds a property setter for Roblox property `InputBinding.UIModifier` on `InputBinding` nodes.
-///
-/// Roblox: `InputBinding.UIModifier`
-/// ThreadSafety: ReadSafe
-/// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#UIModifier
-pub fn ui_modifier(value: GuiButton) -> Property(InputBinding) {
-  Property(fn(instance) { input_binding.set_ui_modifier(instance, value) })
-}
-
-@target(luau)
 /// Builds a property setter for Roblox property `InputBinding.Up` on `InputBinding` nodes.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "up" inputs to the parent InputAction.

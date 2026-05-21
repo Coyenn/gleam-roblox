@@ -351,16 +351,6 @@ pub fn disconnect_collaborator_too_many_collaborators() -> ConnectionError
 pub fn disconnect_collaborator_unknown_error() -> ConnectionError
 
 @target(luau)
-/// Roblox enum item `ConnectionError.DisconnectCollaboratorRequestedEviction`.
-@luau.global("Enum.ConnectionError.DisconnectCollaboratorRequestedEviction")
-pub fn disconnect_collaborator_requested_eviction() -> ConnectionError
-
-@target(luau)
-/// Roblox enum item `ConnectionError.DisconnectCollaboratorTrustedConnectionsRequiredPC`.
-@luau.global("Enum.ConnectionError.DisconnectCollaboratorTrustedConnectionsRequiredPC")
-pub fn disconnect_collaborator_trusted_connections_required_pc() -> ConnectionError
-
-@target(luau)
 /// Roblox enum item `ConnectionError.PlacelaunchErrors`.
 @luau.global("Enum.ConnectionError.PlacelaunchErrors")
 pub fn placelaunch_errors() -> ConnectionError

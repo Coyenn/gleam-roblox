@@ -1,8 +1,6 @@
 // Generated class bindings for Roblox API
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
-import roblox/types.{
-  type Capture, type CaptureType, type DateTime, type Int64, type Object,
-}
+import roblox/types.{type Capture, type CaptureType, type DateTime, type Object}
 
 @target(luau)
 /// Treats `Capture` as its Roblox ancestor `Object`.
@@ -57,7 +55,7 @@ pub fn get_local_id(instance: Capture) -> String
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Capture#SourcePlaceId
 @luau.property("SourcePlaceId")
-pub fn get_source_place_id(instance: Capture) -> Int64
+pub fn get_source_place_id(instance: Capture) -> Int
 
 @target(luau)
 /// Gets Roblox property `Capture.SourceUniverseId`.
@@ -67,7 +65,7 @@ pub fn get_source_place_id(instance: Capture) -> Int64
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Capture#SourceUniverseId
 @luau.property("SourceUniverseId")
-pub fn get_source_universe_id(instance: Capture) -> Int64
+pub fn get_source_universe_id(instance: Capture) -> Int
 
 @target(luau)
 /// Gets Roblox property `Object.ClassName`.
@@ -142,7 +140,6 @@ pub fn on_changed(
 
 /// Keeps Roblox imports reachable when checking non-Luau targets.
 pub fn javascript_type_anchor(
-  _: Int64,
   _: CaptureType,
   _: DateTime,
   _: Capture,

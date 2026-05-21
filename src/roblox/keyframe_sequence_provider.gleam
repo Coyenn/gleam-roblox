@@ -3,9 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type ContentId, type Instance, type Int64,
-  type KeyframeSequenceProvider, type Object, type SecurityCapabilities,
-  type UniqueId,
+  type Actor, type ContentId, type Instance, type KeyframeSequenceProvider,
+  type Object, type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -73,7 +72,7 @@ pub fn register_keyframe_sequence(
 @luau.method("GetAnimationsAsync")
 pub fn get_animations_async(
   instance: KeyframeSequenceProvider,
-  user_id: Int64,
+  user_id: Int,
 ) -> Instance
 
 @target(luau)
@@ -247,7 +246,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: KeyframeSequenceProvider) -> Int64
+pub fn get_source_asset_id(instance: KeyframeSequenceProvider) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1044,7 +1043,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: ContentId,
   _: KeyframeSequenceProvider,

@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type AvatarAnimationRules, type AvatarSettingsAnimationClipsMode,
-  type AvatarSettingsAnimationPacksMode, type Instance, type Int64, type Object,
+  type AvatarSettingsAnimationPacksMode, type Instance, type Object,
   type SecurityCapabilities, type UniqueId,
 }
 
@@ -65,7 +65,7 @@ pub fn get_custom_climb_animation_enabled(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAnimationRules#CustomClimbAnimationId
 @luau.property("CustomClimbAnimationId")
-pub fn get_custom_climb_animation_id(instance: AvatarAnimationRules) -> Int64
+pub fn get_custom_climb_animation_id(instance: AvatarAnimationRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAnimationRules.CustomFallAnimationEnabled`.
@@ -83,7 +83,7 @@ pub fn get_custom_fall_animation_enabled(instance: AvatarAnimationRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAnimationRules#CustomFallAnimationId
 @luau.property("CustomFallAnimationId")
-pub fn get_custom_fall_animation_id(instance: AvatarAnimationRules) -> Int64
+pub fn get_custom_fall_animation_id(instance: AvatarAnimationRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAnimationRules.CustomIdleAlt1AnimationEnabled`.
@@ -103,9 +103,7 @@ pub fn get_custom_idle_alt1_animation_enabled(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAnimationRules#CustomIdleAlt1AnimationId
 @luau.property("CustomIdleAlt1AnimationId")
-pub fn get_custom_idle_alt1_animation_id(
-  instance: AvatarAnimationRules,
-) -> Int64
+pub fn get_custom_idle_alt1_animation_id(instance: AvatarAnimationRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAnimationRules.CustomIdleAlt2AnimationEnabled`.
@@ -125,9 +123,7 @@ pub fn get_custom_idle_alt2_animation_enabled(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAnimationRules#CustomIdleAlt2AnimationId
 @luau.property("CustomIdleAlt2AnimationId")
-pub fn get_custom_idle_alt2_animation_id(
-  instance: AvatarAnimationRules,
-) -> Int64
+pub fn get_custom_idle_alt2_animation_id(instance: AvatarAnimationRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAnimationRules.CustomIdleAnimationEnabled`.
@@ -145,7 +141,7 @@ pub fn get_custom_idle_animation_enabled(instance: AvatarAnimationRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAnimationRules#CustomIdleAnimationId
 @luau.property("CustomIdleAnimationId")
-pub fn get_custom_idle_animation_id(instance: AvatarAnimationRules) -> Int64
+pub fn get_custom_idle_animation_id(instance: AvatarAnimationRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAnimationRules.CustomJumpAnimationEnabled`.
@@ -163,7 +159,7 @@ pub fn get_custom_jump_animation_enabled(instance: AvatarAnimationRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAnimationRules#CustomJumpAnimationId
 @luau.property("CustomJumpAnimationId")
-pub fn get_custom_jump_animation_id(instance: AvatarAnimationRules) -> Int64
+pub fn get_custom_jump_animation_id(instance: AvatarAnimationRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAnimationRules.CustomRunAnimationEnabled`.
@@ -181,7 +177,7 @@ pub fn get_custom_run_animation_enabled(instance: AvatarAnimationRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAnimationRules#CustomRunAnimationId
 @luau.property("CustomRunAnimationId")
-pub fn get_custom_run_animation_id(instance: AvatarAnimationRules) -> Int64
+pub fn get_custom_run_animation_id(instance: AvatarAnimationRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAnimationRules.CustomSwimAnimationEnabled`.
@@ -199,7 +195,7 @@ pub fn get_custom_swim_animation_enabled(instance: AvatarAnimationRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAnimationRules#CustomSwimAnimationId
 @luau.property("CustomSwimAnimationId")
-pub fn get_custom_swim_animation_id(instance: AvatarAnimationRules) -> Int64
+pub fn get_custom_swim_animation_id(instance: AvatarAnimationRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAnimationRules.CustomSwimIdleAnimationEnabled`.
@@ -219,9 +215,7 @@ pub fn get_custom_swim_idle_animation_enabled(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAnimationRules#CustomSwimIdleAnimationId
 @luau.property("CustomSwimIdleAnimationId")
-pub fn get_custom_swim_idle_animation_id(
-  instance: AvatarAnimationRules,
-) -> Int64
+pub fn get_custom_swim_idle_animation_id(instance: AvatarAnimationRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarAnimationRules.CustomWalkAnimationEnabled`.
@@ -239,7 +233,7 @@ pub fn get_custom_walk_animation_enabled(instance: AvatarAnimationRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarAnimationRules#CustomWalkAnimationId
 @luau.property("CustomWalkAnimationId")
-pub fn get_custom_walk_animation_id(instance: AvatarAnimationRules) -> Int64
+pub fn get_custom_walk_animation_id(instance: AvatarAnimationRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.
@@ -390,7 +384,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: AvatarAnimationRules) -> Int64
+pub fn get_source_asset_id(instance: AvatarAnimationRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1187,7 +1181,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: AvatarSettingsAnimationPacksMode,
   _: AvatarSettingsAnimationClipsMode,

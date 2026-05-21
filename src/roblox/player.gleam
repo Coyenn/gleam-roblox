@@ -7,7 +7,7 @@ import roblox/types.{
   type CameraMode, type ChatMode, type ChatRestrictionStatus,
   type DevCameraOcclusionMode, type DevComputerCameraMovementMode,
   type DevComputerMovementMode, type DevTouchCameraMovementMode,
-  type DevTouchMovementMode, type HumanoidDescription, type Instance, type Int64,
+  type DevTouchMovementMode, type HumanoidDescription, type Instance,
   type MembershipType, type Model, type Mouse, type Object, type Player,
   type PlayerData, type SecurityCapabilities, type SpawnLocation, type Team,
   type TeleportState, type UniqueId, type Vector3,
@@ -186,7 +186,7 @@ pub fn set_character(instance: Player, value: Model) -> Player
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Player#CharacterAppearanceId
 @luau.property("CharacterAppearanceId")
-pub fn get_character_appearance_id(instance: Player) -> Int64
+pub fn get_character_appearance_id(instance: Player) -> Int
 
 @target(luau)
 /// Sets Roblox property `Player.CharacterAppearanceId`.
@@ -197,7 +197,7 @@ pub fn get_character_appearance_id(instance: Player) -> Int64
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Player#CharacterAppearanceId
 @luau.set_property("CharacterAppearanceId")
-pub fn set_character_appearance_id(instance: Player, value: Int64) -> Player
+pub fn set_character_appearance_id(instance: Player, value: Int) -> Player
 
 @target(luau)
 /// Gets Roblox property `Player.ChatAvailabilityStatus`.
@@ -402,7 +402,7 @@ pub fn set_display_name(instance: Player, value: String) -> Player
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/Player#FollowUserId
 @luau.property("FollowUserId")
-pub fn get_follow_user_id(instance: Player) -> Int64
+pub fn get_follow_user_id(instance: Player) -> Int
 
 @target(luau)
 /// Gets Roblox property `Player.GameplayPaused`.
@@ -760,7 +760,7 @@ pub fn get_unfiltered_chat(instance: Player) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Player#UserId
 @luau.property("UserId")
-pub fn get_user_id(instance: Player) -> Int64
+pub fn get_user_id(instance: Player) -> Int
 
 @target(luau)
 /// Sets Roblox property `Player.UserId`.
@@ -771,7 +771,7 @@ pub fn get_user_id(instance: Player) -> Int64
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/Player#UserId
 @luau.set_property("UserId")
-pub fn set_user_id(instance: Player, value: Int64) -> Player
+pub fn set_user_id(instance: Player, value: Int) -> Player
 
 @target(luau)
 /// Gets Roblox property `Player.VRDevice`.
@@ -1011,7 +1011,7 @@ pub fn get_friends_who_played_async(instance: Player) -> List(Dynamic)
 /// Returns:
 /// - The player's rank in the group.
 @luau.method("GetRankInGroupAsync")
-pub fn get_rank_in_group_async(instance: Player, group_id: Int64) -> Int
+pub fn get_rank_in_group_async(instance: Player, group_id: Int) -> Int
 
 @target(luau)
 /// Returns the player's role in the group as a string, or Guest if the player isn't part of the group.
@@ -1028,7 +1028,7 @@ pub fn get_rank_in_group_async(instance: Player, group_id: Int64) -> Int
 /// Returns:
 /// - The player's role in the specified group, or Guest if the player is not a member.
 @luau.method("GetRoleInGroupAsync")
-pub fn get_role_in_group_async(instance: Player, group_id: Int64) -> String
+pub fn get_role_in_group_async(instance: Player, group_id: Int) -> String
 
 @target(luau)
 /// Checks whether a player is a friend of the user with the given Player.UserId.
@@ -1045,7 +1045,7 @@ pub fn get_role_in_group_async(instance: Player, group_id: Int64) -> String
 /// Returns:
 /// - A boolean indicating whether a player is a friend of the specified user.
 @luau.method("IsFriendsWithAsync")
-pub fn is_friends_with_async(instance: Player, user_id: Int64) -> Bool
+pub fn is_friends_with_async(instance: Player, user_id: Int) -> Bool
 
 @target(luau)
 /// Checks whether a player is a member of a group with the given ID.
@@ -1062,7 +1062,7 @@ pub fn is_friends_with_async(instance: Player, user_id: Int64) -> Bool
 /// Returns:
 /// - A boolean indicating whether the player is in the specified group.
 @luau.method("IsInGroupAsync")
-pub fn is_in_group_async(instance: Player, group_id: Int64) -> Bool
+pub fn is_in_group_async(instance: Player, group_id: Int) -> Bool
 
 @target(luau)
 /// Creates a new character for the player, removing the old one. Also clears the player's Backpack and PlayerGui.
@@ -1241,7 +1241,7 @@ pub fn on_idled(
 @luau.event("OnTeleport")
 pub fn on_teleport(
   instance: Player,
-) -> RBXScriptSignal(fn(TeleportState, Int64, String) -> Nil)
+) -> RBXScriptSignal(fn(TeleportState, Int, String) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `Player.OnTeleport`.
@@ -1254,7 +1254,7 @@ pub fn on_teleport(
 @luau.global("(function(instance, callback) return instance.OnTeleport:Connect(callback) end)")
 pub fn on_on_teleport(
   instance: Player,
-  callback: fn(TeleportState, Int64, String) -> Nil,
+  callback: fn(TeleportState, Int, String) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -1391,7 +1391,7 @@ pub fn set_sandboxed(instance: Player, value: Bool) -> Player
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Player) -> Int64
+pub fn get_source_asset_id(instance: Player) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -2150,7 +2150,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: TeleportState,
   _: Player,

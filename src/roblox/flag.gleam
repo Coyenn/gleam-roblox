@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BackpackItem, type BasePart, type BrickColor, type CFrame,
-  type Content, type ContentId, type Flag, type Instance, type Int64, type Model,
+  type Content, type ContentId, type Flag, type Instance, type Model,
   type ModelLevelOfDetail, type ModelStreamingMode, type Mouse, type Object,
   type PVInstance, type Player, type SecurityCapabilities, type Tool,
   type UniqueId, type Vector3,
@@ -815,7 +815,7 @@ pub fn set_sandboxed(instance: Flag, value: Bool) -> Flag
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Flag) -> Int64
+pub fn get_source_asset_id(instance: Flag) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1570,7 +1570,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: CFrame,
   _: Vector3,

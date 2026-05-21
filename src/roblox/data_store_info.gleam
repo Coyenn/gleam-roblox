@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type DataStoreInfo, type Instance, type Int64, type Object,
+  type Actor, type DataStoreInfo, type Instance, type Object,
   type SecurityCapabilities, type UniqueId,
 }
 
@@ -27,7 +27,7 @@ pub fn as_object(instance: DataStoreInfo) -> Object
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/DataStoreInfo#CreatedTime
 @luau.property("CreatedTime")
-pub fn get_created_time(instance: DataStoreInfo) -> Int64
+pub fn get_created_time(instance: DataStoreInfo) -> Int
 
 @target(luau)
 /// Gets Roblox property `DataStoreInfo.DataStoreName`.
@@ -51,7 +51,7 @@ pub fn get_data_store_name(instance: DataStoreInfo) -> String
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/DataStoreInfo#UpdatedTime
 @luau.property("UpdatedTime")
-pub fn get_updated_time(instance: DataStoreInfo) -> Int64
+pub fn get_updated_time(instance: DataStoreInfo) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.Archivable`.
@@ -190,7 +190,7 @@ pub fn set_sandboxed(instance: DataStoreInfo, value: Bool) -> DataStoreInfo
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: DataStoreInfo) -> Int64
+pub fn get_source_asset_id(instance: DataStoreInfo) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -971,7 +971,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: DataStoreInfo,
   _: Object,

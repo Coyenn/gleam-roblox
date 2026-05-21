@@ -3,8 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Int64, type MultipleDocumentInterfaceInstance,
-  type Object, type Plugin, type SecurityCapabilities, type StudioDataModelType,
+  type Actor, type Instance, type MultipleDocumentInterfaceInstance, type Object,
+  type Plugin, type SecurityCapabilities, type StudioDataModelType,
   type UniqueId,
 }
 
@@ -32,8 +32,6 @@ pub fn get_collision_enabled(instance: Plugin) -> Bool
 
 @target(luau)
 /// Gets Roblox property `Plugin.DisableUIDragDetectorDrags`.
-///
-/// If true, toolbars and buttons for the plugin will ignore dragging related to a UIDragDetector instance.
 ///
 /// Roblox: `Plugin.DisableUIDragDetectorDrags`
 /// ThreadSafety: ReadSafe
@@ -238,7 +236,7 @@ pub fn set_sandboxed(instance: Plugin, value: Bool) -> Plugin
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Plugin) -> Int64
+pub fn get_source_asset_id(instance: Plugin) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -997,7 +995,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: MultipleDocumentInterfaceInstance,
   _: StudioDataModelType,

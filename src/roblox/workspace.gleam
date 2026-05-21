@@ -5,8 +5,8 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type AnimatorRetargetingMode, type AuthorityMode, type BasePart,
   type BulkMoveMode, type CFrame, type Camera, type ClientAnimatorThrottlingMode,
-  type Instance, type Int64, type JointCreationMode, type LuauTypeCheckMode,
-  type Model, type ModelLevelOfDetail, type ModelStreamingMode, type Object,
+  type Instance, type JointCreationMode, type LuauTypeCheckMode, type Model,
+  type ModelLevelOfDetail, type ModelStreamingMode, type Object,
   type OptionRaycastResult, type OverlapParams, type PVInstance, type Player,
   type RaycastParams, type SecurityCapabilities, type Terrain, type UniqueId,
   type Vector3, type Workspace, type WorldRoot,
@@ -1058,7 +1058,7 @@ pub fn set_sandboxed(instance: Workspace, value: Bool) -> Workspace
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Workspace) -> Int64
+pub fn get_source_asset_id(instance: Workspace) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1834,7 +1834,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: CFrame,
   _: Vector3,

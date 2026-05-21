@@ -4,8 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type FramerateManagerMode, type GraphicsMode, type Instance,
-  type Int64, type MeshPartDetailLevel, type Object, type QualityLevel,
-  type RenderSettings, type SecurityCapabilities, type UniqueId, type ViewMode,
+  type MeshPartDetailLevel, type Object, type QualityLevel, type RenderSettings,
+  type SecurityCapabilities, type UniqueId, type ViewMode,
 }
 
 @target(luau)
@@ -532,7 +532,7 @@ pub fn set_sandboxed(instance: RenderSettings, value: Bool) -> RenderSettings
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: RenderSettings) -> Int64
+pub fn get_source_asset_id(instance: RenderSettings) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1313,7 +1313,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: ViewMode,
   _: QualityLevel,

@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type CFrame, type Content, type ContentId, type InputObject,
-  type Instance, type Int64, type KeyCode, type MouseBehavior, type Object,
+  type Instance, type KeyCode, type MouseBehavior, type Object,
   type OverrideMouseIconBehavior, type PreferredInput, type SecurityCapabilities,
   type SwipeDirection, type TextBox, type UniqueId, type UserInputService,
   type UserInputState, type UserInputType, type Vector2,
@@ -1538,7 +1538,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: UserInputService) -> Int64
+pub fn get_source_asset_id(instance: UserInputService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -2322,7 +2322,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Vector2,
   _: SwipeDirection,

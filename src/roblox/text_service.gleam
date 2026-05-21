@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type ContentId, type Font, type GetTextBoundsParams, type Instance,
-  type Int64, type Object, type SecurityCapabilities, type TextFilterContext,
+  type Object, type SecurityCapabilities, type TextFilterContext,
   type TextFilterResult, type TextFilterTranslatedResult, type TextService,
   type UniqueId, type Vector2,
 }
@@ -58,7 +58,7 @@ pub fn get_text_size(
 pub fn filter_and_translate_string_async(
   instance: TextService,
   string_to_filter: String,
-  from_user_id: Int64,
+  from_user_id: Int,
   target_locales: List(String),
   text_context: TextFilterContext,
 ) -> TextFilterTranslatedResult
@@ -80,7 +80,7 @@ pub fn filter_and_translate_string_async(
 pub fn filter_string_async(
   instance: TextService,
   string_to_filter: String,
-  from_user_id: Int64,
+  from_user_id: Int,
   text_context: TextFilterContext,
 ) -> TextFilterResult
 
@@ -278,7 +278,7 @@ pub fn set_sandboxed(instance: TextService, value: Bool) -> TextService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: TextService) -> Int64
+pub fn get_source_asset_id(instance: TextService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1056,7 +1056,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Font,
   _: Vector2,

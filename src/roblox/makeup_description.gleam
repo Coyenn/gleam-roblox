@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Int64, type MakeupDescription, type MakeupType,
+  type Actor, type Instance, type MakeupDescription, type MakeupType,
   type Object, type SecurityCapabilities, type UniqueId,
 }
 
@@ -33,7 +33,7 @@ pub fn as_object(instance: MakeupDescription) -> Object
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/MakeupDescription#AssetId
 @luau.property("AssetId")
-pub fn get_asset_id(instance: MakeupDescription) -> Int64
+pub fn get_asset_id(instance: MakeupDescription) -> Int
 
 @target(luau)
 /// Sets Roblox property `MakeupDescription.AssetId`.
@@ -46,7 +46,7 @@ pub fn get_asset_id(instance: MakeupDescription) -> Int64
 @luau.set_property("AssetId")
 pub fn set_asset_id(
   instance: MakeupDescription,
-  value: Int64,
+  value: Int,
 ) -> MakeupDescription
 
 @target(luau)
@@ -279,7 +279,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: MakeupDescription) -> Int64
+pub fn get_source_asset_id(instance: MakeupDescription) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1065,7 +1065,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: MakeupType,
   _: MakeupDescription,

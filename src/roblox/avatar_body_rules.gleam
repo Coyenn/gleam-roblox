@@ -5,8 +5,8 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type AvatarBodyRules, type AvatarSettingsAppearanceMode,
   type AvatarSettingsBuildMode, type AvatarSettingsCustomBodyType,
-  type AvatarSettingsScaleMode, type Instance, type Int64, type NumberRange,
-  type Object, type SecurityCapabilities, type UniqueId,
+  type AvatarSettingsScaleMode, type Instance, type NumberRange, type Object,
+  type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -53,7 +53,7 @@ pub fn get_build_mode(instance: AvatarBodyRules) -> AvatarSettingsBuildMode
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarBodyRules#CustomBodyBundleId
 @luau.property("CustomBodyBundleId")
-pub fn get_custom_body_bundle_id(instance: AvatarBodyRules) -> Int64
+pub fn get_custom_body_bundle_id(instance: AvatarBodyRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarBodyRules.CustomBodyType`.
@@ -91,7 +91,7 @@ pub fn get_custom_eyebrow_enabled(instance: AvatarBodyRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarBodyRules#CustomEyebrowId
 @luau.property("CustomEyebrowId")
-pub fn get_custom_eyebrow_id(instance: AvatarBodyRules) -> Int64
+pub fn get_custom_eyebrow_id(instance: AvatarBodyRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarBodyRules.CustomEyelashEnabled`.
@@ -109,7 +109,7 @@ pub fn get_custom_eyelash_enabled(instance: AvatarBodyRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarBodyRules#CustomEyelashId
 @luau.property("CustomEyelashId")
-pub fn get_custom_eyelash_id(instance: AvatarBodyRules) -> Int64
+pub fn get_custom_eyelash_id(instance: AvatarBodyRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarBodyRules.CustomFaceEnabled`.
@@ -127,7 +127,7 @@ pub fn get_custom_face_enabled(instance: AvatarBodyRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarBodyRules#CustomFaceId
 @luau.property("CustomFaceId")
-pub fn get_custom_face_id(instance: AvatarBodyRules) -> Int64
+pub fn get_custom_face_id(instance: AvatarBodyRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarBodyRules.CustomHeadEnabled`.
@@ -145,7 +145,7 @@ pub fn get_custom_head_enabled(instance: AvatarBodyRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarBodyRules#CustomHeadId
 @luau.property("CustomHeadId")
-pub fn get_custom_head_id(instance: AvatarBodyRules) -> Int64
+pub fn get_custom_head_id(instance: AvatarBodyRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarBodyRules.CustomHeadScale`.
@@ -190,7 +190,7 @@ pub fn get_custom_left_arm_enabled(instance: AvatarBodyRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarBodyRules#CustomLeftArmId
 @luau.property("CustomLeftArmId")
-pub fn get_custom_left_arm_id(instance: AvatarBodyRules) -> Int64
+pub fn get_custom_left_arm_id(instance: AvatarBodyRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarBodyRules.CustomLeftLegEnabled`.
@@ -208,7 +208,7 @@ pub fn get_custom_left_leg_enabled(instance: AvatarBodyRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarBodyRules#CustomLeftLegId
 @luau.property("CustomLeftLegId")
-pub fn get_custom_left_leg_id(instance: AvatarBodyRules) -> Int64
+pub fn get_custom_left_leg_id(instance: AvatarBodyRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarBodyRules.CustomMoodEnabled`.
@@ -226,7 +226,7 @@ pub fn get_custom_mood_enabled(instance: AvatarBodyRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarBodyRules#CustomMoodId
 @luau.property("CustomMoodId")
-pub fn get_custom_mood_id(instance: AvatarBodyRules) -> Int64
+pub fn get_custom_mood_id(instance: AvatarBodyRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarBodyRules.CustomProportionsScale`.
@@ -253,7 +253,7 @@ pub fn get_custom_right_arm_enabled(instance: AvatarBodyRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarBodyRules#CustomRightArmId
 @luau.property("CustomRightArmId")
-pub fn get_custom_right_arm_id(instance: AvatarBodyRules) -> Int64
+pub fn get_custom_right_arm_id(instance: AvatarBodyRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarBodyRules.CustomRightLegEnabled`.
@@ -271,7 +271,7 @@ pub fn get_custom_right_leg_enabled(instance: AvatarBodyRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarBodyRules#CustomRightLegId
 @luau.property("CustomRightLegId")
-pub fn get_custom_right_leg_id(instance: AvatarBodyRules) -> Int64
+pub fn get_custom_right_leg_id(instance: AvatarBodyRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarBodyRules.CustomTorsoEnabled`.
@@ -289,7 +289,7 @@ pub fn get_custom_torso_enabled(instance: AvatarBodyRules) -> Bool
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AvatarBodyRules#CustomTorsoId
 @luau.property("CustomTorsoId")
-pub fn get_custom_torso_id(instance: AvatarBodyRules) -> Int64
+pub fn get_custom_torso_id(instance: AvatarBodyRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `AvatarBodyRules.CustomWidthScale`.
@@ -455,7 +455,7 @@ pub fn set_sandboxed(instance: AvatarBodyRules, value: Bool) -> AvatarBodyRules
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: AvatarBodyRules) -> Int64
+pub fn get_source_asset_id(instance: AvatarBodyRules) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1236,7 +1236,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: AvatarSettingsScaleMode,
   _: NumberRange,

@@ -74,9 +74,8 @@ import roblox/types.{
   type DragDetectorDragStyle, type DragDetectorPermissionPolicy,
   type DragDetectorResponseStyle, type DraggerCoordinateSpace,
   type DraggerMovementMode, type DraggingScrollBar, type EasingDirection,
-  type EasingStyle, type EditableStatus, type ElasticBehavior,
-  type EngagementLevel, type EngineFolder, type EnviromentalPhysicsThrottle,
-  type ExperienceActivationStatus, type ExperienceAuthScope,
+  type EasingStyle, type EditableStatus, type ElasticBehavior, type EngineFolder,
+  type EnviromentalPhysicsThrottle, type ExperienceAuthScope,
   type ExperienceEventStatus, type ExperienceStateCaptureSelectionMode,
   type ExperienceStateRecordingLoadMode,
   type ExperienceStateRecordingLoadSourceType,
@@ -134,12 +133,12 @@ import roblox/types.{
   type Platform, type PlaybackState, type PlayerActions,
   type PlayerCharacterDestroyBehavior, type PlayerChatType,
   type PlayerDataErrorState, type PlayerDataLoadFailureBehavior,
-  type PlayerExitReason, type PlayerPlatformActivationStatus,
-  type PlayerPlatformSpenderStatus, type PluginConnectionTargetType,
-  type PoseEasingDirection, type PoseEasingStyle, type PositionAlignmentMode,
-  type PredictionMode, type PredictionStatus, type PreferredInput,
-  type PreferredTextSize, type PrefetchDownloadStatus, type PrimalPhysicsSolver,
-  type PrimitiveType, type PrivilegeType, type ProductLocationRestriction,
+  type PlayerExitReason, type PlayerPlatformSpenderStatus,
+  type PluginConnectionTargetType, type PoseEasingDirection,
+  type PoseEasingStyle, type PositionAlignmentMode, type PredictionMode,
+  type PredictionStatus, type PreferredInput, type PreferredTextSize,
+  type PrefetchDownloadStatus, type PrimalPhysicsSolver, type PrimitiveType,
+  type PrivilegeType, type ProductLocationRestriction,
   type ProductPurchaseChannel, type ProductPurchaseDecision,
   type PromptCreateAssetResult, type PromptCreateAvatarResult,
   type PromptExperienceDetailsResult, type PromptLinkSharingResult,
@@ -1810,13 +1809,6 @@ pub fn editable_status() -> RobloxEnum(EditableStatus)
 pub fn elastic_behavior() -> RobloxEnum(ElasticBehavior)
 
 @target(luau)
-/// Gets the Roblox `EngagementLevel` enum object.
-///
-/// Roblox: `Enum.EngagementLevel`
-@luau.global("Enum.EngagementLevel")
-pub fn engagement_level() -> RobloxEnum(EngagementLevel)
-
-@target(luau)
 /// Gets the Roblox `EngineFolder` enum object.
 ///
 /// Roblox: `Enum.EngineFolder`
@@ -1832,13 +1824,6 @@ pub fn engine_folder() -> RobloxEnum(EngineFolder)
 pub fn enviromental_physics_throttle() -> RobloxEnum(
   EnviromentalPhysicsThrottle,
 )
-
-@target(luau)
-/// Gets the Roblox `ExperienceActivationStatus` enum object.
-///
-/// Roblox: `Enum.ExperienceActivationStatus`
-@luau.global("Enum.ExperienceActivationStatus")
-pub fn experience_activation_status() -> RobloxEnum(ExperienceActivationStatus)
 
 @target(luau)
 /// Gets the Roblox `ExperienceAuthScope` enum object.
@@ -3151,15 +3136,6 @@ pub fn player_data_load_failure_behavior() -> RobloxEnum(
 /// See: https://create.roblox.com/docs/reference/engine/enums/PlayerExitReason
 @luau.global("Enum.PlayerExitReason")
 pub fn player_exit_reason() -> RobloxEnum(PlayerExitReason)
-
-@target(luau)
-/// Gets the Roblox `PlayerPlatformActivationStatus` enum object.
-///
-/// Roblox: `Enum.PlayerPlatformActivationStatus`
-@luau.global("Enum.PlayerPlatformActivationStatus")
-pub fn player_platform_activation_status() -> RobloxEnum(
-  PlayerPlatformActivationStatus,
-)
 
 @target(luau)
 /// Describes a player's platform-wide spender status bucket.
@@ -5187,10 +5163,8 @@ pub fn javascript_type_anchor(
   _: EasingStyle,
   _: EditableStatus,
   _: ElasticBehavior,
-  _: EngagementLevel,
   _: EngineFolder,
   _: EnviromentalPhysicsThrottle,
-  _: ExperienceActivationStatus,
   _: ExperienceAuthScope,
   _: ExperienceEventStatus,
   _: ExperienceStateCaptureSelectionMode,
@@ -5351,7 +5325,6 @@ pub fn javascript_type_anchor(
   _: PlayerDataErrorState,
   _: PlayerDataLoadFailureBehavior,
   _: PlayerExitReason,
-  _: PlayerPlatformActivationStatus,
   _: PlayerPlatformSpenderStatus,
   _: PluginConnectionTargetType,
   _: PoseEasingDirection,

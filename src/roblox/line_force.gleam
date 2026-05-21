@@ -4,8 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type Attachment, type BrickColor, type Constraint, type Instance,
-  type Int64, type LineForce, type Object, type SecurityCapabilities,
-  type UniqueId,
+  type LineForce, type Object, type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -402,7 +401,7 @@ pub fn set_sandboxed(instance: LineForce, value: Bool) -> LineForce
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: LineForce) -> Int64
+pub fn get_source_asset_id(instance: LineForce) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1178,7 +1177,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: BrickColor,
   _: Attachment,

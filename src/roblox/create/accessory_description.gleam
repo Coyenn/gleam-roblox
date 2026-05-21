@@ -2,7 +2,7 @@
 import roblox/accessory_description
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/types.{
-  type AccessoryDescription, type AccessoryType, type Instance, type Int64,
+  type AccessoryDescription, type AccessoryType, type Instance,
   type SecurityCapabilities, type Vector3,
 }
 
@@ -42,7 +42,7 @@ pub fn accessory_type(value: AccessoryType) -> Property(AccessoryDescription) {
 /// Roblox: `AccessoryDescription.AssetId`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription#AssetId
-pub fn asset_id(value: Int64) -> Property(AccessoryDescription) {
+pub fn asset_id(value: Int) -> Property(AccessoryDescription) {
   Property(fn(instance) { accessory_description.set_asset_id(instance, value) })
 }
 
@@ -205,7 +205,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
   _: Vector3,
-  _: Int64,
   _: AccessoryType,
   _: AccessoryDescription,
 ) -> Nil {

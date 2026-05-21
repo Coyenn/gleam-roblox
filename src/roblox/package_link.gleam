@@ -3,8 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type BinaryString, type ContentId, type Instance, type Int64,
-  type Object, type PackageLink, type SecurityCapabilities, type UniqueId,
+  type Actor, type BinaryString, type ContentId, type Instance, type Object,
+  type PackageLink, type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -88,7 +88,7 @@ pub fn get_serialized_default_attributes(instance: PackageLink) -> BinaryString
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/PackageLink#VersionNumber
 @luau.property("VersionNumber")
-pub fn get_version_number(instance: PackageLink) -> Int64
+pub fn get_version_number(instance: PackageLink) -> Int
 
 @target(luau)
 /// Gets Roblox property `PackageLink.Status`.
@@ -239,7 +239,7 @@ pub fn set_sandboxed(instance: PackageLink, value: Bool) -> PackageLink
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: PackageLink) -> Int64
+pub fn get_source_asset_id(instance: PackageLink) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1017,7 +1017,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: BinaryString,
   _: ContentId,

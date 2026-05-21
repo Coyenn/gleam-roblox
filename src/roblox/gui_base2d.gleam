@@ -4,8 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type GuiBase, type GuiBase2d, type GuiObject, type Instance,
-  type Int64, type LocalizationTable, type Object, type Rect,
-  type SecurityCapabilities, type SelectionBehavior, type UniqueId, type Vector2,
+  type LocalizationTable, type Object, type Rect, type SecurityCapabilities,
+  type SelectionBehavior, type UniqueId, type Vector2,
 }
 
 @target(luau)
@@ -430,7 +430,7 @@ pub fn set_sandboxed(instance: GuiBase2d, value: Bool) -> GuiBase2d
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: GuiBase2d) -> Int64
+pub fn get_source_asset_id(instance: GuiBase2d) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1206,7 +1206,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: GuiObject,
   _: SelectionBehavior,

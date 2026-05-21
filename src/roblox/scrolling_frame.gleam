@@ -6,7 +6,7 @@ import roblox/types.{
   type Actor, type AutomaticSize, type BorderMode, type Color3, type Content,
   type ContentId, type DraggingScrollBar, type EasingDirection, type EasingStyle,
   type ElasticBehavior, type GuiBase, type GuiBase2d, type GuiObject,
-  type GuiState, type InputObject, type InputSink, type Instance, type Int64,
+  type GuiState, type InputObject, type InputSink, type Instance,
   type LocalizationTable, type Object, type Rect, type ScrollBarInset,
   type ScrollingDirection, type ScrollingFrame, type SecurityCapabilities,
   type SelectionBehavior, type SizeConstraint, type SwipeDirection, type UDim2,
@@ -588,8 +588,6 @@ pub fn set_vertical_scroll_bar_position(
 ) -> ScrollingFrame
 
 @target(luau)
-/// Resets the inertial scroll velocity of the ScrollingFrame to 0 on both axes.
-///
 /// Roblox: `ScrollingFrame.ResetScrollVelocity`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ScrollingFrame#ResetScrollVelocity
@@ -2150,7 +2148,7 @@ pub fn set_sandboxed(instance: ScrollingFrame, value: Bool) -> ScrollingFrame
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: ScrollingFrame) -> Int64
+pub fn get_source_asset_id(instance: ScrollingFrame) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -2931,7 +2929,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: GuiObject,
   _: SelectionBehavior,

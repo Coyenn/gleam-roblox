@@ -3,9 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Int64, type Object, type Player,
-  type PlayerDataErrorState, type PlayerDataRecord, type SecurityCapabilities,
-  type UniqueId,
+  type Actor, type Instance, type Object, type Player, type PlayerDataErrorState,
+  type PlayerDataRecord, type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -26,7 +25,7 @@ pub fn as_object(instance: PlayerDataRecord) -> Object
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/PlayerDataRecord#CreatedTime
 @luau.property("CreatedTime")
-pub fn get_created_time(instance: PlayerDataRecord) -> Int64
+pub fn get_created_time(instance: PlayerDataRecord) -> Int
 
 @target(luau)
 /// Gets Roblox property `PlayerDataRecord.DefaultRecordName`.
@@ -66,7 +65,7 @@ pub fn get_error(instance: PlayerDataRecord) -> PlayerDataErrorState
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/PlayerDataRecord#FlushedTime
 @luau.property("FlushedTime")
-pub fn get_flushed_time(instance: PlayerDataRecord) -> Int64
+pub fn get_flushed_time(instance: PlayerDataRecord) -> Int
 
 @target(luau)
 /// Gets Roblox property `PlayerDataRecord.LoadedTime`.
@@ -76,7 +75,7 @@ pub fn get_flushed_time(instance: PlayerDataRecord) -> Int64
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/PlayerDataRecord#LoadedTime
 @luau.property("LoadedTime")
-pub fn get_loaded_time(instance: PlayerDataRecord) -> Int64
+pub fn get_loaded_time(instance: PlayerDataRecord) -> Int
 
 @target(luau)
 /// Gets Roblox property `PlayerDataRecord.ModifiedTime`.
@@ -86,7 +85,7 @@ pub fn get_loaded_time(instance: PlayerDataRecord) -> Int64
 /// Tags: ReadOnly, NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/PlayerDataRecord#ModifiedTime
 @luau.property("ModifiedTime")
-pub fn get_modified_time(instance: PlayerDataRecord) -> Int64
+pub fn get_modified_time(instance: PlayerDataRecord) -> Int
 
 @target(luau)
 /// Gets Roblox property `PlayerDataRecord.NewRecord`.
@@ -388,7 +387,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: PlayerDataRecord) -> Int64
+pub fn get_source_asset_id(instance: PlayerDataRecord) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1149,7 +1148,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Player,
   _: PlayerDataErrorState,

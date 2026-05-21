@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Int64, type Object, type Player,
+  type Actor, type Instance, type Object, type Player,
   type PromptExperienceDetailsResult, type SecurityCapabilities,
   type TeleportResult, type TeleportService, type UniqueId,
 }
@@ -114,7 +114,7 @@ pub fn set_teleport_setting(
 @luau.method("Teleport")
 pub fn teleport(
   instance: TeleportService,
-  place_id: Int64,
+  place_id: Int,
   player: Instance,
   teleport_data: Dynamic,
   custom_loading_screen: Instance,
@@ -138,7 +138,7 @@ pub fn teleport(
 @luau.method("TeleportToPlaceInstance")
 pub fn teleport_to_place_instance(
   instance: TeleportService,
-  place_id: Int64,
+  place_id: Int,
   instance_id: String,
   player: Instance,
   spawn_name: String,
@@ -164,7 +164,7 @@ pub fn teleport_to_place_instance(
 @luau.method("TeleportToPrivateServer")
 pub fn teleport_to_private_server(
   instance: TeleportService,
-  place_id: Int64,
+  place_id: Int,
   reserved_server_access_code: String,
   players: List(Instance),
   spawn_name: String,
@@ -189,7 +189,7 @@ pub fn teleport_to_private_server(
 @luau.method("TeleportToSpawnByName")
 pub fn teleport_to_spawn_by_name(
   instance: TeleportService,
-  place_id: Int64,
+  place_id: Int,
   spawn_name: String,
   player: Instance,
   teleport_data: Dynamic,
@@ -213,7 +213,7 @@ pub fn teleport_to_spawn_by_name(
 @luau.method("GetPlayerPlaceInstanceAsync")
 pub fn get_player_place_instance_async(
   instance: TeleportService,
-  user_id: Int64,
+  user_id: Int,
 ) -> Dynamic
 
 @target(luau)
@@ -235,7 +235,7 @@ pub fn get_player_place_instance_async(
 pub fn prompt_experience_details_async(
   instance: TeleportService,
   player: Player,
-  universe_id: Int64,
+  universe_id: Int,
 ) -> PromptExperienceDetailsResult
 
 @target(luau)
@@ -253,10 +253,7 @@ pub fn prompt_experience_details_async(
 /// Returns:
 /// - The server access code required by TeleportService:TeleportToPrivateServer() and the DataModel.PrivateServerId for the reserved server.
 @luau.method("ReserveServerAsync")
-pub fn reserve_server_async(
-  instance: TeleportService,
-  place_id: Int64,
-) -> Dynamic
+pub fn reserve_server_async(instance: TeleportService, place_id: Int) -> Dynamic
 
 @target(luau)
 /// The all-encompassing method to teleport a player or group of players from one server to another.
@@ -277,7 +274,7 @@ pub fn reserve_server_async(
 @luau.method("TeleportAsync")
 pub fn teleport_async(
   instance: TeleportService,
-  place_id: Int64,
+  place_id: Int,
   players: List(Instance),
   teleport_options: Instance,
 ) -> Instance
@@ -302,7 +299,7 @@ pub fn teleport_async(
 @luau.method("TeleportPartyAsync")
 pub fn teleport_party_async(
   instance: TeleportService,
-  place_id: Int64,
+  place_id: Int,
   players: List(Instance),
   teleport_data: Dynamic,
   custom_loading_screen: Instance,
@@ -342,9 +339,7 @@ pub fn on_local_player_arrived_from_teleport(
 @luau.event("TeleportInitFailed")
 pub fn teleport_init_failed(
   instance: TeleportService,
-) -> RBXScriptSignal(
-  fn(Instance, TeleportResult, String, Int64, Instance) -> Nil,
-)
+) -> RBXScriptSignal(fn(Instance, TeleportResult, String, Int, Instance) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `TeleportService.TeleportInitFailed`.
@@ -357,7 +352,7 @@ pub fn teleport_init_failed(
 @luau.global("(function(instance, callback) return instance.TeleportInitFailed:Connect(callback) end)")
 pub fn on_teleport_init_failed(
   instance: TeleportService,
-  callback: fn(Instance, TeleportResult, String, Int64, Instance) -> Nil,
+  callback: fn(Instance, TeleportResult, String, Int, Instance) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -497,7 +492,7 @@ pub fn set_sandboxed(instance: TeleportService, value: Bool) -> TeleportService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: TeleportService) -> Int64
+pub fn get_source_asset_id(instance: TeleportService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1278,7 +1273,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: TeleportResult,
   _: PromptExperienceDetailsResult,

@@ -4,8 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type ContentId, type DataModelMesh, type FileMesh, type Instance,
-  type Int64, type MeshType, type Object, type SecurityCapabilities,
-  type SpecialMesh, type UniqueId, type Vector3,
+  type MeshType, type Object, type SecurityCapabilities, type SpecialMesh,
+  type UniqueId, type Vector3,
 }
 
 @target(luau)
@@ -304,7 +304,7 @@ pub fn set_sandboxed(instance: SpecialMesh, value: Bool) -> SpecialMesh
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: SpecialMesh) -> Int64
+pub fn get_source_asset_id(instance: SpecialMesh) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1082,7 +1082,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Vector3,
   _: ContentId,

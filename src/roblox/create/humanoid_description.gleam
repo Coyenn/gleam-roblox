@@ -2,7 +2,7 @@
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/humanoid_description
 import roblox/types.{
-  type Color3, type HumanoidDescription, type Instance, type Int64,
+  type Color3, type HumanoidDescription, type Instance,
   type SecurityCapabilities,
 }
 
@@ -57,7 +57,7 @@ pub fn body_type_scale(value: Float) -> Property(HumanoidDescription) {
 /// Roblox: `HumanoidDescription.ClimbAnimation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#ClimbAnimation
-pub fn climb_animation(value: Int64) -> Property(HumanoidDescription) {
+pub fn climb_animation(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) {
     humanoid_description.set_climb_animation(instance, value)
   })
@@ -85,7 +85,7 @@ pub fn depth_scale(value: Float) -> Property(HumanoidDescription) {
 /// Roblox: `HumanoidDescription.Face`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#Face
-pub fn face(value: Int64) -> Property(HumanoidDescription) {
+pub fn face(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) { humanoid_description.set_face(instance, value) })
 }
 
@@ -112,7 +112,7 @@ pub fn face_accessory(value: String) -> Property(HumanoidDescription) {
 /// Roblox: `HumanoidDescription.FallAnimation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#FallAnimation
-pub fn fall_animation(value: Int64) -> Property(HumanoidDescription) {
+pub fn fall_animation(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) {
     humanoid_description.set_fall_animation(instance, value)
   })
@@ -141,7 +141,7 @@ pub fn front_accessory(value: String) -> Property(HumanoidDescription) {
 /// Roblox: `HumanoidDescription.GraphicTShirt`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#GraphicTShirt
-pub fn graphic_t_shirt(value: Int64) -> Property(HumanoidDescription) {
+pub fn graphic_t_shirt(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) {
     humanoid_description.set_graphic_t_shirt(instance, value)
   })
@@ -186,7 +186,7 @@ pub fn hat_accessory(value: String) -> Property(HumanoidDescription) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#Head
-pub fn head(value: Int64) -> Property(HumanoidDescription) {
+pub fn head(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) { humanoid_description.set_head(instance, value) })
 }
 
@@ -237,7 +237,7 @@ pub fn height_scale(value: Float) -> Property(HumanoidDescription) {
 /// Roblox: `HumanoidDescription.IdleAnimation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#IdleAnimation
-pub fn idle_animation(value: Int64) -> Property(HumanoidDescription) {
+pub fn idle_animation(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) {
     humanoid_description.set_idle_animation(instance, value)
   })
@@ -251,7 +251,7 @@ pub fn idle_animation(value: Int64) -> Property(HumanoidDescription) {
 /// Roblox: `HumanoidDescription.JumpAnimation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#JumpAnimation
-pub fn jump_animation(value: Int64) -> Property(HumanoidDescription) {
+pub fn jump_animation(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) {
     humanoid_description.set_jump_animation(instance, value)
   })
@@ -266,7 +266,7 @@ pub fn jump_animation(value: Int64) -> Property(HumanoidDescription) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#LeftArm
-pub fn left_arm(value: Int64) -> Property(HumanoidDescription) {
+pub fn left_arm(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) { humanoid_description.set_left_arm(instance, value) })
 }
 
@@ -294,7 +294,7 @@ pub fn left_arm_color(value: Color3) -> Property(HumanoidDescription) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#LeftLeg
-pub fn left_leg(value: Int64) -> Property(HumanoidDescription) {
+pub fn left_leg(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) { humanoid_description.set_left_leg(instance, value) })
 }
 
@@ -319,7 +319,7 @@ pub fn left_leg_color(value: Color3) -> Property(HumanoidDescription) {
 /// Roblox: `HumanoidDescription.MoodAnimation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#MoodAnimation
-pub fn mood_animation(value: Int64) -> Property(HumanoidDescription) {
+pub fn mood_animation(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) {
     humanoid_description.set_mood_animation(instance, value)
   })
@@ -348,7 +348,7 @@ pub fn neck_accessory(value: String) -> Property(HumanoidDescription) {
 /// Roblox: `HumanoidDescription.Pants`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#Pants
-pub fn pants(value: Int64) -> Property(HumanoidDescription) {
+pub fn pants(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) { humanoid_description.set_pants(instance, value) })
 }
 
@@ -375,7 +375,7 @@ pub fn proportion_scale(value: Float) -> Property(HumanoidDescription) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#RightArm
-pub fn right_arm(value: Int64) -> Property(HumanoidDescription) {
+pub fn right_arm(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) { humanoid_description.set_right_arm(instance, value) })
 }
 
@@ -403,7 +403,7 @@ pub fn right_arm_color(value: Color3) -> Property(HumanoidDescription) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#RightLeg
-pub fn right_leg(value: Int64) -> Property(HumanoidDescription) {
+pub fn right_leg(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) { humanoid_description.set_right_leg(instance, value) })
 }
 
@@ -430,7 +430,7 @@ pub fn right_leg_color(value: Color3) -> Property(HumanoidDescription) {
 /// Roblox: `HumanoidDescription.RunAnimation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#RunAnimation
-pub fn run_animation(value: Int64) -> Property(HumanoidDescription) {
+pub fn run_animation(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) {
     humanoid_description.set_run_animation(instance, value)
   })
@@ -444,7 +444,7 @@ pub fn run_animation(value: Int64) -> Property(HumanoidDescription) {
 /// Roblox: `HumanoidDescription.Shirt`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#Shirt
-pub fn shirt(value: Int64) -> Property(HumanoidDescription) {
+pub fn shirt(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) { humanoid_description.set_shirt(instance, value) })
 }
 
@@ -485,7 +485,7 @@ pub fn static_facial_animation(value: Bool) -> Property(HumanoidDescription) {
 /// Roblox: `HumanoidDescription.SwimAnimation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#SwimAnimation
-pub fn swim_animation(value: Int64) -> Property(HumanoidDescription) {
+pub fn swim_animation(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) {
     humanoid_description.set_swim_animation(instance, value)
   })
@@ -500,7 +500,7 @@ pub fn swim_animation(value: Int64) -> Property(HumanoidDescription) {
 /// ThreadSafety: ReadSafe
 /// Tags: NotReplicated
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#Torso
-pub fn torso(value: Int64) -> Property(HumanoidDescription) {
+pub fn torso(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) { humanoid_description.set_torso(instance, value) })
 }
 
@@ -554,7 +554,7 @@ pub fn waist_accessory(value: String) -> Property(HumanoidDescription) {
 /// Roblox: `HumanoidDescription.WalkAnimation`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/HumanoidDescription#WalkAnimation
-pub fn walk_animation(value: Int64) -> Property(HumanoidDescription) {
+pub fn walk_animation(value: Int) -> Property(HumanoidDescription) {
   Property(fn(instance) {
     humanoid_description.set_walk_animation(instance, value)
   })
@@ -644,7 +644,6 @@ pub fn sandboxed(value: Bool) -> Property(HumanoidDescription) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: Int64,
   _: Color3,
   _: HumanoidDescription,
 ) -> Nil {

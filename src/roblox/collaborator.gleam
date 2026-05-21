@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type CFrame, type Collaborator, type CollaboratorStatus,
-  type Color3, type Instance, type Int64, type Object, type SecurityCapabilities,
+  type Color3, type Instance, type Object, type SecurityCapabilities,
   type UniqueId,
 }
 
@@ -155,7 +155,7 @@ pub fn set_status(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Collaborator#UserId
 @luau.property("UserId")
-pub fn get_user_id(instance: Collaborator) -> Int64
+pub fn get_user_id(instance: Collaborator) -> Int
 
 @target(luau)
 /// Sets Roblox property `Collaborator.UserId`.
@@ -165,7 +165,7 @@ pub fn get_user_id(instance: Collaborator) -> Int64
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Collaborator#UserId
 @luau.set_property("UserId")
-pub fn set_user_id(instance: Collaborator, value: Int64) -> Collaborator
+pub fn set_user_id(instance: Collaborator, value: Int) -> Collaborator
 
 @target(luau)
 /// Gets Roblox property `Collaborator.Username`.
@@ -324,7 +324,7 @@ pub fn set_sandboxed(instance: Collaborator, value: Bool) -> Collaborator
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Collaborator) -> Int64
+pub fn get_source_asset_id(instance: Collaborator) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1105,7 +1105,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: CollaboratorStatus,
   _: Color3,

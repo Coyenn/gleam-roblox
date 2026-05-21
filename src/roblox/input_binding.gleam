@@ -3,9 +3,9 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type GuiButton, type InputBinding, type Instance, type Int64,
-  type KeyCode, type Object, type SecurityCapabilities, type UniqueId,
-  type Vector2, type Vector3,
+  type Actor, type GuiButton, type InputBinding, type Instance, type KeyCode,
+  type Object, type SecurityCapabilities, type UniqueId, type Vector2,
+  type Vector3,
 }
 
 @target(luau)
@@ -363,24 +363,6 @@ pub fn get_ui_button(instance: InputBinding) -> GuiButton
 pub fn set_ui_button(instance: InputBinding, value: GuiButton) -> InputBinding
 
 @target(luau)
-/// Gets Roblox property `InputBinding.UIModifier`.
-///
-/// Roblox: `InputBinding.UIModifier`
-/// ThreadSafety: ReadSafe
-/// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#UIModifier
-@luau.property("UIModifier")
-pub fn get_ui_modifier(instance: InputBinding) -> GuiButton
-
-@target(luau)
-/// Sets Roblox property `InputBinding.UIModifier`.
-///
-/// Roblox: `InputBinding.UIModifier`
-/// ThreadSafety: ReadSafe
-/// See: https://create.roblox.com/docs/reference/engine/classes/InputBinding#UIModifier
-@luau.set_property("UIModifier")
-pub fn set_ui_modifier(instance: InputBinding, value: GuiButton) -> InputBinding
-
-@target(luau)
 /// Gets Roblox property `InputBinding.Up`.
 ///
 /// Specifies an alternate KeyCode for dispatching directionally "up" inputs to the parent InputAction.
@@ -579,7 +561,7 @@ pub fn set_sandboxed(instance: InputBinding, value: Bool) -> InputBinding
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: InputBinding) -> Int64
+pub fn get_source_asset_id(instance: InputBinding) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1360,7 +1342,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Vector3,
   _: Vector2,

@@ -3,9 +3,9 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type BasePlayerGui, type CoreGuiType, type Instance, type Int64,
-  type Object, type ScreenOrientation, type SecurityCapabilities,
-  type StarterGui, type StyleSheet, type UniqueId,
+  type Actor, type BasePlayerGui, type CoreGuiType, type Instance, type Object,
+  type ScreenOrientation, type SecurityCapabilities, type StarterGui,
+  type StyleSheet, type UniqueId,
 }
 
 @target(luau)
@@ -330,7 +330,7 @@ pub fn set_sandboxed(instance: StarterGui, value: Bool) -> StarterGui
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: StarterGui) -> Int64
+pub fn get_source_asset_id(instance: StarterGui) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1106,7 +1106,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: CoreGuiType,
   _: StyleSheet,

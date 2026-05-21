@@ -4,9 +4,9 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type ChatWindowConfiguration, type ChatWindowMessageProperties,
-  type Color3, type Font, type HorizontalAlignment, type Instance, type Int64,
-  type Object, type SecurityCapabilities, type TextChatConfigurations,
-  type UniqueId, type Vector2, type VerticalAlignment,
+  type Color3, type Font, type HorizontalAlignment, type Instance, type Object,
+  type SecurityCapabilities, type TextChatConfigurations, type UniqueId,
+  type Vector2, type VerticalAlignment,
 }
 
 @target(luau)
@@ -256,7 +256,7 @@ pub fn set_text_color3(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/ChatWindowConfiguration#TextSize
 @luau.property("TextSize")
-pub fn get_text_size(instance: ChatWindowConfiguration) -> Int64
+pub fn get_text_size(instance: ChatWindowConfiguration) -> Int
 
 @target(luau)
 /// Sets Roblox property `ChatWindowConfiguration.TextSize`.
@@ -269,7 +269,7 @@ pub fn get_text_size(instance: ChatWindowConfiguration) -> Int64
 @luau.set_property("TextSize")
 pub fn set_text_size(
   instance: ChatWindowConfiguration,
-  value: Int64,
+  value: Int,
 ) -> ChatWindowConfiguration
 
 @target(luau)
@@ -539,7 +539,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: ChatWindowConfiguration) -> Int64
+pub fn get_source_asset_id(instance: ChatWindowConfiguration) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1336,7 +1336,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: ChatWindowMessageProperties,
   _: VerticalAlignment,

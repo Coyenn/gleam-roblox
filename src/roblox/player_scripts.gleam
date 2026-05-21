@@ -4,9 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type ComputerCameraMovementMode, type ComputerMovementMode,
-  type Instance, type Int64, type Object, type PlayerScripts,
-  type SecurityCapabilities, type TouchCameraMovementMode,
-  type TouchMovementMode, type UniqueId,
+  type Instance, type Object, type PlayerScripts, type SecurityCapabilities,
+  type TouchCameraMovementMode, type TouchMovementMode, type UniqueId,
 }
 
 @target(luau)
@@ -20,50 +19,50 @@ pub fn as_instance(instance: PlayerScripts) -> Instance
 pub fn as_object(instance: PlayerScripts) -> Object
 
 @target(luau)
-/// Unregisters all ComputerCameraMovementMode enums from the game's settings menu.
+/// Unregisters all ComputerCameraMovementMode enums from the experience's settings menu.
 ///
 /// Roblox: `PlayerScripts.ClearComputerCameraMovementModes`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PlayerScripts#ClearComputerCameraMovementModes
 ///
 /// Parameters:
-/// - `instance`: A container for client-side scripts to be run inside Player objects within the Players service.
+/// - `instance`: A container for LocalScripts to be run on the client.
 @luau.method("ClearComputerCameraMovementModes")
 pub fn clear_computer_camera_movement_modes(instance: PlayerScripts) -> Nil
 
 @target(luau)
-/// Unregisters all ComputerMovementMode enums from the game's settings menu.
+/// Unregisters all ComputerMovementMode enums from the experience's settings menu.
 ///
 /// Roblox: `PlayerScripts.ClearComputerMovementModes`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PlayerScripts#ClearComputerMovementModes
 ///
 /// Parameters:
-/// - `instance`: A container for client-side scripts to be run inside Player objects within the Players service.
+/// - `instance`: A container for LocalScripts to be run on the client.
 @luau.method("ClearComputerMovementModes")
 pub fn clear_computer_movement_modes(instance: PlayerScripts) -> Nil
 
 @target(luau)
-/// Unregisters all TouchCameraMovementMode enums from the game's settings menu.
+/// Unregisters all TouchCameraMovementMode enums from the experience's settings menu.
 ///
 /// Roblox: `PlayerScripts.ClearTouchCameraMovementModes`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PlayerScripts#ClearTouchCameraMovementModes
 ///
 /// Parameters:
-/// - `instance`: A container for client-side scripts to be run inside Player objects within the Players service.
+/// - `instance`: A container for LocalScripts to be run on the client.
 @luau.method("ClearTouchCameraMovementModes")
 pub fn clear_touch_camera_movement_modes(instance: PlayerScripts) -> Nil
 
 @target(luau)
-/// Unregisters all TouchMovementMode enums from the game's settings menu.
+/// Unregisters all TouchMovementMode enums from the experience's settings menu.
 ///
 /// Roblox: `PlayerScripts.ClearTouchMovementModes`
 /// ThreadSafety: Unsafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/PlayerScripts#ClearTouchMovementModes
 ///
 /// Parameters:
-/// - `instance`: A container for client-side scripts to be run inside Player objects within the Players service.
+/// - `instance`: A container for LocalScripts to be run on the client.
 @luau.method("ClearTouchMovementModes")
 pub fn clear_touch_movement_modes(instance: PlayerScripts) -> Nil
 
@@ -75,7 +74,7 @@ pub fn clear_touch_movement_modes(instance: PlayerScripts) -> Nil
 /// See: https://create.roblox.com/docs/reference/engine/classes/PlayerScripts#RegisterComputerCameraMovementMode
 ///
 /// Parameters:
-/// - `instance`: A container for client-side scripts to be run inside Player objects within the Players service.
+/// - `instance`: A container for LocalScripts to be run on the client.
 @luau.method("RegisterComputerCameraMovementMode")
 pub fn register_computer_camera_movement_mode(
   instance: PlayerScripts,
@@ -90,7 +89,7 @@ pub fn register_computer_camera_movement_mode(
 /// See: https://create.roblox.com/docs/reference/engine/classes/PlayerScripts#RegisterComputerMovementMode
 ///
 /// Parameters:
-/// - `instance`: A container for client-side scripts to be run inside Player objects within the Players service.
+/// - `instance`: A container for LocalScripts to be run on the client.
 @luau.method("RegisterComputerMovementMode")
 pub fn register_computer_movement_mode(
   instance: PlayerScripts,
@@ -105,7 +104,7 @@ pub fn register_computer_movement_mode(
 /// See: https://create.roblox.com/docs/reference/engine/classes/PlayerScripts#RegisterTouchCameraMovementMode
 ///
 /// Parameters:
-/// - `instance`: A container for client-side scripts to be run inside Player objects within the Players service.
+/// - `instance`: A container for LocalScripts to be run on the client.
 @luau.method("RegisterTouchCameraMovementMode")
 pub fn register_touch_camera_movement_mode(
   instance: PlayerScripts,
@@ -120,7 +119,7 @@ pub fn register_touch_camera_movement_mode(
 /// See: https://create.roblox.com/docs/reference/engine/classes/PlayerScripts#RegisterTouchMovementMode
 ///
 /// Parameters:
-/// - `instance`: A container for client-side scripts to be run inside Player objects within the Players service.
+/// - `instance`: A container for LocalScripts to be run on the client.
 @luau.method("RegisterTouchMovementMode")
 pub fn register_touch_movement_mode(
   instance: PlayerScripts,
@@ -264,7 +263,7 @@ pub fn set_sandboxed(instance: PlayerScripts, value: Bool) -> PlayerScripts
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: PlayerScripts) -> Int64
+pub fn get_source_asset_id(instance: PlayerScripts) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1045,7 +1044,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: TouchMovementMode,
   _: TouchCameraMovementMode,

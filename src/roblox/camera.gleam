@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type CFrame, type Camera, type CameraType, type FieldOfViewMode,
-  type Instance, type Int64, type Object, type PVInstance, type Ray,
+  type Instance, type Object, type PVInstance, type Ray,
   type SecurityCapabilities, type UniqueId, type Vector2, type Vector3,
 }
 
@@ -648,7 +648,7 @@ pub fn set_sandboxed(instance: Camera, value: Bool) -> Camera
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Camera) -> Int64
+pub fn get_source_asset_id(instance: Camera) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1407,7 +1407,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: CFrame,
   _: Vector3,

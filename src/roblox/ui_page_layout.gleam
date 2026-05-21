@@ -4,8 +4,8 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type EasingDirection, type EasingStyle, type FillDirection,
-  type GuiObject, type HorizontalAlignment, type Instance, type Int64,
-  type Object, type SecurityCapabilities, type SortOrder, type UDim, type UIBase,
+  type GuiObject, type HorizontalAlignment, type Instance, type Object,
+  type SecurityCapabilities, type SortOrder, type UDim, type UIBase,
   type UIComponent, type UIGridStyleLayout, type UILayout, type UIPageLayout,
   type UniqueId, type Vector2, type VerticalAlignment,
 }
@@ -627,7 +627,7 @@ pub fn set_sandboxed(instance: UIPageLayout, value: Bool) -> UIPageLayout
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: UIPageLayout) -> Int64
+pub fn get_source_asset_id(instance: UIPageLayout) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1408,7 +1408,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: VerticalAlignment,
   _: SortOrder,

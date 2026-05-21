@@ -3,7 +3,7 @@ import roblox/bubble_chat_message_properties
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/types.{
   type BubbleChatMessageProperties, type Color3, type Font, type Instance,
-  type Int64, type SecurityCapabilities,
+  type SecurityCapabilities,
 }
 
 @target(luau)
@@ -100,7 +100,7 @@ pub fn text_color3(value: Color3) -> Property(BubbleChatMessageProperties) {
 /// Roblox: `BubbleChatMessageProperties.TextSize`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/BubbleChatMessageProperties#TextSize
-pub fn text_size(value: Int64) -> Property(BubbleChatMessageProperties) {
+pub fn text_size(value: Int) -> Property(BubbleChatMessageProperties) {
   Property(fn(instance) {
     bubble_chat_message_properties.set_text_size(instance, value)
   })
@@ -226,7 +226,6 @@ pub fn sandboxed(value: Bool) -> Property(BubbleChatMessageProperties) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: Int64,
   _: Color3,
   _: Font,
   _: BubbleChatMessageProperties,

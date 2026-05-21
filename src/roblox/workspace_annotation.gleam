@@ -3,9 +3,9 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Annotation, type Color3, type Instance, type Int64,
-  type Object, type PVInstance, type SecurityCapabilities, type UniqueId,
-  type Vector3, type WorkspaceAnnotation,
+  type Actor, type Annotation, type Color3, type Instance, type Object,
+  type PVInstance, type SecurityCapabilities, type UniqueId, type Vector3,
+  type WorkspaceAnnotation,
 }
 
 @target(luau)
@@ -68,7 +68,7 @@ pub fn get_author_color3(instance: WorkspaceAnnotation) -> Color3
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Annotation#AuthorId
 @luau.property("AuthorId")
-pub fn get_author_id(instance: WorkspaceAnnotation) -> Int64
+pub fn get_author_id(instance: WorkspaceAnnotation) -> Int
 
 @target(luau)
 /// Gets Roblox property `Annotation.ChannelId`.
@@ -98,7 +98,7 @@ pub fn get_contents(instance: WorkspaceAnnotation) -> String
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Annotation#CreationTimeUnix
 @luau.property("CreationTimeUnix")
-pub fn get_creation_time_unix(instance: WorkspaceAnnotation) -> Int64
+pub fn get_creation_time_unix(instance: WorkspaceAnnotation) -> Int
 
 @target(luau)
 /// Gets Roblox property `Annotation.LastModifiedTimeUnix`.
@@ -108,7 +108,7 @@ pub fn get_creation_time_unix(instance: WorkspaceAnnotation) -> Int64
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Annotation#LastModifiedTimeUnix
 @luau.property("LastModifiedTimeUnix")
-pub fn get_last_modified_time_unix(instance: WorkspaceAnnotation) -> Int64
+pub fn get_last_modified_time_unix(instance: WorkspaceAnnotation) -> Int
 
 @target(luau)
 /// Gets Roblox property `Annotation.LoadingReplies`.
@@ -128,7 +128,7 @@ pub fn get_loading_replies(instance: WorkspaceAnnotation) -> Bool
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Annotation#ReplyCount
 @luau.property("ReplyCount")
-pub fn get_reply_count(instance: WorkspaceAnnotation) -> Int64
+pub fn get_reply_count(instance: WorkspaceAnnotation) -> Int
 
 @target(luau)
 /// Gets Roblox property `Annotation.Resolved`.
@@ -299,7 +299,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: WorkspaceAnnotation) -> Int64
+pub fn get_source_asset_id(instance: WorkspaceAnnotation) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1094,7 +1094,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Color3,
   _: Vector3,

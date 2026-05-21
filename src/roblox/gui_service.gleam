@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type DisplayScalingMode, type DisplaySize, type Folder,
-  type GuiObject, type GuiService, type Instance, type Int64, type Object,
+  type GuiObject, type GuiService, type Instance, type Object,
   type PreferredTextSize, type Rect, type ScreenInsets,
   type SecurityCapabilities, type UniqueId, type Vector2,
 }
@@ -389,7 +389,7 @@ pub fn inspect_player_from_humanoid_description(
 /// - `instance`: Offers numerous properties and methods for working with GuiObjects, player preferences, and other UI‑related tasks.
 /// - `userId`: The UserId of the player to inspect.
 @luau.method("InspectPlayerFromUserId")
-pub fn inspect_player_from_user_id(instance: GuiService, user_id: Int64) -> Nil
+pub fn inspect_player_from_user_id(instance: GuiService, user_id: Int) -> Nil
 
 @target(luau)
 /// Returns true if the client is using the ten foot interface, a special version of Roblox's UI exclusive to consoles.
@@ -653,7 +653,7 @@ pub fn set_sandboxed(instance: GuiService, value: Bool) -> GuiService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: GuiService) -> Int64
+pub fn get_source_asset_id(instance: GuiService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1429,7 +1429,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Rect,
   _: ScreenInsets,

@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type BasePart, type CFrame, type Instance, type Int64, type Model,
+  type Actor, type BasePart, type CFrame, type Instance, type Model,
   type ModelLevelOfDetail, type ModelStreamingMode, type Object, type PVInstance,
   type Player, type SecurityCapabilities, type Status, type UniqueId,
   type Vector3,
@@ -397,7 +397,7 @@ pub fn set_sandboxed(instance: Status, value: Bool) -> Status
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Status) -> Int64
+pub fn get_source_asset_id(instance: Status) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1156,7 +1156,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: CFrame,
   _: Vector3,

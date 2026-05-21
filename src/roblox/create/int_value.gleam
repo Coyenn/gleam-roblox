@@ -1,9 +1,7 @@
 // Generated declarative builders for Roblox `IntValue` instances.
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/int_value
-import roblox/types.{
-  type Instance, type Int64, type IntValue, type SecurityCapabilities,
-}
+import roblox/types.{type Instance, type IntValue, type SecurityCapabilities}
 
 @target(luau)
 @luau.global("(function(x) return x end)")
@@ -27,7 +25,7 @@ pub fn node(
 /// Roblox: `IntValue.Value`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/IntValue#Value
-pub fn value(value: Int64) -> Property(IntValue) {
+pub fn value(value: Int) -> Property(IntValue) {
   Property(fn(instance) { int_value.set_value(instance, value) })
 }
 
@@ -97,7 +95,6 @@ pub fn sandboxed(value: Bool) -> Property(IntValue) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: Int64,
   _: IntValue,
 ) -> Nil {
   Nil

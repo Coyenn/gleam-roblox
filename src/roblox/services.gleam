@@ -32,13 +32,12 @@ import roblox/types.{
   type ExplorerServiceVisibilityService, type FaceAnimatorService,
   type FacialAgeEstimationService, type FacialAnimationRecordingService,
   type FacialAnimationStreamingServiceV2, type FeatureRestrictionManager,
-  type FileManagerService, type FileSyncReplicationService,
-  type FlagStandService, type FlyweightService, type FriendService,
-  type GamePassService, type GameSettings, type GamepadService,
-  type GenerationService, type GenericChallengeService, type Geometry,
-  type GeometryService, type GongService, type GroupService, type GuiService,
-  type GuidRegistryService, type HSRDataContentProvider, type HapticService,
-  type HarmonyService, type HeapProfilerService, type HeatmapQueryService,
+  type FileManagerService, type FlagStandService, type FlyweightService,
+  type FriendService, type GamePassService, type GameSettings,
+  type GamepadService, type GenerationService, type GenericChallengeService,
+  type Geometry, type GeometryService, type GongService, type GroupService,
+  type GuiService, type GuidRegistryService, type HSRDataContentProvider,
+  type HapticService, type HarmonyService, type HeapProfilerService,
   type HeatmapService, type HeightmapImporterService, type Hopper,
   type HttpRbxApiService, type HttpService, type ILegacyStudioBridge,
   type IXPService, type ImageScreenCaptureService, type IncrementalPatchBuilder,
@@ -757,13 +756,6 @@ pub fn feature_restriction_manager() -> FeatureRestrictionManager
 pub fn file_manager_service() -> FileManagerService
 
 @target(luau)
-/// Gets the `FileSyncReplicationService` service from the global `game` singleton.
-///
-/// Roblox: `game:GetService("FileSyncReplicationService")`
-@luau.global("game:GetService(\"FileSyncReplicationService\")")
-pub fn file_sync_replication_service() -> FileSyncReplicationService
-
-@target(luau)
 /// An internal service responsible for handling the now deprecated FlagStand and Flag objects.
 ///
 /// Roblox: `game:GetService("FlagStandService")`
@@ -903,13 +895,6 @@ pub fn harmony_service() -> HarmonyService
 /// See: https://create.roblox.com/docs/reference/engine/classes/HeapProfilerService
 @luau.global("game:GetService(\"HeapProfilerService\")")
 pub fn heap_profiler_service() -> HeapProfilerService
-
-@target(luau)
-/// Gets the `HeatmapQueryService` service from the global `game` singleton.
-///
-/// Roblox: `game:GetService("HeatmapQueryService")`
-@luau.global("game:GetService(\"HeatmapQueryService\")")
-pub fn heatmap_query_service() -> HeatmapQueryService
 
 @target(luau)
 /// Gets the `HeatmapService` service from the global `game` singleton.
@@ -1988,7 +1973,7 @@ pub fn start_page_service() -> StartPageService
 pub fn starter_gui() -> StarterGui
 
 @target(luau)
-/// A container whose contents are copied into each player's Backpack when their player character spawns. It is generally used to hold Tools.
+/// A service-level container whose contents are copied into each player's Backpack when the player spawns. It is generally used to hold Tools, but is sometimes used to hold LocalScripts to ensure that each player gets a copy.
 ///
 /// Roblox: `game:GetService("StarterPack")`
 /// See: https://create.roblox.com/docs/reference/engine/classes/StarterPack
@@ -2601,7 +2586,6 @@ pub fn javascript_type_anchor(
   _: FacialAnimationStreamingServiceV2,
   _: FeatureRestrictionManager,
   _: FileManagerService,
-  _: FileSyncReplicationService,
   _: FlagStandService,
   _: FlyweightService,
   _: FriendService,
@@ -2620,7 +2604,6 @@ pub fn javascript_type_anchor(
   _: HapticService,
   _: HarmonyService,
   _: HeapProfilerService,
-  _: HeatmapQueryService,
   _: HeatmapService,
   _: HeightmapImporterService,
   _: Hopper,

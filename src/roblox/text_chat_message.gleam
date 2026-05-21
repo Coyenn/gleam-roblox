@@ -4,9 +4,9 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BubbleChatMessageProperties, type ChatWindowMessageProperties,
-  type DateTime, type Instance, type Int64, type Object,
-  type SecurityCapabilities, type TextChannel, type TextChatMessage,
-  type TextChatMessageStatus, type TextSource, type UniqueId,
+  type DateTime, type Instance, type Object, type SecurityCapabilities,
+  type TextChannel, type TextChatMessage, type TextChatMessageStatus,
+  type TextSource, type UniqueId,
 }
 
 @target(luau)
@@ -176,26 +176,6 @@ pub fn set_prefix_text(
   instance: TextChatMessage,
   value: String,
 ) -> TextChatMessage
-
-@target(luau)
-/// Gets Roblox property `TextChatMessage.PresetChatVersion`.
-///
-/// Roblox: `TextChatMessage.PresetChatVersion`
-/// ThreadSafety: ReadSafe
-/// Tags: Hidden
-/// See: https://create.roblox.com/docs/reference/engine/classes/TextChatMessage#PresetChatVersion
-@luau.property("PresetChatVersion")
-pub fn get_preset_chat_version(instance: TextChatMessage) -> String
-
-@target(luau)
-/// Gets Roblox property `TextChatMessage.PresetId`.
-///
-/// Roblox: `TextChatMessage.PresetId`
-/// ThreadSafety: ReadSafe
-/// Tags: Hidden
-/// See: https://create.roblox.com/docs/reference/engine/classes/TextChatMessage#PresetId
-@luau.property("PresetId")
-pub fn get_preset_id(instance: TextChatMessage) -> String
 
 @target(luau)
 /// Gets Roblox property `TextChatMessage.RewrittenText`.
@@ -511,7 +491,7 @@ pub fn set_sandboxed(instance: TextChatMessage, value: Bool) -> TextChatMessage
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: TextChatMessage) -> Int64
+pub fn get_source_asset_id(instance: TextChatMessage) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1292,7 +1272,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: DateTime,
   _: TextSource,

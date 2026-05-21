@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type BaseImportData, type Instance, type Int64, type MeshScaleUnit,
+  type Actor, type BaseImportData, type Instance, type MeshScaleUnit,
   type NormalId, type Object, type PhysicalConstraintType, type RestPose,
   type RigScale, type RigType, type RootImportData, type SecurityCapabilities,
   type UniqueId, type Vector3,
@@ -299,7 +299,7 @@ pub fn get_polygon_count(instance: RootImportData) -> Float
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RootImportData#PreferredUploadId
 @luau.property("PreferredUploadId")
-pub fn get_preferred_upload_id(instance: RootImportData) -> Int64
+pub fn get_preferred_upload_id(instance: RootImportData) -> Int
 
 @target(luau)
 /// Sets Roblox property `RootImportData.PreferredUploadId`.
@@ -310,7 +310,7 @@ pub fn get_preferred_upload_id(instance: RootImportData) -> Int64
 @luau.set_property("PreferredUploadId")
 pub fn set_preferred_upload_id(
   instance: RootImportData,
-  value: Int64,
+  value: Int,
 ) -> RootImportData
 
 @target(luau)
@@ -503,7 +503,7 @@ pub fn set_validate_ugc_body(
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/RootImportData#VersionedAssetId
 @luau.property("VersionedAssetId")
-pub fn get_versioned_asset_id(instance: RootImportData) -> Int64
+pub fn get_versioned_asset_id(instance: RootImportData) -> Int
 
 @target(luau)
 /// Sets Roblox property `RootImportData.VersionedAssetId`.
@@ -514,7 +514,7 @@ pub fn get_versioned_asset_id(instance: RootImportData) -> Int64
 @luau.set_property("VersionedAssetId")
 pub fn set_versioned_asset_id(
   instance: RootImportData,
-  value: Int64,
+  value: Int,
 ) -> RootImportData
 
 @target(luau)
@@ -787,7 +787,7 @@ pub fn set_sandboxed(instance: RootImportData, value: Bool) -> RootImportData
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: RootImportData) -> Int64
+pub fn get_source_asset_id(instance: RootImportData) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1568,7 +1568,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: NormalId,
   _: MeshScaleUnit,

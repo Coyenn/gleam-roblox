@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Content, type Instance, type Int64, type Object,
+  type Actor, type Content, type Instance, type Object,
   type SecurityCapabilities, type UniqueId, type Vector2,
   type WrapTextureTransfer,
 }
@@ -249,7 +249,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: WrapTextureTransfer) -> Int64
+pub fn get_source_asset_id(instance: WrapTextureTransfer) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1044,7 +1044,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Vector2,
   _: Content,

@@ -930,8 +930,6 @@ pub type ElasticBehavior
 
 pub type EncodingService
 
-pub type EngagementLevel
-
 pub type EngineFolder
 
 pub type EnviromentalPhysicsThrottle
@@ -945,8 +943,6 @@ pub type EventIngestService
 pub type ExampleV2Service
 
 pub type ExecutedRemoteCommand
-
-pub type ExperienceActivationStatus
 
 pub type ExperienceAuthScope
 
@@ -1025,8 +1021,6 @@ pub type File
 pub type FileManagerService
 
 pub type FileMesh
-
-pub type FileSyncReplicationService
 
 pub type FillDirection
 
@@ -1194,8 +1188,6 @@ pub type Hat
 
 pub type HeapProfilerService
 
-pub type HeatmapQueryService
-
 pub type HeatmapService
 
 pub type HeightmapImporterService
@@ -1315,8 +1307,6 @@ pub type InstanceExtensionsService
 pub type InstanceFileSyncService
 
 pub type InstanceFileSyncStatus
-
-pub type Int64
 
 pub type IntConstrainedValue
 
@@ -1835,8 +1825,6 @@ pub type PlayerHydrationService
 pub type PlayerListConfiguration
 
 pub type PlayerMouse
-
-pub type PlayerPlatformActivationStatus
 
 pub type PlayerPlatformSpenderStatus
 

@@ -6,7 +6,7 @@ import roblox/types.{
   type ActionOnAutoResumeSync, type ActionOnStopSync, type Actor,
   type AutoIndentRule, type CameraNavigationModel, type CameraSpeedAdjustBinding,
   type Color3, type CompletionAcceptanceBehavior, type DefaultScriptSyncFileType,
-  type ExternalEditorMode, type HoverAnimateSpeed, type Instance, type Int64,
+  type ExternalEditorMode, type HoverAnimateSpeed, type Instance,
   type ListDisplayMode, type Object, type OutputLayoutMode,
   type PermissionLevelShown, type PreferredTextSize, type QDir, type QFont,
   type RuntimeUndoBehavior, type SecurityCapabilities, type Studio,
@@ -3200,7 +3200,7 @@ pub fn set_sandboxed(instance: Studio, value: Bool) -> Studio
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: Studio) -> Int64
+pub fn get_source_asset_id(instance: Studio) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -3959,7 +3959,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Color3,
   _: StudioScriptEditorColorPresets,

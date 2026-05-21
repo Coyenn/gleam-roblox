@@ -2,7 +2,7 @@
 import roblox/character_mesh
 import roblox/create.{type Node, type Property, Node, Property, apply}
 import roblox/types.{
-  type BodyPart, type CharacterMesh, type Content, type Instance, type Int64,
+  type BodyPart, type CharacterMesh, type Content, type Instance,
   type SecurityCapabilities,
 }
 
@@ -40,7 +40,7 @@ pub fn base_texture_content(value: Content) -> Property(CharacterMesh) {
 /// Roblox: `CharacterMesh.BaseTextureId`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CharacterMesh#BaseTextureId
-pub fn base_texture_id(value: Int64) -> Property(CharacterMesh) {
+pub fn base_texture_id(value: Int) -> Property(CharacterMesh) {
   Property(fn(instance) { character_mesh.set_base_texture_id(instance, value) })
 }
 
@@ -74,7 +74,7 @@ pub fn mesh_content(value: Content) -> Property(CharacterMesh) {
 /// Roblox: `CharacterMesh.MeshId`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CharacterMesh#MeshId
-pub fn mesh_id(value: Int64) -> Property(CharacterMesh) {
+pub fn mesh_id(value: Int) -> Property(CharacterMesh) {
   Property(fn(instance) { character_mesh.set_mesh_id(instance, value) })
 }
 
@@ -98,7 +98,7 @@ pub fn overlay_texture_content(value: Content) -> Property(CharacterMesh) {
 /// Roblox: `CharacterMesh.OverlayTextureId`
 /// ThreadSafety: ReadSafe
 /// See: https://create.roblox.com/docs/reference/engine/classes/CharacterMesh#OverlayTextureId
-pub fn overlay_texture_id(value: Int64) -> Property(CharacterMesh) {
+pub fn overlay_texture_id(value: Int) -> Property(CharacterMesh) {
   Property(fn(instance) {
     character_mesh.set_overlay_texture_id(instance, value)
   })
@@ -170,7 +170,6 @@ pub fn sandboxed(value: Bool) -> Property(CharacterMesh) {
 pub fn javascript_type_anchor(
   _: Instance,
   _: SecurityCapabilities,
-  _: Int64,
   _: Content,
   _: BodyPart,
   _: CharacterMesh,

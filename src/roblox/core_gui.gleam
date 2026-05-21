@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BasePlayerGui, type CoreGui, type GuiObject, type Instance,
-  type Int64, type Object, type SecurityCapabilities, type UniqueId,
+  type Object, type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -201,7 +201,7 @@ pub fn set_sandboxed(instance: CoreGui, value: Bool) -> CoreGui
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: CoreGui) -> Int64
+pub fn get_source_asset_id(instance: CoreGui) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -969,7 +969,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: GuiObject,
   _: CoreGui,

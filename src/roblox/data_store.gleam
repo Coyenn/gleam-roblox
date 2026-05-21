@@ -6,8 +6,8 @@ import roblox/types.{
   type Actor, type DataStore, type DataStoreGetOptions,
   type DataStoreIncrementOptions, type DataStoreKeyPages,
   type DataStoreSetOptions, type DataStoreVersionPages, type GlobalDataStore,
-  type Instance, type Int64, type Object, type SecurityCapabilities,
-  type SortDirection, type UniqueId,
+  type Instance, type Object, type SecurityCapabilities, type SortDirection,
+  type UniqueId,
 }
 
 @target(luau)
@@ -64,7 +64,7 @@ pub fn get_version_async(
 pub fn get_version_at_time_async(
   instance: DataStore,
   key: String,
-  timestamp: Int64,
+  timestamp: Int,
 ) -> Dynamic
 
 @target(luau)
@@ -114,8 +114,8 @@ pub fn list_versions_async(
   instance: DataStore,
   key: String,
   sort_direction: SortDirection,
-  min_date: Int64,
-  max_date: Int64,
+  min_date: Int,
+  max_date: Int,
   page_size: Int,
 ) -> DataStoreVersionPages
 
@@ -368,7 +368,7 @@ pub fn set_sandboxed(instance: DataStore, value: Bool) -> DataStore
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: DataStore) -> Int64
+pub fn get_source_asset_id(instance: DataStore) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1144,7 +1144,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: DataStoreSetOptions,
   _: DataStoreIncrementOptions,

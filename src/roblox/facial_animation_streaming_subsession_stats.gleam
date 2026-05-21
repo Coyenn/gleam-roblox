@@ -4,7 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type FacialAnimationStreamingSubsessionStats, type Instance,
-  type Int64, type Object, type SecurityCapabilities, type UniqueId,
+  type Object, type SecurityCapabilities, type UniqueId,
 }
 
 @target(luau)
@@ -174,7 +174,7 @@ pub fn set_sandboxed(
 @luau.property("SourceAssetId")
 pub fn get_source_asset_id(
   instance: FacialAnimationStreamingSubsessionStats,
-) -> Int64
+) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1001,7 +1001,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: FacialAnimationStreamingSubsessionStats,
   _: Object,

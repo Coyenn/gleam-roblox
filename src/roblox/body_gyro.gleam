@@ -4,8 +4,7 @@ import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BodyGyro, type BodyMover, type CFrame, type Instance,
-  type Int64, type Object, type SecurityCapabilities, type UniqueId,
-  type Vector3,
+  type Object, type SecurityCapabilities, type UniqueId, type Vector3,
 }
 
 @target(luau)
@@ -248,7 +247,7 @@ pub fn set_sandboxed(instance: BodyGyro, value: Bool) -> BodyGyro
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: BodyGyro) -> Int64
+pub fn get_source_asset_id(instance: BodyGyro) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1016,7 +1015,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Vector3,
   _: CFrame,

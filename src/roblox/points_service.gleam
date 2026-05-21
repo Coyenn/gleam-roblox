@@ -3,7 +3,7 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Int64, type Object, type PointsService,
+  type Actor, type Instance, type Object, type PointsService,
   type SecurityCapabilities, type UniqueId,
 }
 
@@ -26,7 +26,7 @@ pub fn as_object(instance: PointsService) -> Object
 @luau.event("PointsAwarded")
 pub fn points_awarded(
   instance: PointsService,
-) -> RBXScriptSignal(fn(Int64, Int, Int, Int) -> Nil)
+) -> RBXScriptSignal(fn(Int, Int, Int, Int) -> Nil)
 
 @target(luau)
 /// Connects to Roblox event `PointsService.PointsAwarded`.
@@ -39,7 +39,7 @@ pub fn points_awarded(
 @luau.global("(function(instance, callback) return instance.PointsAwarded:Connect(callback) end)")
 pub fn on_points_awarded(
   instance: PointsService,
-  callback: fn(Int64, Int, Int, Int) -> Nil,
+  callback: fn(Int, Int, Int, Int) -> Nil,
 ) -> RBXScriptConnection
 
 @target(luau)
@@ -179,7 +179,7 @@ pub fn set_sandboxed(instance: PointsService, value: Bool) -> PointsService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: PointsService) -> Int64
+pub fn get_source_asset_id(instance: PointsService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -960,7 +960,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: PointsService,
   _: Object,

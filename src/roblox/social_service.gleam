@@ -3,8 +3,8 @@ import roblox/dynamic.{type Dynamic}
 import roblox/option.{type Option}
 import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
-  type Actor, type Instance, type Int64, type InviteState, type Object,
-  type Player, type RsvpStatus, type SecurityCapabilities, type SelfViewPosition,
+  type Actor, type Instance, type InviteState, type Object, type Player,
+  type RsvpStatus, type SecurityCapabilities, type SelfViewPosition,
   type SocialService, type UniqueId,
 }
 
@@ -139,7 +139,7 @@ pub fn can_send_call_invite_async(
 pub fn can_send_game_invite_async(
   instance: SocialService,
   player: Instance,
-  recipient_id: Int64,
+  recipient_id: Int,
 ) -> Bool
 
 @target(luau)
@@ -505,7 +505,7 @@ pub fn set_sandboxed(instance: SocialService, value: Bool) -> SocialService
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: SocialService) -> Int64
+pub fn get_source_asset_id(instance: SocialService) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -1286,7 +1286,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: Player,
   _: InviteState,

@@ -5,11 +5,10 @@ import roblox/signal.{type RBXScriptConnection, type RBXScriptSignal}
 import roblox/types.{
   type Actor, type BasePart, type BrickColor, type CFrame,
   type CollisionFidelity, type Color3, type Faces, type FluidFidelity,
-  type Instance, type Int64, type IntersectOperation, type Material,
-  type NormalId, type Object, type PVInstance, type PartOperation,
-  type PhysicalProperties, type Player, type RenderFidelity,
-  type SecurityCapabilities, type SurfaceType, type TriangleMeshPart,
-  type UniqueId, type Vector3,
+  type Instance, type IntersectOperation, type Material, type NormalId,
+  type Object, type PVInstance, type PartOperation, type PhysicalProperties,
+  type Player, type RenderFidelity, type SecurityCapabilities, type SurfaceType,
+  type TriangleMeshPart, type UniqueId, type Vector3,
 }
 
 @target(luau)
@@ -1765,7 +1764,7 @@ pub fn set_sandboxed(
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: IntersectOperation) -> Int64
+pub fn get_source_asset_id(instance: IntersectOperation) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -2557,7 +2556,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: CFrame,
   _: BasePart,

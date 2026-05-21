@@ -6,11 +6,11 @@ import roblox/types.{
   type Actor, type AutomaticSize, type BorderMode, type Color3,
   type EasingDirection, type EasingStyle, type Font, type GuiBase,
   type GuiBase2d, type GuiLabel, type GuiObject, type GuiState, type InputObject,
-  type InputSink, type Instance, type Int64, type LocalizationTable, type Object,
-  type Rect, type SecurityCapabilities, type SelectionBehavior,
-  type SizeConstraint, type SwipeDirection, type TextDirection, type TextLabel,
-  type TextTruncate, type TextXAlignment, type TextYAlignment, type UDim2,
-  type UniqueId, type UserInputState, type Vector2,
+  type InputSink, type Instance, type LocalizationTable, type Object, type Rect,
+  type SecurityCapabilities, type SelectionBehavior, type SizeConstraint,
+  type SwipeDirection, type TextDirection, type TextLabel, type TextTruncate,
+  type TextXAlignment, type TextYAlignment, type UDim2, type UniqueId,
+  type UserInputState, type Vector2,
 }
 
 @target(luau)
@@ -2033,7 +2033,7 @@ pub fn set_sandboxed(instance: TextLabel, value: Bool) -> TextLabel
 /// Tags: Hidden
 /// See: https://create.roblox.com/docs/reference/engine/classes/Instance#SourceAssetId
 @luau.property("SourceAssetId")
-pub fn get_source_asset_id(instance: TextLabel) -> Int64
+pub fn get_source_asset_id(instance: TextLabel) -> Int
 
 @target(luau)
 /// Gets Roblox property `Instance.UniqueId`.
@@ -2809,7 +2809,6 @@ pub fn javascript_type_anchor(
   _: Instance,
   _: Actor,
   _: UniqueId,
-  _: Int64,
   _: SecurityCapabilities,
   _: GuiObject,
   _: SelectionBehavior,
